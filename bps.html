@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPS / KPO Careers — enaasan</title>
+  <meta name="description" content="BPO, KPO, and BPS careers explained honestly — roles, entry points, growth paths, and how to move into mainstream corporate careers. India-specific, Hyderabad-relevant." />
+
+  <!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --night:    #0D1B2A;
+      --ink:      #14273A;
+      --card:     #192F44;
+      --border:   #1E3A52;
+      --gold:     #F0A500;
+      --glow:     #FFD166;
+      --chalk:    #F2EFE9;
+      --mist:     #8DA4BA;
+      --faint:    #4A6580;
+      --bps:      #3FC98A;
+      --kpo:      #4A9EFF;
+      --lpo:      #E07BFF;
+      --fin:      #FFB347;
+      --hr:       #FF8C42;
+      --radius:   14px;
+      --radius-lg:22px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--night); color: var(--chalk);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Nav ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px;
+      background: rgba(13,27,42,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--chalk);
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-back {
+      font-size: 0.84rem; color: var(--mist);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 8px 16px; border-radius: 100px;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
+
+    /* ── Page ─────────────────────────────────────── */
+    .page { max-width: 1020px; margin: 0 auto; padding: 100px 24px 80px; }
+
+    /* ── Hero ────────────────────────────────────── */
+    .page-hero { margin-bottom: 56px; animation: riseIn 0.6s ease both; }
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .page-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.03em; color: var(--chalk); margin-bottom: 14px;
+    }
+    .page-heading span { color: var(--gold); }
+    .page-sub {
+      color: var(--mist); font-size: 1rem;
+      max-width: 600px; line-height: 1.65;
+    }
+
+    /* ── Honest intro box ────────────────────────── */
+    .honest-box {
+      background: linear-gradient(135deg, var(--card), rgba(63,201,138,0.04));
+      border: 1px solid rgba(63,201,138,0.2);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px; margin-bottom: 52px;
+      font-size: 0.96rem; color: var(--mist); line-height: 1.8;
+    }
+    .honest-box strong { color: var(--chalk); }
+    .honest-box p { margin-bottom: 12px; }
+    .honest-box p:last-child { margin-bottom: 0; }
+
+    /* ── Stat strip ──────────────────────────────── */
+    .stat-strip {
+      display: flex; flex-wrap: wrap;
+      gap: 0; margin-bottom: 52px;
+      background: var(--ink);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+    }
+    .stat-item {
+      flex: 1; min-width: 160px;
+      padding: 22px 20px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem; font-weight: 800;
+      color: var(--gold); line-height: 1; margin-bottom: 4px;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--mist); line-height: 1.4; }
+
+    /* ── Section ─────────────────────────────────── */
+    .sec-block { margin-bottom: 60px; }
+    .sec-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    }
+    .sec-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 700; color: var(--chalk);
+      letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    .sec-sub {
+      font-size: 0.9rem; color: var(--mist);
+      margin-bottom: 28px; line-height: 1.6; max-width: 600px;
+    }
+
+    /* ── Spectrum cards ──────────────────────────── */
+    .spectrum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .spectrum-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--sc, var(--gold));
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .spectrum-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+    }
+    .spectrum-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .spectrum-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sc, var(--gold)); margin-bottom: 6px;
+    }
+    .spectrum-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 8px;
+    }
+    .spectrum-desc {
+      font-size: 0.85rem; color: var(--mist);
+      line-height: 1.6; margin-bottom: 14px;
+    }
+    .spectrum-roles { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .spectrum-role {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--faint);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 8px;
+    }
+    .spectrum-entry {
+      font-size: 0.82rem; color: var(--mist);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px;
+      line-height: 1.5;
+    }
+    .spectrum-entry strong { color: var(--chalk); }
+    .spectrum-salary {
+      margin-top: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .spectrum-salary span { color: var(--sc, var(--gold)); }
+
+    /* ── Salary disclaimer ───────────────────────── */
+    .salary-disclaimer {
+      display: flex; align-items: flex-start; gap: 10px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--faint);
+      border-radius: var(--radius);
+      padding: 12px 16px; margin-bottom: 28px;
+      font-size: 0.8rem; color: var(--faint); line-height: 1.55;
+    }
+    .disclaimer-icon { flex-shrink: 0; font-size: 0.9rem; margin-top: 1px; }
+
+    /* ── Role detail cards ───────────────────────── */
+    .roles-accordion { display: flex; flex-direction: column; gap: 10px; }
+    .role-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .role-item:hover { border-color: var(--faint); }
+    .role-header {
+      padding: 18px 22px;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 16px;
+      cursor: pointer;
+    }
+    .role-header-left { flex: 1; }
+    .role-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 3px;
+    }
+    .role-meta {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      align-items: center;
+    }
+    .role-seg {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 8px; border-radius: 5px; border: 1px solid;
+    }
+    .role-sal {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .role-sal span { color: var(--gold); }
+    .role-chevron {
+      color: var(--faint); font-size: 1rem;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .role-item.open .role-chevron { transform: rotate(180deg); }
+    .role-body {
+      display: none;
+      padding: 0 22px 22px;
+      border-top: 1px solid var(--border);
+      animation: fadeDown 0.3s ease both;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .role-item.open .role-body { display: block; }
+    .role-body-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px; margin-top: 18px;
+    }
+    .role-col-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .role-col-list { display: flex; flex-direction: column; gap: 7px; }
+    .role-col-item {
+      font-size: 0.84rem; color: var(--mist);
+      padding-left: 14px; position: relative; line-height: 1.4;
+    }
+    .role-col-item::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--faint); font-size: 0.75rem;
+    }
+    .role-note {
+      margin-top: 14px; padding: 12px 14px;
+      background: rgba(240,165,0,0.05);
+      border: 1px solid rgba(240,165,0,0.15);
+      border-radius: 10px;
+      font-size: 0.82rem; color: var(--mist); line-height: 1.55;
+    }
+    .role-note::before { content: '💡  '; }
+
+    /* ── Career ladder ───────────────────────────── */
+    .ladder-wrap {
+      background: var(--ink);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .ladder-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+    }
+    .ladder-tab {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem; padding: 8px 18px;
+      border-radius: 100px; border: 1px solid var(--border);
+      background: transparent; color: var(--mist);
+      cursor: pointer; transition: all 0.18s;
+    }
+    .ladder-tab.active {
+      background: var(--card); border-color: var(--faint); color: var(--chalk);
+    }
+    .ladder-panel { display: none; }
+    .ladder-panel.active { display: block; animation: riseIn 0.3s ease both; }
+    .ladder-steps {
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    .ladder-steps::before {
+      content: ''; position: absolute;
+      left: 19px; top: 20px; bottom: 20px;
+      width: 2px; background: var(--border);
+    }
+    .ladder-step {
+      display: flex; gap: 18px;
+      padding-bottom: 22px; position: relative; z-index: 1;
+    }
+    .ladder-step:last-child { padding-bottom: 0; }
+    .ldot {
+      width: 40px; height: 40px; border-radius: 50%;
+      flex-shrink: 0; display: flex; align-items: center;
+      justify-content: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem; font-weight: 700;
+      background: var(--night); border: 2px solid var(--border);
+      color: var(--faint);
+    }
+    .ladder-step.highlight .ldot {
+      border-color: var(--gold); color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(240,165,0,0.1);
+    }
+    .lbody { flex: 1; padding-top: 6px; }
+    .lrole {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.98rem; font-weight: 700; color: var(--chalk); margin-bottom: 2px;
+    }
+    .ladder-step.highlight .lrole { color: var(--gold); }
+    .lyoe {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 5px;
+    }
+    .ldesc { font-size: 0.83rem; color: var(--mist); line-height: 1.5; }
+    .lsal {
+      display: inline-block; margin-top: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .lsal span { color: var(--gold); }
+
+    /* ── City table ──────────────────────────────── */
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .city-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 22px 20px;
+      transition: transform 0.18s;
+    }
+    .city-card:hover { transform: translateY(-2px); }
+    .city-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 4px;
+    }
+    .city-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+    }
+    .city-employers { display: flex; flex-direction: column; gap: 5px; }
+    .city-employer {
+      font-size: 0.83rem; color: var(--mist);
+      padding-left: 14px; position: relative;
+    }
+    .city-employer::before {
+      content: '·'; position: absolute; left: 4px; color: var(--faint);
+    }
+    .city-note {
+      margin-top: 12px; font-size: 0.8rem; color: var(--faint);
+      font-style: italic; line-height: 1.4;
+    }
+
+    /* ── Crossover section ───────────────────────── */
+    .crossover-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .crossover-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 22px 20px;
+    }
+    .crossover-from {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 4px;
+    }
+    .crossover-to {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.96rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 8px;
+    }
+    .crossover-arrow {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.83rem; color: var(--mist);
+      margin-bottom: 10px;
+    }
+    .crossover-arrow span { color: var(--gold); font-weight: 700; }
+    .crossover-skills { display: flex; flex-direction: column; gap: 5px; }
+    .crossover-skill {
+      font-size: 0.81rem; color: var(--mist);
+      padding-left: 14px; position: relative; line-height: 1.4;
+    }
+    .crossover-skill::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--gold); font-size: 0.75rem;
+    }
+
+    /* ── Tips ────────────────────────────────────── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .tip-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 20px 18px;
+    }
+    .tip-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+    }
+    .tip-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.93rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 5px;
+    }
+    .tip-desc { font-size: 0.82rem; color: var(--mist); line-height: 1.55; }
+
+    /* ── Divider ─────────────────────────────────── */
+    .divider { height: 1px; background: var(--border); margin: 52px 0; }
+
+    /* ── Reveal ──────────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      background: var(--ink); border-top: 1px solid var(--border);
+      padding: 40px 28px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 16px; text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 800; color: var(--chalk);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.82rem; color: var(--faint); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--chalk); }
+    .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 640px) {
+      nav { padding: 14px 18px; }
+      .page { padding: 88px 18px 60px; }
+      .spectrum-grid, .city-grid, .crossover-grid, .tips-grid { grid-template-columns: 1fr; }
+      .stat-strip { flex-direction: column; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+      .role-body-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 380px) { .page-heading { font-size: 1.7rem; } }
+    /* Share buttons */
+    .share-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; padding: 9px 18px; border-radius: 100px; border: 1px solid var(--border); transition: transform 0.15s, border-color 0.18s; text-decoration: none; }
+    .share-btn:hover { transform: translateY(-1px); }
+    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
+    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
+    .share-btn.email    { color: var(--gold); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.06); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ───────────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page">
+
+  <!-- ── Hero ──────────────────────────────────────── -->
+  <div class="page-hero">
+    <p class="page-eyebrow">BPS / KPO / BPO Careers</p>
+    <h1 class="page-heading">India's largest<br /><span>employed industry.</span></h1>
+    <p class="page-sub">Over 5 million people work in Business Process Services in India. It is one of the most misunderstood career sectors — and one of the most accessible. Here is what it actually looks like from the inside.</p>
+  </div>
+
+  <!-- ── Honest intro ───────────────────────────────── -->
+  <div class="honest-box reveal">
+    <p><strong>Let us clear up the terminology first.</strong> BPO (Business Process Outsourcing), BPS (Business Process Services), and KPO (Knowledge Process Outsourcing) are often used interchangeably — but they describe different types of work.</p>
+    <p><strong>BPO / BPS</strong> covers a wide range — from voice-based customer support to complex back-office operations in finance, HR, supply chain, and healthcare. The word "call centre" is an outdated and incomplete description of what this industry does today.</p>
+    <p><strong>KPO</strong> is the knowledge-intensive end — legal process outsourcing, financial research, data analytics, market research, and clinical research. KPO roles typically require graduate or postgraduate qualifications and pay significantly more than traditional BPS.</p>
+    <p><strong>The honest picture:</strong> BPS is not a fallback. It is a structured industry with clear entry points, defined growth paths, and salaries that are competitive with many other sectors for the same qualification level. The stigma around it is partly a perception problem — and partly the fact that not all companies within BPS are equal.</p>
+  </div>
+
+  <!-- ── Industry stats ─────────────────────────────── -->
+  <div class="stat-strip reveal">
+    <div class="stat-item">
+      <div class="stat-num">5M+</div>
+      <div class="stat-label">Direct employees in India's BPS sector</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">₹2.4L Cr</div>
+      <div class="stat-label">Industry revenue (2024–25 estimate)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">#1</div>
+      <div class="stat-label">Hyderabad — largest BPS employment hub in India</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8–10%</div>
+      <div class="stat-label">Annual growth rate of the sector</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12th Pass</div>
+      <div class="stat-label">Minimum qualification for entry-level voice roles</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 1 — THE SPECTRUM
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">The full picture</p>
+    <h2 class="sec-heading">BPS is not one thing — it is an entire spectrum</h2>
+    <p class="sec-sub">From answering customer calls to running complex legal research — here is the full range of what this industry covers.</p>
+
+    <div class="spectrum-grid">
+
+      <div class="spectrum-card" style="--sc: var(--bps)">
+        <span class="spectrum-icon">📞</span>
+        <div class="spectrum-type">BPS — Voice</div>
+        <div class="spectrum-title">Customer Support & Tele-operations</div>
+        <div class="spectrum-desc">Inbound and outbound customer service, technical support, collections, and tele-sales. The largest segment by headcount. Works in shifts including nights (for international clients).</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">Customer Service Rep</span>
+          <span class="spectrum-role">Technical Support</span>
+          <span class="spectrum-role">Collections Agent</span>
+          <span class="spectrum-role">Tele-sales Executive</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Class 12 pass, good English communication. Some roles accept 10th pass for domestic process.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹1.8–4 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--bps)">
+        <span class="spectrum-icon">💬</span>
+        <div class="spectrum-type">BPS — Non-Voice</div>
+        <div class="spectrum-title">Back Office & Transaction Processing</div>
+        <div class="spectrum-desc">Data entry, document processing, claims handling, order management, account maintenance, email and chat support. Growing rapidly as companies move to digital interactions.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">Data Entry Operator</span>
+          <span class="spectrum-role">Back Office Executive</span>
+          <span class="spectrum-role">Claims Processor</span>
+          <span class="spectrum-role">Chat Support Agent</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Class 12 or graduate. Typing speed and accuracy matter. English proficiency less critical than voice roles.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹1.8–3.5 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--fin)">
+        <span class="spectrum-icon">📊</span>
+        <div class="spectrum-type">F&A BPS</div>
+        <div class="spectrum-title">Finance & Accounting Operations</div>
+        <div class="spectrum-desc">Accounts payable and receivable, reconciliations, financial reporting, payroll processing, and audit support. Operates as a shared service for large multinational companies. Requires accounting knowledge.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">AP / AR Executive</span>
+          <span class="spectrum-role">GL Accountant</span>
+          <span class="spectrum-role">Payroll Analyst</span>
+          <span class="spectrum-role">Finance Analyst</span>
+          <span class="spectrum-role">RTR Analyst</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> B.Com / BBA / CA Inter. ERP knowledge (SAP, Oracle) is a strong differentiator.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹2.5–7 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--hr)">
+        <span class="spectrum-icon">👥</span>
+        <div class="spectrum-type">HR BPS</div>
+        <div class="spectrum-title">Human Resources Shared Services</div>
+        <div class="spectrum-desc">HR operations outsourced by large companies — hiring support, onboarding, employee data management, payroll processing, HR helpdesk, and benefits administration.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">HR Operations Executive</span>
+          <span class="spectrum-role">Recruitment Coordinator</span>
+          <span class="spectrum-role">Payroll Executive</span>
+          <span class="spectrum-role">HR Analyst</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Graduate (any stream). MBA-HR or PGDM for analyst roles. Communication and attention to detail are critical.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹2.5–6 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--kpo)">
+        <span class="spectrum-icon">🔬</span>
+        <div class="spectrum-type">KPO — Analytics</div>
+        <div class="spectrum-title">Data Analytics & Research</div>
+        <div class="spectrum-desc">Market research, business intelligence, data analysis, equity research, and consumer insights. Requires graduate-level analytical skills. One of the fastest-growing and best-paying BPS segments.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">Research Analyst</span>
+          <span class="spectrum-role">Data Analyst</span>
+          <span class="spectrum-role">Equity Research Associate</span>
+          <span class="spectrum-role">BI Analyst</span>
+          <span class="spectrum-role">Insights Executive</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Graduate (Statistics, Economics, Maths, Engineering). SQL and Excel essential. Python increasingly expected.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹3.5–12 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--lpo)">
+        <span class="spectrum-icon">⚖️</span>
+        <div class="spectrum-type">KPO — LPO</div>
+        <div class="spectrum-title">Legal Process Outsourcing</div>
+        <div class="spectrum-desc">Legal research, contract review and management, due diligence, intellectual property support, compliance monitoring, and litigation support. Serves international law firms and MNCs.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">Legal Analyst</span>
+          <span class="spectrum-role">Contract Reviewer</span>
+          <span class="spectrum-role">IP Analyst</span>
+          <span class="spectrum-role">Paralegal</span>
+          <span class="spectrum-role">Compliance Analyst</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> LLB or BA LLB mandatory for most roles. NLU graduates at premium. US or UK law knowledge is an advantage.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹4–15 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--kpo)">
+        <span class="spectrum-icon">🏥</span>
+        <div class="spectrum-type">KPO — Healthcare</div>
+        <div class="spectrum-title">Healthcare BPS & Medical Coding</div>
+        <div class="spectrum-desc">Medical billing, coding (ICD-10, CPT), revenue cycle management, clinical data abstraction, and healthcare analytics. Primarily serves US healthcare providers.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">Medical Coder</span>
+          <span class="spectrum-role">Revenue Cycle Analyst</span>
+          <span class="spectrum-role">Clinical Data Analyst</span>
+          <span class="spectrum-role">Medical Transcriptionist</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Life sciences graduate or paramedical background. CPC or CCS certification (AAPC) significantly improves prospects and salary.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹2.5–8 LPA</span></div>
+      </div>
+
+      <div class="spectrum-card" style="--sc: var(--kpo)">
+        <span class="spectrum-icon">💻</span>
+        <div class="spectrum-type">Tech-enabled BPS</div>
+        <div class="spectrum-title">Technology & AI-augmented Operations</div>
+        <div class="spectrum-desc">The newest and fastest-growing segment. AI training and annotation, automation testing, digital content moderation, trust and safety operations, and intelligent document processing.</div>
+        <div class="spectrum-roles">
+          <span class="spectrum-role">AI Trainer / Annotator</span>
+          <span class="spectrum-role">Content Moderator</span>
+          <span class="spectrum-role">Automation Analyst</span>
+          <span class="spectrum-role">Digital Ops Specialist</span>
+        </div>
+        <div class="spectrum-entry"><strong>Entry:</strong> Graduate any stream. Domain expertise (law, medicine, language) commands premium pay for specialised annotation roles.</div>
+        <div class="spectrum-salary">Indicative range* <span>₹2.5–10 LPA</span></div>
+      </div>
+
+    </div>
+
+    <div class="salary-disclaimer" style="margin-top: 20px;">
+      <span class="disclaimer-icon">ℹ️</span>
+      <span>*Salary ranges are indicative estimates based on publicly reported data from Glassdoor, AmbitionBox, NASSCOM BPS reports, and LinkedIn Salary Insights (2024–25). Actual pay varies significantly by company, city, shift timing, and individual performance. Night shift / international process roles typically pay 15–30% more than domestic process roles at the same level. Always verify with current job postings.</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 2 — ROLES IN DEPTH
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">Roles in depth</p>
+    <h2 class="sec-heading">What each role actually involves — and what it takes</h2>
+    <p class="sec-sub">Click any role to expand the full skill set, tools, and what employers look for.</p>
+
+    <div class="roles-accordion" id="rolesAccordion"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 3 — CAREER LADDER
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">Growth paths</p>
+    <h2 class="sec-heading">Career ladders inside BPS — by function</h2>
+    <p class="sec-sub">BPS has structured growth paths. Here is what progression looks like across different tracks — from fresher to senior leadership.</p>
+
+    <div class="ladder-wrap">
+      <div class="ladder-tabs" id="ladderTabs"></div>
+      <div id="ladderPanels"></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 4 — EMPLOYERS BY CITY
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">Where the jobs are</p>
+    <h2 class="sec-heading">Major BPS employers by city</h2>
+    <p class="sec-sub">BPS is concentrated in a handful of Indian cities. Here is who hires where.</p>
+
+    <div class="city-grid">
+      <div class="city-card">
+        <div class="city-name">Hyderabad</div>
+        <div class="city-tag">🥇 Largest BPS hub in India</div>
+        <div class="city-employers">
+          <div class="city-employer">Tech Mahindra BPS</div>
+          <div class="city-employer">Conduent</div>
+          <div class="city-employer">Genpact</div>
+          <div class="city-employer">Cognizant BPS</div>
+          <div class="city-employer">Infosys BPM</div>
+          <div class="city-employer">WNS Global</div>
+          <div class="city-employer">EXL Service</div>
+          <div class="city-employer">Sutherland Global</div>
+          <div class="city-employer">TaskUs</div>
+          <div class="city-employer">iEnergizer</div>
+        </div>
+        <div class="city-note">HITEC City, Gachibowli, Madhapur, and Nanakramguda are the primary BPS employment zones.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-name">Bengaluru</div>
+        <div class="city-tag">Strong in KPO & Analytics</div>
+        <div class="city-employers">
+          <div class="city-employer">Accenture Operations</div>
+          <div class="city-employer">IBM Global Services</div>
+          <div class="city-employer">Wipro BPS</div>
+          <div class="city-employer">Concentrix</div>
+          <div class="city-employer">Teleperformance</div>
+          <div class="city-employer">Mphasis BPS</div>
+          <div class="city-employer">HCLTech BPS</div>
+          <div class="city-employer">FirstSource</div>
+        </div>
+        <div class="city-note">Whitefield, Electronic City, and Outer Ring Road are the key zones.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-name">Chennai</div>
+        <div class="city-tag">Strong in F&A and Healthcare BPS</div>
+        <div class="city-employers">
+          <div class="city-employer">Cognizant BPS</div>
+          <div class="city-employer">Infosys BPM</div>
+          <div class="city-employer">Sutherland Global</div>
+          <div class="city-employer">Hexaware BPS</div>
+          <div class="city-employer">Hinduja Global</div>
+          <div class="city-employer">Omega Healthcare</div>
+          <div class="city-employer">Startek</div>
+        </div>
+        <div class="city-note">Perungudi, Sholinganallur, and Ambattur are the primary employment zones.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-name">Pune</div>
+        <div class="city-tag">F&A, HR BPS, and Tech Operations</div>
+        <div class="city-employers">
+          <div class="city-employer">WNS Global</div>
+          <div class="city-employer">Genpact</div>
+          <div class="city-employer">EXL Service</div>
+          <div class="city-employer">Capita India</div>
+          <div class="city-employer">Syntel (Atos)</div>
+          <div class="city-employer">KPIT BPS</div>
+          <div class="city-employer">Bajaj Finserv Operations</div>
+        </div>
+        <div class="city-note">Hinjewadi and Magarpatta are the key BPS zones.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-name">Mumbai / Navi Mumbai</div>
+        <div class="city-tag">BFSI BPS, LPO, and KPO</div>
+        <div class="city-employers">
+          <div class="city-employer">iGate (Capgemini)</div>
+          <div class="city-employer">Patni (iGate)</div>
+          <div class="city-employer">Conneqt Business Solutions</div>
+          <div class="city-employer">Tata AIA Operations</div>
+          <div class="city-employer">CRISIL Global Analytics</div>
+          <div class="city-employer">Evalueserve</div>
+        </div>
+        <div class="city-note">Navi Mumbai (Mahape, Airoli) and BKC are major BPS employment areas.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-name">Noida / Gurugram</div>
+        <div class="city-tag">Voice BPS, BFSI, and KPO</div>
+        <div class="city-employers">
+          <div class="city-employer">American Express GBT</div>
+          <div class="city-employer">Genpact (HQ)</div>
+          <div class="city-employer">Concentrix</div>
+          <div class="city-employer">Teleperformance India</div>
+          <div class="city-employer">Max Life Insurance Ops</div>
+          <div class="city-employer">MphasiS</div>
+          <div class="city-employer">EY GDS</div>
+        </div>
+        <div class="city-note">Cyber City (Gurugram) and Sector 62/135 (Noida) are the primary hubs.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 5 — CROSSOVER PATHS
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">Moving forward</p>
+    <h2 class="sec-heading">How to move from BPS into mainstream corporate careers</h2>
+    <p class="sec-sub">BPS is a valid long-term career — but if you want to move into a different industry or function, here are the realistic crossover paths and what you need to build.</p>
+
+    <div class="crossover-grid">
+      <div class="crossover-card">
+        <div class="crossover-from">From BPS Voice / Customer Service</div>
+        <div class="crossover-to">→ Sales, CRM, or Client Success</div>
+        <div class="crossover-arrow">Skills that transfer: <span>Communication, objection handling, CRM tools, empathy</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">Build Salesforce or HubSpot CRM skills</div>
+          <div class="crossover-skill">Move to inside sales or pre-sales support roles first</div>
+          <div class="crossover-skill">MBA or PGDM-Marketing for faster progression</div>
+          <div class="crossover-skill">International voice experience on resume is valued</div>
+        </div>
+      </div>
+      <div class="crossover-card">
+        <div class="crossover-from">From F&A BPS / Finance Ops</div>
+        <div class="crossover-to">→ Corporate Finance, Controllership</div>
+        <div class="crossover-arrow">Skills that transfer: <span>ERP systems, reconciliation, financial reporting</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">CA or CPA qualification significantly accelerates this move</div>
+          <div class="crossover-skill">SAP FICO certification for finance ERP credibility</div>
+          <div class="crossover-skill">Target SSC (Shared Service Centre) → Corporate Finance transitions</div>
+          <div class="crossover-skill">FP&A skills (financial planning and analysis) are the bridge</div>
+        </div>
+      </div>
+      <div class="crossover-card">
+        <div class="crossover-from">From HR BPS / HR Shared Services</div>
+        <div class="crossover-to">→ HR Business Partner, HR Manager</div>
+        <div class="crossover-arrow">Skills that transfer: <span>HRMS tools, compliance, employee data, payroll</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">MBA-HR or PGDM-HR for credibility in HRBP roles</div>
+          <div class="crossover-skill">Move from transactional HR ops to advisory HR roles</div>
+          <div class="crossover-skill">SHRM or HRCI certification</div>
+          <div class="crossover-skill">Build expertise in a specific area — talent acquisition or L&D</div>
+        </div>
+      </div>
+      <div class="crossover-card">
+        <div class="crossover-from">From KPO Analytics / Research</div>
+        <div class="crossover-to">→ In-house Analytics, Strategy, Consulting</div>
+        <div class="crossover-arrow">Skills that transfer: <span>SQL, Python, research methodology, data storytelling</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">Build a portfolio of end-to-end analysis projects</div>
+          <div class="crossover-skill">MBA from a good institution for strategy/consulting entry</div>
+          <div class="crossover-skill">Domain expertise (BFSI, healthcare) is highly valuable</div>
+          <div class="crossover-skill">CFA for finance-focused analytics transition</div>
+        </div>
+      </div>
+      <div class="crossover-card">
+        <div class="crossover-from">From LPO / Legal Analytics</div>
+        <div class="crossover-to">→ In-house Counsel, Law Firm, Compliance</div>
+        <div class="crossover-arrow">Skills that transfer: <span>Contract drafting, legal research, compliance frameworks</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">LLM in corporate / international law strengthens move to law firms</div>
+          <div class="crossover-skill">US or UK LPO experience is highly valued for in-house MNC roles</div>
+          <div class="crossover-skill">Bar Council enrolment for court practice option</div>
+          <div class="crossover-skill">GDPR / data privacy expertise is a strong niche</div>
+        </div>
+      </div>
+      <div class="crossover-card">
+        <div class="crossover-from">From BPS Operations (any function)</div>
+        <div class="crossover-to">→ Operations Management, General Management</div>
+        <div class="crossover-arrow">Skills that transfer: <span>Process management, SLA adherence, team leadership, metrics</span></div>
+        <div class="crossover-skills">
+          <div class="crossover-skill">Six Sigma Green Belt for process credibility</div>
+          <div class="crossover-skill">PMP certification for project management transition</div>
+          <div class="crossover-skill">MBA from a good institution for accelerated progression</div>
+          <div class="crossover-skill">BPS operations → COO path is well-established in India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════════════
+       SECTION 6 — PRACTICAL TIPS
+  ══════════════════════════════════════════════ -->
+  <div class="sec-block reveal">
+    <p class="sec-eyebrow">What nobody tells you</p>
+    <h2 class="sec-heading">Navigating a BPS career — honestly.</h2>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">01</div>
+        <div class="tip-title">Not all BPS companies are equal — research before you join</div>
+        <div class="tip-desc">A role at Genpact, WNS, EXL, or Infosys BPM is a different experience from a small local BPO. Brand-name BPS companies offer structured training, clear growth paths, and better credentials on your resume. The extra effort to get into a tier-1 BPS company is worth it early in your career.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">02</div>
+        <div class="tip-title">Night shifts are financially significant — but plan for them</div>
+        <div class="tip-desc">International process roles (US/UK/Australia shift timings) pay 15–30% more than domestic process. For a fresher, this can mean ₹40,000–60,000 per month vs ₹20,000–25,000. If you are in your early career, international shift experience for 2–3 years can give you a meaningful financial head start and significantly stronger exposure to global processes and communication standards.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">03</div>
+        <div class="tip-title">The attrition trap — why people stay stuck</div>
+        <div class="tip-desc">BPS has notoriously high attrition. Many people move laterally between companies for small salary bumps rather than growing vertically within one. Staying 2–3 years in one company and getting promoted is significantly more valuable for your career than job-hopping every 6 months for ₹2,000 more per month.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">04</div>
+        <div class="tip-title">Build domain expertise — generalists plateau faster</div>
+        <div class="tip-desc">A generalist voice agent can be replaced easily. An F&A analyst with SAP knowledge and 4 years of RTR experience is hard to find and well compensated. Pick a domain — finance, healthcare, legal, analytics — and go deep in it. Domain expertise is the single most effective way to increase your value and salary in BPS.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">05</div>
+        <div class="tip-title">Certifications matter more in BPS than in most sectors</div>
+        <div class="tip-desc">In BPS, a certification is often the difference between a ₹3 LPA and a ₹6 LPA role for the same experience level. COPC, Six Sigma, SAP, CPC (for healthcare), CAMS (for financial crimes compliance) — these are not optional extras. They are often the credentials that unlock the next level.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">06</div>
+        <div class="tip-title">The MBA question — when it makes sense and when it does not</div>
+        <div class="tip-desc">An MBA accelerates your move into management. But an MBA from a low-ranked college while staying in the same BPS company is often a significant financial cost for minimal career benefit. If you are going for an MBA, target a PGDM from a NAAC-A+ institution or better. Otherwise, domain certifications and internal promotions may give a better return.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">07</div>
+        <div class="tip-title">AI is changing BPS — get ahead of it, not behind it</div>
+        <div class="tip-desc">Automation and AI are reshaping transactional BPS roles — data entry, basic claims processing, and simple customer queries. The roles that are growing are the ones that require judgment, domain knowledge, and the ability to work with AI tools. Build AI literacy alongside your domain skills. The BPS professional who can manage AI-augmented workflows is the one companies will pay to retain.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">08</div>
+        <div class="tip-title">Your communication skills are your most portable asset</div>
+        <div class="tip-desc">BPS gives you something most desk jobs do not — intensive, daily practice communicating with clients, customers, and colleagues under pressure. The professionals who leave BPS and succeed in corporate roles consistently cite this as their biggest advantage. Treat every difficult customer interaction as communication training. It is.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="streams.html">Stream Explorer</a>
+    <a href="after12.html">After 12th</a>
+    <a href="careers.html">Career Compass</a>
+    <a href="bps.html">BPS / KPO Careers</a>
+    <a href="guide.html">Guidance Hub</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════
+   ROLES DATA
+══════════════════════════════════════════════ */
+const ROLES_DATA = [
+  {
+    name: 'Customer Service Representative (Voice)',
+    segment: 'BPS Voice', segColor: '#3FC98A', segRgb: '63,201,138',
+    salary: '₹1.8–4 LPA (international process up to ₹5.5 LPA)',
+    must: ['Clear spoken English (neutral or near-neutral accent for international)', 'Active listening and empathy', 'Problem-solving under pressure', 'Basic computer navigation speed', 'Shift flexibility including nights'],
+    good: ['CRM software (Salesforce, Zendesk)', 'Upselling and cross-selling aptitude', 'Second language for domestic process', 'Typing speed 30+ WPM', 'De-escalation skills'],
+    tools: ['CRM platforms (Salesforce, Freshdesk)', 'Telephony systems (Avaya, Genesys)', 'Knowledge management bases', 'Quality monitoring dashboards'],
+    note: 'International voice process (US, UK, Australia) pays significantly more than domestic. Communication quality — not just English fluency but clarity, empathy, and problem ownership — is what separates top performers from average ones.'
+  },
+  {
+    name: 'Back Office / Data Processing Executive',
+    segment: 'BPS Non-Voice', segColor: '#3FC98A', segRgb: '63,201,138',
+    salary: '₹1.8–3.5 LPA',
+    must: ['Typing speed and accuracy (40+ WPM, 95%+ accuracy)', 'Attention to detail', 'Data validation basics', 'Basic MS Office — Excel and Word', 'Ability to follow SOPs precisely'],
+    good: ['Domain knowledge (insurance, banking, healthcare)', 'Experience with document management systems', 'Basic SQL for data verification', 'Quality control mindset'],
+    tools: ['MS Excel', 'Document management systems', 'Workflow tools (ServiceNow, JIRA)', 'Internal processing platforms'],
+    note: 'Back office roles are often underrated but form the backbone of BPS operations. Accuracy and consistency are valued more than speed at this level. This is a strong entry point for students who are not comfortable with voice work.'
+  },
+  {
+    name: 'Finance & Accounts (F&A) Analyst',
+    segment: 'F&A BPS', segColor: '#FFB347', segRgb: '255,179,71',
+    salary: '₹2.5–7 LPA',
+    must: ['Accounting fundamentals (debits, credits, double-entry)', 'Accounts Payable / Receivable processes', 'Bank reconciliation', 'MS Excel (intermediate — VLOOKUP, pivot tables)', 'Attention to detail and audit mindset'],
+    good: ['SAP FI/CO or Oracle Financials', 'US GAAP or IFRS basics', 'RTR (Record to Report) process knowledge', 'Month-end close experience', 'CA Inter or equivalent qualification'],
+    tools: ['SAP ERP', 'Oracle Financials', 'BlackLine (reconciliation)', 'MS Excel', 'Workday Financials'],
+    note: 'F&A BPS is one of the strongest entry points for B.Com and CA Inter candidates. SAP knowledge commands a 20–30% salary premium even at fresher level. This is a legitimate stepping stone to corporate finance roles.'
+  },
+  {
+    name: 'HR Operations / Shared Services Executive',
+    segment: 'HR BPS', segColor: '#FF8C42', segRgb: '255,140,66',
+    salary: '₹2.5–6 LPA',
+    must: ['HR process basics (hire to retire)', 'Employee data management', 'Payroll processing fundamentals', 'MS Excel', 'Confidentiality and discretion'],
+    good: ['SAP HCM or Workday HRMS', 'Labour law basics (Indian)', 'Recruitment coordination experience', 'HR helpdesk / ticketing tools', 'MBA-HR or PGDM-HR'],
+    tools: ['SAP SuccessFactors', 'Workday', 'Darwinbox / Zoho People', 'ServiceNow HR', 'ATS platforms (Taleo, iCIMS)'],
+    note: 'HR BPS is growing rapidly as large companies outsource their transactional HR functions. This is one of the best entry points for MBA-HR freshers who want hands-on HR operations experience before moving into HRBP or specialist roles.'
+  },
+  {
+    name: 'Research / Data Analyst (KPO)',
+    segment: 'KPO Analytics', segColor: '#4A9EFF', segRgb: '74,158,255',
+    salary: '₹3.5–12 LPA',
+    must: ['SQL — non-negotiable', 'Excel (advanced)', 'Research methodology and data validation', 'Clear written communication of findings', 'Statistical thinking'],
+    good: ['Python (pandas, matplotlib)', 'Power BI or Tableau', 'Domain expertise (BFSI, pharma, retail)', 'Primary research methods', 'Bloomberg or Reuters (for financial research)'],
+    tools: ['SQL', 'Excel / Google Sheets', 'Python', 'Power BI / Tableau', 'Market research platforms (Euromonitor, Statista)'],
+    note: 'KPO analytics is where BPS overlaps with mainstream data analytics careers. The skills built here are directly transferable to in-house analytics roles at product companies. Build a portfolio of analysis projects alongside your job.'
+  },
+  {
+    name: 'Legal Process Outsourcing (LPO) Analyst',
+    segment: 'KPO — LPO', segColor: '#E07BFF', segRgb: '224,123,255',
+    salary: '₹4–15 LPA',
+    must: ['LLB or BA LLB (mandatory for most roles)', 'Contract review and drafting', 'Legal research skills', 'Attention to detail — zero tolerance for errors', 'Professional written English'],
+    good: ['US or UK law familiarity', 'Intellectual property law', 'GDPR and data privacy', 'eDiscovery platforms', 'Contract lifecycle management tools'],
+    tools: ['Kira (contract AI)', 'Relativity (eDiscovery)', 'Microsoft 365', 'SCC Online / LexisNexis', 'DocuSign'],
+    note: 'LPO is one of the best-paying segments of BPS for law graduates. NLU graduates at large LPO firms (Cyril Amarchand, UnitedLex, Integreon) can command salaries competitive with mid-tier law firms, with better work-life balance.'
+  },
+  {
+    name: 'Medical Coder / Revenue Cycle Analyst',
+    segment: 'Healthcare BPS', segColor: '#4A9EFF', segRgb: '74,158,255',
+    salary: '₹2.5–8 LPA (CPC-certified coders earn significantly more)',
+    must: ['Medical terminology and anatomy basics', 'ICD-10-CM and CPT coding (for US process)', 'Health insurance and claims basics', 'Accuracy under volume and time pressure', 'Attention to clinical documentation'],
+    good: ['CPC certification (AAPC) — significantly improves salary and employability', 'HCPCS coding', 'Denial management process', 'EHR / EMR platform experience', 'Clinical background (MBBS, B.Pharm, BSc Nursing)'],
+    tools: ['Epic / Cerner EMR', '3M Encoder', 'Optum360 coding software', 'Claim processing platforms', 'Excel'],
+    note: 'Medical coding is a specialised skill with a real shortage of certified professionals in India. CPC certification from AAPC takes 3–6 months of preparation and can immediately increase your employability and starting salary by 30–50%.'
+  },
+  {
+    name: 'Content Moderator / Trust & Safety Analyst',
+    segment: 'Tech-enabled BPS', segColor: '#4A9EFF', segRgb: '74,158,255',
+    salary: '₹2.5–6 LPA',
+    must: ['Strong judgment and decision-making consistency', 'Ability to follow complex policy guidelines', 'Resilience — content can be disturbing', 'Clear written documentation of decisions', 'Attention to context and nuance'],
+    good: ['Language skills (regional languages for Indian platforms)', 'Cultural context knowledge', 'Psychology or sociology background', 'Second language proficiency', 'QA and audit experience'],
+    tools: ['Internal policy dashboards', 'Workflow management tools', 'Escalation and reporting platforms', 'Quality calibration systems'],
+    note: 'Content moderation is psychologically demanding — you will review harmful, illegal, or disturbing content as part of the job. Companies with good support programs (counselling, rotation, limits on daily exposure) are significantly better employers for these roles. Research this before joining.'
+  },
+];
+
+/* ══════════════════════════════════════════════
+   CAREER LADDERS DATA
+══════════════════════════════════════════════ */
+const LADDERS = [
+  {
+    id: 'ops', label: '📞 Operations (Voice/Non-voice)',
+    steps: [
+      { role: 'Customer Service / Back Office Executive', yoe: '0–1 years', sal: '₹1.8–3.5 LPA', desc: 'Handling customer queries, processing transactions, learning SOP and quality standards. KPIs: AHT, CSAT, accuracy.', highlight: false },
+      { role: 'Senior Executive / SME', yoe: '1–3 years', sal: '₹3–5 LPA', desc: 'Subject Matter Expert for a specific process. Training new joiners, handling escalations, quality checking peers.', highlight: true },
+      { role: 'Team Lead (TL)', yoe: '3–5 years', sal: '₹4.5–8 LPA', desc: 'Managing a team of 12–20 agents. Responsible for team KPIs, attendance, quality scores, and first-level escalation.', highlight: false },
+      { role: 'Assistant Manager / Manager', yoe: '5–9 years', sal: '₹7–14 LPA', desc: 'Managing multiple teams or a process. Client interaction, SLA management, hiring decisions, performance reviews.', highlight: false },
+      { role: 'Senior Manager / Associate Director', yoe: '9–14 years', sal: '₹14–25 LPA', desc: 'Leading a large operations site or multiple processes. P&L ownership, client relationship management, strategic planning.', highlight: false },
+      { role: 'Director / VP Operations', yoe: '14+ years', sal: '₹25–50 LPA+', desc: 'Leading an entire delivery organisation. Setting operational strategy, managing large client accounts, building new capabilities.', highlight: false },
+    ]
+  },
+  {
+    id: 'fa', label: '📊 Finance & Accounts',
+    steps: [
+      { role: 'F&A Executive / AP-AR Analyst', yoe: '0–2 years', sal: '₹2.5–4.5 LPA', desc: 'Processing invoices, reconciliations, journal entries. Learning ERP tools and US/UK GAAP basics.', highlight: false },
+      { role: 'Senior Analyst / Senior Executive', yoe: '2–4 years', sal: '₹4–7 LPA', desc: 'Owning a specific process (RTR, PTP, OTC). Handling exceptions, training juniors, process improvement.', highlight: true },
+      { role: 'Team Lead / Assistant Manager', yoe: '4–7 years', sal: '₹6–12 LPA', desc: 'Managing a team of 8–15 analysts. Client interaction, month-end close ownership, quality management.', highlight: false },
+      { role: 'Manager / Senior Manager', yoe: '7–12 years', sal: '₹12–22 LPA', desc: 'Owning a finance tower (AP, AR, or GL) for one or more clients. Transformation projects, automation initiatives.', highlight: false },
+      { role: 'Director / Finance Controller', yoe: '12+ years', sal: '₹22–40 LPA+', desc: 'Leading the F&A practice for a large geography or multiple clients. Business development, capability building.', highlight: false },
+    ]
+  },
+  {
+    id: 'kpo', label: '🔬 KPO / Analytics',
+    steps: [
+      { role: 'Research / Data Analyst', yoe: '0–2 years', sal: '₹3.5–6 LPA', desc: 'Data collection, basic analysis, report preparation. Learning domain and analytical tools.', highlight: false },
+      { role: 'Senior Analyst', yoe: '2–4 years', sal: '₹5–10 LPA', desc: 'Independent analysis, client deliverable ownership, mentoring junior analysts.', highlight: true },
+      { role: 'Team Lead / Specialist', yoe: '4–7 years', sal: '₹9–16 LPA', desc: 'Domain expert. Quality review of team output, client presentations, methodology design.', highlight: false },
+      { role: 'Manager / Engagement Manager', yoe: '7–11 years', sal: '₹15–28 LPA', desc: 'Managing client engagements, P&L for small accounts, building analytical frameworks, team development.', highlight: false },
+      { role: 'Senior Manager / Director', yoe: '11+ years', sal: '₹28–55 LPA+', desc: 'Leading practice areas, large client relationships, business development, and thought leadership.', highlight: false },
+    ]
+  },
+  {
+    id: 'hr', label: '👥 HR Operations',
+    steps: [
+      { role: 'HR Operations / Payroll Executive', yoe: '0–2 years', sal: '₹2.5–4 LPA', desc: 'Data entry, onboarding coordination, payroll inputs, employee query handling.', highlight: false },
+      { role: 'Senior HR Executive / HR Analyst', yoe: '2–4 years', sal: '₹4–7 LPA', desc: 'Owning an HR sub-process. Handling exceptions, training new team members, HRMS administration.', highlight: true },
+      { role: 'Team Lead / HR Consultant', yoe: '4–7 years', sal: '₹6–12 LPA', desc: 'Managing a team, client interaction, SLA adherence, process improvement projects.', highlight: false },
+      { role: 'HR Manager / Senior Manager', yoe: '7–12 years', sal: '₹12–22 LPA', desc: 'Leading an HR tower for one or more clients, driving HR technology implementation, change management.', highlight: false },
+      { role: 'Director / Head of HR BPS', yoe: '12+ years', sal: '₹22–40 LPA+', desc: 'Practice leadership, large client ownership, capability building, business development.', highlight: false },
+    ]
+  },
+];
+
+/* ══════════════════════════════════════════════
+   BUILD ROLES ACCORDION
+══════════════════════════════════════════════ */
+function buildRoles() {
+  const container = document.getElementById('rolesAccordion');
+  ROLES_DATA.forEach((role, idx) => {
+    const item = document.createElement('div');
+    item.className = 'role-item';
+    item.innerHTML = `
+      <div class="role-header" onclick="toggleRole(this)">
+        <div class="role-header-left">
+          <div class="role-name">${role.name}</div>
+          <div class="role-meta">
+            <span class="role-seg" style="color:${role.segColor}; border-color:rgba(${role.segRgb},0.3); background:rgba(${role.segRgb},0.08)">${role.segment}</span>
+            <span class="role-sal">Indicative range* <span>${role.salary}</span></span>
+          </div>
+        </div>
+        <div class="role-chevron">▾</div>
+      </div>
+      <div class="role-body">
+        <div class="role-body-grid">
+          <div>
+            <div class="role-col-label">Must-have skills</div>
+            <div class="role-col-list">${role.must.map(s => `<div class="role-col-item">${s}</div>`).join('')}</div>
+          </div>
+          <div>
+            <div class="role-col-label">Good to have</div>
+            <div class="role-col-list">${role.good.map(s => `<div class="role-col-item">${s}</div>`).join('')}</div>
+          </div>
+          <div>
+            <div class="role-col-label">Tools & platforms</div>
+            <div class="role-col-list">${role.tools.map(s => `<div class="role-col-item">${s}</div>`).join('')}</div>
+          </div>
+        </div>
+        <div class="role-note">${role.note}</div>
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+function toggleRole(header) {
+  const item = header.closest('.role-item');
+  const isOpen = item.classList.toggle('open');
+  if (isOpen) item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* ══════════════════════════════════════════════
+   BUILD LADDERS
+══════════════════════════════════════════════ */
+function buildLadders() {
+  const tabsEl   = document.getElementById('ladderTabs');
+  const panelsEl = document.getElementById('ladderPanels');
+
+  LADDERS.forEach((ladder, i) => {
+    const tab = document.createElement('button');
+    tab.className = 'ladder-tab' + (i === 0 ? ' active' : '');
+    tab.textContent = ladder.label;
+    tab.onclick = () => switchLadder(tab, ladder.id);
+    tabsEl.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.className = 'ladder-panel' + (i === 0 ? ' active' : '');
+    panel.id = 'ladder-' + ladder.id;
+    panel.innerHTML = `
+      <div class="ladder-steps">
+        ${ladder.steps.map(step => `
+          <div class="ladder-step ${step.highlight ? 'highlight' : ''}">
+            <div class="ldot">${step.highlight ? '★' : '○'}</div>
+            <div class="lbody">
+              <div class="lrole">${step.role}</div>
+              <div class="lyoe">${step.yoe}</div>
+              <div class="ldesc">${step.desc}</div>
+              <div class="lsal">Indicative <span>${step.sal}</span></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    panelsEl.appendChild(panel);
+  });
+}
+
+function switchLadder(btn, id) {
+  document.querySelectorAll('.ladder-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.ladder-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('ladder-' + id).classList.add('active');
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════════ */
+const revealIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+/* ══════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════ */
+buildRoles();
+buildLadders();
+</script>
+</body>
+</html>

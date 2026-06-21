@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — enaasan</title>
+  <meta name="description" content="What enaasan is, why it exists, and what it promises Indian students navigating one of the most consequential decisions of their lives." />
+  <!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ─────────────────────────────────── */
+    :root {
+      --night:    #0D1B2A;
+      --ink:      #14273A;
+      --card:     #192F44;
+      --border:   #1E3A52;
+      --gold:     #F0A500;
+      --glow:     #FFD166;
+      --chalk:    #F2EFE9;
+      --mist:     #8DA4BA;
+      --faint:    #4A6580;
+      --radius:   14px;
+      --radius-lg:22px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--night);
+      color: var(--chalk);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Nav ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px;
+      background: rgba(13,27,42,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--chalk);
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.84rem; color: var(--mist);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 8px 16px; border-radius: 100px;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
+
+    /* ── Page shell ──────────────────────────────── */
+    .page { max-width: 760px; margin: 0 auto; padding: 100px 24px 80px; }
+
+    /* ── Hero ────────────────────────────────────── */
+    .about-hero {
+      margin-bottom: 72px;
+      animation: riseIn 0.6s ease both;
+    }
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .hero-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 800; line-height: 1.08;
+      letter-spacing: -0.03em; color: var(--chalk);
+      margin-bottom: 24px;
+    }
+    .hero-heading span { color: var(--gold); }
+    .hero-lead {
+      font-size: clamp(1rem, 2.5vw, 1.18rem);
+      color: var(--mist); line-height: 1.75;
+      max-width: 600px;
+    }
+    .hero-lead strong { color: var(--chalk); font-weight: 600; }
+
+    /* ── Prose sections ──────────────────────────── */
+    .prose-section {
+      margin-bottom: 64px;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .prose-section.visible { opacity: 1; transform: translateY(0); }
+
+    .prose-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .prose-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      font-weight: 700; line-height: 1.2;
+      letter-spacing: -0.025em; color: var(--chalk);
+      margin-bottom: 18px;
+    }
+    .prose-body {
+      color: var(--mist); font-size: 0.98rem;
+      line-height: 1.8;
+    }
+    .prose-body p { margin-bottom: 16px; }
+    .prose-body p:last-child { margin-bottom: 0; }
+    .prose-body strong { color: var(--chalk); font-weight: 600; }
+    .prose-body em { color: var(--chalk); font-style: normal; }
+
+    /* ── Pull quote ──────────────────────────────── */
+    .pull-quote {
+      margin: 40px 0;
+      padding: 28px 32px;
+      border-left: 3px solid var(--gold);
+      background: rgba(240,165,0,0.04);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .pull-quote p {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      font-weight: 600; line-height: 1.5;
+      color: var(--chalk);
+      margin: 0;
+    }
+
+    /* ── Is / Is not grid ────────────────────────── */
+    .isnot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .isnot-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+    }
+    .isnot-card.is-card { border-top: 2px solid #3FC98A; }
+    .isnot-card.not-card { border-top: 2px solid #FF8C42; }
+    .isnot-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .is-card .isnot-label { color: #3FC98A; }
+    .not-card .isnot-label { color: #FF8C42; }
+    .isnot-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .isnot-list li {
+      font-size: 0.88rem; color: var(--mist);
+      line-height: 1.5; padding-left: 18px;
+      position: relative;
+    }
+    .isnot-list li::before {
+      position: absolute; left: 0; top: 0;
+      font-size: 0.8rem;
+    }
+    .is-card .isnot-list li::before { content: '✓'; color: #3FC98A; }
+    .not-card .isnot-list li::before { content: '✕'; color: #FF8C42; }
+
+    /* ── How it's built ──────────────────────────── */
+    .build-cards {
+      display: flex; flex-direction: column; gap: 12px;
+      margin-top: 24px;
+    }
+    .build-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .build-icon {
+      font-size: 1.4rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .build-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 4px;
+    }
+    .build-desc {
+      font-size: 0.85rem; color: var(--mist); line-height: 1.55;
+    }
+
+    /* ── Commitment cards ────────────────────────── */
+    .commitment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px; margin-top: 24px;
+    }
+    .commitment-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+    }
+    .commitment-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .commitment-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 6px;
+    }
+    .commitment-desc {
+      font-size: 0.83rem; color: var(--mist); line-height: 1.55;
+    }
+
+    /* ── Origin story ────────────────────────────── */
+    .origin-box {
+      background: linear-gradient(135deg, var(--card), rgba(240,165,0,0.04));
+      border: 1px solid rgba(240,165,0,0.15);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-top: 24px;
+    }
+    .origin-location {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.67rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--faint);
+      margin-bottom: 16px;
+    }
+    .origin-body {
+      font-size: 0.96rem; color: var(--mist);
+      line-height: 1.8;
+    }
+    .origin-body p { margin-bottom: 14px; }
+    .origin-body p:last-child { margin-bottom: 0; }
+    .origin-body strong { color: var(--chalk); font-weight: 600; }
+
+    /* ── Divider ─────────────────────────────────── */
+    .divider { height: 1px; background: var(--border); margin: 52px 0; }
+
+    /* ── Contact ─────────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px; margin-top: 24px;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      display: flex; flex-direction: column; gap: 6px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .contact-card:hover {
+      border-color: rgba(240,165,0,0.3);
+      transform: translateY(-2px);
+    }
+    .contact-icon { font-size: 1.5rem; margin-bottom: 4px; }
+    .contact-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.92rem; font-weight: 700; color: var(--chalk);
+    }
+    .contact-desc {
+      font-size: 0.82rem; color: var(--mist);
+      line-height: 1.5; flex: 1;
+    }
+    .contact-link {
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--gold); margin-top: 8px;
+      display: inline-flex; align-items: center;
+      transition: gap 0.15s; gap: 4px;
+    }
+    .contact-link:hover { gap: 8px; }
+    .contact-note {
+      margin-top: 20px; padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.84rem; color: var(--mist); line-height: 1.6;
+    }
+    .contact-note strong { color: var(--chalk); }
+
+    /* ── CTA strip ───────────────────────────────── */
+    .cta-strip {
+      text-align: center; padding: 52px 0 20px;
+    }
+    .cta-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--chalk); margin-bottom: 12px;
+    }
+    .cta-sub {
+      color: var(--mist); font-size: 0.96rem;
+      margin-bottom: 32px;
+    }
+    .cta-buttons {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--night);
+      font-family: 'DM Sans', sans-serif; font-weight: 700;
+      font-size: 0.92rem; padding: 14px 30px;
+      border-radius: 100px; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: var(--glow); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(240,165,0,0.3);
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--mist);
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 0.92rem; padding: 13px 28px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      transition: border-color 0.18s, color 0.18s;
+      text-decoration: none;
+    }
+    .btn-secondary:hover { border-color: var(--mist); color: var(--chalk); }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      background: var(--ink); border-top: 1px solid var(--border);
+      padding: 40px 28px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 16px; text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 800; color: var(--chalk);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+    }
+    .footer-links a {
+      font-size: 0.82rem; color: var(--faint); transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--chalk); }
+    .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 600px) {
+      nav { padding: 14px 18px; }
+      .page { padding: 88px 18px 60px; }
+      .isnot-grid { grid-template-columns: 1fr; }
+      .pull-quote { padding: 22px 22px; }
+      .origin-box { padding: 28px 22px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 380px) {
+      .hero-heading { font-size: 1.8rem; }
+    }
+    /* Share buttons */
+    .share-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; padding: 9px 18px; border-radius: 100px; border: 1px solid var(--border); transition: transform 0.15s, border-color 0.18s; text-decoration: none; }
+    .share-btn:hover { transform: translateY(-1px); }
+    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
+    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
+    .share-btn.email    { color: var(--gold); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.06); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ───────────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page">
+
+  <!-- ── Hero ──────────────────────────────────────── -->
+  <div class="about-hero">
+    <p class="hero-eyebrow">About enaasan</p>
+    <h1 class="hero-heading">Built for the student<br />nobody <span>guided.</span></h1>
+    <p class="hero-lead">
+      Every year, millions of Indian students make one of the most consequential decisions of their lives — which stream, which exam, which college — with <strong>almost no reliable guidance.</strong> Their parents went through a different system. Their teachers are overwhelmed. The internet gives them coaching advertisements, not honest answers.
+      <br /><br />
+      enaasan exists to change that.
+    </p>
+  </div>
+
+  <!-- ── The problem ───────────────────────────────── -->
+  <div class="prose-section">
+    <p class="prose-eyebrow">The problem we are solving</p>
+    <h2 class="prose-heading">Career guidance in India is broken — or missing entirely.</h2>
+    <div class="prose-body">
+      <p>Many students in India navigate one of the most consequential decisions of their lives — which stream, which exam, which college — with very little reliable information. Not because they are not capable, but because the right guidance is not always easy to find.</p>
+      <p>School counsellors are often stretched thin. Parents offer advice rooted in their own generation's experiences. Coaching institutes focus on specific paths. And the internet returns more noise than clarity.</p>
+      <p>The result is that students sometimes make choices based on what is familiar or expected, rather than what is genuinely right for them. enaasan exists to add one more voice to that conversation — an honest, informed, and judgment-free one.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>"The student who knows what they are choosing, and why, makes a better decision than the student with the highest score who has no idea what they signed up for."</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── What enaasan is / is not ──────────────────── -->
+  <div class="prose-section">
+    <p class="prose-eyebrow">Honest about what we are</p>
+    <h2 class="prose-heading">A thinking tool. Not a counsellor. Not a coaching institute.</h2>
+    <div class="prose-body">
+      <p>enaasan is a guide — not a decision-maker. It gives you information, context, and honest perspective so that <em>you</em> can make a more informed choice. It does not tell you what to do with your life.</p>
+    </div>
+
+    <div class="isnot-grid">
+      <div class="isnot-card is-card">
+        <div class="isnot-label">✓ enaasan is</div>
+        <ul class="isnot-list">
+          <li>A plain-English guide to streams, exams, and careers</li>
+          <li>India-specific — built for Indian students, Indian exams, Indian job market realities</li>
+          <li>Honest about difficulty, competition, and realistic outcomes</li>
+          <li>A starting point for conversations with parents, teachers, and counsellors</li>
+          <li>Built for students across India — every state, every stream</li>
+        </ul>
+      </div>
+      <div class="isnot-card not-card">
+        <div class="isnot-label">✕ enaasan is not</div>
+        <ul class="isnot-list">
+          <li>A replacement for a qualified career counsellor</li>
+          <li>Affiliated with any college, coaching institute, or entrance exam body</li>
+          <li>Paid to recommend any course, college, or platform</li>
+          <li>A source of real-time cut-offs, seat availability, or admission status</li>
+          <li>Responsible for decisions made using this information</li>
+          <li>A guarantee of any outcome</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── How it's built ─────────────────────────────── -->
+  <div class="prose-section">
+    <p class="prose-eyebrow">Transparency</p>
+    <h2 class="prose-heading">How enaasan is built — and what that means for you.</h2>
+    <div class="prose-body">
+      <p>We believe you deserve to know what is powering the information you read here.</p>
+    </div>
+
+    <div class="build-cards">
+      <div class="build-card">
+        <div class="build-icon">🤖</div>
+        <div>
+          <div class="build-title">This site is built with AI assistance — and we are upfront about it</div>
+          <div class="build-desc">The content on enaasan — stream descriptions, exam details, career paths, timelines, and college information — has been researched and structured with the help of AI tools. A human reviews, shapes, and takes responsibility for what is published. We do not believe in pretending otherwise. AI is a tool; the judgment behind what goes on this site is human.</div>
+        </div>
+      </div>
+      <div class="build-card">
+        <div class="build-icon">💬</div>
+        <div>
+          <div class="build-title">Ask Enaasan — AI-powered enaasan (Coming Soon)</div>
+          <div class="build-desc">An AI-powered mentor that lets you ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education and job landscape — and give you straight, honest answers in plain English.</div>
+        </div>
+      </div>
+
+      <div class="build-card">
+        <div class="build-icon">📅</div>
+        <div>
+          <div class="build-title">Information has a shelf life — verify before acting</div>
+          <div class="build-desc">Exam dates, eligibility criteria, seat counts, and cut-offs change every year. We update our content regularly, but always verify critical details directly from the official exam body (NTA, UPSC, ICAI, NLU Consortium etc.) before making any decision.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── Our commitments ────────────────────────────── -->
+  <div class="prose-section">
+    <p class="prose-eyebrow">What we promise</p>
+    <h2 class="prose-heading">Four things enaasan commits to, always.</h2>
+
+    <div class="commitment-grid">
+      <div class="commitment-card">
+        <div class="commitment-num">01</div>
+        <div class="commitment-title">Honest over optimistic</div>
+        <div class="commitment-desc">We will tell you that cracking JEE Advanced is extremely difficult. We will tell you that not all private colleges are worth their fees. Honest information serves you better than comfortable half-truths.</div>
+      </div>
+      <div class="commitment-card">
+        <div class="commitment-num">02</div>
+        <div class="commitment-title">All streams are equal here</div>
+        <div class="commitment-desc">Science is not superior to Commerce. Arts is not a fallback. Every stream is treated with equal seriousness because every student's path deserves the same quality of information.</div>
+      </div>
+      <div class="commitment-card">
+        <div class="commitment-num">03</div>
+        <div class="commitment-title">India-first, always</div>
+        <div class="commitment-desc">We cover Indian exams, Indian colleges, and the Indian job market. We do not import advice designed for students in the US or UK and apply it here as if nothing is different.</div>
+      </div>
+      <div class="commitment-card">
+        <div class="commitment-num">04</div>
+        <div class="commitment-title">We update when things change</div>
+        <div class="commitment-desc">Exam patterns change. New colleges open. Cut-offs shift. We commit to reviewing and updating our content regularly — and flagging where information may need verification.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── Origin ─────────────────────────────────────── -->
+  <div class="prose-section">
+    <p class="prose-eyebrow">Where this came from</p>
+    <h2 class="prose-heading">Built in Hyderabad, for students across India.</h2>
+
+    <div class="origin-box">
+      <div class="origin-location">📍 Hyderabad, Telangana · Registered June 2026</div>
+      <div class="origin-body">
+        <p>enaasan was built by someone who has spent years working in learning and development — watching how knowledge gaps shape careers, and how early decisions made without information create consequences that take years to undo.</p>
+        <p>The name comes from Tamil: <em>en</em> (my) + <em>aasan</em> (teacher). The word felt right — not a formal institution, not a coaching centre, but a personal guide. Someone in your corner who explains things clearly and does not have an agenda.</p>
+        <p><strong>The domain was registered on 17 June 2026.</strong> This is early — the site will grow, new pages will be added, and the Ask Enaasan feature will go live once it can be done responsibly. What you see today is a foundation, not a finished product.</p>
+        <p>If you are a student, parent, or teacher and you find something incorrect, outdated, or missing — we genuinely want to know. This site gets better when the people it is built for help shape it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Contact ────────────────────────────────────── -->
+  <div class="prose-section" id="contact">
+    <h2 class="prose-heading">We want to hear from you.</h2>
+    <div class="prose-body">
+      <p>Whether you found something incorrect, something missing, or just want to share how this helped — every message is read by a real person.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">🐛</div>
+        <div class="contact-title">Something is wrong or outdated</div>
+        <div class="contact-desc">Exam dates changed. A fact is incorrect. A college detail is off. Tell us — we will verify and fix it.</div>
+        <a href="mailto:hello@enaasan.online?subject=Correction: [page name]" class="contact-link">Report an error →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💡</div>
+        <div class="contact-title">Something important is missing</div>
+        <div class="contact-desc">A stream we haven't covered. An exam that is not listed. A career path that students need to know about.</div>
+        <a href="mailto:hello@enaasan.online?subject=Suggestion: [topic]" class="contact-link">Suggest a topic →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🤝</div>
+        <div class="contact-title">You want to contribute or collaborate</div>
+        <div class="contact-desc">Career counsellors, teachers, college students willing to share honest first-hand experiences — we are open to conversations.</div>
+        <a href="mailto:hello@enaasan.online?subject=Collaboration" class="contact-link">Start a conversation →</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <div class="contact-title">You just want to say something</div>
+        <div class="contact-desc">This helped. This confused me. I wish you had covered X. All of it is useful feedback for a site that is still growing.</div>
+        <a href="mailto:hello@enaasan.online?subject=Feedback" class="contact-link">Send feedback →</a>
+      </div>
+    </div>
+
+    <div class="contact-note">
+      <strong>Email:</strong> hello@enaasan.online · We aim to respond within 48 hours. We are a small team — please be patient and specific in your message.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── CTA ────────────────────────────────────────── -->
+  <div class="cta-strip prose-section">
+    <h2 class="cta-heading">Ready to explore?</h2>
+    <p class="cta-sub">Start wherever you are — stream choice, entrance exams, or career planning.</p>
+    <div class="cta-buttons">
+      <a href="streams.html" class="btn-primary">🎯 Explore streams</a>
+      <a href="after12.html" class="btn-secondary">📋 After 12th options</a>
+      <a href="careers.html" class="btn-secondary">💼 Career compass</a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="streams.html">Stream Explorer</a>
+    <a href="after12.html">After 12th</a>
+    <a href="careers.html">Career Compass</a>
+    <a href="bps.html">BPS / KPO Careers</a>
+    <a href="guide.html">Guidance Hub</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.prose-section').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

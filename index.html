@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enaasan — What comes next?</title>
+  <meta name="description" content="Career guidance for Indian students in Grade 10, 11, and 12. Understand your options, explore streams, and find your path forward." />
+  <!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────────── */
+    :root {
+      --night:   #0D1B2A;
+      --ink:     #14273A;
+      --card:    #192F44;
+      --border:  #1E3A52;
+      --gold:    #F0A500;
+      --glow:    #FFD166;
+      --chalk:   #F2EFE9;
+      --mist:    #8DA4BA;
+      --faint:   #4A6580;
+      --radius:  14px;
+      --radius-lg: 22px;
+    }
+
+    /* ── Reset ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--night);
+      color: var(--chalk);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Utility ─────────────────────────────────────────── */
+    .mono {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(240,165,0,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(240,165,0,0.25);
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      background: rgba(13,27,42,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--chalk);
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--night);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 9px 20px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--glow); transform: translateY(-1px); }
+
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Star-field ambient background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(240,165,0,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(13,100,180,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Floating dots constellation */
+    .stars {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .stars span {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--chalk);
+      opacity: 0;
+      animation: twinkle var(--dur, 4s) var(--delay, 0s) infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.6); }
+      50%       { opacity: var(--op, 0.4); transform: scale(1); }
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 20px;
+      animation: riseIn 0.7s ease both;
+    }
+    .hero-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 8vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--chalk);
+      max-width: 720px;
+      animation: riseIn 0.7s 0.1s ease both;
+    }
+    .hero-headline .accent { color: var(--gold); }
+    .hero-sub {
+      margin-top: 20px;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--mist);
+      max-width: 480px;
+      line-height: 1.65;
+      animation: riseIn 0.7s 0.2s ease both;
+    }
+    .hero-arrow {
+      margin-top: 48px;
+      animation: riseIn 0.7s 0.35s ease both, bounce 2.5s 1.5s infinite ease-in-out;
+      color: var(--mist);
+      font-size: 1.5rem;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(8px); }
+    }
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Section wrapper ──────────────────────────────────── */
+    .section {
+      padding: 80px 24px;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .section-label {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--chalk);
+      max-width: 560px;
+    }
+    .section-sub {
+      margin-top: 10px;
+      color: var(--mist);
+      font-size: 1rem;
+      max-width: 500px;
+    }
+
+    /* ── Path Cards ───────────────────────────────────────── */
+    #paths { padding-top: 0; }
+    .paths-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 56px;
+    }
+    .path-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    .path-card.visible {
+      animation: riseIn 0.55s ease forwards;
+    }
+    .path-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(240,165,0,0.35);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+    .path-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.22s;
+    }
+    .path-card:hover::after { opacity: 1; }
+
+    .path-icon {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .path-grade {
+      margin-bottom: 10px;
+    }
+    .path-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--chalk);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .path-desc {
+      font-size: 0.92rem;
+      color: var(--mist);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .path-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 28px;
+    }
+    .path-topic {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--faint);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 9px;
+    }
+    .path-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: gap 0.18s;
+    }
+    .path-card:hover .path-link { gap: 12px; }
+
+    /* ── How it works ─────────────────────────────────────── */
+    .hiw-section {
+      background: var(--ink);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .hiw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      margin-top: 48px;
+    }
+    .hiw-step {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .hiw-step:last-child { border-right: none; }
+    .hiw-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .hiw-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--chalk);
+      margin-bottom: 8px;
+    }
+    .hiw-desc {
+      font-size: 0.88rem;
+      color: var(--mist);
+      line-height: 1.55;
+    }
+
+    /* ── Ask Enaasan teaser ───────────────────────────────── */
+    .ask-section {
+      text-align: center;
+    }
+    .ask-box {
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--card) 0%, rgba(240,165,0,0.06) 100%);
+      border: 1px solid rgba(240,165,0,0.2);
+      border-radius: var(--radius-lg);
+      padding: 48px 36px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ask-avatar {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--gold), #E07B00);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 0 8px rgba(240,165,0,0.08);
+    }
+    .ask-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--chalk);
+      margin-bottom: 10px;
+    }
+    .ask-desc {
+      color: var(--mist);
+      font-size: 0.95rem;
+      max-width: 400px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+    .ask-examples {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .ask-example {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 0.88rem;
+      color: var(--mist);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 0.18s, color 0.18s;
+    }
+    .ask-example:hover { border-color: var(--gold); color: var(--chalk); }
+    .ask-example::before { content: '💬  '; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--night);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 32px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--glow);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(240,165,0,0.3);
+    }
+
+    /* ── Stats strip ──────────────────────────────────────── */
+    .stats-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+      padding: 60px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--mist);
+    }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid var(--border);
+      padding: 40px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--chalk);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: var(--mist);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--faint);
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--chalk); }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--faint);
+      margin-top: 8px;
+    }
+
+    /* ── Ask Enaasan teaser ───────────────────────────────── */
+    .notify-form {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 24px;
+    }
+    .notify-input {
+      flex: 1; min-width: 220px; max-width: 320px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 100px; color: var(--chalk);
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      padding: 12px 20px; outline: none; transition: border-color 0.18s;
+    }
+    .notify-input::placeholder { color: var(--faint); }
+    .notify-input:focus { border-color: rgba(240,165,0,0.4); }
+    .notify-btn {
+      background: var(--gold); color: var(--night);
+      font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.9rem;
+      padding: 12px 26px; border-radius: 100px; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s; white-space: nowrap;
+    }
+    .notify-btn:hover { background: var(--glow); transform: translateY(-1px); }
+    .notify-confirm { display: none; color: #4CAF7D; font-size: 0.88rem; margin-top: 12px; text-align: center; }
+    .share-row {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      justify-content: center; margin-top: 16px;
+    }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 600;
+      padding: 9px 18px; border-radius: 100px;
+      border: 1px solid var(--border);
+      transition: transform 0.15s, border-color 0.18s;
+      text-decoration: none;
+    }
+    .share-btn:hover { transform: translateY(-1px); }
+    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
+    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
+    .coming-soon-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.25);
+      color: var(--gold); font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 18px;
+    }
+    .preview-questions { display: flex; flex-direction: column; gap: 10px; margin: 24px 0; text-align: left; }
+    .preview-q {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 18px; font-size: 0.88rem; color: var(--mist);
+    }
+    .preview-q::before { content: '💬  '; }
+
+
+
+    /* ── Scroll reveal ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ───────────────────────────────────────── */
+
+    /* Tablet — 768px and below */
+    @media (max-width: 768px) {
+      .hiw-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      /* Reset all borders then re-apply cleanly */
+      .hiw-step {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .hiw-step:nth-child(odd) {
+        border-right: 1px solid var(--border);
+      }
+      .hiw-step:nth-child(3),
+      .hiw-step:nth-child(4) {
+        border-bottom: none;
+      }
+      /* 4th cell: no right border */
+      .hiw-step:nth-child(even) {
+        border-right: none;
+      }
+    }
+
+    /* Mobile — 640px and below */
+    @media (max-width: 640px) {
+      /* Nav */
+      nav { padding: 14px 18px; }
+      .nav-cta { font-size: 0.78rem; padding: 8px 16px; }
+
+      /* Hero */
+      .hero { padding: 100px 20px 60px; }
+
+      /* Sections */
+      .section { padding: 60px 20px; }
+
+      /* Path cards — ensure tags don't overflow */
+      .paths-grid { gap: 14px; }
+      .path-card { padding: 26px 22px; }
+      .path-topics { gap: 6px; }
+      .path-topic { font-size: 0.62rem; }
+
+      /* How it works — single column on phones */
+      .hiw-grid { grid-template-columns: 1fr; }
+      .hiw-step {
+        border-right: none !important;
+        border-bottom: 1px solid var(--border);
+        padding: 22px 20px;
+      }
+      .hiw-step:last-child { border-bottom: none; }
+
+      /* Stats — 2x2 grid on phone */
+      .stats-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 0;
+      }
+      .stat-item {
+        padding: 28px 16px;
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .stat-item:nth-child(even) { border-right: none; }
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4) { border-bottom: none; }
+      .stat-num { font-size: 1.8rem; }
+
+      /* Ask box */
+      .ask-box { padding: 36px 22px; }
+      .ask-example { font-size: 0.84rem; padding: 10px 14px; }
+
+      /* Footer */
+      footer { padding: 32px 20px; }
+      .footer-links { gap: 16px; }
+
+
+
+    }
+
+    /* Very small phones — 380px and below */
+    @media (max-width: 380px) {
+      .hero-headline { font-size: 2rem; }
+      .nav-logo { font-size: 1.1rem; }
+      .path-card { padding: 22px 18px; }
+      .path-title { font-size: 1.15rem; }
+      .section-heading { font-size: 1.4rem; }
+      .stat-num { font-size: 1.6rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">en<span>aasan</span></div>
+    <button class="nav-cta" onclick="window.location.href='streams.html'">
+      Find your path →
+    </button>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="stars" id="stars"></div>
+
+    <div class="hero-eyebrow">
+      <span class="tag">Career guidance for Indian students</span>
+    </div>
+
+    <h1 class="hero-headline">
+      Whatever stage you are at —<br />
+      <span class="accent">what comes next?</span>
+    </h1>
+
+    <p class="hero-sub">
+      Whether you are choosing a stream, planning after 12th, figuring out college, or starting your career — enaasan is your guide to thinking it through clearly.
+    </p>
+
+    <div class="hero-arrow">↓</div>
+  </section>
+
+  <!-- ── Path Cards ─────────────────────────────────────────── -->
+  <section class="section" id="paths">
+    <p class="section-label mono">Where are you right now?</p>
+    <h2 class="section-heading">Pick what's on your mind</h2>
+    <p class="section-sub">No forms. No sign-up. Just start where you are.</p>
+
+    <div class="paths-grid">
+
+      <div class="path-card" style="animation-delay: 0.1s">
+        <span class="path-icon">🎯</span>
+        <span class="tag path-grade">Grade 10 · Board exams done</span>
+        <h3 class="path-title">Which stream should I choose?</h3>
+        <p class="path-desc">Science, Commerce, or Arts? Beyond "what are you good at" — understand what each stream actually leads to, and which one fits the life you want.</p>
+        <div class="path-topics">
+          <span class="path-topic">PCM</span>
+          <span class="path-topic">PCB</span>
+          <span class="path-topic">Commerce</span>
+          <span class="path-topic">Arts / Humanities</span>
+          <span class="path-topic">Vocational</span>
+        </div>
+        <a href="streams.html" class="path-link">Explore streams <span>→</span></a>
+      </div>
+
+      <div class="path-card" style="animation-delay: 0.22s">
+        <span class="path-icon">🗺️</span>
+        <span class="tag path-grade">Grade 11–12 · Inter students</span>
+        <h3 class="path-title">What can I do after 12th?</h3>
+        <p class="path-desc">JEE, NEET, CLAT, CUET, NID, CA Foundation — understand which entrance exam leads where, what colleges are realistic, and what careers come out the other side.</p>
+        <div class="path-topics">
+          <span class="path-topic">JEE / NEET</span>
+          <span class="path-topic">CUET</span>
+          <span class="path-topic">CLAT</span>
+          <span class="path-topic">Design / NID</span>
+          <span class="path-topic">CA / CS</span>
+        </div>
+        <a href="after12.html" class="path-link">Plan after 12th <span>→</span></a>
+      </div>
+
+      <div class="path-card" style="animation-delay: 0.34s">
+        <span class="path-icon">💼</span>
+        <span class="tag path-grade">College / Early career</span>
+        <h3 class="path-title">What skills does the job market actually want?</h3>
+        <p class="path-desc">Degrees don't tell you what skills to build. See what employers really look for in different roles — from IT and finance to healthcare, design, and operations.</p>
+        <div class="path-topics">
+          <span class="path-topic">Tech roles</span>
+          <span class="path-topic">Finance</span>
+          <span class="path-topic">Management</span>
+          <span class="path-topic">Healthcare</span>
+          <span class="path-topic">Creative</span>
+        </div>
+        <a href="careers.html" class="path-link">See job skill maps <span>→</span></a>
+      </div>
+
+      <div class="path-card" style="animation-delay: 0.46s">
+        <span class="path-icon">👨‍👩‍👧</span>
+        <span class="tag path-grade">Parents · Counsellors · Coordinators</span>
+        <h3 class="path-title">Supporting the young people in your life</h3>
+        <p class="path-desc">Guidance for parents, career counsellors, and placement coordinators — understand the landscape so you can guide students with current, accurate information.</p>
+        <div class="path-topics">
+          <span class="path-topic">For parents</span>
+          <span class="path-topic">Counsellors</span>
+          <span class="path-topic">Coordinators</span>
+        </div>
+        <a href="guide.html" class="path-link">Go to guidance hub <span>→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── How it works ───────────────────────────────────────── -->
+  <div class="hiw-section">
+    <div class="section reveal">
+      <p class="section-label mono">How enaasan works</p>
+      <h2 class="section-heading">A place that guides you to think — freely and clearly.</h2>
+      <div class="hiw-grid">
+        <div class="hiw-step">
+          <p class="hiw-num">Step 01</p>
+          <p class="hiw-title">Tell us where you are</p>
+          <p class="hiw-desc">Grade 10, Inter first year, or already in college — start from your actual situation, not a generic menu.</p>
+        </div>
+        <div class="hiw-step">
+          <p class="hiw-num">Step 02</p>
+          <p class="hiw-title">Explore honest options</p>
+          <p class="hiw-desc">Real information about streams, exams, courses, and careers — written in plain language, not brochure-speak.</p>
+        </div>
+        <div class="hiw-step">
+          <p class="hiw-num">Step 03</p>
+          <p class="hiw-title">Ask the questions you can't Google</p>
+          <p class="hiw-desc">"Is B.Com worth it if I don't want to do CA?" "Can I do engineering without JEE?" Ask Enaasan directly.</p>
+        </div>
+        <div class="hiw-step">
+          <p class="hiw-num">Step 04</p>
+          <p class="hiw-title">Make a decision you understand</p>
+          <p class="hiw-desc">Not what your relatives suggested. Not what your friends chose. Yours — because you actually understand what it leads to.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Stats ──────────────────────────────────────────────── -->
+  <div class="stats-strip reveal">
+    <div class="stat-item">
+      <div class="stat-num">60+</div>
+      <div class="stat-label">Career paths mapped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Entrance exams explained</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Streams covered in depth</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">India-first</div>
+      <div class="stat-label">Content built for Indian students</div>
+    </div>
+  </div>
+
+  <!-- ── Ask Enaasan ────────────────────────────────────────── -->
+  <section class="section ask-section reveal" id="ask">
+    <p class="section-label mono">AI-powered guidance</p>
+    <h2 class="section-heading" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
+
+    <div class="ask-box">
+      <div class="ask-avatar">🎓</div>
+      <div class="coming-soon-pill">✦ Coming soon</div>
+      <h3 class="ask-title">Your personal career mentor</h3>
+      <p class="ask-desc">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
+
+      <div class="preview-questions">
+        <div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
+        <div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
+        <div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
+      </div>
+
+      <p style="font-size:0.84rem; color:var(--mist); margin-bottom:6px;">Get notified when Ask Enaasan goes live:</p>
+      <div class="notify-form">
+        <input class="notify-input" type="email" id="notifyEmail" placeholder="your@email.com" />
+        <button class="notify-btn" onclick="handleNotify()">Notify me</button>
+      </div>
+      <p class="notify-confirm" id="notifyConfirm">✓ Noted! Send us your email to <a href="mailto:hello@enaasan.online" style="color:var(--gold)">hello@enaasan.online</a> with subject "Notify Me" and we will reach out the moment it is ready.</p>
+      <p style="font-size:0.75rem;color:var(--faint);margin-top:8px;">Or share this page with someone who needs it — that helps us grow too.</p>
+      <div class="share-row">
+        <a href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online" target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online" target="_blank" class="share-btn linkedin">in Share on LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&url=https://enaasan.online" target="_blank" class="share-btn twitter">𝕏 Share on X</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="streams.html">Stream Explorer</a>
+    <a href="after12.html">After 12th</a>
+    <a href="careers.html">Career Compass</a>
+    <a href="bps.html">BPS / KPO Careers</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+  <!-- ── Scripts ───────────────────────────────────────────── -->
+  <script>
+    /* ── Star field ── */
+    (function() {
+      const container = document.getElementById('stars');
+      for (let i = 0; i < 55; i++) {
+        const s = document.createElement('span');
+        const size = Math.random() * 2.2 + 0.8;
+        s.style.cssText = `
+          width: ${size}px; height: ${size}px;
+          top: ${Math.random() * 100}%; left: ${Math.random() * 100}%;
+          --dur: ${3 + Math.random() * 5}s;
+          --delay: ${Math.random() * 6}s;
+          --op: ${0.15 + Math.random() * 0.4};
+        `;
+        container.appendChild(s);
+      }
+    })();
+
+    /* ── Scroll reveal ── */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal, .path-card').forEach(el => io.observe(el));
+
+    /* ── Notify form ── */
+    function handleNotify() {
+      const email = document.getElementById('notifyEmail').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('notifyEmail').focus();
+        return;
+      }
+      document.getElementById('notifyConfirm').style.display = 'block';
+      document.getElementById('notifyEmail').disabled = true;
+      document.querySelector('.notify-btn').disabled = true;
+      document.querySelector('.notify-btn').style.opacity = '0.5';
+    }
+  </script>
+</body>
+</html>

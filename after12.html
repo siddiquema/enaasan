@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>After 12th — enaasan</title>
+  <meta name="description" content="Entrance exams, courses, and college options after Class 12. Filter by your stream and find what's right for you." />
+  <!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ─────────────────────────────────── */
+    :root {
+      --night:    #0D1B2A;
+      --ink:      #14273A;
+      --card:     #192F44;
+      --border:   #1E3A52;
+      --gold:     #F0A500;
+      --glow:     #FFD166;
+      --chalk:    #F2EFE9;
+      --mist:     #8DA4BA;
+      --faint:    #4A6580;
+      --science:  #4A9EFF;
+      --medical:  #3FC98A;
+      --commerce: #F0A500;
+      --arts:     #E07BFF;
+      --radius:   14px;
+      --radius-lg:22px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--night);
+      color: var(--chalk);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Nav ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px;
+      background: rgba(13,27,42,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem; font-weight: 800;
+      letter-spacing: -0.02em; color: var(--chalk);
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.84rem; color: var(--mist);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 8px 16px; border-radius: 100px;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
+
+    /* ── Page shell ──────────────────────────────── */
+    .page { max-width: 960px; margin: 0 auto; padding: 100px 24px 80px; }
+
+    /* ── Page hero ───────────────────────────────── */
+    .page-hero { margin-bottom: 52px; }
+    .page-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .page-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.03em; color: var(--chalk);
+      margin-bottom: 14px;
+    }
+    .page-heading span { color: var(--gold); }
+    .page-sub {
+      color: var(--mist); font-size: 1rem;
+      max-width: 540px; line-height: 1.65;
+    }
+
+    /* ── Stream filter ───────────────────────────── */
+    .filter-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--faint);
+      margin-bottom: 12px;
+    }
+    .filter-row {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 10px 20px; border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--mist);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem; font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--mist); color: var(--chalk); }
+    .filter-btn.active {
+      background: rgba(var(--fc-rgb), 0.12);
+      border-color: var(--fc);
+      color: var(--fc);
+    }
+
+    /* ── Section heading ─────────────────────────── */
+    .sec-heading {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .sec-sub {
+      font-size: 0.88rem; color: var(--mist);
+      margin-bottom: 24px; line-height: 1.55;
+    }
+    .section-block { margin-bottom: 60px; }
+
+    /* ── Exam cards ──────────────────────────────── */
+    .exams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .exam-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .exam-card:hover {
+      border-color: var(--ec, var(--gold));
+      transform: translateY(-2px);
+    }
+    .exam-card-top {
+      padding: 22px 22px 18px;
+      border-left: 3px solid var(--ec, var(--gold));
+    }
+    .exam-badge-row {
+      display: flex; align-items: center;
+      justify-content: space-between; margin-bottom: 10px;
+    }
+    .exam-stream-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ec, var(--gold));
+      background: rgba(var(--ec-rgb, 240,165,0), 0.1);
+      border: 1px solid rgba(var(--ec-rgb, 240,165,0), 0.2);
+      padding: 3px 9px; border-radius: 6px;
+    }
+    .exam-difficulty {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .exam-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 4px;
+    }
+    .exam-fullname {
+      font-size: 0.8rem; color: var(--faint); margin-bottom: 10px;
+    }
+    .exam-tagline {
+      font-size: 0.86rem; color: var(--mist); line-height: 1.5;
+    }
+    .exam-card-bottom {
+      padding: 14px 22px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .exam-seats {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .exam-toggle {
+      font-size: 0.8rem; color: var(--ec, var(--gold));
+      font-weight: 600; display: flex; align-items: center; gap: 4px;
+      transition: gap 0.18s;
+    }
+    .exam-card:hover .exam-toggle { gap: 8px; }
+    .exam-detail {
+      display: none; padding: 0 22px 20px;
+      animation: fadeDown 0.3s ease both;
+    }
+    .exam-detail.open { display: block; }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .detail-row {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-key {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--faint);
+      min-width: 90px; padding-top: 2px;
+    }
+    .detail-val {
+      font-size: 0.84rem; color: var(--chalk); line-height: 1.5; flex: 1;
+    }
+    .detail-chips {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;
+    }
+    .detail-chip {
+      font-size: 0.76rem; color: var(--mist);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 9px;
+    }
+    .honest-note {
+      margin-top: 12px; padding: 12px 14px;
+      background: rgba(240,165,0,0.05);
+      border: 1px solid rgba(240,165,0,0.15);
+      border-radius: 10px;
+      font-size: 0.82rem; color: var(--mist); line-height: 1.55;
+    }
+    .honest-note::before { content: '💡  '; }
+
+    /* ── College type cards ──────────────────────── */
+    .colleges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .college-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .college-card:hover { transform: translateY(-2px); border-color: var(--faint); }
+    .college-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+    .college-type {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 6px;
+    }
+    .college-desc {
+      font-size: 0.85rem; color: var(--mist);
+      line-height: 1.55; margin-bottom: 14px;
+    }
+    .college-examples {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
+    }
+    .college-eg {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--faint);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px; padding: 3px 8px;
+    }
+    .college-reality {
+      font-size: 0.82rem; line-height: 1.5;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border-left: 2px solid;
+    }
+    .college-reality.good {
+      color: #3FC98A; border-color: #3FC98A;
+      background: rgba(63,201,138,0.06);
+    }
+    .college-reality.neutral {
+      color: var(--gold); border-color: var(--gold);
+      background: rgba(240,165,0,0.06);
+    }
+    .college-reality.caution {
+      color: #FF8C42; border-color: #FF8C42;
+      background: rgba(255,140,66,0.06);
+    }
+
+    /* ── Timeline ────────────────────────────────── */
+    .timeline {
+      position: relative;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 19px; top: 20px; bottom: 20px;
+      width: 2px; background: var(--border); z-index: 0;
+    }
+    .tl-item {
+      display: flex; gap: 20px;
+      position: relative; z-index: 1;
+      padding-bottom: 28px;
+      opacity: 0; transform: translateX(-10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .tl-item.revealed { opacity: 1; transform: translateX(0); }
+    .tl-dot {
+      width: 40px; height: 40px; border-radius: 50%;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      background: var(--ink);
+      transition: border-color 0.3s;
+    }
+    .tl-item.revealed .tl-dot {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(240,165,0,0.1);
+    }
+    .tl-body { flex: 1; padding-top: 6px; }
+    .tl-when {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .tl-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 4px;
+    }
+    .tl-desc {
+      font-size: 0.85rem; color: var(--mist); line-height: 1.55;
+    }
+    .tl-chips {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+    }
+    .tl-chip {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(240,165,0,0.08);
+      border: 1px solid rgba(240,165,0,0.2);
+      border-radius: 6px; padding: 3px 8px;
+    }
+
+    /* ── Practical tips ──────────────────────────── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .tip-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+    }
+    .tip-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--faint);
+      margin-bottom: 10px;
+    }
+    .tip-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--chalk); margin-bottom: 6px;
+    }
+    .tip-desc { font-size: 0.84rem; color: var(--mist); line-height: 1.55; }
+
+    /* ── Divider ─────────────────────────────────── */
+    .divider {
+      height: 1px; background: var(--border);
+      margin: 52px 0;
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      background: var(--ink); border-top: 1px solid var(--border);
+      padding: 40px 28px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 16px; text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 800; color: var(--chalk);
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-links {
+      display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;
+    }
+    .footer-links a {
+      font-size: 0.82rem; color: var(--faint);
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--chalk); }
+    .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
+
+    /* ── Reveal ──────────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 640px) {
+      nav { padding: 14px 18px; }
+      .page { padding: 88px 18px 60px; }
+      .exams-grid, .colleges-grid, .tips-grid { grid-template-columns: 1fr; }
+      .filter-btn { font-size: 0.82rem; padding: 8px 16px; }
+    }
+    @media (max-width: 380px) {
+      .page-heading { font-size: 1.7rem; }
+      .sec-heading { font-size: 1.1rem; }
+    }
+    /* Share buttons */
+    .share-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; padding: 9px 18px; border-radius: 100px; border: 1px solid var(--border); transition: transform 0.15s, border-color 0.18s; text-decoration: none; }
+    .share-btn:hover { transform: translateY(-1px); }
+    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
+    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
+    .share-btn.email    { color: var(--gold); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.06); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ───────────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page">
+
+  <!-- ── Page hero ─────────────────────────────────── -->
+  <div class="page-hero">
+    <p class="page-eyebrow">After Class 12</p>
+    <h1 class="page-heading">Boards are done.<br /><span>What are your options?</span></h1>
+    <p class="page-sub">Entrance exams, degree choices, college types — filtered by your stream. No information overload. Just what's relevant to you.</p>
+  </div>
+
+  <!-- ── Stream filter ─────────────────────────────── -->
+  <p class="filter-label">Filter by your stream</p>
+  <div class="filter-row" id="filterRow">
+    <button class="filter-btn active" style="--fc:#F2EFE9; --fc-rgb:242,239,233" data-filter="all" onclick="setFilter(this,'all')">🔭 All streams</button>
+    <button class="filter-btn" style="--fc:#4A9EFF; --fc-rgb:74,158,255" data-filter="science" onclick="setFilter(this,'science')">⚛️ Science (PCM)</button>
+    <button class="filter-btn" style="--fc:#3FC98A; --fc-rgb:63,201,138" data-filter="medical" onclick="setFilter(this,'medical')">🧬 Science (PCB)</button>
+    <button class="filter-btn" style="--fc:#F0A500; --fc-rgb:240,165,0" data-filter="commerce" onclick="setFilter(this,'commerce')">📈 Commerce</button>
+    <button class="filter-btn" style="--fc:#E07BFF; --fc-rgb:224,123,255" data-filter="arts" onclick="setFilter(this,'arts')">🎭 Arts & Humanities</button>
+    <button class="filter-btn" style="--fc:#FF8C42; --fc-rgb:255,140,66" data-filter="defence" onclick="setFilter(this,'defence')">🎖️ Defence</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 1 — ENTRANCE EXAMS
+  ════════════════════════════════════════════════ -->
+  <div class="section-block reveal" id="examSection">
+    <h2 class="sec-heading">Entrance exams that matter</h2>
+    <p class="sec-sub">Click any exam to see what it tests, how hard it is, and what it leads to.</p>
+
+    <div class="exams-grid" id="examsGrid"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 2 — COLLEGE TYPES
+  ════════════════════════════════════════════════ -->
+  <div class="section-block reveal">
+    <h2 class="sec-heading">Understanding college types</h2>
+    <p class="sec-sub">Not all colleges are equal — but the best college for you is not always the most famous one. Here is an honest breakdown.</p>
+
+    <div class="colleges-grid">
+
+      <div class="college-card">
+        <span class="college-icon">🏛️</span>
+        <div class="college-type">IITs / IIMs / IISc / AIIMS</div>
+        <div class="college-desc">India's premier institutions. Extremely competitive, exceptional faculty, strong placements, and a lifelong alumni network.</div>
+        <div class="college-examples">
+          <span class="college-eg">IIT Bombay</span>
+          <span class="college-eg">IIT Hyderabad</span>
+          <span class="college-eg">AIIMS Delhi</span>
+          <span class="college-eg">IIM Ahmedabad</span>
+        </div>
+        <div class="college-reality good">Genuinely worth the effort if you can get in. But not getting in does not define your career.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🎓</span>
+        <div class="college-type">NITs / BITS / Top NILUs</div>
+        <div class="college-desc">National Institutes of Technology and institutions like BITS Pilani. Excellent quality, strong industry connections, often underrated compared to IITs.</div>
+        <div class="college-examples">
+          <span class="college-eg">NIT Warangal</span>
+          <span class="college-eg">NIT Trichy</span>
+          <span class="college-eg">BITS Pilani</span>
+          <span class="college-eg">NLU Delhi</span>
+        </div>
+        <div class="college-reality good">Fantastic choices. NIT Warangal placements rival many IITs. Do not dismiss these.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🏫</span>
+        <div class="college-type">Central Universities</div>
+        <div class="college-desc">Universities like Delhi University, JNU, BHU, HCU. Strong in Arts, Sciences, and Social Sciences. Admission via CUET for most courses.</div>
+        <div class="college-examples">
+          <span class="college-eg">Delhi University</span>
+          <span class="college-eg">JNU</span>
+          <span class="college-eg">HCU Hyderabad</span>
+          <span class="college-eg">BHU</span>
+        </div>
+        <div class="college-reality good">Excellent for Arts, Humanities, and Sciences. DU colleges are among India's best for non-engineering streams.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🏢</span>
+        <div class="college-type">State Universities & Colleges</div>
+        <div class="college-desc">Osmania, Andhra University, Anna University, Mumbai University — large state systems with affiliated colleges. Quality varies significantly.</div>
+        <div class="college-examples">
+          <span class="college-eg">Osmania University</span>
+          <span class="college-eg">Anna University</span>
+          <span class="college-eg">Mumbai University</span>
+        </div>
+        <div class="college-reality neutral">Quality varies. Research the specific college, not just the university. Autonomous colleges within state systems are often very good.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🏗️</span>
+        <div class="college-type">Private Deemed Universities</div>
+        <div class="college-desc">VIT, Manipal, SRM, Amity etc. Large campuses, good infrastructure, and decent placements for top students. Often have their own entrance exams.</div>
+        <div class="college-examples">
+          <span class="college-eg">VIT Vellore</span>
+          <span class="college-eg">Manipal</span>
+          <span class="college-eg">SRM Chennai</span>
+          <span class="college-eg">Christ University</span>
+        </div>
+        <div class="college-reality neutral">Good option if you don't crack JEE/NEET. Check placement records for your specific branch before paying high fees.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">⚠️</span>
+        <div class="college-type">Other Private Colleges</div>
+        <div class="college-desc">Thousands of private engineering and arts colleges across India vary widely in quality — some are excellent, many are not. Infrastructure, faculty credentials, and placement records differ significantly.</div>
+        <div class="college-examples">
+          <span class="college-eg">Research before you commit</span>
+        </div>
+        <div class="college-reality caution">Check NAAC accreditation, placement data, and faculty credentials before paying any fees. Ask to speak to current students and recent alumni — not just the admissions office.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 2B — DEFENCE INSTITUTIONS
+  ════════════════════════════════════════════════ -->
+  <div class="section-block reveal">
+    <h2 class="sec-heading">Defence institutions & training academies</h2>
+    <p class="sec-sub">If you clear the defence entrance exams, here is where you train and what it looks like.</p>
+
+    <div class="colleges-grid">
+
+      <div class="college-card">
+        <span class="college-icon">🪖</span>
+        <div class="college-type">National Defence Academy (NDA)</div>
+        <div class="college-desc">Located in Khadakwasla, Pune. A tri-services academy where cadets of the Army, Navy, and Air Force train together for 3 years before moving to their respective service academies.</div>
+        <div class="college-examples">
+          <span class="college-eg">Pune, Maharashtra</span>
+          <span class="college-eg">Army / Navy / Air Force</span>
+          <span class="college-eg">B.Sc / B.Tech during training</span>
+        </div>
+        <div class="college-reality good">One of the most prestigious institutions in India. NDA alumni lead India's armed forces. The 3-year training is rigorous but the fellowship and career are unmatched.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">⚓</span>
+        <div class="college-type">Indian Naval Academy (INA)</div>
+        <div class="college-desc">Located in Ezhimala, Kerala. The largest naval academy in Asia. NDA Navy cadets complete their final year here before commissioning as Sub-Lieutenants.</div>
+        <div class="college-examples">
+          <span class="college-eg">Ezhimala, Kerala</span>
+          <span class="college-eg">Indian Navy</span>
+          <span class="college-eg">B.Tech (Naval Science)</span>
+        </div>
+        <div class="college-reality good">B.Tech degree awarded by Jawaharlal Nehru University during training. Fully funded — no tuition, no hostel fees, and a stipend from day one.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">✈️</span>
+        <div class="college-type">Air Force Academy (AFA)</div>
+        <div class="college-desc">Located in Dundigal, Hyderabad. Flying training academy for IAF officer cadets. NDA Air Force branch cadets complete flying training here.</div>
+        <div class="college-examples">
+          <span class="college-eg">Dundigal, Hyderabad</span>
+          <span class="college-eg">Indian Air Force</span>
+          <span class="college-eg">Flying / Technical / Ground Duty</span>
+        </div>
+        <div class="college-reality good">For students in Telangana and AP, this is practically local. Becoming a pilot trained at AFA Dundigal is a genuinely achievable dream with the right preparation.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🎓</span>
+        <div class="college-type">Sainik Schools</div>
+        <div class="college-desc">33 Sainik Schools across India are residential schools run under the Ministry of Defence to prepare students for NDA from Class 6 onwards. Some students enter after Class 9.</div>
+        <div class="college-examples">
+          <span class="college-eg">Sainik School Korukonda (AP)</span>
+          <span class="college-eg">Sainik School Hyderabad</span>
+          <span class="college-eg">31 others across India</span>
+        </div>
+        <div class="college-reality neutral">If you are in Class 9–10 and serious about defence, consider applying to a Sainik School. They significantly improve NDA success rates and provide a structured pathway.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">🏥</span>
+        <div class="college-type">Armed Forces Medical College (AFMC)</div>
+        <div class="college-desc">Located in Pune. A premier medical college run by the Indian Army. MBBS here is fully funded and graduates serve as Army Medical Corps officers.</div>
+        <div class="college-examples">
+          <span class="college-eg">Pune, Maharashtra</span>
+          <span class="college-eg">MBBS + Army service bond</span>
+          <span class="college-eg">Admission via NEET + AFMC interview</span>
+        </div>
+        <div class="college-reality good">Excellent option for PCB students who want both medicine and a defence career. Fully funded MBBS with a stipend. Service bond of 7 years after graduation.</div>
+      </div>
+
+      <div class="college-card">
+        <span class="college-icon">⚙️</span>
+        <div class="college-type">Military College of Electronics & Mechanical Engineering</div>
+        <div class="college-desc">MCEME, Secunderabad. Where Army Technical Entry Scheme (TES) cadets earn their B.Tech while training as Army officers in the EME Corps.</div>
+        <div class="college-examples">
+          <span class="college-eg">Secunderabad, Telangana</span>
+          <span class="college-eg">B.Tech (Mechanical / Electronics)</span>
+          <span class="college-eg">Indian Army EME Corps</span>
+        </div>
+        <div class="college-reality good">Particularly relevant for TS/AP students. MCEME is in Secunderabad — TES cadets get a fully funded B.Tech and an Army commission simultaneously.</div>
+      </div>
+
+    </div>
+
+    <div class="honest-note" style="margin-top: 20px; border-radius: var(--radius); padding: 16px 18px;">
+      <strong style="color: var(--chalk);">Important for defence aspirants:</strong> Every defence entry requires a medical fitness test (SHAPE-1 standard). Vision, height, weight, and general health are assessed strictly. Get a preliminary medical check done early so you are not surprised later. Requirements vary by branch — flying branch has the most stringent vision requirements.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 3 — TIMELINE
+  ════════════════════════════════════════════════ -->
+  <div class="section-block reveal">
+    <h2 class="sec-heading">The Class 12 to college timeline</h2>
+    <p class="sec-sub">What happens when — so you are never caught off guard.</p>
+
+    <div class="timeline" id="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot">📚</div>
+        <div class="tl-body">
+          <div class="tl-when">Class 11 onwards</div>
+          <div class="tl-title">Start entrance exam preparation</div>
+          <div class="tl-desc">Most competitive exams (JEE, NEET, CLAT) require 1.5–2 years of preparation alongside boards. Class 11 is when this begins — not Class 12.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">JEE coaching</span>
+            <span class="tl-chip">NEET foundation</span>
+            <span class="tl-chip">CLAT reading</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">📝</div>
+        <div class="tl-body">
+          <div class="tl-when">November – January (Class 12)</div>
+          <div class="tl-title">Register for entrance exams</div>
+          <div class="tl-desc">Most exam registrations open between October and January of your Class 12 year. Missing the window means waiting a full year. Set reminders early.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">JEE Main: Nov registration</span>
+            <span class="tl-chip">NEET: Dec–Jan</span>
+            <span class="tl-chip">CLAT: Jan–Feb</span>
+            <span class="tl-chip">CUET: Mar–Apr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">🗓️</div>
+        <div class="tl-body">
+          <div class="tl-when">January – April (Class 12)</div>
+          <div class="tl-title">Entrance exams happen</div>
+          <div class="tl-desc">JEE Main Session 1 is in January. Most other exams happen between February and May — some before boards, some after.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">JEE Main S1: Jan</span>
+            <span class="tl-chip">JEE Main S2: Apr</span>
+            <span class="tl-chip">CLAT: May</span>
+            <span class="tl-chip">NEET: May</span>
+            <span class="tl-chip">EAMCET: May</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">🏫</div>
+        <div class="tl-body">
+          <div class="tl-when">March – May</div>
+          <div class="tl-title">Class 12 Board exams</div>
+          <div class="tl-desc">CBSE, TSBIE, APBIE, and state boards hold exams between March and May. Your board marks matter for direct admissions and some entrance exam eligibility cutoffs.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">CBSE: Feb–Apr</span>
+            <span class="tl-chip">TSBIE / APBIE: Mar–Apr</span>
+            <span class="tl-chip">Maharashtra: Mar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">📊</div>
+        <div class="tl-body">
+          <div class="tl-when">May – June</div>
+          <div class="tl-title">Results and rank cards</div>
+          <div class="tl-desc">Board results and entrance exam results/ranks come out. This is when you know what you are working with. Do not panic — there are always options at every rank.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">JEE rank: June</span>
+            <span class="tl-chip">NEET rank: June</span>
+            <span class="tl-chip">Board results: May–June</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">🏛️</div>
+        <div class="tl-body">
+          <div class="tl-when">June – August</div>
+          <div class="tl-title">Counselling and seat allotment</div>
+          <div class="tl-desc">JoSAA (for IITs/NITs), MCC (for NEET/MBBS), state counselling boards, and university admission portals open. You rank your college and branch preferences — the system allots a seat.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">JoSAA: June–July</span>
+            <span class="tl-chip">MCC NEET: July–Aug</span>
+            <span class="tl-chip">TS/AP EAMCET: July</span>
+            <span class="tl-chip">CUET admissions: July</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot">🎓</div>
+        <div class="tl-body">
+          <div class="tl-when">August – September</div>
+          <div class="tl-title">College begins</div>
+          <div class="tl-desc">Most colleges start in late July or August. Document verification, fee payment, and hostel allocation happen in this window. Keep all original certificates ready.</div>
+          <div class="tl-chips">
+            <span class="tl-chip">Document verification</span>
+            <span class="tl-chip">Fee payment deadline</span>
+            <span class="tl-chip">Hostel allocation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 4 — PRACTICAL TIPS
+  ════════════════════════════════════════════════ -->
+  <div class="section-block reveal">
+    <h2 class="sec-heading">Things nobody tells you</h2>
+    <p class="sec-sub">Practical advice from the other side of this process.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">Tip 01</div>
+        <div class="tip-title">Your board percentage still matters</div>
+        <div class="tip-desc">Many entrance exams require a minimum of 75% in boards (60% for SC/ST) for eligibility. JEE, NEET, and CUET all have this clause. Do not ignore boards for entrance prep.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 02</div>
+        <div class="tip-title">A gap year is a valid choice</div>
+        <div class="tip-desc">Many toppers in JEE and NEET are drop year students. One focused year of preparation often makes a significant difference in rank. It is not failure — it is strategy.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 03</div>
+        <div class="tip-title">Branch matters more than college rank</div>
+        <div class="tip-desc">A Computer Science seat at NIT Warangal often leads to better outcomes than a less-demanded branch at a lower-ranked IIT. Research placement data by branch, not just by college.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 04</div>
+        <div class="tip-title">State quota seats are a real advantage</div>
+        <div class="tip-desc">85% of NIT seats and most MBBS seats in state medical colleges are reserved for students who studied in that state. This significantly lowers the effective competition for you.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 05</div>
+        <div class="tip-title">Multiple exams, multiple chances</div>
+        <div class="tip-desc">You are not limited to one exam. A PCM student can sit for JEE Main, BITSAT, VITEEE, and TS EAMCET in the same year. Apply broadly and give yourself options.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 06</div>
+        <div class="tip-title">Private college fees need scrutiny</div>
+        <div class="tip-desc">Private engineering colleges can cost ₹8–20 lakhs for 4 years. Always compare this against realistic placement salaries for that specific branch at that specific college — not the brochure promises.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 07</div>
+        <div class="tip-title">Defence is open to all streams — not just PCM</div>
+        <div class="tip-desc">NDA Army wing accepts students from any stream — Commerce and Arts students can and do become Army officers. Only the Navy and Air Force wings require PCM. Do not rule out defence because of your stream choice.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 08</div>
+        <div class="tip-title">SSB interview needs separate preparation</div>
+        <div class="tip-desc">The Services Selection Board (SSB) interview for all defence entries is a 5-day psychological and leadership assessment. Written exam clearing alone is not enough — start SSB preparation at least 6 months before your interview date.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<!-- ── Footer ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="streams.html">Stream Explorer</a>
+    <a href="after12.html">After 12th</a>
+    <a href="careers.html">Career Compass</a>
+    <a href="bps.html">BPS / KPO Careers</a>
+    <a href="guide.html">Guidance Hub</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════
+   EXAM DATA
+══════════════════════════════════════════════ */
+const EXAMS = [
+  {
+    streams: ['science'],
+    name: 'JEE Main',
+    fullname: 'Joint Entrance Examination — Main',
+    color: '#4A9EFF', rgb: '74,158,255',
+    tagline: 'Gateway to NITs, IIITs, and CFTIs across India. One of India\'s most-attempted engineering entrance exams.',
+    difficulty: 'High',
+    seats: '~50,000 seats across NITs & IIITs',
+    details: {
+      'Conducted by': 'NTA (National Testing Agency)',
+      'Subjects': 'Physics, Chemistry, Mathematics',
+      'Mode': 'Online (Computer Based Test)',
+      'Attempts': '2 sessions per year — January and April. Best of two scores counts.',
+      'Eligibility': 'Class 12 with PCM. Minimum 75% marks (60% for SC/ST).',
+      'Leads to': ['NITs', 'IIITs', 'CFTIs', 'JEE Advanced eligibility (top 2.5 lakh)'],
+    },
+    note: 'JEE Main rank also serves as the qualifying exam for JEE Advanced. Even an average JEE Main rank opens doors to good NITs and IIITs with decent branches.'
+  },
+  {
+    streams: ['science'],
+    name: 'JEE Advanced',
+    fullname: 'Joint Entrance Examination — Advanced',
+    color: '#4A9EFF', rgb: '74,158,255',
+    tagline: 'The gateway to IITs. Only the top 2.5 lakh JEE Main qualifiers can appear.',
+    difficulty: 'Very High',
+    seats: '~17,000 seats across 23 IITs',
+    details: {
+      'Conducted by': 'Rotating IIT (IIT Madras in 2025)',
+      'Subjects': 'Physics, Chemistry, Mathematics — very conceptual',
+      'Mode': 'Online (Computer Based Test)',
+      'Attempts': 'Maximum 2 attempts in consecutive years',
+      'Eligibility': 'Must be in top 2.5 lakh of JEE Main. Class 12 with 75% (60% SC/ST).',
+      'Leads to': ['IIT Bombay', 'IIT Delhi', 'IIT Madras', 'IIT Hyderabad', 'All 23 IITs'],
+    },
+    note: 'Only about 1 in 10 JEE Main qualifiers crack JEE Advanced. The difficulty is significantly higher. Do not measure your worth by this result alone.'
+  },
+  {
+    streams: ['science'],
+    name: 'TS / AP EAMCET',
+    fullname: 'Engineering, Agriculture & Medical Common Entrance Test',
+    color: '#4A9EFF', rgb: '74,158,255',
+    tagline: 'State-level gateway for engineering and agriculture seats in Telangana and Andhra Pradesh colleges.',
+    difficulty: 'Moderate',
+    seats: '~1.5 lakh+ engineering seats in TS/AP',
+    details: {
+      'Conducted by': 'TSCHE (TS) / APSCHE (AP)',
+      'Subjects': 'Physics, Chemistry, Maths (Engineering) / Biology (Agriculture/Medical)',
+      'Mode': 'Online',
+      'Attempts': 'Once per year. Can appear in both TS and AP separately.',
+      'Eligibility': 'Studied in TS or AP for Class 11–12 gives 85% state quota advantage.',
+      'Leads to': ['JNTUH / JNTUK affiliated colleges', 'Osmania University colleges', 'Private colleges in TS/AP'],
+    },
+    note: 'For most students in Telangana and AP, EAMCET is the primary realistic path to an engineering seat. Competition is intense but significantly more accessible than JEE.'
+  },
+  {
+    streams: ['science'],
+    name: 'BITSAT',
+    fullname: 'Birla Institute of Technology & Science Admission Test',
+    color: '#4A9EFF', rgb: '74,158,255',
+    tagline: 'Admission to BITS Pilani, Hyderabad, and Goa — among India\'s best private technical universities.',
+    difficulty: 'High',
+    seats: '~2,000 seats across BITS campuses',
+    details: {
+      'Conducted by': 'BITS Pilani',
+      'Subjects': 'Physics, Chemistry, Maths, English, Logical Reasoning',
+      'Mode': 'Online (home-based in recent years)',
+      'Attempts': 'Once per year',
+      'Eligibility': 'PCM with minimum 75% aggregate in Class 12',
+      'Leads to': ['BITS Pilani', 'BITS Hyderabad', 'BITS Goa'],
+    },
+    note: 'BITS Pilani is genuinely one of India\'s top engineering institutions. BITS Hyderabad is an excellent option for TS/AP students.'
+  },
+  {
+    streams: ['medical'],
+    name: 'NEET-UG',
+    fullname: 'National Eligibility cum Entrance Test — Undergraduate',
+    color: '#3FC98A', rgb: '63,201,138',
+    tagline: 'The single national gateway for MBBS, BDS, BAMS, BHMS, and B.V.Sc admissions across India.',
+    difficulty: 'Very High',
+    seats: '~1.08 lakh MBBS seats (govt + private)',
+    details: {
+      'Conducted by': 'NTA',
+      'Subjects': 'Physics, Chemistry, Biology (Botany + Zoology)',
+      'Mode': 'Offline (OMR-based)',
+      'Attempts': 'No limit on attempts. Minimum age 17.',
+      'Eligibility': 'Class 12 with PCB. Minimum 50% (40% for SC/ST/OBC).',
+      'Leads to': ['Government MBBS seats', 'Private MBBS', 'BDS', 'BAMS/BHMS', 'BVSC'],
+    },
+    note: 'NEET is the most competitive exam in India by number of applicants vs seats. ~20 lakh students for ~1 lakh MBBS seats. Preparation must start in Class 11.'
+  },
+  {
+    streams: ['medical'],
+    name: 'TS / AP EAMCET (BiPC)',
+    fullname: 'EAMCET — Agriculture & Medical stream',
+    color: '#3FC98A', rgb: '63,201,138',
+    tagline: 'State-level entrance for B.Pharm, B.Sc. Agriculture, Nursing, and allied health courses in TS/AP.',
+    difficulty: 'Moderate',
+    seats: 'Thousands of seats in Pharma, Agri, Nursing',
+    details: {
+      'Conducted by': 'TSCHE / APSCHE',
+      'Subjects': 'Physics, Chemistry, Biology',
+      'Mode': 'Online',
+      'Attempts': 'Once per year',
+      'Eligibility': 'Class 12 with PCB or PCMB',
+      'Leads to': ['B.Pharm', 'B.Sc. Agriculture', 'B.Sc. Nursing', 'B.Sc. Horticulture'],
+    },
+    note: 'If NEET is out of reach, EAMCET (BiPC) opens a wide range of health and agriculture careers that are in strong demand, especially in semi-urban and rural India.'
+  },
+  {
+    streams: ['commerce', 'arts', 'science', 'medical'],
+    name: 'CUET',
+    fullname: 'Common University Entrance Test',
+    color: '#F0A500', rgb: '240,165,0',
+    tagline: 'Central admission gateway for undergraduate courses in 250+ central and participating universities including Delhi University, JNU, BHU.',
+    difficulty: 'Moderate',
+    seats: 'Lakhs of seats across universities',
+    details: {
+      'Conducted by': 'NTA',
+      'Subjects': 'Domain subject + General Test. You choose based on your course.',
+      'Mode': 'Online',
+      'Attempts': 'Once per year (typically March–May)',
+      'Eligibility': 'Class 12 passed or appearing. Any stream.',
+      'Leads to': ['Delhi University (all colleges)', 'JNU', 'BHU', 'HCU', '250+ universities'],
+    },
+    note: 'CUET replaced Class 12 percentage-based direct admission to central universities. Your CUET score now matters more than your board percentage for DU and JNU admissions.'
+  },
+  {
+    streams: ['commerce', 'arts'],
+    name: 'CLAT',
+    fullname: 'Common Law Admission Test',
+    color: '#E07BFF', rgb: '224,123,255',
+    tagline: 'National gateway to the 25 National Law Universities (NLUs) — India\'s premier law schools.',
+    difficulty: 'Moderate–High',
+    seats: '~2,500 seats across 25 NLUs',
+    details: {
+      'Conducted by': 'Consortium of NLUs',
+      'Subjects': 'English, Current Affairs, Legal Reasoning, Logical Reasoning, Quantitative Techniques',
+      'Mode': 'Offline',
+      'Attempts': 'Once per year (December)',
+      'Eligibility': 'Class 12 any stream. Minimum 45% (40% SC/ST). Max age: none for LLB.',
+      'Leads to': ['NLSIU Bangalore', 'NALSAR Hyderabad', 'NLU Delhi', 'All 25 NLUs'],
+    },
+    note: 'Law is open to all streams. Commerce and Arts students with strong reading and reasoning skills often outperform science students in CLAT. NALSAR Hyderabad is consistently one of India\'s top 3 law schools.'
+  },
+  {
+    streams: ['arts'],
+    name: 'NID / UCEED / NIFT',
+    fullname: 'National Institute of Design / UCEED / Fashion Technology',
+    color: '#E07BFF', rgb: '224,123,255',
+    tagline: 'India\'s premier design school entrance exams for product design, communication design, fashion, and more.',
+    difficulty: 'High (creative aptitude)',
+    seats: '~500–1000 seats across NID, IIT design programs, NIFT campuses',
+    details: {
+      'Conducted by': 'NID (DAT), IITs (UCEED), NIFT separately',
+      'Subjects': 'Design aptitude, drawing, observation, creative thinking. No fixed syllabus.',
+      'Mode': 'Offline (studio test + interview)',
+      'Attempts': 'Once per year',
+      'Eligibility': 'Class 12 any stream. Portfolio matters.',
+      'Leads to': ['NID Ahmedabad / Vijayawada', 'IIT BDes programs', 'NIFT campuses'],
+    },
+    note: 'These exams test creativity and observation, not rote learning. A student from any stream with strong visual and design thinking can crack NID. Build a portfolio early.'
+  },
+  {
+    streams: ['commerce'],
+    name: 'CA Foundation',
+    fullname: 'Chartered Accountancy — Foundation Exam (ICAI)',
+    color: '#F0A500', rgb: '240,165,0',
+    tagline: 'The first step toward becoming a Chartered Accountant — one of India\'s most respected and well-paid professional qualifications.',
+    difficulty: 'Moderate',
+    seats: 'Open registration — no seat limit',
+    details: {
+      'Conducted by': 'ICAI (Institute of Chartered Accountants of India)',
+      'Subjects': 'Accounts, Law, Economics, Maths & Statistics',
+      'Mode': 'Offline',
+      'Attempts': 'Twice a year — May and November',
+      'Eligibility': 'Register during Class 12 itself. Appear after Class 12 results.',
+      'Leads to': ['CA Intermediate', 'CA Final', 'Chartered Accountant designation'],
+    },
+    note: 'CA is one of the few professional qualifications in India where your college name does not matter at all — only your ICAI rank does. You can register during Class 12 and start studying immediately.'
+  },
+  {
+    streams: ['science', 'medical', 'commerce', 'arts', 'defence'],
+    name: 'NDA Exam',
+    fullname: 'National Defence Academy & Naval Academy Examination',
+    color: '#FF8C42', rgb: '255,140,66',
+    tagline: 'The primary gateway to become an officer in the Indian Army, Navy, or Air Force directly after Class 12.',
+    difficulty: 'High',
+    seats: '~400 seats per cycle (2 cycles per year)',
+    details: {
+      'Conducted by': 'UPSC (Union Public Service Commission)',
+      'Subjects': 'Mathematics + General Ability Test (English, GK, Physics, Chemistry, History, Geography)',
+      'Mode': 'Offline written exam followed by SSB interview (5 days)',
+      'Attempts': 'Twice a year — April and September. Maximum 4 attempts.',
+      'Eligibility': 'Male (unmarried). Age 16.5–19.5 years. Class 12 passed or appearing. PCM mandatory for Air Force and Navy. Any stream for Army.',
+      'Leads to': ['Indian Army (NDA)', 'Indian Navy (Naval Academy)', 'Indian Air Force (NDA + flying training)'],
+    },
+    note: 'NDA is one of the most prestigious paths in India. The SSB interview (Services Selection Board) tests personality, leadership, and mental fitness over 5 days — preparation for SSB is as important as the written exam. Girls are now eligible for NDA as of 2021.'
+  },
+  {
+    streams: ['science', 'defence'],
+    name: 'TES / Army Technical Entry',
+    fullname: 'Technical Entry Scheme — Indian Army',
+    color: '#FF8C42', rgb: '255,140,66',
+    tagline: 'Direct officer entry into the Indian Army Corps of Engineers, Signals, and EME for PCM students — no entrance exam, purely merit-based on Class 12 marks.',
+    difficulty: 'Merit-based (Class 12 PCM)',
+    seats: '~90 seats per cycle (2 cycles per year)',
+    details: {
+      'Conducted by': 'Indian Army',
+      'Subjects': 'No written exam — shortlisted on Class 12 PCM percentage',
+      'Mode': 'SSB Interview after shortlisting',
+      'Attempts': 'Twice a year',
+      'Eligibility': 'Male (unmarried). Age 16.5–19.5 years. Minimum 70% in PCM in Class 12. Physics, Chemistry, Maths mandatory.',
+      'Leads to': ['Indian Army — Corps of Engineers', 'Corps of Signals', 'Electronics & Mechanical Engineers (EME)'],
+    },
+    note: 'TES is an excellent option for PCM students who may not crack NDA written but have strong Class 12 marks. You get a B.Tech degree from MCEME or CME during training, fully funded by the Army.'
+  },
+  {
+    streams: ['science', 'medical', 'commerce', 'arts', 'defence'],
+    name: 'Indian Coast Guard',
+    fullname: 'Indian Coast Guard Navik & Yantrik Entry',
+    color: '#FF8C42', rgb: '255,140,66',
+    tagline: 'Entry-level positions in the Indian Coast Guard as Navik (General Duty / Domestic Branch) or Yantrik (technical roles).',
+    difficulty: 'Moderate',
+    seats: 'Varies by notification (200–500 per batch)',
+    details: {
+      'Conducted by': 'Indian Coast Guard (Ministry of Defence)',
+      'Subjects': 'Written test in Maths, Science, English + Physical Fitness Test',
+      'Mode': 'Online written + Physical test + Medical',
+      'Attempts': 'As per notification — typically 2–3 times a year',
+      'Eligibility': 'Navik GD: Class 12 with Maths & Physics. Navik DB: Class 12 any stream. Yantrik: Class 12 PCM + ITI/Diploma. Age 18–22.',
+      'Leads to': ['Navik General Duty (sea duties)', 'Navik Domestic Branch (admin, catering)', 'Yantrik (mechanical, electrical, electronics)'],
+    },
+    note: 'Coast Guard is a respected paramilitary force under the Ministry of Defence. Less competitive than Army/Navy commissioned officer entry, and a strong career option for students from coastal states including AP and Telangana.'
+  },
+  {
+    streams: ['science', 'defence'],
+    name: 'AFCAT',
+    fullname: 'Air Force Common Admission Test',
+    color: '#FF8C42', rgb: '255,140,66',
+    tagline: 'Entry into the Indian Air Force as a commissioned officer — Flying, Technical, and Ground Duty branches.',
+    difficulty: 'High',
+    seats: '~250–300 seats per cycle',
+    details: {
+      'Conducted by': 'Indian Air Force',
+      'Subjects': 'Verbal Ability, Numerical Ability, Reasoning, General Awareness, Military Aptitude',
+      'Mode': 'Online written + AFSB Interview',
+      'Attempts': 'Twice a year. Note: AFCAT is primarily for graduates, but Class 12 students can plan ahead for this path.',
+      'Eligibility': 'Graduation required for AFCAT. Class 12 PCM with 60% for Flying branch. However, NDA is the Class 12 direct route to IAF.',
+      'Leads to': ['IAF Flying Branch (Pilot)', 'Technical Branch', 'Ground Duty (Administration, Accounts, Logistics)'],
+    },
+    note: 'If becoming an Air Force pilot is the dream, NDA after Class 12 is the direct route. AFCAT is the post-graduation alternative. Both routes lead to commissioned officer status. The physical and medical standards for the flying branch are stringent — get a medical check done early.'
+  },
+  {
+    streams: ['commerce'],
+    name: 'IPM Aptitude Test',
+    fullname: 'Integrated Programme in Management — Aptitude Test (IIM)',
+    color: '#F0A500', rgb: '240,165,0',
+    tagline: 'Direct entry into 5-year BBA+MBA integrated programme at IIM Indore, IIM Rohtak, and other IIMs.',
+    difficulty: 'High',
+    seats: '~150–200 seats per IIM offering this programme',
+    details: {
+      'Conducted by': 'Individual IIMs',
+      'Subjects': 'Quantitative Ability, Verbal Ability',
+      'Mode': 'Online',
+      'Attempts': 'Once per year',
+      'Eligibility': 'Class 12 with minimum 60%. Any stream but Maths required.',
+      'Leads to': ['IIM Indore BBA+MBA', 'IIM Rohtak', 'IIM Ranchi', 'IIM Jammu'],
+    },
+    note: 'This is a rare opportunity to enter an IIM directly from Class 12. Competition is intense but significantly less than CAT. If you are commerce-oriented and want IIM, this is your best shot.'
+  },
+];
+
+/* ══════════════════════════════════════════════
+   FILTER & RENDER
+══════════════════════════════════════════════ */
+let activeFilter = 'all';
+
+function setFilter(btn, filter) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeFilter = filter;
+  renderExams();
+}
+
+function renderExams() {
+  const grid = document.getElementById('examsGrid');
+  const filtered = activeFilter === 'all'
+    ? EXAMS
+    : activeFilter === 'defence'
+    ? EXAMS.filter(e => e.streams.includes('defence'))
+    : EXAMS.filter(e => e.streams.includes(activeFilter) && !e.streams.every(s => s === 'defence'));
+
+  grid.innerHTML = '';
+  filtered.forEach((exam, idx) => {
+    const card = document.createElement('div');
+    card.className = 'exam-card';
+    card.style.setProperty('--ec', exam.color);
+    card.style.setProperty('--ec-rgb', exam.rgb);
+    card.style.animationDelay = (idx * 0.06) + 's';
+
+    const detailId = 'detail-' + idx + '-' + activeFilter;
+    const detailRows = Object.entries(exam.details).map(([k, v]) => {
+      if (Array.isArray(v)) {
+        return `<div class="detail-row">
+          <span class="detail-key">${k}</span>
+          <div class="detail-val"><div class="detail-chips">${v.map(c => `<span class="detail-chip">${c}</span>`).join('')}</div></div>
+        </div>`;
+      }
+      return `<div class="detail-row">
+        <span class="detail-key">${k}</span>
+        <span class="detail-val">${v}</span>
+      </div>`;
+    }).join('');
+
+    card.innerHTML = `
+      <div class="exam-card-top">
+        <div class="exam-badge-row">
+          <span class="exam-stream-tag">${exam.streams[0].toUpperCase()}</span>
+          <span class="exam-difficulty">${exam.difficulty}</span>
+        </div>
+        <div class="exam-name">${exam.name}</div>
+        <div class="exam-fullname">${exam.fullname}</div>
+        <div class="exam-tagline">${exam.tagline}</div>
+      </div>
+      <div class="exam-card-bottom" onclick="toggleDetail('${detailId}', this)">
+        <span class="exam-seats">${exam.seats}</span>
+        <span class="exam-toggle" id="toggle-${detailId}">Details →</span>
+      </div>
+      <div class="exam-detail" id="${detailId}">
+        ${detailRows}
+        <div class="honest-note">${exam.note}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function toggleDetail(id, row) {
+  const panel = document.getElementById(id);
+  const toggle = document.getElementById('toggle-' + id);
+  const isOpen = panel.classList.toggle('open');
+  toggle.textContent = isOpen ? 'Close ↑' : 'Details →';
+  if (isOpen) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* ══════════════════════════════════════════════
+   TIMELINE REVEAL
+══════════════════════════════════════════════ */
+function initTimeline() {
+  const items = document.querySelectorAll('.tl-item');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.2 });
+  items.forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.1) + 's';
+    io.observe(el);
+  });
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════════ */
+const revealIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+/* ══════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════ */
+renderExams();
+initTimeline();
+</script>
+</body>
+</html>
