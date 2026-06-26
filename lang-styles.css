@@ -23,7 +23,10 @@
   gap: 0.25rem;
   align-items: center;
 }
-
+.nav-logo, .nav-logo span 
+{
+  font-family: 'Syne', sans-serif !important;
+}
 /* ── Individual pill ── */
 .lang-pill {
   background: transparent;
