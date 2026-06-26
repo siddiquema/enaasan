@@ -1,0 +1,67 @@
+/* ══════════════════════════════════════════════════════
+   lang-styles-snippet.css — enaasan.online
+   Paste into <head> BEFORE your existing stylesheet,
+   or append to it.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Google Fonts: Noto Sans for Indic scripts ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap');
+
+
+/* ── Google Fonts: Noto Sans for Indic scripts ── */
+
+/* ── Per-language body font ── */
+:lang(ta) { font-family: 'Noto Sans Tamil', sans-serif; }
+:lang(te) { font-family: 'Noto Sans Telugu', sans-serif; }
+:lang(hi) { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+/* ── Switcher wrapper ── */
+.lang-switcher {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* ── Individual pill ── */
+.lang-pill {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.45); /* gold, 45% opacity */
+  color: rgba(212, 175, 55, 0.75);            /* muted gold */
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.lang-pill:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.75);
+  color: #d4af37;
+}
+
+/* Active / selected state */
+.lang-pill.active,
+.lang-pill[aria-pressed="true"] {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* Focus ring — keyboard accessibility */
+.lang-pill:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* ── Dark-navy page background assumed; adjust if your bg differs ── */
+
+[lang="ta"], .lang-ta { font-family: 'Noto Sans Tamil', sans-serif; }
+[lang="te"], .lang-te { font-family: 'Noto Sans Telugu', sans-serif; }
+[lang="hi"], .lang-hi { font-family: 'Noto Sans Devanagari', sans-serif; }

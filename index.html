@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lang-styles.css" />
 
   <style>
     /* ── Tokens ─────────────────────────────────────────── */
@@ -118,7 +119,6 @@
       overflow: hidden;
     }
 
-    /* Star-field ambient background */
     .hero::before {
       content: '';
       position: absolute;
@@ -129,7 +129,6 @@
       pointer-events: none;
     }
 
-    /* Floating dots constellation */
     .stars {
       position: absolute;
       inset: 0;
@@ -148,10 +147,7 @@
       50%       { opacity: var(--op, 0.4); transform: scale(1); }
     }
 
-    .hero-eyebrow {
-      margin-bottom: 20px;
-      animation: riseIn 0.7s ease both;
-    }
+    .hero-eyebrow { margin-bottom: 20px; animation: riseIn 0.7s ease both; }
     .hero-headline {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2.4rem, 8vw, 5.2rem);
@@ -186,16 +182,8 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Section wrapper ──────────────────────────────────── */
-    .section {
-      padding: 80px 24px;
-      max-width: 1060px;
-      margin: 0 auto;
-    }
-    .section-label {
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
+    .section { padding: 80px 24px; max-width: 1060px; margin: 0 auto; }
+    .section-label { color: var(--gold); margin-bottom: 12px; }
     .section-heading {
       font-family: 'Syne', sans-serif;
       font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -205,14 +193,8 @@
       color: var(--chalk);
       max-width: 560px;
     }
-    .section-sub {
-      margin-top: 10px;
-      color: var(--mist);
-      font-size: 1rem;
-      max-width: 500px;
-    }
+    .section-sub { margin-top: 10px; color: var(--mist); font-size: 1rem; max-width: 500px; }
 
-    /* ── Path Cards ───────────────────────────────────────── */
     #paths { padding-top: 0; }
     .paths-grid {
       display: grid;
@@ -232,9 +214,7 @@
       opacity: 0;
       transform: translateY(28px);
     }
-    .path-card.visible {
-      animation: riseIn 0.55s ease forwards;
-    }
+    .path-card.visible { animation: riseIn 0.55s ease forwards; }
     .path-card:hover {
       transform: translateY(-4px);
       border-color: rgba(240,165,0,0.35);
@@ -250,15 +230,8 @@
       transition: opacity 0.22s;
     }
     .path-card:hover::after { opacity: 1; }
-
-    .path-icon {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-    .path-grade {
-      margin-bottom: 10px;
-    }
+    .path-icon { font-size: 2.4rem; margin-bottom: 20px; display: block; }
+    .path-grade { margin-bottom: 10px; }
     .path-title {
       font-family: 'Syne', sans-serif;
       font-size: 1.35rem;
@@ -267,18 +240,8 @@
       line-height: 1.25;
       margin-bottom: 10px;
     }
-    .path-desc {
-      font-size: 0.92rem;
-      color: var(--mist);
-      line-height: 1.6;
-      margin-bottom: 22px;
-    }
-    .path-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 28px;
-    }
+    .path-desc { font-size: 0.92rem; color: var(--mist); line-height: 1.6; margin-bottom: 22px; }
+    .path-topics { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 28px; }
     .path-topic {
       font-family: 'DM Mono', monospace;
       font-size: 0.67rem;
@@ -301,48 +264,15 @@
     }
     .path-card:hover .path-link { gap: 12px; }
 
-    /* ── How it works ─────────────────────────────────────── */
-    .hiw-section {
-      background: var(--ink);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .hiw-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0;
-      margin-top: 48px;
-    }
-    .hiw-step {
-      padding: 28px 24px;
-      border-right: 1px solid var(--border);
-      position: relative;
-    }
+    .hiw-section { background: var(--ink); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .hiw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 48px; }
+    .hiw-step { padding: 28px 24px; border-right: 1px solid var(--border); position: relative; }
     .hiw-step:last-child { border-right: none; }
-    .hiw-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-    .hiw-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--chalk);
-      margin-bottom: 8px;
-    }
-    .hiw-desc {
-      font-size: 0.88rem;
-      color: var(--mist);
-      line-height: 1.55;
-    }
+    .hiw-num { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 12px; }
+    .hiw-title { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--chalk); margin-bottom: 8px; }
+    .hiw-desc { font-size: 0.88rem; color: var(--mist); line-height: 1.55; }
 
-    /* ── Ask Enaasan teaser ───────────────────────────────── */
-    .ask-section {
-      text-align: center;
-    }
+    .ask-section { text-align: center; }
     .ask-box {
       margin-top: 40px;
       background: linear-gradient(135deg, var(--card) 0%, rgba(240,165,0,0.06) 100%);
@@ -353,233 +283,67 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .ask-avatar {
-      width: 64px;
-      height: 64px;
-      background: linear-gradient(135deg, var(--gold), #E07B00);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 0 8px rgba(240,165,0,0.08);
-    }
-    .ask-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--chalk);
-      margin-bottom: 10px;
-    }
-    .ask-desc {
-      color: var(--mist);
-      font-size: 0.95rem;
-      max-width: 400px;
-      margin: 0 auto 28px;
-      line-height: 1.65;
-    }
-    .ask-examples {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .ask-example {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 18px;
-      font-size: 0.88rem;
-      color: var(--mist);
-      text-align: left;
-      cursor: pointer;
-      transition: border-color 0.18s, color 0.18s;
-    }
-    .ask-example:hover { border-color: var(--gold); color: var(--chalk); }
-    .ask-example::before { content: '💬  '; }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: var(--night);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 14px 32px;
-      border-radius: 100px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    }
-    .btn-primary:hover {
-      background: var(--glow);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(240,165,0,0.3);
-    }
+    .ask-avatar { width: 64px; height: 64px; background: linear-gradient(135deg, var(--gold), #E07B00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 20px; box-shadow: 0 0 0 8px rgba(240,165,0,0.08); }
+    .ask-title { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--chalk); margin-bottom: 10px; }
+    .ask-desc { color: var(--mist); font-size: 0.95rem; max-width: 400px; margin: 0 auto 28px; line-height: 1.65; }
 
-    /* ── Stats strip ──────────────────────────────────────── */
-    .stats-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 48px;
-      padding: 60px 24px;
-      border-top: 1px solid var(--border);
-    }
+    .stats-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; padding: 60px 24px; border-top: 1px solid var(--border); }
     .stat-item { text-align: center; }
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .stat-label {
-      font-size: 0.82rem;
-      color: var(--mist);
-    }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 0.82rem; color: var(--mist); }
 
-    /* ── Footer ───────────────────────────────────────────── */
-    footer {
-      background: var(--ink);
-      border-top: 1px solid var(--border);
-      padding: 40px 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      text-align: center;
-    }
-    .footer-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--chalk);
-    }
+    footer { background: var(--ink); border-top: 1px solid var(--border); padding: 40px 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--chalk); }
     .footer-logo span { color: var(--gold); }
-    .footer-tagline {
-      font-size: 0.85rem;
-      color: var(--mist);
-    }
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .footer-links a {
-      font-size: 0.82rem;
-      color: var(--faint);
-      transition: color 0.15s;
-    }
+    .footer-tagline { font-size: 0.85rem; color: var(--mist); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.82rem; color: var(--faint); transition: color 0.15s; }
     .footer-links a:hover { color: var(--chalk); }
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--faint);
-      margin-top: 8px;
-    }
+    .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 8px; }
 
-    /* ── Ask Enaasan teaser ───────────────────────────────── */
-    
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* Share buttons */
+    .share-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+    .share-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; padding: 9px 18px; border-radius: 100px; border: 1px solid var(--border); transition: transform 0.15s, border-color 0.18s; text-decoration: none; }
+    .share-btn:hover { transform: translateY(-1px); }
+    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
+    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
 
+    /* Coming soon pill */
+    .coming-soon-pill { display: inline-block; background: rgba(240,165,0,0.1); color: var(--gold); border: 1px solid rgba(240,165,0,0.3); border-radius: 100px; padding: 4px 14px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 16px; }
+    .preview-questions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .preview-q { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px; font-size: 0.88rem; color: var(--mist); text-align: left; }
+    .preview-q::before { content: '💬  '; }
 
-    /* ── Scroll reveal ────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Responsive ───────────────────────────────────────── */
-
-    /* Tablet — 768px and below */
     @media (max-width: 768px) {
-      .hiw-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      /* Reset all borders then re-apply cleanly */
-      .hiw-step {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-      .hiw-step:nth-child(odd) {
-        border-right: 1px solid var(--border);
-      }
-      .hiw-step:nth-child(3),
-      .hiw-step:nth-child(4) {
-        border-bottom: none;
-      }
-      /* 4th cell: no right border */
-      .hiw-step:nth-child(even) {
-        border-right: none;
-      }
+      .hiw-grid { grid-template-columns: 1fr 1fr; }
+      .hiw-step { border-right: none; border-bottom: 1px solid var(--border); }
+      .hiw-step:nth-child(odd) { border-right: 1px solid var(--border); }
+      .hiw-step:nth-child(3), .hiw-step:nth-child(4) { border-bottom: none; }
+      .hiw-step:nth-child(even) { border-right: none; }
     }
-
-    /* Mobile — 640px and below */
     @media (max-width: 640px) {
-      /* Nav */
       nav { padding: 14px 18px; }
       .nav-cta { font-size: 0.78rem; padding: 8px 16px; }
-
-      /* Hero */
       .hero { padding: 100px 20px 60px; }
-
-      /* Sections */
       .section { padding: 60px 20px; }
-
-      /* Path cards — ensure tags don't overflow */
       .paths-grid { gap: 14px; }
       .path-card { padding: 26px 22px; }
-      .path-topics { gap: 6px; }
-      .path-topic { font-size: 0.62rem; }
-
-      /* How it works — single column on phones */
       .hiw-grid { grid-template-columns: 1fr; }
-      .hiw-step {
-        border-right: none !important;
-        border-bottom: 1px solid var(--border);
-        padding: 22px 20px;
-      }
+      .hiw-step { border-right: none !important; border-bottom: 1px solid var(--border); padding: 22px 20px; }
       .hiw-step:last-child { border-bottom: none; }
-
-      /* Stats — 2x2 grid on phone */
-      .stats-strip {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-        padding: 0;
-      }
-      .stat-item {
-        padding: 28px 16px;
-        border-right: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
-      }
+      .stats-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+      .stat-item { padding: 28px 16px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
       .stat-item:nth-child(even) { border-right: none; }
-      .stat-item:nth-child(3),
-      .stat-item:nth-child(4) { border-bottom: none; }
+      .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
       .stat-num { font-size: 1.8rem; }
-
-      /* Ask box */
       .ask-box { padding: 36px 22px; }
-      .ask-example { font-size: 0.84rem; padding: 10px 14px; }
-
-      /* Footer */
       footer { padding: 32px 20px; }
       .footer-links { gap: 16px; }
-
-
-
     }
-
-    /* Very small phones — 380px and below */
     @media (max-width: 380px) {
       .hero-headline { font-size: 2rem; }
       .nav-logo { font-size: 1.1rem; }
@@ -588,7 +352,6 @@
       .section-heading { font-size: 1.4rem; }
       .stat-num { font-size: 1.6rem; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
@@ -602,25 +365,27 @@
     <button class="nav-cta" onclick="window.location.href='streams.html'">
       Find your path →
     </button>
+    <div class="lang-switcher" role="group" aria-label="Select language">
+      <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
+      <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
+      <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
+      <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
+    </div>
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="hero">
     <div class="stars" id="stars"></div>
-
     <div class="hero-eyebrow">
       <span class="tag">Career guidance for Indian students</span>
     </div>
-
     <h1 class="hero-headline">
       Whatever stage you are at —<br />
       <span class="accent">what comes next?</span>
     </h1>
-
     <p class="hero-sub">
       Whether you are choosing a stream, planning after 12th, figuring out college, or starting your career — enaasan is your guide to thinking it through clearly.
     </p>
-
     <div class="hero-arrow">↓</div>
   </section>
 
@@ -631,7 +396,6 @@
     <p class="section-sub">No forms. No sign-up. Just start where you are.</p>
 
     <div class="paths-grid">
-
       <div class="path-card" style="animation-delay: 0.1s">
         <span class="path-icon">🎯</span>
         <span class="tag path-grade">Grade 10 · Board exams done</span>
@@ -689,7 +453,6 @@
         </div>
         <a href="guide.html" class="path-link">Go to guidance hub <span>→</span></a>
       </div>
-
     </div>
   </section>
 
@@ -745,62 +508,49 @@
 
   <!-- ── Ask Enaasan ────────────────────────────────────────── -->
   <section class="section ask-section reveal" id="ask">
-  <p class="section-label mono">AI-powered guidance</p>
-  <h2 class="section-heading" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
-
-  <div class="ask-box">
-    <div class="ask-avatar">🎓</div>
-    <div class="coming-soon-pill">✦ Coming soon</div>
-
-    <h3 class="ask-title">Your personal career mentor</h3>
-    <p class="ask-desc">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
-
-    <div class="preview-questions">
-      <div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
-      <div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
-      <div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
+    <p class="section-label mono">AI-powered guidance</p>
+    <h2 class="section-heading" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
+    <div class="ask-box">
+      <div class="ask-avatar">🎓</div>
+      <div class="coming-soon-pill">✦ Coming soon</div>
+      <h3 class="ask-title">Your personal career mentor</h3>
+      <p class="ask-desc">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
+      <div class="preview-questions">
+        <div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
+        <div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
+        <div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
+      </div>
+      <p style="font-size:0.84rem; color:var(--mist); margin-bottom:14px;">
+        Share this page with someone who needs it — that helps us grow too.
+      </p>
+      <div class="share-row">
+        <a href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online"
+           target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online"
+           target="_blank" class="share-btn linkedin">in Share on LinkedIn</a>
+        <a href="https://x.com/intent/post?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&url=https://enaasan.online"
+           target="_blank" class="share-btn twitter">𝕏 Share on X</a>
+      </div>
     </div>
-
-    <!-- FIX #13: Removed broken email input + Notify Me button + contradictory confirm message -->
-    <!-- Replaced with a clean share prompt -->
-    <p style="font-size:0.84rem; color:var(--mist); margin-bottom:14px;">
-      Share this page with someone who needs it — that helps us grow too.
-    </p>
-
-    <div class="share-row">
-      <a href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online"
-         target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
-
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online"
-         target="_blank" class="share-btn linkedin">in Share on LinkedIn</a>
-
-      <!-- FIX #14: Changed twitter.com/intent/tweet → x.com/intent/post -->
-      <a href="https://x.com/intent/post?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&url=https://enaasan.online"
-         target="_blank" class="share-btn twitter">𝕏 Share on X</a>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
-  <div class="footer-logo">en<span>aasan</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="streams.html">Stream Explorer</a>
-    <a href="after12.html">After 12th</a>
-    <a href="careers.html">Career Compass</a>
-    <a href="bps.html">BPS / KPO Careers</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </div>
-  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
-</footer>
+    <div class="footer-logo">en<span>aasan</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="streams.html">Stream Explorer</a>
+      <a href="after12.html">After 12th</a>
+      <a href="careers.html">Career Compass</a>
+      <a href="bps.html">BPS / KPO Careers</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+  </footer>
 
   <!-- ── Scripts ───────────────────────────────────────────── -->
   <script>
-    /* ── Star field ── */
     (function() {
       const container = document.getElementById('stars');
       for (let i = 0; i < 55; i++) {
@@ -816,30 +566,13 @@
         container.appendChild(s);
       }
     })();
-
-    /* ── Scroll reveal ── */
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal, .path-card').forEach(el => io.observe(el));
-
-    /* ── Notify form ── */
-    function handleNotify() {
-      const email = document.getElementById('notifyEmail').value.trim();
-      if (!email || !email.includes('@')) {
-        document.getElementById('notifyEmail').focus();
-        return;
-      }
-      document.getElementById('notifyConfirm').style.display = 'block';
-      document.getElementById('notifyEmail').disabled = true;
-      document.querySelector('.notify-btn').disabled = true;
-      document.querySelector('.notify-btn').style.opacity = '0.5';
-    }
   </script>
+<script src="i18n.js"></script>
 </body>
 </html>

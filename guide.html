@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guidance Hub — enaasan</title>
-  <meta name="description" content="Resources for parents, career counsellors, and placement coordinators — understand the current landscape so you can guide students with accurate, up-to-date information." />
-
-  <!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+  <meta name="description" content="A guide for parents, career counsellors, and placement coordinators helping Indian students navigate stream and career decisions." />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,126 +12,91 @@
     gtag('js', new Date());
     gtag('config', 'G-D4QMDFL8XF');
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lang-styles.css" />
   <style>
-    :root {
-      --night:    #0D1B2A; --ink:   #14273A; --card:  #192F44;
-      --border:   #1E3A52; --gold:  #F0A500; --glow:  #FFD166;
-      --chalk:    #F2EFE9; --mist:  #8DA4BA; --faint: #4A6580;
-      --parent:   #3FC98A; --couns: #4A9EFF; --coord: #E07BFF;
-      --radius:   14px;    --radius-lg: 22px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--night); color: var(--chalk);
-      font-family: 'DM Sans', sans-serif; font-size: 16px;
-      line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 28px;
-      background: rgba(13,27,42,0.9); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .nav-logo { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--chalk); }
-    .nav-logo span { color: var(--gold); }
-    .nav-back { font-size: 0.84rem; color: var(--mist); background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 100px; transition: color 0.18s, border-color 0.18s; }
-    .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
-
-    .page { max-width: 960px; margin: 0 auto; padding: 100px 24px 80px; }
-
-    .page-hero { margin-bottom: 56px; animation: riseIn 0.6s ease both; }
-    @keyframes riseIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .page-heading { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; color: var(--chalk); margin-bottom: 14px; }
-    .page-heading span { color: var(--gold); }
-    .page-sub { color: var(--mist); font-size: 1rem; max-width: 600px; line-height: 1.65; }
-
-    /* Tab bar */
-    .tab-bar { display: flex; gap: 4px; margin-bottom: 44px; background: var(--ink); border: 1px solid var(--border); border-radius: 100px; padding: 5px; width: fit-content; flex-wrap: wrap; }
-    .tab-btn { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500; padding: 10px 22px; border-radius: 100px; border: none; background: transparent; color: var(--mist); cursor: pointer; transition: background 0.2s, color 0.2s; white-space: nowrap; }
-    .tab-btn.active { background: var(--gold); color: var(--night); font-weight: 700; }
-    .tab-btn:not(.active):hover { color: var(--chalk); }
-    .tab-panel { display: none; animation: riseIn 0.35s ease both; }
-    .tab-panel.active { display: block; }
-
-    /* Section */
-    .sec-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-    .sec-heading { font-family: 'Syne', sans-serif; font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; color: var(--chalk); letter-spacing: -0.02em; margin-bottom: 8px; }
-    .sec-sub { font-size: 0.9rem; color: var(--mist); margin-bottom: 28px; line-height: 1.6; max-width: 600px; }
-
-    /* Intro box */
-    .intro-box { background: var(--ink); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 32px; font-size: 0.95rem; color: var(--mist); line-height: 1.75; }
-    .intro-box strong { color: var(--chalk); }
-
-    /* Cards */
-    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 36px; }
-    .guide-card { background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--gc, var(--gold)); border-radius: var(--radius-lg); padding: 22px 20px; }
-    .guide-card-icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
-    .guide-card-title { font-family: 'Syne', sans-serif; font-size: 0.96rem; font-weight: 700; color: var(--chalk); margin-bottom: 6px; }
-    .guide-card-desc { font-size: 0.84rem; color: var(--mist); line-height: 1.6; }
-    .guide-card-tip { margin-top: 12px; font-size: 0.82rem; color: var(--chalk); background: rgba(240,165,0,0.05); border: 1px solid rgba(240,165,0,0.15); border-radius: 8px; padding: 10px 12px; line-height: 1.5; }
-    .guide-card-tip::before { content: '→  '; color: var(--gold); font-weight: 600; }
-
-    /* Myth busters */
-    .myth-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-    .myth-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .myth-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
-    .myth-label.myth { color: #FF6B6B; }
-    .myth-label.fact { color: #3FC98A; }
-    .myth-text { font-size: 0.86rem; line-height: 1.55; }
-    .myth-text.myth { color: var(--faint); text-decoration: line-through; }
-    .myth-text.fact { color: var(--chalk); }
-
-    /* Conversation starters */
-    .convo-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-    .convo-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; font-size: 0.88rem; color: var(--mist); line-height: 1.5; }
-    .convo-item::before { content: '"'; color: var(--gold); font-size: 1.2rem; font-family: 'Syne', sans-serif; margin-right: 4px; }
-
-    /* Share row */
-    .share-section { background: linear-gradient(135deg, var(--card), rgba(240,165,0,0.04)); border: 1px solid rgba(240,165,0,0.15); border-radius: var(--radius-lg); padding: 28px; text-align: center; margin-top: 40px; }
-    .share-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--chalk); margin-bottom: 8px; }
-    .share-desc { font-size: 0.88rem; color: var(--mist); margin-bottom: 20px; }
-    .share-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .share-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.84rem; font-weight: 600; padding: 10px 20px; border-radius: 100px; border: 1px solid var(--border); transition: transform 0.15s, border-color 0.18s; text-decoration: none; }
-    .share-btn:hover { transform: translateY(-1px); }
-    .share-btn.whatsapp { color: #25D366; border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
-    .share-btn.linkedin { color: #0A66C2; border-color: rgba(10,102,194,0.3); background: rgba(10,102,194,0.06); }
-    .share-btn.twitter  { color: var(--chalk); border-color: var(--border); background: rgba(255,255,255,0.04); }
-    .share-btn.email    { color: var(--gold); border-color: rgba(240,165,0,0.3); background: rgba(240,165,0,0.06); }
-
-    /* Divider */
-    .divider { height: 1px; background: var(--border); margin: 40px 0; }
-
-    /* Reveal */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* Footer */
-    footer { background: var(--ink); border-top: 1px solid var(--border); padding: 40px 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
-    .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--chalk); }
-    .footer-logo span { color: var(--gold); }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { font-size: 0.82rem; color: var(--faint); transition: color 0.15s; }
-    .footer-links a:hover { color: var(--chalk); }
-    .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
-
-    @media (max-width: 640px) {
-      nav { padding: 14px 18px; }
-      .page { padding: 88px 18px 60px; }
-      .tab-bar { width: 100%; border-radius: var(--radius-lg); flex-direction: column; }
-      .tab-btn { border-radius: var(--radius); text-align: center; }
-      .myth-card { grid-template-columns: 1fr; }
-      .cards-grid { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+    :root{--night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#8DA4BA;--faint:#4A6580;--radius:14px;--radius-lg:22px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--night);color:var(--chalk);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:rgba(13,27,42,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05)}
+    .nav-logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:-0.02em;color:var(--chalk)}
+    .nav-logo span{color:var(--gold)}
+    .nav-back{display:flex;align-items:center;gap:6px;font-size:0.84rem;color:var(--mist);background:rgba(255,255,255,0.05);border:1px solid var(--border);padding:8px 16px;border-radius:100px;transition:color 0.18s,border-color 0.18s}
+    .nav-back:hover{color:var(--chalk);border-color:var(--mist)}
+    .mono{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase}
+    .page-hero{padding:120px 24px 60px;max-width:900px;margin:0 auto;animation:riseIn 0.6s ease both}
+    @keyframes riseIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .hero-eyebrow{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .hero-heading{font-family:'Syne',sans-serif;font-size:clamp(2rem,6vw,3.2rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;color:var(--chalk);margin-bottom:18px}
+    .hero-heading span{color:var(--gold)}
+    .hero-sub{font-size:clamp(1rem,2.5vw,1.12rem);color:var(--mist);max-width:620px;line-height:1.75}
+    .tab-bar{position:sticky;top:65px;z-index:80;background:rgba(13,27,42,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+    .tab-bar::-webkit-scrollbar{display:none}
+    .tab-btn{flex-shrink:0;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;color:var(--faint);padding:14px 20px;border:none;background:transparent;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.18s,border-color 0.18s;letter-spacing:0;white-space:nowrap}
+    .tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+    .tab-btn:hover{color:var(--chalk)}
+    .tab-panel{display:none;max-width:900px;margin:0 auto;padding:52px 24px 80px}
+    .tab-panel.active{display:block}
+    .section-tag{display:inline-block;background:rgba(240,165,0,0.1);color:var(--gold);border:1px solid rgba(240,165,0,0.22);padding:4px 12px;border-radius:100px;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px}
+    .section-heading{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;line-height:1.15;letter-spacing:-0.025em;color:var(--chalk);margin-bottom:14px}
+    .section-sub{color:var(--mist);font-size:0.96rem;max-width:580px;line-height:1.75;margin-bottom:40px}
+    .myth-grid{display:grid;gap:14px;margin-bottom:40px}
+    .myth-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 24px;opacity:0;transform:translateY(18px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .myth-card.visible{opacity:1;transform:translateY(0)}
+    .myth-label{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px}
+    .myth-label.false{color:#FF8C42}
+    .myth-label.true{color:#3FC98A}
+    .myth-text{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--chalk);line-height:1.35;margin-bottom:10px}
+    .myth-body{font-size:0.88rem;color:var(--mist);line-height:1.65}
+    .info-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:28px}
+    .info-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 22px;opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .info-card.visible{opacity:1;transform:translateY(0)}
+    .info-icon{font-size:1.8rem;margin-bottom:14px}
+    .info-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--chalk);margin-bottom:8px;line-height:1.3}
+    .info-body{font-size:0.86rem;color:var(--mist);line-height:1.65}
+    .info-body strong{color:var(--chalk);font-weight:600}
+    .convo-cards{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+    .convo-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;opacity:0;transform:translateY(14px);transition:opacity 0.48s ease,transform 0.48s ease}
+    .convo-card.visible{opacity:1;transform:translateY(0)}
+    .convo-role{font-family:'DM Mono',monospace;font-size:0.64rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+    .convo-q{font-size:0.9rem;font-weight:600;color:var(--chalk);margin-bottom:6px;line-height:1.4}
+    .convo-a{font-size:0.87rem;color:var(--mist);line-height:1.65}
+    .qa-block{margin-bottom:28px;border-left:2px solid var(--border);padding-left:20px;opacity:0;transform:translateY(14px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .qa-block.visible{opacity:1;transform:translateY(0)}
+    .qa-q{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;color:var(--chalk);margin-bottom:8px;line-height:1.35}
+    .qa-a{font-size:0.9rem;color:var(--mist);line-height:1.75}
+    .qa-a strong{color:var(--chalk);font-weight:600}
+    .qa-a p{margin-bottom:10px}
+    .qa-a p:last-child{margin-bottom:0}
+    .framework-steps{display:flex;flex-direction:column;gap:0;margin-top:28px;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+    .fw-step{padding:24px 24px;border-bottom:1px solid var(--border);opacity:0;transform:translateX(-14px);transition:opacity 0.5s ease,transform 0.5s ease}
+    .fw-step:last-child{border-bottom:none}
+    .fw-step.visible{opacity:1;transform:translateX(0)}
+    .fw-num{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .fw-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--chalk);margin-bottom:6px}
+    .fw-desc{font-size:0.88rem;color:var(--mist);line-height:1.65}
+    .fw-desc strong{color:var(--chalk);font-weight:600}
+    .checklist{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px}
+    .checklist li{font-size:0.9rem;color:var(--mist);line-height:1.6;padding-left:24px;position:relative}
+    .checklist li::before{position:absolute;left:0;color:var(--gold);font-weight:700}
+    .checklist.check li::before{content:'✓'}
+    .checklist.arrow li::before{content:'→'}
+    .note-box{margin-top:28px;padding:20px 22px;background:rgba(240,165,0,0.04);border:1px solid rgba(240,165,0,0.15);border-radius:var(--radius);font-size:0.88rem;color:var(--mist);line-height:1.7}
+    .note-box strong{color:var(--chalk)}
+    .divider{height:1px;background:var(--border);margin:40px 0}
+    footer{background:var(--ink);border-top:1px solid var(--border);padding:40px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+    .footer-logo{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--chalk)}
+    .footer-logo span{color:var(--gold)}
+    .footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+    .footer-links a{font-size:0.82rem;color:var(--faint);transition:color 0.15s}
+    .footer-links a:hover{color:var(--chalk)}
+    .footer-copy{font-size:0.75rem;color:var(--faint);margin-top:4px}
+    @media(max-width:640px){nav{padding:14px 18px}.tab-btn{padding:12px 14px;font-size:0.8rem}.tab-panel{padding:40px 18px 64px}.info-cards{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
@@ -141,296 +104,230 @@
 <nav>
   <a href="index.html" class="nav-logo">en<span>aasan</span></a>
   <a href="index.html" class="nav-back">← Back to home</a>
+  <div class="lang-switcher" role="group" aria-label="Select language">
+    <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
+    <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
+    <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
+    <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
+  </div>
 </nav>
 
-<div class="page">
+<div class="page-hero">
+  <p class="hero-eyebrow">Guidance Hub</p>
+  <h1 class="hero-heading">Helping the people who <span>help students.</span></h1>
+  <p class="hero-sub">Resources for parents, career counsellors, and placement coordinators — to guide students with accurate, current information about streams, exams, and careers in India.</p>
+</div>
 
-  <div class="page-hero">
-    <p class="page-eyebrow">Guidance Hub</p>
-    <h1 class="page-heading">For the people who<br /><span>guide students.</span></h1>
-    <p class="page-sub">Parents, career counsellors, and placement coordinators — this section is for you. The landscape of Indian education and careers has changed significantly. Here is what you need to know to guide students with current, accurate information.</p>
-  </div>
+<div class="tab-bar" role="tablist">
+  <button class="tab-btn active" data-tab="parents" role="tab" aria-selected="true">For Parents</button>
+  <button class="tab-btn" data-tab="counsellors" role="tab" aria-selected="false">For Counsellors</button>
+  <button class="tab-btn" data-tab="coordinators" role="tab" aria-selected="false">For Coordinators</button>
+</div>
 
-  <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('parents', this)">👨‍👩‍👧 For Parents</button>
-    <button class="tab-btn" onclick="switchTab('counsellors', this)">🎓 For Career Counsellors</button>
-    <button class="tab-btn" onclick="switchTab('coordinators', this)">🏫 For Placement Coordinators</button>
-  </div>
+<!-- ── PARENTS TAB ── -->
+<div id="tab-parents" class="tab-panel active">
+  <span class="section-tag">For parents</span>
+  <h2 class="section-heading">What every parent needs to know</h2>
+  <p class="section-sub">Supporting your child through the stream and career decision — without pressure, without outdated advice, and without projecting your own regrets.</p>
 
-  <!-- ════════════════════════════════════════════
-       PARENTS TAB
-  ════════════════════════════════════════════ -->
-  <div class="tab-panel active" id="tab-parents">
+  <div class="divider"></div>
 
-    <div class="intro-box reveal">
-      <strong>Your instinct to guide your child is right. The landscape you are guiding them through has changed.</strong>
-      <br /><br />
-      The streams, exams, colleges, and careers that were relevant when you were making these decisions look very different today. New fields have emerged, old hierarchies have shifted, and the skills the job market rewards have changed significantly. This section helps you understand the current picture — so your guidance is grounded in today's reality, not yesterday's experience.
+  <h3 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--chalk);margin-bottom:6px" data-i18n="guide.parents.myths.subtitle">Beliefs worth reconsidering</h3>
+  <p style="font-size:0.9rem;color:var(--mist);margin-bottom:20px" data-i18n="guide.parents.myths.subtitle">These are the most common assumptions parents carry into the conversation — and why they need updating.</p>
+
+  <div class="myth-grid">
+    <div class="myth-card">
+      <p class="myth-label false" data-i18n="guide.parents.myths.myth_label">❌ Myth</p>
+      <p class="myth-text">"Science stream is the only safe option."</p>
+      <p class="myth-body">The job market has changed dramatically. Commerce and Arts graduates now work in fintech, law, design, media, policy, and government — many of them earning more than their Science stream peers who didn't get into engineering or medicine.</p>
     </div>
-
-    <p class="sec-eyebrow reveal">What has changed</p>
-    <h2 class="sec-heading reveal">Things that are different from when you were a student</h2>
-    <div class="cards-grid reveal">
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">🎓</span>
-        <div class="guide-card-title">The IIT / MBBS or nothing pressure is outdated</div>
-        <div class="guide-card-desc">These remain excellent institutions — but the idea that only IIT or AIIMS constitutes success is no longer accurate. NIT graduates, NLU lawyers, NID designers, and chartered accountants consistently build strong, well-compensated careers. The path matters less than the depth of skill and character built along it.</div>
-        <div class="guide-card-tip">Ask your child what they are genuinely curious about — not what they are good at under pressure.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">💼</span>
-        <div class="guide-card-title">The job market has new roles that did not exist 15 years ago</div>
-        <div class="guide-card-desc">Data Scientist, UX Designer, AI Engineer, Content Strategist, Cybersecurity Analyst, Digital Marketing Manager — these are mainstream, well-paying careers today. They were not on anyone's career guidance list in 2005. Your child may be drawn to one of these — and that is a legitimate and smart choice.</div>
-        <div class="guide-card-tip">Before dismissing an interest as "not a real career," spend 10 minutes researching it on LinkedIn. Look at actual job postings and salary data.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">🌍</span>
-        <div class="guide-card-title">Arts and Commerce are not fallback streams</div>
-        <div class="guide-card-desc">The perception that Arts is for students who "couldn't do Science" is one of the most persistent and damaging myths in Indian education. Arts students become IAS officers, lawyers, journalists, designers, psychologists, and entrepreneurs. Commerce students become CAs, bankers, MBAs, and business leaders. Both streams lead to strong careers when chosen deliberately.</div>
-        <div class="guide-card-tip">If your child wants to take Commerce or Arts — explore what that path actually leads to before discouraging it.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">📱</span>
-        <div class="guide-card-title">A degree is not the only credential that matters</div>
-        <div class="guide-card-desc">For many fields — tech, design, digital marketing, content — a portfolio of real work carries more weight than a degree from an average college. Companies like Google, Apple, and many Indian startups have dropped degree requirements for several roles. Skills, demonstrated work, and certifications are increasingly valued alongside formal qualifications.</div>
-        <div class="guide-card-tip">Encourage your child to build something — a project, a portfolio, a GitHub profile, a Behance page — alongside their studies.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">🤖</span>
-        <div class="guide-card-title">AI is changing what skills employers value</div>
-        <div class="guide-card-desc">Routine, repeatable tasks are increasingly automated. The skills that are growing in value are judgment, creativity, communication, and the ability to work with AI tools effectively. Encouraging your child to develop these alongside their technical skills is genuinely important career advice for today's world.</div>
-        <div class="guide-card-tip">AI fluency is a practical skill your child should build — not something to fear or dismiss.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--parent)">
-        <span class="guide-card-icon">💰</span>
-        <div class="guide-card-title">Salary expectations have changed — significantly</div>
-        <div class="guide-card-desc">A strong software engineer fresher today can earn ₹6–15 LPA. A good data analyst ₹4–10 LPA. A chartered accountant fresher at a Big 4 firm ₹7–12 LPA. These are very different from the salary landscape of 15–20 years ago. Understanding current compensation helps you have realistic and encouraging conversations with your child.</div>
-        <div class="guide-card-tip">Visit AmbitionBox or Glassdoor and look up salaries for roles your child is considering — use current data, not assumptions.</div>
-      </div>
+    <div class="myth-card">
+      <p class="myth-label false" data-i18n="guide.parents.myths.myth_label">❌ Myth</p>
+      <p class="myth-text">"Engineering is always a safe backup."</p>
+      <p class="myth-body">India graduates over 1.5 million engineers every year. Placements at non-tier-1 colleges are often weak. An engineering degree without the right skills or interest is not a safety net — it is a four-year detour.</p>
     </div>
-
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Common myths</p>
-    <h2 class="sec-heading reveal">Beliefs worth reconsidering</h2>
-    <div class="myth-grid reveal">
-      <div class="myth-card">
-        <div>
-          <div class="myth-label myth">❌ Myth</div>
-          <div class="myth-text myth">Science stream is the only stream with a future.</div>
-        </div>
-        <div>
-          <div class="myth-label fact">✓ Reality</div>
-          <div class="myth-text fact">India's fastest-growing sectors include law, finance, design, media, and healthcare management — all accessible from Commerce and Arts streams.</div>
-        </div>
-      </div>
-      <div class="myth-card">
-        <div>
-          <div class="myth-label myth">❌ Myth</div>
-          <div class="myth-text myth">If they don't crack JEE or NEET, their career is over.</div>
-        </div>
-        <div>
-          <div class="myth-label fact">✓ Reality</div>
-          <div class="myth-text fact">The vast majority of successful professionals in India did not go to IIT or AIIMS. The right skills, the right degree, and genuine effort build careers — not one exam result.</div>
-        </div>
-      </div>
-      <div class="myth-card">
-        <div>
-          <div class="myth-label myth">❌ Myth</div>
-          <div class="myth-text myth">A gap year is a waste of time.</div>
-        </div>
-        <div>
-          <div class="myth-label fact">✓ Reality</div>
-          <div class="myth-text fact">Many top scorers in JEE and NEET are drop year students. A focused gap year for preparation or skill-building is a legitimate and often effective strategy.</div>
-        </div>
-      </div>
-      <div class="myth-card">
-        <div>
-          <div class="myth-label myth">❌ Myth</div>
-          <div class="myth-text myth">An expensive private college guarantees a good job.</div>
-        </div>
-        <div>
-          <div class="myth-label fact">✓ Reality</div>
-          <div class="myth-text fact">College brand matters, but skills, attitude, and real-world experience matter more in most fields. A motivated student from an average college consistently outperforms a passive student from a famous one.</div>
-        </div>
-      </div>
+    <div class="myth-card">
+      <p class="myth-label false" data-i18n="guide.parents.myths.myth_label">❌ Myth</p>
+      <p class="myth-text">"Arts students don't get good jobs."</p>
+      <p class="myth-body">Journalism, law (via CLAT), civil services (UPSC/Group 1), design (NID/NIFT), economics (for finance roles), and psychology (for HR and counselling) are just some paths available to Arts students — many with excellent career outcomes.</p>
     </div>
-
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Conversation starters</p>
-    <h2 class="sec-heading reveal">Questions to ask your child — not to test them, but to understand them</h2>
-    <div class="convo-list reveal">
-      <div class="convo-item">What subject or topic do you find yourself reading about even when nobody asks you to?</div>
-      <div class="convo-item">If exams and marks didn't exist, what would you spend your time learning or doing?</div>
-      <div class="convo-item">Is there a person whose work or career you look at and think — I would like to do something like that?</div>
-      <div class="convo-item">What kind of environment do you want to work in — with people, with ideas, with technology, outdoors, or something else?</div>
-      <div class="convo-item">What worries you most about the choices ahead — and what would make that worry smaller?</div>
+    <div class="myth-card">
+      <p class="myth-label false" data-i18n="guide.parents.myths.myth_label">❌ Myth</p>
+      <p class="myth-text">"A degree from a top college guarantees a good career."</p>
+      <p class="myth-body">Employers increasingly hire for skills, not just pedigree. A student with strong skills and portfolio from a tier-2 college often outcompetes a degree-holder from a reputed institution who has no practical experience.</p>
     </div>
-
-  </div>
-
-  <!-- ════════════════════════════════════════════
-       COUNSELLORS TAB
-  ════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-counsellors">
-
-    <div class="intro-box reveal">
-      <strong>Career counselling in India is evolving rapidly.</strong> The combination of new career categories, AI-driven skill changes, revised exam structures (CUET, NDA for girls, new NLUs), and a dramatically different job market means that frameworks from even 5 years ago need updating. This section covers what's changed and what to prioritise in student conversations today.
-    </div>
-
-    <p class="sec-eyebrow reveal">Updated landscape</p>
-    <h2 class="sec-heading reveal">Key changes counsellors need to be current on</h2>
-    <div class="cards-grid reveal">
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">📝</span>
-        <div class="guide-card-title">CUET has changed central university admissions</div>
-        <div class="guide-card-desc">Since 2022, most central universities including Delhi University and JNU admit students via CUET scores — not Class 12 board percentages. Students who score well in CUET but have average board marks can still access top central universities. This is a significant change that many students and parents are still unaware of.</div>
-        <div class="guide-card-tip">Ensure students targeting DU, JNU, BHU, or HCU understand that CUET preparation is now as important as board exam preparation.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">⚖️</span>
-        <div class="guide-card-title">NDA is now open to female candidates</div>
-        <div class="guide-card-desc">Since the Supreme Court ruling in 2021, female candidates can appear for NDA. This opens the Army, Navy, and Air Force officer track directly after Class 12 to all students regardless of gender — a significant shift that many counsellors have not yet incorporated into their guidance for female students interested in defence.</div>
-        <div class="guide-card-tip">Proactively mention NDA as an option when counselling female students who express interest in defence, leadership, or structured careers.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🤖</span>
-        <div class="guide-card-title">AI and tech careers are accessible from multiple streams</div>
-        <div class="guide-card-desc">AI Ethics, AI Policy, AI Training, and Prompt Engineering are real and growing careers accessible from Arts, Law, and Social Science backgrounds — not just Computer Science. The AI industry needs people with domain expertise (law, medicine, finance, education) as much as it needs engineers.</div>
-        <div class="guide-card-tip">Expand your AI career guidance beyond "learn to code." Help Arts and Commerce students see their domain expertise as valuable in AI-adjacent roles.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🏭</span>
-        <div class="guide-card-title">BPS / KPO is a structured career, not a temporary job</div>
-        <div class="guide-card-desc">The Business Process Services sector employs 5 million+ people in India with structured growth paths from associate to C-suite. KPO roles in legal, financial research, and healthcare analytics pay well and build genuine expertise. This sector is often dismissed in career counselling — which does students a disservice.</div>
-        <div class="guide-card-tip">Include BPS career paths in your counselling toolkit, especially for students who need employment quickly after graduation.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🌐</span>
-        <div class="guide-card-title">International career paths after Indian education</div>
-        <div class="guide-card-desc">NCLEX-RN (USA/Canada nursing), PLAB (UK medicine), USMLE (USA medicine), and CPA (USA accounting) are increasingly pursued by Indian graduates. For students with international aspirations, knowing which Indian qualifications are recognised abroad and which require additional credentials is important planning information.</div>
-        <div class="guide-card-tip">If a student expresses interest in working abroad, map their Indian qualification to the target country's recognition pathway early — ideally before they choose their degree.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">📊</span>
-        <div class="guide-card-title">Skills-based hiring is growing alongside degree-based hiring</div>
-        <div class="guide-card-desc">Many Indian companies — especially in tech, marketing, and design — are increasingly hiring based on portfolio, certifications, and demonstrated skills alongside degrees. Google, IBM, and several Indian startups have explicitly removed degree requirements for some roles. This trend is accelerating.</div>
-        <div class="guide-card-tip">Advise students to build demonstrable skills and a portfolio alongside their degree — not instead of it, but in addition to it.</div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Assessment framework</p>
-    <h2 class="sec-heading reveal">A simple student assessment approach</h2>
-    <div class="cards-grid reveal">
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">💡</span>
-        <div class="guide-card-title">1. Interest before aptitude</div>
-        <div class="guide-card-desc">Ask what genuinely interests the student before assessing what they are good at. Sustained interest drives effort, which builds aptitude over time. A student who is curious about economics and averagely good at maths will outperform a student who is excellent at maths but has no interest in it, over a 5-year career horizon.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🔍</span>
-        <div class="guide-card-title">2. Work style before job title</div>
-        <div class="guide-card-desc">Does the student prefer working independently or with people? Do they prefer structured or open-ended problems? Do they want variety or depth? These work style preferences predict job satisfaction better than matching skills to job titles. Job titles change; work style preferences are more stable.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🗺️</span>
-        <div class="guide-card-title">3. Show the full path, not just the entry point</div>
-        <div class="guide-card-desc">Students fixate on the entrance exam or college. Show them where the path leads 10 years out — what does a senior professional in this field actually do every day? What do they earn? What is the lifestyle like? This long-horizon view changes the conversation significantly and helps students make more informed choices.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--couns)">
-        <span class="guide-card-icon">🔄</span>
-        <div class="guide-card-title">4. Normalise course corrections</div>
-        <div class="guide-card-desc">Career pivots are normal and increasingly common. A student who starts in engineering and moves into product management, or starts in law and moves into policy consulting, is not a failure — they are adapting. Help students understand that the first career choice is important but not irreversible.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ════════════════════════════════════════════
-       PLACEMENT COORDINATORS TAB
-  ════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-coordinators">
-
-    <div class="intro-box reveal">
-      <strong>Placement coordinators bridge the gap between students and the job market.</strong> This section covers what the current market is looking for, how to prepare students effectively, and how to position your institution's students competitively — regardless of institution tier.
-    </div>
-
-    <p class="sec-eyebrow reveal">What employers are looking for now</p>
-    <h2 class="sec-heading reveal">The hiring landscape in 2025–26</h2>
-    <div class="cards-grid reveal">
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">💻</span>
-        <div class="guide-card-title">Digital and data literacy across all roles</div>
-        <div class="guide-card-desc">Employers across sectors — not just tech — are looking for candidates who can work with data, use digital tools effectively, and understand how AI affects their function. This applies to HR roles, finance roles, operations, and marketing — not just technical positions. A student who can analyse data in Excel or Power BI has an edge in almost every field.</div>
-        <div class="guide-card-tip">Add basic data literacy and Excel/BI tool workshops to your pre-placement preparation programme — even for non-technical students.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">🗣️</span>
-        <div class="guide-card-title">Communication is consistently the #1 gap employers cite</div>
-        <div class="guide-card-desc">In placement feedback across industries, the most frequently cited gap in Indian graduates is communication — specifically the ability to express ideas clearly in writing, present confidently, and articulate their thinking process. Technical skills are easier to hire for; communication skills are harder to find.</div>
-        <div class="guide-card-tip">Build structured communication training into your placement programme — written communication, presentations, and group discussions — not just interview practice.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">🏗️</span>
-        <div class="guide-card-title">Demonstrated work beats qualifications in many fields</div>
-        <div class="guide-card-desc">For tech, design, content, and marketing roles especially — employers increasingly shortlist based on portfolio, GitHub profile, published work, or internship projects. Students with demonstrable work — even small personal projects — are hired over students with better grades who have nothing to show.</div>
-        <div class="guide-card-tip">Run a "portfolio sprint" programme 6 months before placement season — help students build and present 1–2 real projects relevant to their target sector.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">🔄</span>
-        <div class="guide-card-title">Internship quality matters more than quantity</div>
-        <div class="guide-card-desc">One meaningful internship where a student did real work and can speak to specific outcomes is more valuable in a placement interview than three internships where they were given busy work. Help students identify and pursue quality internship opportunities — and prepare them to document and articulate what they actually did.</div>
-        <div class="guide-card-tip">Coach students to prepare a 2-minute internship story: what problem they worked on, what they did specifically, and what the outcome was.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">🤖</span>
-        <div class="guide-card-title">AI literacy is a differentiator — now</div>
-        <div class="guide-card-desc">Students who can demonstrate they know how to use AI tools effectively in their field — whether that is using Copilot for coding, ChatGPT for research structuring, or AI analytics tools for data work — are standing out in 2025–26 placements. This is a skill gap most institutions have not yet systematically addressed.</div>
-        <div class="guide-card-tip">Add an "AI tools for your field" session to placement preparation — customised by domain (AI for finance students, AI for marketing students, AI for HR students etc.).</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">📈</span>
-        <div class="guide-card-title">Sector diversification reduces placement risk</div>
-        <div class="guide-card-desc">Institutions that rely heavily on a single sector (e.g., only IT companies) are exposed when that sector slows hiring. A diversified placement strategy that includes BPS/KPO, BFSI, healthcare, FMCG, and government roles alongside IT gives students more options and the institution more resilience.</div>
-        <div class="guide-card-tip">Map your current employer base across sectors and identify 3–5 sectors that are underrepresented. Target those for outreach this year.</div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Practical tools</p>
-    <h2 class="sec-heading reveal">A pre-placement preparation checklist</h2>
-    <div class="cards-grid reveal">
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">📋</span>
-        <div class="guide-card-title">6 months before placements</div>
-        <div class="guide-card-desc">Sector mapping — which industries are hiring for your students' profiles. Employer outreach for new companies. Resume review and feedback session. Project / portfolio sprint for tech and design students. Group discussion and communication training begins.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">🎯</span>
-        <div class="guide-card-title">3 months before placements</div>
-        <div class="guide-card-desc">Mock interviews — at least 2 per student. Aptitude test practice (most large employers use standardised tests). Internship story preparation. LinkedIn profile review for all students. Domain-specific interview preparation by sector.</div>
-      </div>
-      <div class="guide-card" style="--gc: var(--coord)">
-        <span class="guide-card-icon">✅</span>
-        <div class="guide-card-title">1 month before placements</div>
-        <div class="guide-card-desc">Final resume versions locked. Student-company matching based on profiles and preferences. Logistics — dress, documentation, attendance expectations. Post-offer negotiation guidance. Mental preparation — managing rejection and multiple processes simultaneously.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Share section -->
-  <div class="share-section reveal">
-    <div class="share-title">Share enaasan with students who need it</div>
-    <div class="share-desc">The best way to help a student is to put the right resource in front of them. Share enaasan directly.</div>
-    <div class="share-row">
-      <a href="https://wa.me/?text=This%20is%20a%20really%20useful%20free%20career%20guide%20for%20Indian%20students%20-%20enaasan.online" target="_blank" class="share-btn whatsapp">💬 WhatsApp</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online" target="_blank" class="share-btn linkedin">in LinkedIn</a>
-      <a href="https://twitter.com/intent/tweet?text=Sharing%20this%20career%20guide%20for%20Indian%20students%20with%20my%20network%20-%20enaasan.online" target="_blank" class="share-btn twitter">𝕏 X / Twitter</a>
-      <a href="mailto:?subject=Career%20guidance%20resource%20for%20students&body=I%20came%20across%20this%20useful%20career%20guidance%20site%20for%20Indian%20students%20-%20https://enaasan.online" class="share-btn email">✉ Email</a>
+    <div class="myth-card">
+      <p class="myth-label true">✓ What actually matters</p>
+      <p class="myth-text">Interest, skill-building, and realistic planning.</p>
+      <p class="myth-body">Students who choose based on genuine interest tend to build stronger skills, fare better in interviews, and sustain longer careers. Help your child understand what each path actually leads to — and let them choose with that knowledge.</p>
     </div>
   </div>
 
+  <div class="divider"></div>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--chalk);margin-bottom:20px">How to have the conversation</h3>
+
+  <div class="convo-cards">
+    <div class="convo-card">
+      <p class="convo-role">Instead of asking</p>
+      <p class="convo-q">"What mark did you get? Will you get into engineering?"</p>
+      <p class="convo-a">Try: "What do you actually enjoy doing? What problems do you find interesting?" Then research what careers come from those interests.</p>
+    </div>
+    <div class="convo-card">
+      <p class="convo-role">Instead of saying</p>
+      <p class="convo-q">"Take Science — you can always switch later."</p>
+      <p class="convo-a">Understand that switching streams after Grade 11 is difficult, expensive, and emotionally draining. The "switch later" option rarely works out as easily as it sounds.</p>
+    </div>
+    <div class="convo-card">
+      <p class="convo-role">Instead of</p>
+      <p class="convo-q">Comparing to other students or relatives</p>
+      <p class="convo-a">Your child's path is theirs. Every comparison introduces noise and pressure that pushes them away from honest self-assessment. Focus on what they are like, not who others are.</p>
+    </div>
+    <div class="convo-card">
+      <p class="convo-role">A useful question to ask together</p>
+      <p class="convo-q">"If we look at this path honestly — what does day-to-day work look like in 10 years?"</p>
+      <p class="convo-a">Help them visualise the actual job, not just the degree. An accountant sits with spreadsheets. A surgeon stands for 8-hour operations. A journalist chases deadlines. Is that lifestyle something they can see themselves in?</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── COUNSELLORS TAB ── -->
+<div id="tab-counsellors" class="tab-panel">
+  <span class="section-tag">For career counsellors</span>
+  <h2 class="section-heading">A framework for one-on-one career conversations</h2>
+  <p class="section-sub">Whether you are a school-based counsellor, an independent practitioner, or a teacher doing informal guidance — this framework helps you structure the conversation.</p>
+
+  <div class="framework-steps">
+    <div class="fw-step">
+      <p class="fw-num">Step 01</p>
+      <p class="fw-title">Establish what the student actually knows</p>
+      <p class="fw-desc">Most students arrive with a stream preference already formed — often by parents, peers, or pressure. Before anything else, gently surface <strong>where that preference came from</strong>. "Why Science?" or "Who suggested Commerce?" is not a challenge — it is a diagnostic.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">Step 02</p>
+      <p class="fw-title">Explore interest patterns — not just "subjects I'm good at"</p>
+      <p class="fw-desc">Academic performance and genuine interest diverge more than we acknowledge. A student can score well in Maths while finding it joyless, and love History while underperforming in exams. Ask: <strong>"What would you do if marks didn't matter?"</strong></p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">Step 03</p>
+      <p class="fw-title">Map interests to careers — not streams</p>
+      <p class="fw-desc">Streams are a means, not an end. A student interested in healthcare can pursue it through MBBS (Science), hospital administration (Commerce), or health policy (Arts). <strong>Show the full picture</strong>, not just the most obvious path.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">Step 04</p>
+      <p class="fw-title">Introduce honest difficulty calibration</p>
+      <p class="fw-desc">If a student wants to be a doctor, they need to know that NEET 2024 had 23 lakh registrations for roughly 1 lakh MBBS seats — a 4.3% acceptance rate. This is not to discourage, but to help them <strong>plan realistically</strong>, including backup paths.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">Step 05</p>
+      <p class="fw-title">Involve the parent — with the student's permission</p>
+      <p class="fw-desc">A counselling session that excludes parents often gets overridden at home. Where possible, <strong>hold one joint session</strong> where the student leads the explanation of their choice and the parent listens first. This shifts the dynamic from confrontation to collaboration.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">Step 06</p>
+      <p class="fw-title">Leave them with a decision framework, not a decision</p>
+      <p class="fw-desc">The goal is not to tell the student what to do. The goal is to help them <strong>make a decision they can explain and stand behind</strong>. Give them language. Give them questions to take home. The final choice is theirs.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--chalk);margin-bottom:20px">Common situations and how to handle them</h3>
+
+  <div style="display:flex;flex-direction:column;gap:24px;margin-top:8px">
+    <div class="qa-block">
+      <p class="qa-q">The student wants one thing; the parents want another.</p>
+      <div class="qa-a">
+        <p>This is the most common situation. Do not take sides. Instead, help the student articulate <strong>why</strong> they want what they want — with specifics. Vague preferences lose to parental certainty. Specific reasoning ("I want to study law because I am genuinely interested in how policy shapes people's lives, and CLAT 2024 had 77,000 registrations for 2,000+ NLU seats — I believe I can compete") is much harder to dismiss.</p>
+        <p>Also help the parent understand <strong>what their preferred path actually costs</strong> if the student has no interest in it — poor grades, dropout risk, low motivation.</p>
+      </div>
+    </div>
+    <div class="qa-block">
+      <p class="qa-q">The student has no idea what they want.</p>
+      <div class="qa-a">
+        <p>This is more common than counsellors admit, and it is not a failure. At 15-16, many students simply do not yet know. The goal here is to <strong>reduce the cost of uncertainty</strong> — help them choose a stream that keeps the maximum number of options open (PCM or PCB for Science, Commerce without Maths for more flexibility), while they continue exploring.</p>
+        <p>Suggest they spend time in the real world: shadow someone at work, attend an open day at a college, talk to college students in 2nd and 3rd year. Exposure often clarifies more than any test.</p>
+      </div>
+    </div>
+    <div class="qa-block">
+      <p class="qa-q">The student wants an unusual path (design, music, film, entrepreneurship).</p>
+      <div class="qa-a">
+        <p>Take it seriously. Creative and non-traditional paths have real career tracks with entrance exams, institutions, and job markets. NID, NIFT, FTII, Srishti, Symbiosis School of Media and Communication — these are real institutions with competitive admissions and strong alumni outcomes. The burden is not to talk the student out of the path, but to help them understand <strong>what success on that path actually requires</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── COORDINATORS TAB ── -->
+<div id="tab-coordinators" class="tab-panel">
+  <span class="section-tag">For placement coordinators</span>
+  <h2 class="section-heading">Preparing students for the job market</h2>
+  <p class="section-sub">For school placement coordinators, college career cells, and NGO programme coordinators helping students with early career transitions.</p>
+
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="info-icon">📋</div>
+      <div class="info-title">What employers actually want in 2024–25</div>
+      <div class="info-body">Beyond degrees: communication skills, problem-solving, digital literacy, and the ability to learn quickly. <strong>Soft skills now filter candidates at the first stage</strong> in most companies — before technical evaluation.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🏢</div>
+      <div class="info-title">Sectors with highest entry-level absorption</div>
+      <div class="info-body">BPS/KPO (banking, insurance, data), IT services (service desk, testing, data entry), e-commerce operations, healthcare support, retail banking, and logistics. <strong>These sectors hire at scale</strong> and are accessible without tier-1 college credentials.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🛠️</div>
+      <div class="info-title">Skills that improve placement rates</div>
+      <div class="info-body">Microsoft Office / Google Workspace, basic Excel and data handling, professional email writing, spoken English for customer-facing roles, and typing speed. <strong>Certifications from NPTEL, Coursera, and Google</strong> are recognised and cost-effective.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📝</div>
+      <div class="info-title">Resume and interview preparation</div>
+      <div class="info-body">Most freshers fail at the basics: unclear objective, no quantified achievements, poor email formatting. Run at least one mock interview and one resume review session per cohort. <strong>The difference between a placed and unplaced student</strong> is often preparation, not qualification.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🌐</div>
+      <div class="info-title">Government job pathways</div>
+      <div class="info-body">IBPS, SSC, APPSC/TSPSC, Railways (RRB), and defence are reliable paths for students who prefer stability. <strong>Preparation timelines matter</strong> — 6–12 months of focused study is typically needed for Group B/C exams. Help students plan this alongside their degree.</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🤝</div>
+      <div class="info-title">Building an employer network</div>
+      <div class="info-body">Local BPS companies, banks, hospitals, and retail chains often prefer direct college partnerships over job portals for entry-level hiring. <strong>One strong local employer relationship</strong> is worth more than 20 cold applications on a portal.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3 style="font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--chalk);margin-bottom:8px">Sample session plan: 60-minute career orientation for a student cohort</h3>
+  <p style="font-size:0.88rem;color:var(--mist);margin-bottom:20px">Adapt timing based on cohort size. Works for groups of 10–40 students.</p>
+
+  <div class="framework-steps">
+    <div class="fw-step">
+      <p class="fw-num">0:00 – 0:10</p>
+      <p class="fw-title">Reality check: the job market in 2025</p>
+      <p class="fw-desc">Share 3–4 data points on entry-level hiring in your sector. Be honest about competition. Students who understand the landscape plan better than those who are surprised by it at placement time.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">0:10 – 0:25</p>
+      <p class="fw-title">Skills audit: what do they actually have?</p>
+      <p class="fw-desc">Ask students to write down their top 3 skills and the evidence for each. Most will struggle. This exercise reveals the gap between perceived and actual skill. It is more useful than any test.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">0:25 – 0:45</p>
+      <p class="fw-title">Path mapping: what roles match their profile?</p>
+      <p class="fw-desc">Walk through 4–5 realistic roles available to the cohort. Use actual job descriptions, not aspirational examples. Show what the first 6 months of a role actually looks like day-to-day.</p>
+    </div>
+    <div class="fw-step">
+      <p class="fw-num">0:45 – 0:60</p>
+      <p class="fw-title">Action plan: one thing to do this week</p>
+      <p class="fw-desc">End with a specific, achievable ask. Create a LinkedIn profile. Complete one free certification. Write a one-page resume and share it for feedback. Small commitments after a session produce better outcomes than large, vague ones.</p>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Need updated sector data or would like to suggest resources for coordinators?</strong> Write to us at <a href="mailto:hello@enaasan.online" style="color:var(--gold)">hello@enaasan.online</a> — we are building out this section and coordinator input is directly useful.
+  </div>
 </div>
 
 <footer>
@@ -441,7 +338,6 @@
     <a href="after12.html">After 12th</a>
     <a href="careers.html">Career Compass</a>
     <a href="bps.html">BPS / KPO Careers</a>
-    <a href="guide.html">Guidance Hub</a>
     <a href="about.html">About</a>
     <a href="about.html#contact">Contact</a>
   </div>
@@ -449,16 +345,31 @@
 </footer>
 
 <script>
-function switchTab(id, btn) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('tab-' + id).classList.add('active');
-}
-const revealIO = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+  // Tab switching
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-tab');
+      tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      const panel = document.getElementById('tab-' + target);
+      if (panel) {
+        panel.classList.add('active');
+        // Trigger animations for newly visible panel
+        panel.querySelectorAll('.myth-card,.info-card,.convo-card,.qa-block,.fw-step').forEach(el => {
+          if (!el.classList.contains('visible')) el.classList.add('visible');
+        });
+      }
+    });
+  });
+  // Intersection observer for animations
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.myth-card,.info-card,.convo-card,.qa-block,.fw-step').forEach(el => io.observe(el));
 </script>
+<script src="i18n.js"></script>
 </body>
 </html>

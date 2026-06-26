@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lang-styles.css" />
   <style>
     :root {
       --night:    #0D1B2A;
@@ -518,6 +519,13 @@
 <nav>
   <a href="index.html" class="nav-logo">en<span>aasan</span></a>
   <a href="index.html" class="nav-back">← Back to home</a>
+
+  <div class="lang-switcher" role="group" aria-label="Select language">
+    <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
+    <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
+    <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
+    <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
+  </div>
 </nav>
 
 <div class="page">
@@ -1459,5 +1467,7 @@ buildRoles();
 buildLadders();
 buildAIProfessions();
 </script>
+
+<script src="i18n.js"></script>
 </body>
 </html>
