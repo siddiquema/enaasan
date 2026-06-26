@@ -1,25 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>enaasan — What comes next?</title>
-  <meta name="description" content="Career guidance for Indian students in Grade 10, 11, and 12. Understand your options, explore streams, and find your path forward." />
-  <!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="home.page.title">enaasan — What comes next?</title>
+<meta content="Career guidance for Indian students in Grade 10, 11, and 12. Understand your options, explore streams, and find your path forward." data-i18n="home.meta.description" name="description"/>
+<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-D4QMDFL8XF');
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="lang-styles.css" />
-
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="lang-styles.css" rel="stylesheet"/>
+<style>
     /* ── Tokens ─────────────────────────────────────────── */
     :root {
       --night:   #0D1B2A;
@@ -358,199 +357,182 @@
   </style>
 </head>
 <body>
-
-  <!-- ── Nav ──────────────────────────────────────────────── -->
-  <nav>
-    <div class="nav-logo">en<span>aasan</span></div>
-    <button class="nav-cta" onclick="window.location.href='streams.html'">
+<!-- ── Nav ──────────────────────────────────────────────── -->
+<nav>
+<div class="nav-logo" data-i18n="nav.brand">en<span>aasan</span></div>
+<button class="nav-cta" data-i18n="home.hero.find" onclick="window.location.href='streams.html'">
       Find your path →
     </button>
-    <div class="lang-switcher" role="group" aria-label="Select language">
-      <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
-      <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
-      <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
-      <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
-    </div>
-  </nav>
-
-  <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="stars" id="stars"></div>
-    <div class="hero-eyebrow">
-      <span class="tag">Career guidance for Indian students</span>
-    </div>
-    <h1 class="hero-headline">
-      Whatever stage you are at —<br />
-      <span class="accent">what comes next?</span>
-    </h1>
-    <p class="hero-sub">
+<div aria-label="Select language" class="lang-switcher" role="group">
+<button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
+</div>
+</nav>
+<!-- ── Hero ─────────────────────────────────────────────── -->
+<section class="hero">
+<div class="stars" id="stars"></div>
+<div class="hero-eyebrow" data-i18n="home.hero.tagline">
+<span class="tag" data-i18n="home.hero.tagline">Career guidance for Indian students</span>
+</div>
+<h1 class="hero-headline" data-i18n="home.hero.title">
+      Whatever stage you are at —<br/>
+<span class="accent">what comes next?</span>
+</h1>
+<p class="hero-sub" data-i18n="home.hero.body">
       Whether you are choosing a stream, planning after 12th, figuring out college, or starting your career — enaasan is your guide to thinking it through clearly.
     </p>
-    <div class="hero-arrow">↓</div>
-  </section>
-
-  <!-- ── Path Cards ─────────────────────────────────────────── -->
-  <section class="section" id="paths">
-    <p class="section-label mono">Where are you right now?</p>
-    <h2 class="section-heading">Pick what's on your mind</h2>
-    <p class="section-sub">No forms. No sign-up. Just start where you are.</p>
-
-    <div class="paths-grid">
-      <div class="path-card" style="animation-delay: 0.1s">
-        <span class="path-icon">🎯</span>
-        <span class="tag path-grade">Grade 10 · Board exams done</span>
-        <h3 class="path-title">Which stream should I choose?</h3>
-        <p class="path-desc">Science, Commerce, or Arts? Beyond "what are you good at" — understand what each stream actually leads to, and which one fits the life you want.</p>
-        <div class="path-topics">
-          <span class="path-topic">PCM</span>
-          <span class="path-topic">PCB</span>
-          <span class="path-topic">Commerce</span>
-          <span class="path-topic">Arts / Humanities</span>
-          <span class="path-topic">Vocational</span>
-        </div>
-        <a href="streams.html" class="path-link">Explore streams <span>→</span></a>
-      </div>
-
-      <div class="path-card" style="animation-delay: 0.22s">
-        <span class="path-icon">🗺️</span>
-        <span class="tag path-grade">Grade 11–12 · Inter students</span>
-        <h3 class="path-title">What can I do after 12th?</h3>
-        <p class="path-desc">JEE, NEET, CLAT, CUET, NID, CA Foundation — understand which entrance exam leads where, what colleges are realistic, and what careers come out the other side.</p>
-        <div class="path-topics">
-          <span class="path-topic">JEE / NEET</span>
-          <span class="path-topic">CUET</span>
-          <span class="path-topic">CLAT</span>
-          <span class="path-topic">Design / NID</span>
-          <span class="path-topic">CA / CS</span>
-        </div>
-        <a href="after12.html" class="path-link">Plan after 12th <span>→</span></a>
-      </div>
-
-      <div class="path-card" style="animation-delay: 0.34s">
-        <span class="path-icon">💼</span>
-        <span class="tag path-grade">College / Early career</span>
-        <h3 class="path-title">What skills does the job market actually want?</h3>
-        <p class="path-desc">Degrees don't tell you what skills to build. See what employers really look for in different roles — from IT and finance to healthcare, design, and operations.</p>
-        <div class="path-topics">
-          <span class="path-topic">Tech roles</span>
-          <span class="path-topic">Finance</span>
-          <span class="path-topic">Management</span>
-          <span class="path-topic">Healthcare</span>
-          <span class="path-topic">Creative</span>
-        </div>
-        <a href="careers.html" class="path-link">See job skill maps <span>→</span></a>
-      </div>
-
-      <div class="path-card" style="animation-delay: 0.46s">
-        <span class="path-icon">👨‍👩‍👧</span>
-        <span class="tag path-grade">Parents · Counsellors · Coordinators</span>
-        <h3 class="path-title">Supporting the young people in your life</h3>
-        <p class="path-desc">Guidance for parents, career counsellors, and placement coordinators — understand the landscape so you can guide students with current, accurate information.</p>
-        <div class="path-topics">
-          <span class="path-topic">For parents</span>
-          <span class="path-topic">Counsellors</span>
-          <span class="path-topic">Coordinators</span>
-        </div>
-        <a href="guide.html" class="path-link">Go to guidance hub <span>→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── How it works ───────────────────────────────────────── -->
-  <div class="hiw-section">
-    <div class="section reveal">
-      <p class="section-label mono">How enaasan works</p>
-      <h2 class="section-heading">A place that guides you to think — freely and clearly.</h2>
-      <div class="hiw-grid">
-        <div class="hiw-step">
-          <p class="hiw-num">Step 01</p>
-          <p class="hiw-title">Tell us where you are</p>
-          <p class="hiw-desc">Grade 10, Inter first year, or already in college — start from your actual situation, not a generic menu.</p>
-        </div>
-        <div class="hiw-step">
-          <p class="hiw-num">Step 02</p>
-          <p class="hiw-title">Explore honest options</p>
-          <p class="hiw-desc">Real information about streams, exams, courses, and careers — written in plain language, not brochure-speak.</p>
-        </div>
-        <div class="hiw-step">
-          <p class="hiw-num">Step 03</p>
-          <p class="hiw-title">Ask the questions you can't Google</p>
-          <p class="hiw-desc">"Is B.Com worth it if I don't want to do CA?" "Can I do engineering without JEE?" Ask Enaasan directly.</p>
-        </div>
-        <div class="hiw-step">
-          <p class="hiw-num">Step 04</p>
-          <p class="hiw-title">Make a decision you understand</p>
-          <p class="hiw-desc">Not what your relatives suggested. Not what your friends chose. Yours — because you actually understand what it leads to.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Stats ──────────────────────────────────────────────── -->
-  <div class="stats-strip reveal">
-    <div class="stat-item">
-      <div class="stat-num">60+</div>
-      <div class="stat-label">Career paths mapped</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">20+</div>
-      <div class="stat-label">Entrance exams explained</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Streams covered in depth</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">India-first</div>
-      <div class="stat-label">Content built for Indian students</div>
-    </div>
-  </div>
-
-  <!-- ── Ask Enaasan ────────────────────────────────────────── -->
-  <section class="section ask-section reveal" id="ask">
-    <p class="section-label mono">AI-powered guidance</p>
-    <h2 class="section-heading" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
-    <div class="ask-box">
-      <div class="ask-avatar">🎓</div>
-      <div class="coming-soon-pill">✦ Coming soon</div>
-      <h3 class="ask-title">Your personal career mentor</h3>
-      <p class="ask-desc">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
-      <div class="preview-questions">
-        <div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
-        <div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
-        <div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
-      </div>
-      <p style="font-size:0.84rem; color:var(--mist); margin-bottom:14px;">
-        Share this page with someone who needs it — that helps us grow too.
-      </p>
-      <div class="share-row">
-        <a href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online"
-           target="_blank" class="share-btn whatsapp">💬 Share on WhatsApp</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online"
-           target="_blank" class="share-btn linkedin">in Share on LinkedIn</a>
-        <a href="https://x.com/intent/post?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&url=https://enaasan.online"
-           target="_blank" class="share-btn twitter">𝕏 Share on X</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer>
-    <div class="footer-logo">en<span>aasan</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="streams.html">Stream Explorer</a>
-      <a href="after12.html">After 12th</a>
-      <a href="careers.html">Career Compass</a>
-      <a href="bps.html">BPS / KPO Careers</a>
-      <a href="about.html">About</a>
-      <a href="about.html#contact">Contact</a>
-    </div>
-    <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
-  </footer>
-
-  <!-- ── Scripts ───────────────────────────────────────────── -->
-  <script>
+<div class="hero-arrow">↓</div>
+</section>
+<!-- ── Path Cards ─────────────────────────────────────────── -->
+<section class="section" id="paths">
+<p class="section-label mono" data-i18n="home.section.pick.label">Where are you right now?</p>
+<h2 class="section-heading" data-i18n="home.section.pick.title">Pick what's on your mind</h2>
+<p class="section-sub" data-i18n="home.section.pick.subtitle">No forms. No sign-up. Just start where you are.</p>
+<div class="paths-grid">
+<div class="path-card" style="animation-delay: 0.1s">
+<span class="path-icon">🎯</span>
+<span class="tag path-grade" data-i18n="home.card.streams.badge">🎯 Grade 10 · Board exams done</span>
+<h3 class="path-title" data-i18n="home.card.streams.title">Which stream should I choose?</h3>
+<p class="path-desc" data-i18n="home.card.streams.body">Science, Commerce, or Arts? Beyond "what are you good at" — understand what each stream actually leads to, and which one fits the life you want.</p>
+<div class="path-topics">
+<span class="path-topic">PCM</span>
+<span class="path-topic">PCB</span>
+<span class="path-topic">Commerce</span>
+<span class="path-topic">Arts / Humanities</span>
+<span class="path-topic">Vocational</span>
+</div>
+<a class="path-link" data-i18n="home.card.streams.cta" href="streams.html">Explore streams <span>→</span></a>
+</div>
+<div class="path-card" style="animation-delay: 0.22s">
+<span class="path-icon">🗺️</span>
+<span class="tag path-grade" data-i18n="home.card.after12.badge">🗺️ Grade 11–12 · Inter students</span>
+<h3 class="path-title" data-i18n="home.card.after12.title">What can I do after 12th?</h3>
+<p class="path-desc" data-i18n="home.card.after12.body">JEE, NEET, CLAT, CUET, NID, CA Foundation — understand which entrance exam leads where, what colleges are realistic, and what careers come out the other side.</p>
+<div class="path-topics">
+<span class="path-topic">JEE / NEET</span>
+<span class="path-topic">CUET</span>
+<span class="path-topic">CLAT</span>
+<span class="path-topic">Design / NID</span>
+<span class="path-topic">CA / CS</span>
+</div>
+<a class="path-link" data-i18n="home.card.after12.cta" href="after12.html">Plan after 12th <span>→</span></a>
+</div>
+<div class="path-card" style="animation-delay: 0.34s">
+<span class="path-icon">💼</span>
+<span class="tag path-grade" data-i18n="home.card.careers.badge">💼 College / Early career</span>
+<h3 class="path-title" data-i18n="home.card.careers.title">What skills does the job market actually want?</h3>
+<p class="path-desc" data-i18n="home.card.careers.body">Degrees don't tell you what skills to build. See what employers really look for in different roles — from IT and finance to healthcare, design, and operations.</p>
+<div class="path-topics">
+<span class="path-topic">Tech roles</span>
+<span class="path-topic" data-i18n="careers.dept.finance.title">Finance</span>
+<span class="path-topic">Management</span>
+<span class="path-topic">Healthcare</span>
+<span class="path-topic">Creative</span>
+</div>
+<a class="path-link" data-i18n="home.card.careers.cta" href="careers.html">See job skill maps <span>→</span></a>
+</div>
+<div class="path-card" style="animation-delay: 0.46s">
+<span class="path-icon">👨‍👩‍👧</span>
+<span class="tag path-grade" data-i18n="home.card.guide.badge">👨‍👩‍👧 Parents · Counsellors · Coordinators</span>
+<h3 class="path-title" data-i18n="home.card.guide.title">Supporting the young people in your life</h3>
+<p class="path-desc" data-i18n="home.card.guide.body">Guidance for parents, career counsellors, and placement coordinators — understand the landscape so you can guide students with current, accurate information.</p>
+<div class="path-topics">
+<span class="path-topic">For parents</span>
+<span class="path-topic">Counsellors</span>
+<span class="path-topic">Coordinators</span>
+</div>
+<a class="path-link" data-i18n="home.card.guide.cta" href="guide.html">Go to guidance hub <span>→</span></a>
+</div>
+</div>
+</section>
+<!-- ── How it works ───────────────────────────────────────── -->
+<div class="hiw-section">
+<div class="section reveal">
+<p class="section-label mono" data-i18n="home.how.section.title">How enaasan works</p>
+<h2 class="section-heading" data-i18n="home.how.title">A place that guides you to think — freely and clearly.</h2>
+<div class="hiw-grid">
+<div class="hiw-step">
+<p class="hiw-num" data-i18n="home.how.step1.num">Step 01</p>
+<p class="hiw-title" data-i18n="home.how.step1.title">Tell us where you are</p>
+<p class="hiw-desc" data-i18n="home.how.step1.body">Grade 10, Inter first year, or already in college — start from your actual situation, not a generic menu.</p>
+</div>
+<div class="hiw-step">
+<p class="hiw-num" data-i18n="home.how.step2.num">Step 02</p>
+<p class="hiw-title" data-i18n="home.how.step2.title">Explore honest options</p>
+<p class="hiw-desc" data-i18n="home.how.step2.body">Real information about streams, exams, courses, and careers — written in plain language, not brochure-speak.</p>
+</div>
+<div class="hiw-step">
+<p class="hiw-num" data-i18n="home.how.step3.num">Step 03</p>
+<p class="hiw-title" data-i18n="home.how.step3.title">Ask the questions you can't Google</p>
+<p class="hiw-desc" data-i18n="home.how.step3.body">"Is B.Com worth it if I don't want to do CA?" "Can I do engineering without JEE?" Ask Enaasan directly.</p>
+</div>
+<div class="hiw-step">
+<p class="hiw-num" data-i18n="home.how.step4.num">Step 04</p>
+<p class="hiw-title" data-i18n="home.how.step4.title">Make a decision you understand</p>
+<p class="hiw-desc" data-i18n="home.how.step4.body">Not what your relatives suggested. Not what your friends chose. Yours — because you actually understand what it leads to.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ── Stats ──────────────────────────────────────────────── -->
+<div class="stats-strip reveal">
+<div class="stat-item">
+<div class="stat-num" data-i18n="home.stats.careers.num">60+</div>
+<div class="stat-label" data-i18n="home.stats.careers.label">Career paths mapped</div>
+</div>
+<div class="stat-item">
+<div class="stat-num" data-i18n="home.stats.exams.num">20+</div>
+<div class="stat-label" data-i18n="home.stats.exams.label">Entrance exams explained</div>
+</div>
+<div class="stat-item">
+<div class="stat-num" data-i18n="home.stats.streams.num">5</div>
+<div class="stat-label" data-i18n="home.stats.streams.label">Streams covered in depth</div>
+</div>
+<div class="stat-item">
+<div class="stat-num" data-i18n="home.stats.india.label">India-first</div>
+<div class="stat-label" data-i18n="home.stats.india.sublabel">Content built for Indian students</div>
+</div>
+</div>
+<!-- ── Ask Enaasan ────────────────────────────────────────── -->
+<section class="section ask-section reveal" id="ask">
+<p class="section-label mono" data-i18n="home.ai.section.title">AI-powered guidance</p>
+<h2 class="section-heading" data-i18n="home.ai.title" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
+<div class="ask-box">
+<div class="ask-avatar">🎓</div>
+<div class="coming-soon-pill" data-i18n="home.ai.badge">✦ Coming soon</div>
+<h3 class="ask-title" data-i18n="home.ai.subtitle">Your personal career mentor</h3>
+<p class="ask-desc" data-i18n="home.ai.body">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
+<div class="preview-questions">
+<div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
+<div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
+<div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
+</div>
+<p data-i18n="home.ai.share.text" style="font-size:0.84rem; color:var(--mist); margin-bottom:14px;">Or share this page with someone who needs it — that helps us grow too.</p>
+<div class="share-row">
+<a class="share-btn whatsapp" data-i18n="home.share.whatsapp" href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online" target="_blank">💬 Share on WhatsApp</a>
+<a class="share-btn linkedin" data-i18n="home.share.linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online" target="_blank">in Share on LinkedIn</a>
+<a class="share-btn twitter" data-i18n="home.share.twitter" href="https://x.com/intent/post?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&amp;url=https://enaasan.online" target="_blank">𝕏 Share on X</a>
+</div>
+</div>
+</section>
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+<div class="footer-logo">en<span>aasan</span></div>
+<div class="footer-links">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.streams" href="streams.html">Stream Explorer</a>
+<a data-i18n="nav.after12" href="after12.html">After 12th</a>
+<a data-i18n="nav.careers" href="careers.html">Career Compass</a>
+<a data-i18n="nav.bps" href="bps.html">BPS / KPO Careers</a>
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.contact" href="about.html#contact">Contact</a>
+</div>
+<p class="footer-copy" data-i18n="footer.copyright">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+<!-- ── Scripts ───────────────────────────────────────────── -->
+<script>
     (function() {
       const container = document.getElementById('stars');
       for (let i = 0; i < 55; i++) {

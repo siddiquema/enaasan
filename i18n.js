@@ -49,11 +49,28 @@
 
   /* ── 3. Swap DOM text ── */
   function applyMessages(messages) {
+    // Handle <title data-i18n="key">
+    var titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl) {
+      var titleKey = titleEl.getAttribute('data-i18n');
+      if (messages[titleKey] !== undefined) { document.title = messages[titleKey]; }
+    }
+    // Handle <meta name="description" data-i18n="key">
+    var metaDesc = document.querySelector('meta[name="description"][data-i18n]');
+    if (metaDesc) {
+      var metaKey = metaDesc.getAttribute('data-i18n');
+      if (messages[metaKey] !== undefined) { metaDesc.setAttribute('content', messages[metaKey]); }
+    }
+    // Handle all other [data-i18n] elements
     var els = document.querySelectorAll('[data-i18n]');
     for (var i = 0; i < els.length; i++) {
-      var key = els[i].getAttribute('data-i18n');
+      var el = els[i];
+      if (el.tagName === 'TITLE' || (el.tagName === 'META' && el.getAttribute('name') === 'description')) {
+        continue; // already handled above
+      }
+      var key = el.getAttribute('data-i18n');
       if (messages[key] !== undefined) {
-        els[i].textContent = messages[key];
+        el.textContent = messages[key];
       }
     }
   }

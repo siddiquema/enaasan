@@ -1,24 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Career Compass — enaasan</title>
-  <meta name="description" content="What skills do different jobs actually require? Explore roles, build skill maps, and understand how organisations work — for college students and early career professionals." />
-  <!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="careers.page.title">Career Compass — enaasan</title>
+<meta content="What skills do different jobs actually require? Explore roles, build skill maps, and understand how organisations work — for college students and early career professionals." data-i18n="careers.meta.description" name="description"/>
+<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-D4QMDFL8XF');
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="lang-styles.css" />
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --night:    #0D1B2A;
       --ink:      #14273A;
@@ -512,288 +511,253 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
-</head>
+<link href="lang-styles.css" rel="stylesheet"/></head>
 <body>
-
 <!-- ── Nav ───────────────────────────────────────── -->
 <nav>
-  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
-  <a href="index.html" class="nav-back">← Back to home</a>
-
-  <div class="lang-switcher" role="group" aria-label="Select language">
-    <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
-    <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
-    <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
-    <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
-  </div>
-</nav>
-
+<a class="nav-logo" data-i18n="nav.brand" href="index.html">en<span>aasan</span></a>
+<a class="nav-back" data-i18n="nav.back_home" href="index.html">← Back to home</a>
+<div aria-label="Select language" class="lang-switcher" role="group">
+<button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
+</div></nav>
 <div class="page">
-
-  <!-- ── Hero ──────────────────────────────────────── -->
-  <div class="page-hero">
-    <p class="page-eyebrow">Career Compass</p>
-    <h1 class="page-heading">What does the job market<br /><span>actually want?</span></h1>
-    <p class="page-sub">For college students building skills, final-year students preparing for placements, and early career professionals figuring out how to grow. Pick where you are.</p>
-  </div>
-
-  <!-- ── Tab bar ────────────────────────────────────── -->
-  <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('skills', this)">🎯 Skill Explorer</button>
-    <button class="tab-btn" onclick="switchTab('org', this)">🏢 How Organisations Work</button>
-  </div>
-
-  <!-- ════════════════════════════════════════════════
+<!-- ── Hero ──────────────────────────────────────── -->
+<div class="page-hero">
+<p class="page-eyebrow" data-i18n="careers.section.badge">Career Compass</p>
+<h1 class="page-heading" data-i18n="careers.hero.title">What does the job market actually want?</h1>
+<p class="page-sub" data-i18n="careers.hero.body">For college students building skills, final-year students preparing for placements, and early career professionals figuring out how to grow. Pick where you are.</p>
+</div>
+<!-- ── Tab bar ────────────────────────────────────── -->
+<div class="tab-bar">
+<button class="tab-btn active" data-i18n="careers.tab.skill_explorer" onclick="switchTab('skills', this)">🎯 Skill Explorer</button>
+<button class="tab-btn" data-i18n="careers.tab.org" onclick="switchTab('org', this)">🏢 How Organisations Work</button>
+</div>
+<!-- ════════════════════════════════════════════════
        TAB 1: SKILL EXPLORER
   ════════════════════════════════════════════════ -->
-  <div class="tab-panel active" id="tab-skills">
-
-    <p class="sec-eyebrow">Step 1 — Pick a career field</p>
-    <h2 class="sec-heading">Which field are you aiming for?</h2>
-    <p class="sec-sub">Select a category to see the roles within it. Then click any role to see exactly what skills employers look for.</p>
-
-    <div class="category-row" id="categoryRow"></div>
-
-    <div class="salary-disclaimer">
-      <span class="disclaimer-icon">ℹ️</span>
-      <span>Salary ranges are indicative estimates based on publicly reported data from sources like Glassdoor, AmbitionBox, LinkedIn Salary Insights, and NASSCOM industry reports (2024–25). Actual compensation varies significantly by city, company size, individual skills, and negotiation. Use these as orientation — not as a guarantee. Always verify with current job postings and platforms like AmbitionBox before making decisions.</span>
-    </div>
-
-    <div class="roles-grid" id="rolesGrid"></div>
-    <div class="skill-map" id="skillMap">
-      <div class="skill-map-inner" id="skillMapInner"></div>
-    </div>
-
-  </div>
-
-  <!-- ════════════════════════════════════════════════
+<div class="tab-panel active" id="tab-skills">
+<p class="sec-eyebrow">Step 1 — Pick a career field</p>
+<h2 class="sec-heading" data-i18n="careers.step1.title">Which field are you aiming for?</h2>
+<p class="sec-sub" data-i18n="careers.step1.subtitle">Select a category to see the roles within it. Then click any role to see exactly what skills employers look for.</p>
+<div class="category-row" id="categoryRow"></div>
+<div class="salary-disclaimer">
+<span class="disclaimer-icon">ℹ️</span>
+<span data-i18n="careers.salary.disclaimer">Salary ranges are indicative estimates based on publicly reported data from sources like Glassdoor, AmbitionBox, LinkedIn Salary Insights, and NASSCOM industry reports (2024–25). Actual compensation varies significantly by city, company size, individual skills, and negotiation. Use these as orientation — not as a guarantee. Always verify with current job postings and platforms like AmbitionBox before making decisions.</span>
+</div>
+<div class="roles-grid" id="rolesGrid"></div>
+<div class="skill-map" id="skillMap">
+<div class="skill-map-inner" id="skillMapInner"></div>
+</div>
+</div>
+<!-- ════════════════════════════════════════════════
        TAB 2: HOW ORGANISATIONS WORK
   ════════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-org">
-
-    <div class="org-intro reveal">
-      Starting your first job is disorienting. <strong>Nobody explains the unwritten rules.</strong> What is the difference between your manager and your skip-level? Why does HR exist? What does "KPI" actually mean for your appraisal? What does growing in a company actually look like versus just showing up every day?
-      <br /><br />
+<div class="tab-panel" id="tab-org">
+<div class="org-intro reveal">
+      Starting your first job is disorienting. <strong data-i18n="careers.org.intro">Nobody explains the unwritten rules.</strong> What is the difference between your manager and your skip-level? Why does HR exist? What does "KPI" actually mean for your appraisal? What does growing in a company actually look like versus just showing up every day?
+      <br/><br/>
       This section explains how most Indian organisations are structured — and what that means for you as someone who is early in their career.
     </div>
-
-    <!-- How companies are structured -->
-    <p class="sec-eyebrow reveal">The basics</p>
-    <h2 class="sec-heading reveal">How a typical organisation is structured</h2>
-    <p class="sec-sub reveal">Most mid-to-large organisations in India follow a similar pattern — whether it is an IT company, a bank, or a BPO.</p>
-
-    <div class="org-grid reveal">
-      <div class="org-card">
-        <span class="org-card-icon">👤</span>
-        <div class="org-card-title">Individual Contributor (You, starting out)</div>
-        <div class="org-card-desc">You execute tasks. You are responsible for your own work output. Your manager gives you assignments, reviews your work, and gives feedback. This is where everyone begins.</div>
-        <div class="org-card-tip">Focus on doing your current job well before asking for more responsibility. Reliability is underrated at this level.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">👥</span>
-        <div class="org-card-title">Team Lead / Senior IC</div>
-        <div class="org-card-desc">After 2–4 years, you may lead a small team or become the go-to person for a specific skill. You still do the work but also mentor juniors and coordinate across small groups.</div>
-        <div class="org-card-tip">This transition is where many people get stuck — moving from "doing" to "enabling others to do" is a skill in itself.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">🗂️</span>
-        <div class="org-card-title">Manager</div>
-        <div class="org-card-desc">Responsible for a team's output, not just their own. Sets direction, removes blockers, handles performance conversations, and represents the team upward. Often the most challenging transition in a career.</div>
-        <div class="org-card-tip">Your success as a manager is measured by your team's output, not yours. The mindset shift from "I did it" to "we did it" is non-trivial.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">🏗️</span>
-        <div class="org-card-title">Senior Manager / Associate Director</div>
-        <div class="org-card-desc">Manages multiple teams or a larger function. Works with strategy, budgets, and cross-functional dependencies. More time in meetings, less time in execution.</div>
-        <div class="org-card-tip">Influence and stakeholder management become critical skills here. Knowing how to work with people you do not directly control is key.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">📊</span>
-        <div class="org-card-title">Director / VP</div>
-        <div class="org-card-desc">Owns a business function or major product area. Sets multi-year strategy, manages large budgets, hires senior leaders. Rarely in day-to-day execution.</div>
-        <div class="org-card-tip">At this level, your reputation, your network, and your track record of decisions carry more weight than any single skill.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">🎯</span>
-        <div class="org-card-title">C-Suite (CEO, CFO, CTO, COO…)</div>
-        <div class="org-card-desc">The top leadership team. Responsible for the overall direction, financial health, and long-term survival of the organisation. Reports to the Board of Directors.</div>
-        <div class="org-card-tip">Most C-suite leaders spent 15–25 years building deep expertise in one function before moving here. There is no shortcut, but there is also no single path.</div>
-      </div>
-    </div>
-
-    <!-- Support functions explained -->
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Functions you will interact with</p>
-    <h2 class="sec-heading reveal">What each department actually does — and why it matters to you</h2>
-    <p class="sec-sub reveal">Every organisation has core business functions and support functions. As a new joiner, understanding what each one does helps you navigate the company faster.</p>
-
-    <div class="org-grid reveal">
-      <div class="org-card">
-        <span class="org-card-icon">💼</span>
-        <div class="org-card-title">Human Resources (HR)</div>
-        <div class="org-card-desc">Hiring, onboarding, payroll, policies, performance management, and employee wellbeing. HR is not just the team that fires people — they also shape your career progression structure.</div>
-        <div class="org-card-tip">Build a professional relationship with your HR BP (Business Partner). They are an important ally when navigating appraisals or internal moves.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">📣</span>
-        <div class="org-card-title">Sales & Business Development</div>
-        <div class="org-card-desc">Brings in revenue. Finds new clients, manages existing accounts, and closes deals. In most companies, Sales is the engine — everything else enables or supports it.</div>
-        <div class="org-card-tip">Even if you are not in Sales, understanding what your company sells and to whom gives you enormous context for your own work.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">⚙️</span>
-        <div class="org-card-title">Operations</div>
-        <div class="org-card-desc">Keeps the day-to-day running. Delivery, quality, process management, and capacity planning. In service companies (IT, BPO, consulting), Operations is often the largest function.</div>
-        <div class="org-card-tip">Ops roles often lead to general management faster than specialist roles. If you want to run a business unit one day, operations is a strong foundation.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">💰</span>
-        <div class="org-card-title">Finance</div>
-        <div class="org-card-desc">Manages the company's money — budgeting, forecasting, financial reporting, compliance. Every business decision eventually has a finance dimension.</div>
-        <div class="org-card-tip">Understanding basic P&L (Profit and Loss) concepts makes you a better contributor in any role — not just Finance. Learn to read a simple income statement.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">💻</span>
-        <div class="org-card-title">Technology / IT</div>
-        <div class="org-card-desc">Builds and maintains the systems the company runs on. In tech companies, this is the core business. In others, it is an enabling function that supports everything else.</div>
-        <div class="org-card-tip">In 2026, every professional benefits from basic digital literacy — understanding what software can and cannot do, regardless of your own role.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">📢</span>
-        <div class="org-card-title">Marketing</div>
-        <div class="org-card-desc">Builds brand awareness, generates leads, and communicates the company's value to the market. Works closely with Sales and Product.</div>
-        <div class="org-card-tip">Marketing is increasingly data-driven. Understanding analytics, SEO, and content — even at a basic level — makes marketing professionals significantly more valuable.</div>
-      </div>
-    </div>
-
-    <!-- Career ladders by field -->
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Growth paths</p>
-    <h2 class="sec-heading reveal">What does growing in your field actually look like?</h2>
-    <p class="sec-sub reveal">Select a field to see the typical career ladder — from fresher to senior leader.</p>
-
-    <div class="ladder-section reveal">
-      <div class="ladder-tabs" id="ladderTabs"></div>
-      <div id="ladderPanels"></div>
-    </div>
-
-    <!-- AI in organisations -->
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">The new reality</p>
-    <h2 class="sec-heading reveal">How organisations are working with AI — and what it means for your career</h2>
-    <p class="sec-sub reveal">AI is not replacing most jobs overnight — but it is changing what every job looks like. Understanding this early gives you a real advantage.</p>
-
-    <div class="org-intro reveal">
-      <strong>The honest picture:</strong> AI is being adopted unevenly. Some industries are moving fast (tech, finance, marketing, legal research). Others are slower (healthcare, government, education). But almost every professional role is being touched in some way — and the professionals who understand how to work <em>with</em> AI tools will be significantly more productive and valuable than those who ignore them.
-      <br /><br />
-      This is not about becoming an AI engineer. It is about understanding how AI is changing the work in your field — and adapting accordingly.
-    </div>
-
-    <div class="org-grid reveal">
-      <div class="org-card">
-        <span class="org-card-icon">🔄</span>
-        <div class="org-card-title">AI as a co-worker, not a replacement</div>
-        <div class="org-card-desc">Most organisations are using AI to augment existing roles — not eliminate them. A lawyer who uses AI for legal research does more work in less time. A marketer who uses AI for content drafts produces more campaigns. The job still exists; the output expectation is higher.</div>
-        <div class="org-card-tip">The risk is not "AI will take my job." The risk is "someone who uses AI well will be more productive than me, and get the opportunities I wanted."</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">🏗️</span>
-        <div class="org-card-title">How AI is typically adopted inside companies</div>
-        <div class="org-card-desc">Most organisations go through a predictable pattern: (1) Experimentation — individuals use AI tools on their own. (2) Piloting — teams test AI on specific workflows. (3) Scaling — company-wide rollout with governance. (4) Transformation — whole processes are redesigned around AI capability.</div>
-        <div class="org-card-tip">Knowing which stage your organisation is at tells you what kind of AI skills are valued right now — and what to prepare for next.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">💼</span>
-        <div class="org-card-title">New roles AI is creating</div>
-        <div class="org-card-desc">Beyond ML engineers, organisations are creating: AI Champions (internal advocates), Prompt Engineers, AI Governance leads, AI Trainers, LLM Ops specialists, and AI-augmented domain experts (AI-assisted lawyers, AI-assisted analysts, AI-assisted designers).</div>
-        <div class="org-card-tip">Volunteer to be your team's AI champion. Being the person who knows how to use AI tools effectively is a low-competition, high-visibility opportunity in most organisations right now.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">⚠️</span>
-        <div class="org-card-title">What AI cannot do (yet) — and why that matters for your career</div>
-        <div class="org-card-desc">AI is weak at: genuine creativity, ethical judgment in complex situations, building trusted human relationships, physical world tasks, highly contextual decision-making, and accountability. The skills that compound in an AI world are the human ones: judgment, leadership, communication, and domain depth.</div>
-        <div class="org-card-tip">Build AI fluency AND deepen your human skills. The professional who is both technically AI-literate and deeply trusted by people around them is the hardest to replace.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">📋</span>
-        <div class="org-card-title">AI governance — who is responsible when AI gets it wrong?</div>
-        <div class="org-card-desc">As AI is used in consequential decisions (hiring, lending, medical diagnosis, legal advice), companies need people who understand accountability, bias, and regulation. India's Digital Personal Data Protection Act (DPDP) and global frameworks like the EU AI Act are shaping this rapidly.</div>
-        <div class="org-card-tip">Understanding AI risk and governance — even at a basic level — is becoming a differentiator for professionals in law, HR, finance, and leadership roles.</div>
-      </div>
-      <div class="org-card">
-        <span class="org-card-icon">🇮🇳</span>
-        <div class="org-card-title">India's specific AI opportunity</div>
-        <div class="org-card-desc">India is positioned as a major AI talent hub — in engineering, data annotation, AI-augmented BPO services, and AI research. NASSCOM estimates India will need 1 million AI-skilled professionals by 2026. Government initiatives like IndiaAI Mission are accelerating adoption across sectors.</div>
-        <div class="org-card-tip">AI skills built now will be relevant for a decade. Even a working knowledge of how LLMs operate and how to use them effectively puts you ahead of most of your peers in the Indian job market today.</div>
-      </div>
-    </div>
-
-    <!-- AI skills by profession -->
-    <div class="ai-profession-section reveal">
-      <h3 class="sec-heading" style="font-size:1.1rem; margin-bottom:18px;">What AI literacy looks like in your field</h3>
-      <div class="ai-prof-grid" id="aiProfGrid"></div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Growth tips -->
-    <div class="divider"></div>
-    <p class="sec-eyebrow reveal">Early career advice</p>
-    <h2 class="sec-heading reveal">What actually helps you grow — from people who have been through it.</h2>
-
-    <div class="growth-grid reveal">
-      <div class="growth-card">
-        <div class="growth-num">01</div>
-        <div class="growth-title">Visibility matters as much as quality</div>
-        <div class="growth-desc">Doing great work that nobody knows about will not get you promoted. Learn to communicate your contributions clearly — in team meetings, in emails, in your appraisal notes. This is not bragging. It is professional communication.</div>
-      </div>
-      <div class="growth-card">
-        <div class="growth-num">02</div>
-        <div class="growth-title">Your manager is your most important relationship at work</div>
-        <div class="growth-desc">They influence your appraisal rating, your project assignments, your promotion timing, and your internal reputation. Invest in making that relationship work — ask for feedback, understand their priorities, and keep them informed.</div>
-      </div>
-      <div class="growth-card">
-        <div class="growth-num">03</div>
-        <div class="growth-title">Learn the business, not just your job</div>
-        <div class="growth-desc">Knowing how your company makes money, who its competitors are, and what its strategic priorities are will make you a more valuable contributor than someone who only knows their own task list. Ask questions. Read the annual report if there is one.</div>
-      </div>
-      <div class="growth-card">
-        <div class="growth-num">04</div>
-        <div class="growth-title">Skills that compound over time are worth more than skills that plateau</div>
-        <div class="growth-desc">Communication, critical thinking, data interpretation, and leadership compound — they become more valuable as you grow. Narrow technical skills can plateau. Build both, but prioritise the ones that grow with you.</div>
-      </div>
-      <div class="growth-card">
-        <div class="growth-num">05</div>
-        <div class="growth-title">Two years is the minimum before you can fairly evaluate a job</div>
-        <div class="growth-desc">The first six months you are learning the basics. The second six months you start contributing. After a year you begin to have real impact. Leaving before two years means you often miss the phase where the work actually gets interesting — and where you learn the most.</div>
-      </div>
-      <div class="growth-card">
-        <div class="growth-num">06</div>
-        <div class="growth-title">Your salary is negotiable — at joining and at appraisal</div>
-        <div class="growth-desc">Most Indian professionals accept the first offer without negotiating. Research market rates for your role and experience level (Glassdoor, LinkedIn Salary, AmbitionBox). Negotiating respectfully and with data is professional, not rude. You are leaving money on the table if you do not try.</div>
-      </div>
-    </div>
-
-  </div><!-- /tab-org -->
-
+<!-- How companies are structured -->
+<p class="sec-eyebrow reveal">The basics</p>
+<h2 class="sec-heading reveal" data-i18n="careers.org.basics.title">How a typical organisation is structured</h2>
+<p class="sec-sub reveal" data-i18n="careers.org.basics.subtitle">Most mid-to-large organisations in India follow a similar pattern — whether it is an IT company, a bank, or a BPO.</p>
+<div class="org-grid reveal">
+<div class="org-card">
+<span class="org-card-icon">👤</span>
+<div class="org-card-title" data-i18n="careers.org.ic.title">Individual Contributor (You, starting out)</div>
+<div class="org-card-desc" data-i18n="careers.org.ic.body">You execute tasks. You are responsible for your own work output. Your manager gives you assignments, reviews your work, and gives feedback. This is where everyone begins.</div>
+<div class="org-card-tip" data-i18n="careers.org.ic.tip">Focus on doing your current job well before asking for more responsibility. Reliability is underrated at this level.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">👥</span>
+<div class="org-card-title" data-i18n="careers.org.tl.title">Team Lead / Senior IC</div>
+<div class="org-card-desc" data-i18n="careers.org.tl.body">After 2–4 years, you may lead a small team or become the go-to person for a specific skill. You still do the work but also mentor juniors and coordinate across small groups.</div>
+<div class="org-card-tip" data-i18n="careers.org.tl.tip">This transition is where many people get stuck — moving from "doing" to "enabling others to do" is a skill in itself.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">🗂️</span>
+<div class="org-card-title" data-i18n="careers.org.manager.title">Manager</div>
+<div class="org-card-desc" data-i18n="careers.org.manager.body">Responsible for a team's output, not just their own. Sets direction, removes blockers, handles performance conversations, and represents the team upward. Often the most challenging transition in a career.</div>
+<div class="org-card-tip" data-i18n="careers.org.manager.tip">Your success as a manager is measured by your team's output, not yours. The mindset shift from "I did it" to "we did it" is non-trivial.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">🏗️</span>
+<div class="org-card-title" data-i18n="careers.org.sr_manager.title">Senior Manager / Associate Director</div>
+<div class="org-card-desc" data-i18n="careers.org.sr_manager.body">Manages multiple teams or a larger function. Works with strategy, budgets, and cross-functional dependencies. More time in meetings, less time in execution.</div>
+<div class="org-card-tip" data-i18n="careers.org.sr_manager.tip">Influence and stakeholder management become critical skills here. Knowing how to work with people you do not directly control is key.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">📊</span>
+<div class="org-card-title" data-i18n="careers.org.director.title">Director / VP</div>
+<div class="org-card-desc" data-i18n="careers.org.director.body">Owns a business function or major product area. Sets multi-year strategy, manages large budgets, hires senior leaders. Rarely in day-to-day execution.</div>
+<div class="org-card-tip" data-i18n="careers.org.director.tip">At this level, your reputation, your network, and your track record of decisions carry more weight than any single skill.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">🎯</span>
+<div class="org-card-title" data-i18n="careers.org.csuite.title">C-Suite (CEO, CFO, CTO, COO…)</div>
+<div class="org-card-desc" data-i18n="careers.org.csuite.body">The top leadership team. Responsible for the overall direction, financial health, and long-term survival of the organisation. Reports to the Board of Directors.</div>
+<div class="org-card-tip" data-i18n="careers.org.csuite.tip">Most C-suite leaders spent 15–25 years building deep expertise in one function before moving here. There is no shortcut, but there is also no single path.</div>
+</div>
+</div>
+<!-- Support functions explained -->
+<div class="divider"></div>
+<p class="sec-eyebrow reveal">Functions you will interact with</p>
+<h2 class="sec-heading reveal" data-i18n="careers.departments.title">What each department actually does — and why it matters to you</h2>
+<p class="sec-sub reveal" data-i18n="careers.departments.subtitle">Every organisation has core business functions and support functions. As a new joiner, understanding what each one does helps you navigate the company faster.</p>
+<div class="org-grid reveal">
+<div class="org-card">
+<span class="org-card-icon">💼</span>
+<div class="org-card-title" data-i18n="careers.dept.hr.title">Human Resources (HR)</div>
+<div class="org-card-desc" data-i18n="careers.dept.hr.body">Hiring, onboarding, payroll, policies, performance management, and employee wellbeing. HR is not just the team that fires people — they also shape your career progression structure.</div>
+<div class="org-card-tip" data-i18n="careers.dept.hr.tip">Build a professional relationship with your HR BP (Business Partner). They are an important ally when navigating appraisals or internal moves.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">📣</span>
+<div class="org-card-title" data-i18n="careers.dept.sales.title">Sales &amp; Business Development</div>
+<div class="org-card-desc" data-i18n="careers.dept.sales.body">Brings in revenue. Finds new clients, manages existing accounts, and closes deals. In most companies, Sales is the engine — everything else enables or supports it.</div>
+<div class="org-card-tip" data-i18n="careers.dept.sales.tip">Even if you are not in Sales, understanding what your company sells and to whom gives you enormous context for your own work.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">⚙️</span>
+<div class="org-card-title" data-i18n="careers.dept.ops.title">Operations</div>
+<div class="org-card-desc" data-i18n="careers.dept.ops.body">Keeps the day-to-day running. Delivery, quality, process management, and capacity planning. In service companies (IT, BPO, consulting), Operations is often the largest function.</div>
+<div class="org-card-tip" data-i18n="careers.dept.ops.tip">Ops roles often lead to general management faster than specialist roles. If you want to run a business unit one day, operations is a strong foundation.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">💰</span>
+<div class="org-card-title" data-i18n="careers.dept.finance.title">Finance</div>
+<div class="org-card-desc" data-i18n="careers.dept.finance.body">Manages the company's money — budgeting, forecasting, financial reporting, compliance. Every business decision eventually has a finance dimension.</div>
+<div class="org-card-tip" data-i18n="careers.dept.finance.tip">Understanding basic P&amp;L (Profit and Loss) concepts makes you a better contributor in any role — not just Finance. Learn to read a simple income statement.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">💻</span>
+<div class="org-card-title" data-i18n="careers.dept.tech.title">Technology / IT</div>
+<div class="org-card-desc" data-i18n="careers.dept.tech.body">Builds and maintains the systems the company runs on. In tech companies, this is the core business. In others, it is an enabling function that supports everything else.</div>
+<div class="org-card-tip" data-i18n="careers.dept.tech.tip">In 2026, every professional benefits from basic digital literacy — understanding what software can and cannot do, regardless of your own role.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">📢</span>
+<div class="org-card-title" data-i18n="careers.dept.marketing.title">Marketing</div>
+<div class="org-card-desc" data-i18n="careers.dept.marketing.body">Builds brand awareness, generates leads, and communicates the company's value to the market. Works closely with Sales and Product.</div>
+<div class="org-card-tip" data-i18n="careers.dept.marketing.tip">Marketing is increasingly data-driven. Understanding analytics, SEO, and content — even at a basic level — makes marketing professionals significantly more valuable.</div>
+</div>
+</div>
+<!-- Career ladders by field -->
+<div class="divider"></div>
+<p class="sec-eyebrow reveal">Growth paths</p>
+<h2 class="sec-heading reveal" data-i18n="careers.growth.title">What does growing in your field actually look like?</h2>
+<p class="sec-sub reveal" data-i18n="careers.growth.subtitle">Select a field to see the typical career ladder — from fresher to senior leader.</p>
+<div class="ladder-section reveal">
+<div class="ladder-tabs" id="ladderTabs"></div>
+<div id="ladderPanels"></div>
+</div>
+<!-- AI in organisations -->
+<div class="divider"></div>
+<p class="sec-eyebrow reveal" data-i18n="careers.ai.section.title">The new reality</p>
+<h2 class="sec-heading reveal" data-i18n="careers.ai.title">How organisations are working with AI — and what it means for your career</h2>
+<p class="sec-sub reveal" data-i18n="careers.ai.subtitle">AI is not replacing most jobs overnight — but it is changing what every job looks like. Understanding this early gives you a real advantage.</p>
+<div class="org-intro reveal" data-i18n="careers.ai.honest.body">AI is being adopted unevenly. Some industries are moving fast (tech, finance, marketing, legal research). Others are slower (healthcare, government, education). But almost every professional role is being touched in some way — and the professionals who understand how to work with AI tools will be significantly more productive and valuable than those who ignore them. This is not about becoming an AI engineer. It is about understanding how AI is changing the work in your field — and adapting accordingly.</div>
+<div class="org-grid reveal">
+<div class="org-card">
+<span class="org-card-icon">🔄</span>
+<div class="org-card-title" data-i18n="careers.ai.coworker.title">AI as a co-worker, not a replacement</div>
+<div class="org-card-desc" data-i18n="careers.ai.coworker.body">Most organisations are using AI to augment existing roles — not eliminate them. A lawyer who uses AI for legal research does more work in less time. A marketer who uses AI for content drafts produces more campaigns. The job still exists; the output expectation is higher.</div>
+<div class="org-card-tip" data-i18n="careers.ai.coworker.tip">The risk is not "AI will take my job." The risk is "someone who uses AI well will be more productive than me, and get the opportunities I wanted."</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">🏗️</span>
+<div class="org-card-title" data-i18n="careers.ai.adoption.title">How AI is typically adopted inside companies</div>
+<div class="org-card-desc" data-i18n="careers.ai.adoption.body">Most organisations go through a predictable pattern: (1) Experimentation — individuals use AI tools on their own. (2) Piloting — teams test AI on specific workflows. (3) Scaling — company-wide rollout with governance. (4) Transformation — whole processes are redesigned around AI capability.</div>
+<div class="org-card-tip" data-i18n="careers.ai.adoption.tip">Knowing which stage your organisation is at tells you what kind of AI skills are valued right now — and what to prepare for next.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">💼</span>
+<div class="org-card-title" data-i18n="careers.ai.new_roles.title">New roles AI is creating</div>
+<div class="org-card-desc" data-i18n="careers.ai.new_roles.body">Beyond ML engineers, organisations are creating: AI Champions (internal advocates), Prompt Engineers, AI Governance leads, AI Trainers, LLM Ops specialists, and AI-augmented domain experts.</div>
+<div class="org-card-tip" data-i18n="careers.ai.new_roles.tip">Volunteer to be your team's AI champion. Being the person who knows how to use AI tools effectively is a low-competition, high-visibility opportunity in most organisations right now.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">⚠️</span>
+<div class="org-card-title" data-i18n="careers.ai.limits.title">What AI cannot do (yet) — and why that matters for your career</div>
+<div class="org-card-desc" data-i18n="careers.ai.limits.body">AI is weak at: genuine creativity, ethical judgment in complex situations, building trusted human relationships, physical world tasks, highly contextual decision-making, and accountability. The skills that compound in an AI world are the human ones: judgment, leadership, communication, and domain depth.</div>
+<div class="org-card-tip" data-i18n="careers.ai.limits.tip">Build AI fluency AND deepen your human skills. The professional who is both technically AI-literate and deeply trusted by people around them is the hardest to replace.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">📋</span>
+<div class="org-card-title" data-i18n="careers.ai.governance.title">AI governance — who is responsible when AI gets it wrong?</div>
+<div class="org-card-desc" data-i18n="careers.ai.governance.body">As AI is used in consequential decisions (hiring, lending, medical diagnosis, legal advice), companies need people who understand accountability, bias, and regulation. India's Digital Personal Data Protection Act (DPDP) and global frameworks like the EU AI Act are shaping this rapidly.</div>
+<div class="org-card-tip" data-i18n="careers.ai.governance.tip">Understanding AI risk and governance — even at a basic level — is becoming a differentiator for professionals in law, HR, finance, and leadership roles.</div>
+</div>
+<div class="org-card">
+<span class="org-card-icon">🇮🇳</span>
+<div class="org-card-title" data-i18n="careers.ai.india.title">India's specific AI opportunity</div>
+<div class="org-card-desc" data-i18n="careers.ai.india.body">India is positioned as a major AI talent hub — in engineering, data annotation, AI-augmented BPO services, and AI research. NASSCOM estimates India will need 1 million AI-skilled professionals by 2026. Government initiatives like IndiaAI Mission are accelerating adoption across sectors.</div>
+<div class="org-card-tip" data-i18n="careers.ai.india.tip">AI skills built now will be relevant for a decade. Even a working knowledge of how LLMs operate and how to use them effectively puts you ahead of most of your peers in the Indian job market today.</div>
+</div>
+</div>
+<!-- AI skills by profession -->
+<div class="ai-profession-section reveal">
+<h3 class="sec-heading" data-i18n="careers.ai.field.title" style="font-size:1.1rem; margin-bottom:18px;">What AI literacy looks like in your field</h3>
+<div class="ai-prof-grid" id="aiProfGrid"></div>
+</div>
+<div class="divider"></div>
+<!-- Growth tips -->
+<div class="divider"></div>
+<p class="sec-eyebrow reveal" data-i18n="careers.advice.title">Early career advice</p>
+<h2 class="sec-heading reveal" data-i18n="careers.advice.subtitle">What actually helps you grow — from people who have been through it.</h2>
+<div class="growth-grid reveal">
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice1.num">01</div>
+<div class="growth-title" data-i18n="careers.advice1.title">Visibility matters as much as quality</div>
+<div class="growth-desc" data-i18n="careers.advice1.body">Doing great work that nobody knows about will not get you promoted. Learn to communicate your contributions clearly — in team meetings, in emails, in your appraisal notes. This is not bragging. It is professional communication.</div>
+</div>
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice2.num">02</div>
+<div class="growth-title" data-i18n="careers.advice2.title">Your manager is your most important relationship at work</div>
+<div class="growth-desc" data-i18n="careers.advice2.body">They influence your appraisal rating, your project assignments, your promotion timing, and your internal reputation. Invest in making that relationship work — ask for feedback, understand their priorities, and keep them informed.</div>
+</div>
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice3.num">03</div>
+<div class="growth-title" data-i18n="careers.advice3.title">Learn the business, not just your job</div>
+<div class="growth-desc" data-i18n="careers.advice3.body">Knowing how your company makes money, who its competitors are, and what its strategic priorities are will make you a more valuable contributor than someone who only knows their own task list. Ask questions. Read the annual report if there is one.</div>
+</div>
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice4.num">04</div>
+<div class="growth-title" data-i18n="careers.advice4.title">Skills that compound over time are worth more than skills that plateau</div>
+<div class="growth-desc" data-i18n="careers.advice4.body">Communication, critical thinking, data interpretation, and leadership compound — they become more valuable as you grow. Narrow technical skills can plateau. Build both, but prioritise the ones that grow with you.</div>
+</div>
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice5.num">05</div>
+<div class="growth-title" data-i18n="careers.advice5.title">Two years is the minimum before you can fairly evaluate a job</div>
+<div class="growth-desc" data-i18n="careers.advice5.body">The first six months you are learning the basics. The second six months you start contributing. After a year you begin to have real impact. Leaving before two years means you often miss the phase where the work actually gets interesting — and where you learn the most.</div>
+</div>
+<div class="growth-card">
+<div class="growth-num" data-i18n="careers.advice6.num">06</div>
+<div class="growth-title" data-i18n="careers.advice6.title">Your salary is negotiable — at joining and at appraisal</div>
+<div class="growth-desc" data-i18n="careers.advice6.body">Most Indian professionals accept the first offer without negotiating. Research market rates for your role and experience level (Glassdoor, LinkedIn Salary, AmbitionBox). Negotiating respectfully and with data is professional, not rude. You are leaving money on the table if you do not try.</div>
+</div>
+</div>
+</div><!-- /tab-org -->
 </div><!-- /page -->
-
 <!-- ── Footer ─────────────────────────────────────── -->
 <footer>
-  <div class="footer-logo">en<span>aasan</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="streams.html">Stream Explorer</a>
-    <a href="after12.html">After 12th</a>
-    <a href="careers.html">Career Compass</a>
-    <a href="bps.html">BPS / KPO Careers</a>
-    <a href="guide.html">Guidance Hub</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </div>
-  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+<div class="footer-logo" data-i18n="nav.brand">en<span>aasan</span></div>
+<div class="footer-links">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.streams" href="streams.html">Stream Explorer</a>
+<a data-i18n="nav.after12" href="after12.html">After 12th</a>
+<a data-i18n="nav.careers" href="careers.html">Career Compass</a>
+<a data-i18n="nav.bps" href="bps.html">BPS / KPO Careers</a>
+<a data-i18n="nav.guide" href="guide.html">Guidance Hub</a>
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.contact" href="about.html#contact">Contact</a>
+</div>
+<p class="footer-copy" data-i18n="footer.copyright">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
 </footer>
-
 <script>
 /* ══════════════════════════════════════════════
    DATA
@@ -1467,7 +1431,5 @@ buildRoles();
 buildLadders();
 buildAIProfessions();
 </script>
-
-<script src="i18n.js"></script>
-</body>
+<script defer="" src="i18n.js"></script></body>
 </html>

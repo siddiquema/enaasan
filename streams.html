@@ -1,25 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stream Explorer — enaasan</title>
-  <meta name="description" content="Find the right stream after Grade 10. Science, Commerce, Arts — explore what each path actually leads to." />
-  <!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="streams.page.title">Stream Explorer — enaasan</title>
+<meta content="Find the right stream after Grade 10. Science, Commerce, Arts — explore what each path actually leads to." data-i18n="streams.meta.description" name="description"/>
+<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-D4QMDFL8XF');
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="lang-styles.css" />
-
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="lang-styles.css" rel="stylesheet"/>
+<style>
     /* ── Tokens (same as homepage) ─────────────────── */
     :root {
       --night:     #0D1B2A;
@@ -511,156 +510,135 @@
   </style>
 </head>
 <body>
-
 <!-- ── Nav ──────────────────────────────────────── -->
 <nav>
-  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
-  <a href="index.html" class="nav-back">← Back to home</a>
-
-  <div class="lang-switcher" role="group" aria-label="Select language">
-    <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
-    <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
-    <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
-    <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
-  </div>
+<a class="nav-logo" data-i18n="nav.brand" href="index.html">en<span>aasan</span></a>
+<a class="nav-back" data-i18n="nav.back_home" href="index.html">← Back to home</a>
+<div aria-label="Select language" class="lang-switcher" role="group">
+<button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
+</div>
 </nav>
-
 <!-- ── Page ─────────────────────────────────────── -->
 <div class="page">
-
-  <!-- Progress -->
-  <div class="progress-bar" id="progressBar">
-    <div class="progress-step">
-      <div class="progress-dot active" id="dot1"></div>
-      <div class="progress-line" id="line1"></div>
-    </div>
-    <span class="progress-label active" id="label1">Your interests</span>
-    <div class="progress-step" style="margin-left:8px">
-      <div class="progress-dot" id="dot2"></div>
-      <div class="progress-line" id="line2"></div>
-    </div>
-    <span class="progress-label" id="label2">Matching streams</span>
-    <div class="progress-step" style="margin-left:8px">
-      <div class="progress-dot" id="dot3"></div>
-    </div>
-    <span class="progress-label" id="label3">Your path</span>
-  </div>
-
-  <!-- ══ STEP 1: Interests ════════════════════════ -->
-  <div class="step active" id="step1">
-    <p class="step-eyebrow">Step 1 of 3</p>
-    <h1 class="step-heading">What pulls you the most?</h1>
-    <p class="step-sub">Not what you are "good at" — what genuinely makes you curious. Pick the one that feels most like you.</p>
-
-    <div class="interest-grid">
-      <div class="interest-tile" style="--tile-color: var(--science)" data-interest="science" onclick="selectInterest(this)">
-        <span class="tile-icon">🔬</span>
-        <div class="tile-title">How and why things work</div>
-        <div class="tile-desc">You enjoy understanding what's behind things — experiments, logic, cause and effect. You ask "why does this happen?"</div>
-        <div class="tile-examples">
-          <span class="tile-ex">experiments</span>
-          <span class="tile-ex">problem solving</span>
-          <span class="tile-ex">logic</span>
-          <span class="tile-ex">technology</span>
-        </div>
-      </div>
-
-      <div class="interest-tile" style="--tile-color: var(--commerce)" data-interest="commerce" onclick="selectInterest(this)">
-        <span class="tile-icon">📊</span>
-        <div class="tile-title">Money, business, and how the world runs</div>
-        <div class="tile-desc">You're curious about markets, why companies succeed, how money moves. You enjoy planning and decision-making.</div>
-        <div class="tile-examples">
-          <span class="tile-ex">money</span>
-          <span class="tile-ex">strategy</span>
-          <span class="tile-ex">business</span>
-          <span class="tile-ex">organising</span>
-        </div>
-      </div>
-
-      <div class="interest-tile" style="--tile-color: var(--arts)" data-interest="arts" onclick="selectInterest(this)">
-        <span class="tile-icon">🎨</span>
-        <div class="tile-title">People, ideas, stories, and expression</div>
-        <div class="tile-desc">You are drawn to human stories — history, cultures, writing, design, or understanding how society works.</div>
-        <div class="tile-examples">
-          <span class="tile-ex">writing</span>
-          <span class="tile-ex">design</span>
-          <span class="tile-ex">history</span>
-          <span class="tile-ex">society</span>
-        </div>
-      </div>
-
-      <div class="interest-tile" style="--tile-color: var(--voc)" data-interest="mixed" onclick="selectInterest(this)">
-        <span class="tile-icon">🤔</span>
-        <div class="tile-title">Honestly, I am not sure yet</div>
-        <div class="tile-desc">That is completely fine. Many students feel this way. We will show you all your options and help you figure it out.</div>
-        <div class="tile-examples">
-          <span class="tile-ex">exploring</span>
-          <span class="tile-ex">all options</span>
-          <span class="tile-ex">undecided</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="step-nav">
-      <button class="btn-next" id="next1" onclick="goToStep2()">See matching streams →</button>
-    </div>
-  </div>
-
-  <!-- ══ STEP 2: Streams ══════════════════════════ -->
-  <div class="step" id="step2">
-    <p class="step-eyebrow">Step 2 of 3</p>
-    <h2 class="step-heading" id="step2Heading">Streams that match you</h2>
-    <p class="step-sub" id="step2Sub">Based on what you told us. Pick the one you want to explore — you can always come back and try another.</p>
-
-    <div class="streams-grid" id="streamsGrid"></div>
-
-    <div class="step-nav">
-      <button class="btn-prev" onclick="goToStep(1)">← Back</button>
-      <button class="btn-next" id="next2" onclick="goToStep3()">See my path →</button>
-    </div>
-  </div>
-
-  <!-- ══ STEP 3: Path ══════════════════════════════ -->
-  <div class="step" id="step3">
-    <div class="path-header">
-      <div>
-        <div class="path-stream-badge" id="pathBadge"></div>
-        <h2 class="step-heading" id="pathHeading"></h2>
-        <p class="step-sub" id="pathSub"></p>
-      </div>
-      <button class="change-btn" onclick="goToStep(2)">Change stream</button>
-    </div>
-
-    <div class="path-timeline" id="pathTimeline"></div>
-
-    <!-- Full map toggle -->
-    <div class="fullmap-toggle">
-      <button class="fullmap-btn" onclick="toggleFullMap(this)">
-        <span>🗺️</span> Show me all stream paths side by side
+<!-- Progress -->
+<div class="progress-bar" id="progressBar">
+<div class="progress-step">
+<div class="progress-dot active" id="dot1"></div>
+<div class="progress-line" id="line1"></div>
+</div>
+<span class="progress-label active" id="label1">Your interests</span>
+<div class="progress-step" style="margin-left:8px">
+<div class="progress-dot" id="dot2"></div>
+<div class="progress-line" id="line2"></div>
+</div>
+<span class="progress-label" id="label2">Matching streams</span>
+<div class="progress-step" style="margin-left:8px">
+<div class="progress-dot" id="dot3"></div>
+</div>
+<span class="progress-label" id="label3">Your path</span>
+</div>
+<!-- ══ STEP 1: Interests ════════════════════════ -->
+<div class="step active" id="step1">
+<p class="step-eyebrow" data-i18n="streams.progress.step1">Step 1 of 3</p>
+<h1 class="step-heading" data-i18n="streams.step1.title">What pulls you the most?</h1>
+<p class="step-sub" data-i18n="streams.step1.subtitle">Not what you are "good at" — what genuinely makes you curious. Pick the one that feels most like you.</p>
+<div class="interest-grid">
+<div class="interest-tile" data-interest="science" onclick="selectInterest(this)" style="--tile-color: var(--science)">
+<span class="tile-icon">🔬</span>
+<div class="tile-title" data-i18n="streams.interest.science.label">How and why things work</div>
+<div class="tile-desc" data-i18n="streams.interest.science.body">You enjoy understanding what's behind things — experiments, logic, cause and effect. You ask "why does this happen?"</div>
+<div class="tile-examples">
+<span class="tile-ex">experiments</span>
+<span class="tile-ex">problem solving</span>
+<span class="tile-ex">logic</span>
+<span class="tile-ex">technology</span>
+</div>
+</div>
+<div class="interest-tile" data-interest="commerce" onclick="selectInterest(this)" style="--tile-color: var(--commerce)">
+<span class="tile-icon">📊</span>
+<div class="tile-title" data-i18n="streams.interest.commerce.label">Money, business, and how the world runs</div>
+<div class="tile-desc" data-i18n="streams.interest.commerce.body">You're curious about markets, why companies succeed, how money moves. You enjoy planning and decision-making.</div>
+<div class="tile-examples">
+<span class="tile-ex">money</span>
+<span class="tile-ex">strategy</span>
+<span class="tile-ex">business</span>
+<span class="tile-ex">organising</span>
+</div>
+</div>
+<div class="interest-tile" data-interest="arts" onclick="selectInterest(this)" style="--tile-color: var(--arts)">
+<span class="tile-icon">🎨</span>
+<div class="tile-title" data-i18n="streams.interest.arts.label">People, ideas, stories, and expression</div>
+<div class="tile-desc" data-i18n="streams.interest.arts.body">You are drawn to human stories — history, cultures, writing, design, or understanding how society works.</div>
+<div class="tile-examples">
+<span class="tile-ex">writing</span>
+<span class="tile-ex">design</span>
+<span class="tile-ex">history</span>
+<span class="tile-ex">society</span>
+</div>
+</div>
+<div class="interest-tile" data-interest="mixed" onclick="selectInterest(this)" style="--tile-color: var(--voc)">
+<span class="tile-icon">🤔</span>
+<div class="tile-title" data-i18n="streams.interest.unsure.label">Honestly, I am not sure yet</div>
+<div class="tile-desc" data-i18n="streams.interest.unsure.body">That is completely fine. Many students feel this way. We will show you all your options and help you figure it out.</div>
+<div class="tile-examples">
+<span class="tile-ex">exploring</span>
+<span class="tile-ex">all options</span>
+<span class="tile-ex">undecided</span>
+</div>
+</div>
+</div>
+<div class="step-nav" data-i18n="streams.step1.cta">
+<button class="btn-next" data-i18n="streams.step1.cta" id="next1" onclick="goToStep2()">See matching streams →</button>
+</div>
+</div>
+<!-- ══ STEP 2: Streams ══════════════════════════ -->
+<div class="step" id="step2">
+<p class="step-eyebrow" data-i18n="streams.progress.step2">Step 2 of 3</p>
+<h2 class="step-heading" data-i18n="streams.step2.title" id="step2Heading">Streams that match you</h2>
+<p class="step-sub" data-i18n="streams.step2.subtitle" id="step2Sub">Based on what you told us. Pick the one you want to explore — you can always come back and try another.</p>
+<div class="streams-grid" id="streamsGrid"></div>
+<div class="step-nav">
+<button class="btn-prev" data-i18n="streams.step2.back" onclick="goToStep(1)">← Back</button>
+<button class="btn-next" data-i18n="streams.step2.cta" id="next2" onclick="goToStep3()">See my path →</button>
+</div>
+</div>
+<!-- ══ STEP 3: Path ══════════════════════════════ -->
+<div class="step" id="step3">
+<div class="path-header">
+<div>
+<div class="path-stream-badge" id="pathBadge"></div>
+<h2 class="step-heading" id="pathHeading"></h2>
+<p class="step-sub" id="pathSub"></p>
+</div>
+<button class="change-btn" data-i18n="streams.stream.change" onclick="goToStep(2)">Change stream</button>
+</div>
+<div class="path-timeline" id="pathTimeline"></div>
+<!-- Full map toggle -->
+<div class="fullmap-toggle">
+<button class="fullmap-btn" data-i18n="streams.step2.compare" onclick="toggleFullMap(this)">
+<span>🗺️</span> Show me all stream paths side by side
       </button>
-      <div class="fullmap-panel" id="fullMapPanel"></div>
-    </div>
-
-
-  </div>
-
+<div class="fullmap-panel" id="fullMapPanel"></div>
+</div>
+</div>
 </div><!-- /page -->
-
 <footer>
-  <div class="footer-logo">en<span>aasan</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="streams.html">Stream Explorer</a>
-    <a href="after12.html">After 12th</a>
-    <a href="careers.html">Career Compass</a>
-    <a href="bps.html">BPS / KPO Careers</a>
-    <a href="guide.html">Guidance Hub</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </div>
-  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+<div class="footer-logo">en<span>aasan</span></div>
+<div class="footer-links">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.streams" href="streams.html">Stream Explorer</a>
+<a data-i18n="nav.after12" href="after12.html">After 12th</a>
+<a data-i18n="nav.careers" href="careers.html">Career Compass</a>
+<a data-i18n="nav.bps" href="bps.html">BPS / KPO Careers</a>
+<a data-i18n="nav.guide" href="guide.html">Guidance Hub</a>
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.contact" href="about.html#contact">Contact</a>
+</div>
+<p class="footer-copy" data-i18n="footer.copyright">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
 </footer>
-
 <style>
 footer {
   background: var(--ink); border-top: 1px solid var(--border);
@@ -1238,7 +1216,6 @@ function toggleFullMap(btn) {
   if (isOpen) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
-
 <script src="i18n.js"></script>
 </body>
 </html>

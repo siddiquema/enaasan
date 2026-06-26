@@ -1,24 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>After 12th — enaasan</title>
-  <meta name="description" content="Entrance exams, courses, and college options after Class 12. Filter by your stream and find what's right for you." />
-  <!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="after12.page.title">After 12th — enaasan</title>
+<meta content="Entrance exams, courses, and college options after Class 12. Filter by your stream and find what's right for you." data-i18n="after12.meta.description" name="description"/>
+<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-D4QMDFL8XF');
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="lang-styles.css" />
-  <style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
     /* ── Tokens ─────────────────────────────────── */
     :root {
       --night:    #0D1B2A;
@@ -445,417 +444,369 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
-</head>
+<link href="lang-styles.css" rel="stylesheet"/></head>
 <body>
-
 <!-- ── Nav ───────────────────────────────────────── -->
 <nav>
-  <a href="index.html" class="nav-logo">en<span>aasan</span></a>
-  <a href="index.html" class="nav-back">← Back to home</a>
-
-  <div class="lang-switcher" role="group" aria-label="Select language">
-    <button class="lang-pill" data-lang="en"  aria-pressed="true"  type="button">EN</button>
-    <button class="lang-pill" data-lang="ta"  aria-pressed="false" type="button">தமிழ்</button>
-    <button class="lang-pill" data-lang="te"  aria-pressed="false" type="button">తెలుగు</button>
-    <button class="lang-pill" data-lang="hi"  aria-pressed="false" type="button">हिंदी</button>
-  </div>
-</nav>
-
+<a class="nav-logo" data-i18n="nav.brand" href="index.html">en<span>aasan</span></a>
+<a class="nav-back" data-i18n="nav.back_home" href="index.html">← Back to home</a>
+<div aria-label="Select language" class="lang-switcher" role="group">
+<button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
+</div></nav>
 <div class="page">
-
-  <!-- ── Page hero ─────────────────────────────────── -->
-  <div class="page-hero">
-    <p class="page-eyebrow">After Class 12</p>
-    <h1 class="page-heading">Boards are done.<br /><span>What are your options?</span></h1>
-    <p class="page-sub">Entrance exams, degree choices, college types — filtered by your stream. No information overload. Just what's relevant to you.</p>
-  </div>
-
-  <!-- ── Stream filter ─────────────────────────────── -->
-  <p class="filter-label">Filter by your stream</p>
-  <div class="filter-row" id="filterRow">
-    <button class="filter-btn active" style="--fc:#F2EFE9; --fc-rgb:242,239,233" data-filter="all" onclick="setFilter(this,'all')">🔭 All streams</button>
-    <button class="filter-btn" style="--fc:#4A9EFF; --fc-rgb:74,158,255" data-filter="science" onclick="setFilter(this,'science')">⚛️ Science (PCM)</button>
-    <button class="filter-btn" style="--fc:#3FC98A; --fc-rgb:63,201,138" data-filter="medical" onclick="setFilter(this,'medical')">🧬 Science (PCB)</button>
-    <button class="filter-btn" style="--fc:#F0A500; --fc-rgb:240,165,0" data-filter="commerce" onclick="setFilter(this,'commerce')">📈 Commerce</button>
-    <button class="filter-btn" style="--fc:#E07BFF; --fc-rgb:224,123,255" data-filter="arts" onclick="setFilter(this,'arts')">🎭 Arts & Humanities</button>
-    <button class="filter-btn" style="--fc:#FF8C42; --fc-rgb:255,140,66" data-filter="defence" onclick="setFilter(this,'defence')">🎖️ Defence</button>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════
+<!-- ── Page hero ─────────────────────────────────── -->
+<div class="page-hero">
+<p class="page-eyebrow" data-i18n="after12.section.badge">After Class 12</p>
+<h1 class="page-heading" data-i18n="after12.hero.title">Boards are done. What are your options?</h1>
+<p class="page-sub" data-i18n="after12.hero.body">Entrance exams, degree choices, college types — filtered by your stream. No information overload. Just what's relevant to you.</p>
+</div>
+<!-- ── Stream filter ─────────────────────────────── -->
+<p class="filter-label">Filter by your stream</p>
+<div class="filter-row" id="filterRow">
+<button class="filter-btn active" data-filter="all" data-i18n="after12.filter.all" onclick="setFilter(this,'all')" style="--fc:#F2EFE9; --fc-rgb:242,239,233">🔭 All streams</button>
+<button class="filter-btn" data-filter="science" data-i18n="after12.filter.pcm" onclick="setFilter(this,'science')" style="--fc:#4A9EFF; --fc-rgb:74,158,255">⚛️ Science (PCM)</button>
+<button class="filter-btn" data-filter="medical" data-i18n="after12.filter.pcb" onclick="setFilter(this,'medical')" style="--fc:#3FC98A; --fc-rgb:63,201,138">🧬 Science (PCB)</button>
+<button class="filter-btn" data-filter="commerce" data-i18n="after12.filter.commerce" onclick="setFilter(this,'commerce')" style="--fc:#F0A500; --fc-rgb:240,165,0">📈 Commerce</button>
+<button class="filter-btn" data-filter="arts" data-i18n="after12.filter.arts" onclick="setFilter(this,'arts')" style="--fc:#E07BFF; --fc-rgb:224,123,255">🎭 Arts &amp; Humanities</button>
+<button class="filter-btn" data-filter="defence" data-i18n="after12.filter.defence" onclick="setFilter(this,'defence')" style="--fc:#FF8C42; --fc-rgb:255,140,66">🎖️ Defence</button>
+</div>
+<!-- ═══════════════════════════════════════════════
        SECTION 1 — ENTRANCE EXAMS
   ════════════════════════════════════════════════ -->
-  <div class="section-block reveal" id="examSection">
-    <h2 class="sec-heading">Entrance exams that matter</h2>
-    <p class="sec-sub">Click any exam to see what it tests, how hard it is, and what it leads to.</p>
-
-    <div class="exams-grid" id="examsGrid"></div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════════════
+<div class="section-block reveal" id="examSection">
+<h2 class="sec-heading" data-i18n="after12.exams.title">Entrance exams that matter</h2>
+<p class="sec-sub" data-i18n="after12.exams.subtitle">Click any exam to see what it tests, how hard it is, and what it leads to.</p>
+<div class="exams-grid" id="examsGrid"></div>
+</div>
+<div class="divider"></div>
+<!-- ═══════════════════════════════════════════════
        SECTION 2 — COLLEGE TYPES
   ════════════════════════════════════════════════ -->
-  <div class="section-block reveal">
-    <h2 class="sec-heading">Understanding college types</h2>
-    <p class="sec-sub">Not all colleges are equal — but the best college for you is not always the most famous one. Here is an honest breakdown.</p>
-
-    <div class="colleges-grid">
-
-      <div class="college-card">
-        <span class="college-icon">🏛️</span>
-        <div class="college-type">IITs / IIMs / IISc / AIIMS</div>
-        <div class="college-desc">India's premier institutions. Extremely competitive, exceptional faculty, strong placements, and a lifelong alumni network.</div>
-        <div class="college-examples">
-          <span class="college-eg">IIT Bombay</span>
-          <span class="college-eg">IIT Hyderabad</span>
-          <span class="college-eg">AIIMS Delhi</span>
-          <span class="college-eg">IIM Ahmedabad</span>
-        </div>
-        <div class="college-reality good">Genuinely worth the effort if you can get in. But not getting in does not define your career.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🎓</span>
-        <div class="college-type">NITs / BITS / Top NILUs</div>
-        <div class="college-desc">National Institutes of Technology and institutions like BITS Pilani. Excellent quality, strong industry connections, often underrated compared to IITs.</div>
-        <div class="college-examples">
-          <span class="college-eg">NIT Warangal</span>
-          <span class="college-eg">NIT Trichy</span>
-          <span class="college-eg">BITS Pilani</span>
-          <span class="college-eg">NLU Delhi</span>
-        </div>
-        <div class="college-reality good">Fantastic choices. NIT Warangal placements rival many IITs. Do not dismiss these.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🏫</span>
-        <div class="college-type">Central Universities</div>
-        <div class="college-desc">Universities like Delhi University, JNU, BHU, HCU. Strong in Arts, Sciences, and Social Sciences. Admission via CUET for most courses.</div>
-        <div class="college-examples">
-          <span class="college-eg">Delhi University</span>
-          <span class="college-eg">JNU</span>
-          <span class="college-eg">HCU Hyderabad</span>
-          <span class="college-eg">BHU</span>
-        </div>
-        <div class="college-reality good">Excellent for Arts, Humanities, and Sciences. DU colleges are among India's best for non-engineering streams.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🏢</span>
-        <div class="college-type">State Universities & Colleges</div>
-        <div class="college-desc">Osmania, Andhra University, Anna University, Mumbai University — large state systems with affiliated colleges. Quality varies significantly.</div>
-        <div class="college-examples">
-          <span class="college-eg">Osmania University</span>
-          <span class="college-eg">Anna University</span>
-          <span class="college-eg">Mumbai University</span>
-        </div>
-        <div class="college-reality neutral">Quality varies. Research the specific college, not just the university. Autonomous colleges within state systems are often very good.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🏗️</span>
-        <div class="college-type">Private Deemed Universities</div>
-        <div class="college-desc">VIT, Manipal, SRM, Amity etc. Large campuses, good infrastructure, and decent placements for top students. Often have their own entrance exams.</div>
-        <div class="college-examples">
-          <span class="college-eg">VIT Vellore</span>
-          <span class="college-eg">Manipal</span>
-          <span class="college-eg">SRM Chennai</span>
-          <span class="college-eg">Christ University</span>
-        </div>
-        <div class="college-reality neutral">Good option if you don't crack JEE/NEET. Check placement records for your specific branch before paying high fees.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">⚠️</span>
-        <div class="college-type">Other Private Colleges</div>
-        <div class="college-desc">Thousands of private engineering and arts colleges across India vary widely in quality — some are excellent, many are not. Infrastructure, faculty credentials, and placement records differ significantly.</div>
-        <div class="college-examples">
-          <span class="college-eg">Research before you commit</span>
-        </div>
-        <div class="college-reality caution">Check NAAC accreditation, placement data, and faculty credentials before paying any fees. Ask to speak to current students and recent alumni — not just the admissions office.</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════════════
+<div class="section-block reveal">
+<h2 class="sec-heading" data-i18n="after12.colleges.title">Understanding college types</h2>
+<p class="sec-sub" data-i18n="after12.colleges.subtitle">Not all colleges are equal — but the best college for you is not always the most famous one. Here is an honest breakdown.</p>
+<div class="colleges-grid">
+<div class="college-card">
+<span class="college-icon">🏛️</span>
+<div class="college-type" data-i18n="after12.college.iit.title">IITs / IIMs / IISc / AIIMS</div>
+<div class="college-desc" data-i18n="after12.college.iit.body">India's premier institutions. Extremely competitive, exceptional faculty, strong placements, and a lifelong alumni network.</div>
+<div class="college-examples">
+<span class="college-eg">IIT Bombay</span>
+<span class="college-eg">IIT Hyderabad</span>
+<span class="college-eg">AIIMS Delhi</span>
+<span class="college-eg">IIM Ahmedabad</span>
+</div>
+<div class="college-reality good" data-i18n="after12.college.iit.verdict">Genuinely worth the effort if you can get in. But not getting in does not define your career.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🎓</span>
+<div class="college-type" data-i18n="after12.college.nit.title">NITs / BITS / Top NLUs</div>
+<div class="college-desc" data-i18n="after12.college.nit.body">National Institutes of Technology and institutions like BITS Pilani. Excellent quality, strong industry connections, often underrated compared to IITs.</div>
+<div class="college-examples">
+<span class="college-eg">NIT Warangal</span>
+<span class="college-eg">NIT Trichy</span>
+<span class="college-eg">BITS Pilani</span>
+<span class="college-eg">NLU Delhi</span>
+</div>
+<div class="college-reality good" data-i18n="after12.college.nit.verdict">Fantastic choices. NIT Warangal placements rival many IITs. Do not dismiss these.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🏫</span>
+<div class="college-type" data-i18n="after12.college.central.title">Central Universities</div>
+<div class="college-desc" data-i18n="after12.college.central.body">Universities like Delhi University, JNU, BHU, HCU. Strong in Arts, Sciences, and Social Sciences. Admission via CUET for most courses.</div>
+<div class="college-examples">
+<span class="college-eg">Delhi University</span>
+<span class="college-eg">JNU</span>
+<span class="college-eg">HCU Hyderabad</span>
+<span class="college-eg">BHU</span>
+</div>
+<div class="college-reality good" data-i18n="after12.college.central.verdict">Excellent for Arts, Humanities, and Sciences. DU colleges are among India's best for non-engineering streams.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🏢</span>
+<div class="college-type" data-i18n="after12.college.state.title">State Universities &amp; Colleges</div>
+<div class="college-desc" data-i18n="after12.college.state.body">Osmania, Andhra University, Anna University, Mumbai University — large state systems with affiliated colleges. Quality varies significantly.</div>
+<div class="college-examples">
+<span class="college-eg">Osmania University</span>
+<span class="college-eg">Anna University</span>
+<span class="college-eg">Mumbai University</span>
+</div>
+<div class="college-reality neutral" data-i18n="after12.college.state.verdict">Quality varies. Research the specific college, not just the university. Autonomous colleges within state systems are often very good.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🏗️</span>
+<div class="college-type" data-i18n="after12.college.private.title">Private Deemed Universities</div>
+<div class="college-desc" data-i18n="after12.college.private.body">VIT, Manipal, SRM, Amity etc. Large campuses, good infrastructure, and decent placements for top students. Often have their own entrance exams.</div>
+<div class="college-examples">
+<span class="college-eg">VIT Vellore</span>
+<span class="college-eg">Manipal</span>
+<span class="college-eg">SRM Chennai</span>
+<span class="college-eg">Christ University</span>
+</div>
+<div class="college-reality neutral" data-i18n="after12.college.private.verdict">Good option if you don't crack JEE/NEET. Check placement records for your specific branch before paying high fees.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">⚠️</span>
+<div class="college-type" data-i18n="after12.college.other.title">Other Private Colleges</div>
+<div class="college-desc" data-i18n="after12.college.other.body">Thousands of private engineering and arts colleges across India vary widely in quality — some are excellent, many are not. Infrastructure, faculty credentials, and placement records differ significantly.</div>
+<div class="college-examples">
+<span class="college-eg" data-i18n="after12.college.other.warning.title">Research before you commit</span>
+</div>
+<div class="college-reality caution" data-i18n="after12.college.other.warning.body">Check NAAC accreditation, placement data, and faculty credentials before paying any fees. Ask to speak to current students and recent alumni — not just the admissions office.</div>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+<!-- ═══════════════════════════════════════════════
        SECTION 2B — DEFENCE INSTITUTIONS
   ════════════════════════════════════════════════ -->
-  <div class="section-block reveal">
-    <h2 class="sec-heading">Defence institutions & training academies</h2>
-    <p class="sec-sub">If you clear the defence entrance exams, here is where you train and what it looks like.</p>
-
-    <div class="colleges-grid">
-
-      <div class="college-card">
-        <span class="college-icon">🪖</span>
-        <div class="college-type">National Defence Academy (NDA)</div>
-        <div class="college-desc">Located in Khadakwasla, Pune. A tri-services academy where cadets of the Army, Navy, and Air Force train together for 3 years before moving to their respective service academies.</div>
-        <div class="college-examples">
-          <span class="college-eg">Pune, Maharashtra</span>
-          <span class="college-eg">Army / Navy / Air Force</span>
-          <span class="college-eg">B.Sc / B.Tech during training</span>
-        </div>
-        <div class="college-reality good">One of the most prestigious institutions in India. NDA alumni lead India's armed forces. The 3-year training is rigorous but the fellowship and career are unmatched.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">⚓</span>
-        <div class="college-type">Indian Naval Academy (INA)</div>
-        <div class="college-desc">Located in Ezhimala, Kerala. The largest naval academy in Asia. NDA Navy cadets complete their final year here before commissioning as Sub-Lieutenants.</div>
-        <div class="college-examples">
-          <span class="college-eg">Ezhimala, Kerala</span>
-          <span class="college-eg">Indian Navy</span>
-          <span class="college-eg">B.Tech (Naval Science)</span>
-        </div>
-        <div class="college-reality good">B.Tech degree awarded by Jawaharlal Nehru University during training. Fully funded — no tuition, no hostel fees, and a stipend from day one.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">✈️</span>
-        <div class="college-type">Air Force Academy (AFA)</div>
-        <div class="college-desc">Located in Dundigal, Hyderabad. Flying training academy for IAF officer cadets. NDA Air Force branch cadets complete flying training here.</div>
-        <div class="college-examples">
-          <span class="college-eg">Dundigal, Hyderabad</span>
-          <span class="college-eg">Indian Air Force</span>
-          <span class="college-eg">Flying / Technical / Ground Duty</span>
-        </div>
-        <div class="college-reality good">For students in Telangana and AP, this is practically local. Becoming a pilot trained at AFA Dundigal is a genuinely achievable dream with the right preparation.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🎓</span>
-        <div class="college-type">Sainik Schools</div>
-        <div class="college-desc">33 Sainik Schools across India are residential schools run under the Ministry of Defence to prepare students for NDA from Class 6 onwards. Some students enter after Class 9.</div>
-        <div class="college-examples">
-          <span class="college-eg">Sainik School Korukonda (AP)</span>
-          <span class="college-eg">Sainik School Hyderabad</span>
-          <span class="college-eg">31 others across India</span>
-        </div>
-        <div class="college-reality neutral">If you are in Class 9–10 and serious about defence, consider applying to a Sainik School. They significantly improve NDA success rates and provide a structured pathway.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">🏥</span>
-        <div class="college-type">Armed Forces Medical College (AFMC)</div>
-        <div class="college-desc">Located in Pune. A premier medical college run by the Indian Army. MBBS here is fully funded and graduates serve as Army Medical Corps officers.</div>
-        <div class="college-examples">
-          <span class="college-eg">Pune, Maharashtra</span>
-          <span class="college-eg">MBBS + Army service bond</span>
-          <span class="college-eg">Admission via NEET + AFMC interview</span>
-        </div>
-        <div class="college-reality good">Excellent option for PCB students who want both medicine and a defence career. Fully funded MBBS with a stipend. Service bond of 7 years after graduation.</div>
-      </div>
-
-      <div class="college-card">
-        <span class="college-icon">⚙️</span>
-        <div class="college-type">Military College of Electronics & Mechanical Engineering</div>
-        <div class="college-desc">MCEME, Secunderabad. Where Army Technical Entry Scheme (TES) cadets earn their B.Tech while training as Army officers in the EME Corps.</div>
-        <div class="college-examples">
-          <span class="college-eg">Secunderabad, Telangana</span>
-          <span class="college-eg">B.Tech (Mechanical / Electronics)</span>
-          <span class="college-eg">Indian Army EME Corps</span>
-        </div>
-        <div class="college-reality good">Particularly relevant for TS/AP students. MCEME is in Secunderabad — TES cadets get a fully funded B.Tech and an Army commission simultaneously.</div>
-      </div>
-
-    </div>
-
-    <div class="honest-note" style="margin-top: 20px; border-radius: var(--radius); padding: 16px 18px;">
-      <strong style="color: var(--chalk);">Important for defence aspirants:</strong> Every defence entry requires a medical fitness test (SHAPE-1 standard). Vision, height, weight, and general health are assessed strictly. Get a preliminary medical check done early so you are not surprised later. Requirements vary by branch — flying branch has the most stringent vision requirements.
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════════════
+<div class="section-block reveal">
+<h2 class="sec-heading" data-i18n="after12.defence.title">Defence institutions &amp; training academies</h2>
+<p class="sec-sub" data-i18n="after12.defence.subtitle">If you clear the defence entrance exams, here is where you train and what it looks like.</p>
+<div class="colleges-grid">
+<div class="college-card">
+<span class="college-icon">🪖</span>
+<div class="college-type" data-i18n="after12.defence.nda.title">National Defence Academy (NDA)</div>
+<div class="college-desc" data-i18n="after12.defence.nda.body">Located in Khadakwasla, Pune. A tri-services academy where cadets of the Army, Navy, and Air Force train together for 3 years before moving to their respective service academies.</div>
+<div class="college-examples">
+<span class="college-eg">Pune, Maharashtra</span>
+<span class="college-eg">Army / Navy / Air Force</span>
+<span class="college-eg">B.Sc / B.Tech during training</span>
+</div>
+<div class="college-reality good" data-i18n="after12.defence.nda.verdict">One of the most prestigious institutions in India. NDA alumni lead India's armed forces. The 3-year training is rigorous but the fellowship and career are unmatched.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">⚓</span>
+<div class="college-type" data-i18n="after12.defence.ina.title">Indian Naval Academy (INA)</div>
+<div class="college-desc" data-i18n="after12.defence.ina.body">Located in Ezhimala, Kerala. The largest naval academy in Asia. NDA Navy cadets complete their final year here before commissioning as Sub-Lieutenants.</div>
+<div class="college-examples">
+<span class="college-eg">Ezhimala, Kerala</span>
+<span class="college-eg">Indian Navy</span>
+<span class="college-eg">B.Tech (Naval Science)</span>
+</div>
+<div class="college-reality good" data-i18n="after12.defence.ina.verdict">B.Tech degree awarded by Jawaharlal Nehru University during training. Fully funded — no tuition, no hostel fees, and a stipend from day one.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">✈️</span>
+<div class="college-type" data-i18n="after12.defence.afa.title">Air Force Academy (AFA)</div>
+<div class="college-desc" data-i18n="after12.defence.afa.body">Located in Dundigal, Hyderabad. Flying training academy for IAF officer cadets. NDA Air Force branch cadets complete flying training here.</div>
+<div class="college-examples">
+<span class="college-eg">Dundigal, Hyderabad</span>
+<span class="college-eg">Indian Air Force</span>
+<span class="college-eg">Flying / Technical / Ground Duty</span>
+</div>
+<div class="college-reality good" data-i18n="after12.defence.afa.verdict">For students in Telangana and AP, this is practically local. Becoming a pilot trained at AFA Dundigal is a genuinely achievable dream with the right preparation.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🎓</span>
+<div class="college-type" data-i18n="after12.defence.sainik.title">Sainik Schools</div>
+<div class="college-desc" data-i18n="after12.defence.sainik.body">33 Sainik Schools across India are residential schools run under the Ministry of Defence to prepare students for NDA from Class 6 onwards. Some students enter after Class 9.</div>
+<div class="college-examples">
+<span class="college-eg">Sainik School Korukonda (AP)</span>
+<span class="college-eg">Sainik School Hyderabad</span>
+<span class="college-eg">31 others across India</span>
+</div>
+<div class="college-reality neutral" data-i18n="after12.defence.sainik.verdict">If you are in Class 9–10 and serious about defence, consider applying to a Sainik School. They significantly improve NDA success rates and provide a structured pathway.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">🏥</span>
+<div class="college-type" data-i18n="after12.defence.afmc.title">Armed Forces Medical College (AFMC)</div>
+<div class="college-desc" data-i18n="after12.defence.afmc.body">Located in Pune. A premier medical college run by the Indian Army. MBBS here is fully funded and graduates serve as Army Medical Corps officers.</div>
+<div class="college-examples">
+<span class="college-eg">Pune, Maharashtra</span>
+<span class="college-eg">MBBS + Army service bond</span>
+<span class="college-eg">Admission via NEET + AFMC interview</span>
+</div>
+<div class="college-reality good" data-i18n="after12.defence.afmc.verdict">Excellent option for PCB students who want both medicine and a defence career. Fully funded MBBS with a stipend. Service bond of 7 years after graduation.</div>
+</div>
+<div class="college-card">
+<span class="college-icon">⚙️</span>
+<div class="college-type" data-i18n="after12.defence.mceme.title">Military College of Electronics &amp; Mechanical Engineering</div>
+<div class="college-desc" data-i18n="after12.defence.mceme.body">MCEME, Secunderabad. Where Army Technical Entry Scheme (TES) cadets earn their B.Tech while training as Army officers in the EME Corps.</div>
+<div class="college-examples">
+<span class="college-eg">Secunderabad, Telangana</span>
+<span class="college-eg">B.Tech (Mechanical / Electronics)</span>
+<span class="college-eg">Indian Army EME Corps</span>
+</div>
+<div class="college-reality good" data-i18n="after12.defence.mceme.verdict">Particularly relevant for TS/AP students. MCEME is in Secunderabad — TES cadets get a fully funded B.Tech and an Army commission simultaneously.</div>
+</div>
+</div>
+<div class="honest-note" data-i18n="after12.defence.medical_note" style="margin-top: 20px; border-radius: var(--radius); padding: 16px 18px;">Important for defence aspirants: Every defence entry requires a medical fitness test (SHAPE-1 standard). Vision, height, weight, and general health are assessed strictly. Get a preliminary medical check done early so you are not surprised later. Requirements vary by branch — flying branch has the most stringent vision requirements.</div>
+</div>
+<div class="divider"></div>
+<!-- ═══════════════════════════════════════════════
        SECTION 3 — TIMELINE
   ════════════════════════════════════════════════ -->
-  <div class="section-block reveal">
-    <h2 class="sec-heading">The Class 12 to college timeline</h2>
-    <p class="sec-sub">What happens when — so you are never caught off guard.</p>
-
-    <div class="timeline" id="timeline">
-
-      <div class="tl-item">
-        <div class="tl-dot">📚</div>
-        <div class="tl-body">
-          <div class="tl-when">Class 11 onwards</div>
-          <div class="tl-title">Start entrance exam preparation</div>
-          <div class="tl-desc">Most competitive exams (JEE, NEET, CLAT) require 1.5–2 years of preparation alongside boards. Class 11 is when this begins — not Class 12.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">JEE coaching</span>
-            <span class="tl-chip">NEET foundation</span>
-            <span class="tl-chip">CLAT reading</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">📝</div>
-        <div class="tl-body">
-          <div class="tl-when">November – January (Class 12)</div>
-          <div class="tl-title">Register for entrance exams</div>
-          <div class="tl-desc">Most exam registrations open between October and January of your Class 12 year. Missing the window means waiting a full year. Set reminders early.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">JEE Main: Nov registration</span>
-            <span class="tl-chip">NEET: Dec–Jan</span>
-            <span class="tl-chip">CLAT: Jan–Feb</span>
-            <span class="tl-chip">CUET: Mar–Apr</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">🗓️</div>
-        <div class="tl-body">
-          <div class="tl-when">January – April (Class 12)</div>
-          <div class="tl-title">Entrance exams happen</div>
-          <div class="tl-desc">JEE Main Session 1 is in January. Most other exams happen between February and May — some before boards, some after.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">JEE Main S1: Jan</span>
-            <span class="tl-chip">JEE Main S2: Apr</span>
-            <span class="tl-chip">CLAT: May</span>
-            <span class="tl-chip">NEET: May</span>
-            <span class="tl-chip">EAMCET: May</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">🏫</div>
-        <div class="tl-body">
-          <div class="tl-when">March – May</div>
-          <div class="tl-title">Class 12 Board exams</div>
-          <div class="tl-desc">CBSE, TSBIE, APBIE, and state boards hold exams between March and May. Your board marks matter for direct admissions and some entrance exam eligibility cutoffs.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">CBSE: Feb–Apr</span>
-            <span class="tl-chip">TSBIE / APBIE: Mar–Apr</span>
-            <span class="tl-chip">Maharashtra: Mar</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">📊</div>
-        <div class="tl-body">
-          <div class="tl-when">May – June</div>
-          <div class="tl-title">Results and rank cards</div>
-          <div class="tl-desc">Board results and entrance exam results/ranks come out. This is when you know what you are working with. Do not panic — there are always options at every rank.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">JEE rank: June</span>
-            <span class="tl-chip">NEET rank: June</span>
-            <span class="tl-chip">Board results: May–June</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">🏛️</div>
-        <div class="tl-body">
-          <div class="tl-when">June – August</div>
-          <div class="tl-title">Counselling and seat allotment</div>
-          <div class="tl-desc">JoSAA (for IITs/NITs), MCC (for NEET/MBBS), state counselling boards, and university admission portals open. You rank your college and branch preferences — the system allots a seat.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">JoSAA: June–July</span>
-            <span class="tl-chip">MCC NEET: July–Aug</span>
-            <span class="tl-chip">TS/AP EAMCET: July</span>
-            <span class="tl-chip">CUET admissions: July</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot">🎓</div>
-        <div class="tl-body">
-          <div class="tl-when">August – September</div>
-          <div class="tl-title">College begins</div>
-          <div class="tl-desc">Most colleges start in late July or August. Document verification, fee payment, and hostel allocation happen in this window. Keep all original certificates ready.</div>
-          <div class="tl-chips">
-            <span class="tl-chip">Document verification</span>
-            <span class="tl-chip">Fee payment deadline</span>
-            <span class="tl-chip">Hostel allocation</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════════════
+<div class="section-block reveal">
+<h2 class="sec-heading" data-i18n="after12.timeline.title">The Class 12 to college timeline</h2>
+<p class="sec-sub" data-i18n="after12.timeline.subtitle">What happens when — so you are never caught off guard.</p>
+<div class="timeline" id="timeline">
+<div class="tl-item">
+<div class="tl-dot">📚</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step1.badge">📚 Class 11 onwards</div>
+<div class="tl-title" data-i18n="after12.timeline.step1.title">Start entrance exam preparation</div>
+<div class="tl-desc" data-i18n="after12.timeline.step1.body">Most competitive exams (JEE, NEET, CLAT) require 1.5–2 years of preparation alongside boards. Class 11 is when this begins — not Class 12.</div>
+<div class="tl-chips">
+<span class="tl-chip">JEE coaching</span>
+<span class="tl-chip">NEET foundation</span>
+<span class="tl-chip">CLAT reading</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">📝</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step2.badge">📝 November – January (Class 12)</div>
+<div class="tl-title" data-i18n="after12.timeline.step2.title">Register for entrance exams</div>
+<div class="tl-desc" data-i18n="after12.timeline.step2.body">Most exam registrations open between October and January of your Class 12 year. Missing the window means waiting a full year. Set reminders early.</div>
+<div class="tl-chips">
+<span class="tl-chip">JEE Main: Nov registration</span>
+<span class="tl-chip">NEET: Dec–Jan</span>
+<span class="tl-chip">CLAT: Jan–Feb</span>
+<span class="tl-chip">CUET: Mar–Apr</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">🗓️</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step3.badge">🗓️ January – April (Class 12)</div>
+<div class="tl-title" data-i18n="after12.timeline.step3.title">Entrance exams happen</div>
+<div class="tl-desc" data-i18n="after12.timeline.step3.body">JEE Main Session 1 is in January. Most other exams happen between February and May — some before boards, some after.</div>
+<div class="tl-chips">
+<span class="tl-chip">JEE Main S1: Jan</span>
+<span class="tl-chip">JEE Main S2: Apr</span>
+<span class="tl-chip">CLAT: May</span>
+<span class="tl-chip">NEET: May</span>
+<span class="tl-chip">EAMCET: May</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">🏫</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step4.badge">🏫 March – May</div>
+<div class="tl-title" data-i18n="after12.timeline.step4.title">Class 12 Board exams</div>
+<div class="tl-desc" data-i18n="after12.timeline.step4.body">CBSE, TSBIE, APBIE, and state boards hold exams between March and May. Your board marks matter for direct admissions and some entrance exam eligibility cutoffs.</div>
+<div class="tl-chips">
+<span class="tl-chip">CBSE: Feb–Apr</span>
+<span class="tl-chip">TSBIE / APBIE: Mar–Apr</span>
+<span class="tl-chip">Maharashtra: Mar</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">📊</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step5.badge">📊 May – June</div>
+<div class="tl-title" data-i18n="after12.timeline.step5.title">Results and rank cards</div>
+<div class="tl-desc" data-i18n="after12.timeline.step5.body">Board results and entrance exam results/ranks come out. This is when you know what you are working with. Do not panic — there are always options at every rank.</div>
+<div class="tl-chips">
+<span class="tl-chip">JEE rank: June</span>
+<span class="tl-chip">NEET rank: June</span>
+<span class="tl-chip">Board results: May–June</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">🏛️</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step6.badge">🏛️ June – August</div>
+<div class="tl-title" data-i18n="after12.timeline.step6.title">Counselling and seat allotment</div>
+<div class="tl-desc" data-i18n="after12.timeline.step6.body">JoSAA (for IITs/NITs), MCC (for NEET/MBBS), state counselling boards, and university admission portals open. You rank your college and branch preferences — the system allots a seat.</div>
+<div class="tl-chips">
+<span class="tl-chip">JoSAA: June–July</span>
+<span class="tl-chip">MCC NEET: July–Aug</span>
+<span class="tl-chip">TS/AP EAMCET: July</span>
+<span class="tl-chip">CUET admissions: July</span>
+</div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot">🎓</div>
+<div class="tl-body">
+<div class="tl-when" data-i18n="after12.timeline.step7.badge">🎓 August – September</div>
+<div class="tl-title" data-i18n="after12.timeline.step7.title">College begins</div>
+<div class="tl-desc" data-i18n="after12.timeline.step7.body">Most colleges start in late July or August. Document verification, fee payment, and hostel allocation happen in this window. Keep all original certificates ready.</div>
+<div class="tl-chips">
+<span class="tl-chip">Document verification</span>
+<span class="tl-chip">Fee payment deadline</span>
+<span class="tl-chip">Hostel allocation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+<!-- ═══════════════════════════════════════════════
        SECTION 4 — PRACTICAL TIPS
   ════════════════════════════════════════════════ -->
-  <div class="section-block reveal">
-    <h2 class="sec-heading">Things nobody tells you</h2>
-    <p class="sec-sub">Practical advice from the other side of this process.</p>
-
-    <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-num">Tip 01</div>
-        <div class="tip-title">Your board percentage still matters</div>
-        <div class="tip-desc">Many entrance exams require a minimum of 75% in boards (60% for SC/ST) for eligibility. JEE, NEET, and CUET all have this clause. Do not ignore boards for entrance prep.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 02</div>
-        <div class="tip-title">A gap year is a valid choice</div>
-        <div class="tip-desc">Many toppers in JEE and NEET are drop year students. One focused year of preparation often makes a significant difference in rank. It is not failure — it is strategy.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 03</div>
-        <div class="tip-title">Branch matters more than college rank</div>
-        <div class="tip-desc">A Computer Science seat at NIT Warangal often leads to better outcomes than a less-demanded branch at a lower-ranked IIT. Research placement data by branch, not just by college.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 04</div>
-        <div class="tip-title">State quota seats are a real advantage</div>
-        <div class="tip-desc">85% of NIT seats and most MBBS seats in state medical colleges are reserved for students who studied in that state. This significantly lowers the effective competition for you.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 05</div>
-        <div class="tip-title">Multiple exams, multiple chances</div>
-        <div class="tip-desc">You are not limited to one exam. A PCM student can sit for JEE Main, BITSAT, VITEEE, and TS EAMCET in the same year. Apply broadly and give yourself options.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 06</div>
-        <div class="tip-title">Private college fees need scrutiny</div>
-        <div class="tip-desc">Private engineering colleges can cost ₹8–20 lakhs for 4 years. Always compare this against realistic placement salaries for that specific branch at that specific college — not the brochure promises.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 07</div>
-        <div class="tip-title">Defence is open to all streams — not just PCM</div>
-        <div class="tip-desc">NDA Army wing accepts students from any stream — Commerce and Arts students can and do become Army officers. Only the Navy and Air Force wings require PCM. Do not rule out defence because of your stream choice.</div>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 08</div>
-        <div class="tip-title">SSB interview needs separate preparation</div>
-        <div class="tip-desc">The Services Selection Board (SSB) interview for all defence entries is a 5-day psychological and leadership assessment. Written exam clearing alone is not enough — start SSB preparation at least 6 months before your interview date.</div>
-      </div>
-    </div>
-  </div>
-
+<div class="section-block reveal">
+<h2 class="sec-heading" data-i18n="after12.tips.title">Things nobody tells you</h2>
+<p class="sec-sub" data-i18n="after12.tips.subtitle">Practical advice from the other side of this process.</p>
+<div class="tips-grid">
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip1.num">Tip 01</div>
+<div class="tip-title" data-i18n="after12.tip1.title">Your board percentage still matters</div>
+<div class="tip-desc" data-i18n="after12.tip1.body">Many entrance exams require a minimum of 75% in boards (60% for SC/ST) for eligibility. JEE, NEET, and CUET all have this clause. Do not ignore boards for entrance prep.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip2.num">Tip 02</div>
+<div class="tip-title" data-i18n="after12.tip2.title">A gap year is a valid choice</div>
+<div class="tip-desc" data-i18n="after12.tip2.body">Many toppers in JEE and NEET are drop year students. One focused year of preparation often makes a significant difference in rank. It is not failure — it is strategy.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip3.num">Tip 03</div>
+<div class="tip-title" data-i18n="after12.tip3.title">Branch matters more than college rank</div>
+<div class="tip-desc" data-i18n="after12.tip3.body">A Computer Science seat at NIT Warangal often leads to better outcomes than a less-demanded branch at a lower-ranked IIT. Research placement data by branch, not just by college.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip4.num">Tip 04</div>
+<div class="tip-title" data-i18n="after12.tip4.title">State quota seats are a real advantage</div>
+<div class="tip-desc" data-i18n="after12.tip4.body">85% of NIT seats and most MBBS seats in state medical colleges are reserved for students who studied in that state. This significantly lowers the effective competition for you.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip5.num">Tip 05</div>
+<div class="tip-title" data-i18n="after12.tip5.title">Multiple exams, multiple chances</div>
+<div class="tip-desc" data-i18n="after12.tip5.body">You are not limited to one exam. A PCM student can sit for JEE Main, BITSAT, VITEEE, and TS EAMCET in the same year. Apply broadly and give yourself options.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip6.num">Tip 06</div>
+<div class="tip-title" data-i18n="after12.tip6.title">Private college fees need scrutiny</div>
+<div class="tip-desc" data-i18n="after12.tip6.body">Private engineering colleges can cost ₹8–20 lakhs for 4 years. Always compare this against realistic placement salaries for that specific branch at that specific college — not the brochure promises.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip7.num">Tip 07</div>
+<div class="tip-title" data-i18n="after12.tip7.title">Defence is open to all streams — not just PCM</div>
+<div class="tip-desc" data-i18n="after12.tip7.body">NDA Army wing accepts students from any stream — Commerce and Arts students can and do become Army officers. Only the Navy and Air Force wings require PCM. Do not rule out defence because of your stream choice.</div>
+</div>
+<div class="tip-card">
+<div class="tip-num" data-i18n="after12.tip8.num">Tip 08</div>
+<div class="tip-title" data-i18n="after12.tip8.title">SSB interview needs separate preparation</div>
+<div class="tip-desc" data-i18n="after12.tip8.body">The Services Selection Board (SSB) interview for all defence entries is a 5-day psychological and leadership assessment. Written exam clearing alone is not enough — start SSB preparation at least 6 months before your interview date.</div>
+</div>
+</div>
+</div>
 </div><!-- /page -->
-
 <!-- ── Footer ─────────────────────────────────────── -->
 <footer>
-  <div class="footer-logo">en<span>aasan</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="streams.html">Stream Explorer</a>
-    <a href="after12.html">After 12th</a>
-    <a href="careers.html">Career Compass</a>
-    <a href="bps.html">BPS / KPO Careers</a>
-    <a href="guide.html">Guidance Hub</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </div>
-  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+<div class="footer-logo">en<span>aasan</span></div>
+<div class="footer-links">
+<a data-i18n="nav.home" href="index.html">Home</a>
+<a data-i18n="nav.streams" href="streams.html">Stream Explorer</a>
+<a data-i18n="nav.after12" href="after12.html">After 12th</a>
+<a data-i18n="nav.careers" href="careers.html">Career Compass</a>
+<a data-i18n="nav.bps" href="bps.html">BPS / KPO Careers</a>
+<a data-i18n="nav.guide" href="guide.html">Guidance Hub</a>
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.contact" href="about.html#contact">Contact</a>
+</div>
+<p class="footer-copy" data-i18n="footer.copyright">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
 </footer>
-
 <script>
 /* ══════════════════════════════════════════════
    EXAM DATA
@@ -1236,7 +1187,5 @@ document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 renderExams();
 initTimeline();
 </script>
-
-<script src="i18n.js"></script>
-</body>
+<script defer="" src="i18n.js"></script></body>
 </html>
