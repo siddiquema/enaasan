@@ -74,3 +74,27 @@
 [lang="ta"], .lang-ta { font-family: 'Noto Sans Tamil', sans-serif; }
 [lang="te"], .lang-te { font-family: 'Noto Sans Telugu', sans-serif; }
 [lang="hi"], .lang-hi { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+/* #39 fix v2 — two-row nav on mobile so all lang pills always visible */
+@media (max-width: 560px) {
+  nav {
+    flex-wrap: wrap !important;
+    padding: 10px 16px !important;
+    gap: 6px !important;
+  }
+  .nav-row1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lang-switcher {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+  }
+  .lang-pill {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.55rem !important;
+  }
+}

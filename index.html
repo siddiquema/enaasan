@@ -77,11 +77,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 28px;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 28px;
       background: rgba(13,27,42,0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-row1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    @media (max-width: 560px) {
+      nav { padding: 10px 16px; gap: 6px; }
+      .lang-switcher { width: 100%; justify-content: flex-start; gap: 6px; }
+      .lang-pill { font-size: 0.75rem; padding: 0.25rem 0.55rem; }
+      .nav-cta { font-size: 0.78rem; padding: 8px 14px; }
     }
     .nav-logo {
       font-family: 'Syne', sans-serif;
@@ -338,7 +352,7 @@
       .nav-cta { font-size: 0.72rem; padding: 7px 12px; }
       .lang-pill { font-size: 0.68rem; padding: 0.2rem 0.4rem; }
       .lang-switcher { gap: 0.18rem; }
-      .hero { padding: 100px 20px 60px; }
+      .hero { padding: 130px 20px 60px; }
       .section { padding: 60px 20px; }
       .paths-grid { gap: 14px; }
       .path-card { padding: 26px 22px; }
@@ -370,10 +384,12 @@
 <body>
 <!-- ── Nav ──────────────────────────────────────────────── -->
 <nav>
+<div class="nav-row1">
 <div class="nav-logo">en<span>aasan</span></div>
 <button class="nav-cta" data-i18n="home.hero.find" onclick="window.location.href='streams.html'">
       Find your path →
     </button>
+</div>
 <div aria-label="Select language" class="lang-switcher" role="group">
 <button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
 <button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
