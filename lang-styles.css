@@ -63,6 +63,12 @@
   outline-offset: 2px;
 }
 
+/* #39 — ensure all 4 lang pills visible on small mobile screens */
+@media (max-width: 640px) {
+  .lang-switcher { gap: 0.18rem; }
+  .lang-pill { font-size: 0.68rem; padding: 0.2rem 0.4rem; }
+}
+
 /* ── Dark-navy page background assumed; adjust if your bg differs ── */
 
 [lang="ta"], .lang-ta { font-family: 'Noto Sans Tamil', sans-serif; }

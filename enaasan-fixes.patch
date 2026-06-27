@@ -1,0 +1,196 @@
+From 867c796c5271dcd2c6b23822a4b43ecea4ed5e6b Mon Sep 17 00:00:00 2001
+From: Siddique Ahamed <siddique@enaasan.online>
+Date: Sat, 27 Jun 2026 20:38:47 +0000
+Subject: [PATCH] =?UTF-8?q?Fix=20#15=20#24=20=E2=80=94=20mist=20contrast?=
+ =?UTF-8?q?=20across=207=20pages=20|=20Fix=20#41=20=E2=80=94=20full=20card?=
+ =?UTF-8?q?=20clickable=20|=20Fix=20#39=20=E2=80=94=20Hindi=20pill=20visib?=
+ =?UTF-8?q?le=20on=20mobile?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ about.html      |  2 +-
+ after12.html    |  2 +-
+ bps.html        |  2 +-
+ careers.html    |  2 +-
+ guide.html      |  2 +-
+ index.html      | 21 ++++++++++++++++++---
+ lang-styles.css |  6 ++++++
+ streams.html    |  2 +-
+ 8 files changed, 30 insertions(+), 9 deletions(-)
+
+diff --git a/about.html b/about.html
+index f728af8..a09a984 100644
+--- a/about.html
++++ b/about.html
+@@ -18,7 +18,7 @@
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+ <link href="lang-styles.css" rel="stylesheet"/>
+ <style>
+-    :root { --night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#8DA4BA;--faint:#4A6580;--radius:14px;--radius-lg:22px; }
++    :root { --night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#A8C0D4;--faint:#4A6580;--radius:14px;--radius-lg:22px; }
+     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+     html{scroll-behavior:smooth}
+     body{background:var(--night);color:var(--chalk);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+diff --git a/after12.html b/after12.html
+index 6f640cb..bf232f3 100644
+--- a/after12.html
++++ b/after12.html
+@@ -27,7 +27,7 @@
+       --gold:     #F0A500;
+       --glow:     #FFD166;
+       --chalk:    #F2EFE9;
+-      --mist:     #8DA4BA;
++      --mist:     #A8C0D4;
+       --faint:    #4A6580;
+       --science:  #4A9EFF;
+       --medical:  #3FC98A;
+diff --git a/bps.html b/bps.html
+index e1ef32a..9241faf 100644
+--- a/bps.html
++++ b/bps.html
+@@ -26,7 +26,7 @@
+       --gold:     #F0A500;
+       --glow:     #FFD166;
+       --chalk:    #F2EFE9;
+-      --mist:     #8DA4BA;
++      --mist:     #A8C0D4;
+       --faint:    #4A6580;
+       --bps:      #3FC98A;
+       --kpo:      #4A9EFF;
+diff --git a/careers.html b/careers.html
+index 877cb79..7301185 100644
+--- a/careers.html
++++ b/careers.html
+@@ -26,7 +26,7 @@
+       --gold:     #F0A500;
+       --glow:     #FFD166;
+       --chalk:    #F2EFE9;
+-      --mist:     #8DA4BA;
++      --mist:     #A8C0D4;
+       --faint:    #4A6580;
+       --tech:     #4A9EFF;
+       --finance:  #3FC98A;
+diff --git a/guide.html b/guide.html
+index f4edaa0..5ca1c1a 100644
+--- a/guide.html
++++ b/guide.html
+@@ -18,7 +18,7 @@
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+ <link href="lang-styles.css" rel="stylesheet"/>
+ <style>
+-    :root{--night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#8DA4BA;--faint:#4A6580;--radius:14px;--radius-lg:22px}
++    :root{--night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#A8C0D4;--faint:#4A6580;--radius:14px;--radius-lg:22px}
+     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+     html{scroll-behavior:smooth}
+     body{background:var(--night);color:var(--chalk);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+diff --git a/index.html b/index.html
+index 631db23..a04a682 100644
+--- a/index.html
++++ b/index.html
+@@ -28,7 +28,7 @@
+       --gold:    #F0A500;
+       --glow:    #FFD166;
+       --chalk:   #F2EFE9;
+-      --mist:    #8DA4BA;
++      --mist:    #A8C0D4;
+       --faint:   #4A6580;
+       --radius:  14px;
+       --radius-lg: 22px;
+@@ -260,8 +260,17 @@
+       font-weight: 600;
+       font-size: 0.88rem;
+       transition: gap 0.18s;
++      position: relative;
++      z-index: 1;
+     }
+     .path-card:hover .path-link { gap: 12px; }
++    /* #41 — full card clickable via overlay anchor */
++    .card-link-overlay {
++      position: absolute;
++      inset: 0;
++      z-index: 0;
++      border-radius: var(--radius-lg);
++    }
+ 
+     .hiw-section { background: var(--ink); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+     .hiw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 48px; }
+@@ -325,8 +334,10 @@
+       .hiw-step:nth-child(even) { border-right: none; }
+     }
+     @media (max-width: 640px) {
+-      nav { padding: 14px 18px; }
+-      .nav-cta { font-size: 0.78rem; padding: 8px 16px; }
++      nav { padding: 14px 18px; gap: 6px; }
++      .nav-cta { font-size: 0.72rem; padding: 7px 12px; }
++      .lang-pill { font-size: 0.68rem; padding: 0.2rem 0.4rem; }
++      .lang-switcher { gap: 0.18rem; }
+       .hero { padding: 100px 20px 60px; }
+       .section { padding: 60px 20px; }
+       .paths-grid { gap: 14px; }
+@@ -392,6 +403,7 @@
+ <p class="section-sub" data-i18n="home.section.pick.subtitle">No forms. No sign-up. Just start where you are.</p>
+ <div class="paths-grid">
+ <div class="path-card" style="animation-delay: 0.1s">
++<a class="card-link-overlay" href="streams.html" aria-hidden="true" tabindex="-1"></a>
+ <span class="path-icon">🎯</span>
+ <span class="tag path-grade" data-i18n="home.card.streams.badge">🎯 Grade 10 · Board exams done</span>
+ <h3 class="path-title" data-i18n="home.card.streams.title">Which stream should I choose?</h3>
+@@ -406,6 +418,7 @@
+ <a class="path-link" data-i18n="home.card.streams.cta" href="streams.html">Explore streams <span>→</span></a>
+ </div>
+ <div class="path-card" style="animation-delay: 0.22s">
++<a class="card-link-overlay" href="after12.html" aria-hidden="true" tabindex="-1"></a>
+ <span class="path-icon">🗺️</span>
+ <span class="tag path-grade" data-i18n="home.card.after12.badge">🗺️ Grade 11–12 · Inter students</span>
+ <h3 class="path-title" data-i18n="home.card.after12.title">What can I do after 12th?</h3>
+@@ -420,6 +433,7 @@
+ <a class="path-link" data-i18n="home.card.after12.cta" href="after12.html">Plan after 12th <span>→</span></a>
+ </div>
+ <div class="path-card" style="animation-delay: 0.34s">
++<a class="card-link-overlay" href="careers.html" aria-hidden="true" tabindex="-1"></a>
+ <span class="path-icon">💼</span>
+ <span class="tag path-grade" data-i18n="home.card.careers.badge">💼 College / Early career</span>
+ <h3 class="path-title" data-i18n="home.card.careers.title">What skills does the job market actually want?</h3>
+@@ -434,6 +448,7 @@
+ <a class="path-link" data-i18n="home.card.careers.cta" href="careers.html">See job skill maps <span>→</span></a>
+ </div>
+ <div class="path-card" style="animation-delay: 0.46s">
++<a class="card-link-overlay" href="guide.html" aria-hidden="true" tabindex="-1"></a>
+ <span class="path-icon">👨‍👩‍👧</span>
+ <span class="tag path-grade" data-i18n="home.card.guide.badge">👨‍👩‍👧 Parents · Counsellors · Coordinators</span>
+ <h3 class="path-title" data-i18n="home.card.guide.title">Supporting the young people in your life</h3>
+diff --git a/lang-styles.css b/lang-styles.css
+index 4a0368a..dc157aa 100644
+--- a/lang-styles.css
++++ b/lang-styles.css
+@@ -63,6 +63,12 @@
+   outline-offset: 2px;
+ }
+ 
++/* #39 — ensure all 4 lang pills visible on small mobile screens */
++@media (max-width: 640px) {
++  .lang-switcher { gap: 0.18rem; }
++  .lang-pill { font-size: 0.68rem; padding: 0.2rem 0.4rem; }
++}
++
+ /* ── Dark-navy page background assumed; adjust if your bg differs ── */
+ 
+ [lang="ta"], .lang-ta { font-family: 'Noto Sans Tamil', sans-serif; }
+diff --git a/streams.html b/streams.html
+index b48b33b..e8d2afe 100644
+--- a/streams.html
++++ b/streams.html
+@@ -28,7 +28,7 @@
+       --gold:      #F0A500;
+       --glow:      #FFD166;
+       --chalk:     #F2EFE9;
+-      --mist:      #8DA4BA;
++      --mist:      #A8C0D4;
+       --faint:     #4A6580;
+       --science:   #4A9EFF;
+       --commerce:  #3FC98A;
+-- 
+2.43.0
+
