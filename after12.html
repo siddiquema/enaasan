@@ -1083,6 +1083,112 @@ const EXAMS = [
 ];
 
 /* ══════════════════════════════════════════════
+   i18n HELPERS
+══════════════════════════════════════════════ */
+function getLang() {
+  return localStorage.getItem('enaasan_lang') || 'en';
+}
+
+/* Difficulty label translations */
+const DIFFICULTY_T = {
+  ta: {
+    'High': 'அதிகம்',
+    'Very High': 'மிக அதிகம்',
+    'Moderate': 'மிதமான',
+    'Moderate–High': 'மிதம்–அதிகம்',
+    'Merit-based (Class 12 PCM)': 'தகுதி அடிப்படையில் (12-ம் வகுப்பு PCM)',
+  },
+  te: {
+    'High': 'అధికం',
+    'Very High': 'చాలా అధికం',
+    'Moderate': 'మధ్యమం',
+    'Moderate–High': 'మధ్యమ–అధికం',
+    'Merit-based (Class 12 PCM)': 'మెరిట్ ఆధారంగా (12వ తరగతి PCM)',
+  },
+  hi: {
+    'High': 'उच्च',
+    'Very High': 'बहुत उच्च',
+    'Moderate': 'मध्यम',
+    'Moderate–High': 'मध्यम–उच्च',
+    'Merit-based (Class 12 PCM)': 'मेरिट आधारित (12वीं PCM)',
+  },
+};
+
+/*
+  Per-exam translations for tagline, seats, note.
+  IMPORTANT: Fill in ta/te/hi strings before launching multilingual.
+  Coordinate with: Tamil — family member (senior teacher), Telugu — Vijaya,
+  Hindi — Shafi (Delhi). Empty string = fall back to English automatically.
+*/
+const EXAM_T = {
+  ta: {
+    'JEE Main':               { tagline: '', seats: '', note: '' },
+    'JEE Advanced':           { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET':         { tagline: '', seats: '', note: '' },
+    'BITSAT':                 { tagline: '', seats: '', note: '' },
+    'NEET-UG':                { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET (BiPC)':  { tagline: '', seats: '', note: '' },
+    'CUET':                   { tagline: '', seats: '', note: '' },
+    'CLAT':                   { tagline: '', seats: '', note: '' },
+    'NID / UCEED / NIFT':     { tagline: '', seats: '', note: '' },
+    'CA Foundation':          { tagline: '', seats: '', note: '' },
+    'NDA Exam':               { tagline: '', seats: '', note: '' },
+    'TES / Army Technical Entry': { tagline: '', seats: '', note: '' },
+    'Indian Coast Guard':     { tagline: '', seats: '', note: '' },
+    'AFCAT':                  { tagline: '', seats: '', note: '' },
+    'IPM Aptitude Test':      { tagline: '', seats: '', note: '' },
+  },
+  te: {
+    'JEE Main':               { tagline: '', seats: '', note: '' },
+    'JEE Advanced':           { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET':         { tagline: '', seats: '', note: '' },
+    'BITSAT':                 { tagline: '', seats: '', note: '' },
+    'NEET-UG':                { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET (BiPC)':  { tagline: '', seats: '', note: '' },
+    'CUET':                   { tagline: '', seats: '', note: '' },
+    'CLAT':                   { tagline: '', seats: '', note: '' },
+    'NID / UCEED / NIFT':     { tagline: '', seats: '', note: '' },
+    'CA Foundation':          { tagline: '', seats: '', note: '' },
+    'NDA Exam':               { tagline: '', seats: '', note: '' },
+    'TES / Army Technical Entry': { tagline: '', seats: '', note: '' },
+    'Indian Coast Guard':     { tagline: '', seats: '', note: '' },
+    'AFCAT':                  { tagline: '', seats: '', note: '' },
+    'IPM Aptitude Test':      { tagline: '', seats: '', note: '' },
+  },
+  hi: {
+    'JEE Main':               { tagline: '', seats: '', note: '' },
+    'JEE Advanced':           { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET':         { tagline: '', seats: '', note: '' },
+    'BITSAT':                 { tagline: '', seats: '', note: '' },
+    'NEET-UG':                { tagline: '', seats: '', note: '' },
+    'TS / AP EAMCET (BiPC)':  { tagline: '', seats: '', note: '' },
+    'CUET':                   { tagline: '', seats: '', note: '' },
+    'CLAT':                   { tagline: '', seats: '', note: '' },
+    'NID / UCEED / NIFT':     { tagline: '', seats: '', note: '' },
+    'CA Foundation':          { tagline: '', seats: '', note: '' },
+    'NDA Exam':               { tagline: '', seats: '', note: '' },
+    'TES / Army Technical Entry': { tagline: '', seats: '', note: '' },
+    'Indian Coast Guard':     { tagline: '', seats: '', note: '' },
+    'AFCAT':                  { tagline: '', seats: '', note: '' },
+    'IPM Aptitude Test':      { tagline: '', seats: '', note: '' },
+  },
+};
+
+function getExamT(rawExam) {
+  const lang = getLang();
+  if (lang === 'en') return rawExam;
+  const lt = EXAM_T[lang] && EXAM_T[lang][rawExam.name];
+  const diffT = DIFFICULTY_T[lang] && DIFFICULTY_T[lang][rawExam.difficulty];
+  return {
+    ...rawExam,
+    tagline:    (lt && lt.tagline)  || rawExam.tagline,
+    seats:      (lt && lt.seats)    || rawExam.seats,
+    note:       (lt && lt.note)     || rawExam.note,
+    difficulty: diffT               || rawExam.difficulty,
+  };
+}
+
+/* ══════════════════════════════════════════════
    FILTER & RENDER
 ══════════════════════════════════════════════ */
 let activeFilter = 'all';
@@ -1103,7 +1209,8 @@ function renderExams() {
     : EXAMS.filter(e => e.streams.includes(activeFilter) && !e.streams.every(s => s === 'defence'));
 
   grid.innerHTML = '';
-  filtered.forEach((exam, idx) => {
+  filtered.forEach((rawExam, idx) => {
+    const exam = getExamT(rawExam);
     const card = document.createElement('div');
     card.className = 'exam-card';
     card.style.setProperty('--ec', exam.color);
@@ -1178,6 +1285,13 @@ const revealIO = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+/* ══════════════════════════════════════════════
+   LANG CHANGE — re-render cards
+══════════════════════════════════════════════ */
+document.addEventListener('langchange', function() {
+  renderExams();
+});
 
 /* ══════════════════════════════════════════════
    INIT
