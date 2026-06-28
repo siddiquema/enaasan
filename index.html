@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="lang-styles.css" rel="stylesheet"/>
+<link href="css/lang-styles.css" rel="stylesheet"/>
 <style>
     /* ── Tokens ─────────────────────────────────────────── */
     :root {
@@ -276,6 +276,7 @@
       transition: gap 0.18s;
       position: relative;
       z-index: 1;
+      white-space: nowrap;
     }
     .path-card:hover .path-link { gap: 12px; }
     /* #41 — full card clickable via overlay anchor */
@@ -400,11 +401,11 @@
 <!-- ── Hero ─────────────────────────────────────────────── -->
 <section class="hero">
 <div class="stars" id="stars"></div>
-<div class="hero-eyebrow" data-i18n="home.hero.tagline">
+<div class="hero-eyebrow">
 <span class="tag" data-i18n="home.hero.tagline">Career guidance for Indian students</span>
 </div>
-<h1 class="hero-headline" data-i18n="home.hero.title">
-      Whatever stage you are at —<br/>
+<h1 class="hero-headline">
+<span data-i18n="home.hero.title">Whatever stage you are at —</span><br/>
 <span class="accent">what comes next?</span>
 </h1>
 <p class="hero-sub" data-i18n="home.hero.body">
@@ -431,7 +432,7 @@
 <span class="path-topic">Arts / Humanities</span>
 <span class="path-topic">Vocational</span>
 </div>
-<a class="path-link" data-i18n="home.card.streams.cta" href="streams.html">Explore streams <span>→</span></a>
+<a class="path-link" href="streams.html"><span data-i18n="home.card.streams.cta">Explore streams</span> <span>→</span></a>
 </div>
 <div class="path-card" style="animation-delay: 0.22s">
 <a class="card-link-overlay" href="after12.html" aria-hidden="true" tabindex="-1"></a>
@@ -446,7 +447,7 @@
 <span class="path-topic">Design / NID</span>
 <span class="path-topic">CA / CS</span>
 </div>
-<a class="path-link" data-i18n="home.card.after12.cta" href="after12.html">Plan after 12th <span>→</span></a>
+<a class="path-link" href="after12.html"><span data-i18n="home.card.after12.cta">Plan after 12th</span> <span>→</span></a>
 </div>
 <div class="path-card" style="animation-delay: 0.34s">
 <a class="card-link-overlay" href="careers.html" aria-hidden="true" tabindex="-1"></a>
@@ -461,7 +462,7 @@
 <span class="path-topic">Healthcare</span>
 <span class="path-topic">Creative</span>
 </div>
-<a class="path-link" data-i18n="home.card.careers.cta" href="careers.html">See job skill maps <span>→</span></a>
+<a class="path-link" href="careers.html"><span data-i18n="home.card.careers.cta">See job skill maps</span> <span>→</span></a>
 </div>
 <div class="path-card" style="animation-delay: 0.46s">
 <a class="card-link-overlay" href="guide.html" aria-hidden="true" tabindex="-1"></a>
@@ -474,7 +475,7 @@
 <span class="path-topic">Counsellors</span>
 <span class="path-topic">Coordinators</span>
 </div>
-<a class="path-link" data-i18n="home.card.guide.cta" href="guide.html">Go to guidance hub <span>→</span></a>
+<a class="path-link" href="guide.html"><span data-i18n="home.card.guide.cta">Go to guidance hub</span> <span>→</span></a>
 </div>
 </div>
 </section>
@@ -586,6 +587,6 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal, .path-card').forEach(el => io.observe(el));
   </script>
-<script src="i18n.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

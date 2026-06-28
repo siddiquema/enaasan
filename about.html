@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="lang-styles.css" rel="stylesheet"/>
+<link href="css/lang-styles.css" rel="stylesheet"/>
 <style>
     :root { --night:#0D1B2A;--ink:#14273A;--card:#192F44;--border:#1E3A52;--gold:#F0A500;--glow:#FFD166;--chalk:#F2EFE9;--mist:#A8C0D4;--faint:#4A6580;--radius:14px;--radius-lg:22px; }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -125,9 +125,9 @@
 <div class="page">
 <div class="about-hero">
 <p class="hero-eyebrow" data-i18n="about.section.badge">About enaasan</p>
-<h1 class="hero-heading" data-i18n="about.hero.title">Built for the student<br/>nobody <span>guided.</span></h1>
-<p class="hero-lead" data-i18n="about.hero.body">
-      Every year, millions of Indian students make one of the most consequential decisions of their lives — which stream, which exam, which college — with <strong>almost no reliable guidance.</strong> Their parents went through a different system. Their teachers are overwhelmed. The internet gives them coaching advertisements, not honest answers.<br/><br/>
+<h1 class="hero-heading"><span data-i18n="about.hero.title">Built for the student</span><br/>nobody <span>guided.</span></h1>
+<p class="hero-lead">
+<span data-i18n="about.hero.body">Every year, millions of Indian students make one of the most consequential decisions of their lives — which stream, which exam, which college — with almost no reliable guidance. Their parents went through a different system. Their teachers are overwhelmed. The internet gives them coaching advertisements, not honest answers.</span><br/><br/>
       enaasan exists to change that.
     </p>
 </div>
@@ -148,7 +148,7 @@
 <p class="prose-eyebrow">Honest about what we are</p>
 <h2 class="prose-heading" data-i18n="about.honest.title">A thinking tool. Not a counsellor. Not a coaching institute.</h2>
 <div class="prose-body">
-<p data-i18n="about.honest.body">enaasan is a guide — not a decision-maker. It gives you information, context, and honest perspective so that <em>you</em> can make a more informed choice. It does not tell you what to do with your life.</p>
+<p data-i18n="about.honest.body">enaasan is a guide — not a decision-maker. It gives you information, context, and honest perspective so that you can make a more informed choice. It does not tell you what to do with your life.</p>
 </div>
 <div class="isnot-grid">
 <div class="isnot-card is-card">
@@ -310,6 +310,6 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.prose-section').forEach(el => io.observe(el));
 </script>
-<script src="i18n.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

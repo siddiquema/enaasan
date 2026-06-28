@@ -74,7 +74,7 @@
     .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
 
     /* ── Page shell ──────────────────────────────── */
-    .page { max-width: 960px; margin: 0 auto; padding: 100px 24px 80px; }
+    .page { max-width: 960px; margin: 0 auto; padding: 120px 24px 80px; }
 
     /* ── Page hero ───────────────────────────────── */
     .page-hero { margin-bottom: 52px; }
@@ -423,7 +423,7 @@
     /* ── Responsive ──────────────────────────────── */
     @media (max-width: 640px) {
       nav { padding: 14px 18px; }
-      .page { padding: 88px 18px 60px; }
+      .page { padding: 110px 18px 60px; }
       .exams-grid, .colleges-grid, .tips-grid { grid-template-columns: 1fr; }
       .filter-btn { font-size: 0.82rem; padding: 8px 16px; }
     }
@@ -444,7 +444,7 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
-<link href="lang-styles.css" rel="stylesheet"/></head>
+<link href="css/lang-styles.css" rel="stylesheet"/></head>
 <body>
 <!-- ── Nav ───────────────────────────────────────── -->
 <nav>
@@ -1185,5 +1185,5 @@ document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 renderExams();
 initTimeline();
 </script>
-<script defer="" src="i18n.js"></script></body>
+<script defer="" src="js/i18n.js"></script></body>
 </html>

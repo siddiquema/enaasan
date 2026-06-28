@@ -1,0 +1,100 @@
+/* ══════════════════════════════════════════════════════
+   lang-styles-snippet.css — enaasan.online
+   Paste into <head> BEFORE your existing stylesheet,
+   or append to it.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Google Fonts: Noto Sans for Indic scripts ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap');
+
+
+/* ── Google Fonts: Noto Sans for Indic scripts ── */
+
+/* ── Per-language body font ── */
+:lang(ta) { font-family: 'Noto Sans Tamil', sans-serif; }
+:lang(te) { font-family: 'Noto Sans Telugu', sans-serif; }
+:lang(hi) { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+/* ── Switcher wrapper ── */
+.lang-switcher {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.nav-logo, .nav-logo span 
+{
+  font-family: 'Syne', sans-serif !important;
+}
+/* ── Individual pill ── */
+.lang-pill {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.45); /* gold, 45% opacity */
+  color: rgba(212, 175, 55, 0.75);            /* muted gold */
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.lang-pill:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.75);
+  color: #d4af37;
+}
+
+/* Active / selected state */
+.lang-pill.active,
+.lang-pill[aria-pressed="true"] {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+/* Focus ring — keyboard accessibility */
+.lang-pill:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* #39 — ensure all 4 lang pills visible on small mobile screens */
+@media (max-width: 640px) {
+  .lang-switcher { gap: 0.18rem; }
+  .lang-pill { font-size: 0.68rem; padding: 0.2rem 0.4rem; }
+}
+
+/* ── Dark-navy page background assumed; adjust if your bg differs ── */
+
+[lang="ta"], .lang-ta { font-family: 'Noto Sans Tamil', sans-serif; }
+[lang="te"], .lang-te { font-family: 'Noto Sans Telugu', sans-serif; }
+[lang="hi"], .lang-hi { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+/* #39 fix v2 — two-row nav on mobile so all lang pills always visible */
+@media (max-width: 560px) {
+  nav {
+    flex-wrap: wrap !important;
+    padding: 10px 16px !important;
+    gap: 6px !important;
+  }
+  .nav-row1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lang-switcher {
+    width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+  }
+  .lang-pill {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.55rem !important;
+  }
+}
