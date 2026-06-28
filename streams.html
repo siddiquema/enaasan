@@ -980,6 +980,233 @@ const STREAMS = {
   }
 };
 
+/* ═══════════════════════════════════════════════════
+   i18n HELPERS
+═══════════════════════════════════════════════════ */
+function getLang() {
+  return localStorage.getItem('enaasan_lang') || 'en';
+}
+
+/*
+  INTEREST_LABELS translations.
+  Coordinate with reviewers before going live:
+    Tamil — family member (senior teacher)
+    Telugu — Vijaya
+    Hindi — Shafi (Delhi)
+  Empty string = falls back to English automatically.
+*/
+const INTEREST_LABELS_T = {
+  ta: {
+    science:  { heading: '', sub: '' },
+    commerce: { heading: '', sub: '' },
+    arts:     { heading: '', sub: '' },
+    mixed:    { heading: '', sub: '' },
+  },
+  te: {
+    science:  { heading: '', sub: '' },
+    commerce: { heading: '', sub: '' },
+    arts:     { heading: '', sub: '' },
+    mixed:    { heading: '', sub: '' },
+  },
+  hi: {
+    science:  { heading: '', sub: '' },
+    commerce: { heading: '', sub: '' },
+    arts:     { heading: '', sub: '' },
+    mixed:    { heading: '', sub: '' },
+  },
+};
+
+/*
+  Per-stream translations. Each stream has top-level fields and a nodes array.
+  NOTE: node.options are intentionally NOT translated — they are used as
+  career-lookup keys in handleOption(). Translate options in a follow-up
+  once the lookup is refactored to use data-key attributes.
+  Empty string / empty array = falls back to English automatically.
+*/
+const STREAMS_T = {
+  ta: {
+    pcm: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    pcb: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    commerce: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    arts: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    vocational: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+  },
+  te: {
+    pcm: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    pcb: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    commerce: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    arts: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    vocational: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+  },
+  hi: {
+    pcm: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    pcb: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    commerce: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    arts: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+    vocational: {
+      name: '', description: '', subjects: [], badge: '', heading: '', sub: '',
+      nodes: [
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+        { stage: '', title: '', desc: '', exams: [] },
+      ]
+    },
+  },
+};
+
+function getStreamData(key) {
+  const lang = getLang();
+  if (lang === 'en') return STREAMS[key];
+  const t = STREAMS_T[lang] && STREAMS_T[lang][key];
+  if (!t) return STREAMS[key];
+  const base = STREAMS[key];
+  return {
+    ...base,
+    name:        t.name        || base.name,
+    description: t.description || base.description,
+    subjects:    (t.subjects && t.subjects.length) ? t.subjects : base.subjects,
+    badge:       t.badge       || base.badge,
+    heading:     t.heading     || base.heading,
+    sub:         t.sub         || base.sub,
+    nodes: base.nodes.map((node, i) => {
+      const tn = t.nodes && t.nodes[i];
+      if (!tn) return node;
+      return {
+        ...node,
+        stage: tn.stage || node.stage,
+        title: tn.title || node.title,
+        desc:  tn.desc  || node.desc,
+        exams: (tn.exams && tn.exams.length) ? tn.exams : node.exams,
+      };
+    })
+  };
+}
+
+function getInterestLabels(interest) {
+  const lang = getLang();
+  if (lang === 'en') return INTEREST_LABELS[interest];
+  const t = INTEREST_LABELS_T[lang] && INTEREST_LABELS_T[lang][interest];
+  if (!t) return INTEREST_LABELS[interest];
+  const base = INTEREST_LABELS[interest];
+  return {
+    heading: t.heading || base.heading,
+    sub:     t.sub     || base.sub,
+  };
+}
+
 /* Interest → stream mapping */
 const INTEREST_MAP = {
   science:  ['pcm', 'pcb'],
@@ -1048,7 +1275,7 @@ function updateProgress(n) {
 ═══════════════════════════════════════════════════ */
 function buildStreamsGrid(interest) {
   const keys = INTEREST_MAP[interest];
-  const labels = INTEREST_LABELS[interest];
+  const labels = getInterestLabels(interest);
   document.getElementById('step2Heading').textContent = labels.heading;
   document.getElementById('step2Sub').textContent     = labels.sub;
 
@@ -1058,7 +1285,7 @@ function buildStreamsGrid(interest) {
   document.getElementById('next2').classList.remove('ready');
 
   keys.forEach((key, idx) => {
-    const s    = STREAMS[key];
+    const s    = getStreamData(key);
     const card = document.createElement('div');
     card.className = 'stream-card';
     card.style.cssText = `--stream-color:${s.color}; --stream-rgb:${s.rgb};`;
@@ -1096,7 +1323,7 @@ function selectStream(card, key) {
    STEP 3 — Build path timeline
 ═══════════════════════════════════════════════════ */
 function buildPath(key) {
-  const s = STREAMS[key];
+  const s = getStreamData(key);
 
   // Badge + headings
   const badge = document.getElementById('pathBadge');
@@ -1190,7 +1417,7 @@ function buildFullMap() {
     </div>
     <div class="fullmap-grid">
       ${streamKeys.map(key => {
-        const s = STREAMS[key];
+        const s = getStreamData(key);
         const rows = s.nodes.map(n => `
           <div class="fullmap-row">
             <span class="fullmap-stage">${n.stage.split('·')[0].trim()}</span>
@@ -1210,6 +1437,14 @@ function buildFullMap() {
     </div>
   `;
 }
+
+/* ═══════════════════════════════════════════════════
+   LANG CHANGE — re-render current step
+═══════════════════════════════════════════════════ */
+document.addEventListener('langchange', function() {
+  if (currentStep === 2 && selectedInterest) buildStreamsGrid(selectedInterest);
+  if (currentStep === 3 && selectedStream)   buildPath(selectedStream);
+});
 
 function toggleFullMap(btn) {
   const panel = document.getElementById('fullMapPanel');
