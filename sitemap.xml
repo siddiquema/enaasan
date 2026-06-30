@@ -57,4 +57,12 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://enaasan.online/privacy.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
