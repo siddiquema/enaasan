@@ -795,6 +795,7 @@ const CATEGORIES = [
   { id: 'law',      label: 'Law & Policy',          icon: '⚖️', color: '#64B5F6', rgb: '100,181,246' },
   { id: 'teaching', label: 'Education & Teaching',  icon: '📚', color: '#FFB347', rgb: '255,179,71'  },
   { id: 'ai',       label: 'AI & Machine Learning', icon: '🤖', color: '#A78BFA', rgb: '167,139,250' },
+  { id: 'bps',      label: 'BPS / KPO Careers',     icon: '🏢', color: '#4DD0C4', rgb: '77,208,196'  },
 ];
 
 const ROLES = {
@@ -1122,6 +1123,58 @@ const ROLES = {
       tools: ['Annotation platforms (Scale AI, Surge AI, proprietary tools)', 'Google Docs / Sheets', 'Feedback rubric frameworks'],
       how: ['Start with Scale AI, Remotasks, or Outlier for entry-level AI training work', 'Domain specialists (doctors, lawyers, coders) are paid significantly more for specialised annotation', 'Use this as a stepping stone — the AI literacy you build here is valuable for other AI roles', 'Build understanding of what makes AI outputs good or bad — read model cards and evaluation papers', 'This is one of the most accessible entry points into the AI industry from any background'],
       note: 'AI training roles are among the most accessible AI jobs today — they do not require coding. However, the ceiling is lower than engineering or product roles. Treat it as an entry point to the AI industry and build deeper skills alongside.'
+    },
+  ],
+  bps: [
+    {
+      title: 'Customer Service Representative (Voice)',
+      desc: 'Handles inbound/outbound calls for international or domestic clients — resolving queries, complaints, and requests.',
+      salary: '₹2–5 LPA (freshers); ₹4–8 LPA with 2–3 years',
+      must: ['Clear spoken English (neutral accent preferred for international)', 'Active listening and empathy', 'CRM software basics', 'Call handling etiquette', 'Typing speed (30+ WPM)'],
+      good: ['Hindi or regional language support for domestic process', 'Basic Excel for reporting', 'Upselling / cross-selling skills', 'Conflict de-escalation', 'Shift flexibility (night shifts common for US/UK processes)'],
+      tools: ['Salesforce / Zendesk / Freshdesk', 'Avaya / Cisco telephony', 'Excel / Google Sheets'],
+      how: ['Any graduate can apply — no specific degree required', 'Communication skills training and mock call practice', 'Look for BPO walk-in drives in Hyderabad, Bengaluru, Chennai, Pune, Noida', 'NASSCOM BFSI and BPO sector skill certificates (short courses)', 'Start with domestic voice process if international accent needs work'],
+      note: 'Voice process is the most accessible entry point into the BPS sector. Attrition is high — use it to build communication skills, then move into team lead or non-voice roles within 2 years.'
+    },
+    {
+      title: 'Back Office / Data Processing Executive',
+      desc: 'Processes transactions, forms, and records — insurance claims, bank account ops, order management, or document verification.',
+      salary: '₹2–4.5 LPA (entry); ₹4–7 LPA (senior)',
+      must: ['Accuracy and attention to detail', 'Typing speed (40+ WPM)', 'Basic Excel', 'Process adherence', 'English reading and writing'],
+      good: ['Domain knowledge (insurance, banking, healthcare)', 'Data validation and quality checking', 'Knowledge of SLAs and TATs', 'Willingness to work in shifts'],
+      tools: ['MS Excel / Google Sheets', 'Domain-specific platforms (insurance portals, banking ops systems)', 'Document management systems'],
+      how: ['Any graduate eligible — commerce or science background useful for banking/insurance ops', 'Short data entry and Excel certification courses', 'Apply directly to large BPS companies (Infosys BPM, Wipro BPS, Mphasis, EXL, WNS)', 'Look for domain-specific ops roles (insurance ops, mortgage processing, F&A ops)'],
+      note: 'Back office roles have more stable hours than voice. Building domain expertise (e.g., insurance claims, mortgage ops) is the fastest path to senior roles and KPO migration.'
+    },
+    {
+      title: 'Finance & Accounts (F&A) Analyst',
+      desc: 'Handles accounts payable, accounts receivable, general ledger, or financial reporting for global clients from India.',
+      salary: '₹3–7 LPA (entry); ₹6–15 LPA (specialist/senior)',
+      must: ['B.Com / M.Com or CA Inter preferred', 'Accounts payable / receivable fundamentals', 'MS Excel (pivot tables, VLOOKUP)', 'Basic ERP knowledge', 'Accuracy in number work'],
+      good: ['SAP / Oracle ERP exposure', 'US / UK GAAP basics', 'CA Foundation or CMA inter', 'Month-end close process understanding', 'Variance analysis'],
+      tools: ['SAP S/4HANA', 'Oracle NetSuite / Fusion', 'Blackline', 'Excel / Power BI', 'Concur (expense management)'],
+      how: ['B.Com is the standard entry qualification', 'CA Inter or CMA Inter significantly increases salary and role level', 'Apply to F&A-focused BPS companies: EXL, WNS, Genpact, Infosys BPM', 'SAP FICO certification adds 30–40% salary premium', 'Build toward FP&A roles after 2–3 years in transactional F&A'],
+      note: 'F&A is one of the best-paying BPS tracks. A B.Com + CA Inter + SAP combination is highly marketable. The career ceiling here is genuinely high — Finance Controller and CFO roles in GCCs are accessible from this path.'
+    },
+    {
+      title: 'Research Analyst (KPO)',
+      desc: 'Delivers high-value knowledge work — equity research, market research, legal research, or healthcare analytics — for global clients.',
+      salary: '₹4–10 LPA (entry); ₹8–22 LPA (senior KPO)',
+      must: ['Strong analytical and research skills', 'Report writing and presentation', 'Excel and PowerPoint', 'Domain knowledge (finance / pharma / law / market research)', 'Ability to synthesise large amounts of information'],
+      good: ['MBA / CFA Level 1 for finance KPO', 'SPSS / R / Python for market research', 'Bloomberg / Capital IQ for equity research', 'Primary and secondary research methodology', 'Client communication skills'],
+      tools: ['Bloomberg Terminal / Capital IQ', 'SPSS / R / Python (research)', 'PowerPoint / Excel', 'LexisNexis / Westlaw (legal KPO)', 'Euromonitor / Statista (market research)'],
+      how: ['MBA, CFA, or domain-specific postgrad preferred', 'Target KPO firms: Evalueserve, Mu Sigma, CRISIL Research, Acuity Knowledge Partners, Dun & Bradstreet', 'Build a sample research report as portfolio — 5–10 page equity or market analysis', 'CFA Level 1 is a strong signal for finance KPO roles', 'Internships in research firms or equity broking houses'],
+      note: 'KPO is the high-ceiling end of the outsourcing sector. Unlike BPS voice/back-office, KPO analysts do substantive intellectual work. The pay and growth trajectory are closer to consulting than to traditional BPO.'
+    },
+    {
+      title: 'HR Operations / Shared Services Executive',
+      desc: 'Manages HR processes for large organisations — onboarding, payroll inputs, employee data management, and HR helpdesk.',
+      salary: '₹2.5–6 LPA (entry); ₹5–10 LPA (senior)',
+      must: ['Understanding of HR lifecycle', 'MS Excel', 'Attention to data accuracy', 'Confidentiality and discretion', 'Communication skills'],
+      good: ['HR software (Workday, SAP SuccessFactors)', 'Payroll basics', 'MBA HR or PG in HR', 'Statutory compliance basics (PF, ESI)', 'Ticketing / HRMS systems'],
+      tools: ['Workday', 'SAP SuccessFactors', 'ServiceNow (HR ticketing)', 'Excel / Google Sheets', 'Darwinbox / Zoho People (India-focused HCMs)'],
+      how: ['Any graduate; MBA HR preferred for faster growth', 'Apply to HR Shared Services divisions of large IT or BPS companies', 'Workday HCM certification adds significant credibility', 'Build toward HR BP or HRBP roles after 3–4 years in shared services', 'SHRM-CP or PGDHRM short courses help differentiate'],
+      note: 'HR Ops is underrated as a BPS entry point. Workday and SAP SuccessFactors expertise is scarce and well-paid. After 3–4 years, HRBP or HR technology consulting roles become accessible.'
     },
   ],
 };
