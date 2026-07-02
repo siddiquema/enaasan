@@ -184,9 +184,26 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 36px rgba(0,0,0,0.3);
     }
+    .interest-tile:active {
+      transform: scale(0.97);
+      box-shadow: 0 0 0 3px rgba(240,165,0,0.25);
+      border-color: var(--gold);
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
     .interest-tile.selected {
       border-color: var(--gold);
       box-shadow: 0 0 0 3px rgba(240,165,0,0.15);
+    }
+    .interest-tile.selected::after {
+      content: '✓';
+      position: absolute; top: 10px; right: 12px;
+      font-size: 0.8rem; font-weight: 700;
+      color: var(--gold);
+      background: rgba(240,165,0,0.12);
+      border: 1px solid rgba(240,165,0,0.3);
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
     }
     .interest-tile::before {
       content: '';
@@ -236,10 +253,29 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 32px rgba(0,0,0,0.3);
     }
+    .stream-card:active {
+      transform: scale(0.985);
+      box-shadow: 0 0 0 3px rgba(var(--stream-rgb), 0.3);
+      border-color: var(--stream-color);
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
     .stream-card.selected {
       border-color: var(--stream-color);
       box-shadow: 0 0 0 3px rgba(var(--stream-rgb), 0.15);
     }
+    .stream-check {
+      display: none;
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--stream-color);
+      background: rgba(var(--stream-rgb), 0.12);
+      border: 1px solid rgba(var(--stream-rgb), 0.3);
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .stream-card.selected .stream-check { display: flex; }
+    .stream-card.selected .stream-arrow { display: none; }
     .stream-icon-wrap {
       width: 52px; height: 52px; border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
@@ -694,7 +730,7 @@ const STREAMS = {
     sub: 'Where it goes from Class 11 to your career — one step at a time.',
     subjects: ['Physics','Chemistry','Maths','English','Optional: CS / Bio / PE'],
     fit: ['Science & Engineering interest', 'Comfortable with Maths', 'Logical thinker'],
-    description: 'Strong foundation for engineering, technology, architecture, and research. The broadest science stream — keeps the most doors open.',
+    description: 'Engineering, AI/ML, semiconductors, EVs, and space tech are all built on PCM. The broadest science stream — and 2026\'s fastest-growing fields run on it.',
     nodes: [
       {
         stage: 'Right now · Grade 10 done',
@@ -756,7 +792,7 @@ const STREAMS = {
     sub: 'Where it goes from Class 11 to your career — one step at a time.',
     subjects: ['Physics','Chemistry','Biology','English','Optional: Maths'],
     fit: ['Curious about life and the body', 'Strong in Biology', 'Want to work in health / medicine'],
-    description: 'The primary route to medicine, pharmacy, and life sciences. If you are drawn to health, the human body, or nature — this is your stream.',
+    description: 'Medicine, pharma, biotech, and public health are expanding fast. If you are drawn to health, the human body, or the life sciences — this is your stream.',
     nodes: [
       {
         stage: 'Right now · Grade 10 done',
@@ -819,7 +855,7 @@ const STREAMS = {
     sub: 'Where it goes from Class 11 to your career — one step at a time.',
     subjects: ['Accountancy','Business Studies','Economics','English','Optional: Maths / IP / CS'],
     fit: ['Curious about business & money', 'Enjoy organising and planning', 'Interested in markets and firms'],
-    description: 'Gateway to finance, business, law, and management. Much broader than people think — not just CA. Commerce with Maths keeps quantitative options open.',
+    description: 'Gateway to fintech, analytics, GCC sector roles, law, and management. Much broader than people think — and 2026\'s finance and business jobs want Commerce graduates.',
     nodes: [
       {
         stage: 'Right now · Grade 10 done',
@@ -882,7 +918,7 @@ const STREAMS = {
     sub: 'Where it goes from Class 11 to your career — one step at a time.',
     subjects: ['History / Geography / Political Science', 'Psychology / Sociology', 'Languages (English, Hindi, Telugu…)', 'Optional: Fine Arts / Music / Home Science'],
     fit: ['Interested in people, society & culture', 'Strong in reading and writing', 'Curious about history, politics or design'],
-    description: 'The most misunderstood stream in India — and the one with the most diverse career outcomes. Arts students become lawyers, journalists, designers, civil servants, psychologists, and more.',
+    description: 'The most misunderstood stream in India — and the one with the most diverse outcomes. UX design, journalism, law, psychology, and civil services all run on Arts foundations.',
     nodes: [
       {
         stage: 'Right now · Grade 10 done',
@@ -1324,6 +1360,7 @@ function buildStreamsGrid(interest) {
         </div>
       </div>
       <div class="stream-arrow">→</div>
+      <div class="stream-check">✓</div>
     `;
     card.onclick = () => { selectStream(card, key); goToStep3(); };
     grid.appendChild(card);
