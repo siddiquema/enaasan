@@ -264,6 +264,13 @@
       font-size: 0.82rem; color: var(--mist); line-height: 1.55;
     }
     .honest-note::before { content: '💡  '; }
+    .exam-official-link {
+      display: inline-block; margin-top: 10px;
+      font-size: 0.78rem; color: var(--gold);
+      text-decoration: underline; text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+    .exam-official-link:hover { color: var(--glow); }
 
     /* ── College type cards ──────────────────────── */
     .colleges-grid {
@@ -852,7 +859,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 with PCM. Minimum 75% marks (60% for SC/ST).',
       'Leads to': ['NITs', 'IIITs', 'CFTIs', 'JEE Advanced eligibility (top 2.5 lakh)'],
     },
-    note: 'JEE Main rank also serves as the qualifying exam for JEE Advanced. Even an average JEE Main rank opens doors to good NITs and IIITs with decent branches.'
+    note: 'JEE Main rank also serves as the qualifying exam for JEE Advanced. Even an average JEE Main rank opens doors to good NITs and IIITs with decent branches.',
+    url: 'https://jeemain.nta.ac.in'
   },
   {
     streams: ['science'],
@@ -870,7 +878,8 @@ const EXAMS = [
       'Eligibility': 'Must be in top 2.5 lakh of JEE Main. Class 12 with 75% (60% SC/ST).',
       'Leads to': ['IIT Bombay', 'IIT Delhi', 'IIT Madras', 'IIT Hyderabad', 'All 23 IITs'],
     },
-    note: 'Only about 1 in 10 JEE Main qualifiers crack JEE Advanced. The difficulty is significantly higher. Do not measure your worth by this result alone.'
+    note: 'Only about 1 in 10 JEE Main qualifiers crack JEE Advanced. The difficulty is significantly higher. Do not measure your worth by this result alone.',
+    url: 'https://jeeadv.ac.in'
   },
   {
     streams: ['science'],
@@ -888,7 +897,8 @@ const EXAMS = [
       'Eligibility': 'Studied in TS or AP for Class 11–12 gives 85% state quota advantage.',
       'Leads to': ['JNTUH / JNTUK affiliated colleges', 'Osmania University colleges', 'Private colleges in TS/AP'],
     },
-    note: 'For most students in Telangana and AP, EAMCET is the primary realistic path to an engineering seat. Competition is intense but significantly more accessible than JEE.'
+    note: 'For most students in Telangana and AP, EAMCET is the primary realistic path to an engineering seat. Competition is intense but significantly more accessible than JEE.',
+    url: 'https://eamcet.tsche.ac.in'
   },
   {
     streams: ['science'],
@@ -906,7 +916,8 @@ const EXAMS = [
       'Eligibility': 'PCM with minimum 75% aggregate in Class 12',
       'Leads to': ['BITS Pilani', 'BITS Hyderabad', 'BITS Goa'],
     },
-    note: 'BITS Pilani is genuinely one of India\'s top engineering institutions. BITS Hyderabad is an excellent option for TS/AP students.'
+    note: 'BITS Pilani is genuinely one of India\'s top engineering institutions. BITS Hyderabad is an excellent option for TS/AP students.',
+    url: 'https://www.bitsadmission.com'
   },
   {
     streams: ['medical'],
@@ -924,7 +935,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 with PCB. Minimum 50% (40% for SC/ST/OBC).',
       'Leads to': ['Government MBBS seats', 'Private MBBS', 'BDS', 'BAMS/BHMS', 'BVSC'],
     },
-    note: 'NEET is the most competitive exam in India by number of applicants vs seats. ~20 lakh students for ~1 lakh MBBS seats. Preparation must start in Class 11.'
+    note: 'NEET is the most competitive exam in India by number of applicants vs seats. ~20 lakh students for ~1 lakh MBBS seats. Preparation must start in Class 11.',
+    url: 'https://neet.nta.nic.in'
   },
   {
     streams: ['medical'],
@@ -942,7 +954,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 with PCB or PCMB',
       'Leads to': ['B.Pharm', 'B.Sc. Agriculture', 'B.Sc. Nursing', 'B.Sc. Horticulture'],
     },
-    note: 'If NEET is out of reach, EAMCET (BiPC) opens a wide range of health and agriculture careers that are in strong demand, especially in semi-urban and rural India.'
+    note: 'If NEET is out of reach, EAMCET (BiPC) opens a wide range of health and agriculture careers that are in strong demand, especially in semi-urban and rural India.',
+    url: 'https://eamcet.tsche.ac.in'
   },
   {
     streams: ['commerce', 'arts', 'science', 'medical'],
@@ -960,7 +973,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 passed or appearing. Any stream.',
       'Leads to': ['Delhi University (all colleges)', 'JNU', 'BHU', 'HCU', '250+ universities'],
     },
-    note: 'CUET replaced Class 12 percentage-based direct admission to central universities. Your CUET score now matters more than your board percentage for DU and JNU admissions.'
+    note: 'CUET replaced Class 12 percentage-based direct admission to central universities. Your CUET score now matters more than your board percentage for DU and JNU admissions.',
+    url: 'https://cuet.samarth.ac.in'
   },
   {
     streams: ['commerce', 'arts'],
@@ -978,7 +992,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 any stream. Minimum 45% (40% SC/ST). Max age: none for LLB.',
       'Leads to': ['NLSIU Bangalore', 'NALSAR Hyderabad', 'NLU Delhi', 'All 25 NLUs'],
     },
-    note: 'Law is open to all streams. Commerce and Arts students with strong reading and reasoning skills often outperform science students in CLAT. NALSAR Hyderabad is consistently one of India\'s top 3 law schools.'
+    note: 'Law is open to all streams. Commerce and Arts students with strong reading and reasoning skills often outperform science students in CLAT. NALSAR Hyderabad is consistently one of India\'s top 3 law schools.',
+    url: 'https://consortiumofnlus.ac.in'
   },
   {
     streams: ['arts'],
@@ -996,7 +1011,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 any stream. Portfolio matters.',
       'Leads to': ['NID Ahmedabad / Vijayawada', 'IIT BDes programs', 'NIFT campuses'],
     },
-    note: 'These exams test creativity and observation, not rote learning. A student from any stream with strong visual and design thinking can crack NID. Build a portfolio early.'
+    note: 'These exams test creativity and observation, not rote learning. A student from any stream with strong visual and design thinking can crack NID. Build a portfolio early.',
+    url: 'https://admissions.nid.edu'
   },
   {
     streams: ['commerce'],
@@ -1014,7 +1030,8 @@ const EXAMS = [
       'Eligibility': 'Register during Class 12 itself. Appear after Class 12 results.',
       'Leads to': ['CA Intermediate', 'CA Final', 'Chartered Accountant designation'],
     },
-    note: 'CA is one of the few professional qualifications in India where your college name does not matter at all — only your ICAI rank does. You can register during Class 12 and start studying immediately.'
+    note: 'CA is one of the few professional qualifications in India where your college name does not matter at all — only your ICAI rank does. You can register during Class 12 and start studying immediately.',
+    url: 'https://www.icai.org'
   },
   {
     streams: ['science', 'medical', 'commerce', 'arts', 'defence'],
@@ -1032,7 +1049,8 @@ const EXAMS = [
       'Eligibility': 'Male (unmarried). Age 16.5–19.5 years. Class 12 passed or appearing. PCM mandatory for Air Force and Navy. Any stream for Army.',
       'Leads to': ['Indian Army (NDA)', 'Indian Navy (Naval Academy)', 'Indian Air Force (NDA + flying training)'],
     },
-    note: 'NDA is one of the most prestigious paths in India. The SSB interview (Services Selection Board) tests personality, leadership, and mental fitness over 5 days — preparation for SSB is as important as the written exam. Girls are now eligible for NDA as of 2021.'
+    note: 'NDA is one of the most prestigious paths in India. The SSB interview (Services Selection Board) tests personality, leadership, and mental fitness over 5 days — preparation for SSB is as important as the written exam. Girls are now eligible for NDA as of 2021.',
+    url: 'https://upsc.gov.in'
   },
   {
     streams: ['science', 'defence'],
@@ -1050,7 +1068,8 @@ const EXAMS = [
       'Eligibility': 'Male (unmarried). Age 16.5–19.5 years. Minimum 70% in PCM in Class 12. Physics, Chemistry, Maths mandatory.',
       'Leads to': ['Indian Army — Corps of Engineers', 'Corps of Signals', 'Electronics & Mechanical Engineers (EME)'],
     },
-    note: 'TES is an excellent option for PCM students who may not crack NDA written but have strong Class 12 marks. You get a B.Tech degree from MCEME or CME during training, fully funded by the Army.'
+    note: 'TES is an excellent option for PCM students who may not crack NDA written but have strong Class 12 marks. You get a B.Tech degree from MCEME or CME during training, fully funded by the Army.',
+    url: 'https://joinindianarmy.nic.in'
   },
   {
     streams: ['science', 'medical', 'commerce', 'arts', 'defence'],
@@ -1068,7 +1087,8 @@ const EXAMS = [
       'Eligibility': 'Navik GD: Class 12 with Maths & Physics. Navik DB: Class 12 any stream. Yantrik: Class 12 PCM + ITI/Diploma. Age 18–22.',
       'Leads to': ['Navik General Duty (sea duties)', 'Navik Domestic Branch (admin, catering)', 'Yantrik (mechanical, electrical, electronics)'],
     },
-    note: 'Coast Guard is a respected paramilitary force under the Ministry of Defence. Less competitive than Army/Navy commissioned officer entry, and a strong career option for students from coastal states including AP and Telangana.'
+    note: 'Coast Guard is a respected paramilitary force under the Ministry of Defence. Less competitive than Army/Navy commissioned officer entry, and a strong career option for students from coastal states including AP and Telangana.',
+    url: 'https://joinindiancoastguard.cdac.in'
   },
   {
     streams: ['science', 'defence'],
@@ -1086,7 +1106,8 @@ const EXAMS = [
       'Eligibility': 'Graduation required for AFCAT. Class 12 PCM with 60% for Flying branch. However, NDA is the Class 12 direct route to IAF.',
       'Leads to': ['IAF Flying Branch (Pilot)', 'Technical Branch', 'Ground Duty (Administration, Accounts, Logistics)'],
     },
-    note: 'If becoming an Air Force pilot is the dream, NDA after Class 12 is the direct route. AFCAT is the post-graduation alternative. Both routes lead to commissioned officer status. The physical and medical standards for the flying branch are stringent — get a medical check done early.'
+    note: 'If becoming an Air Force pilot is the dream, NDA after Class 12 is the direct route. AFCAT is the post-graduation alternative. Both routes lead to commissioned officer status. The physical and medical standards for the flying branch are stringent — get a medical check done early.',
+    url: 'https://afcat.cdac.in'
   },
   {
     streams: ['commerce'],
@@ -1104,7 +1125,8 @@ const EXAMS = [
       'Eligibility': 'Class 12 with minimum 60%. Any stream but Maths required.',
       'Leads to': ['IIM Indore BBA+MBA', 'IIM Rohtak', 'IIM Ranchi', 'IIM Jammu'],
     },
-    note: 'This is a rare opportunity to enter an IIM directly from Class 12. Competition is intense but significantly less than CAT. If you are commerce-oriented and want IIM, this is your best shot.'
+    note: 'This is a rare opportunity to enter an IIM directly from Class 12. Competition is intense but significantly less than CAT. If you are commerce-oriented and want IIM, this is your best shot.',
+    url: 'https://www.iimcat.ac.in'
   },
 ];
 
@@ -1274,6 +1296,7 @@ function renderExams() {
       <div class="exam-detail" id="${detailId}">
         ${detailRows}
         <div class="honest-note">${exam.note}</div>
+        ${exam.url ? `<a class="exam-official-link" href="${exam.url}" target="_blank" rel="noopener noreferrer">Official website ↗</a>` : ''}
       </div>
     `;
     grid.appendChild(card);
