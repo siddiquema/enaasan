@@ -57,6 +57,14 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Earning After 10th -->
+  <url>
+    <loc>https://enaasan.online/after10.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>
