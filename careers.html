@@ -210,6 +210,26 @@
       border-color: var(--cc);
       color: var(--cc); font-weight: 600;
     }
+    .hot-badge {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem; letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(240,165,0,0.1);
+      border: 1px solid rgba(240,165,0,0.3);
+      border-radius: 100px;
+      padding: 2px 8px;
+      margin-left: 4px;
+    }
+    .hot-bolt {
+      display: inline-block;
+      animation: boltGlow 1.8s ease-in-out infinite;
+    }
+    @keyframes boltGlow {
+      0%, 100% { opacity: 0.5; text-shadow: none; }
+      50%      { opacity: 1; text-shadow: 0 0 6px rgba(240,165,0,0.9), 0 0 14px rgba(255,209,102,0.5); }
+    }
 
     /* Roles grid */
     .roles-grid {
@@ -807,7 +827,7 @@ const CATEGORIES = [
   { id: 'health',   label: 'Healthcare',            icon: '🏥', color: '#FF6B6B', rgb: '255,107,107' },
   { id: 'law',      label: 'Law & Policy',          icon: '⚖️', color: '#64B5F6', rgb: '100,181,246' },
   { id: 'teaching', label: 'Education & Teaching',  icon: '📚', color: '#FFB347', rgb: '255,179,71'  },
-  { id: 'ai',       label: 'AI & Machine Learning', icon: '🤖', color: '#A78BFA', rgb: '167,139,250' },
+  { id: 'ai',       label: 'AI & Machine Learning', icon: '🤖', color: '#A78BFA', rgb: '167,139,250', hot: true },
   { id: 'bps',      label: 'BPS / KPO Careers',     icon: '🏢', color: '#4DD0C4', rgb: '77,208,196'  },
 ];
 
@@ -1257,7 +1277,7 @@ function buildCategories() {
     const btn = document.createElement('button');
     btn.className = 'cat-btn' + (i === 0 ? ' active' : '');
     btn.style.cssText = `--cc:${cat.color}; --cc-rgb:${cat.rgb}`;
-    btn.innerHTML = `${cat.icon} ${cat.label}`;
+    btn.innerHTML = `${cat.icon} ${cat.label}` + (cat.hot ? ` <span class="hot-badge"><span class="hot-bolt">⚡</span> High demand</span>` : '');
     btn.onclick = () => selectCategory(btn, cat.id);
     row.appendChild(btn);
   });
