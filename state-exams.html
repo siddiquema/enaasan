@@ -211,6 +211,11 @@
       font-weight: 600;
     }
     .sexam-link:hover { color: var(--glow); }
+    .sexam-pending {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.78rem; color: var(--faint);
+      font-style: italic;
+    }
     .sexam-flag {
       display: inline-block; margin-left: 6px;
       font-family: 'DM Mono', monospace;
@@ -322,7 +327,7 @@ const DATA = {
   tn: {
     after10: [
       { name: 'TNDTE Polytechnic Diploma Admission', desc: 'Single-window counselling for government and private polytechnic diploma seats across Tamil Nadu.', url: 'https://dte.tn.gov.in' },
-      { name: 'Tamil Nadu ITI Admission', desc: 'Admission to Industrial Training Institutes across trades — electrician, fitter, welder, COPA and more.', url: 'https://skilltraining.tn.gov.in' },
+      { name: 'Tamil Nadu ITI Admission', desc: 'Admission to Industrial Training Institutes across trades — electrician, fitter, welder, COPA and more.', url: null },
     ],
     after12: [
       { name: 'TNEA — Tamil Nadu Engineering Admissions', desc: 'Single-window counselling for engineering seats in TN government and private colleges, based on Class 12 marks (no separate written test).', url: 'https://www.tneaonline.org' },
@@ -346,7 +351,7 @@ const DATA = {
   ka: {
     after10: [
       { name: 'Karnataka DTE Polytechnic Diploma Admission', desc: 'Centralised admission to government and aided polytechnic diploma colleges in Karnataka.', url: 'https://dtek.karnataka.gov.in' },
-      { name: 'Karnataka ITI Admission', desc: 'State ITI seat allotment across trades, coordinated by the Department of Employment and Training.', url: 'https://cite.karnataka.gov.in' },
+      { name: 'Karnataka ITI Admission', desc: 'State ITI seat allotment across trades, coordinated by the Department of Employment and Training.', url: null },
     ],
     after12: [
       { name: 'KCET — Karnataka Common Entrance Test', desc: 'State-level test for engineering, architecture, and other professional degree seats in Karnataka colleges.', url: 'https://cetonline.karnataka.gov.in/kea/' },
@@ -370,12 +375,12 @@ const DATA = {
   kl: {
     after10: [
       { name: 'Kerala Polytechnic Admission (DTE)', desc: 'Centralised admission process for government polytechnic diploma seats across Kerala.', url: 'https://dtekerala.gov.in' },
-      { name: 'Kerala ITI Admission', desc: 'State-run ITI seat allotment across technical trades, via the Department of Employment.', url: 'https://education.kerala.gov.in', flag: 'verify current portal' },
+      { name: 'Kerala ITI Admission', desc: 'State-run ITI seat allotment across technical trades, via the Department of Employment.', url: null },
     ],
     after12: [
       { name: 'KEAM — Kerala Engineering Architecture Medical', desc: 'State entrance exam covering engineering and architecture seats in Kerala (medical seats now primarily via NEET).', url: 'https://cee.kerala.gov.in' },
       { name: 'NEET + Kerala Medical Counselling', desc: 'Kerala conducts state-quota counselling for MBBS/BDS seats using the NEET score, coordinated by CEE Kerala.', url: 'https://cee.kerala.gov.in' },
-      { name: 'Kerala Agricultural University Admissions', desc: 'Admission to agriculture, forestry, and veterinary science degree programmes.', url: 'https://kau.in' },
+      { name: 'Kerala Agricultural University Admissions', desc: 'Admission to agriculture, forestry, and veterinary science degree programmes.', url: null },
     ],
     afterDiploma: [
       { name: 'Kerala LET — Lateral Entry', desc: 'Diploma holders join B.Tech directly in 2nd year through Kerala\'s lateral entry process, coordinated by LBS Centre.', url: 'https://lbscentre.kerala.gov.in' },
@@ -393,7 +398,7 @@ const DATA = {
   },
   ap: {
     after10: [
-      { name: 'AP POLYCET', desc: 'State entrance exam for polytechnic diploma admission in Andhra Pradesh.', url: 'https://apsbtet.ap.gov.in' },
+      { name: 'AP POLYCET', desc: 'State entrance exam for polytechnic diploma admission in Andhra Pradesh.', url: null },
       { name: 'AP ITI Admission', desc: 'State ITI seat allotment across trades, coordinated by the AP Department of Employment.', url: 'https://itiadmissions.ap.gov.in/iti/' },
     ],
     after12: [
@@ -413,19 +418,19 @@ const DATA = {
       { name: 'GATE', desc: 'National gateway to M.Tech admission at IITs/NITs; also used for PSU shortlisting.', url: 'https://gate2026.iitg.ac.in', flag: 'verify current host IIT' },
     ],
     afterCollegeMed: [
-      { name: 'NEET PG + AP Counselling', desc: 'State-quota counselling for MD/MS seats using the NEET PG score, coordinated by Dr. NTR University of Health Sciences.', url: 'https://apuhs-pgadmissions.aptonline.in' },
+      { name: 'NEET PG + AP Counselling', desc: 'State-quota counselling for MD/MS seats using the NEET PG score, coordinated by Dr. NTR University of Health Sciences.', url: null },
     ],
   },
   ts: {
     after10: [
-      { name: 'TS POLYCET', desc: 'State entrance exam for polytechnic diploma admission in Telangana.', url: 'https://polycet.sbtet.telangana.gov.in' },
+      { name: 'TS POLYCET', desc: 'State entrance exam for polytechnic diploma admission in Telangana.', url: null },
       { name: 'TS ITI Admission', desc: 'State ITI seat allotment across trades, coordinated by the Telangana Department of Employment.', url: 'https://iti.telangana.gov.in' },
     ],
     after12: [
       { name: 'TS EAPCET (formerly EAMCET)', desc: 'State entrance for engineering, agriculture, and pharmacy degree admissions in Telangana, run by TGCHE (formerly TSCHE).', url: 'https://eapcet.tgche.ac.in' },
       { name: 'NEET + TS Medical Counselling', desc: 'State-quota MBBS/BDS counselling in Telangana based on the NEET score, coordinated by KNRUHS.', url: 'https://knruhs.telangana.gov.in' },
       { name: 'TS LAWCET', desc: 'State entrance for 3-year and 5-year law degree programmes in Telangana colleges.', url: 'https://lawcet.tgche.ac.in', flag: 'CLAT also applies' },
-      { name: 'PJTSAU Agricultural Admissions', desc: 'Admission to agriculture and allied degree programmes via Professor Jayashankar Telangana State Agricultural University.', url: 'https://www.pjtsau.edu.in' },
+      { name: 'PJTSAU Agricultural Admissions', desc: 'Admission to agriculture and allied degree programmes via Professor Jayashankar Telangana State Agricultural University.', url: null },
     ],
     afterDiploma: [
       { name: 'TS ECET', desc: 'Lateral entry exam for diploma holders to join B.Tech/B.Pharmacy directly in 2nd year.', url: 'https://ecet.tgche.ac.in' },
@@ -475,7 +480,7 @@ function buildStages() {
       <div class="sexam-card">
         <div class="sexam-name">${e.name}${e.flag ? `<span class="sexam-flag">${e.flag}</span>` : ''}</div>
         <div class="sexam-desc">${e.desc}</div>
-        <a class="sexam-link" href="${e.url}" target="_blank" rel="noopener noreferrer">Official website ↗</a>
+        ${e.url ? `<a class="sexam-link" href="${e.url}" target="_blank" rel="noopener noreferrer">Official website ↗</a>` : `<span class="sexam-pending">Link to be validated soon</span>`}
       </div>
     `).join('');
     block.innerHTML = `
