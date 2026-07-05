@@ -65,6 +65,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- State-wise Entrance Exams -->
+  <url>
+    <loc>https://enaasan.online/state-exams.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>
