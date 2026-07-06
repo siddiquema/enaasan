@@ -73,6 +73,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Career FAQ -->
+  <url>
+    <loc>https://enaasan.online/faq.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>
