@@ -1,0 +1,26 @@
+# robots.txt — enaasan.online
+# All crawlers welcome. AI/answer-engine bots listed explicitly (GEO):
+# defaults already allow them, but being explicit avoids any ambiguity.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://enaasan.online/sitemap.xml
