@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>enaasan — Theme Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  /* ── Tokens: Dark (default) ── */
+  :root {
+    --night:   #0D1B2A;
+    --ink:     #14273A;
+    --card:    #192F44;
+    --border:  #1E3A52;
+    --gold:    #F0A500;
+    --glow:    #FFD166;
+    --chalk:   #F2EFE9;
+    --mist:    #A8C0D4;
+    --faint:   #4A6580;
+    --radius:  14px;
+    --radius-lg: 22px;
+  }
+
+  /* ── Tokens: Warm Light ── */
+  body.theme-light {
+    --night:   #F5F0E8;
+    --ink:     #EDE7D9;
+    --card:    #FFFFFF;
+    --border:  #D8CFC0;
+    --gold:    #C07800;
+    --glow:    #E08C00;
+    --chalk:   #1A2B3C;
+    --mist:    #3A5068;
+    --faint:   #7A8FA0;
+  }
+
+  /* ── Tokens: Gen Z Bold (dark + teal/lime) ── */
+  body.theme-genz-bold {
+    --night:   #0A0F1E;
+    --ink:     #111827;
+    --card:    #1A2235;
+    --border:  #1E3A52;
+    --gold:    #00D4B4;
+    --glow:    #A3FFE8;
+    --chalk:   #F0F4FF;
+    --mist:    #94A8C8;
+    --faint:   #4A5E7A;
+    --cta-bg:  #C8FF00;
+    --cta-text:#0A0F1E;
+  }
+
+  /* ── Tokens: Gen Z Fresh (light + electric blue/yellow) ── */
+  body.theme-genz-fresh {
+    --night:   #F2F4F8;
+    --ink:     #E4E8F0;
+    --card:    #FFFFFF;
+    --border:  #CBD5E8;
+    --gold:    #2563EB;
+    --glow:    #3B82F6;
+    --chalk:   #0F172A;
+    --mist:    #334155;
+    --faint:   #64748B;
+    --cta-bg:  #FACC15;
+    --cta-text:#0F172A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--night);
+    color: var(--chalk);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 10px;
+    padding: 14px 28px;
+    background: rgba(13,27,42,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  body.theme-light nav {
+    background: rgba(245,240,232,0.95);
+    border-bottom: 1px solid #D8CFC0;
+  }
+  body.theme-genz-bold nav {
+    background: rgba(10,15,30,0.95);
+    border-bottom: 1px solid #1E3A52;
+  }
+  body.theme-genz-fresh nav {
+    background: rgba(242,244,248,0.96);
+    border-bottom: 1px solid #CBD5E8;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem; font-weight: 800;
+    letter-spacing: -0.02em; color: var(--chalk);
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-cta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem; font-weight: 600;
+    background: var(--gold); color: #0D1B2A;
+    border: none; border-radius: 100px;
+    padding: 10px 22px; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--glow); }
+  .nav-row1 { display: flex; align-items: center; gap: 16px; }
+
+  /* ── Lang pills ── */
+  .lang-switcher {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .lang-pill {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem; font-weight: 500;
+    background: rgba(255,255,255,0.06);
+    color: var(--mist);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer; transition: all 0.18s;
+  }
+  body.theme-light .lang-pill { background: rgba(0,0,0,0.04); }
+  .lang-pill.active, .lang-pill[aria-pressed="true"] {
+    background: var(--gold); color: #0D1B2A;
+    border-color: var(--gold); font-weight: 600;
+  }
+
+  /* ── Theme switcher ── */
+  .theme-switcher {
+    display: flex; align-items: center; gap: 8px;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+  .theme-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--faint);
+  }
+  .theme-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+  }
+  .theme-dot:hover { transform: scale(1.15); }
+  .theme-dot.active { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(240,165,0,0.25); }
+  .theme-dot-dark       { background: #0D1B2A; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15); }
+  .theme-dot-light      { background: #F5F0E8; box-shadow: inset 0 0 0 1px #D8CFC0; }
+  .theme-dot-genz-bold  { background: linear-gradient(135deg, #0A0F1E 50%, #00D4B4 100%); }
+  .theme-dot-genz-fresh { background: linear-gradient(135deg, #F2F4F8 50%, #2563EB 100%); box-shadow: inset 0 0 0 1px #CBD5E8; }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 120px 24px 80px;
+    background: linear-gradient(160deg, var(--ink) 0%, var(--night) 60%, #0A1520 100%);
+    transition: background 0.3s ease;
+    position: relative; overflow: hidden;
+  }
+  body.theme-light .hero {
+    background: linear-gradient(160deg, #EDE7D9 0%, #F5F0E8 60%, #EAE3D5 100%);
+  }
+  body.theme-genz-bold .hero {
+    background: linear-gradient(135deg, #0A0F1E 0%, #0D1F35 50%, #091A28 100%);
+  }
+  body.theme-genz-bold .hero-eyebrow {
+    background: rgba(0,212,180,0.12);
+    border-color: rgba(0,212,180,0.3);
+  }
+  body.theme-genz-fresh .hero {
+    background: linear-gradient(135deg, #E4E8F0 0%, #F2F4F8 60%, #EBF0FA 100%);
+  }
+  body.theme-genz-fresh .hero-eyebrow {
+    background: rgba(37,99,235,0.08);
+    border-color: rgba(37,99,235,0.2);
+    color: #2563EB;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gold);
+    background: rgba(240,165,0,0.1);
+    border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 100px; padding: 6px 18px;
+    margin-bottom: 32px;
+  }
+  .hero-headline {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    font-weight: 800; line-height: 1.06;
+    letter-spacing: -0.04em; color: var(--chalk);
+    margin-bottom: 28px;
+  }
+  .hero-headline .accent { color: var(--gold); }
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--mist); max-width: 600px;
+    line-height: 1.75; margin-bottom: 44px;
+  }
+  .hero-arrow { font-size: 1.4rem; color: var(--faint); animation: bounce 2s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+
+  /* ── Section ── */
+  .section {
+    max-width: 1100px; margin: 0 auto;
+    padding: 80px 28px;
+  }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.03em; color: var(--chalk);
+    margin-bottom: 14px;
+  }
+  .section-sub {
+    font-size: 1rem; color: var(--mist);
+    margin-bottom: 48px;
+  }
+
+  /* ── Cards ── */
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .path-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 14px;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  body.theme-light .path-card {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  }
+  .path-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  .path-icon { font-size: 2rem; }
+  .tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(240,165,0,0.1);
+    color: var(--gold); border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 100px; padding: 4px 12px;
+    width: fit-content;
+  }
+  .path-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem; font-weight: 700;
+    line-height: 1.25; color: var(--chalk);
+  }
+  .path-desc { font-size: 0.9rem; color: var(--mist); line-height: 1.7; }
+  .path-topics {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;
+  }
+  .path-topic {
+    font-size: 0.72rem; color: var(--faint);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 6px; padding: 3px 10px;
+  }
+  body.theme-light .path-topic { background: rgba(0,0,0,0.04); }
+  .path-link {
+    margin-top: auto; display: flex; align-items: center; gap: 6px;
+    font-size: 0.85rem; font-weight: 600; color: var(--gold);
+  }
+
+  /* ── Stats strip ── */
+  .stats-strip {
+    display: flex; border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--ink);
+    transition: background 0.3s;
+  }
+  body.theme-light .stats-strip { background: #EDE7D9; }
+  .stat-item {
+    flex: 1; padding: 40px 28px; text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.4rem; font-weight: 800; color: var(--gold);
+  }
+  .stat-label { font-size: 0.82rem; color: var(--mist); margin-top: 4px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid var(--border);
+    padding: 40px 28px;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 16px; text-align: center;
+    transition: background 0.3s;
+  }
+  body.theme-light footer { background: #EDE7D9; }
+  body.theme-genz-bold footer { background: #111827; }
+  body.theme-genz-fresh footer { background: #E4E8F0; }
+  body.theme-genz-bold .stats-strip { background: #111827; }
+  body.theme-genz-fresh .stats-strip { background: #E4E8F0; }
+  body.theme-genz-bold .path-card { box-shadow: 0 0 0 1px rgba(0,212,180,0.08); }
+  body.theme-genz-fresh .path-card { box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+  body.theme-genz-fresh .path-topic { background: rgba(0,0,0,0.04); }
+  /* CTA button override for GenZ themes */
+  body.theme-genz-bold .nav-cta { background: #C8FF00; color: #0A0F1E; }
+  body.theme-genz-bold .nav-cta:hover { background: #DAFF40; }
+  body.theme-genz-fresh .nav-cta { background: #FACC15; color: #0F172A; }
+  body.theme-genz-fresh .nav-cta:hover { background: #FCD34D; }
+  body.theme-genz-bold .path-link { color: #00D4B4; }
+  body.theme-genz-fresh .path-link { color: #2563EB; }
+  body.theme-genz-bold .tag { background: rgba(0,212,180,0.1); border-color: rgba(0,212,180,0.25); color: #00D4B4; }
+  body.theme-genz-fresh .tag { background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.2); color: #2563EB; }
+  .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--chalk); }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+  .footer-links a { font-size: 0.82rem; color: var(--faint); }
+  .footer-links a:hover { color: var(--chalk); }
+  .footer-copy { font-size: 0.75rem; color: var(--faint); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-row1">
+    <div class="nav-logo">en<span>aasan</span></div>
+    <button class="nav-cta">Find your path →</button>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-pill active">EN</button>
+    <button class="lang-pill">தமிழ்</button>
+    <button class="lang-pill">తెలుగు</button>
+    <button class="lang-pill">हिंदी</button>
+  </div>
+  <div class="theme-switcher">
+    <span class="theme-label" id="theme-name">Dark Navy (current)</span>
+    <button class="theme-dot theme-dot-dark active" data-theme="dark" title="Dark Navy (current)"></button>
+    <button class="theme-dot theme-dot-light" data-theme="light" title="Warm Light"></button>
+    <button class="theme-dot theme-dot-genz-bold" data-theme="genz-bold" title="Gen Z Bold (teal + lime)"></button>
+    <button class="theme-dot theme-dot-genz-fresh" data-theme="genz-fresh" title="Gen Z Fresh (blue + yellow)"></button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-eyebrow">Career guidance for Indian students</div>
+  <h1 class="hero-headline">
+    Whatever stage you are at —<br/>
+    <span class="accent">what comes next?</span>
+  </h1>
+  <p class="hero-sub">Whether you are choosing a stream, planning after 12th, figuring out college, or starting your career — enaasan is your guide to thinking it through clearly.</p>
+  <div class="hero-arrow">↓</div>
+</section>
+
+<!-- Stats -->
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Entrance exams explained</div></div>
+  <div class="stat-item"><div class="stat-num">40+</div><div class="stat-label">Career paths mapped</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Languages</div></div>
+  <div class="stat-item"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
+</div>
+
+<!-- Cards -->
+<section class="section">
+  <p class="section-label">Where are you right now?</p>
+  <h2 class="section-heading">Pick what's on your mind</h2>
+  <p class="section-sub">No forms. No sign-up. Just start where you are.</p>
+  <div class="paths-grid">
+
+    <div class="path-card">
+      <span class="path-icon">🎯</span>
+      <span class="tag">🎯 Grade 10 · Board exams done</span>
+      <h3 class="path-title">Which stream should I choose?</h3>
+      <p class="path-desc">Science, Commerce, or Arts? Beyond "what are you good at" — understand what each stream actually leads to, and which one fits the life you want.</p>
+      <div class="path-topics">
+        <span class="path-topic">PCM</span>
+        <span class="path-topic">PCB</span>
+        <span class="path-topic">Commerce</span>
+        <span class="path-topic">Arts / Humanities</span>
+      </div>
+      <div class="path-link">Explore streams →</div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">🗺️</span>
+      <span class="tag">🗺️ Grade 11–12 · Inter students</span>
+      <h3 class="path-title">What can I do after 12th?</h3>
+      <p class="path-desc">JEE, NEET, CLAT, CUET, NID, CA Foundation — understand which entrance exam leads where, what colleges are realistic, and what careers come out the other side.</p>
+      <div class="path-topics">
+        <span class="path-topic">JEE / NEET</span>
+        <span class="path-topic">CUET</span>
+        <span class="path-topic">CLAT</span>
+        <span class="path-topic">CA / CS</span>
+      </div>
+      <div class="path-link">Plan after 12th →</div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">💼</span>
+      <span class="tag">💼 College / Early career</span>
+      <h3 class="path-title">What skills does the job market actually want?</h3>
+      <p class="path-desc">Degrees don't tell you what skills to build. See what employers really look for in different roles — from IT and finance to healthcare, design, and operations.</p>
+      <div class="path-topics">
+        <span class="path-topic">Tech roles</span>
+        <span class="path-topic">Finance</span>
+        <span class="path-topic">Management</span>
+        <span class="path-topic">Creative</span>
+      </div>
+      <div class="path-link">See job skill maps →</div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">👨‍👩‍👧</span>
+      <span class="tag">👨‍👩‍👧 Parents · Counsellors</span>
+      <h3 class="path-title">Supporting the young people in your life</h3>
+      <p class="path-desc">Guidance for parents, career counsellors, and placement coordinators — understand the landscape so you can guide students with current, accurate information.</p>
+      <div class="path-topics">
+        <span class="path-topic">For parents</span>
+        <span class="path-topic">Counsellors</span>
+        <span class="path-topic">Coordinators</span>
+      </div>
+      <div class="path-link">Go to guidance hub →</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="#">Home</a>
+    <a href="#">Stream Explorer</a>
+    <a href="#">After 12th</a>
+    <a href="#">Career Compass</a>
+    <a href="#">About</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script>
+  const themes = ['dark', 'light', 'genz-bold', 'genz-fresh'];
+  const saved = localStorage.getItem('enaasan-theme') || 'genz-fresh';
+  applyTheme(saved);
+
+  document.querySelectorAll('.theme-dot').forEach(btn => {
+    btn.addEventListener('click', function() {
+      applyTheme(this.dataset.theme);
+      localStorage.setItem('enaasan-theme', this.dataset.theme);
+    });
+  });
+
+  function applyTheme(theme) {
+    themes.forEach(t => document.body.classList.remove('theme-' + t));
+    if (theme !== 'dark') document.body.classList.add('theme-' + theme);
+    document.querySelectorAll('.theme-dot').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+    document.getElementById('theme-name').textContent = {
+      'dark': 'Dark Navy (current)',
+      'light': 'Warm Light',
+      'genz-bold': 'Gen Z Bold — teal + lime',
+      'genz-fresh': 'Gen Z Fresh — electric blue + yellow'
+    }[theme];
+  }
+</script>
+
+</body>
+</html>
