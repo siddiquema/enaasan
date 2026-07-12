@@ -7,3 +7,5 @@
 *.ico  binary
 *.woff binary
 *.woff2 binary
+*.docx binary
+*.epub binary

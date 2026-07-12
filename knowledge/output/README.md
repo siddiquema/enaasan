@@ -4,7 +4,7 @@
 
 Reserved for compiled/rendered artifacts produced by the pipeline described in `publishing/publishing-workflow.md` — a PDF rendered from a Markdown source, a DOCX for review, a rendered HTML fragment. These are **build products**, not source content: nothing here should ever be hand-edited directly, since any manual edit would be lost the next time the source is re-rendered.
 
-**This folder is empty today by design.** No renderer exists yet (see `publishing/README.md`) — creating this folder now simply reserves the intended location so that when a rendering pipeline is eventually built, it has a defined, already-documented place to write to.
+A renderer now exists: `knowledge/publishing/tools/build.py` (see `publishing/implementation-notes.md` for usage and limitations). It writes HTML, PDF, and DOCX outputs here, named by Document ID. `epub/` remains reserved and empty.
 
 ## Contents
 

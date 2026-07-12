@@ -6,7 +6,11 @@ Real publications aimed at recent graduates and final-year students — job sear
 
 ## Contents
 
-Empty today. Each future publication gets its own subfolder, named by slug.
+| Publication | Document ID |
+|---|---|
+| `first-90-days-job-search/` | ENA-WORKBOOK-GRAD-first-90-days-job-search-v1.0 — the definitive first-job-search workbook (project ENA-GRAD-001) |
+
+Each publication gets its own subfolder, named by slug.
 
 ## Naming Convention
 
