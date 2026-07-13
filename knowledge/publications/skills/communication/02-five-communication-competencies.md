@@ -1,15 +1,36 @@
-# The 5 Communication Competencies Employers Value
+---
+id: ENA-KCARD-SKILL-five-communication-competencies
+type: knowledge-card
+category: framework
+title: "The 5 Communication Competencies Employers Value"
+description: "A framework of the five communication competencies Indian employers assess — active listening, clarity, emotional intelligence, persuasion, adaptability — with a self-rating table and practice methods for each."
+purpose: "Helps a student facing 'strong communication skills required' in job postings understand what will actually be assessed, and where their own gaps are."
+outcome: "Student can self-assess against the five competencies, identify their two weakest, and choose targeted practice — for this role search and every future one."
+status: draft
+version: 0.2
+owner: "Career Guidance (S. Ahamed)"
+created: 2026-07-12
+updated: 2026-07-13
+language: en
+visibility: internal
+license: default
+domain: skills
+stage: [after12, college, graduate, early-career]
+audience: [student]
+register: reference
+stakes: low
+evidence: expert-opinion
+evidence_notes: "Synthesis from recruiter interviews (50+, 2024-25) and job-postings analysis (500+ roles); the five-competency grouping itself is our editorial synthesis, not a measured finding — hence rated by the weakest load-bearing claim, not the underlying data."
+uncertainty: "The grouping into exactly five competencies is a teaching choice; other valid models exist. Which competencies dominate varies by role — voice roles weight listening, analyst roles weight written clarity."
+last_reviewed: 2026-07-12
+review_due: 2027-07-12
+maturity: seed
+relationships:
+  - requires: ENA-KCARD-SKILL-communication-competency-definition
+tags: [communication, soft-skills, self-assessment]
+---
 
-**Document ID:** ENA-KCARD-SKILL-five-communication-competencies-v0.1  
-**Knowledge Card Type:** Framework  
-**Domain:** Skills  
-**Facets:** stage: after12, college, graduate, early-career · audience: student · register: reference  
-**Language:** English  
-**Status:** Draft  
-**Owner:** Career Guidance  
-**Created:** 2026-07-12  
-**Evidence Level:** Primary Research (recruiter interviews + job postings analysis, 2024-25)  
-**Review Cycle:** Annually  
+# The 5 Communication Competencies Employers Value
 
 ---
 

@@ -1,15 +1,36 @@
-# Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist
+---
+id: ENA-KCARD-SKILL-communication-readiness-checklist
+type: knowledge-card
+category: checklist
+title: "Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist"
+description: "A 30-item self-assessment across six communication areas, with a scoring guide, role-readiness interpretation, and a 3-month development plan for gaps."
+purpose: "Helps a student deciding whether to apply for customer-facing, sales, or leadership roles now — or to build specific gaps first — before an interviewer decides for them."
+outcome: "Student can honestly locate their communication gaps, choose roles matching their current level, and run their own development plan — a self-assessment method they can reuse for any skill."
+status: draft
+version: 0.2
+owner: "Career Guidance (S. Ahamed)"
+created: 2026-07-12
+updated: 2026-07-13
+language: en
+visibility: internal
+license: default
+domain: skills
+stage: [college, graduate, early-career]
+audience: [student]
+register: reference
+stakes: medium
+evidence: expert-opinion
+evidence_notes: "Assessment items constructed from role competency requirements across BPS, tech, finance, and healthcare employers; scoring thresholds are editorial heuristics, not validated psychometrics."
+uncertainty: "Self-assessment is systematically unreliable — people misjudge their own communication; the card mitigates but cannot remove this. Scoring bands are guidance heuristics, not a validated instrument. A trusted outsider's view is a necessary check."
+last_reviewed: 2026-07-12
+review_due: 2027-07-12
+maturity: seed
+relationships:
+  - requires: ENA-KCARD-SKILL-five-communication-competencies
+tags: [communication, soft-skills, self-assessment, checklist]
+---
 
-**Document ID:** ENA-KCARD-SKILL-communication-readiness-checklist-v0.1  
-**Knowledge Card Type:** Checklist  
-**Domain:** Skills  
-**Facets:** stage: college, graduate, early-career · audience: student · register: reference  
-**Language:** English  
-**Status:** Draft  
-**Owner:** Career Guidance  
-**Created:** 2026-07-12  
-**Evidence Level:** Expert Opinion (based on role competency requirements)  
-**Review Cycle:** Annually  
+# Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist
 
 ---
 

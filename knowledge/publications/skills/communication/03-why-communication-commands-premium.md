@@ -1,15 +1,36 @@
-# Why Communication Skills Command a 20–30% Salary Premium
+---
+id: ENA-KCARD-SKILL-communication-salary-premium
+type: knowledge-card
+category: mental-model
+title: "Why Communication Skills Command a 20–30% Salary Premium"
+description: "The economic mechanism behind the communication pay gap — reduced rework, faster resolution, fewer escalations, better retention — with indicative premiums by role level."
+purpose: "Helps a student deciding whether deliberate communication practice is worth real investment alongside marks and technical preparation."
+outcome: "Student can evaluate any 'soft skills matter' claim in rupee terms, and apply the same cost-of-error reasoning to judge skill claims they encounter anywhere."
+status: draft
+version: 0.2
+owner: "Career Guidance (S. Ahamed)"
+created: 2026-07-12
+updated: 2026-07-13
+language: en
+visibility: internal
+license: default
+domain: skills
+stage: [after12, college, graduate, early-career]
+audience: [student, parent]
+register: reference
+stakes: medium
+evidence: secondary-research
+evidence_notes: "Premium ranges from salary-postings analysis (Glassdoor, AmbitionBox, LinkedIn Salary; 500+ roles, 2024-25) and NASSCOM BPS reporting. The worked cost calculations (rework, escalation, retention arithmetic) are illustrative constructions explaining the mechanism — they are not measurements and are not load-bearing for the premium claim."
+uncertainty: "Premiums vary by company tier, city, shift, and function; the 20–30% figure is an indicative range across levels, not an offer anyone will receive. Salary data ages fast — verify against live postings before relying on specific numbers."
+last_reviewed: 2026-07-12
+review_due: 2027-01-12
+maturity: seed
+relationships:
+  - requires: ENA-KCARD-SKILL-communication-competency-definition
+tags: [communication, soft-skills, salary]
+---
 
-**Document ID:** ENA-KCARD-SKILL-communication-salary-premium-v0.1  
-**Knowledge Card Type:** Mental Model  
-**Domain:** Skills  
-**Facets:** stage: after12, college, graduate, early-career · audience: student, parent · register: reference  
-**Language:** English  
-**Status:** Draft  
-**Owner:** Career Guidance  
-**Created:** 2026-07-12  
-**Evidence Level:** Primary Research (salary data analysis across 500+ roles, 2024-25) + Expert Opinion  
-**Review Cycle:** Annually  
+# Why Communication Skills Command a 20–30% Salary Premium
 
 ---
 

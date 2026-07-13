@@ -1,15 +1,36 @@
-# How Salary Ranges Shift with Communication Quality in BPS — Real Examples
+---
+id: ENA-KCARD-SKILL-communication-salary-impact-bps
+type: knowledge-card
+category: example
+title: "How Salary Ranges Shift with Communication Quality in BPS — Worked Examples"
+description: "Three worked comparisons (agent, analyst, team lead) showing how communication quality translates into salary and career-trajectory differences in BPS, with a 20-year earnings comparison."
+purpose: "Makes the abstract salary-premium claim concrete for a student who needs to see rupee amounts and a career arc, not percentages, to weigh the investment."
+outcome: "Student can trace how communication quality compounds through incentives, role access, and promotion speed — and apply that compounding lens to any skill decision."
+status: draft
+version: 0.2
+owner: "Career Guidance (S. Ahamed)"
+created: 2026-07-12
+updated: 2026-07-13
+language: en
+visibility: internal
+license: default
+domain: skills
+stage: [after12, graduate, early-career]
+audience: [student]
+register: reference
+stakes: medium
+evidence: anecdotal
+evidence_notes: "The paired comparisons (Agent A/B, Analyst A/B, Lead A/B) are ILLUSTRATIVE COMPOSITES constructed from real salary bands (Glassdoor, AmbitionBox, LinkedIn Salary 2024-25) and practitioner interviews — they are not case studies of real individuals, and they are the card's load-bearing content, which sets this rating. Salary bands themselves are secondary-research."
+uncertainty: "No real individual's outcome will match these composites; they illustrate direction and mechanism, not guaranteed amounts. Incentive structures differ by company; the 20-year projection compounds assumptions and should be read as a shape, not a forecast. Surfaces embedding this card should label it as illustrative."
+last_reviewed: 2026-07-12
+review_due: 2027-01-12
+maturity: seed
+relationships:
+  - exemplifies: ENA-KCARD-SKILL-communication-salary-premium
+tags: [communication, soft-skills, salary, bps]
+---
 
-**Document ID:** ENA-KCARD-SKILL-communication-salary-impact-bps-v0.1  
-**Knowledge Card Type:** Example  
-**Domain:** Skills  
-**Facets:** stage: after12, graduate, early-career · audience: student · register: reference  
-**Language:** English  
-**Status:** Draft  
-**Owner:** Career Guidance  
-**Created:** 2026-07-12  
-**Evidence Level:** Primary Research (job postings + salary data from Glassdoor, AmbitionBox, LinkedInSalary; 2024-25) + Expert Opinion  
-**Review Cycle:** Annually  
+# How Salary Ranges Shift with Communication Quality in BPS — Worked Examples
 
 ---
 

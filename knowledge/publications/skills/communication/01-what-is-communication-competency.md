@@ -1,15 +1,35 @@
-# What is Communication Competency?
+---
+id: ENA-KCARD-SKILL-communication-competency-definition
+type: knowledge-card
+category: definition
+title: "What is Communication Competency?"
+description: "Defines professional communication competency and its four dimensions — clarity, empathy, engagement, consistency — as distinct from English fluency."
+purpose: "Helps a student who equates 'communication skills' with spoken English understand what employers actually assess — before investing in the wrong preparation."
+outcome: "Student can distinguish communication competency from language proficiency, name the four dimensions, and judge for themselves what any role is really asking for."
+status: draft
+version: 0.2
+owner: "Career Guidance (S. Ahamed)"
+created: 2026-07-12
+updated: 2026-07-13
+language: en
+visibility: internal
+license: default
+domain: skills
+stage: [after12, college, graduate, early-career]
+audience: [student, parent]
+register: reference
+stakes: low
+evidence: expert-opinion
+evidence_notes: "Competency framing synthesized from models used by large BPS employers (Genpact, WNS, EXL, Accenture), SHRM frameworks, and recruiter interviews (2025)."
+uncertainty: "This is one widely-used framing, not a universal standard; employers weight the four dimensions differently by role and sector."
+last_reviewed: 2026-07-12
+review_due: 2027-07-12
+maturity: seed
+relationships: []
+tags: [communication, soft-skills]
+---
 
-**Document ID:** ENA-KCARD-SKILL-communication-competency-definition-v0.1  
-**Knowledge Card Type:** Definition  
-**Domain:** Skills  
-**Facets:** stage: after12, college, graduate, early-career · audience: student, parent · register: reference  
-**Language:** English  
-**Status:** Draft  
-**Owner:** Career Guidance  
-**Created:** 2026-07-12  
-**Evidence Level:** Expert Opinion (based on recruiter and employer feedback)  
-**Review Cycle:** Annually  
+# What is Communication Competency?
 
 ---
 
