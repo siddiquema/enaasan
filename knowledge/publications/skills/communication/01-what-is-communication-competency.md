@@ -1,7 +1,9 @@
 # What is Communication Competency?
 
+**Document ID:** ENA-KCARD-SKILL-communication-competency-definition-v0.1  
 **Knowledge Card Type:** Definition  
-**Category:** Skill / Soft Skills  
+**Domain:** Skills  
+**Facets:** stage: after12, college, graduate, early-career · audience: student, parent · register: reference  
 **Language:** English  
 **Status:** Draft  
 **Owner:** Career Guidance  

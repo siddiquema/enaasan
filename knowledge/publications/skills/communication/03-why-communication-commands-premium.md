@@ -1,7 +1,9 @@
 # Why Communication Skills Command a 20–30% Salary Premium
 
+**Document ID:** ENA-KCARD-SKILL-communication-salary-premium-v0.1  
 **Knowledge Card Type:** Mental Model  
-**Category:** Skill / Soft Skills  
+**Domain:** Skills  
+**Facets:** stage: after12, college, graduate, early-career · audience: student, parent · register: reference  
 **Language:** English  
 **Status:** Draft  
 **Owner:** Career Guidance  

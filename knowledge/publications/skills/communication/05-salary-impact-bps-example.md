@@ -1,7 +1,9 @@
 # How Salary Ranges Shift with Communication Quality in BPS — Real Examples
 
+**Document ID:** ENA-KCARD-SKILL-communication-salary-impact-bps-v0.1  
 **Knowledge Card Type:** Example  
-**Category:** Skill / Career Impact  
+**Domain:** Skills  
+**Facets:** stage: after12, graduate, early-career · audience: student · register: reference  
 **Language:** English  
 **Status:** Draft  
 **Owner:** Career Guidance  

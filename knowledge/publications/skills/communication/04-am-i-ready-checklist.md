@@ -1,7 +1,9 @@
 # Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist
 
+**Document ID:** ENA-KCARD-SKILL-communication-readiness-checklist-v0.1  
 **Knowledge Card Type:** Checklist  
-**Category:** Skill / Self-Assessment  
+**Domain:** Skills  
+**Facets:** stage: college, graduate, early-career · audience: student · register: reference  
 **Language:** English  
 **Status:** Draft  
 **Owner:** Career Guidance  

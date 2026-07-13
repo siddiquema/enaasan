@@ -2,10 +2,13 @@
 
 Every publication gets exactly one Document ID, assigned when it's created, kept for the document's entire life (including all future versions and even after retirement).
 
+> **Amended per KA-1.0 (`knowledge-architecture-1.0.md`, amendment A2):** the third ID segment is an **AUDIENCE code for audience-targeted publications** but a **DOMAIN code for Knowledge Cards** (`KCARD`). Rationale: audience is a facet and facets change over a card's life; an ID must never change. A card's domain is its one permanent, canonical home, so it belongs in the identity.
+
 ## Format
 
 ```
-ENA-<TYPE>-<AUDIENCE>-<slug>-v<major>.<minor>
+Audience-targeted publications:  ENA-<TYPE>-<AUDIENCE>-<slug>-v<major>.<minor>
+Knowledge Cards (TYPE = KCARD):  ENA-KCARD-<DOMAIN>-<slug>-v<major>.<minor>
 ```
 
 ## TYPE codes
@@ -26,7 +29,7 @@ ENA-<TYPE>-<AUDIENCE>-<slug>-v<major>.<minor>
 
 If a genuinely new type is needed, add its code and template here and in `templates/README.md` in the same change — don't invent a code ad hoc inside a single document.
 
-## AUDIENCE codes
+## AUDIENCE codes (all TYPEs except KCARD)
 
 | Code | Meaning |
 |---|---|
@@ -38,7 +41,21 @@ If a genuinely new type is needed, add its code and template here and in `templa
 | `WORK` | Early-career / workplace-readiness content |
 | `ALL` | Genuinely audience-agnostic content (used sparingly — see the `audience` field note in `metadata-standard.md`) |
 
-These map directly to the `audience:` metadata field and, loosely, to the `publications/` subfolders (`graduates/`, `schools/`, `parents/`, `careers/`, `workplace/`) — a document's AUDIENCE code should match the subfolder it lives in.
+These map to the *primary* audience of an audience-targeted publication and, loosely, to the audience subfolders of `publications/` (`graduates/`, `schools/`, `parents/`, `careers/`, `workplace/`). Note that the `audience:` metadata field itself is multi-valued per KA-1.0 amendment A1; the ID code reflects the primary audience the publication was written for.
+
+## DOMAIN codes (TYPE = KCARD only)
+
+| Code | KA-1.0 Domain | The student's question |
+|---|---|---|
+| `PATH` | Pathways | "What can I study, and how do I get in?" |
+| `CAREER` | Careers | "What work exists, and what is it really like?" |
+| `SKILL` | Skills | "What capabilities do I need?" |
+| `DECIDE` | Deciding | "How do I choose?" |
+| `MIND` | Mindset | "How do I handle the pressure and the people?" |
+
+For a `KCARD`, the third segment is **always** a DOMAIN code, matching the card's `domain:` metadata field exactly. (`CAREER` appears in both tables; the TYPE segment disambiguates — `ENA-PROFILE-CAREER-…` is an audience code, `ENA-KCARD-CAREER-…` is a domain code.)
+
+**Worked example (real):** the communication salary-premium card at `publications/skills/communication/03-why-communication-commands-premium.md` is `ENA-KCARD-SKILL-communication-salary-premium-v0.1` — domain `SKILL` in the ID and it stays there even as the card's `stage` and `audience` facets grow over time.
 
 ## Slug
 

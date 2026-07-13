@@ -1,7 +1,9 @@
 # The 5 Communication Competencies Employers Value
 
+**Document ID:** ENA-KCARD-SKILL-five-communication-competencies-v0.1  
 **Knowledge Card Type:** Framework  
-**Category:** Skill / Soft Skills  
+**Domain:** Skills  
+**Facets:** stage: after12, college, graduate, early-career · audience: student · register: reference  
 **Language:** English  
 **Status:** Draft  
 **Owner:** Career Guidance  
