@@ -6,8 +6,8 @@ title: "Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist
 description: "A 30-item self-assessment across six communication areas, with a scoring guide, role-readiness interpretation, and a 3-month development plan for gaps."
 purpose: "Helps a student deciding whether to apply for customer-facing, sales, or leadership roles now — or to build specific gaps first — before an interviewer decides for them."
 outcome: "Student can honestly locate their communication gaps, choose roles matching their current level, and run their own development plan — a self-assessment method they can reuse for any skill."
-status: review
-version: 0.3
+status: published
+version: 1.0
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
 updated: 2026-07-14

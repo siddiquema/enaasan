@@ -6,8 +6,8 @@ title: "How Salary Ranges Shift with Communication Quality in BPS — Worked Exa
 description: "Three worked comparisons (agent, analyst, team lead) showing how communication quality translates into salary and career-trajectory differences in BPS, with a 20-year earnings comparison."
 purpose: "Makes the abstract salary-premium claim concrete for a student who needs to see rupee amounts and a career arc, not percentages, to weigh the investment."
 outcome: "Student can trace how communication quality compounds through incentives, role access, and promotion speed — and apply that compounding lens to any skill decision."
-status: review
-version: 0.3
+status: published
+version: 1.0
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
 updated: 2026-07-14

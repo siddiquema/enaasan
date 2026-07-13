@@ -33,7 +33,11 @@ Reviewer-hat pass per OPS-001 §5 (content review + metadata gate). Cooling peri
 | 4 checklist | medium | expert-opinion |
 | 5 worked examples | medium | anecdotal |
 
-On confirmation: status → published, visibility → public (pending the website-surface decision), maturity stays `seed` until the cards survive real usage.
+**EIC decision (2026-07-14):** Cards 1, 2, 4, 5 approved as proposed → **published, v1.0**. Card 3 **held** for an evidence-strengthening pass focused on organizational/workplace research rather than salary estimates.
+
+**Card 3 strengthening pass (2026-07-14, v0.4):** load-bearing claims re-grounded in published organizational research (Grammarly/Harris Poll 2022, PMI Pulse of the Profession 2013, Watson Wyatt Communication ROI, LinkedIn/NACE demand rankings, India Skills Report + AMCAT employability reporting) via a new "What Organizational Research Shows" section; the premium table is now explicitly non-load-bearing illustration. Evidence re-rated `secondary-research` on that restructured basis. US studies labeled as US in body and uncertainty. Awaiting final EIC approval.
+
+The nine calibration rules below were **approved by the EIC (2026-07-14)** as the initial baseline and promoted to `knowledge/standards/editorial-calibration-baseline.md`.
 
 ---
 
@@ -57,7 +61,8 @@ On confirmation: status → published, visibility → public (pending the websit
 
 ## Next in sprint
 
-- [ ] EIC confirms stakes/evidence table above → cards publish
+- [x] EIC confirms stakes/evidence → cards 1, 2, 4, 5 published v1.0 (2026-07-14)
+- [ ] Card 3 final approval after evidence-strengthening pass (v0.4, in review)
 - [ ] Triage next-wave card ideas (worth-making test): daily-practice playbook, interview communication, English-vs-communication FAQ, parents' role
 - [ ] Compose the Communication Skills Guide (first Publication; ≥3 embeds with context wrappers)
 - [ ] First website surface + reuse registry entries

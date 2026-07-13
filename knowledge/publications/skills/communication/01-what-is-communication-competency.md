@@ -6,8 +6,8 @@ title: "What is Communication Competency?"
 description: "Defines professional communication competency and its four dimensions — clarity, empathy, engagement, consistency — as distinct from English fluency."
 purpose: "Helps a student who equates 'communication skills' with spoken English understand what employers actually assess — before investing in the wrong preparation."
 outcome: "Student can distinguish communication competency from language proficiency, name the four dimensions, and judge for themselves what any role is really asking for."
-status: review
-version: 0.3
+status: published
+version: 1.0
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
 updated: 2026-07-14

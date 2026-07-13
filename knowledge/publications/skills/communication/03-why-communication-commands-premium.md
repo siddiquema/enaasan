@@ -7,7 +7,7 @@ description: "The economic mechanism behind the communication pay gap — reduce
 purpose: "Helps a student deciding whether deliberate communication practice is worth real investment alongside marks and technical preparation."
 outcome: "Student can evaluate any 'soft skills matter' claim in rupee terms, and apply the same cost-of-error reasoning to judge skill claims they encounter anywhere."
 status: review
-version: 0.3
+version: 0.4
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
 updated: 2026-07-14
@@ -20,9 +20,9 @@ stage: [after12, college, graduate, early-career]
 audience: [student, parent]
 register: reference
 stakes: medium
-evidence: expert-opinion
-evidence_notes: "Underlying salary bands are secondary research (Glassdoor, AmbitionBox, LinkedIn Salary; 500+ roles, 2024-25; NASSCOM BPS reporting). But postings do not label communication quality — the premium-by-level table is our informed MODELING of the gap from role-tier differences and recruiter interviews, which sets this rating (weakest load-bearing claim). Worked cost calculations are illustrative constructions explaining mechanism, not measurements."
-uncertainty: "Premiums vary by company tier, city, shift, and function; the 20–30% figure is an indicative modeled range, not a measurement and not an offer anyone will receive. The 20-year earnings trajectories compound assumptions and should be read as shapes, not forecasts. Salary data ages fast — verify against live postings."
+evidence: secondary-research
+evidence_notes: "Load-bearing claims (poor communication is a measured organizational cost; communication failures contribute to project failure; strong-communication firms outperform; the skill is top-demanded and under-supplied among Indian graduates) rest on published research: Grammarly/Harris Poll State of Business Communication 2022 (US), PMI Pulse of the Profession 2013, Watson Wyatt Communication ROI studies, LinkedIn in-demand-skills analyses, NACE Job Outlook, India Skills Report (Wheebox/CII), AMCAT National Employability Report. The premium-by-level table is explicitly NON-load-bearing: our illustrative model from salary-band analysis (Glassdoor, AmbitionBox, LinkedIn, NASSCOM) and recruiter interviews, labeled as modeled in the body. Worked cost calculations are illustrative constructions."
+uncertainty: "The 20–30% premium is an indicative modeled range, not a measurement and not an offer anyone will receive; it varies by company tier, city, shift, and function. The Grammarly/Harris and Watson Wyatt studies are US-based — their mechanisms transfer, their rupee equivalents do not. The 20-year earnings trajectories compound assumptions and should be read as shapes, not forecasts. Salary data ages fast — verify against live postings."
 last_reviewed: 2026-07-14
 review_due: 2027-01-14
 maturity: seed
@@ -52,6 +52,20 @@ Explain the economic mechanism behind why employers pay more for communication c
 **Communication competency reduces business costs and creates business value, so companies budget higher salaries to hire and retain people who have it.**
 
 This is not magic or favoritism. It's economics.
+
+---
+
+## What Organizational Research Shows
+
+Before any salary modeling, here is what published workplace research has repeatedly found:
+
+- **Poor communication is a measured business cost.** A Grammarly / Harris Poll study ("The State of Business Communication," 2022) estimated that US businesses lose on the order of **$1.2 trillion annually** to poor workplace communication — roughly **$12,500 per employee per year** in lost time and rework. The study is US-based; the mechanisms (misunderstood instructions, redundant clarification, failed handoffs) are not country-specific.
+- **Communication failures sink projects.** The Project Management Institute's *Pulse of the Profession* research (2013) found ineffective communication to be a primary contributor in roughly **one-third of failed projects**, putting a significant share of every project budget at risk.
+- **Companies that communicate well outperform.** Watson Wyatt's multi-year *Communication ROI* studies found that firms with the most effective communication practices delivered materially higher total returns to shareholders — the most-cited figure being **~47% higher over five years** — than firms with the least effective practices.
+- **Employers rank it at the top, year after year.** LinkedIn's global in-demand-skills analyses have repeatedly placed **communication at or near #1** among skills employers seek (including its 2024 list). Employer surveys such as NACE's *Job Outlook* consistently rank communication among the top attributes sought in fresh graduates.
+- **In India specifically, it is a scarcity.** Employability research on Indian graduates — the Wheebox/CII *India Skills Report* and Aspiring Minds/SHL (AMCAT) *National Employability Report* series — has consistently identified communication and workplace English proficiency as among the largest gaps keeping otherwise-qualified graduates out of corporate roles.
+
+**What this establishes:** organizations demonstrably lose money to poor communication, and the skill is both top-demanded and under-supplied in the Indian graduate market. Cost when absent + scarcity when present is exactly the condition under which employers pay a premium. None of these studies measures an individual's salary premium directly — the *size* of that premium, below, is our modeling.
 
 ---
 
@@ -198,11 +212,19 @@ After reading this card, you understand:
 
 ## References & Data Sources
 
+**Organizational and workplace research (load-bearing):**
+- Grammarly & The Harris Poll, *The State of Business Communication* (2022) — US cost-of-poor-communication estimates
+- Project Management Institute, *Pulse of the Profession* (2013) — communication and project failure
+- Watson Wyatt, *Communication ROI* studies — communication effectiveness and shareholder returns
+- LinkedIn in-demand-skills analyses (incl. 2024); NACE *Job Outlook* — employer demand rankings
+- Wheebox/CII *India Skills Report*; Aspiring Minds/SHL (AMCAT) *National Employability Report* — the Indian graduate communication gap
+
+**Salary modeling inputs (illustrative, not load-bearing):**
 - Glassdoor salary data analysis: 500+ roles across BPS, tech, finance, healthcare (2024-25)
 - AmbitionBox role comparison data: agent/SME/TL salary ranges
 - NASSCOM BPS sector report 2024-25
 - Interviews with 50+ recruiters and HR leaders on salary-setting criteria
-- The premium-by-level figures are modeled from these sources, not directly measured by any of them
+- The premium-by-level figures are modeled from these inputs, not directly measured by any of them
 
 *(Related cards are declared as typed relationships in this card's metadata.)*
 

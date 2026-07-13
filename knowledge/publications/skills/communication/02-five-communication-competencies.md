@@ -6,8 +6,8 @@ title: "The 5 Communication Competencies Employers Value"
 description: "A framework of the five communication competencies Indian employers assess — active listening, clarity, emotional intelligence, persuasion, adaptability — with a self-rating table and practice methods for each."
 purpose: "Helps a student facing 'strong communication skills required' in job postings understand what will actually be assessed, and where their own gaps are."
 outcome: "Student can self-assess against the five competencies, identify their two weakest, and choose targeted practice — for this role search and every future one."
-status: review
-version: 0.3
+status: published
+version: 1.0
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
 updated: 2026-07-14
