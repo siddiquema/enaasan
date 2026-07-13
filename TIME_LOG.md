@@ -14,6 +14,7 @@ Tracks time spent per Claude Code session on this project. Each entry is logged 
 | 2026-07-07 | 10:31 IST | 12:59 IST | 2h 28m | GEO quick wins: robots.txt created (#58), IndexNow GitHub Action live — all 12 pages submitted, HTTP 202 (#57), Bing verification confirmed done (#56 closed); #9 security headers premise corrected (GitHub Pages has no _headers support) — referrer meta added to all pages, relabelled needs-decision; #60 sitemap format verified, awaiting one-click Bing submit; fixed broken footer logo tag on careers.html ("en" missing — div lacked closing >). Backlog reviewed twice, grouped by tier. |
 | 2026-07-12 | 00:15 IST | 18:30 IST | 18h 15m | Brief check — untracked. |
 | 2026-07-12 | 18:37 IST | 22:42 IST | 4h 5m | EOS Phase 1 architecture design: EOS-001 philosophy (KaC methodology, 10-year stability), EOS-002 object model (10 frozen types, object categories, Purpose/Outcome). Architectural review feedback incorporated; focus on publishing value. Both specs committed. Ready for EOS-003 (metadata contract). |
+| 2026-07-13 | (not logged — session resumed without clock-in) | (in progress) | — | Communication skills gap identified on bps.html; 5 Knowledge Cards created (definition, framework, mental model, checklist, example). IA brainstorm: hub-and-spoke model, Voices section (letters + student input). Knowledge Architecture 1.0 drafted: two-axis model (domain/facet), 5 domains, tools-as-renderings, hubs-as-views, standards amendments A1–A3 proposed. |
 
 ## Running total (Claude Code only, tracked sessions)
 
