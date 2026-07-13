@@ -43,7 +43,7 @@ Explains the economic mechanism: Communication competency reduces business costs
 ### **4. Checklist: Am I Ready for a Communication-Heavy Role?**
 📄 [04-am-i-ready-checklist.md](04-am-i-ready-checklist.md)
 
-50-item self-assessment checklist across the 5 competencies. Scoring helps you assess readiness for customer-facing, leadership, or sales roles. Includes development plan if gaps exist.
+30-item self-assessment checklist across six communication areas. Scoring helps you assess readiness for customer-facing, leadership, or sales roles. Includes development plan if gaps exist.
 
 **Outcome:** Reader knows if they're ready for communication-heavy roles now, or what to work on first.
 

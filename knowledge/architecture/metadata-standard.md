@@ -2,60 +2,130 @@
 
 Every publication in `knowledge/publications/`, regardless of type, carries this metadata block as YAML front matter at the top of its Markdown source. No publication is considered complete without it.
 
-> **Amended per KA-1.0 (`knowledge-architecture-1.0.md`, amendment A1):** content is filed by **domain** and surfaced by **facets**. `audience` and `stage` are now multi-valued facets; `domain` and `register` are new required fields. The former rule "pick exactly one audience" is withdrawn — focus is enforced by atomicity (one concept per card), not audience-exclusivity.
+This standard is the Markdown/YAML **representation** of the EOS-003 Universal Metadata Contract. Every field traces to a Learning Philosophy commitment (see EOS-003 for the full traceability); a field that traces to nothing gets removed, per the two-way rule.
+
+> **Amendment history:**
+> **A1 (KA-1.0):** `audience` and `stage` became multi-valued facets; `domain` and `register` added; "pick exactly one audience" withdrawn — focus is enforced by atomicity, not audience-exclusivity.
+> **A4 (EOS-003 + EOS-003.1 pilot findings, R1–R8):** contract fields added (`description`, `purpose`, `outcome`, `stakes`, `volatile`, `evidence`, `evidence_notes`, `uncertainty`, `maturity`, typed `relationships`); `visibility`, `updated`, and `review_due` became **derived** fields; authoring conventions added from pilot evidence.
+
+---
+
+## Authored vs. derived: what a contributor actually writes
+
+The pilot (EOS-003.1) showed the contract's ~24 fields split cleanly. **Contributors hand-write only the authored core (~9 fields); everything else is defaulted, inferred, or set at review.** Contributors should start from `templates/AUTHOR_TEMPLATE.md`, which contains only the authored fields.
+
+| Authored by the contributor | Defaulted / inferred | Set or confirmed at review |
+|---|---|---|
+| title, description, purpose, outcome, stage, audience, evidence (proposal), evidence_notes, uncertainty | id, type, category, domain, language, created, updated (git), version, status, visibility (derived), register, license, review_due (computed) | stakes (confirmed), evidence (confirmed), maturity (raised), relationships (checked) |
+
+---
 
 ## The block
 
 ```yaml
 ---
-document_id: ENA-<TYPE>-<AUDIENCE or DOMAIN>-<slug>-v<major>.<minor>
-title: "[Full title as it should appear to a reader]"
-subtitle: "[Optional one-line subtitle — omit the key entirely if unused]"
-version: <major>.<minor>
-status: Draft | In Review | Published | Under Revision | Retired
-author: "[Person or team responsible for the content]"
-domain: Pathways | Careers | Skills | Deciding | Mindset
-audience: [student, parent, educator]        # multi-valued facet — list every audience served
-stage: [after10, after12, college, graduate, early-career]   # multi-valued facet
-register: reference | voice
-reading_level: "[Plain-language description, not a grade number — see below]"
-estimated_reading_time: "[e.g. 8 minutes — omit for interactive/workbook types, use estimated_completion_time instead]"
-estimated_completion_time: "[e.g. 2 hours across 1 week — for workbooks, checklists, learning paths]"
-difficulty: Not applicable | Beginner | Intermediate | Advanced
-tags: [kebab-case, free-text, tags]
-prerequisites: ["ENA-... document IDs, or 'None'"]
-related_documents: ["ENA-... document IDs"]
-related_careers: ["Career names, free text for now — see architecture/README.md Future Expansion"]
-related_skills: ["Skill names, free text for now"]
-last_reviewed: "YYYY-MM-DD"
-review_due: "YYYY-MM-DD"
-license: "Free to read, download, and share for personal and educational use. Not for resale or republishing without permission. © enaasan.online"
+# ── identity (inferred/assigned — do not hand-edit after creation) ──
+id: ENA-<TYPE>-<AUDIENCE or DOMAIN>-<slug>          # per document-id-standard.md
+type: knowledge-card | publication | learning-path | ...
+category: definition | mental-model | checklist | faq | framework | reflection | example |
+          guide | workbook | playbook | career-profile | reference | toolkit | letter | student-voice
+domain: pathways | careers | skills | deciding | mindset
+language: en | ta | te | hi
+version: <major>.<minor>                             # Draft = 0.x
+status: draft | review | published | maintained | deprecated | archived | retired
+owner: "[Named human or team — never 'AI' alone]"
+created: YYYY-MM-DD
+license: default                                     # free to read/download/share; override needs justification
+
+# ── authored core (the contributor writes these — see AUTHOR_TEMPLATE.md) ──
+title: "[Reader-facing title, plain words]"
+description: "[1–2 sentences: WHAT this is and who should care]"
+purpose: "[The student decision or fear this serves — not the topic]"
+outcome: "[A capability the student GAINS — never a decision made for them]"
+stage: [after10, after12, college, graduate, early-career]   # every stage where it applies
+audience: [student, parent, educator]                        # everyone it genuinely serves
+evidence: primary-research | secondary-research | expert-opinion | anecdotal | opinion
+evidence_notes: "[What it rests on, named sources; label illustrative composites]"
+uncertainty: "[What we don't know, what varies, what the student must verify]"
+
+# ── review-owned (proposed by author, confirmed at review) ──
+stakes: high | medium | low          # consequence to a student of this being wrong
+volatile: true | false               # does it contain fast-aging data (salaries, fees, exam patterns, cutoffs)?
+maturity: seed | developing | established | authoritative    # seed by default; only reviewers raise it
+relationships:                       # typed, one direction only (vocabulary per EOS-004)
+  - requires: ENA-...
+  - exemplifies: ENA-...
+
+# ── derived (never hand-written) ──
+# updated:      from git history
+# visibility:   derived from status (private until review, internal in review, public when published)
+# review_due:   computed from stakes × volatile (table below)
+register: reference | voice          # defaulted from category (letter/student-voice → voice)
+last_reviewed: YYYY-MM-DD            # set by the reviewer at each review; per-language for translations
 ---
 ```
 
-A ready-to-copy blank version lives at `templates/metadata-template.md`.
+A ready-to-copy contributor version (authored fields only) lives at `templates/AUTHOR_TEMPLATE.md`.
 
-## Field-by-field rules
+---
 
-- **`document_id`** — assigned once, per `document-id-standard.md`. Never changes across versions of the same document; only the `-v<major>.<minor>` suffix updates as `version` changes.
-- **`title` / `subtitle`** — reader-facing. Not the same as the document ID's slug, which is a short machine-friendly stand-in.
-- **`version`** — must exactly match the version embedded in `document_id`. See `versioning-standard.md` for what counts as a major vs. minor change.
-- **`status`** —
-  - `Draft`: being written, version is 0.x
-  - `In Review`: complete draft, awaiting the review described in `standards/publication-standard.md`
-  - `Published`: reviewed and live somewhere (as a PDF, on the site, etc.)
-  - `Under Revision`: a published document currently being updated — the old version stays available until the new one replaces it
-  - `Retired`: no longer maintained; the document should say what (if anything) replaces it
-- **`author`** — a name or role, not "AI" alone. Per enaasan's existing public commitment (see `about.html`'s transparency section), AI may assist drafting, but a named human is responsible for what's published — that applies here identically.
-- **`domain`** — exactly one of the five KA-1.0 domains (Pathways, Careers, Skills, Deciding, Mindset). This is the document's canonical home and never changes. Use the boundary tests in `knowledge-architecture-1.0.md` §3 when the choice is ambiguous.
-- **`audience`** — multi-valued facet: list every audience the content genuinely serves (`student`, `parent`, `educator`). *(Amended per KA-1.0 A1 — the previous "pick exactly one" rule forced duplication of reusable knowledge. Focus is now enforced by atomicity, not audience-exclusivity. A card that serves everyone lists everyone.)*
-- **`stage`** — multi-valued facet: every life stage where the content applies. Hubs and learning paths query this field; tagging a card with a new stage is how it appears in a new hub with zero content changes.
-- **`register`** — `reference` (timeless, maintained, re-reviewed on cycle) or `voice` (dated, immutable — letters and student contributions; see KA-1.0 §5.5). Voice-register documents carry a publication date instead of a `review_due`.
-- **`reading_level`** — a plain description (e.g. "Plain English — no prior subject knowledge assumed"), not a Flesch-Kincaid score. See `branding/writing-style.md` for what "plain English" means here.
-- **`estimated_reading_time` / `estimated_completion_time`** — use reading time for things meant to be read straight through (Guides, Reference Guides, Knowledge Cards); use completion time for things with tasks/worksheets (Workbooks, Checklists, Learning Paths). A document normally has one or the other, not both.
-- **`difficulty`** — only meaningful where a reader is building a skill or working through a structured task. A plain informational Guide is usually `Not applicable`.
-- **`tags`** — free-text for now (see `architecture/README.md`'s Future Expansion note on a controlled taxonomy).
-- **`prerequisites`** — other documents a reader should ideally have read first. Use `"None"` explicitly rather than an empty list, so it's clear the field wasn't just forgotten.
-- **`related_documents` / `related_careers` / `related_skills`** — the cross-linking that makes the knowledge layer a web rather than a pile. Keep these accurate as documents are added or retired — a related-document reference to a retired document should be updated to point at its replacement, if any.
-- **`last_reviewed` / `review_due`** — every substantive publication gets a review cadence, matching the spirit of the site's existing "Last reviewed" commitment for high-stakes content (`docs/website-update-spec.md` §5–§6). `review_due` is normally 12 months after `last_reviewed` for stable content, and 3–6 months for anything referencing exam dates, fees, cut-offs, or other volatile facts.
-- **`license`** — the default text above applies unless a specific publication needs different terms (state so explicitly if it does).
+## Derived-field rules
+
+**`review_due` — computed, never hand-picked** (pilot finding §3.5: stakes alone was insufficient; volatility is the second input):
+
+| | `volatile: true` | `volatile: false` |
+|---|---|---|
+| **stakes: high** | 3 months | 6 months |
+| **stakes: medium** | 6 months | 12 months |
+| **stakes: low** | 12 months | 24 months |
+| **register: voice** | — immutable, no review cycle (corrections of fact only, attributed in history) | — |
+
+**`visibility`** — derived from status until a genuine exception exists (e.g., pre-publication access for an external reviewer). If an exception arises, set it explicitly and note why.
+
+**`updated`** — taken from git history at render/validation time. Do not maintain by hand; it will drift.
+
+---
+
+## Field-by-field rules (authored and review-owned fields)
+
+- **`title`** — reader-facing, plain words, and *honest*: a title may not claim more than the content delivers (pilot: "Real Examples" of composites had to become "Worked Examples").
+- **`description` vs `purpose`** — description = **what it is**; purpose = **the decision or fear it serves**. If your purpose reads like a topic summary, it's a description; name the student moment instead.
+- **`outcome`** — must be phrased as a capability the student gains ("student can compare/evaluate/judge…"), never a decision made for them ("student chooses X"). Reviewers reject decision-phrased outcomes (EOS-003 V4). Model sentences in AUTHOR_TEMPLATE.md.
+- **`stage` / `audience`** — multi-valued facets; list everywhere the content genuinely applies. Facets drive surfacing (hubs, paths, search); they never decide filing — `domain` does.
+- **`domain`** — exactly one of the five KA-1.0 domains; the canonical home; never changes. Boundary tests in `knowledge-architecture-1.0.md` §3.
+- **`evidence`** — rated by the **weakest load-bearing claim**, not the average or the best source. Authors propose; reviewers confirm adversarially (pilot: authors over-claim — 2 of 5 pre-pilot ratings were inflated).
+- **Illustrative-composite convention** (pilot R3): a constructed scenario built on real data is rated by what it *carries* —
+  - composite is **load-bearing** for the card's claim → rate `anecdotal`, write "illustrative composite" in `evidence_notes`, and label it in the body;
+  - composite is **explanatory only** (the claim rests on real data elsewhere) → the data's rating stands; disclose the composite in `evidence_notes`.
+- **`uncertainty`** — required when stakes are high or evidence is anecdotal/opinion; recommended always. Per-category starting points (pilot R4):
+  - *definition* → framing variance: "this is one widely-used framing, not a universal standard"
+  - *data-bearing (salaries, fees, dates)* → verify-live instructions: what varies, by how much, where to check
+  - *checklist / self-assessment* → instrument limits: self-assessment is unreliable; thresholds are heuristics
+  - *example* → composite/anecdote disclaimer: no real outcome will match; direction, not forecast
+  - *mental-model / framework* → scope limits: where the model breaks down
+- **`stakes`** — the consequence to a student of this content being wrong. High: can redirect years or money (eligibility, entry requirements, stream criteria). Medium: shapes preferences (salary ranges, growth ladders, readiness guidance). Low: error costs a re-read (study tips, reflection prompts). Author proposes; **reviewer confirms** — authors sit too close to their own content to rate its blast radius.
+- **`volatile`** — true if the content contains data that ages in months: salaries, fees, exam patterns, cutoffs, hiring trends. Feeds the `review_due` table.
+- **`maturity`** — earned, not asserted: `seed` (default at creation) → `developing` (one review survived, used on ≥1 surface) → `established` (full review cycle + feedback incorporated) → `authoritative` (evidence classified, priority translations exist). Only reviewers raise it; anyone may propose demotion when a source goes stale. Full criteria: KA-1.1 spec (pending).
+- **`relationships`** — typed links, stored in **one direction only** (inverses are derived, never written). Vocabulary and direction rules: EOS-004. Omit the key entirely when empty.
+- **`owner`** — a named human or team; never "AI" alone. AI may assist drafting (per the site's public transparency commitment); a person answers for every published claim.
+- **`last_reviewed`** — set by the reviewer at each completed review. Translations carry their own: a stale translation of a fresh source is still stale.
+- **`license`** — default: free to read, download, and share for personal and educational use; not for resale or republication without permission. Overrides need explicit justification.
+- **`tags`** *(optional)* — free-text discovery only; nothing structural may depend on tags. Omit rather than invent.
+
+### Legacy fields
+
+`prerequisites`, `related_documents`, `related_careers`, `related_skills`, `subtitle`, `reading_level`, `estimated_reading_time` / `estimated_completion_time`, `difficulty` remain valid on existing documents. On next substantive touch: `prerequisites` migrates to `relationships: requires`, `related_*` to the appropriate typed relationship (per EOS-004); reading/completion estimates and difficulty stay as optional presentation hints.
+
+---
+
+## The review gate (pilot R8)
+
+A document does not move `review → published` until the reviewer has explicitly:
+
+1. **Confirmed `stakes`** (or corrected it — and with it, the computed `review_due`)
+2. **Confirmed `evidence`** against the weakest-load-bearing-claim rule, adversarially
+3. **Checked `outcome`** is capability-phrased (V4) and `uncertainty` is present where required (V1/V3)
+4. **Verified `relationships`** point at real, current IDs
+5. Set `last_reviewed`; raised `maturity` only if criteria are met
+
+This gate is a checklist today and tooling in Phase 2 (the validation script planned in KA-1.1 area 4).
