@@ -13,8 +13,8 @@ Tracks time spent per Claude Code session on this project. Each entry is logged 
 | 2026-07-06 | 11:05 IST | 12:18 IST | 1h 13m | Career FAQ shipped (#65): faq.html with 32 Q&As / 7 categories / accordion + chip nav, FAQPage JSON-LD, 95 i18n keys x 4 languages (599→694), footer links site-wide, sitemap entry; copy validated (Indian English normalisation, Q7 CUET/DU factual fix); verified in browser incl. 375px + all 4 languages. Backlog: #66 career decision traps section created. User active time (prompting + reviewing): ~30m of this session. |
 | 2026-07-07 | 10:31 IST | 12:59 IST | 2h 28m | GEO quick wins: robots.txt created (#58), IndexNow GitHub Action live — all 12 pages submitted, HTTP 202 (#57), Bing verification confirmed done (#56 closed); #9 security headers premise corrected (GitHub Pages has no _headers support) — referrer meta added to all pages, relabelled needs-decision; #60 sitemap format verified, awaiting one-click Bing submit; fixed broken footer logo tag on careers.html ("en" missing — div lacked closing >). Backlog reviewed twice, grouped by tier. |
 | 2026-07-12 | 00:15 IST | 18:30 IST | 18h 15m | Brief check — untracked. |
-| 2026-07-12 | 18:37 IST | (in progress) | — | Session started. |
+| 2026-07-12 | 18:37 IST | 22:42 IST | 4h 5m | EOS Phase 1 architecture design: EOS-001 philosophy (KaC methodology, 10-year stability), EOS-002 object model (10 frozen types, object categories, Purpose/Outcome). Architectural review feedback incorporated; focus on publishing value. Both specs committed. Ready for EOS-003 (metadata contract). |
 
 ## Running total (Claude Code only, tracked sessions)
 
-**5h 32m** — excludes the untracked 2026-07-05 session (no start timestamp was logged for it, so it is left out of the total to avoid a misleading number).
+**9h 37m** — excludes the untracked 2026-07-05 session (no start timestamp was logged for it, so it is left out of the total to avoid a misleading number).
