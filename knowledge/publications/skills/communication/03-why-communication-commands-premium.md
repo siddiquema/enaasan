@@ -6,11 +6,12 @@ title: "Why Communication Skills Command a 20–30% Salary Premium"
 description: "The economic mechanism behind the communication pay gap — reduced rework, faster resolution, fewer escalations, better retention — with indicative premiums by role level."
 purpose: "Helps a student deciding whether deliberate communication practice is worth real investment alongside marks and technical preparation."
 outcome: "Student can evaluate any 'soft skills matter' claim in rupee terms, and apply the same cost-of-error reasoning to judge skill claims they encounter anywhere."
-status: draft
-version: 0.2
+status: review
+version: 0.3
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
+volatile: true
 language: en
 visibility: internal
 license: default
@@ -19,11 +20,11 @@ stage: [after12, college, graduate, early-career]
 audience: [student, parent]
 register: reference
 stakes: medium
-evidence: secondary-research
-evidence_notes: "Premium ranges from salary-postings analysis (Glassdoor, AmbitionBox, LinkedIn Salary; 500+ roles, 2024-25) and NASSCOM BPS reporting. The worked cost calculations (rework, escalation, retention arithmetic) are illustrative constructions explaining the mechanism — they are not measurements and are not load-bearing for the premium claim."
-uncertainty: "Premiums vary by company tier, city, shift, and function; the 20–30% figure is an indicative range across levels, not an offer anyone will receive. Salary data ages fast — verify against live postings before relying on specific numbers."
-last_reviewed: 2026-07-12
-review_due: 2027-01-12
+evidence: expert-opinion
+evidence_notes: "Underlying salary bands are secondary research (Glassdoor, AmbitionBox, LinkedIn Salary; 500+ roles, 2024-25; NASSCOM BPS reporting). But postings do not label communication quality — the premium-by-level table is our informed MODELING of the gap from role-tier differences and recruiter interviews, which sets this rating (weakest load-bearing claim). Worked cost calculations are illustrative constructions explaining mechanism, not measurements."
+uncertainty: "Premiums vary by company tier, city, shift, and function; the 20–30% figure is an indicative modeled range, not a measurement and not an offer anyone will receive. The 20-year earnings trajectories compound assumptions and should be read as shapes, not forecasts. Salary data ages fast — verify against live postings."
+last_reviewed: 2026-07-14
+review_due: 2027-01-14
 maturity: seed
 relationships:
   - requires: ENA-KCARD-SKILL-communication-competency-definition
@@ -63,11 +64,11 @@ This is not magic or favoritism. It's economics.
 - Handling the same issue twice costs 2x the labor
 - A clear communicator gets it right the first time → 1 call, not 2
 
-**In dollars:**
-- Agent salary: ₹30 LPA ÷ 250 workdays ÷ 8 hours = ₹15 per minute
-- Misunderstood call costs 25 minutes of rework = ₹375 per incident
-- 1,000 agents × 2 incidents per month × 12 months = ₹9 Cr annual cost to the company
-- Reducing rework by 10% through better communication = ₹90 Lakhs saved
+**In rupees (illustrative, using realistic entry-level numbers):**
+- Agent cost to company: ~₹3 LPA ÷ 250 workdays ÷ 8 hours ≈ ₹2.50 per minute (salary alone — the true loaded cost with training, seat, and management overhead is roughly double)
+- A misunderstood call that needs 25 minutes of rework ≈ ₹60–125 per incident
+- 1,000 agents × 2 incidents per month × 12 months = 24,000 incidents ≈ ₹15–30 Lakhs of annual rework
+- Reducing rework by even 10% through clearer communication ≈ ₹1.5–3 Lakhs saved per 1,000 agents, every year — from one failure mode alone
 
 **Who gets paid for this?** The agent who communicates clearly gets a raise and stays in high-value roles.
 
@@ -80,7 +81,7 @@ This is not magic or favoritism. It's economics.
 - An unclear communicator takes 12 minutes for the same issue
 - 50% more productivity per hour
 
-**In dollars:**
+**In throughput:**
 - Handle 5 customers/hour → 40 customers/day
 - Clear communicator: 7.5 customers/hour → 60 customers/day
 - 50% more throughput = 50% more value created per agent
@@ -96,12 +97,12 @@ This is not magic or favoritism. It's economics.
 - Good communicator: Calls escalate 2% of the time
 - 8% fewer escalations = 8% less supervisor time needed
 
-**In dollars:**
-- Supervisor salary: ₹50 LPA (2.5x an agent's ₹20 LPA)
-- 1,000 agents needing supervision: 
-  - Poor communicators: 100 escalations/day requiring ~10 hours of supervisor time
-  - Good communicators: 20 escalations/day requiring ~2 hours of supervisor time
-- Difference: 8 hours/day of supervisor time freed = ₹400 per day = ₹10 Lakhs/year saved per 1,000 agents
+**In rupees (illustrative):**
+- Team lead cost: ~₹6 LPA — roughly 2x an entry agent's ₹3 LPA — ≈ ₹300 per hour
+- Per 1,000 agents:
+  - Weak communicators: ~100 escalations/day consuming ~10 hours of team-lead time
+  - Strong communicators: ~20 escalations/day consuming ~2 hours
+- Difference: ~8 team-lead hours/day freed ≈ ₹2,400/day ≈ ₹6 Lakhs/year per 1,000 agents — and team leads freed from escalations do coaching instead, which compounds
 
 **Who gets paid for this?** Agents who don't escalate get positive performance reviews, bonuses, and promotions faster.
 
@@ -114,7 +115,7 @@ This is not magic or favoritism. It's economics.
 - Customer satisfaction drives retention
 - Retention drives lifetime customer value
 
-**In dollars:**
+**In rupees (illustrative):**
 - A telecom company loses a ₹500/month customer due to poor service experience
 - Lifetime value of retention: ₹500/month × 36 months = ₹18,000
 - Clear communicators have 5-10% higher CSAT than average
@@ -132,7 +133,7 @@ This is not magic or favoritism. It's economics.
 - Lower attrition = lower hiring/training costs
 - Higher engagement = higher productivity
 
-**In dollars:**
+**In rupees (illustrative):**
 - Cost to hire and train one agent: ₹50,000 to ₹1 Lakh
 - A clear-communicating team lead has 10% lower attrition on their team
 - 20-person team × 10% = 2 people saved per year × ₹75k = ₹1.5 Lakhs saved per year
@@ -143,7 +144,7 @@ This is not magic or favoritism. It's economics.
 
 ## The Salary Premium Breakdown
 
-Based on analysis of 500+ job postings across BPS, tech, finance, and healthcare in India:
+Indicative estimates, modeled from postings analysis (500+ roles across BPS, tech, finance, and healthcare in India), role-tier salary differences, and recruiter interviews. Job postings don't label who communicates well — these figures are our informed modeling of the gap, not a direct measurement:
 
 | Role Level | Same Role, Poor Communication | Same Role, Good Communication | Premium |
 |---|---|---|---|
@@ -195,19 +196,13 @@ After reading this card, you understand:
 
 ---
 
-## Linked Cards
-
-- **[The 5 Communication Competencies Employers Value]** — What specifically to develop
-- **[What is Communication Competency?]** — Definition
-- **[Am I Ready for a Communication-Heavy Role?]** — Checklist for self-assessment
-- **[How Salary Ranges Shift with Communication Quality in BPS]** — Real examples from the BPS sector
-
----
-
 ## References & Data Sources
 
 - Glassdoor salary data analysis: 500+ roles across BPS, tech, finance, healthcare (2024-25)
-- AmbitionBox role comparison data: agent/SME/TL salary ranges by communication CSAT tier
-- NASSCOM BPS sector report 2024-25: correlation between team-level CSAT and salary progression
+- AmbitionBox role comparison data: agent/SME/TL salary ranges
+- NASSCOM BPS sector report 2024-25
 - Interviews with 50+ recruiters and HR leaders on salary-setting criteria
+- The premium-by-level figures are modeled from these sources, not directly measured by any of them
+
+*(Related cards are declared as typed relationships in this card's metadata.)*
 

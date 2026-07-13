@@ -6,11 +6,12 @@ title: "The 5 Communication Competencies Employers Value"
 description: "A framework of the five communication competencies Indian employers assess — active listening, clarity, emotional intelligence, persuasion, adaptability — with a self-rating table and practice methods for each."
 purpose: "Helps a student facing 'strong communication skills required' in job postings understand what will actually be assessed, and where their own gaps are."
 outcome: "Student can self-assess against the five competencies, identify their two weakest, and choose targeted practice — for this role search and every future one."
-status: draft
-version: 0.2
+status: review
+version: 0.3
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
+volatile: false
 language: en
 visibility: internal
 license: default
@@ -22,8 +23,8 @@ stakes: low
 evidence: expert-opinion
 evidence_notes: "Synthesis from recruiter interviews (50+, 2024-25) and job-postings analysis (500+ roles); the five-competency grouping itself is our editorial synthesis, not a measured finding — hence rated by the weakest load-bearing claim, not the underlying data."
 uncertainty: "The grouping into exactly five competencies is a teaching choice; other valid models exist. Which competencies dominate varies by role — voice roles weight listening, analyst roles weight written clarity."
-last_reviewed: 2026-07-12
-review_due: 2027-07-12
+last_reviewed: 2026-07-14
+review_due: 2028-07-14
 maturity: seed
 relationships:
   - requires: ENA-KCARD-SKILL-communication-competency-definition
@@ -195,6 +196,8 @@ Rate yourself 1-5 on each competency (1 = needs significant development, 5 = str
 
 **Priority:** Focus on your lowest 2 competencies. They're holding you back more than your strengths help you forward.
 
+For the full 30-item assessment with scoring bands and a development plan, use the readiness checklist card (ENA-KCARD-SKILL-communication-readiness-checklist).
+
 ---
 
 ## Outcome
@@ -208,17 +211,11 @@ After reading this card, you can:
 
 ---
 
-## Linked Cards
-
-- **[What is Communication Competency?]** — Definition card
-- **[Why Communication Skills Command a Salary Premium]** — Why this matters financially
-- **[Am I Ready for a Communication-Heavy Role?]** — Checklist to assess career fit
-
----
-
 ## References
 
-- Competency model based on interviews with 50+ recruiters across BPS, tech, finance, and healthcare sectors in India (2024-25)
+- The five-competency grouping is our editorial synthesis, informed by interviews with 50+ recruiters across BPS, tech, finance, and healthcare sectors in India (2024-25)
 - Aligns with SHRM Leadership Competency Model
 - Job posting analysis of 500+ communication-focused roles in India (Indeed, LinkedIn, Glassdoor, 2024-25)
+
+*(Related cards are declared as typed relationships in this card's metadata.)*
 

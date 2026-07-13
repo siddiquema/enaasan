@@ -6,11 +6,12 @@ title: "Am I Ready for a Communication-Heavy Role? — Self-Assessment Checklist
 description: "A 30-item self-assessment across six communication areas, with a scoring guide, role-readiness interpretation, and a 3-month development plan for gaps."
 purpose: "Helps a student deciding whether to apply for customer-facing, sales, or leadership roles now — or to build specific gaps first — before an interviewer decides for them."
 outcome: "Student can honestly locate their communication gaps, choose roles matching their current level, and run their own development plan — a self-assessment method they can reuse for any skill."
-status: draft
-version: 0.2
+status: review
+version: 0.3
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
+volatile: false
 language: en
 visibility: internal
 license: default
@@ -22,8 +23,8 @@ stakes: medium
 evidence: expert-opinion
 evidence_notes: "Assessment items constructed from role competency requirements across BPS, tech, finance, and healthcare employers; scoring thresholds are editorial heuristics, not validated psychometrics."
 uncertainty: "Self-assessment is systematically unreliable — people misjudge their own communication; the card mitigates but cannot remove this. Scoring bands are guidance heuristics, not a validated instrument. A trusted outsider's view is a necessary check."
-last_reviewed: 2026-07-12
-review_due: 2027-07-12
+last_reviewed: 2026-07-14
+review_due: 2027-07-14
 maturity: seed
 relationships:
   - requires: ENA-KCARD-SKILL-five-communication-competencies
@@ -55,6 +56,8 @@ For each statement below, rate yourself:
 - ❌ **No, not really** — This is not true about me
 
 Be honest. This checklist is for you, not for a recruiter.
+
+The first five sections mirror the five competencies from the framework card (ENA-KCARD-SKILL-five-communication-competencies). The sixth — consistency and reliability — is the trust foundation the other five stand on.
 
 ---
 
@@ -144,14 +147,16 @@ Be honest. This checklist is for you, not for a recruiter.
 
 ## Scoring & Interpretation
 
-**Count your ✅, ⚠️, and ❌ marks across all categories:**
+**Count your ✅ marks across all 30 items** (⚠️ and ❌ both mean "not yet consistent" — the difference matters for what you practice, not for your score):
 
-| Score | Interpretation | Recommendation |
+| ✅ count (out of 30) | Interpretation | Recommendation |
 |---|---|---|
-| **18+ ✅, 0-2 ❌** | **Strong communicator** | You're ready for communication-heavy roles now. Apply for BPS voice, customer-facing, or junior management roles. |
-| **12-18 ✅, 3-6 ⚠️** | **Solid foundation with gaps** | You have the basics. Identify your 2-3 weakest competencies and work on them for 2-3 months before applying to customer-facing roles. |
-| **6-12 ✅, 6-12 ⚠️** | **Inconsistent communicator** | You have potential but need deliberate development. Consider starting in non-customer-facing roles, or invest 3-6 months in coaching/training. |
-| **0-6 ✅, 12+ ❌** | **Significant gaps** | Communication-heavy roles will be very challenging right now. Focus on developing foundational skills before applying. Consider starting in execution roles and building from there. |
+| **24–30** | **Strong communicator** | You're ready for communication-heavy roles now. Apply for BPS voice, customer-facing, or junior management roles. |
+| **16–23** | **Solid foundation with gaps** | You have the basics. Identify your 2-3 weakest sections and work on them for 2-3 months while applying — mention what you're developing in interviews. |
+| **8–15** | **Inconsistent communicator** | You have potential but need deliberate development. Consider starting in non-customer-facing roles (back office, data processing) while you build, or invest 3-6 months in focused practice first. |
+| **0–7** | **Significant gaps** | Communication-heavy roles will be very challenging right now — for you and your customers. Start in execution roles and build from there; the development plan below is your map. |
+
+If any single section has zero ✅, treat that section as your first priority regardless of your total.
 
 ---
 
@@ -195,16 +200,11 @@ After completing this checklist, you:
 
 ---
 
-## Linked Cards
-
-- **[The 5 Communication Competencies Employers Value]** — Deep dive on each competency
-- **[What is Communication Competency?]** — Foundational definitions
-- **[How Salary Ranges Shift with Communication Quality in BPS]** — Why this matters (financial motivation)
-
----
-
 ## References
 
-- Competency assessment based on industry role requirements from BPS, tech, finance, healthcare companies
+- Assessment items constructed from industry role requirements across BPS, tech, finance, and healthcare employers
 - Aligned with SHRM competency frameworks for different job levels
+- Scoring bands are editorial heuristics, not a validated psychometric instrument
+
+*(Related cards are declared as typed relationships in this card's metadata.)*
 

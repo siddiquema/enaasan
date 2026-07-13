@@ -6,11 +6,12 @@ title: "What is Communication Competency?"
 description: "Defines professional communication competency and its four dimensions — clarity, empathy, engagement, consistency — as distinct from English fluency."
 purpose: "Helps a student who equates 'communication skills' with spoken English understand what employers actually assess — before investing in the wrong preparation."
 outcome: "Student can distinguish communication competency from language proficiency, name the four dimensions, and judge for themselves what any role is really asking for."
-status: draft
-version: 0.2
+status: review
+version: 0.3
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
+volatile: false
 language: en
 visibility: internal
 license: default
@@ -22,8 +23,8 @@ stakes: low
 evidence: expert-opinion
 evidence_notes: "Competency framing synthesized from models used by large BPS employers (Genpact, WNS, EXL, Accenture), SHRM frameworks, and recruiter interviews (2025)."
 uncertainty: "This is one widely-used framing, not a universal standard; employers weight the four dimensions differently by role and sector."
-last_reviewed: 2026-07-12
-review_due: 2027-07-12
+last_reviewed: 2026-07-14
+review_due: 2028-07-14
 maturity: seed
 relationships: []
 tags: [communication, soft-skills]
@@ -71,6 +72,10 @@ Aligning your words, tone, and body language. Saying one thing but looking or so
 
 ---
 
+> **How this fits with the "five competencies":** these four dimensions describe what competency *is*. The five competencies employers assess — active listening, clarity, emotional intelligence, persuasion, adaptability — are how these dimensions show up at work. Two lenses on one thing, not two competing lists.
+
+---
+
 ## Why This Matters
 
 Communication competency is **not** the same as:
@@ -102,15 +107,7 @@ A customer service representative with high communication competency:
 - Creates positive customer experiences (higher satisfaction scores)
 - Earns faster promotions (leads know they can rely on them)
 - Gets hired by better companies (is valued as a proven performer)
-- Commands 20-30% higher salary within the same role and experience level
-
----
-
-## Linked Cards
-
-- **[The 5 Communication Competencies Employers Value]** — Framework card breaking down specific competencies
-- **[Why Communication Skills Command a Salary Premium]** — Mental model explaining the economics
-- **[Am I Ready for a Communication-Heavy Role?]** — Checklist for self-assessment
+- Is consistently rewarded in pay and promotion — how large that reward is, and why, is covered in the salary-premium card
 
 ---
 
@@ -118,5 +115,7 @@ A customer service representative with high communication competency:
 
 - Based on competency models used by global BPS companies (Genpact, WNS, EXL, Accenture)
 - Aligns with SHRM and Society for Industrial-Organizational Psychology frameworks
-- Primary research source: recruiter interviews with top BPS employers in India (2025)
+- Informed by recruiter interviews with BPS employers in India (2025)
+
+*(Related cards are declared as typed relationships in this card's metadata.)*
 

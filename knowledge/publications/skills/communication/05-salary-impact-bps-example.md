@@ -6,11 +6,12 @@ title: "How Salary Ranges Shift with Communication Quality in BPS — Worked Exa
 description: "Three worked comparisons (agent, analyst, team lead) showing how communication quality translates into salary and career-trajectory differences in BPS, with a 20-year earnings comparison."
 purpose: "Makes the abstract salary-premium claim concrete for a student who needs to see rupee amounts and a career arc, not percentages, to weigh the investment."
 outcome: "Student can trace how communication quality compounds through incentives, role access, and promotion speed — and apply that compounding lens to any skill decision."
-status: draft
-version: 0.2
+status: review
+version: 0.3
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-14
+volatile: true
 language: en
 visibility: internal
 license: default
@@ -22,8 +23,8 @@ stakes: medium
 evidence: anecdotal
 evidence_notes: "The paired comparisons (Agent A/B, Analyst A/B, Lead A/B) are ILLUSTRATIVE COMPOSITES constructed from real salary bands (Glassdoor, AmbitionBox, LinkedIn Salary 2024-25) and practitioner interviews — they are not case studies of real individuals, and they are the card's load-bearing content, which sets this rating. Salary bands themselves are secondary-research."
 uncertainty: "No real individual's outcome will match these composites; they illustrate direction and mechanism, not guaranteed amounts. Incentive structures differ by company; the 20-year projection compounds assumptions and should be read as a shape, not a forecast. Surfaces embedding this card should label it as illustrative."
-last_reviewed: 2026-07-12
-review_due: 2027-01-12
+last_reviewed: 2026-07-14
+review_due: 2027-01-14
 maturity: seed
 relationships:
   - exemplifies: ENA-KCARD-SKILL-communication-salary-premium
@@ -46,6 +47,8 @@ Show real-world salary impact of communication competency in actual BPS roles �
 
 ---
 
+> **Before you read: these are illustrative composites, not real individuals.** Each "Agent A / Agent B" pairing is constructed from real salary bands (Glassdoor, AmbitionBox, LinkedIn Salary, 2024-25) and practitioner interviews, to show how the mechanism plays out. No real person's outcome will match these numbers exactly — read them as direction and shape, not as a forecast.
+
 ## The Reality: Why Two Agents in the Same Role Have Different Salaries
 
 Two freshers start as Customer Service Representatives at the same BPS company on the same day, same location, same training program. Six months later, their salaries are different.
@@ -54,7 +57,7 @@ Here's why:
 
 ---
 
-## Real Example 1: BPS Voice — Customer Service Representative (Domestic Process)
+## Worked Example 1: BPS Voice — Customer Service Representative (Domestic Process)
 
 ### **Agent A: Weak Communicator**
 
@@ -118,7 +121,7 @@ Here's why:
 
 ---
 
-## Real Example 2: BPS Finance — Finance & Accounts Analyst (Year 2)
+## Worked Example 2: BPS Finance — Finance & Accounts Analyst (Year 2)
 
 ### **Analyst A: Weak Communicator**
 
@@ -182,7 +185,7 @@ Here's why:
 
 ---
 
-## Real Example 3: BPS Operations — Team Lead (Year 5)
+## Worked Example 3: BPS Operations — Team Lead (Year 5)
 
 ### **Team Lead A: Weak Communicator**
 
@@ -296,18 +299,13 @@ After reading these examples, you understand:
 
 ---
 
-## Linked Cards
-
-- **[Why Communication Skills Command a 20–30% Salary Premium]** — The economic mechanisms behind these differences
-- **[The 5 Communication Competencies Employers Value]** — Which competencies matter most
-- **[Am I Ready for a Communication-Heavy Role?]** — Self-assess against these examples
-
----
-
 ## References & Data Sources
 
-- Glassdoor salary data: 200+ BPS roles in India (2024-25), filtered by CSAT performance tier
+- Glassdoor salary data: 200+ BPS roles in India (2024-25)
 - AmbitionBox company reviews + salary data: Genpact, WNS, EXL, Tech Mahindra BPS (2024-25)
 - LinkedIn Salary Insights: career progression data for BPS roles
 - Interviews with 25+ BPS team leads and managers on how communication affects compensation
+- The A/B pairings are composites constructed from these sources — no source contains these individuals
+
+*(Related cards are declared as typed relationships in this card's metadata.)*
 
