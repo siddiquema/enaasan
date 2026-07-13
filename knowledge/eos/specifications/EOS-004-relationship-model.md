@@ -1,6 +1,6 @@
 # EOS-004: Relationship Model
 
-**Status:** Draft for Review
+**Status:** Approved — part of the Enaasan Knowledge Standard v1.0
 **Version:** 1.0
 **Last Updated:** 2026-07-13
 **Owner:** Chief Knowledge Architect

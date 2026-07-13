@@ -1,6 +1,6 @@
 # EOS-001: The Philosophy of Knowledge as Code (KaC) and EnaasanOS
 
-**Status:** Draft for Review  
+**Status:** Approved — part of the Enaasan Knowledge Standard v1.0  
 **Version:** 1.0  
 **Last Updated:** 2026-07-12  
 **Owner:** Chief Knowledge Architect  

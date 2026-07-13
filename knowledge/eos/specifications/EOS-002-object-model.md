@@ -1,7 +1,7 @@
 # EOS-002: Object Model
 
-**Status:** Draft for Review  
-**Version:** 1.0  
+**Status:** Approved — part of the Enaasan Knowledge Standard v1.0  
+**Version:** 1.1  
 **Last Updated:** 2026-07-12  
 **Owner:** Chief Knowledge Architect
 
