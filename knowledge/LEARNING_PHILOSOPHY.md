@@ -1,7 +1,7 @@
 # The Enaasan Learning Philosophy
 
-**Status:** Draft for Review
-**Version:** 0.1
+**Status:** Approved
+**Version:** 1.0
 **Last Updated:** 2026-07-13
 **Owner:** Founder / Chief Knowledge Architect
 **Position in the stack:** Above everything. EOS specifications define how knowledge is structured; KA-1.0 defines where it lives; this document defines *why any of it deserves to exist*. When a structural rule and this philosophy conflict, this philosophy wins and the rule gets rewritten.
@@ -75,7 +75,9 @@ Content that is timely, personal, or opinionated — a letter, a student's story
 
 **Free means actually free.** No login walls, no content held hostage for contact details, no dark patterns. The student who cannot pay anything owes us nothing — that is the point of the project.
 
-**We inform decisions; we never make them.** Enaasan is not the counsellor who "knows best." Every framework we publish exists to strengthen the student's own judgment — including their freedom to weigh family, money, and dreams differently than we would. Advice comes with its reasoning attached, so it can be disagreed with.
+**We inform decisions; we never make them.** Enaasan is not the counsellor who "knows best." Every framework we publish exists to strengthen the student's own judgment — including their freedom to weigh family, money, and dreams differently than we would. Concretely, this means every piece of advice ships with three things attached: **the reasoning** (why we think this), **the evidence** (what it rests on and how strong that footing is), and **the uncertainty** (what we don't know, what varies by situation, what the student must verify for themselves). Advice stripped of these three is an instruction — and we do not publish instructions for other people's lives.
+
+**Knowledge should increase agency, not dependence.** Every card should leave a student more capable of judging the *next* question on their own — because it taught the how of thinking, not just the what of this answer. A comparison card teaches how to compare, not just which option we'd pick; a salary card teaches how to read salary claims anywhere, not just these numbers. The failure mode we guard against is students who must come back to us for every decision; the success we aim for is a student who eventually outgrows us. If Enaasan's traffic one day falls because a generation learned to evaluate careers on their own, that is the mission succeeding, not failing.
 
 **Students who give us their voice are protected.** Stories and ideas from young people are published with informed consent, minimal identifying detail, parental consent for minors, and a permanent right to be removed. A student's trust is never growth fuel.
 
@@ -90,7 +92,9 @@ This page is enforced, not framed. Each commitment above is implemented by a spe
 | Commitment (§) | Enforcing mechanism |
 |---|---|
 | Decision-usefulness test (§1, §2) | `purpose` and `outcome` fields required on every object (EOS-002 → EOS-003) |
+| Agency over dependence (§5) | `outcome` must be phrased as a capability the student gains, never a decision made for them; reasoning, evidence, and uncertainty attached to advice (`evidence`, `evidence_notes`, `uncertainty`) |
 | "Say how we know it" (§3) | `evidence` controlled vocabulary (KA-1.1 area 2) |
+| No false certainty (§3, §5) | `uncertainty` disclosure on knowledge objects — what we don't know, what varies, what to verify |
 | Review rhythm matched to decay (§4) | `last_reviewed` / `review_due`, tightened for volatile, high-stakes content |
 | Earned maturity (§4) | Criteria-based `maturity` ladder, demotable (KA-1.1 area 1) |
 | Public corrections (§4) | Versioning standard + document history tables |
@@ -109,4 +113,5 @@ If a future metadata field cannot be traced to a commitment on this page, it is 
 
 | Version | Date | Change | Author |
 |---------|------|--------|--------|
+| 1.0 | 2026-07-13 | Approved with amendment: added "agency over dependence" principle; strengthened "inform, never decide" into the three attachments rule (reasoning, evidence, uncertainty); mapped both to enforcing mechanisms in §6 | Chief Knowledge Architect |
 | 0.1 | 2026-07-13 | Initial draft: five questions answered; philosophy-to-machinery mapping added as the foundation for EOS-003 | Chief Knowledge Architect |
