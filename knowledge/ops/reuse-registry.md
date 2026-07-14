@@ -13,6 +13,7 @@ Format: one row per (object → surface) dependency. `Mechanism` per EOS-004: em
 | ENA-KCARD-SKILL-communication-readiness-checklist | 1.0 | ENA-GUIDE-CAREER-communication-skills-guide (Part 4) | embed | draft | 2026-07-14 |
 | ENA-GUIDE-CAREER-communication-skills-guide | 0.1 | /skills/communication website page | rendering | **planned** — see website integration plan (sprint log) | 2026-07-14 |
 | ENA-GUIDE-CAREER-communication-skills-guide | 0.1 | bps.html (Tip 8 outbound link) | link | **planned** | 2026-07-14 |
+| ENA-GUIDE-CAREER-first-job | 0.1 | /skills/first-job website page | rendering | **live** | 2026-07-14 |
 
 **Maintenance rules:**
 1. New dependency → new row, same commit as the surface change.
