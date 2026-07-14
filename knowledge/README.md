@@ -13,11 +13,14 @@ It exists separately from the live website (`index.html`, `after10.html`, `faq.h
 | Folder | What it holds |
 |---|---|
 | `architecture/` | How the knowledge layer itself is structured — metadata, document IDs, versioning |
+| `eos/` | Enaasan Operating System specifications v1.0 (frozen): EOS-001–004, the object model, metadata contract, relationship model |
+| `ops/` | Operational Standards: editorial workflow (OPS-001), sprint logs, reuse registry |
+| `governance/` | Governance policies defining how Enaasan operates — research standards, IP policy, change log |
+| `standards/` | Editorial calibration rules and domain-specific standards |
+| `templates/` | Blank skeletons for every publication type — copy, don't improvise a new structure |
 | `branding/` | Mission, voice, tone, writing style, visual language |
 | `publishing/` | How one Markdown source becomes PDF / DOCX / Google Doc / HTML / website page |
-| `templates/` | Blank skeletons for every publication type — copy, don't improvise a new structure |
-| `standards/` | The rules each publication type must satisfy before it's considered done |
-| `publications/` | Where real content eventually lives, organised by audience |
+| `publications/` | Where real content eventually lives, organised by domain |
 | `assets/` | Logos, diagrams, illustrations, icons used across publications |
 | `output/` | Reserved for compiled/rendered artifacts (PDF, DOCX, EPUB, HTML) — build products, not source |
 
