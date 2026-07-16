@@ -145,6 +145,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Career Exploration: Who Are You? Beyond Grades -->
+  <url>
+    <loc>https://enaasan.online/career-exploration/01-who-are-you.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Career Exploration: Use AI to Discover Careers -->
+  <url>
+    <loc>https://enaasan.online/skills/first-job/explore-careers/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>
