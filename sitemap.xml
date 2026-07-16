@@ -97,6 +97,54 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Communication Skills Hub -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Communication Skills: Definition -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/definition/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Communication Skills: Framework -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/framework/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Communication Skills: Salary Premium -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/salary-premium/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Communication Skills: Readiness -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/readiness/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Communication Skills: Examples -->
+  <url>
+    <loc>https://enaasan.online/skills/communication/examples/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>

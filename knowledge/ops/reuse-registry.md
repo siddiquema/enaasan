@@ -11,7 +11,12 @@ Format: one row per (object → surface) dependency. `Mechanism` per EOS-004: em
 | ENA-KCARD-SKILL-communication-salary-premium | 1.0 | ENA-GUIDE-CAREER-communication-skills-guide (Part 3) | embed | draft | 2026-07-14 |
 | ENA-KCARD-SKILL-communication-salary-impact-bps | 1.0 | ENA-GUIDE-CAREER-communication-skills-guide (Part 3) | embed | draft | 2026-07-14 |
 | ENA-KCARD-SKILL-communication-readiness-checklist | 1.0 | ENA-GUIDE-CAREER-communication-skills-guide (Part 4) | embed | draft | 2026-07-14 |
-| ENA-GUIDE-CAREER-communication-skills-guide | 0.1 | /skills/communication website page | rendering | **planned** — see website integration plan (sprint log) | 2026-07-14 |
+| ENA-GUIDE-CAREER-communication-skills-guide | 0.1 | /skills/communication website page (hub) | rendering | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-communication-skills-guide (Card 1) | 1.0 | /skills/communication/definition/ website page | rendering | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-communication-skills-guide (Card 2) | 1.0 | /skills/communication/framework/ website page | rendering | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-communication-skills-guide (Card 3) | 1.0 | /skills/communication/salary-premium/ website page | rendering | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-communication-skills-guide (Card 4) | 1.0 | /skills/communication/readiness/ website page | rendering | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-communication-skills-guide (Card 5) | 1.0 | /skills/communication/examples/ website page | rendering | **live** | 2026-07-16 |
 | ENA-GUIDE-CAREER-communication-skills-guide | 0.1 | bps.html (Tip 8 outbound link) | link | **planned** | 2026-07-14 |
 | ENA-GUIDE-CAREER-first-job | 0.1 | /skills/first-job website page | rendering | **live** | 2026-07-14 |
 
