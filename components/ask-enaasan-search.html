@@ -252,13 +252,18 @@
 </div>
 
 <script>
-  // Initialize Ask Enaasan search when page loads
-  document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Ask Enaasan search immediately (not in DOMContentLoaded since component loads after page load)
+  function initializeAskEnaasan() {
     const searchInput = document.getElementById('askEnaasanInput');
     const resultsContainer = document.getElementById('askEnaasanResults');
     const resultsList = document.getElementById('askEnaasanResultsList');
     const emptyMessage = document.getElementById('askEnaasanEmpty');
     const examplesContainer = document.getElementById('askEnaasanExamples');
+
+    if (!searchInput) {
+      console.error('Ask Enaasan elements not found');
+      return;
+    }
 
     // Handle example chip clicks
     examplesContainer.addEventListener('click', (e) => {
@@ -306,7 +311,7 @@
           const resultEl = document.createElement('a');
           resultEl.href = result.url;
           resultEl.className = 'ask-enaasan-result-item';
-          resultEl.target = result.status === 'coming-soon' ? '_self' : '_self';
+          resultEl.target = '_self';
 
           const statusBadge = result.status === 'coming-soon'
             ? '<span class="ask-enaasan-result-status coming-soon">Coming Soon</span>'
@@ -336,5 +341,8 @@
 
       resultsContainer.classList.add('active');
     }
-  });
+  }
+
+  // Initialize immediately when script runs
+  initializeAskEnaasan();
 </script>
