@@ -645,7 +645,26 @@
       fetch('components/ask-enaasan-search.html')
         .then(response => response.text())
         .then(html => {
-          container.innerHTML = html;
+          // Parse HTML to separate script tags (innerHTML doesn't execute scripts)
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+
+          // Extract and remove script tags
+          const scripts = temp.querySelectorAll('script');
+          scripts.forEach(script => script.remove());
+
+          // Insert the HTML content (without scripts)
+          container.innerHTML = temp.innerHTML;
+
+          // Now execute the scripts manually
+          const tempAgain = document.createElement('div');
+          tempAgain.innerHTML = html;
+          const scriptsToExecute = tempAgain.querySelectorAll('script');
+          scriptsToExecute.forEach(script => {
+            const newScript = document.createElement('script');
+            newScript.textContent = script.textContent;
+            document.body.appendChild(newScript);
+          });
         })
         .catch(error => console.error('Error loading Ask Enaasan:', error));
     }
