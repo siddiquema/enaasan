@@ -23,6 +23,8 @@ Format: one row per (object → surface) dependency. `Mechanism` per EOS-004: em
 | ENA-GUIDE-CAREER-build-using-ai (Part 2) | 0.1 | /skills/first-job/explore-careers/ website page | rendering | **live** | 2026-07-16 |
 | ENA-KCARD-CAREER-self-discovery-framework | 0.1 | /skills/first-job navigation card | link | **live** | 2026-07-16 |
 | ENA-GUIDE-CAREER-build-using-ai (Part 2) | 0.1 | /skills/first-job navigation card | link | **live** | 2026-07-16 |
+| ENA-GUIDE-CAREER-build-using-ai (Part 3) | 0.1 | /skills/first-job/build-skills/ website page | rendering | **live** | 2026-07-17 |
+| ENA-GUIDE-CAREER-build-using-ai (Part 3) | 0.1 | /skills/first-job/explore-careers/ navigation card (next) | link | **live** | 2026-07-17 |
 
 **Maintenance rules:**
 1. New dependency → new row, same commit as the surface change.
