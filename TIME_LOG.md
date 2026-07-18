@@ -15,7 +15,8 @@ Tracks time spent per Claude Code session on this project. Each entry is logged 
 | 2026-07-12 | 00:15 IST | 18:30 IST | 18h 15m | Brief check — untracked. |
 | 2026-07-12 | 18:37 IST | 22:42 IST | 4h 5m | EOS Phase 1 architecture design: EOS-001 philosophy (KaC methodology, 10-year stability), EOS-002 object model (10 frozen types, object categories, Purpose/Outcome). Architectural review feedback incorporated; focus on publishing value. Both specs committed. Ready for EOS-003 (metadata contract). |
 | 2026-07-13 | (not logged — session resumed without clock-in) | (in progress) | — | Communication skills gap identified on bps.html; 5 Knowledge Cards created (definition, framework, mental model, checklist, example). IA brainstorm: hub-and-spoke model, Voices section (letters + student input). Knowledge Architecture 1.0 drafted: two-axis model (domain/facet), 5 domains, tools-as-renderings, hubs-as-views, standards amendments A1–A3 proposed. |
+| 2026-07-18 | 20:42 IST | 21:21 IST | 39m | Scoped, single-file(-set) fix: about.html `<title>` tag was too short per Bing Webmaster Tools. Updated title in about.html + the four i18n files (en/ta/te/hi) since about.page.title is rendered via data-i18n at runtime — flagged this dependency before proceeding, user approved expanded 5-file scope. Verified via byte-level MD5 comparison of disk vs served file; no console errors; git diff confirmed exactly 5 files touched. |
 
 ## Running total (Claude Code only, tracked sessions)
 
-**9h 37m** — excludes the untracked 2026-07-05 session (no start timestamp was logged for it, so it is left out of the total to avoid a misleading number).
+**10h 16m** — excludes the untracked 2026-07-05 session (no start timestamp was logged for it, so it is left out of the total to avoid a misleading number).
