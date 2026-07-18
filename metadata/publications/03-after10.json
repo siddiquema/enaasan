@@ -1,0 +1,40 @@
+{
+  "id": "after-10",
+  "title": "Earn After 10th",
+  "url": "/after10.html",
+  "description": "Explore earning opportunities after Grade 10. Understand diploma programs, apprenticeships, and skill-based careers that don't require further board exams.",
+  "target_audience": "Grade 10 students considering earning options",
+  "duration": "30-40 minutes",
+  "keywords": [
+    "after 10th",
+    "earning",
+    "diploma",
+    "apprenticeship",
+    "skill-based",
+    "vocational training",
+    "ITI",
+    "job opportunities",
+    "Grade 10"
+  ],
+  "questions_it_answers": [
+    "Can I earn after 10th without studying further?",
+    "What are apprenticeships?",
+    "What is ITI?",
+    "What diploma programs are available?",
+    "Can I go back to studies later?",
+    "How much can I earn after 10th?"
+  ],
+  "related_publications": [
+    "streams-explorer",
+    "bps"
+  ],
+  "tags": [
+    "education",
+    "earning",
+    "vocational",
+    "Grade-10",
+    "alternative-paths"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

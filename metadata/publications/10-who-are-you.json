@@ -1,0 +1,38 @@
+{
+  "id": "who-are-you",
+  "title": "Who Are You? Beyond Grades",
+  "url": "/career-exploration/01-who-are-you.html",
+  "description": "Self-discovery framework for college graduates. Understand your strengths, interests, values, and working style to guide career decisions.",
+  "target_audience": "College students and early-career professionals",
+  "duration": "30-45 minutes",
+  "keywords": [
+    "self-discovery",
+    "strengths",
+    "interests",
+    "values",
+    "working style",
+    "career fit",
+    "personal assessment",
+    "career planning"
+  ],
+  "questions_it_answers": [
+    "Who am I beyond my grades?",
+    "What are my strengths?",
+    "What am I interested in?",
+    "What are my core values?",
+    "How do I like to work?",
+    "What career fits my personality?"
+  ],
+  "related_publications": [
+    "explore-careers",
+    "build-skills"
+  ],
+  "next_publication": "explore-careers",
+  "tags": [
+    "self-discovery",
+    "career-planning",
+    "personal-development"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16"
+}

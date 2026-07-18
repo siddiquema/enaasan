@@ -1,0 +1,39 @@
+{
+  "id": "streams-explorer",
+  "title": "Stream Explorer",
+  "url": "/streams.html",
+  "description": "Choose your stream after Grade 10. Understand Science, Commerce, Arts, and Vocational streams — and where each one actually leads.",
+  "target_audience": "Grade 10 students deciding on streams",
+  "duration": "30-45 minutes",
+  "keywords": [
+    "streams",
+    "Science",
+    "Commerce",
+    "Arts",
+    "Vocational",
+    "Grade 10",
+    "board exams",
+    "stream selection",
+    "career paths"
+  ],
+  "questions_it_answers": [
+    "Which stream should I choose?",
+    "What is the difference between Science, Commerce, and Arts?",
+    "Where does each stream lead?",
+    "What are vocational streams?",
+    "Can I change streams later?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "after12"
+  ],
+  "next_publication": "after12",
+  "tags": [
+    "education",
+    "career-planning",
+    "streams",
+    "Grade-10"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

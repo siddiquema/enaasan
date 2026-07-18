@@ -1,0 +1,40 @@
+{
+  "id": "state-exams",
+  "title": "State Exams Guide",
+  "url": "/state-exams.html",
+  "description": "Understand state board entrance exams, state civil services, UPSC, and state-level career opportunities. Planning guide for competitive exams.",
+  "target_audience": "Students planning for state-level opportunities",
+  "duration": "45-60 minutes",
+  "keywords": [
+    "state exams",
+    "UPSC",
+    "BPSC",
+    "state civil services",
+    "competitive exams",
+    "government jobs",
+    "IAS",
+    "IPS",
+    "state boards",
+    "exam preparation"
+  ],
+  "questions_it_answers": [
+    "What state exams should I take?",
+    "What is UPSC?",
+    "Can I prepare for state exams?",
+    "What are government job opportunities?",
+    "How do I prepare for IAS/IPS?",
+    "What are state-level competitive exams?"
+  ],
+  "related_publications": [
+    "after-12",
+    "careers-compass"
+  ],
+  "tags": [
+    "competitive-exams",
+    "government-jobs",
+    "career-planning",
+    "exam-preparation"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

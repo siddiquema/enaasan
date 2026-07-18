@@ -1,0 +1,39 @@
+{
+  "id": "90-day-plan",
+  "title": "Your 90-Day Plan",
+  "url": "/90-day-plan.html",
+  "description": "A practical 90-day action plan for fresh graduates preparing for their first job. Week-by-week guidance on what to prepare.",
+  "target_audience": "Fresh college graduates preparing for first job",
+  "duration": "20-30 minutes to read, 90 days to execute",
+  "keywords": [
+    "90-day plan",
+    "first job",
+    "preparation",
+    "action plan",
+    "fresh graduate",
+    "job search",
+    "resume",
+    "interview preparation",
+    "timeline"
+  ],
+  "questions_it_answers": [
+    "How do I prepare for my first job?",
+    "What should I do in 90 days?",
+    "How do I build my resume?",
+    "When should I start applying?",
+    "How do I prepare for interviews?",
+    "What's a realistic job search timeline?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "card-004-comm-readiness"
+  ],
+  "tags": [
+    "first-job",
+    "action-plan",
+    "preparation",
+    "timeline"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

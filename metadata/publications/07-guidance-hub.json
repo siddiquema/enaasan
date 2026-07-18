@@ -1,0 +1,38 @@
+{
+  "id": "guidance-hub",
+  "title": "Guidance Hub",
+  "url": "/guide.html",
+  "description": "Resources for parents, counselors, and coordinators. Understand the education landscape and guide young people with current, accurate information.",
+  "target_audience": "Parents, career counselors, placement coordinators",
+  "duration": "Varies",
+  "keywords": [
+    "guidance",
+    "parents",
+    "counselors",
+    "coordinators",
+    "education landscape",
+    "career guidance",
+    "support",
+    "mentoring"
+  ],
+  "questions_it_answers": [
+    "How can I guide my child?",
+    "What information do counselors need?",
+    "How do I support placement coordination?",
+    "What careers are available now?",
+    "How has education changed?",
+    "What skills matter for jobs?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "careers-compass"
+  ],
+  "tags": [
+    "guidance",
+    "parents",
+    "counselors",
+    "education-support"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

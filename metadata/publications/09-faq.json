@@ -1,0 +1,43 @@
+{
+  "id": "faq",
+  "title": "Frequently Asked Questions",
+  "url": "/faq.html",
+  "description": "Answers to common questions about education, careers, and planning. Find quick answers to 'Can I...?' questions you might have.",
+  "target_audience": "Anyone with questions about education or careers",
+  "duration": "10-20 minutes per question",
+  "keywords": [
+    "FAQ",
+    "questions",
+    "answers",
+    "can I",
+    "engineering",
+    "medical",
+    "commerce",
+    "arts",
+    "job",
+    "career",
+    "education"
+  ],
+  "questions_it_answers": [
+    "Can I do engineering without JEE?",
+    "Can I do medical without NEET?",
+    "Can I switch streams?",
+    "Can I change careers later?",
+    "Is B.Com worth it if I don't want to do CA?",
+    "What if I don't do well in board exams?",
+    "Can I still find a good job?"
+  ],
+  "related_publications": [
+    "streams-explorer",
+    "after-12",
+    "guide-001-first-job"
+  ],
+  "tags": [
+    "faq",
+    "common-questions",
+    "myths",
+    "clarification"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

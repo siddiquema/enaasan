@@ -1,0 +1,45 @@
+{
+  "id": "after-12",
+  "title": "Plan After 12th",
+  "url": "/after12.html",
+  "description": "Understand entrance exams, courses, and career paths after Grade 12. JEE, NEET, CLAT, CUET, NID, CA Foundation — which one fits your goals?",
+  "target_audience": "Grade 11-12 students planning after board exams",
+  "duration": "45-60 minutes",
+  "keywords": [
+    "after 12th",
+    "JEE",
+    "NEET",
+    "CLAT",
+    "CUET",
+    "NID",
+    "CA Foundation",
+    "entrance exams",
+    "college",
+    "courses",
+    "engineering",
+    "medical",
+    "law",
+    "design"
+  ],
+  "questions_it_answers": [
+    "What can I do after 12th?",
+    "Which entrance exam should I take?",
+    "What is JEE?",
+    "What is NEET?",
+    "Can I do design without NID?",
+    "What are my options in commerce?",
+    "How do I choose between engineering and medical?"
+  ],
+  "related_publications": [
+    "streams-explorer",
+    "guide-001-first-job"
+  ],
+  "tags": [
+    "education",
+    "entrance-exams",
+    "Grade-12",
+    "career-planning"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}

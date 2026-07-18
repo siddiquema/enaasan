@@ -1,8 +1,58 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-17",
-  "total_publications": 13,
+  "last_updated": "2026-07-18",
+  "total_publications": 25,
   "publications": [
+    {
+      "id": "streams-explorer",
+      "file": "01-streams.json",
+      "status": "published"
+    },
+    {
+      "id": "after-12",
+      "file": "02-after12.json",
+      "status": "published"
+    },
+    {
+      "id": "after-10",
+      "file": "03-after10.json",
+      "status": "published"
+    },
+    {
+      "id": "careers-compass",
+      "file": "04-careers.json",
+      "status": "published"
+    },
+    {
+      "id": "bps-kpo-careers",
+      "file": "05-bps-kpo.json",
+      "status": "published"
+    },
+    {
+      "id": "state-exams",
+      "file": "06-state-exams.json",
+      "status": "published"
+    },
+    {
+      "id": "guidance-hub",
+      "file": "07-guidance-hub.json",
+      "status": "published"
+    },
+    {
+      "id": "90-day-plan",
+      "file": "08-90day-plan.json",
+      "status": "published"
+    },
+    {
+      "id": "faq",
+      "file": "09-faq.json",
+      "status": "published"
+    },
+    {
+      "id": "who-are-you",
+      "file": "10-who-are-you.json",
+      "status": "published"
+    },
     {
       "id": "guide-001-first-job",
       "file": "01-first-job.json",

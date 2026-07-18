@@ -1,0 +1,42 @@
+{
+  "id": "careers-compass",
+  "title": "Career Compass",
+  "url": "/careers.html",
+  "description": "Explore 40+ career paths and understand what employers actually look for. See real skill requirements for IT, Finance, Management, Healthcare, and Creative roles.",
+  "target_audience": "College students and early-career professionals",
+  "duration": "60+ minutes",
+  "keywords": [
+    "careers",
+    "career paths",
+    "IT",
+    "finance",
+    "management",
+    "healthcare",
+    "creative",
+    "skills",
+    "job roles",
+    "employers",
+    "career planning"
+  ],
+  "questions_it_answers": [
+    "What are career paths in IT?",
+    "What skills do finance jobs need?",
+    "What are management roles?",
+    "What healthcare careers exist?",
+    "What creative careers are available?",
+    "What do employers actually look for?",
+    "How do I prepare for different careers?"
+  ],
+  "related_publications": [
+    "guide-004-skills-required",
+    "guide-001-first-job"
+  ],
+  "tags": [
+    "career-paths",
+    "employer-expectations",
+    "skill-mapping",
+    "career-planning"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14"
+}
