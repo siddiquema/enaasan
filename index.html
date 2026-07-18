@@ -414,13 +414,14 @@
 <body>
 <!-- ── Cookie Consent Banner ──────────────────────────────────────────────── -->
 <script>
-  fetch('components/cookie-consent.html')
+  fetch('/components/cookie-consent.html')
     .then(r => r.text())
     .then(html => {
       const temp = document.createElement('div');
       temp.innerHTML = html;
       document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
-    });
+    })
+    .catch(e => console.error('Failed to load cookie consent:', e));
 </script>
 
 <!-- ── Nav ──────────────────────────────────────────────── -->
@@ -457,11 +458,12 @@
 <!-- ── Guidance Disclaimer ──────────────────────────────────────────────── -->
 <div id="disclaimer-container" style="max-width: 1060px; margin: 0 auto; padding: 0 24px;"></div>
 <script>
-  fetch('components/guidance-disclaimer.html')
+  fetch('/components/guidance-disclaimer.html')
     .then(r => r.text())
     .then(html => {
       document.getElementById('disclaimer-container').innerHTML = html;
-    });
+    })
+    .catch(e => console.error('Failed to load guidance disclaimer:', e));
 </script>
 
 <!-- ── Start Here ──────────────────────────────────────────── -->

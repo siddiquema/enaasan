@@ -572,7 +572,8 @@
       const temp = document.createElement('div');
       temp.innerHTML = html;
       document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
-    });
+    })
+    .catch(e => console.error('Failed to load cookie consent:', e));
 </script>
 
 <!-- ── Nav ───────────────────────────────────────── -->
@@ -598,7 +599,8 @@
     .then(r => r.text())
     .then(html => {
       document.getElementById('disclaimer-container').innerHTML = html;
-    });
+    })
+    .catch(e => console.error('Failed to load guidance disclaimer:', e));
 </script>
 
 <!-- ── Tab bar ────────────────────────────────────── -->
