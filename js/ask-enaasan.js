@@ -18,7 +18,7 @@ class AskEnaasan {
    */
   async loadMetadata() {
     try {
-      const response = await fetch('/metadata/publications/_index.json');
+      const response = await fetch('/metadata/publications/index.json');
       const index = await response.json();
 
       // Load each publication metadata
