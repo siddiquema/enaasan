@@ -662,10 +662,16 @@
           const emptyMessage = document.getElementById('askEnaasanEmpty');
           const examplesContainer = document.getElementById('askEnaasanExamples');
 
+          console.log('Loader: searchInput found:', !!searchInput);
+          console.log('Loader: resultsContainer found:', !!resultsContainer);
+          console.log('Loader: examplesContainer found:', !!examplesContainer);
+
           if (!searchInput) {
             console.error('Ask Enaasan elements not found');
             return;
           }
+
+          console.log('Loader: Attaching event listeners...');
 
           const performSearch = (query) => {
             if (!window.askEnaasan || !window.askEnaasan.loaded) {
@@ -727,6 +733,7 @@
           // Handle search input
           searchInput.addEventListener('input', (e) => {
             const query = e.target.value;
+            console.log('Loader: input event, query=', query);
             if (query.trim()) {
               performSearch(query);
             } else {
