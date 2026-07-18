@@ -176,6 +176,9 @@
 <p class="hero-sub">Resources for parents, career counsellors, and placement coordinators — to guide students with accurate, current information about streams, exams, and careers in India.</p>
 <p style="margin-top:14px; font-size:0.88rem;"><a href="state-exams.html" style="color:var(--gold); text-decoration:underline; text-underline-offset:3px;">Looking for state-specific exams (TN, Karnataka, Kerala, AP, Telangana)? →</a></p>
 </div>
+<div style="max-width:900px;margin:0 auto;padding:40px 24px">
+<div id="askEnaasanContainer"></div>
+</div>
 <div class="tab-bar" role="tablist">
 <button aria-selected="true" class="tab-btn active" data-i18n="guide.tab.parents" data-tab="parents" role="tab">👨‍👩‍👧 For Parents</button>
 <button aria-selected="false" class="tab-btn" data-i18n="guide.tab.counsellors" data-tab="counsellors" role="tab">🎓 For Career Counsellors</button>
@@ -422,5 +425,20 @@
   document.querySelectorAll('.myth-card,.info-card,.convo-card,.qa-block,.fw-step').forEach(el => io.observe(el));
 </script>
 <script src="js/i18n.js"></script>
+<script src="js/ask-enaasan.js"></script>
+<script>
+  // Load Ask Enaasan search component
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('askEnaasanContainer');
+    if (container) {
+      fetch('components/ask-enaasan-search.html')
+        .then(response => response.text())
+        .then(html => {
+          container.innerHTML = html;
+        })
+        .catch(error => console.error('Error loading Ask Enaasan:', error));
+    }
+  });
+</script>
 </body>
 </html>

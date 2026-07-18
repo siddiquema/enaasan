@@ -202,6 +202,12 @@ This guide will grow as we add content on related topics — how to navigate the
 
 <div class="divider"></div>
 
+<div style="margin: 60px 0">
+<div id="askEnaasanContainer"></div>
+</div>
+
+<div class="divider"></div>
+
 <div class="prose-section">
 <h2 class="prose-heading" data-i18n="firstjob.nextsteps.title">Next in the Series</h2>
 <div class="prose-body">
@@ -246,5 +252,20 @@ This guide will grow as we add content on related topics — how to navigate the
   document.querySelectorAll('.prose-section').forEach(el => io.observe(el));
 </script>
 <script src="../../js/i18n.js"></script>
+<script src="../../js/ask-enaasan.js"></script>
+<script>
+  // Load Ask Enaasan search component
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('askEnaasanContainer');
+    if (container) {
+      fetch('../../components/ask-enaasan-search.html')
+        .then(response => response.text())
+        .then(html => {
+          container.innerHTML = html;
+        })
+        .catch(error => console.error('Error loading Ask Enaasan:', error));
+    }
+  });
+</script>
 </body>
 </html>

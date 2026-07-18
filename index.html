@@ -589,25 +589,7 @@
 </div>
 <!-- ── Ask Enaasan ────────────────────────────────────────── -->
 <section class="section ask-section reveal" id="ask">
-<p class="section-label mono" data-i18n="home.ai.section.title">AI-powered guidance</p>
-<h2 class="section-heading" data-i18n="home.ai.title" style="margin: 0 auto; text-align:center; max-width:none;">Meet Enaasan</h2>
-<div class="ask-box">
-<div class="ask-avatar">🎓</div>
-<div class="coming-soon-pill" data-i18n="home.ai.badge">✦ Coming soon</div>
-<h3 class="ask-title" data-i18n="home.ai.subtitle">Your personal career mentor</h3>
-<p class="ask-desc" data-i18n="home.ai.body">Ask anything about streams, exams, colleges, jobs, or skills. Enaasan will know the Indian education landscape — and give you straight, honest answers.</p>
-<div class="preview-questions">
-<div class="preview-q">I'm good at both Maths and Biology. Should I take PCM or PCB?</div>
-<div class="preview-q">What can I do after 12th Commerce if I don't want to do CA?</div>
-<div class="preview-q">What skills do I need to get an IT job with a non-CS degree?</div>
-</div>
-<p data-i18n="home.ai.share.text" style="font-size:0.84rem; color:var(--mist); margin-bottom:14px;">Or share this page with someone who needs it — that helps us grow too.</p>
-<div class="share-row">
-<a class="share-btn whatsapp" data-i18n="home.share.whatsapp" href="https://wa.me/?text=Check%20out%20enaasan.online%20-%20a%20free%20career%20guide%20for%20Indian%20students!%20https://enaasan.online" target="_blank">💬 Share on WhatsApp</a>
-<a class="share-btn linkedin" data-i18n="home.share.linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://enaasan.online" target="_blank">in Share on LinkedIn</a>
-<a class="share-btn twitter" data-i18n="home.share.twitter" href="https://x.com/intent/post?text=Found%20this%20really%20useful%20career%20guide%20for%20Indian%20students%20-%20enaasan.online&amp;url=https://enaasan.online" target="_blank">𝕏 Share on X</a>
-</div>
-</div>
+<div id="askEnaasanContainer"></div>
 </section>
 <!-- ── Footer ─────────────────────────────────────────────── -->
 <footer>
@@ -654,5 +636,20 @@
     document.querySelectorAll('.reveal, .path-card').forEach(el => io.observe(el));
   </script>
 <script src="js/i18n.js"></script>
+<script src="js/ask-enaasan.js"></script>
+<script>
+  // Load Ask Enaasan search component
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('askEnaasanContainer');
+    if (container) {
+      fetch('components/ask-enaasan-search.html')
+        .then(response => response.text())
+        .then(html => {
+          container.innerHTML = html;
+        })
+        .catch(error => console.error('Error loading Ask Enaasan:', error));
+    }
+  });
+</script>
 </body>
 </html>
