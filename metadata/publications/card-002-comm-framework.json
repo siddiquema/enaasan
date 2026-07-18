@@ -1,0 +1,39 @@
+{
+  "id": "card-002-comm-framework",
+  "title": "The Five Communication Competencies",
+  "url": "/skills/communication/framework/",
+  "description": "Master the 5 core communication competencies: listening, clarity, audience awareness, responsiveness, and engagement. Includes self-rating table and practice strategies.",
+  "target_audience": "College students and working professionals",
+  "duration": "15 minutes",
+  "keywords": [
+    "communication",
+    "competencies",
+    "listening",
+    "clarity",
+    "audience awareness",
+    "responsiveness",
+    "engagement"
+  ],
+  "questions_it_answers": [
+    "What are the key communication competencies?",
+    "How do I develop each communication skill?",
+    "What does good communication look like?",
+    "How can I assess my communication level?"
+  ],
+  "related_publications": [
+    "hub-001-communication",
+    "card-001-comm-definition",
+    "card-004-comm-readiness"
+  ],
+  "next_publication": "card-003-comm-salary",
+  "tags": [
+    "communication",
+    "competencies",
+    "skills",
+    "framework"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_hub": "hub-001-communication",
+  "card_order": 2
+}

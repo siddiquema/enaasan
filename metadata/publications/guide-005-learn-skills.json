@@ -1,0 +1,40 @@
+{
+  "id": "guide-005-learn-skills",
+  "title": "How to Learn Skills Efficiently Using AI",
+  "url": "/skills/first-job/learn-skills/",
+  "description": "Learn how to acquire skills efficiently using AI tools. Build a structured learning plan, use spaced repetition, practice with projects, and track your progress.",
+  "target_audience": "College graduates building career skills",
+  "duration": "45 minutes",
+  "keywords": [
+    "learning",
+    "skills",
+    "AI",
+    "efficient learning",
+    "structured learning",
+    "practice",
+    "skill acquisition"
+  ],
+  "questions_it_answers": [
+    "How do I learn skills efficiently?",
+    "What's the best way to practice new skills?",
+    "How can AI help me learn?",
+    "How do I build a learning roadmap?",
+    "How do I know if I've learned a skill?"
+  ],
+  "related_publications": [
+    "guide-004-skills-required",
+    "guide-003-discover-careers",
+    "hub-001-communication"
+  ],
+  "next_publication": "guide-006-interviews",
+  "tags": [
+    "learning",
+    "skills",
+    "ai",
+    "career-development"
+  ],
+  "status": "coming-soon",
+  "published_date": null,
+  "part_of_series": "career-exploration",
+  "series_order": 4
+}

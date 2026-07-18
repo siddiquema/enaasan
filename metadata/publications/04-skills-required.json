@@ -1,0 +1,41 @@
+{
+  "id": "guide-004-skills-required",
+  "title": "How to Identify Skills Required for Any Job",
+  "url": "/skills/first-job/build-skills/",
+  "description": "Learn how professionals identify required skills. Discover your skill gaps, prioritize learning, and build a learning roadmap for the next 3-6 months.",
+  "target_audience": "College graduates planning their learning journey",
+  "duration": "45 minutes",
+  "keywords": [
+    "skills",
+    "skill gap",
+    "career skills",
+    "learning",
+    "professional skills",
+    "technical skills",
+    "skill development"
+  ],
+  "questions_it_answers": [
+    "What skills do I need for my chosen career?",
+    "Which skills should I learn first?",
+    "What skills am I missing?",
+    "How do I identify my skill gaps?",
+    "What's the best way to learn career skills?"
+  ],
+  "related_publications": [
+    "guide-003-discover-careers",
+    "guide-002-who-are-you",
+    "hub-001-communication"
+  ],
+  "next_publication": "guide-005-learn-skills",
+  "tags": [
+    "career",
+    "skills",
+    "learning",
+    "skill-development",
+    "career-planning"
+  ],
+  "status": "published",
+  "published_date": "2026-07-17",
+  "part_of_series": "career-exploration",
+  "series_order": 3
+}

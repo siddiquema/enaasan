@@ -1,0 +1,39 @@
+{
+  "id": "card-004-comm-readiness",
+  "title": "Am I Ready? Communication Readiness Checklist",
+  "url": "/skills/communication/readiness/",
+  "description": "30-item self-assessment checklist to gauge your communication readiness. Includes a 4-month development plan with weekly action items and milestones.",
+  "target_audience": "College students preparing for careers",
+  "duration": "20 minutes",
+  "keywords": [
+    "communication",
+    "readiness",
+    "assessment",
+    "checklist",
+    "self-assessment",
+    "communication skills",
+    "development plan"
+  ],
+  "questions_it_answers": [
+    "Am I ready for the job market from a communication perspective?",
+    "What communication skills do I need to develop?",
+    "How can I improve my communication in 4 months?",
+    "What should I focus on this week?"
+  ],
+  "related_publications": [
+    "hub-001-communication",
+    "card-002-comm-framework",
+    "guide-001-first-job"
+  ],
+  "next_publication": "card-005-comm-examples",
+  "tags": [
+    "communication",
+    "assessment",
+    "readiness",
+    "development-plan"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_hub": "hub-001-communication",
+  "card_order": 4
+}

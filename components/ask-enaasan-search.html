@@ -1,0 +1,340 @@
+<!-- Ask Enaasan Search Component -->
+<!-- Philosophy: Students search for answers, not pages -->
+
+<style>
+  .ask-enaasan-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ask-enaasan-wrapper {
+    background: linear-gradient(135deg, rgba(240, 165, 0, 0.08) 0%, rgba(13, 27, 42, 0.4) 100%);
+    border: 1px solid var(--border, #1E3A52);
+    border-radius: var(--radius-lg, 22px);
+    padding: 40px 28px;
+    margin: 0;
+  }
+
+  .ask-enaasan-header {
+    margin-bottom: 28px;
+  }
+
+  .ask-enaasan-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--chalk, #F2EFE9);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .ask-enaasan-subtitle {
+    font-size: 0.95rem;
+    color: var(--mist, #A8C0D4);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .ask-enaasan-input-wrapper {
+    position: relative;
+    margin: 28px 0;
+  }
+
+  .ask-enaasan-input {
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(25, 47, 68, 0.8);
+    border: 1.5px solid var(--border, #1E3A52);
+    border-radius: var(--radius, 14px);
+    color: var(--chalk, #F2EFE9);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .ask-enaasan-input:focus {
+    outline: none;
+    border-color: var(--gold, #F0A500);
+    box-shadow: 0 0 0 3px rgba(240, 165, 0, 0.1);
+  }
+
+  .ask-enaasan-input::placeholder {
+    color: var(--faint, #4A6580);
+  }
+
+  .ask-enaasan-examples {
+    margin-top: 16px;
+    padding: 12px 0;
+  }
+
+  .ask-enaasan-examples-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--faint, #4A6580);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .ask-enaasan-examples-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .ask-enaasan-example-chip {
+    padding: 6px 12px;
+    background: rgba(240, 165, 0, 0.15);
+    border: 1px solid var(--border, #1E3A52);
+    border-radius: 100px;
+    color: var(--mist, #A8C0D4);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .ask-enaasan-example-chip:hover {
+    background: rgba(240, 165, 0, 0.25);
+    border-color: var(--gold, #F0A500);
+    color: var(--chalk, #F2EFE9);
+  }
+
+  .ask-enaasan-results {
+    margin-top: 24px;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .ask-enaasan-results.active {
+    max-height: 1000px;
+  }
+
+  .ask-enaasan-results-header {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--chalk, #F2EFE9);
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  .ask-enaasan-result-item {
+    padding: 16px;
+    margin-bottom: 12px;
+    background: rgba(25, 47, 68, 0.6);
+    border: 1px solid var(--border, #1E3A52);
+    border-radius: var(--radius, 14px);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+
+  .ask-enaasan-result-item:hover {
+    border-color: var(--gold, #F0A500);
+    background: rgba(25, 47, 68, 1);
+  }
+
+  .ask-enaasan-result-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--chalk, #F2EFE9);
+    margin: 0 0 6px 0;
+  }
+
+  .ask-enaasan-result-description {
+    font-size: 0.9rem;
+    color: var(--mist, #A8C0D4);
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+  }
+
+  .ask-enaasan-result-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: var(--faint, #4A6580);
+  }
+
+  .ask-enaasan-result-status {
+    display: inline-block;
+    padding: 2px 8px;
+    background: rgba(240, 165, 0, 0.15);
+    border-radius: 4px;
+    color: var(--gold, #F0A500);
+    font-weight: 600;
+    margin-right: 8px;
+  }
+
+  .ask-enaasan-result-status.coming-soon {
+    background: rgba(168, 192, 212, 0.15);
+    color: var(--mist, #A8C0D4);
+  }
+
+  .ask-enaasan-empty {
+    padding: 24px;
+    text-align: center;
+    color: var(--faint, #4A6580);
+    display: none;
+  }
+
+  .ask-enaasan-empty.show {
+    display: block;
+  }
+
+  .ask-enaasan-coming-soon-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border, #1E3A52);
+  }
+
+  @media (max-width: 600px) {
+    .ask-enaasan-wrapper {
+      padding: 28px 18px;
+    }
+
+    .ask-enaasan-title {
+      font-size: 1.2rem;
+    }
+
+    .ask-enaasan-examples-list {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .ask-enaasan-example-chip {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="ask-enaasan-container">
+  <div class="ask-enaasan-wrapper">
+    <div class="ask-enaasan-header">
+      <h2 class="ask-enaasan-title">Ask Enaasan</h2>
+      <p class="ask-enaasan-subtitle">What would you like to know today?</p>
+    </div>
+
+    <div class="ask-enaasan-input-wrapper">
+      <input
+        type="text"
+        class="ask-enaasan-input"
+        id="askEnaasanInput"
+        placeholder="Search here..."
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="ask-enaasan-examples">
+      <label class="ask-enaasan-examples-label">Try searching for:</label>
+      <div class="ask-enaasan-examples-list" id="askEnaasanExamples">
+        <div class="ask-enaasan-example-chip">How do I get my first job?</div>
+        <div class="ask-enaasan-example-chip">What skills do I need?</div>
+        <div class="ask-enaasan-example-chip">What should I do after graduation?</div>
+        <div class="ask-enaasan-example-chip">I don't know which career suits me</div>
+      </div>
+    </div>
+
+    <div class="ask-enaasan-results" id="askEnaasanResults">
+      <div class="ask-enaasan-results-header">Results</div>
+      <div id="askEnaasanResultsList"></div>
+      <div class="ask-enaasan-empty" id="askEnaasanEmpty">
+        <p>No results found. Try a different search.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Initialize Ask Enaasan search when page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('askEnaasanInput');
+    const resultsContainer = document.getElementById('askEnaasanResults');
+    const resultsList = document.getElementById('askEnaasanResultsList');
+    const emptyMessage = document.getElementById('askEnaasanEmpty');
+    const examplesContainer = document.getElementById('askEnaasanExamples');
+
+    // Handle example chip clicks
+    examplesContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('ask-enaasan-example-chip')) {
+        searchInput.value = e.target.textContent;
+        searchInput.focus();
+        performSearch(e.target.textContent);
+      }
+    });
+
+    // Handle search input
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value;
+      if (query.trim()) {
+        performSearch(query);
+      } else {
+        resultsContainer.classList.remove('active');
+      }
+    });
+
+    // Handle Enter key
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSearch(searchInput.value);
+      }
+    });
+
+    function performSearch(query) {
+      if (!window.askEnaasan || !window.askEnaasan.loaded) {
+        console.warn('Ask Enaasan metadata not loaded yet');
+        return;
+      }
+
+      const results = window.askEnaasan.search(query);
+
+      // Render results
+      resultsList.innerHTML = '';
+
+      if (results.length === 0) {
+        emptyMessage.classList.add('show');
+      } else {
+        emptyMessage.classList.remove('show');
+
+        results.forEach(result => {
+          const resultEl = document.createElement('a');
+          resultEl.href = result.url;
+          resultEl.className = 'ask-enaasan-result-item';
+          resultEl.target = result.status === 'coming-soon' ? '_self' : '_self';
+
+          const statusBadge = result.status === 'coming-soon'
+            ? '<span class="ask-enaasan-result-status coming-soon">Coming Soon</span>'
+            : '';
+
+          resultEl.innerHTML = `
+            <div class="ask-enaasan-result-title">
+              ${statusBadge}
+              ${result.title}
+            </div>
+            <div class="ask-enaasan-result-description">${result.description}</div>
+            <div class="ask-enaasan-result-meta">
+              <span>⏱ ${result.duration}</span>
+              ${result.tags ? '<span>' + result.tags.slice(0, 2).join(', ') + '</span>' : ''}
+            </div>
+          `;
+
+          // Disable links for coming soon
+          if (result.status === 'coming-soon') {
+            resultEl.style.cursor = 'default';
+            resultEl.onclick = (e) => e.preventDefault();
+          }
+
+          resultsList.appendChild(resultEl);
+        });
+      }
+
+      resultsContainer.classList.add('active');
+    }
+  });
+</script>

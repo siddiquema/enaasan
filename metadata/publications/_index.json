@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-17",
+  "total_publications": 13,
+  "publications": [
+    {
+      "id": "guide-001-first-job",
+      "file": "01-first-job.json",
+      "status": "published"
+    },
+    {
+      "id": "guide-002-who-are-you",
+      "file": "02-who-are-you.json",
+      "status": "published"
+    },
+    {
+      "id": "guide-003-discover-careers",
+      "file": "03-discover-careers.json",
+      "status": "published"
+    },
+    {
+      "id": "guide-004-skills-required",
+      "file": "04-skills-required.json",
+      "status": "published"
+    },
+    {
+      "id": "hub-001-communication",
+      "file": "hub-001-communication.json",
+      "status": "published"
+    },
+    {
+      "id": "card-001-comm-definition",
+      "file": "card-001-comm-definition.json",
+      "status": "published"
+    },
+    {
+      "id": "card-002-comm-framework",
+      "file": "card-002-comm-framework.json",
+      "status": "published"
+    },
+    {
+      "id": "card-003-comm-salary",
+      "file": "card-003-comm-salary.json",
+      "status": "published"
+    },
+    {
+      "id": "card-004-comm-readiness",
+      "file": "card-004-comm-readiness.json",
+      "status": "published"
+    },
+    {
+      "id": "card-005-comm-examples",
+      "file": "card-005-comm-examples.json",
+      "status": "published"
+    },
+    {
+      "id": "guide-005-learn-skills",
+      "file": "guide-005-learn-skills.json",
+      "status": "coming-soon"
+    },
+    {
+      "id": "guide-006-interviews",
+      "file": "guide-006-interviews.json",
+      "status": "coming-soon"
+    }
+  ],
+  "search_tips": {
+    "search_by": ["title", "keywords", "questions_it_answers", "description", "tags"],
+    "returns": ["title", "url", "description", "duration", "status"],
+    "philosophy": "Students search for answers, not pages"
+  }
+}

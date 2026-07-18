@@ -1,0 +1,38 @@
+{
+  "id": "card-001-comm-definition",
+  "title": "What is Communication Competency?",
+  "url": "/skills/communication/definition/",
+  "description": "Understand the 4 dimensions of communication competency: clarity, listening, audience awareness, and engagement. Learn why communication is learnable, not innate.",
+  "target_audience": "College students and early-career professionals",
+  "duration": "10 minutes",
+  "keywords": [
+    "communication",
+    "competency",
+    "listening",
+    "clarity",
+    "engagement",
+    "professional communication"
+  ],
+  "questions_it_answers": [
+    "What is communication competency?",
+    "Is communication a skill I can learn?",
+    "What makes someone a good communicator?",
+    "What are the dimensions of communication?"
+  ],
+  "related_publications": [
+    "hub-001-communication",
+    "card-002-comm-framework",
+    "guide-001-first-job"
+  ],
+  "next_publication": "card-002-comm-framework",
+  "tags": [
+    "communication",
+    "skills",
+    "competency",
+    "professional-development"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_hub": "hub-001-communication",
+  "card_order": 1
+}

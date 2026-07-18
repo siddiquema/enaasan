@@ -1,0 +1,38 @@
+{
+  "id": "card-005-comm-examples",
+  "title": "Worked Examples: Communication in Action",
+  "url": "/skills/communication/examples/",
+  "description": "Real-world examples showing weak vs. strong communication across Agent, Analyst, and Team Lead roles. See 20-year career impact of communication skill gaps.",
+  "target_audience": "College students and early-career professionals",
+  "duration": "20 minutes",
+  "keywords": [
+    "communication",
+    "examples",
+    "case study",
+    "career impact",
+    "professional communication",
+    "roles"
+  ],
+  "questions_it_answers": [
+    "What does good vs. bad communication look like at work?",
+    "How does communication affect long-term career growth?",
+    "What are real examples of communication skill impact?",
+    "How do Agent, Analyst, and Lead roles differ?"
+  ],
+  "related_publications": [
+    "hub-001-communication",
+    "card-002-comm-framework",
+    "guide-001-first-job"
+  ],
+  "next_publication": "guide-001-first-job",
+  "tags": [
+    "communication",
+    "examples",
+    "career-impact",
+    "case-study"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_hub": "hub-001-communication",
+  "card_order": 5
+}

@@ -1,0 +1,50 @@
+{
+  "id": "hub-001-communication",
+  "title": "Communication Skills Hub",
+  "url": "/skills/communication/",
+  "description": "Master the five communication competencies that employers look for. A modular learning hub with 5 practical guides covering definition, framework, salary impact, readiness, and real-world examples.",
+  "target_audience": "College students and working professionals",
+  "duration": "90 minutes (5 cards)",
+  "keywords": [
+    "communication",
+    "communication skills",
+    "effective communication",
+    "speaking",
+    "listening",
+    "professional communication",
+    "workplace skills"
+  ],
+  "questions_it_answers": [
+    "How do I improve my communication skills?",
+    "What is communication competency?",
+    "Why does communication matter in jobs?",
+    "How do I assess my communication skills?",
+    "How much can communication skills increase my salary?",
+    "What are examples of strong communication?"
+  ],
+  "related_publications": [
+    "card-001-comm-definition",
+    "card-002-comm-framework",
+    "card-003-comm-salary",
+    "card-004-comm-readiness",
+    "card-005-comm-examples",
+    "guide-001-first-job"
+  ],
+  "next_publication": "card-001-comm-definition",
+  "tags": [
+    "skills",
+    "communication",
+    "workplace",
+    "professional-development"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "is_hub": true,
+  "contains_cards": [
+    "card-001-comm-definition",
+    "card-002-comm-framework",
+    "card-003-comm-salary",
+    "card-004-comm-readiness",
+    "card-005-comm-examples"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "guide-003-discover-careers",
+  "title": "Use AI to Discover Careers That Suit You",
+  "url": "/skills/first-job/explore-careers/",
+  "description": "Discover 3-5 careers worth exploring using AI tools. Understand what professionals do, shortlist options, and create a Career Exploration Sheet.",
+  "target_audience": "College graduates exploring career options",
+  "duration": "45 minutes",
+  "keywords": [
+    "career",
+    "careers",
+    "career exploration",
+    "career discovery",
+    "job roles",
+    "career options",
+    "AI",
+    "ChatGPT"
+  ],
+  "questions_it_answers": [
+    "What careers should I explore?",
+    "How do I discover the right career for me?",
+    "What do professionals actually do in different roles?",
+    "How can I narrow down my career options?",
+    "What careers are growing?"
+  ],
+  "related_publications": [
+    "guide-002-who-are-you",
+    "guide-004-skills-required",
+    "guide-001-first-job"
+  ],
+  "next_publication": "guide-004-skills-required",
+  "tags": [
+    "career",
+    "career-exploration",
+    "ai",
+    "job-discovery"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_series": "career-exploration",
+  "series_order": 2
+}

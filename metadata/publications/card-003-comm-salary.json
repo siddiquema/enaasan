@@ -1,0 +1,39 @@
+{
+  "id": "card-003-comm-salary",
+  "title": "Communication Skills & Salary Premium",
+  "url": "/skills/communication/salary-premium/",
+  "description": "Understand how communication skills affect compensation. Real example: BPS Agents with strong communication earn 20% salary premium compared to those with weak communication.",
+  "target_audience": "College students and working professionals",
+  "duration": "10 minutes",
+  "keywords": [
+    "communication",
+    "salary",
+    "compensation",
+    "earning",
+    "career growth",
+    "BPS",
+    "premium"
+  ],
+  "questions_it_answers": [
+    "How much does communication skill matter for salary?",
+    "Can better communication increase my earnings?",
+    "What is the salary premium for communication skills?",
+    "How do companies value communication?"
+  ],
+  "related_publications": [
+    "hub-001-communication",
+    "card-002-comm-framework",
+    "guide-004-skills-required"
+  ],
+  "next_publication": "card-004-comm-readiness",
+  "tags": [
+    "communication",
+    "salary",
+    "career-growth",
+    "compensation"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_hub": "hub-001-communication",
+  "card_order": 3
+}

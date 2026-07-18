@@ -1,0 +1,42 @@
+{
+  "id": "guide-001-first-job",
+  "title": "How to Get Your First Job",
+  "url": "/skills/first-job/",
+  "description": "Learn how employers think when hiring fresh graduates. Understand what companies actually look for beyond grades and qualifications.",
+  "target_audience": "College students and fresh graduates",
+  "duration": "15-20 minutes",
+  "keywords": [
+    "job",
+    "first job",
+    "graduate",
+    "career",
+    "hiring",
+    "employability",
+    "interview",
+    "resume"
+  ],
+  "questions_it_answers": [
+    "How do I get my first job?",
+    "What do employers look for?",
+    "How do companies hire graduates?",
+    "What matters more than grades?",
+    "How should I prepare for my first job?"
+  ],
+  "related_publications": [
+    "guide-002-who-are-you",
+    "guide-003-discover-careers",
+    "guide-004-skills-required",
+    "hub-001-communication"
+  ],
+  "next_publication": "guide-002-who-are-you",
+  "tags": [
+    "career",
+    "first-job",
+    "employability",
+    "job-search"
+  ],
+  "status": "published",
+  "published_date": "2026-07-14",
+  "part_of_series": "first-job-journey",
+  "series_order": 0
+}

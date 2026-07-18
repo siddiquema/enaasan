@@ -1,0 +1,42 @@
+{
+  "id": "guide-002-who-are-you",
+  "title": "Who Are You? Beyond Grades",
+  "url": "/career-exploration/01-who-are-you.html",
+  "description": "Understand yourself beyond academic performance. Discover your strengths, interests, values, and working style to make career decisions that actually fit.",
+  "target_audience": "College graduates and first-job seekers",
+  "duration": "15 minutes",
+  "keywords": [
+    "self-discovery",
+    "career",
+    "strengths",
+    "interests",
+    "values",
+    "working style",
+    "career fit",
+    "career decision"
+  ],
+  "questions_it_answers": [
+    "What kind of work will I enjoy?",
+    "What are my real strengths?",
+    "What matters to me in a career?",
+    "How do I prefer to work?",
+    "Who am I beyond my grades?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "guide-003-discover-careers",
+    "guide-004-skills-required"
+  ],
+  "next_publication": "guide-003-discover-careers",
+  "tags": [
+    "career",
+    "self-discovery",
+    "career-exploration",
+    "strengths",
+    "values"
+  ],
+  "status": "published",
+  "published_date": "2026-07-16",
+  "part_of_series": "career-exploration",
+  "series_order": 1
+}

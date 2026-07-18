@@ -1,0 +1,40 @@
+{
+  "id": "guide-006-interviews",
+  "title": "Prepare for Interviews Using AI",
+  "url": "/skills/first-job/interview-prep/",
+  "description": "Master interview preparation using AI tools. Practice common questions, understand what interviewers look for, and build confidence for your first job interview.",
+  "target_audience": "College graduates interviewing for their first job",
+  "duration": "45 minutes",
+  "keywords": [
+    "interview",
+    "interview preparation",
+    "job interview",
+    "interview questions",
+    "communication",
+    "first job",
+    "AI"
+  ],
+  "questions_it_answers": [
+    "How do I prepare for a job interview?",
+    "What questions will I be asked?",
+    "How do I answer interview questions well?",
+    "What do interviewers look for?",
+    "How can AI help me practice?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "guide-005-learn-skills",
+    "hub-001-communication"
+  ],
+  "next_publication": "guide-007-week-one",
+  "tags": [
+    "interview",
+    "career",
+    "job-search",
+    "first-job"
+  ],
+  "status": "coming-soon",
+  "published_date": null,
+  "part_of_series": "first-job-journey",
+  "series_order": 1
+}
