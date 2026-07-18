@@ -558,7 +558,16 @@
     .then(html => {
       const temp = document.createElement('div');
       temp.innerHTML = html;
-      document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
+      const bannerElement = temp.firstElementChild;
+      document.body.insertBefore(bannerElement, document.body.firstChild);
+
+      // Execute inline scripts from the component (innerHTML doesn't auto-execute scripts)
+      const scripts = temp.querySelectorAll('script');
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        document.body.appendChild(newScript);
+      });
     })
     .catch(e => console.error('Failed to load cookie consent:', e));
 </script>
@@ -585,7 +594,20 @@
   fetch('/components/guidance-disclaimer.html')
     .then(r => r.text())
     .then(html => {
-      document.getElementById('disclaimer-container').innerHTML = html;
+      const container = document.getElementById('disclaimer-container');
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      // Move all children from temp to container
+      while (temp.firstChild) {
+        container.appendChild(temp.firstChild);
+      }
+      // Execute any scripts
+      const scripts = container.querySelectorAll('script');
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        container.appendChild(newScript);
+      });
     })
     .catch(e => console.error('Failed to load guidance disclaimer:', e));
 </script>
