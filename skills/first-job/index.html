@@ -37,13 +37,8 @@
   "isPartOf": { "@type": "WebSite", "name": "enaasan", "url": "https://enaasan.online/" }
 }
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D4QMDFL8XF');
-  </script>
+<!-- Google Analytics 4 — loaded via cookie consent component -->
+<!-- See components/cookie-consent.html for consent mechanism -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -99,6 +94,17 @@
   </style>
 </head>
 <body>
+<!-- ── Cookie Consent Banner ──────────────────────────────────────────────── -->
+<script>
+  fetch('/components/cookie-consent.html')
+    .then(r => r.text())
+    .then(html => {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
+    });
+</script>
+
 <nav>
 <div class="nav-row1"><a class="nav-logo" href="../../index.html">en<span>aasan</span></a><a class="nav-back" data-i18n="nav.back_home" href="../../index.html">← Back to home</a></div><div aria-label="Select language" class="lang-switcher" role="group">
 <button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
@@ -115,6 +121,16 @@
 Most advice about first jobs focuses on what you need to do: polish your resume, practice interviews, network, learn new skills. All true. But it skips the part that actually changes how you prepare. Here's a different starting point: <strong>Stop trying to guess what employers want. Start thinking like one.</strong>
     </p>
 </div>
+
+<!-- ── Guidance Disclaimer ──────────────────────────────────────────────── -->
+<div id="disclaimer-container" style="max-width: 800px; margin: 1.5rem auto 0; padding: 0 24px;"></div>
+<script>
+  fetch('/components/guidance-disclaimer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('disclaimer-container').innerHTML = html;
+    });
+</script>
 
 <div class="prose-section">
 <h2 class="prose-heading" data-i18n="firstjob.intro.title">Introduction</h2>

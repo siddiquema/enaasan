@@ -36,14 +36,8 @@
   "isAccessibleForFree": true
 }
 </script>
-<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D4QMDFL8XF');
-  </script>
+<!-- Google Analytics 4 — loaded via cookie consent component -->
+<!-- See components/cookie-consent.html for consent mechanism -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -418,6 +412,17 @@
   </style>
 </head>
 <body>
+<!-- ── Cookie Consent Banner ──────────────────────────────────────────────── -->
+<script>
+  fetch('components/cookie-consent.html')
+    .then(r => r.text())
+    .then(html => {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
+    });
+</script>
+
 <!-- ── Nav ──────────────────────────────────────────────── -->
 <nav>
 <div class="nav-row1">
@@ -448,6 +453,17 @@
     </p>
 <div class="hero-arrow">↓</div>
 </section>
+
+<!-- ── Guidance Disclaimer ──────────────────────────────────────────────── -->
+<div id="disclaimer-container" style="max-width: 1060px; margin: 0 auto; padding: 0 24px;"></div>
+<script>
+  fetch('components/guidance-disclaimer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('disclaimer-container').innerHTML = html;
+    });
+</script>
+
 <!-- ── Start Here ──────────────────────────────────────────── -->
 <section class="section reveal" style="padding-top: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.05);">
 <div style="max-width: 640px;">

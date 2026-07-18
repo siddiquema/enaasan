@@ -1,0 +1,86 @@
+<div class="guidance-disclaimer">
+  <div class="disclaimer-icon">⚠️</div>
+  <div class="disclaimer-content">
+    <p><strong>About this guidance:</strong> enaasan provides educational information to help you explore career paths. This is <strong>not a guarantee of admissions, employment, or salary</strong>. Always verify time-sensitive information (exam dates, eligibility, fees) directly with the official source before applying or paying.</p>
+    <p class="disclaimer-note">Have feedback or found outdated information? <a href="https://github.com/enaasan/enaasan.online/issues" target="_blank" rel="noopener noreferrer">Report an issue</a> or <a href="#contact">contact us</a>.</p>
+  </div>
+</div>
+
+<style>
+.guidance-disclaimer {
+  background: linear-gradient(135deg, #fff8f0 0%, #fffbf5 100%);
+  border-left: 4px solid #ff8c42;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.disclaimer-icon {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.disclaimer-content {
+  flex: 1;
+}
+
+.disclaimer-content p {
+  margin: 0 0 0.75rem 0;
+}
+
+.disclaimer-content p:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimer-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.disclaimer-content a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.disclaimer-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .guidance-disclaimer {
+    margin: 1rem 0;
+    padding: 0.875rem 1rem;
+  }
+
+  .disclaimer-icon {
+    font-size: 1.25rem;
+  }
+
+  .disclaimer-content {
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .guidance-disclaimer {
+    background: linear-gradient(135deg, #3d2817 0%, #4a3320 100%);
+    border-left-color: #ff9955;
+    color: #e0e0e0;
+  }
+
+  .disclaimer-note {
+    color: #aaa;
+  }
+
+  .disclaimer-content a {
+    color: #66b3ff;
+  }
+}
+</style>
