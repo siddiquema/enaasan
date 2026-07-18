@@ -655,98 +655,99 @@
           // Insert the HTML content (without scripts)
           container.innerHTML = temp.innerHTML;
 
-          // Initialize Ask Enaasan search (copied from component)
-          const searchInput = document.getElementById('askEnaasanInput');
-          const resultsContainer = document.getElementById('askEnaasanResults');
-          const resultsList = document.getElementById('askEnaasanResultsList');
-          const emptyMessage = document.getElementById('askEnaasanEmpty');
-          const examplesContainer = document.getElementById('askEnaasanExamples');
-
-          if (!searchInput) {
-            console.error('Ask Enaasan elements not found');
-            return;
-          }
-
-          // Handle example chip clicks
-          examplesContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('ask-enaasan-example-chip')) {
-              searchInput.value = e.target.textContent;
-              searchInput.focus();
-              performSearch(e.target.textContent);
-            }
-          });
-
-          // Handle search input
-          searchInput.addEventListener('input', (e) => {
-            const query = e.target.value;
-            if (query.trim()) {
-              performSearch(query);
-            } else {
-              resultsContainer.classList.remove('active');
-            }
-          });
-
-          // Handle Enter key
-          searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-              performSearch(searchInput.value);
-            }
-          });
-
-          function performSearch(query) {
-            if (!window.askEnaasan || !window.askEnaasan.loaded) {
-              console.warn('Ask Enaasan metadata not loaded yet');
-              return;
-            }
-
-            const results = window.askEnaasan.search(query);
-
-            // Render results
-            resultsList.innerHTML = '';
-
-            if (results.length === 0) {
-              emptyMessage.classList.add('show');
-            } else {
-              emptyMessage.classList.remove('show');
-
-              results.forEach(result => {
-                const resultEl = document.createElement('a');
-                resultEl.href = result.url;
-                resultEl.className = 'ask-enaasan-result-item';
-                resultEl.target = '_self';
-
-                const statusBadge = result.status === 'coming-soon'
-                  ? '<span class="ask-enaasan-result-status coming-soon">Coming Soon</span>'
-                  : '';
-
-                resultEl.innerHTML = `
-                  <div class="ask-enaasan-result-title">
-                    ${statusBadge}
-                    ${result.title}
-                  </div>
-                  <div class="ask-enaasan-result-description">${result.description}</div>
-                  <div class="ask-enaasan-result-meta">
-                    <span>⏱ ${result.duration}</span>
-                    ${result.tags ? '<span>' + result.tags.slice(0, 2).join(', ') + '</span>' : ''}
-                  </div>
-                `;
-
-                // Disable links for coming soon
-                if (result.status === 'coming-soon') {
-                  resultEl.style.cursor = 'default';
-                  resultEl.onclick = (e) => e.preventDefault();
-                }
-
-                resultsList.appendChild(resultEl);
-              });
-            }
-
-            resultsContainer.classList.add('active');
-          }
+          // Defer initialization to next event loop to ensure DOM is ready
+          setTimeout(() => {
+            window.initializeAskEnaasanSearch?.();
+          }, 0);
         })
         .catch(error => console.error('Error loading Ask Enaasan:', error));
     }
   });
+
+  // Global initialization function for Ask Enaasan
+  window.initializeAskEnaasanSearch = function() {
+    const searchInput = document.getElementById('askEnaasanInput');
+    const resultsContainer = document.getElementById('askEnaasanResults');
+    const resultsList = document.getElementById('askEnaasanResultsList');
+    const emptyMessage = document.getElementById('askEnaasanEmpty');
+    const examplesContainer = document.getElementById('askEnaasanExamples');
+
+    if (!searchInput) return;
+
+    // Handle example chip clicks
+    examplesContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('ask-enaasan-example-chip')) {
+        searchInput.value = e.target.textContent;
+        searchInput.focus();
+        performSearch(e.target.textContent);
+      }
+    });
+
+    // Handle search input
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value;
+      if (query.trim()) {
+        performSearch(query);
+      } else {
+        resultsContainer.classList.remove('active');
+      }
+    });
+
+    // Handle Enter key
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSearch(searchInput.value);
+      }
+    });
+
+    function performSearch(query) {
+      if (!window.askEnaasan || !window.askEnaasan.loaded) {
+        console.warn('Ask Enaasan metadata not loaded yet');
+        return;
+      }
+
+      const results = window.askEnaasan.search(query);
+      resultsList.innerHTML = '';
+
+      if (results.length === 0) {
+        emptyMessage.classList.add('show');
+      } else {
+        emptyMessage.classList.remove('show');
+
+        results.forEach(result => {
+          const resultEl = document.createElement('a');
+          resultEl.href = result.url;
+          resultEl.className = 'ask-enaasan-result-item';
+          resultEl.target = '_self';
+
+          const statusBadge = result.status === 'coming-soon'
+            ? '<span class="ask-enaasan-result-status coming-soon">Coming Soon</span>'
+            : '';
+
+          resultEl.innerHTML = `
+            <div class="ask-enaasan-result-title">
+              ${statusBadge}
+              ${result.title}
+            </div>
+            <div class="ask-enaasan-result-description">${result.description}</div>
+            <div class="ask-enaasan-result-meta">
+              <span>⏱ ${result.duration}</span>
+              ${result.tags ? '<span>' + result.tags.slice(0, 2).join(', ') + '</span>' : ''}
+            </div>
+          `;
+
+          if (result.status === 'coming-soon') {
+            resultEl.style.cursor = 'default';
+            resultEl.onclick = (e) => e.preventDefault();
+          }
+
+          resultsList.appendChild(resultEl);
+        });
+      }
+
+      resultsContainer.classList.add('active');
+    }
+  };
 </script>
 </body>
 </html>
