@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -6,22 +6,22 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
-<title data-i18n="streams.page.title">Stream Explorer — enaasan</title>
-<meta content="Find the right stream after Grade 10. Science, Commerce, Arts — explore what each path actually leads to." data-i18n="streams.meta.description" name="description"/>
+<title data-i18n="streams.page.title">Stream Explorer â€” enaasan</title>
+<meta content="Find the right stream after Grade 10. Science, Commerce, Arts â€” explore what each path actually leads to." data-i18n="streams.meta.description" name="description"/>
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="enaasan" />
 <meta property="og:url" content="https://enaasan.online/streams.html" />
-<meta property="og:title" content="Stream Explorer — enaasan" />
-<meta property="og:description" content="Science, Commerce, or Arts? Find the right stream after Grade 10 — and understand where each one actually leads." />
+<meta property="og:title" content="Stream Explorer â€” enaasan" />
+<meta property="og:description" content="Science, Commerce, or Arts? Find the right stream after Grade 10 â€” and understand where each one actually leads." />
 <meta property="og:image" content="https://enaasan.online/assets/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_IN" />
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Stream Explorer — enaasan" />
-<meta name="twitter:description" content="Science, Commerce, or Arts? Find the right stream after Grade 10 — and understand where each one actually leads." />
+<meta name="twitter:title" content="Stream Explorer â€” enaasan" />
+<meta name="twitter:description" content="Science, Commerce, or Arts? Find the right stream after Grade 10 â€” and understand where each one actually leads." />
 <meta name="twitter:image" content="https://enaasan.online/assets/og-image.jpg" />
 <!-- Canonical -->
 <link rel="canonical" href="https://enaasan.online/streams.html" />
@@ -29,15 +29,15 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Stream Explorer — enaasan",
+  "name": "Stream Explorer â€” enaasan",
   "url": "https://enaasan.online/streams.html",
-  "description": "Choose your stream after Class 10 — Science, Commerce, Arts, or Vocational. Understand what each stream actually leads to.",
+  "description": "Choose your stream after Class 10 â€” Science, Commerce, Arts, or Vocational. Understand what each stream actually leads to.",
   "inLanguage": ["en", "ta", "te", "hi"],
   "isAccessibleForFree": true,
   "isPartOf": { "@type": "WebSite", "name": "enaasan", "url": "https://enaasan.online/" }
 }
 </script>
-<!-- Google Analytics 4 — replace G-D4QMDFL8XF with your Measurement ID -->
+<!-- Google Analytics 4 â€” replace G-D4QMDFL8XF with your Measurement ID -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -49,8 +49,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="css/lang-styles.css" rel="stylesheet"/>
+<link href="css/theme-styles.css" rel="stylesheet"/>
 <style>
-    /* ── Tokens (same as homepage) ─────────────────── */
+    /* â”€â”€ Tokens (same as homepage) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     :root {
       --night:     #0D1B2A;
       --ink:       #14273A;
@@ -83,7 +84,7 @@
     }
     a { color: inherit; text-decoration: none; }
 
-    /* ── Nav ────────────────────────────────────────── */
+    /* â”€â”€ Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -108,14 +109,14 @@
     }
     .nav-back:hover { color: var(--chalk); border-color: var(--mist); }
 
-    /* ── Page shell ─────────────────────────────────── */
+    /* â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .page {
       max-width: 900px;
       margin: 0 auto;
       padding: 120px 24px 80px;
     }
 
-    /* ── Progress bar ───────────────────────────────── */
+    /* â”€â”€ Progress bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .progress-bar {
       display: flex; align-items: center; justify-content: center;
       gap: 8px; margin-bottom: 52px;
@@ -149,7 +150,7 @@
     }
     .progress-label.active { color: var(--gold); }
 
-    /* ── Step container ─────────────────────────────── */
+    /* â”€â”€ Step container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .step {
       display: none;
       animation: stepIn 0.4s ease both;
@@ -160,7 +161,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Step headings ──────────────────────────────── */
+    /* â”€â”€ Step headings â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .step-eyebrow {
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem; letter-spacing: 0.1em;
@@ -179,7 +180,7 @@
       margin-bottom: 36px; max-width: 520px;
     }
 
-    /* ── Step 1: Interest tiles ─────────────────────── */
+    /* â”€â”€ Step 1: Interest tiles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .interest-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -209,7 +210,7 @@
       box-shadow: 0 0 0 3px rgba(240,165,0,0.15);
     }
     .interest-tile.selected::after {
-      content: '✓';
+      content: 'âœ“';
       position: absolute; top: 10px; right: 12px;
       font-size: 0.8rem; font-weight: 700;
       color: var(--gold);
@@ -248,7 +249,7 @@
       border-radius: 6px; padding: 3px 8px;
     }
 
-    /* ── Step 2: Stream cards ───────────────────────── */
+    /* â”€â”€ Step 2: Stream cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .streams-grid {
       display: flex; flex-direction: column; gap: 16px;
     }
@@ -335,7 +336,7 @@
       margin-bottom: 10px;
     }
 
-    /* ── Step 3: Path visualiser ────────────────────── */
+    /* â”€â”€ Step 3: Path visualiser â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .path-header {
       display: flex; align-items: flex-start;
       justify-content: space-between; gap: 16px;
@@ -465,7 +466,7 @@
       border-radius: 6px; padding: 3px 9px;
     }
 
-    /* ── Full map view ──────────────────────────────── */
+    /* â”€â”€ Full map view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .fullmap-toggle {
       margin-top: 40px; text-align: center;
     }
@@ -517,7 +518,7 @@
       font-size: 0.8rem; color: var(--mist); line-height: 1.4;
     }
 
-    /* ── Nav between steps ──────────────────────────── */
+    /* â”€â”€ Nav between steps â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .step-nav {
       display: flex; align-items: center; gap: 12px;
       margin-top: 36px; flex-wrap: wrap;
@@ -549,7 +550,7 @@
 
 
 
-    /* ── Responsive ─────────────────────────────────── */
+    /* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     @media (max-width: 560px) {
       nav { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 18px; }
       .lang-switcher { width: 100%; justify-content: flex-start; gap: 6px; }
@@ -583,16 +584,21 @@
   </style>
 </head>
 <body>
-<!-- ── Nav ──────────────────────────────────────── -->
+<!-- â”€â”€ Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <nav>
-<div class="nav-row1"><a class="nav-logo" href="index.html">en<span>aasan</span></a><a class="nav-back" data-i18n="nav.back_home" href="index.html">← Back to home</a></div><div aria-label="Select language" class="lang-switcher" role="group">
+<div class="nav-row1"><a class="nav-logo" href="index.html">en<span>aasan</span></a><a class="nav-back" data-i18n="nav.back_home" href="index.html">â† Back to home</a></div><div aria-label="Select language" class="lang-switcher" role="group">
 <button aria-pressed="true" class="lang-pill" data-i18n="lang.en" data-lang="en" type="button">EN</button>
-<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">தமிழ்</button>
-<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
-<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.ta" data-lang="ta" type="button">à®¤à®®à®¿à®´à¯</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">à°¤à±†à°²à±à°—à±</button>
+<button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">à¤¹à¤¿à¤‚à¤¦à¥€</button>
+</div>
+<div aria-label="Select theme" class="theme-switcher" role="group">
+<button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+<button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+<button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
 </div>
 </nav>
-<!-- ── Page ─────────────────────────────────────── -->
+<!-- â”€â”€ Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="page">
 <!-- Progress -->
 <div class="progress-bar" id="progressBar">
@@ -611,16 +617,16 @@
 </div>
 <span class="progress-label" data-i18n="streams.progress.label3" id="label3">Your path</span>
 </div>
-<!-- ══ STEP 1: Interests ════════════════════════ -->
+<!-- â•â• STEP 1: Interests â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="step active" id="step1">
 <p class="step-eyebrow" data-i18n="streams.progress.step1">Step 1 of 3</p>
 <h1 class="step-heading" data-i18n="streams.step1.title">What pulls you the most?</h1>
-<p class="step-sub" data-i18n="streams.step1.subtitle">Not what you are "good at" — what genuinely makes you curious. Pick the one that feels most like you.</p>
+<p class="step-sub" data-i18n="streams.step1.subtitle">Not what you are "good at" â€” what genuinely makes you curious. Pick the one that feels most like you.</p>
 <div class="interest-grid">
 <div class="interest-tile" data-interest="science" onclick="selectInterest(this); goToStep2();" style="--tile-color: var(--science)">
-<span class="tile-icon">🔬</span>
+<span class="tile-icon">ðŸ”¬</span>
 <div class="tile-title" data-i18n="streams.interest.science.label">How and why things work</div>
-<div class="tile-desc" data-i18n="streams.interest.science.body">You enjoy understanding what's behind things — experiments, logic, cause and effect. You ask "why does this happen?"</div>
+<div class="tile-desc" data-i18n="streams.interest.science.body">You enjoy understanding what's behind things â€” experiments, logic, cause and effect. You ask "why does this happen?"</div>
 <div class="tile-examples">
 <span class="tile-ex">experiments</span>
 <span class="tile-ex">problem solving</span>
@@ -629,7 +635,7 @@
 </div>
 </div>
 <div class="interest-tile" data-interest="commerce" onclick="selectInterest(this); goToStep2();" style="--tile-color: var(--commerce)">
-<span class="tile-icon">📊</span>
+<span class="tile-icon">ðŸ“Š</span>
 <div class="tile-title" data-i18n="streams.interest.commerce.label">Money, business, and how the world runs</div>
 <div class="tile-desc" data-i18n="streams.interest.commerce.body">You're curious about markets, why companies succeed, how money moves. You enjoy planning and decision-making.</div>
 <div class="tile-examples">
@@ -640,9 +646,9 @@
 </div>
 </div>
 <div class="interest-tile" data-interest="arts" onclick="selectInterest(this); goToStep2();" style="--tile-color: var(--arts)">
-<span class="tile-icon">🎨</span>
+<span class="tile-icon">ðŸŽ¨</span>
 <div class="tile-title" data-i18n="streams.interest.arts.label">People, ideas, stories, and expression</div>
-<div class="tile-desc" data-i18n="streams.interest.arts.body">You are drawn to human stories — history, cultures, writing, design, or understanding how society works.</div>
+<div class="tile-desc" data-i18n="streams.interest.arts.body">You are drawn to human stories â€” history, cultures, writing, design, or understanding how society works.</div>
 <div class="tile-examples">
 <span class="tile-ex">writing</span>
 <span class="tile-ex">design</span>
@@ -651,7 +657,7 @@
 </div>
 </div>
 <div class="interest-tile" data-interest="mixed" onclick="selectInterest(this); goToStep2();" style="--tile-color: var(--voc)">
-<span class="tile-icon">🤔</span>
+<span class="tile-icon">ðŸ¤”</span>
 <div class="tile-title" data-i18n="streams.interest.unsure.label">Honestly, I am not sure yet</div>
 <div class="tile-desc" data-i18n="streams.interest.unsure.body">That is completely fine. Many students feel this way. We will show you all your options and help you figure it out.</div>
 <div class="tile-examples">
@@ -662,21 +668,21 @@
 </div>
 </div>
 <div class="step-nav">
-<button class="btn-next" data-i18n="streams.step1.cta" id="next1" onclick="goToStep2()">See matching streams →</button>
+<button class="btn-next" data-i18n="streams.step1.cta" id="next1" onclick="goToStep2()">See matching streams â†’</button>
 </div>
 </div>
-<!-- ══ STEP 2: Streams ══════════════════════════ -->
+<!-- â•â• STEP 2: Streams â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="step" id="step2">
 <p class="step-eyebrow" data-i18n="streams.progress.step2">Step 2 of 3</p>
 <h2 class="step-heading" data-i18n="streams.step2.title" id="step2Heading">Streams that match you</h2>
-<p class="step-sub" data-i18n="streams.step2.subtitle" id="step2Sub">Based on what you told us. Pick the one you want to explore — you can always come back and try another.</p>
+<p class="step-sub" data-i18n="streams.step2.subtitle" id="step2Sub">Based on what you told us. Pick the one you want to explore â€” you can always come back and try another.</p>
 <div class="streams-grid" id="streamsGrid"></div>
 <div class="step-nav">
-<button class="btn-prev" data-i18n="streams.step2.back" onclick="goToStep(1)">← Back</button>
-<button class="btn-next" data-i18n="streams.step2.cta" id="next2" onclick="goToStep3()">See my path →</button>
+<button class="btn-prev" data-i18n="streams.step2.back" onclick="goToStep(1)">â† Back</button>
+<button class="btn-next" data-i18n="streams.step2.cta" id="next2" onclick="goToStep3()">See my path â†’</button>
 </div>
 </div>
-<!-- ══ STEP 3: Path ══════════════════════════════ -->
+<!-- â•â• STEP 3: Path â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="step" id="step3">
 <div class="path-header">
 <div>
@@ -690,7 +696,7 @@
 <!-- Full map toggle -->
 <div class="fullmap-toggle">
 <button class="fullmap-btn" onclick="toggleFullMap(this)">
-<span>🗺️</span> <span data-i18n="streams.step2.compare">Show me all stream paths side by side</span>
+<span>ðŸ—ºï¸</span> <span data-i18n="streams.step2.compare">Show me all stream paths side by side</span>
       </button>
 <div class="fullmap-panel" id="fullMapPanel"></div>
 </div>
@@ -714,7 +720,7 @@
 <a href="privacy.html">Privacy Policy</a>
 <a href="terms.html">Terms &amp; Disclaimer</a>
 </div>
-<p class="footer-copy" data-i18n="footer.copyright">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+<p class="footer-copy" data-i18n="footer.copyright">Â© 2026 enaasan.online Â· Built with care in Hyderabad ðŸ‡®ðŸ‡³</p>
 </footer>
 <style>
 footer {
@@ -734,36 +740,36 @@ footer {
 .footer-copy { font-size: 0.75rem; color: var(--faint); margin-top: 4px; }
 </style>
 <script>
-/* ═══════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    DATA
-═══════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const STREAMS = {
   pcm: {
-    name: 'Science — PCM',
-    icon: '⚛️',
+    name: 'Science â€” PCM',
+    icon: 'âš›ï¸',
     color: '#4A9EFF',
     rgb: '74,158,255',
     tagline: 'Physics, Chemistry, Mathematics',
     badge: 'Science Stream',
     heading: 'The Science (PCM) path',
-    sub: 'Where it goes from Class 11 to your career — one step at a time.',
+    sub: 'Where it goes from Class 11 to your career â€” one step at a time.',
     subjects: ['Physics','Chemistry','Maths','English','Optional: CS / Bio / PE'],
     fit: ['Science & Engineering interest', 'Comfortable with Maths', 'Logical thinker'],
-    description: 'Engineering, AI/ML, semiconductors, EVs, and space tech are all built on PCM. The broadest science stream — and 2026\'s fastest-growing fields run on it.',
+    description: 'Engineering, AI/ML, semiconductors, EVs, and space tech are all built on PCM. The broadest science stream â€” and 2026\'s fastest-growing fields run on it.',
     nodes: [
       {
-        stage: 'Right now · Grade 10 done',
-        icon: '🏫', color: '#4A9EFF', rgb: '74,158,255',
+        stage: 'Right now Â· Grade 10 done',
+        icon: 'ðŸ«', color: '#4A9EFF', rgb: '74,158,255',
         title: 'You choose PCM in Class 11',
         desc: 'Physics, Chemistry, and Maths become your core subjects for the next two years. It is demanding, but it sets you up for the widest range of careers in science and technology.',
-        options: ['Physics + Chemistry + Maths', 'Optional: Computer Science', 'Optional: Biology (BiPC → both Science paths open)'],
+        options: ['Physics + Chemistry + Maths', 'Optional: Computer Science', 'Optional: Biology (BiPC â†’ both Science paths open)'],
         optionColor: '#4A9EFF',
         exams: [],
         careers: []
       },
       {
         stage: 'During Class 11 & 12',
-        icon: '📝', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸ“', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Entrance exams you can prepare for',
         desc: 'Most competitive engineering and science seats are entrance-based. Starting preparation in Class 11 makes a real difference.',
         options: [],
@@ -773,7 +779,7 @@ const STREAMS = {
       },
       {
         stage: 'After Class 12',
-        icon: '🎓', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸŽ“', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Degrees you can pursue',
         desc: 'Click any option to see what careers it leads to.',
         options: ['B.Tech / B.E. (Engineering)', 'B.Sc. (Pure Science)', 'B.Arch (Architecture)', 'B.Sc. Nursing / Allied Health', 'Defence (NDA)'],
@@ -789,7 +795,7 @@ const STREAMS = {
       },
       {
         stage: 'After your degree',
-        icon: '🚀', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸš€', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Where you can go from here',
         desc: 'A PCM degree opens doors well beyond engineering.',
         options: ['M.Tech / MS (Specialisation)', 'MBA (Management)', 'UPSC / Civil Services', 'Research (PhD)', 'Start your own company'],
@@ -801,33 +807,33 @@ const STREAMS = {
   },
 
   pcb: {
-    name: 'Science — PCB',
-    icon: '🧬',
+    name: 'Science â€” PCB',
+    icon: 'ðŸ§¬',
     color: '#4A9EFF',
     rgb: '74,158,255',
     tagline: 'Physics, Chemistry, Biology',
     badge: 'Science Stream',
     heading: 'The Science (PCB) path',
-    sub: 'Where it goes from Class 11 to your career — one step at a time.',
+    sub: 'Where it goes from Class 11 to your career â€” one step at a time.',
     subjects: ['Physics','Chemistry','Biology','English','Optional: Maths'],
     fit: ['Curious about life and the body', 'Strong in Biology', 'Want to work in health / medicine'],
-    description: 'Medicine, pharma, biotech, and public health are expanding fast. If you are drawn to health, the human body, or the life sciences — this is your stream.',
+    description: 'Medicine, pharma, biotech, and public health are expanding fast. If you are drawn to health, the human body, or the life sciences â€” this is your stream.',
     nodes: [
       {
-        stage: 'Right now · Grade 10 done',
-        icon: '🏫', color: '#4A9EFF', rgb: '74,158,255',
+        stage: 'Right now Â· Grade 10 done',
+        icon: 'ðŸ«', color: '#4A9EFF', rgb: '74,158,255',
         title: 'You choose PCB in Class 11',
         desc: 'Physics, Chemistry, and Biology form your core. If you add Maths as a 6th subject (PCMB), you keep both engineering and medical options open.',
-        options: ['Physics + Chemistry + Biology', 'Tip: Add Maths as 6th subject → keeps JEE option alive'],
+        options: ['Physics + Chemistry + Biology', 'Tip: Add Maths as 6th subject â†’ keeps JEE option alive'],
         optionColor: '#4A9EFF',
         exams: [],
         careers: []
       },
       {
         stage: 'During Class 11 & 12',
-        icon: '📝', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸ“', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Entrance exams to prepare for',
-        desc: 'NEET is the single gateway to medical seats in India — government and private. Start early.',
+        desc: 'NEET is the single gateway to medical seats in India â€” government and private. Start early.',
         options: [],
         optionColor: '#4A9EFF',
         exams: ['NEET-UG (MBBS, BDS, BAMS)', 'TS EAMCET (Pharma / Agri)', 'AP EAMCET', 'JIPMER', 'AIIMS (now via NEET)'],
@@ -835,14 +841,14 @@ const STREAMS = {
       },
       {
         stage: 'After Class 12',
-        icon: '🎓', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸŽ“', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Degrees you can pursue',
         desc: 'Click any option to see what careers it leads to.',
         options: ['MBBS (Medicine)', 'BDS (Dentistry)', 'B.Pharm (Pharmacy)', 'B.Sc. Nursing', 'BAMS / BHMS (Ayurveda / Homeopathy)', 'B.Sc. Biotechnology / Life Sciences'],
         optionColor: '#4A9EFF',
         exams: [],
         careers: {
-          'MBBS (Medicine)': ['Doctor (GP)','Surgeon','Specialist (Cardiologist, Neurologist…)','Medical Researcher'],
+          'MBBS (Medicine)': ['Doctor (GP)','Surgeon','Specialist (Cardiologist, Neurologistâ€¦)','Medical Researcher'],
           'BDS (Dentistry)': ['Dentist','Oral Surgeon','Orthodontist','Dental Researcher'],
           'B.Pharm (Pharmacy)': ['Pharmacist','Drug Research Scientist','Clinical Research Associate','Pharmaceutical Sales'],
           'B.Sc. Nursing': ['Staff Nurse','ICU Nurse','Nurse Manager','Community Health Worker'],
@@ -852,7 +858,7 @@ const STREAMS = {
       },
       {
         stage: 'After your degree',
-        icon: '🚀', color: '#4A9EFF', rgb: '74,158,255',
+        icon: 'ðŸš€', color: '#4A9EFF', rgb: '74,158,255',
         title: 'Where you can go from here',
         desc: 'Medicine and life sciences have long but rewarding paths.',
         options: ['MD / MS (Specialisation)', 'MPH (Public Health)', 'PhD (Research)', 'Hospital Management (MBA)', 'Work abroad (USMLE / PLAB)'],
@@ -865,32 +871,32 @@ const STREAMS = {
 
   commerce: {
     name: 'Commerce',
-    icon: '📈',
+    icon: 'ðŸ“ˆ',
     color: '#3FC98A',
     rgb: '63,201,138',
     tagline: 'Accounts, Business Studies, Economics',
     badge: 'Commerce Stream',
     heading: 'The Commerce path',
-    sub: 'Where it goes from Class 11 to your career — one step at a time.',
+    sub: 'Where it goes from Class 11 to your career â€” one step at a time.',
     subjects: ['Accountancy','Business Studies','Economics','English','Optional: Maths / IP / CS'],
     fit: ['Curious about business & money', 'Enjoy organising and planning', 'Interested in markets and firms'],
-    description: 'Gateway to fintech, analytics, GCC sector roles, law, and management. Much broader than people think — and 2026\'s finance and business jobs want Commerce graduates.',
+    description: 'Gateway to fintech, analytics, GCC sector roles, law, and management. Much broader than people think â€” and 2026\'s finance and business jobs want Commerce graduates.',
     nodes: [
       {
-        stage: 'Right now · Grade 10 done',
-        icon: '🏫', color: '#3FC98A', rgb: '63,201,138',
+        stage: 'Right now Â· Grade 10 done',
+        icon: 'ðŸ«', color: '#3FC98A', rgb: '63,201,138',
         title: 'You choose Commerce in Class 11',
         desc: 'Accountancy, Business Studies, and Economics are your core. Adding Maths opens doors to B.Com (Hons), BBA, and finance-heavy roles.',
-        options: ['Accounts + Business Studies + Economics', 'With Maths → broader quantitative options', 'Without Maths → still very wide scope'],
+        options: ['Accounts + Business Studies + Economics', 'With Maths â†’ broader quantitative options', 'Without Maths â†’ still very wide scope'],
         optionColor: '#3FC98A',
         exams: [],
         careers: []
       },
       {
         stage: 'During Class 11 & 12',
-        icon: '📝', color: '#3FC98A', rgb: '63,201,138',
+        icon: 'ðŸ“', color: '#3FC98A', rgb: '63,201,138',
         title: 'Entrance exams and early tracks',
-        desc: 'Some professional tracks like CA start right after Class 12 — you can even register for CA Foundation while in Class 12.',
+        desc: 'Some professional tracks like CA start right after Class 12 â€” you can even register for CA Foundation while in Class 12.',
         options: [],
         optionColor: '#3FC98A',
         exams: ['CA Foundation (ICAI)', 'CS Foundation (ICSI)', 'CUET (Central Universities)', 'IPM Aptitude Test (IIM BBA)', 'CLAT (if considering Law)'],
@@ -898,7 +904,7 @@ const STREAMS = {
       },
       {
         stage: 'After Class 12',
-        icon: '🎓', color: '#3FC98A', rgb: '63,201,138',
+        icon: 'ðŸŽ“', color: '#3FC98A', rgb: '63,201,138',
         title: 'Degrees and professional courses',
         desc: 'Click any option to see what careers it leads to.',
         options: ['B.Com / B.Com (Hons)', 'BBA / BMS', 'CA (Chartered Accountancy)', 'CS (Company Secretary)', 'Economics (Hons)', 'LLB (Law)'],
@@ -915,12 +921,12 @@ const STREAMS = {
       },
       {
         stage: 'After your degree',
-        icon: '🚀', color: '#3FC98A', rgb: '63,201,138',
+        icon: 'ðŸš€', color: '#3FC98A', rgb: '63,201,138',
         title: 'Where you can go from here',
         desc: 'Commerce graduates have some of the most flexible higher education pathways.',
         options: ['MBA (IIM and other top schools)', 'CFA (Chartered Financial Analyst)', 'LLM (Law specialisation)', 'M.Com / MA Economics', 'UPSC / Civil Services', 'Start your own business'],
         optionColor: '#3FC98A',
-        exams: ['CAT / XAT / SNAP (MBA)', 'CFA Level 1–3', 'GMAT (MBA abroad)', 'UPSC CSE'],
+        exams: ['CAT / XAT / SNAP (MBA)', 'CFA Level 1â€“3', 'GMAT (MBA abroad)', 'UPSC CSE'],
         careers: []
       }
     ]
@@ -928,22 +934,22 @@ const STREAMS = {
 
   arts: {
     name: 'Arts & Humanities',
-    icon: '🎭',
+    icon: 'ðŸŽ­',
     color: '#E07BFF',
     rgb: '224,123,255',
-    tagline: 'History, Geography, Political Science, Languages, Psychology…',
+    tagline: 'History, Geography, Political Science, Languages, Psychologyâ€¦',
     badge: 'Arts & Humanities Stream',
     heading: 'The Arts & Humanities path',
-    sub: 'Where it goes from Class 11 to your career — one step at a time.',
-    subjects: ['History / Geography / Political Science', 'Psychology / Sociology', 'Languages (English, Hindi, Telugu…)', 'Optional: Fine Arts / Music / Home Science'],
+    sub: 'Where it goes from Class 11 to your career â€” one step at a time.',
+    subjects: ['History / Geography / Political Science', 'Psychology / Sociology', 'Languages (English, Hindi, Teluguâ€¦)', 'Optional: Fine Arts / Music / Home Science'],
     fit: ['Interested in people, society & culture', 'Strong in reading and writing', 'Curious about history, politics or design'],
-    description: 'The most misunderstood stream in India — and the one with the most diverse outcomes. UX design, journalism, law, psychology, and civil services all run on Arts foundations.',
+    description: 'The most misunderstood stream in India â€” and the one with the most diverse outcomes. UX design, journalism, law, psychology, and civil services all run on Arts foundations.',
     nodes: [
       {
-        stage: 'Right now · Grade 10 done',
-        icon: '🏫', color: '#E07BFF', rgb: '224,123,255',
+        stage: 'Right now Â· Grade 10 done',
+        icon: 'ðŸ«', color: '#E07BFF', rgb: '224,123,255',
         title: 'You choose Arts & Humanities in Class 11',
-        desc: 'You pick subjects like History, Political Science, Geography, Psychology, Sociology, or Fine Arts. This is not a "backup" stream — it is the deliberate choice of students who think broadly.',
+        desc: 'You pick subjects like History, Political Science, Geography, Psychology, Sociology, or Fine Arts. This is not a "backup" stream â€” it is the deliberate choice of students who think broadly.',
         options: ['History + Political Science + Geography (Social track)', 'Psychology + Sociology + English (People track)', 'Fine Arts / Music (Creative track)', 'Mix based on your school\'s offerings'],
         optionColor: '#E07BFF',
         exams: [],
@@ -951,17 +957,17 @@ const STREAMS = {
       },
       {
         stage: 'During Class 11 & 12',
-        icon: '📝', color: '#E07BFF', rgb: '224,123,255',
+        icon: 'ðŸ“', color: '#E07BFF', rgb: '224,123,255',
         title: 'Entrance exams and tracks to explore',
-        desc: 'Arts students have a surprisingly wide exam landscape — from law to design to civil services.',
+        desc: 'Arts students have a surprisingly wide exam landscape â€” from law to design to civil services.',
         options: [],
         optionColor: '#E07BFF',
-        exams: ['CLAT (Law — NLUs)', 'CUET (Central Universities)', 'NID / NIFT / UCEED (Design)', 'Mass Comm entrance exams', 'NDA (if considering Defence)'],
+        exams: ['CLAT (Law â€” NLUs)', 'CUET (Central Universities)', 'NID / NIFT / UCEED (Design)', 'Mass Comm entrance exams', 'NDA (if considering Defence)'],
         careers: []
       },
       {
         stage: 'After Class 12',
-        icon: '🎓', color: '#E07BFF', rgb: '224,123,255',
+        icon: 'ðŸŽ“', color: '#E07BFF', rgb: '224,123,255',
         title: 'Degrees and creative tracks',
         desc: 'Click any option to see what careers it leads to.',
         options: ['BA (History / Political Sci / Sociology)', 'BA Psychology', 'BFA / B.Des (Design)', 'LLB (Law)', 'BA Journalism / Mass Comm', 'BA Economics'],
@@ -978,7 +984,7 @@ const STREAMS = {
       },
       {
         stage: 'After your degree',
-        icon: '🚀', color: '#E07BFF', rgb: '224,123,255',
+        icon: 'ðŸš€', color: '#E07BFF', rgb: '224,123,255',
         title: 'Where you can go from here',
         desc: 'Arts graduates dominate India\'s civil services and lead in media, design, law, and social sectors.',
         options: ['UPSC Civil Services (IAS, IFS, IPS)', 'MA / M.Des / LLM (Specialisation)', 'MBA (Management)', 'State PSC exams', 'PhD (Academia)', 'Journalism / Content entrepreneurship'],
@@ -991,40 +997,40 @@ const STREAMS = {
 
   vocational: {
     name: 'Vocational / Skill-based',
-    icon: '🛠️',
+    icon: 'ðŸ› ï¸',
     color: '#FF8C42',
     rgb: '255,140,66',
     tagline: 'ITI, Polytechnic, NSQF-aligned courses',
     badge: 'Vocational Track',
     heading: 'The Vocational & Skills path',
     sub: 'A practical, employment-focused route that is faster and equally valid.',
-    subjects: ['Trade-specific skills (Electronics, IT, Beauty, Auto, Hospitality…)', 'Core academics', 'On-the-job training'],
+    subjects: ['Trade-specific skills (Electronics, IT, Beauty, Auto, Hospitalityâ€¦)', 'Core academics', 'On-the-job training'],
     fit: ['Want to start working sooner', 'Learn better by doing', 'Interested in a specific trade or skill'],
-    description: 'Not everyone needs a four-year degree to build a good career. Vocational tracks get you skilled and employed faster — and many lead to entrepreneurship or further education later.',
+    description: 'Not everyone needs a four-year degree to build a good career. Vocational tracks get you skilled and employed faster â€” and many lead to entrepreneurship or further education later.',
     nodes: [
       {
-        stage: 'Right now · Grade 10 done',
-        icon: '🏫', color: '#FF8C42', rgb: '255,140,66',
+        stage: 'Right now Â· Grade 10 done',
+        icon: 'ðŸ«', color: '#FF8C42', rgb: '255,140,66',
         title: 'You choose a Vocational track after Class 10',
         desc: 'Options include ITI (Industrial Training Institute), Polytechnic Diploma, or NSQF-level courses in your area of interest.',
-        options: ['ITI (1–2 year skill certificates)', 'Polytechnic Diploma (3 years)', 'Class 11–12 with Vocational subject (CBSE / State Board)', 'Short-term NSQF / PMKVY courses'],
+        options: ['ITI (1â€“2 year skill certificates)', 'Polytechnic Diploma (3 years)', 'Class 11â€“12 with Vocational subject (CBSE / State Board)', 'Short-term NSQF / PMKVY courses'],
         optionColor: '#FF8C42',
         exams: [],
         careers: []
       },
       {
         stage: 'During training',
-        icon: '📝', color: '#FF8C42', rgb: '255,140,66',
+        icon: 'ðŸ“', color: '#FF8C42', rgb: '255,140,66',
         title: 'Key tracks and trade options',
         desc: 'ITI and Polytechnic cover dozens of trades. Pick the one closest to your interest.',
         options: [],
         optionColor: '#FF8C42',
-        exams: ['ITI entrance (state-wise)', 'Polytechnic entrance (POLYCET in TS/AP)', 'NSQF Level 3–5 certifications'],
+        exams: ['ITI entrance (state-wise)', 'Polytechnic entrance (POLYCET in TS/AP)', 'NSQF Level 3â€“5 certifications'],
         careers: []
       },
       {
-        stage: 'After training (1–3 years)',
-        icon: '🎓', color: '#FF8C42', rgb: '255,140,66',
+        stage: 'After training (1â€“3 years)',
+        icon: 'ðŸŽ“', color: '#FF8C42', rgb: '255,140,66',
         title: 'What you can do with these skills',
         desc: 'Click any option to see what jobs it leads to.',
         options: ['IT / Computer Hardware', 'Electrician / Electronics', 'Hospitality & Tourism', 'Beauty & Wellness', 'Automobile / Mechanics', 'Healthcare Support'],
@@ -1041,21 +1047,21 @@ const STREAMS = {
       },
       {
         stage: 'Later, if you want to go further',
-        icon: '🚀', color: '#FF8C42', rgb: '255,140,66',
+        icon: 'ðŸš€', color: '#FF8C42', rgb: '255,140,66',
         title: 'Vocational is not a dead end',
         desc: 'Lateral entry options exist for Polytechnic holders to join B.Tech in 2nd year. Many vocational graduates also start their own businesses.',
         options: ['B.Tech via Lateral Entry (Polytechnic holders)', 'B.Voc degree (university-level)', 'Entrepreneur / Start your own workshop or business', 'Advance certification in your trade'],
         optionColor: '#FF8C42',
-        exams: ['ECET (Lateral Entry into B.Tech — TS/AP)', 'B.Voc entrance (state universities)'],
+        exams: ['ECET (Lateral Entry into B.Tech â€” TS/AP)', 'B.Voc entrance (state universities)'],
         careers: []
       }
     ]
   }
 };
 
-/* ═══════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    i18n HELPERS
-═══════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function getLang() {
   return localStorage.getItem('enaasan_lang') || 'en';
 }
@@ -1063,9 +1069,9 @@ function getLang() {
 /*
   INTEREST_LABELS translations.
   Coordinate with reviewers before going live:
-    Tamil — family member (senior teacher)
-    Telugu — Vijaya
-    Hindi — Shafi (Delhi)
+    Tamil â€” family member (senior teacher)
+    Telugu â€” Vijaya
+    Hindi â€” Shafi (Delhi)
   Empty string = falls back to English automatically.
 */
 const INTEREST_LABELS_T = {
@@ -1091,7 +1097,7 @@ const INTEREST_LABELS_T = {
 
 /*
   Per-stream translations. Each stream has top-level fields and a nodes array.
-  NOTE: node.options are intentionally NOT translated — they are used as
+  NOTE: node.options are intentionally NOT translated â€” they are used as
   career-lookup keys in handleOption(). Translate options in a follow-up
   once the lookup is refactored to use data-key attributes.
   Empty string / empty array = falls back to English automatically.
@@ -1280,7 +1286,7 @@ function getInterestLabels(interest) {
   };
 }
 
-/* Interest → stream mapping */
+/* Interest â†’ stream mapping */
 const INTEREST_MAP = {
   science:  ['pcm', 'pcb'],
   commerce: ['commerce', 'arts'],
@@ -1289,10 +1295,10 @@ const INTEREST_MAP = {
 };
 
 const INTEREST_LABELS = {
-  science:  { heading: 'Streams that match your curiosity', sub: 'You lean toward understanding how things work — these streams align with that.' },
-  commerce: { heading: 'Streams that match your thinking', sub: 'You think in terms of systems, decisions, and outcomes — these are your best fits.' },
-  arts:     { heading: 'Streams that match your perspective', sub: 'You are drawn to people, expression, and ideas — here is what opens up.' },
-  mixed:    { heading: 'All your options — every stream', sub: 'No rush. Browse each path and see which one feels right.' }
+  science:  { heading: 'Streams that match your curiosity', sub: 'You lean toward understanding how things work â€” these streams align with that.' },
+  commerce: { heading: 'Streams that match your thinking', sub: 'You think in terms of systems, decisions, and outcomes â€” these are your best fits.' },
+  arts:     { heading: 'Streams that match your perspective', sub: 'You are drawn to people, expression, and ideas â€” here is what opens up.' },
+  mixed:    { heading: 'All your options â€” every stream', sub: 'No rush. Browse each path and see which one feels right.' }
 };
 
 /* State */
@@ -1300,9 +1306,9 @@ let selectedInterest = null;
 let selectedStream   = null;
 let currentStep      = 1;
 
-/* ═══════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STEP LOGIC
-═══════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function selectInterest(tile) {
   document.querySelectorAll('.interest-tile').forEach(t => t.classList.remove('selected'));
   tile.classList.add('selected');
@@ -1343,9 +1349,9 @@ function updateProgress(n) {
   }
 }
 
-/* ═══════════════════════════════════════════════════
-   STEP 2 — Build stream cards
-═══════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   STEP 2 â€” Build stream cards
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function buildStreamsGrid(interest) {
   const keys = INTEREST_MAP[interest];
   const labels = getInterestLabels(interest);
@@ -1369,7 +1375,7 @@ function buildStreamsGrid(interest) {
     card.innerHTML = `
       <div class="stream-icon-wrap" style="background:rgba(${s.rgb},0.12)">${s.icon}</div>
       <div class="stream-body">
-        ${isBest ? '<div class="stream-fit-badge">✦ Best match for you</div>' : ''}
+        ${isBest ? '<div class="stream-fit-badge">âœ¦ Best match for you</div>' : ''}
         <div class="stream-name">${s.name}</div>
         <div class="stream-tagline">${s.description}</div>
         <div class="stream-subjects">
@@ -1378,8 +1384,8 @@ function buildStreamsGrid(interest) {
           ).join('')}
         </div>
       </div>
-      <div class="stream-arrow">→</div>
-      <div class="stream-check">✓</div>
+      <div class="stream-arrow">â†’</div>
+      <div class="stream-check">âœ“</div>
     `;
     card.onclick = () => { selectStream(card, key); goToStep3(); };
     grid.appendChild(card);
@@ -1393,9 +1399,9 @@ function selectStream(card, key) {
   document.getElementById('next2').classList.add('ready');
 }
 
-/* ═══════════════════════════════════════════════════
-   STEP 3 — Build path timeline
-═══════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   STEP 3 â€” Build path timeline
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function buildPath(key) {
   const s = getStreamData(key);
 
@@ -1477,9 +1483,9 @@ function handleOption(btn, careersId, careersObj) {
   panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-/* ═══════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FULL MAP
-═══════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function buildFullMap() {
   const panel = document.getElementById('fullMapPanel');
   const streamKeys = ['pcm','pcb','commerce','arts','vocational'];
@@ -1494,7 +1500,7 @@ function buildFullMap() {
         const s = getStreamData(key);
         const rows = s.nodes.map(n => `
           <div class="fullmap-row">
-            <span class="fullmap-stage">${n.stage.split('·')[0].trim()}</span>
+            <span class="fullmap-stage">${n.stage.split('Â·')[0].trim()}</span>
             <span class="fullmap-val">${n.title}</span>
           </div>
         `).join('');
@@ -1512,9 +1518,9 @@ function buildFullMap() {
   `;
 }
 
-/* ═══════════════════════════════════════════════════
-   LANG CHANGE — re-render current step
-═══════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   LANG CHANGE â€” re-render current step
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 document.addEventListener('langchange', function() {
   if (currentStep === 2 && selectedInterest) buildStreamsGrid(selectedInterest);
   if (currentStep === 3 && selectedStream)   buildPath(selectedStream);
@@ -1524,11 +1530,13 @@ function toggleFullMap(btn) {
   const panel = document.getElementById('fullMapPanel');
   const isOpen = panel.classList.toggle('open');
   btn.innerHTML = isOpen
-    ? '<span>✕</span> Hide full map'
-    : '<span>🗺️</span> Show me all stream paths side by side';
+    ? '<span>âœ•</span> Hide full map'
+    : '<span>ðŸ—ºï¸</span> Show me all stream paths side by side';
   if (isOpen) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
 <script src="js/i18n.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>
+

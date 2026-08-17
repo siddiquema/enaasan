@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════════════════
+   theme-styles.css — enaasan.online theme switcher styles
+   Provides: theme color variables + theme pill styling
+   Include in <head> AFTER your main stylesheet
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Theme: Light ── */
+[data-theme="light"] {
+  --night:   #F5F0E8;
+  --ink:     #EBE5DC;
+  --card:    #E2DBCE;
+  --border:  #D4CCBF;
+  --gold:    #C8860E;
+  --glow:    #E0A800;
+  --chalk:   #2A2520;
+  --mist:    #5A5047;
+  --faint:   #8B8179;
+}
+
+/* ── Theme: Soft Slate ── */
+[data-theme="slate"] {
+  --night:   #2D3748;
+  --ink:     #374354;
+  --card:    #425062;
+  --border:  #4A5A6E;
+  --gold:    #F0A500;
+  --glow:    #FFD166;
+  --chalk:   #F0F4F8;
+  --mist:    #C8D4E0;
+  --faint:   #8A98AC;
+}
+
+/* ── Theme Switcher UI ── */
+.theme-switcher {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.theme-pill {
+  background: transparent;
+  border: 1px solid rgba(240,165,0,0.35);
+  color: rgba(240,165,0,0.6);
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-pill::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 2px;
+  background: var(--theme-preview-bg);
+}
+
+.theme-pill:hover {
+  border-color: rgba(240,165,0,0.75);
+  box-shadow: 0 0 8px rgba(240,165,0,0.15);
+}
+
+.theme-pill.active,
+.theme-pill[aria-pressed="true"] {
+  background: rgba(240,165,0,0.12);
+  border-color: #F0A500;
+  box-shadow: 0 0 12px rgba(240,165,0,0.25);
+}
+
+.theme-pill:focus-visible {
+  outline: 2px solid #F0A500;
+  outline-offset: 2px;
+}
+
+/* Theme preview colors for pills */
+[data-theme="dark"] .theme-pill[data-theme="dark"]::before { --theme-preview-bg: #0D1B2A; }
+[data-theme="light"] .theme-pill[data-theme="light"]::before { --theme-preview-bg: #F5F0E8; }
+[data-theme="slate"] .theme-pill[data-theme="slate"]::before { --theme-preview-bg: #2D3748; }
+
+/* Dark theme preview colors for other pills */
+[data-theme="light"] .theme-pill[data-theme="dark"]::before,
+[data-theme="slate"] .theme-pill[data-theme="dark"]::before { --theme-preview-bg: #0D1B2A; }
+[data-theme="dark"] .theme-pill[data-theme="light"]::before,
+[data-theme="slate"] .theme-pill[data-theme="light"]::before { --theme-preview-bg: #F5F0E8; }
+[data-theme="dark"] .theme-pill[data-theme="slate"]::before,
+[data-theme="light"] .theme-pill[data-theme="slate"]::before { --theme-preview-bg: #2D3748; }
+
+@media (max-width: 560px) {
+  .theme-switcher { gap: 0.2rem; }
+  .theme-pill { width: 22px; height: 22px; }
+}

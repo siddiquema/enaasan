@@ -42,6 +42,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="css/lang-styles.css" rel="stylesheet"/>
+<link href="css/theme-styles.css" rel="stylesheet"/>
 <style>
     /* ── Tokens ─────────────────────────────────────────── */
     :root {
@@ -447,6 +448,11 @@
 <button aria-pressed="false" class="lang-pill" data-i18n="lang.te" data-lang="te" type="button">తెలుగు</button>
 <button aria-pressed="false" class="lang-pill" data-i18n="lang.hi" data-lang="hi" type="button">हिंदी</button>
 </div>
+<div aria-label="Select theme" class="theme-switcher" role="group">
+<button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+<button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+<button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+</div>
 </nav>
 <!-- ── Hero ─────────────────────────────────────────────── -->
 <section class="hero">
@@ -676,6 +682,7 @@
     document.querySelectorAll('.reveal, .path-card').forEach(el => io.observe(el));
   </script>
 <script src="js/i18n.js"></script>
+<script src="theme.js"></script>
 <script src="js/ask-enaasan.js"></script>
 <script>
   // Load Ask Enaasan search component
