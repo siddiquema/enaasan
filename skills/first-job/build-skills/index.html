@@ -68,11 +68,17 @@
     .footer-copy{font-size:0.75rem;color:var(--faint);margin-top:4px}
     @media(max-width:600px){nav{padding:14px 18px}.page{padding:88px 18px 60px}.section-box{padding:20px 18px}.highlight-box{padding:20px 18px}}
 </style>
+<link href="../../../css/theme-styles.css" rel="stylesheet"/>
 </head>
 <body>
 <nav>
 <a class="nav-logo" href="../../../index.html">en<span>aasan</span></a>
 <a class="nav-back" href="../explore-careers/">← Back to career discovery</a>
+<div aria-label="Select theme" class="theme-switcher" role="group">
+<button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+<button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+<button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+</div>
 </nav>
 
 <div class="page">
@@ -420,5 +426,6 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => observer.observe(section));
 });
 </script>
+<script src="../../../theme.js"></script>
 </body>
 </html>
