@@ -5,9 +5,9 @@ category: framework
 title: "The Gig Work Skill Pyramid: It's Not Just Delivery"
 description: "A five-level framework that sorts gig and field work by the skill it demands — from delivery and bike-taxi work at the base to expert consulting at the top — and shows what changes as you move up."
 purpose: "Helps a young person who thinks 'gig work' means only delivery or bike-taxi riding — or whose family sees it only that way — see the full range of gig work before deciding whether, and at which level, to enter it."
-outcome: "Student can place any gig or field job on a skill ladder, explain what that level pays for and who sets the price, and name the skill that would move them one level up."
+outcome: "Student can place any gig or field job on a skill ladder, explain what kind of value that level is mainly paid for, and name the skill that would move them one level up."
 status: draft
-version: 0.1
+version: 0.2
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-09-26
 volatile: false
@@ -19,7 +19,7 @@ audience: [student, parent, educator]
 register: reference
 stakes: medium
 evidence: expert-opinion
-evidence_notes: "The five-level pyramid and its three shifts (what you are paid for, who sets the price, what protects your income) are Enaasan's own synthesis — rated expert-opinion per AUTHOR_TEMPLATE. It is consistent with the skill-based split (low / medium / high skilled) used in NITI Aayog, 'India's Booming Gig and Platform Economy' (June 2022), but it does not reproduce that report's categories or rely on its figures. Example roles are illustrative, drawn from common categories of gig platforms operating in India; no platform is named or endorsed."
+evidence_notes: "The five-level pyramid and its shifts (the value you offer; what counts more — hours or portfolio, results and reputation) are Enaasan's own synthesis — rated expert-opinion per AUTHOR_TEMPLATE. It is consistent with the skill-based split (low / medium / high skilled) used in NITI Aayog, 'India's Booming Gig and Platform Economy' (June 2022), but it does not reproduce that report's categories or rely on its figures. Example roles are illustrative, drawn from common categories of gig platforms operating in India; no platform is named or endorsed."
 uncertainty: "The levels are a teaching model, not an official classification: real jobs straddle levels (a skilled electrician on a platform may be paid like Level 1; a delivery partner may also freelance as a translator). Earnings within any level vary widely by city, platform, hours, season, and personal reputation — this card deliberately gives no rupee figures. Moving up a level improves your options; it does not guarantee higher or steadier income. Gig work at every level usually comes without employer benefits (PF, ESI, paid leave); check what any specific platform or client actually provides."
 maturity: seed
 tags: [gig-work, field-work, freelancing, career-exploration]
@@ -48,15 +48,15 @@ When most people hear "gig work" in India, they picture a delivery partner or a 
 ```
                     ▲
                    ╱5╲         EXPERT
-                  ╱───╲        Paid for judgment
+                  ╱───╲        Paid for specialised expertise
                  ╱  4  ╲       PROFESSIONAL
-                ╱───────╲      Paid for outcomes
+                ╱───────╲      Paid for specialised work & outcomes
                ╱    3    ╲     DIGITAL & LANGUAGE SKILLS
               ╱───────────╲    Paid for skilled output
              ╱      2      ╲   TRAINED TRADES
-            ╱───────────────╲  Paid for a certified skill
+            ╱───────────────╲  Paid for a certified or proven skill
            ╱        1        ╲ ENTRY-LEVEL
-          ╱───────────────────╲ Paid for time and effort
+          ╱───────────────────╲ Paid mainly for time and effort
 ```
 
 *The widest level is at the bottom because it is the easiest to enter — not because it is where most people must stay.*
@@ -65,21 +65,21 @@ When most people hear "gig work" in India, they picture a delivery partner or a 
 
 ## The Five Levels
 
-### Level 1 — Entry-level: paid for your time and effort
+### Level 1 — Entry-level: paid mainly for time and effort
 
 **Examples:** food, grocery and parcel delivery · bike-taxi and auto/cab driving · warehouse picking and loading shifts · event and promotion staff · field survey and data-collection agents
 
 **To get in:** age 18+, ID documents, a smartphone; a driving licence and vehicle for riding and driving work.
 
-**What it's like:** quick to start, flexible hours, and you can earn from the first week. The app or company sets the price for each task. Earnings grow mainly by working more hours — so there is a ceiling, and it is set by your body and your time.
+**What it's like:** quick to start, flexible hours, and you can earn from the first week. Pay per task is usually set by the app or company. Earnings grow mainly by working more hours — so there is a ceiling, and it is set by your body and your time.
 
-### Level 2 — Trained trades: paid for a certified skill
+### Level 2 — Trained trades: paid for a certified or demonstrated practical skill
 
 **Examples:** electrician · plumber · AC and appliance technician · beautician and salon-at-home services · carpenter · painter · pest-control technician · home cook
 
 **To get in:** a skill you can prove — an ITI trade, a short government skilling certificate, or a training course run by a home-services platform — and your own basic tools.
 
-**What it's like:** you are paid per job, and a skilled job pays more than an unskilled task. Good ratings bring repeat customers. The platform still sets much of the price, but skill and reputation start to raise it.
+**What it's like:** you are paid per job, and a skilled job pays more than an unskilled task. Good ratings bring repeat customers. Skill and a good record can start to raise what you earn per job.
 
 ### Level 3 — Digital and language skills: paid for skilled output
 
@@ -87,37 +87,38 @@ When most people hear "gig work" in India, they picture a delivery partner or a 
 
 **To get in:** comfortable computer or phone skills, a language or subject you know well, and a few samples of your work.
 
-**What it's like:** you are paid per piece or per project, often from home. This is the first level where **you start setting your own price**. Your samples — your *portfolio* — matter more than your marks.
+**What it's like:** you are paid per piece or per project, often from home. Clients increasingly judge you on what you can show: your samples — your *portfolio* — matter more than your marks.
 
-### Level 4 — Professional: paid for outcomes
+### Level 4 — Professional: paid increasingly for specialised work and outcomes
 
 **Examples:** software and web development · UI/UX design · data analysis · digital marketing · accounting, GST and tax filing · legal drafting · architecture and CAD drawing · professional photography and videography
 
 **To get in:** a degree or a professional qualification, *or* skill you can clearly demonstrate — plus a portfolio and, usually, some work experience.
 
-**What it's like:** clients pay for a result ("a working website", "my GST returns filed"), not for your hours. You set your rates and choose your clients. Reputation compounds: good work brings referrals.
+**What it's like:** clients pay for a result ("a working website", "my GST returns filed"), not for your hours. Qualifications, samples and demonstrated results matter. Reputation compounds: good work brings referrals.
 
-### Level 5 — Expert: paid for judgment
+### Level 5 — Expert: paid increasingly for specialised judgment and expertise
 
 **Examples:** independent consultants · part-time ("fractional") finance, HR or technology heads for small companies · niche specialists in cybersecurity, AI, or compliance · senior designers · corporate trainers and coaches
 
 **To get in:** years of deep experience in one field, and a track record people trust.
 
-**What it's like:** clients seek you out, and you are paid for knowing what to do — not for doing the most work. This level is usually reached after a regular job, not instead of one.
+**What it's like:** you are paid mainly for specialised judgment — knowing what to do — rather than for the hours you put in. This level is usually reached after a regular job, not instead of one.
 
 ---
 
 ## What Changes as You Climb
 
-Three things shift at every step up the pyramid:
+Broadly, two things shift as you move up the pyramid:
 
 | As you move up… | Level 1 | → | Level 5 |
 |---|---|---|---|
-| **You are paid for** | your time | → | your judgment |
-| **The price is set by** | the platform | → | you |
-| **Your income is protected by** | the hours you can work | → | your reputation |
+| **The value you offer** | time and physical effort | → | specialised skills, outcomes and expertise |
+| **What counts more** | the hours you can work | → | your portfolio, demonstrated results and reputation |
 
-One thing does **not** change: at almost every level, gig work comes without an employer's safety net — no PF, no ESI, no paid leave, unless a platform or client specifically provides it. The higher you go, the better you can afford to arrange your own.
+Not every person needs to move through every level. The pyramid shows where your current skills fit and what you could build next.
+
+One thing to check at **every** level: gig and platform work can have different benefit and social-security arrangements from salaried employment. What a particular worker gets depends on the law, scheme, platform and eligibility — so check what applies to you.
 
 ## How People Move Up
 
@@ -141,7 +142,7 @@ If you believe gig work means only delivery, you will either reject all of it or
 Pick any gig or field job you have seen advertised, and answer three questions:
 
 1. What is it paying for — time, a certified skill, output, an outcome, or judgment?
-2. Who sets the price — the app, or the worker?
+2. What counts most for getting more of this work — hours, ratings, samples, results, or reputation?
 3. What one skill would move someone doing this job one level up?
 
 If you can answer these for any job, you can judge gig work on your own — without needing this card.

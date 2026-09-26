@@ -8,8 +8,8 @@ Knowledge Cards and a future Guide on gig and field work — shown as a skill la
 
 | # | File | ID | Status |
 |---|---|---|---|
-| 01 | `01-gig-work-skill-pyramid.md` | ENA-KCARD-CAREER-gig-work-skill-pyramid | draft v0.1 |
-| — | `source.md` | ENA-GUIDE-CAREER-gig-and-field-work | draft v0.1 — web page built at `/gig-work/`, not yet published |
+| 01 | `01-gig-work-skill-pyramid.md` | ENA-KCARD-CAREER-gig-work-skill-pyramid | draft v0.2 |
+| — | `source.md` | ENA-GUIDE-CAREER-gig-and-field-work | draft v0.2 (owner revision) — web page built at `/gig-work/`, not yet published |
 
 ## Visuals
 

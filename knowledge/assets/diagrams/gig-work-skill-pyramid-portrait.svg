@@ -6,7 +6,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=DM+Mono:wght@500&amp;display=swap');
       .eyebrow { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 22px; letter-spacing: 3px; fill: #C8860E; }
-      .title   { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 52px; fill: #0D1B2A; }
+      .title   { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 46px; fill: #0D1B2A; }
       .sub     { font-family: 'DM Sans', sans-serif; font-size: 28px; fill: #4A6580; }
       .lvl     { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 17px; letter-spacing: 2.5px; }
       .name    { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 31px; }
@@ -26,21 +26,21 @@
   </defs>
   <rect width="1080" height="1920" fill="#FBF8F3"/>
   <rect width="1080" height="12" fill="#F0A500"/>
-  <text x="60" y="92" class="eyebrow">ENAASAN · GIG &amp; FIELD WORK</text>
-  <text x="60" y="170" class="title">Gig work is a pyramid</text>
+  <text x="60" y="92" class="eyebrow">AN ENAASAN FRAMEWORK · GIG &amp; FIELD WORK</text>
+  <text x="60" y="170" class="title">The Gig Work Skill Pyramid</text>
   <text x="60" y="240" class="title">— not just delivery</text>
-  <text x="60" y="298" class="sub">Five levels, sorted by the skill they need.</text>
-  <text x="60" y="338" class="sub">Each step up needs one skill you can prove.</text>
+  <text x="60" y="298" class="sub">Five levels, broadly sorted by skill and value.</text>
+  <text x="60" y="338" class="sub">Each step up needs skills you can demonstrate.</text>
   <line x1="44" y1="902" x2="44" y2="384" stroke="#F0A500" stroke-width="4" marker-end="url(#arrow)"/>
-  <text transform="translate(30 902) rotate(-90)" class="axis">MORE SKILL · MORE CONTROL</text>
+  <text transform="translate(30 902) rotate(-90)" class="axis">MORE SPECIALISED SKILL</text>
   <polygon points="400,370 680,370 742,470 338,470" fill="#0D1B2A"/>
   <text x="540" y="398" text-anchor="middle" class="lvl" fill="#F0A500">LEVEL 5</text>
   <text x="540" y="432" text-anchor="middle" class="name" fill="#FFD166">Expert</text>
-  <text x="540" y="459" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for judgment</text>
+  <text x="540" y="459" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for specialised expertise</text>
   <polygon points="333,478 747,478 809,578 271,578" fill="#1E3A52"/>
   <text x="540" y="506" text-anchor="middle" class="lvl" fill="#FFD166">LEVEL 4</text>
   <text x="540" y="540" text-anchor="middle" class="name" fill="#F2EFE9">Professional</text>
-  <text x="540" y="567" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for outcomes</text>
+  <text x="540" y="567" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for specialised work &amp; outcomes</text>
   <polygon points="266,586 814,586 876,686 204,686" fill="#4A6580"/>
   <text x="540" y="614" text-anchor="middle" class="lvl" fill="#FFD166">LEVEL 3</text>
   <text x="540" y="648" text-anchor="middle" class="name" fill="#FFFFFF">Digital & Language Skills</text>
@@ -48,23 +48,23 @@
   <polygon points="199,694 881,694 943,794 137,794" fill="#8FA9C2"/>
   <text x="540" y="722" text-anchor="middle" class="lvl" fill="#0D1B2A">LEVEL 2</text>
   <text x="540" y="756" text-anchor="middle" class="name" fill="#0D1B2A">Trained Trades</text>
-  <text x="540" y="783" text-anchor="middle" class="paid" fill="#0D1B2A">Paid for a certified skill</text>
+  <text x="540" y="783" text-anchor="middle" class="paid" fill="#0D1B2A">Paid for a certified or proven skill</text>
   <polygon points="132,802 948,802 1010,902 70,902" fill="#D3E0EB"/>
-  <text x="540" y="830" text-anchor="middle" class="lvl" fill="#4A6580">LEVEL 1 · WHERE MOST START</text>
+  <text x="540" y="830" text-anchor="middle" class="lvl" fill="#4A6580">LEVEL 1 · QUICKEST TO ENTER</text>
   <text x="540" y="864" text-anchor="middle" class="name" fill="#0D1B2A">Entry-level</text>
-  <text x="540" y="891" text-anchor="middle" class="paid" fill="#14273A">Paid for time &amp; effort</text>
+  <text x="540" y="891" text-anchor="middle" class="paid" fill="#14273A">Paid mainly for time &amp; effort</text>
   <line x1="60" y1="942" x2="1020" y2="942" stroke="#E2DBCE" stroke-width="2"/>
   <circle cx="92" cy="1000" r="30" fill="#F0A500"/><text x="92" y="1011" text-anchor="middle" class="num">5</text>
   <text x="146" y="976" class="rname">EXPERT</text>
-  <text x="146" y="1010" class="ex">Consultants · part-time finance, HR or tech heads</text>
-  <text x="146" y="1040" class="ex">AI &amp; cybersecurity specialists · trainers</text>
+  <text x="146" y="1010" class="ex">Consultants · specialist finance, HR or tech pros</text>
+  <text x="146" y="1040" class="ex">AI &amp; cybersecurity specialists · specialist trainers</text>
   <text x="146" y="1068" class="get">To get in: years of deep experience in one field</text>
   <line x1="60" y1="1082" x2="1020" y2="1082" stroke="#E2DBCE" stroke-width="2"/>
   <circle cx="92" cy="1140" r="30" fill="#F0A500"/><text x="92" y="1151" text-anchor="middle" class="num">4</text>
   <text x="146" y="1116" class="rname">PROFESSIONAL</text>
   <text x="146" y="1150" class="ex">Software developers · UI/UX designers</text>
-  <text x="146" y="1180" class="ex">digital marketers · GST &amp; tax filers</text>
-  <text x="146" y="1208" class="get">To get in: a degree/qualification or proven skill + portfolio</text>
+  <text x="146" y="1180" class="ex">digital marketers · bookkeeping &amp; GST support</text>
+  <text x="146" y="1208" class="get">To get in: relevant qualification or proven skill + samples</text>
   <line x1="60" y1="1222" x2="1020" y2="1222" stroke="#E2DBCE" stroke-width="2"/>
   <circle cx="92" cy="1280" r="30" fill="#F0A500"/><text x="92" y="1291" text-anchor="middle" class="num">3</text>
   <text x="146" y="1256" class="rname">DIGITAL &AMP; LANGUAGE</text>
@@ -76,18 +76,18 @@
   <text x="146" y="1396" class="rname">TRAINED TRADES</text>
   <text x="146" y="1430" class="ex">Electricians · plumbers · AC technicians</text>
   <text x="146" y="1460" class="ex">beauticians · carpenters · home cooks</text>
-  <text x="146" y="1488" class="get">To get in: ITI trade or skilling certificate + own tools</text>
+  <text x="146" y="1488" class="get">To get in: ITI trade, apprenticeship or skilling programme</text>
   <line x1="60" y1="1502" x2="1020" y2="1502" stroke="#E2DBCE" stroke-width="2"/>
   <circle cx="92" cy="1560" r="30" fill="#F0A500"/><text x="92" y="1571" text-anchor="middle" class="num">1</text>
   <text x="146" y="1536" class="rname">ENTRY-LEVEL</text>
   <text x="146" y="1570" class="ex">Delivery partners · bike-taxi &amp; cab drivers</text>
   <text x="146" y="1600" class="ex">warehouse shifts · field survey agents</text>
-  <text x="146" y="1628" class="get">To get in: 18+, ID, smartphone (licence to drive)</text>
+  <text x="146" y="1628" class="get">To get in: 18+, ID, smartphone (licence &amp; papers to drive)</text>
   <rect x="60" y="1656" width="960" height="196" rx="18" fill="#0D1B2A"/>
-  <text x="96" y="1700" class="shiftH">WHAT CHANGES AS YOU CLIMB</text>
-  <text x="96" y="1748" class="shift">Paid for: time <tspan class="shiftG">→ judgment</tspan></text>
-  <text x="96" y="1788" class="shift">Price set by: the app <tspan class="shiftG">→ you</tspan></text>
-  <text x="96" y="1828" class="shift">Income protected by: hours <tspan class="shiftG">→ reputation</tspan></text>
-  <text x="60" y="1896" class="foot">Most levels: no employer PF, ESI or paid leave. Examples illustrative.</text>
+  <text x="96" y="1700" class="shiftH">AS YOU MOVE UP</text>
+  <text x="96" y="1748" class="shift">Value you offer: time &amp; effort <tspan class="shiftG">→ expertise</tspan></text>
+  <text x="96" y="1788" class="shift">What counts more: hours <tspan class="shiftG">→ proven results</tspan></text>
+  <text x="96" y="1828" class="shift">Not everyone needs to climb every level.</text>
+  <text x="60" y="1896" class="foot">Enaasan framework, not an official classification.</text>
   <text x="1020" y="1896" text-anchor="end" class="footB">enaasan.online</text>
 </svg>
