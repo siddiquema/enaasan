@@ -114,6 +114,17 @@ tbody tr:hover{background:var(--surface-2)}
 .notes{font-size:12.5px;color:var(--ink-2);display:grid;gap:4px;padding-left:18px;margin:0}
 .warn{font-size:12.5px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:10px 12px}
 .warn b{color:var(--ink)}
+.hx-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2)}
+.hx-legend span{display:inline-flex;align-items:center;gap:6px}
+.hx-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.hx-legend i.dot{border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--surface)}
+.hx-legend i.flagkey{width:14px;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--bad) 30%,transparent) 0 3px,transparent 3px 6px);border:1px solid var(--bad)}
+.hx-callout{font-size:13px;color:var(--ink);background:var(--surface-2);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.hx-callout .fl{color:var(--bad-ink);font-weight:600}
+.hx-callout .ok{color:var(--good-ink);font-weight:600}
+td.flag{color:var(--bad-ink);font-weight:600}
+tr.sel td{background:var(--surface-2)}
+#hxTable tbody tr{cursor:pointer}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -180,6 +191,26 @@ tbody tr:hover{background:var(--surface-2)}
       <div class="chart" id="hcBars"></div>
     </section>
   </div>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Hiring vs exits</h2>
+        <div class="note">Estimated voluntary exits = attrition % ÷ 4 × average headcount. Implied hiring = net change + voluntary exits. Headcount can only fall more than attrition explains through layoffs, other involuntary exits or a divestment.</div>
+      </div>
+      <div class="seg" id="hxSeg" role="group" aria-label="Company"></div>
+    </div>
+    <div class="hx-legend">
+      <span><i style="background:var(--s1)"></i>Implied hiring</span>
+      <span><i style="background:var(--s2)"></i>Voluntary exits</span>
+      <span><i class="dot"></i>Net change</span>
+      <span><i class="flagkey"></i>Flagged: hiring under 25% of the company's typical quarter</span>
+    </div>
+    <div class="chart" id="hx"></div>
+    <div class="hx-callout" id="hxCallout"></div>
+    <div class="scroll"><table id="hxTable"></table></div>
+    <div class="note">An estimate: a 12-month attrition rate applied to one quarter smooths seasonality, some headcounts are rounded, and definitions differ by company. Confirm against reported gross hires or fresher intake.</div>
+  </section>
 
   <section class="panel">
     <div class="panel-head">
@@ -417,6 +448,95 @@ function bars(){
   hbars("hcBars",h,v=>(v>0?"+":"−")+Math.abs(v).toLocaleString("en-IN"));
 }
 
+/* ---------- Hiring vs exits ---------- */
+D.forEach(d=>{
+  d.flow=Q.map((q,i)=>{
+    if(!i||d.emp[i]==null||d.emp[i-1]==null||d.att[i]==null)return null;
+    const net=d.emp[i]-d.emp[i-1],exits=d.att[i]/400*(d.emp[i]+d.emp[i-1])/2;
+    return {i,net,exits,hires:net+exits};
+  });
+  const hs=d.flow.filter(Boolean).map(f=>f.hires).sort((a,b)=>a-b);
+  d.typHire=hs.length%2?hs[(hs.length-1)/2]:(hs[hs.length/2-1]+hs[hs.length/2])/2;
+  d.flow.forEach(f=>{if(f)f.flag=f.hires<0.25*d.typHire;});
+});
+let hxSel="TCS";
+try{hxSel=localStorage.getItem("itTrackerHx")||"TCS";if(!byName[hxSel])hxSel="TCS";}catch(e){}
+const signed=v=>(v>=0?"+":"−")+Math.abs(Math.round(v)).toLocaleString("en-IN");
+function hxSeg(){
+  const el=document.getElementById("hxSeg");
+  el.innerHTML=D.map(d=>`<button id="hx-${d.k}" data-n="${esc(d.n)}" aria-pressed="${d.n===hxSel}">${esc(d.n)}</button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{hxSel=b.dataset.n;try{localStorage.setItem("itTrackerHx",hxSel)}catch(e){}hxAll();});
+}
+function hxChart(){
+  const d=byName[hxSel],F=d.flow.filter(Boolean);
+  const box=document.getElementById("hx"),W=Math.max(320,box.clientWidth),narrow=W<560;
+  const H=narrow?280:320,m={t:14,r:12,b:30,l:narrow?46:58};
+  const hi=Math.max(0,...F.map(f=>Math.max(f.hires,f.net))),lo=Math.min(0,...F.map(f=>Math.min(-f.exits,f.hires,f.net)));
+  const pad=(hi-lo)*.06;
+  const ticks=niceTicks(lo-pad,hi+pad,narrow?4:6),y0=ticks[0],y1=ticks[ticks.length-1];
+  const n=Q.length-1,bw=(W-m.l-m.r)/n;
+  const cx=i=>m.l+bw*(i-.5),y=v=>m.t+(H-m.t-m.b)*(1-(v-y0)/(y1-y0));
+  const barW=Math.min(26,bw*.26),gap=2;
+  const bar=(x,v,fill)=>{ // rounded data-end, square at baseline
+    const r=Math.min(4,Math.abs(y(v)-y(0))/2),top=Math.min(y(v),y(0)),h=Math.max(1,Math.abs(y(v)-y(0)));
+    if(h<2*r+1)return `<rect x="${x}" y="${top}" width="${barW}" height="${h}" fill="${fill}"/>`;
+    return v>=0
+      ?`<path d="M${x},${y(0)}V${top+r}a${r},${r} 0 0 1 ${r},-${r}h${barW-2*r}a${r},${r} 0 0 1 ${r},${r}V${y(0)}z" fill="${fill}"/>`
+      :`<path d="M${x},${y(0)}V${top+h-r}a${r},${r} 0 0 0 ${r},${r}h${barW-2*r}a${r},${r} 0 0 0 ${r},-${r}V${y(0)}z" fill="${fill}"/>`;
+  };
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(d.n)} implied hiring, voluntary exits and net headcount change by quarter">`;
+  s+=`<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(135)"><rect width="6" height="6" fill="transparent"/><line x1="0" y1="0" x2="0" y2="6" stroke="var(--bad)" stroke-opacity=".28" stroke-width="3"/></pattern></defs>`;
+  F.forEach(f=>{if(f.flag)s+=`<rect x="${cx(f.i)-bw/2+2}" y="${m.t}" width="${bw-4}" height="${H-m.t-m.b}" fill="url(#hatch)" stroke="var(--bad)" stroke-opacity=".5" rx="6"/><text x="${cx(f.i)}" y="${m.t+12}" text-anchor="middle" style="fill:var(--bad-ink);font-weight:600">⚠ check</text>`;});
+  ticks.forEach(t=>{s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${m.l-8}" y="${y(t)+4}" text-anchor="end">${t===0?"0":fmtK(Math.abs(t)).replace(/^/,t<0?"−":"")}</text>`;});
+  s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(0)}" y2="${y(0)}" stroke="var(--ink-3)"/>`;
+  for(let i=1;i<=n;i++)s+=`<text x="${cx(i)}" y="${H-10}" text-anchor="middle">${narrow?Q[i].replace(" FY","·"):Q[i]}</text>`;
+  F.forEach(f=>{
+    s+=bar(cx(f.i)-barW-gap/2,f.hires,"var(--s1)");
+    s+=bar(cx(f.i)+gap/2,-f.exits,"var(--s2)");
+  });
+  // net-change line + dots
+  s+=`<path d="${F.map((f,j)=>(j?"L":"M")+cx(f.i)+","+y(f.net)).join("")}" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+  F.forEach(f=>{s+=`<circle cx="${cx(f.i)}" cy="${y(f.net)}" r="4.5" fill="var(--ink)" stroke="var(--surface)" stroke-width="2"/>`;});
+  F.forEach(f=>{s+=`<rect class="hxhit" data-i="${f.i}" x="${cx(f.i)-bw/2}" y="0" width="${bw}" height="${H}" fill="transparent"/>`;});
+  s+="</svg>";box.innerHTML=s;
+  const tip=document.getElementById("tip");
+  box.querySelectorAll(".hxhit").forEach(r=>{
+    const f=d.flow[+r.dataset.i];
+    const show=e=>{
+      tip.innerHTML=`<h4>${esc(d.n)} · ${Q[f.i]}</h4>
+        <div class="r" style="--c:var(--s1)"><i></i><span>Implied hiring</span><span>${signed(f.hires)}</span></div>
+        <div class="r" style="--c:var(--s2)"><i></i><span>Voluntary exits</span><span>−${Math.round(f.exits).toLocaleString("en-IN")}</span></div>
+        <div class="r" style="--c:var(--ink)"><i></i><span>Net change</span><span>${signed(f.net)}</span></div>
+        <div style="font-size:11.5px;color:var(--ink-3);margin-top:4px">Attrition ${d.att[f.i].toFixed(1)}% · headcount ${fmtInt(d.emp[f.i-1])} → ${fmtInt(d.emp[f.i])}</div>
+        ${f.flag?`<div style="color:var(--bad-ink);font-weight:600;margin-top:4px">⚠ Headcount fell more than attrition explains, or hiring nearly stopped</div>`:""}`;
+      tip.hidden=false;
+      let lx=e.clientX+16;if(lx+tip.offsetWidth>innerWidth-8)lx=e.clientX-tip.offsetWidth-16;
+      let ly=Math.max(8,Math.min(innerHeight-tip.offsetHeight-8,e.clientY-tip.offsetHeight/2));
+      tip.style.left=lx+"px";tip.style.top=ly+"px";
+    };
+    r.addEventListener("pointermove",show);r.addEventListener("pointerdown",show);
+    r.addEventListener("pointerleave",()=>tip.hidden=true);
+  });
+  const fl=F.filter(f=>f.flag),H8=F.reduce((a,f)=>a+f.hires,0),X8=F.reduce((a,f)=>a+f.exits,0);
+  const note={Coforge:" Headcount jumps in Q4 FY26 and Q1 FY27 look like an acquisition being consolidated, so its hiring figures are inflated.",
+    TCS:" TCS publicly announced job cuts of roughly 2% of its workforce in mid-2025, which lines up with the Q2 FY26 drop. Verify the figure before quoting it."}[d.n]||"";
+  document.getElementById("hxCallout").innerHTML=`<div><b>${esc(d.n)}</b> hired an estimated <b>${Math.round(100*H8/X8)}</b> people for every 100 who left voluntarily over 7 quarters (typical quarter: ${fmtInt(d.typHire)} hires).</div>`+
+    (fl.length?`<div class="fl">⚠ Flagged: ${fl.map(f=>`${Q[f.i]} (implied hiring ${signed(f.hires)}, net ${signed(f.net)})`).join("; ")}.</div>`
+             :`<div class="ok">✓ No quarter where headcount fell more than voluntary attrition explains.</div>`)+
+    (note?`<div style="color:var(--ink-2)">${note.trim()}</div>`:"");
+}
+function hxTable(){
+  const rows=D.map(d=>{const F=d.flow.filter(Boolean);const h=F.reduce((a,f)=>a+f.hires,0),x=F.reduce((a,f)=>a+f.exits,0),net=F.reduce((a,f)=>a+f.net,0);
+    return {d,h,x,net,ratio:100*h/x,fl:F.filter(f=>f.flag),last:Q[F[F.length-1].i]};}).sort((a,b)=>a.ratio-b.ratio);
+  const t=document.getElementById("hxTable");
+  t.innerHTML=`<thead><tr><th scope="col">Company</th><th scope="col">Implied hiring</th><th scope="col">Voluntary exits</th><th scope="col">Hires per 100 exits</th><th scope="col">Net change</th><th scope="col" style="text-align:left">Flagged quarters</th></tr></thead><tbody>`+
+    rows.map(r=>`<tr data-n="${esc(r.d.n)}" class="${r.d.n===hxSel?"sel":""}"><td><span class="co" style="--c:var(--${r.d.k})"><i></i>${esc(r.d.n)}</span>${r.last!==Q[L]?` <small>to ${r.last}</small>`:""}</td>
+      <td>${fmtInt(r.h)}</td><td>${fmtInt(r.x)}</td><td>${r.ratio<100?`<span class="chip down">▼ ${Math.round(r.ratio)}</span>`:`<span class="chip up">▲ ${Math.round(r.ratio)}</span>`}</td>
+      <td>${signed(r.net)}</td><td style="text-align:left" class="${r.fl.length?"flag":""}">${r.fl.length?"⚠ "+r.fl.map(f=>Q[f.i]).join(", "):"–"}</td></tr>`).join("")+"</tbody>";
+  t.querySelectorAll("tbody tr").forEach(tr=>tr.onclick=()=>{hxSel=tr.dataset.n;try{localStorage.setItem("itTrackerHx",hxSel)}catch(e){}hxAll();});
+}
+function hxAll(){hxSeg();hxChart();hxTable();}
+
 /* ---------- Scorecard ---------- */
 let sortKey="rev",sortDir=-1;
 function score(){
@@ -493,8 +613,8 @@ function full(){
 document.querySelectorAll("#metricSeg button").forEach(b=>b.onclick=()=>{state.m=b.dataset.m;save();trend();});
 document.querySelectorAll("#scaleSeg button").forEach(b=>b.onclick=()=>{state.s=b.dataset.s;save();trend();});
 document.querySelectorAll("#tblSeg button").forEach(b=>b.onclick=()=>{tblM=b.dataset.t;full();});
-tiles();legend();trend();score();bars();heat();cards();clients();full();
-let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{trend();bars();},120);});
+tiles();legend();trend();score();bars();hxAll();heat();cards();clients();full();
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{trend();bars();hxChart();},120);});
 </script>
 </body>
 </html>
