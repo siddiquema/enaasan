@@ -8,8 +8,8 @@ Knowledge Cards and a future Guide on gig and field work — shown as a skill la
 
 | # | File | ID | Status |
 |---|---|---|---|
-| 01 | `01-gig-work-skill-pyramid.md` | ENA-KCARD-CAREER-gig-work-skill-pyramid | draft v0.2 |
-| — | `source.md` | ENA-GUIDE-CAREER-gig-and-field-work | draft v0.3 (owner revision + state-law fix) — web page built at `/gig-work/`, not yet published |
+| 01 | `01-gig-work-skill-pyramid.md` | ENA-KCARD-CAREER-gig-work-skill-pyramid | **published v1.0** (2026-09-26) |
+| — | `source.md` | ENA-GUIDE-CAREER-gig-and-field-work | **published v1.0** (2026-09-26) — live at `/gig-work/`; review due 2026-12-26 |
 
 ## Visuals
 
@@ -18,8 +18,6 @@ Knowledge Cards and a future Guide on gig and field work — shown as a skill la
 - Web copies of both PNGs live in `assets/images/`. Examples on the images must stay in sync with the card body — edit the SVG, re-render, re-copy.
 
 ## Planned
-
-- **Publish steps for the guide** (OPS-001 §6, after review): sitemap entry, `metadata/publications/_index.json` entry + status → published in `guide-008-gig-work.json`, discovery links from `careers.html` / `after12.html`, registry rows → live.
 
 - **Candidate cards:** "Employee vs. gig partner: what protection you give up" · "How to read a gig earnings claim".
 

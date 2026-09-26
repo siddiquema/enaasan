@@ -6,8 +6,8 @@ title: "The Gig Work Skill Pyramid: It's Not Just Delivery"
 description: "A five-level framework that sorts gig and field work by the skill it demands — from delivery and bike-taxi work at the base to expert consulting at the top — and shows what changes as you move up."
 purpose: "Helps a young person who thinks 'gig work' means only delivery or bike-taxi riding — or whose family sees it only that way — see the full range of gig work before deciding whether, and at which level, to enter it."
 outcome: "Student can place any gig or field job on a skill ladder, explain what kind of value that level is mainly paid for, and name the skill that would move them one level up."
-status: draft
-version: 0.2
+status: published
+version: 1.0
 owner: "Career Guidance (S. Ahamed)"
 created: 2026-09-26
 volatile: false
@@ -22,6 +22,8 @@ evidence: expert-opinion
 evidence_notes: "The five-level pyramid and its shifts (the value you offer; what counts more — hours or portfolio, results and reputation) are Enaasan's own synthesis — rated expert-opinion per AUTHOR_TEMPLATE. It is consistent with the skill-based split (low / medium / high skilled) used in NITI Aayog, 'India's Booming Gig and Platform Economy' (June 2022), but it does not reproduce that report's categories or rely on its figures. Example roles are illustrative, drawn from common categories of gig platforms operating in India; no platform is named or endorsed."
 uncertainty: "The levels are a teaching model, not an official classification: real jobs straddle levels (a skilled electrician on a platform may be paid like Level 1; a delivery partner may also freelance as a translator). Earnings within any level vary widely by city, platform, hours, season, and personal reputation — this card deliberately gives no rupee figures. Moving up a level improves your options; it does not guarantee higher or steadier income. Gig work at every level usually comes without employer benefits (PF, ESI, paid leave); check what any specific platform or client actually provides."
 maturity: seed
+last_reviewed: 2026-09-26
+review_due: 2027-09-26
 tags: [gig-work, field-work, freelancing, career-exploration]
 ---
 
@@ -146,9 +148,3 @@ Pick any gig or field job you have seen advertised, and answer three questions:
 3. What one skill would move someone doing this job one level up?
 
 If you can answer these for any job, you can judge gig work on your own — without needing this card.
-
----
-
-## Verification Pending (remove before publishing)
-
-> **Reviewer note — not reader-facing.** The body deliberately carries **no statistics**, so nothing above depends on this box. A future version (or the planned gig-and-field-work guide) may add the NITI Aayog June 2022 figures reported in secondary coverage — roughly **31% low-skilled, 47% medium-skilled, 22% high-skilled** gig work, and a projected **23.5 million** gig workers by **2029–30**. Per GOV-001, these must be confirmed against the original report PDF (niti.gov.in) before any use; they could not be verified from the drafting environment (government sites unreachable). If used, they belong in the guide, not this card (calibration baseline rule 1), and the card's `evidence` stays `expert-opinion`.
