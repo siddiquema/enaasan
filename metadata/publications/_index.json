@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-17",
+  "last_updated": "2026-09-26",
   "total_publications": 13,
   "publications": [
     {
@@ -51,6 +51,11 @@
     {
       "id": "card-005-comm-examples",
       "file": "card-005-comm-examples.json",
+      "status": "published"
+    },
+    {
+      "id": "guide-008-gig-work",
+      "file": "guide-008-gig-work.json",
       "status": "published"
     },
     {

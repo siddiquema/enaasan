@@ -169,6 +169,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Careers: Gig & Field Work Guide -->
+  <url>
+    <loc>https://enaasan.online/gig-work/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>

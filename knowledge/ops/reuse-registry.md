@@ -25,6 +25,11 @@ Format: one row per (object → surface) dependency. `Mechanism` per EOS-004: em
 | ENA-GUIDE-CAREER-build-using-ai (Part 2) | 0.1 | /skills/first-job navigation card | link | **live** | 2026-07-16 |
 | ENA-GUIDE-CAREER-build-using-ai (Part 3) | 0.1 | /skills/first-job/build-skills/ website page | rendering | **live** | 2026-07-17 |
 | ENA-GUIDE-CAREER-build-using-ai (Part 3) | 0.1 | /skills/first-job/explore-careers/ navigation card (next) | link | **live** | 2026-07-17 |
+| ENA-KCARD-CAREER-gig-work-skill-pyramid | 1.0 | ENA-GUIDE-CAREER-gig-and-field-work (pyramid section) | embed | **live** | 2026-09-26 |
+| ENA-KCARD-CAREER-gig-work-skill-pyramid | 1.0 | assets/images/gig-work-skill-pyramid.png + -portrait.png (diagram) | rendering | **live** | 2026-09-26 |
+| ENA-GUIDE-CAREER-gig-and-field-work | 1.0 | /gig-work/ website page | rendering | **live** | 2026-09-26 |
+| ENA-GUIDE-CAREER-gig-and-field-work | 1.0 | careers.html (Organisations tab intro link) | link | **live** | 2026-09-26 |
+| ENA-GUIDE-CAREER-gig-and-field-work | 1.0 | after12.html (section after "Things nobody tells you") | link | **live** | 2026-09-26 |
 
 **Maintenance rules:**
 1. New dependency → new row, same commit as the surface change.
