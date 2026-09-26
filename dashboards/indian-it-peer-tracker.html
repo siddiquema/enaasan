@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indian IT Peer Tracker</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f6f3; --surface:#fcfcfb; --surface-2:#f0efec; --line:#e2e1dc; --grid:#ebeae6;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7b7a75; --accent:#2a78d6;
+  --good:#0ca30c; --good-ink:#006300; --bad:#d03b3b; --bad-ink:#b02a2a;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --q100:#cde2fb; --q200:#9ec5f4; --q300:#6da7ec; --q400:#3987e5; --q500:#256abf; --q600:#184f95; --q700:#0d366b;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121211; --surface:#1a1a19; --surface-2:#232321; --line:#33332f; --grid:#2a2a27;
+    --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#8f8e86; --accent:#3987e5;
+    --good-ink:#4fcf4f; --bad-ink:#ee7a7a;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121211; --surface:#1a1a19; --surface-2:#232321; --line:#33332f; --grid:#2a2a27;
+  --ink:#ffffff; --ink-2:#c3c2b7; --ink-3:#8f8e86; --accent:#3987e5;
+  --good-ink:#4fcf4f; --bad-ink:#ee7a7a;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:flex;flex-direction:column;gap:20px}
+@media (min-width:720px){.wrap{padding-inline:28px}}
+h1,h2,h3{margin:0;text-wrap:balance}
+header.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+h1{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-top:4px}
+.sub{color:var(--ink-2);max-width:62ch;margin-top:6px}
+.period{font-family:var(--mono);font-size:12px;color:var(--ink-2);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.period b{color:var(--ink);font-weight:500;background:var(--surface);border:1px solid var(--line);padding:3px 8px;border-radius:6px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.tile .lab{font-size:12px;color:var(--ink-2);font-weight:500}
+.tile .val{font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .foot{font-size:12px;color:var(--ink-3);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:3px;font-family:var(--mono);font-size:11.5px;font-weight:500;padding:1px 6px;border-radius:4px;white-space:nowrap}
+.chip.up{color:var(--good-ink);background:color-mix(in srgb,var(--good) 12%,transparent)}
+.chip.down{color:var(--bad-ink);background:color-mix(in srgb,var(--bad) 12%,transparent)}
+.chip.flat{color:var(--ink-2);background:var(--surface-2)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:10px 16px}
+.panel h2{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.panel .note{font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.controls{display:flex;flex-wrap:wrap;gap:8px}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:8px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{font:inherit;font-size:12.5px;font-weight:500;border:0;background:transparent;color:var(--ink-2);padding:5px 10px;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg button:hover{color:var(--ink)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:6px}
+.legend button{font:inherit;font-size:12.5px;display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;cursor:pointer}
+.legend button .sw{width:10px;height:10px;border-radius:3px;background:var(--c)}
+.legend button[aria-pressed="false"]{color:var(--ink-3);border-style:dashed}
+.legend button[aria-pressed="false"] .sw{background:transparent;box-shadow:inset 0 0 0 1.5px var(--c)}
+.legend .all{color:var(--ink-2)}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.chart .lbl{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.14);padding:8px 10px;font-size:12.5px;min-width:170px}
+.tip h4{margin:0 0 6px;font-size:12px;font-family:var(--mono);color:var(--ink-2);font-weight:500}
+.tip .r{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center;line-height:1.7}
+.tip .r i{width:10px;height:3px;border-radius:2px;background:var(--c)}
+.tip .r span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;color:var(--ink-2);letter-spacing:.02em}
+th:first-child,td:first-child{text-align:left}
+td{font-family:var(--mono);font-size:12.5px}
+td:first-child{font-family:var(--sans);font-size:13.5px;font-weight:600}
+td .co{display:inline-flex;align-items:center;gap:8px}
+td .co i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+td small{color:var(--ink-3);font-size:10.5px}
+tbody tr:hover{background:var(--surface-2)}
+.heat td:not(:first-child){text-align:center;padding:0;border:2px solid var(--surface)}
+.heat td:not(:first-child) div{padding:9px 6px;border-radius:5px}
+.heat td.na div{color:var(--ink-3);background:repeating-linear-gradient(45deg,var(--surface-2) 0 4px,transparent 4px 8px)}
+.heat th{text-align:center}
+.scale{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.scale .bar{display:flex;height:10px;width:160px;border-radius:3px;overflow:hidden}
+.scale .bar span{flex:1}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;background:var(--surface)}
+.card .hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card .nm{display:flex;align-items:center;gap:7px;font-weight:700;font-size:14px}
+.card .nm i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+.card .big{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.card .big small{font-size:12px;color:var(--ink-3);font-weight:500}
+.card .kv{display:grid;grid-template-columns:1fr auto;gap:2px 8px;font-size:12px;color:var(--ink-2)}
+.card .kv b{font-family:var(--mono);font-weight:500;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.spark svg{display:block;width:100%;height:46px}
+.notes{font-size:12.5px;color:var(--ink-2);display:grid;gap:4px;padding-left:18px;margin:0}
+.warn{font-size:12.5px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:10px 12px}
+.warn b{color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Operating tracker · 8 quarters · 8 peers</div>
+      <h1>Indian IT Services Peer Tracker</h1>
+      <p class="sub">Revenue, headcount, attrition and productivity for TCS, Infosys, HCLTech, Wipro, Tech Mahindra, LTIMindtree, Persistent and Coforge.</p>
+    </div>
+    <div class="period">Period <b>Q2 FY25</b> → <b>Q1 FY27</b></div>
+  </header>
+
+  <section class="tiles" id="tiles" aria-label="Peer set summary"></section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2 id="trendTitle">Revenue trend</h2>
+        <div class="note" id="trendNote"></div>
+      </div>
+      <div class="controls">
+        <div class="seg" id="metricSeg" role="group" aria-label="Metric">
+          <button id="m-rev" data-m="rev" aria-pressed="true">Revenue</button>
+          <button id="m-emp" data-m="emp" aria-pressed="false">Headcount</button>
+          <button id="m-att" data-m="att" aria-pressed="false">Attrition</button>
+          <button id="m-rpe" data-m="rpe" aria-pressed="false">Rev / employee</button>
+        </div>
+        <div class="seg" id="scaleSeg" role="group" aria-label="Scale">
+          <button id="s-idx" data-s="idx" aria-pressed="true">Indexed</button>
+          <button id="s-abs" data-s="abs" aria-pressed="false">Absolute</button>
+        </div>
+      </div>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="chart" id="trend"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Latest quarter scorecard</h2>
+        <div class="note">Q1 FY27 unless marked. Growth is on ₹ revenue. Click a column header to sort.</div>
+      </div>
+    </div>
+    <div class="scroll"><table id="score"></table></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <div>
+        <h2>Revenue growth over 8 quarters</h2>
+        <div class="note">Q1 FY27 revenue vs Q2 FY25, ₹ terms</div>
+      </div>
+      <div class="chart" id="growthBars"></div>
+    </section>
+    <section class="panel">
+      <div>
+        <h2>Net headcount change</h2>
+        <div class="note">Latest reported headcount minus Q2 FY25</div>
+      </div>
+      <div class="chart" id="hcBars"></div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Attrition heatmap</h2>
+        <div class="note">LTM attrition %, company-reported. Darker means higher attrition.</div>
+      </div>
+      <div class="scale" id="heatScale"></div>
+    </div>
+    <div class="scroll"><table class="heat" id="heat"></table></div>
+  </section>
+
+  <section class="panel">
+    <div>
+      <h2>Company snapshots</h2>
+      <div class="note">Sparkline shows quarterly revenue, Q2 FY25 → Q1 FY27</div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <div>
+        <h2>Client metrics</h2>
+        <div class="note">Client definitions differ by company, so these are not comparable across rows.</div>
+      </div>
+      <div class="scroll"><table id="clients"></table></div>
+    </section>
+    <section class="panel">
+      <h2>Data notes</h2>
+      <ul class="notes">
+        <li>Attrition is generally company-reported LTM IT-services or voluntary attrition.</li>
+        <li>Blank cells mean the value was not available in the working dataset.</li>
+        <li>Revenue per employee is quarterly ₹ revenue ÷ closing headcount, annualised (×4), in ₹ lakh.</li>
+        <li>Indexed view sets each company's Q2 FY25 value to 100, so peers of very different size share one scale.</li>
+      </ul>
+      <div class="warn"><b>Validate before formal use.</b> Some historical values were estimates in the working dataset. Check them against quarterly investor presentations before investment or external use.</div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Full data table</h2>
+        <div class="note">Every value in the tracker, as supplied</div>
+      </div>
+      <div class="seg" id="tblSeg" role="group" aria-label="Table metric">
+        <button id="t-rev" data-t="rev" aria-pressed="true">Revenue (₹ Cr)</button>
+        <button id="t-emp" data-t="emp" aria-pressed="false">Employees</button>
+        <button id="t-att" data-t="att" aria-pressed="false">Attrition %</button>
+      </div>
+    </div>
+    <div class="scroll"><table id="full"></table></div>
+  </section>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const Q=["Q2 FY25","Q3 FY25","Q4 FY25","Q1 FY26","Q2 FY26","Q3 FY26","Q4 FY26","Q1 FY27"];
+const D=[
+ {n:"TCS",rev:[64259,63973,64479,63437,65799,67087,70698,72275],emp:[612724,607354,607979,613069,593314,582163,584519,593798],att:[12.3,13,13.3,13.8,13.3,13.5,13.7,13.6]},
+ {n:"Infosys",rev:[40986,41764,40925,42279,45479,45479,46402,48211],emp:[317000,323000,323578,323000,332000,337034,328594,328062],att:[12.9,13.7,14.1,15.6,14.3,12.3,12.6,13]},
+ {n:"HCLTech",rev:[28862,29890,30246,30349,31942,33872,33981,34579],emp:[201000,220000,223000,223000,226640,226000,227181,null],att:[12.9,13.2,12.9,13.2,12.6,12.4,12.5,null]},
+ {n:"Wipro",rev:[22319,22319,22504,22135,22700,23056,24236,24480],emp:[233000,234000,233346,232000,242000,242000,242021,243044],att:[15,14.2,15,15,14.9,14.2,13.3,13.9]},
+ {n:"Tech Mahindra",rev:[13313,13101,13229,13229,13995,14393,15076,15712],emp:[154273,153000,148000,147000,148297,147000,147623,146760],att:[10.6,11.3,11.8,13.5,12.8,12.1,12.1,11.8]},
+ {n:"LTIMindtree",rev:[9305,9600,9366,9122,10394,10800,11292,11296],emp:[84438,86000,87000,86000,86447,87000,87950,87886],att:[14.5,14.8,15,14.8,14.2,13.9,13.3,13.3]},
+ {n:"Persistent",rev:[2897,3096,3196,3400,3581,3778,4003,4303],emp:[23000,24000,24000,25000,26224,27000,28000,28640],att:[14.5,14,13,13,13.8,13,12.5,null]},
+ {n:"Coforge",rev:[1326,1433,1870,2046,1981,2486,2658,3080],emp:[25000,25500,26000,26500,27000,29000,35777,46228],att:[11.5,11,10.5,10.5,11.4,11,10.8,10.4]}
+];
+const CLIENTS=[
+ {n:"Infosys",m:"Active clients",v:[null,null,null,null,null,null,null,2027]},
+ {n:"LTIMindtree",m:"Active clients",v:[742,null,749,null,null,null,751,740]},
+ {n:"Tech Mahindra",m:"Active clients",v:[1178,null,null,null,null,null,null,null]},
+ {n:"Persistent",m:"$1m+ revenue clients",v:[null,null,null,null,null,null,null,214]}
+];
+D.forEach((d,i)=>{d.k="s"+(i+1);d.rpe=d.rev.map((r,j)=>d.emp[j]?r*400/d.emp[j]:null);});
+const byName=Object.fromEntries(D.map(d=>[d.n,d]));
+const L=Q.length-1;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmtInt=v=>v==null?"–":Math.round(v).toLocaleString("en-IN");
+const fmtCr=v=>v==null?"–":"₹"+Math.round(v).toLocaleString("en-IN")+" Cr";
+const fmtLakhCr=v=>"₹"+(v/1e5).toFixed(2)+" L Cr";
+const fmtK=v=>v>=1e5?(v/1e5).toFixed(2)+" L":(v/1e3).toFixed(1)+"k";
+const pct=(a,b)=>(a==null||b==null)?null:(a/b-1)*100;
+const lastIdx=a=>{for(let i=a.length-1;i>=0;i--)if(a[i]!=null)return i;return -1};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function chip(v,{suffix="%",digits=1,invert=false,pp=false}={}){
+  if(v==null||isNaN(v))return '<span class="chip flat">–</span>';
+  const r=Math.abs(v)<0.05?"flat":((v>0)!==invert?"up":"down");
+  const arrow=Math.abs(v)<0.05?"■":(v>0?"▲":"▼");
+  return `<span class="chip ${r}" title="${r==="up"?"favourable":r==="down"?"unfavourable":"flat"}">${arrow} ${v>0?"+":""}${v.toFixed(digits)}${pp?" pp":suffix}</span>`;
+}
+
+/* ---------- KPI tiles ---------- */
+function tiles(){
+  const sum=(k,i)=>D.reduce((s,d)=>s+(d[k][i]??0),0);
+  const r7=sum("rev",7),r6=sum("rev",6),r3=sum("rev",3),r0=sum("rev",0);
+  const hcLatest=D.reduce((s,d)=>s+d.emp[lastIdx(d.emp)],0);
+  const hc0=sum("emp",0);
+  const atts=D.map(d=>d.att[lastIdx(d.att)]).sort((a,b)=>a-b);
+  const med=(atts[3]+atts[4])/2;
+  const atts0=D.map(d=>d.att[0]).sort((a,b)=>a-b);const med0=(atts0[3]+atts0[4])/2;
+  const fastest=[...D].sort((a,b)=>pct(b.rev[7],b.rev[3])-pct(a.rev[7],a.rev[3]))[0];
+  document.getElementById("tiles").innerHTML=`
+   <div class="tile"><span class="lab">Peer-set revenue, Q1 FY27</span><span class="val">${fmtLakhCr(r7)}</span>
+     <span class="foot">${chip(pct(r7,r3))} YoY ${chip(pct(r7,r6))} QoQ</span></div>
+   <div class="tile"><span class="lab">Peer-set headcount</span><span class="val">${(hcLatest/1e5).toFixed(2)} L</span>
+     <span class="foot">${chip(pct(hcLatest,hc0))} vs Q2 FY25 · HCLTech at Q4 FY26</span></div>
+   <div class="tile"><span class="lab">Median attrition</span><span class="val">${med.toFixed(1)}%</span>
+     <span class="foot">${chip(med-med0,{pp:true,invert:true})} vs Q2 FY25 (${med0.toFixed(1)}%)</span></div>
+   <div class="tile"><span class="lab">Fastest YoY growth</span><span class="val">${fastest.n}</span>
+     <span class="foot">${chip(pct(fastest.rev[7],fastest.rev[3]))} Q1 FY27 vs Q1 FY26</span></div>`;
+}
+
+/* ---------- Trend chart ---------- */
+const METRICS={
+  rev:{t:"Revenue",unit:"₹ Cr per quarter",fmt:fmtInt,tipFmt:fmtCr},
+  emp:{t:"Headcount",unit:"closing employees",fmt:fmtK,tipFmt:fmtInt},
+  att:{t:"Attrition",unit:"LTM %",fmt:v=>v.toFixed(1)+"%",tipFmt:v=>v.toFixed(1)+"%",noIdx:true},
+  rpe:{t:"Revenue per employee",unit:"₹ lakh, annualised",fmt:v=>v.toFixed(0),tipFmt:v=>"₹"+v.toFixed(1)+" L"}
+};
+let state={m:"rev",s:"idx",hidden:new Set()};
+try{const s=JSON.parse(localStorage.getItem("itTrackerState")||"null");if(s){state.m=s.m||"rev";state.s=s.s||"idx";state.hidden=new Set(s.hidden||[]);}}catch(e){}
+const save=()=>{try{localStorage.setItem("itTrackerState",JSON.stringify({m:state.m,s:state.s,hidden:[...state.hidden]}))}catch(e){}};
+
+function niceTicks(lo,hi,n=5){
+  const span=hi-lo||1,step0=span/n,mag=Math.pow(10,Math.floor(Math.log10(step0)));
+  const step=[1,2,2.5,5,10].map(m=>m*mag).find(s=>span/s<=n)||10*mag;
+  const t=[];for(let v=Math.floor(lo/step)*step;v<=hi+step*1e-9;v+=step)t.push(+v.toFixed(10));
+  return t;
+}
+function legend(){
+  const el=document.getElementById("legend");
+  el.innerHTML=D.map(d=>`<button id="lg-${d.k}" data-n="${esc(d.n)}" aria-pressed="${!state.hidden.has(d.n)}" style="--c:var(--${d.k})"><span class="sw"></span>${esc(d.n)}</button>`).join("")
+    +`<button class="all" id="lg-all">${state.hidden.size?"Show all":"Hide all"}</button>`;
+  el.querySelectorAll("button[data-n]").forEach(b=>b.onclick=()=>{const n=b.dataset.n;state.hidden.has(n)?state.hidden.delete(n):state.hidden.add(n);save();legend();trend();});
+  document.getElementById("lg-all").onclick=()=>{state.hidden=state.hidden.size?new Set():new Set(D.map(d=>d.n));save();legend();trend();};
+}
+function trend(){
+  const M=METRICS[state.m], idx=state.s==="idx"&&!M.noIdx;
+  document.querySelectorAll("#metricSeg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===state.m));
+  document.querySelectorAll("#scaleSeg button").forEach(b=>{b.setAttribute("aria-pressed",b.dataset.s===state.s);b.disabled=!!M.noIdx;b.style.opacity=M.noIdx?.45:1;});
+  document.getElementById("trendTitle").textContent=M.t+" trend";
+  document.getElementById("trendNote").textContent=idx?`Indexed to Q2 FY25 = 100 (${M.unit})`:(M.unit[0].toUpperCase()+M.unit.slice(1));
+  const series=D.filter(d=>!state.hidden.has(d.n)).map(d=>{
+    const raw=d[state.m];const base=raw[0];
+    return {d,raw,vals:raw.map(v=>v==null?null:idx?v/base*100:v)};
+  });
+  const box=document.getElementById("trend");
+  const W=Math.max(320,box.clientWidth), narrow=W<560;
+  const H=narrow?300:380, m={t:12,r:narrow?12:104,b:28,l:narrow?44:56};
+  const all=series.flatMap(s=>s.vals).filter(v=>v!=null);
+  if(!all.length){box.innerHTML=`<div class="note" style="padding:40px 0;text-align:center">No companies selected. Pick one from the legend above.</div>`;return;}
+  let lo=Math.min(...all),hi=Math.max(...all);
+  if(idx){lo=Math.min(lo,100);hi=Math.max(hi,100);}
+  const pad=(hi-lo)*.08||1;
+  let ticks=niceTicks(lo-pad,hi+pad,narrow?4:6);
+  lo=ticks[0];hi=ticks[ticks.length-1];
+  const x=i=>m.l+(W-m.l-m.r)*i/L, y=v=>m.t+(H-m.t-m.b)*(1-(v-lo)/(hi-lo));
+  const tf=idx?(v=>v.toFixed(0)):M.fmt;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(M.t)} by company, ${Q[0]} to ${Q[L]}">`;
+  ticks.forEach(t=>{s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)" stroke-width="1"/><text x="${m.l-8}" y="${y(t)+4}" text-anchor="end">${tf(t)}</text>`;});
+  if(idx)s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(100)}" y2="${y(100)}" stroke="var(--ink-3)" stroke-dasharray="3 3" stroke-width="1"/>`;
+  Q.forEach((q,i)=>{if(narrow&&i%2)return;s+=`<text x="${x(i)}" y="${H-8}" text-anchor="middle">${q}</text>`;});
+  series.forEach(({d,vals})=>{
+    let path="",pen=false;
+    vals.forEach((v,i)=>{if(v==null){pen=false;return;}path+=(pen?"L":"M")+x(i).toFixed(1)+","+y(v).toFixed(1);pen=true;});
+    s+=`<path d="${path}" fill="none" stroke="var(--${d.k})" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const li=lastIdx(vals);
+    s+=`<circle cx="${x(li)}" cy="${y(vals[li])}" r="4" fill="var(--${d.k})" stroke="var(--surface)" stroke-width="2"/>`;
+  });
+  // direct end labels (de-collided)
+  if(!narrow){
+    const labs=series.map(({d,vals})=>{const li=lastIdx(vals);return {d,li,y:y(vals[li]),v:vals[li]};}).sort((a,b)=>a.y-b.y);
+    const gap=14;for(let i=1;i<labs.length;i++)if(labs[i].y-labs[i-1].y<gap)labs[i].y=labs[i-1].y+gap;
+    const over=labs.length?labs[labs.length-1].y-(H-m.b):0;if(over>0)labs.forEach(l=>l.y-=over);
+    labs.forEach(l=>{s+=`<text class="lbl" x="${x(L)+10}" y="${l.y+4}">${esc(l.d.n)}</text>`;});
+  }
+  s+=`<line id="xh" y1="${m.t}" y2="${H-m.b}" stroke="var(--ink-3)" stroke-width="1" visibility="hidden"/>`;
+  s+=`<rect id="hit" x="${m.l-10}" y="0" width="${W-m.l-m.r+20}" height="${H}" fill="transparent"/></svg>`;
+  box.innerHTML=s;
+  const svg=box.querySelector("svg"),xh=svg.querySelector("#xh"),tip=document.getElementById("tip");
+  const move=e=>{
+    const r=svg.getBoundingClientRect(),px=(e.clientX-r.left)*W/r.width;
+    const i=Math.max(0,Math.min(L,Math.round((px-m.l)/((W-m.l-m.r)/L))));
+    xh.setAttribute("x1",x(i));xh.setAttribute("x2",x(i));xh.setAttribute("visibility","visible");
+    const rows=series.map(se=>({se,v:se.vals[i],raw:se.raw[i]})).sort((a,b)=>(b.v??-1e18)-(a.v??-1e18));
+    tip.innerHTML=`<h4>${Q[i]}${idx?" · index":""}</h4>`+rows.map(r=>`<div class="r" style="--c:var(--${r.se.d.k})"><i></i><span>${esc(r.se.d.n)}</span><span>${r.v==null?"n/a":idx?r.v.toFixed(1)+" <small style='color:var(--ink-3)'>"+M.tipFmt(r.raw)+"</small>":M.tipFmt(r.v)}</span></div>`).join("");
+    tip.hidden=false;
+    const tw=tip.offsetWidth,th=tip.offsetHeight;
+    let lx=e.clientX+16;if(lx+tw>innerWidth-8)lx=e.clientX-tw-16;
+    let ly=e.clientY-th/2;ly=Math.max(8,Math.min(innerHeight-th-8,ly));
+    tip.style.left=lx+"px";tip.style.top=ly+"px";
+  };
+  const hit=svg.querySelector("#hit");
+  hit.addEventListener("pointermove",move);hit.addEventListener("pointerdown",move);
+  hit.addEventListener("pointerleave",()=>{tip.hidden=true;xh.setAttribute("visibility","hidden");});
+}
+
+/* ---------- Horizontal bars ---------- */
+function hbars(id,rows,fmt){
+  const box=document.getElementById(id),W=Math.max(300,box.clientWidth);
+  const rowH=30,lw=W<420?96:112,rw=64,H=rows.length*rowH+8;
+  const mn=Math.min(0,...rows.map(r=>r.v)),mx=Math.max(0,...rows.map(r=>r.v));
+  const x=v=>lw+(W-lw-rw)*(v-mn)/((mx-mn)||1);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
+  s+=`<line x1="${x(0)}" x2="${x(0)}" y1="0" y2="${H}" stroke="var(--ink-3)" stroke-width="1"/>`;
+  rows.forEach((r,i)=>{
+    const y0=i*rowH+6,bh=18,x0=Math.min(x(0),x(r.v)),w=Math.max(2,Math.abs(x(r.v)-x(0)));
+    const pos=r.v>=0;
+    const rx=4;
+    // bar with rounded data-end only
+    const path=pos
+      ?`M${x0},${y0}h${w-rx}a${rx},${rx} 0 0 1 ${rx},${rx}v${bh-2*rx}a${rx},${rx} 0 0 1 -${rx},${rx}h-${w-rx}z`
+      :`M${x0+w},${y0}h-${w-rx}a${rx},${rx} 0 0 0 -${rx},${rx}v${bh-2*rx}a${rx},${rx} 0 0 0 ${rx},${rx}h${w-rx}z`;
+    s+=`<g class="bar" data-i="${i}"><rect x="0" y="${i*rowH}" width="${W}" height="${rowH}" fill="transparent"/>`;
+    s+=`<text class="lbl" x="0" y="${y0+13}">${esc(r.d.n)}</text>`;
+    s+=`<path d="${path}" fill="var(--${r.d.k})"/>`;
+    s+=`<text x="${pos?x(r.v)+6:x(0)+6}" y="${y0+13}" style="fill:var(--ink-2)">${fmt(r.v)}</text></g>`;
+  });
+  s+="</svg>";box.innerHTML=s;
+  const tip=document.getElementById("tip");
+  box.querySelectorAll("g.bar").forEach(g=>{
+    const r=rows[+g.dataset.i];
+    g.addEventListener("pointermove",e=>{tip.innerHTML=`<h4>${esc(r.d.n)}</h4>${r.tip}`;tip.hidden=false;
+      let lx=e.clientX+16;if(lx+tip.offsetWidth>innerWidth-8)lx=e.clientX-tip.offsetWidth-16;
+      tip.style.left=lx+"px";tip.style.top=(e.clientY-tip.offsetHeight-10)+"px";});
+    g.addEventListener("pointerleave",()=>tip.hidden=true);
+  });
+}
+function bars(){
+  const g=D.map(d=>({d,v:pct(d.rev[7],d.rev[0]),tip:`<div class="r" style="--c:var(--${d.k})"><i></i><span>${Q[0]}</span><span>${fmtCr(d.rev[0])}</span></div><div class="r" style="--c:var(--${d.k})"><i></i><span>${Q[7]}</span><span>${fmtCr(d.rev[7])}</span></div>`})).sort((a,b)=>b.v-a.v);
+  hbars("growthBars",g,v=>(v>0?"+":"")+v.toFixed(1)+"%");
+  const h=D.map(d=>{const li=lastIdx(d.emp);return {d,v:d.emp[li]-d.emp[0],tip:`<div class="r" style="--c:var(--${d.k})"><i></i><span>${Q[0]}</span><span>${fmtInt(d.emp[0])}</span></div><div class="r" style="--c:var(--${d.k})"><i></i><span>${Q[li]}</span><span>${fmtInt(d.emp[li])}</span></div>`};}).sort((a,b)=>b.v-a.v);
+  hbars("hcBars",h,v=>(v>0?"+":"−")+Math.abs(v).toLocaleString("en-IN"));
+}
+
+/* ---------- Scorecard ---------- */
+let sortKey="rev",sortDir=-1;
+function score(){
+  const rows=D.map(d=>{
+    const ei=lastIdx(d.emp),ai=lastIdx(d.att);
+    return {d,rev:d.rev[7],qoq:pct(d.rev[7],d.rev[6]),yoy:pct(d.rev[7],d.rev[3]),emp:d.emp[ei],ei,
+      adds:ei>0?d.emp[ei]-d.emp[ei-1]:null,att:d.att[ai],ai,attd:ai>=4?d.att[ai]-d.att[ai-4]:null,rpe:d.rpe[lastIdx(d.rpe)],ri:lastIdx(d.rpe)};
+  });
+  rows.sort((a,b)=>sortKey==="n"?sortDir*a.d.n.localeCompare(b.d.n):sortDir*((a[sortKey]??-1e18)-(b[sortKey]??-1e18)));
+  const cols=[["n","Company"],["rev","Revenue ₹ Cr"],["qoq","QoQ"],["yoy","YoY"],["emp","Headcount"],["adds","Net adds QoQ"],["att","Attrition"],["attd","Attrition YoY"],["rpe","Rev/emp ₹ L"]];
+  const tag=(i)=>i!==L?` <small>(${Q[i]})</small>`:"";
+  const t=document.getElementById("score");
+  t.innerHTML=`<thead><tr>${cols.map(([k,l])=>`<th scope="col"><button id="sort-${k}" data-k="${k}" style="all:unset;cursor:pointer">${l}${sortKey===k?(sortDir<0?" ↓":" ↑"):""}</button></th>`).join("")}</tr></thead><tbody>`+
+   rows.map(r=>`<tr><td><span class="co" style="--c:var(--${r.d.k})"><i></i>${esc(r.d.n)}</span></td>
+     <td>${fmtInt(r.rev)}</td><td>${chip(r.qoq)}</td><td>${chip(r.yoy)}</td>
+     <td>${fmtInt(r.emp)}${tag(r.ei)}</td>
+     <td>${r.adds==null?"–":(r.adds>=0?"+":"−")+Math.abs(r.adds).toLocaleString("en-IN")}</td>
+     <td>${r.att.toFixed(1)}%${tag(r.ai)}</td><td>${chip(r.attd,{pp:true,invert:true})}</td>
+     <td>${r.rpe.toFixed(1)}${tag(r.ri)}</td></tr>`).join("")+"</tbody>";
+  t.querySelectorAll("th button").forEach(b=>b.onclick=()=>{const k=b.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=k==="n"?1:-1;}score();});
+}
+
+/* ---------- Heatmap ---------- */
+function heat(){
+  const steps=["--q100","--q200","--q300","--q400","--q500","--q600","--q700"];
+  const all=D.flatMap(d=>d.att).filter(v=>v!=null);
+  const lo=Math.floor(Math.min(...all)),hi=Math.ceil(Math.max(...all));
+  const step=v=>Math.min(6,Math.floor((v-lo)/(hi-lo)*7));
+  document.getElementById("heatScale").innerHTML=`<span>${lo}%</span><span class="bar">${steps.map(s=>`<span style="background:var(${s})"></span>`).join("")}</span><span>${hi}%</span>`;
+  document.getElementById("heat").innerHTML=`<thead><tr><th scope="col" style="text-align:left">Company</th>${Q.map(q=>`<th scope="col">${q}</th>`).join("")}</tr></thead><tbody>`+
+   D.map(d=>`<tr><td><span class="co" style="--c:var(--${d.k})"><i></i>${esc(d.n)}</span></td>${d.att.map((v,i)=>{
+     if(v==null)return `<td class="na"><div title="Not available">n/a</div></td>`;
+     const k=step(v);
+     return `<td><div title="${esc(d.n)} · ${Q[i]} · ${v.toFixed(1)}%" style="background:var(${steps[k]});color:${k>=3?"#fff":"#0b0b0b"}">${v.toFixed(1)}</div></td>`;}).join("")}</tr>`).join("")+"</tbody>";
+}
+
+/* ---------- Company cards ---------- */
+function cards(){
+  document.getElementById("cards").innerHTML=D.map(d=>{
+    const v=d.rev,mn=Math.min(...v),mx=Math.max(...v),W=200,H=46;
+    const px=i=>2+(W-4)*i/L,py=val=>4+(H-8)*(1-(val-mn)/((mx-mn)||1));
+    const line=v.map((val,i)=>(i?"L":"M")+px(i).toFixed(1)+","+py(val).toFixed(1)).join("");
+    const ei=lastIdx(d.emp),ai=lastIdx(d.att);
+    return `<article class="card" style="--c:var(--${d.k})">
+      <div class="hd"><span class="nm"><i></i>${esc(d.n)}</span>${chip(pct(v[7],v[3]))}</div>
+      <div class="big">${fmtInt(v[7])} <small>₹ Cr · Q1 FY27</small></div>
+      <div class="spark"><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+        <path d="${line}L${px(L)},${H}L${px(0)},${H}Z" fill="var(--${d.k})" opacity=".12"/>
+        <path d="${line}" fill="none" stroke="var(--${d.k})" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <circle cx="${px(L)}" cy="${py(v[L])}" r="3" fill="var(--${d.k})"/></svg></div>
+      <div class="kv"><span>Headcount${ei!==L?" ("+Q[ei]+")":""}</span><b>${fmtInt(d.emp[ei])}</b>
+        <span>Attrition${ai!==L?" ("+Q[ai]+")":""}</span><b>${d.att[ai].toFixed(1)}%</b>
+        <span>Rev / employee (ann.)</span><b>₹${d.rpe[lastIdx(d.rpe)].toFixed(1)} L</b>
+        <span>8-qtr revenue growth</span><b>${pct(v[7],v[0])>0?"+":""}${pct(v[7],v[0]).toFixed(1)}%</b></div>
+    </article>`;}).join("");
+}
+
+/* ---------- Clients & full table ---------- */
+function clients(){
+  document.getElementById("clients").innerHTML=`<thead><tr><th scope="col">Company</th><th scope="col" style="text-align:left">Metric</th><th scope="col">Earliest</th><th scope="col">Latest</th></tr></thead><tbody>`+
+   CLIENTS.map(c=>{const f=c.v.findIndex(v=>v!=null),l=lastIdx(c.v);const d=byName[c.n];
+    return `<tr><td><span class="co" style="--c:var(--${d.k})"><i></i>${esc(c.n)}</span></td><td style="text-align:left;font-family:var(--sans)">${esc(c.m)}</td>
+    <td>${f===l?"–":fmtInt(c.v[f])+` <small>${Q[f]}</small>`}</td><td>${fmtInt(c.v[l])} <small>${Q[l]}</small></td></tr>`;}).join("")+"</tbody>";
+}
+let tblM="rev";
+function full(){
+  document.querySelectorAll("#tblSeg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===tblM));
+  const f=tblM==="att"?(v=>v==null?"–":v.toFixed(1)):fmtInt;
+  document.getElementById("full").innerHTML=`<thead><tr><th scope="col">Company</th>${Q.map(q=>`<th scope="col">${q}</th>`).join("")}</tr></thead><tbody>`+
+   D.map(d=>`<tr><td><span class="co" style="--c:var(--${d.k})"><i></i>${esc(d.n)}</span></td>${d[tblM].map(v=>`<td>${f(v)}</td>`).join("")}</tr>`).join("")+"</tbody>";
+}
+
+/* ---------- Wire up ---------- */
+document.querySelectorAll("#metricSeg button").forEach(b=>b.onclick=()=>{state.m=b.dataset.m;save();trend();});
+document.querySelectorAll("#scaleSeg button").forEach(b=>b.onclick=()=>{state.s=b.dataset.s;save();trend();});
+document.querySelectorAll("#tblSeg button").forEach(b=>b.onclick=()=>{tblM=b.dataset.t;full();});
+tiles();legend();trend();score();bars();heat();cards();clients();full();
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{trend();bars();},120);});
+</script>
+</body>
+</html>
