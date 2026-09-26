@@ -6,7 +6,9 @@ Real publications covering career exploration generally — Career Profiles, Car
 
 ## Contents
 
-Empty today. Each future publication gets its own subfolder, named by slug.
+- `gig-work/` — gig and field work series (card 01: the Gig Work Skill Pyramid, draft).
+
+Each future publication gets its own subfolder, named by slug.
 
 ## Naming Convention
 
