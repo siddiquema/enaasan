@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 1220" width="1640" height="1220" role="img" aria-labelledby="t d">
+  <!-- canonical: ENA-KCARD-CAREER-gig-work-skill-pyramid -->
+  <title id="t">Gig work is a pyramid, not just delivery</title>
+  <desc id="d">Five levels of gig and field work sorted by skill. Level 1 entry-level, paid for time and effort: delivery, bike-taxi and cab driving, warehouse shifts, field surveys. Level 2 trained trades, paid for a certified skill: electricians, plumbers, AC technicians, beauticians, carpenters. Level 3 digital and language skills, paid for skilled output: translators, data annotators, content writers, video editors, online tutors. Level 4 professional, paid for outcomes: software developers, UI/UX designers, digital marketers, GST and tax filers, legal drafting. Level 5 expert, paid for judgment: consultants, part-time finance or tech heads, niche specialists, trainers. Moving up, you are paid for judgment instead of time, you set the price instead of the app, and reputation instead of hours protects your income.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=DM+Mono:wght@500&amp;display=swap');
+      .eyebrow { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 17px; letter-spacing: 3px; fill: #C8860E; }
+      .title   { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 44px; fill: #0D1B2A; }
+      .sub     { font-family: 'DM Sans', sans-serif; font-size: 23px; fill: #4A6580; }
+      .lvl     { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 15px; letter-spacing: 2.5px; }
+      .name    { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 29px; }
+      .paid    { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 19px; }
+      .ex      { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 20px; fill: #0D1B2A; }
+      .get     { font-family: 'DM Sans', sans-serif; font-style: italic; font-size: 17.5px; fill: #4A6580; }
+      .axis    { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 15px; letter-spacing: 2.5px; fill: #C8860E; }
+      .shiftH  { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 14px; letter-spacing: 2px; fill: #A8C0D4; }
+      .shift   { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 22px; fill: #F2EFE9; }
+      .shiftG  { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 22px; fill: #FFD166; }
+      .foot    { font-family: 'DM Sans', sans-serif; font-size: 16px; fill: #4A6580; }
+      .footB   { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; fill: #0D1B2A; }
+    </style>
+    <marker id="arrow" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#F0A500"/>
+    </marker>
+  </defs>
+
+  <!-- Background: light, print-friendly -->
+  <rect width="1640" height="1220" fill="#FBF8F3"/>
+  <rect width="1640" height="10" fill="#F0A500"/>
+
+  <!-- Header -->
+  <text x="80" y="78" class="eyebrow">ENAASAN · CAREERS · GIG &amp; FIELD WORK</text>
+  <text x="80" y="140" class="title">Gig work is a pyramid — not just delivery</text>
+  <text x="80" y="180" class="sub">Five levels of gig and field work, sorted by the skill they need. Most people start at the base; each step up needs one skill you can prove.</text>
+
+  <!-- Vertical axis arrow -->
+  <line x1="62" y1="1000" x2="62" y2="258" stroke="#F0A500" stroke-width="4" marker-end="url(#arrow)"/>
+  <text transform="translate(44 1000) rotate(-90)" class="axis">MORE SKILL  ·  MORE CONTROL OVER YOUR PRICE</text>
+
+  <!-- Pyramid: cx = 560, width 300 at y=240 growing to 900 at y=1000 -->
+  <!-- Level 5: y 240–376 -->
+  <polygon points="410,240 710,240 764,376 356,376" fill="#0D1B2A"/>
+  <text x="560" y="278" text-anchor="middle" class="lvl" fill="#F0A500">LEVEL 5</text>
+  <text x="560" y="316" text-anchor="middle" class="name" fill="#FFD166">Expert</text>
+  <text x="560" y="350" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for judgment</text>
+
+  <!-- Level 4: y 384–520 -->
+  <polygon points="353,384 767,384 821,520 299,520" fill="#1E3A52"/>
+  <text x="560" y="422" text-anchor="middle" class="lvl" fill="#FFD166">LEVEL 4</text>
+  <text x="560" y="460" text-anchor="middle" class="name" fill="#F2EFE9">Professional</text>
+  <text x="560" y="494" text-anchor="middle" class="paid" fill="#F2EFE9">Paid for outcomes</text>
+
+  <!-- Level 3: y 528–664 -->
+  <polygon points="296,528 824,528 877,664 243,664" fill="#4A6580"/>
+  <text x="560" y="566" text-anchor="middle" class="lvl" fill="#FFD166">LEVEL 3</text>
+  <text x="560" y="604" text-anchor="middle" class="name" fill="#FFFFFF">Digital &amp; Language Skills</text>
+  <text x="560" y="638" text-anchor="middle" class="paid" fill="#FFFFFF">Paid for skilled output</text>
+
+  <!-- Level 2: y 672–808 -->
+  <polygon points="239,672 881,672 934,808 186,808" fill="#8FA9C2"/>
+  <text x="560" y="710" text-anchor="middle" class="lvl" fill="#0D1B2A">LEVEL 2</text>
+  <text x="560" y="748" text-anchor="middle" class="name" fill="#0D1B2A">Trained Trades</text>
+  <text x="560" y="782" text-anchor="middle" class="paid" fill="#0D1B2A">Paid for a certified skill</text>
+
+  <!-- Level 1: y 816–1000 (widest, easiest to enter) -->
+  <polygon points="183,816 937,816 1010,1000 110,1000" fill="#D3E0EB"/>
+  <text x="560" y="868" text-anchor="middle" class="lvl" fill="#4A6580">LEVEL 1 · WHERE MOST PEOPLE START</text>
+  <text x="560" y="912" text-anchor="middle" class="name" fill="#0D1B2A">Entry-level</text>
+  <text x="560" y="950" text-anchor="middle" class="paid" fill="#14273A">Paid for time &amp; effort</text>
+
+  <!-- Connectors -->
+  <g stroke="#A8C0D4" stroke-width="2" stroke-dasharray="3 6">
+    <line x1="743" y1="308" x2="1026" y2="308"/>
+    <line x1="800" y1="452" x2="1026" y2="452"/>
+    <line x1="857" y1="596" x2="1026" y2="596"/>
+    <line x1="913" y1="740" x2="1026" y2="740"/>
+    <line x1="980" y1="908" x2="1026" y2="908"/>
+  </g>
+  <g fill="#F0A500">
+    <circle cx="1030" cy="308" r="6"/>
+    <circle cx="1030" cy="452" r="6"/>
+    <circle cx="1030" cy="596" r="6"/>
+    <circle cx="1030" cy="740" r="6"/>
+    <circle cx="1030" cy="908" r="6"/>
+  </g>
+
+  <!-- Examples + entry requirements -->
+  <text x="1052" y="290" class="ex">Consultants · part-time finance, HR or</text>
+  <text x="1052" y="316" class="ex">tech heads · AI &amp; cybersecurity specialists</text>
+  <text x="1052" y="344" class="get">To get in: years of deep experience in one field</text>
+
+  <text x="1052" y="434" class="ex">Software developers · UI/UX designers</text>
+  <text x="1052" y="460" class="ex">digital marketers · GST &amp; tax filers</text>
+  <text x="1052" y="488" class="get">To get in: a degree/qualification or proven skill + portfolio</text>
+
+  <text x="1052" y="578" class="ex">Translators (Tamil, Telugu, Hindi) · data</text>
+  <text x="1052" y="604" class="ex">annotators · content writers · video editors</text>
+  <text x="1052" y="632" class="get">To get in: a digital or language skill + work samples</text>
+
+  <text x="1052" y="722" class="ex">Electricians · plumbers · AC technicians</text>
+  <text x="1052" y="748" class="ex">beauticians · carpenters · home cooks</text>
+  <text x="1052" y="776" class="get">To get in: ITI trade or skilling certificate + own tools</text>
+
+  <text x="1052" y="890" class="ex">Delivery partners · bike-taxi &amp; cab drivers</text>
+  <text x="1052" y="916" class="ex">warehouse shifts · field survey agents</text>
+  <text x="1052" y="944" class="get">To get in: 18+, ID, smartphone (licence to drive)</text>
+
+  <!-- What changes as you climb -->
+  <rect x="80" y="1036" width="1480" height="112" rx="14" fill="#0D1B2A"/>
+  <text x="112" y="1070" class="shiftH">WHAT CHANGES AS YOU CLIMB</text>
+  <text x="112" y="1116" class="shift">Paid for: time <tspan class="shiftG">→ judgment</tspan></text>
+  <text x="560" y="1116" class="shift">Price set by: the app <tspan class="shiftG">→ you</tspan></text>
+  <text x="1030" y="1116" class="shift">Income protected by: hours <tspan class="shiftG">→ reputation</tspan></text>
+
+  <!-- Footer -->
+  <text x="80" y="1186" class="foot">At almost every level, gig work has no employer PF, ESI or paid leave, so check what a platform or client actually provides. Examples are illustrative.</text>
+  <text x="1560" y="1186" text-anchor="end" class="footB">enaasan.online</text>
+</svg>

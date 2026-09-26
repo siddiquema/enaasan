@@ -10,6 +10,10 @@ Knowledge Cards and a future Guide on gig and field work — shown as a skill la
 |---|---|---|---|
 | 01 | `01-gig-work-skill-pyramid.md` | ENA-KCARD-CAREER-gig-work-skill-pyramid | draft v0.1 |
 
+## Visuals
+
+- `knowledge/assets/diagrams/gig-work-skill-pyramid.svg` (web) and `.png` (share/print) — the card 01 pyramid, light print-friendly background. Examples on the image must stay in sync with the card body.
+
 ## Planned
 
 - **Guide:** `ENA-GUIDE-CAREER-gig-and-field-work` — the full article for enaasan.online, built on card 01 (stepping stone vs. trap, reading earnings claims, social security for gig workers). Any statistics are verified against primary sources per GOV-001 before use.
