@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-26",
-  "total_publications": 23,
+  "last_updated": "2026-10-11",
+  "total_publications": 24,
   "publications": [
     {
       "id": "streams-explorer",
@@ -106,6 +106,11 @@
     {
       "id": "guide-008-gig-work",
       "file": "guide-008-gig-work.json",
+      "status": "published"
+    },
+    {
+      "id": "report-001-who-india-graduates",
+      "file": "report-001-who-india-graduates.json",
       "status": "published"
     },
     {

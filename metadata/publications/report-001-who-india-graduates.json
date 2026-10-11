@@ -1,0 +1,42 @@
+{
+  "id": "report-001-who-india-graduates",
+  "title": "Who India Graduates — Research Report No. 1",
+  "url": "/reports/who-india-graduates/",
+  "description": "How many students graduate in Arts, Science, Commerce and Engineering in India each year. Official AISHE 2022-23 and 2023-24 data: about 5.5 Arts/Science/Commerce graduates for every engineering graduate.",
+  "target_audience": "Students choosing a stream or degree, parents, teachers and counsellors",
+  "duration": "8-10 minutes",
+  "keywords": [
+    "research report",
+    "AISHE",
+    "graduates",
+    "out-turn",
+    "Arts",
+    "Science",
+    "Commerce",
+    "engineering",
+    "enrolment",
+    "higher education data",
+    "BA",
+    "BSc",
+    "BCom",
+    "women graduates"
+  ],
+  "questions_it_answers": [
+    "How many students graduate in Arts, Science, Commerce and Engineering in India?",
+    "Which degree do most Indian students graduate in?",
+    "Is engineering enrolment growing?",
+    "How many women graduate from Indian colleges?",
+    "Where can I find official higher education data?"
+  ],
+  "related_publications": [
+    "streams-explorer",
+    "careers-compass"
+  ],
+  "tags": [
+    "research",
+    "data",
+    "higher-education"
+  ],
+  "status": "published",
+  "published_date": "2026-10-11"
+}

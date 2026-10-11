@@ -95,3 +95,51 @@ footer { background: var(--ink); border-top: 1px solid var(--border); padding: 4
   .headline { padding: 20px 18px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ── Report components (charts, stat grid, headline number) ── */
+.headline-big { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: center; }
+.headline-big .big { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3rem, 10vw, 4.4rem); line-height: 1; color: var(--gold); font-variant-numeric: tabular-nums; }
+.headline-big small { grid-column: 1 / -1; font-family: 'DM Mono', monospace; font-size: 0.74rem; color: var(--mist); }
+@media (max-width: 480px) { .headline-big { grid-template-columns: 1fr; } }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 12px; margin-top: 8px; }
+.stat-grid .stat { min-width: 0; }
+.stat-grid .stat-num { font-size: 1.6rem; }
+.note { margin-top: 16px; padding: 14px 16px; border-left: 3px solid var(--gold); background: color-mix(in srgb, var(--gold) 8%, var(--ink)); border-radius: 0 10px 10px 0; font-size: 0.93rem; }
+.finding-grid.wide { grid-template-columns: 1fr; }
+.chart-box { padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--ink); }
+.chart-title { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--chalk); font-size: 0.95rem; margin-bottom: 12px; }
+.bars { display: flex; flex-direction: column; gap: 9px; }
+.bar-row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 12px; align-items: center; font-size: 0.88rem; }
+.bar-row .lbl { color: var(--chalk); min-width: 0; }
+.track { display: flex; flex-direction: column; gap: 3px; position: relative; }
+.bar { height: 1.15rem; min-width: 2.6rem; display: flex; align-items: center; justify-content: flex-end; border-radius: 0 3px 3px 0; background: var(--mist); }
+.bar.gold { background: var(--gold); }
+.bar.hl { background: var(--chalk); }
+.bar.thin { height: 0.85rem; }
+.bar i { font-style: normal; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--night); padding: 0 6px; font-variant-numeric: tabular-nums; }
+.bar.thin i { font-size: 0.62rem; }
+.ref-line { position: absolute; top: -4px; bottom: -4px; width: 0; border-left: 1.5px dashed var(--mist); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--mist); margin-bottom: 10px; }
+.legend span::before { content: ""; display: inline-block; width: 0.75rem; height: 0.75rem; margin-right: 6px; vertical-align: -1px; background: var(--c); border-radius: 2px; }
+.num-table td, .num-table th { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.num-table td:first-child, .num-table th:first-child { text-align: left; }
+.num-table { min-width: 0; }
+.up { color: #3DB36E; } .down { color: #E8604C; }
+.cite { font-family: 'DM Mono', monospace; font-size: 0.8rem; padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--ink); color: var(--chalk); overflow-wrap: anywhere; }
+@media (max-width: 480px) { .bar-row { grid-template-columns: 1fr; gap: 3px; } }
+
+/* Print / PDF: light, ink-friendly palette; hide site chrome */
+@media print {
+  :root, :root[data-theme] { --night:#FFFFFF; --ink:#F7F5F0; --card:#FFFFFF; --border:#D4CCBF; --gold:#A86F06; --glow:#8A5A00; --chalk:#1B1B1B; --mist:#4F463E; --faint:#7A7067; }
+  body { background: #FFFFFF; font-size: 11pt; }
+  nav, footer, .no-print, #cookie-consent-banner { display: none !important; }
+  .page { padding: 0; max-width: none; }
+  section { margin-top: 28px; }
+  .finding, .chart-box, .stat, .headline { break-inside: avoid; }
+  a { color: inherit; }
+}
+/* Bars with a reference line: value label sits outside the bar, line drawn on top */
+.bars.with-ref .track { padding-right: 3rem; }
+.bars.with-ref .bar { position: relative; }
+.bars.with-ref .bar i { position: absolute; left: 100%; color: var(--chalk); padding-left: 6px; }
+.ref-line { z-index: 2; border-left-color: var(--chalk); opacity: 0.7; }
