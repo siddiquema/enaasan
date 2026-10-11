@@ -177,6 +177,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Research Reports -->
+  <url>
+    <loc>https://enaasan.online/reports/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research Report No. 1: Who India Graduates -->
+  <url>
+    <loc>https://enaasan.online/reports/who-india-graduates/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>

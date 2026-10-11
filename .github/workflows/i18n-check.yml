@@ -1,0 +1,49 @@
+name: Translation check
+
+# Fails when a translation key is added without ta/te/hi values (or used on a page
+# without an English value). Warns when English text changes without matching
+# Tamil/Telugu/Hindi updates. Known older issues live in scripts/i18n-baseline.json.
+# Run locally: python3 scripts/i18n-check.py check --base origin/main
+
+on:
+  pull_request:
+    paths:
+      - 'locales/**'
+      - '**/*.html'
+      - 'scripts/i18n-check.py'
+      - 'scripts/i18n-baseline.json'
+  push:
+    branches: [main]
+    paths:
+      - 'locales/**'
+      - '**/*.html'
+      - 'scripts/i18n-check.py'
+      - 'scripts/i18n-baseline.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check translations
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          BASE="${PR_BASE:-$PUSH_BEFORE}"
+          if [ -n "$BASE" ] && git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            python3 scripts/i18n-check.py check --base "$BASE"
+          else
+            python3 scripts/i18n-check.py check
+          fi

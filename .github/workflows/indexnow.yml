@@ -44,7 +44,8 @@ jobs:
             else
               RANGE="$AFTER~1..$AFTER"
             fi
-            PATHS=$(git diff --name-only "$RANGE" -- '*.html' | sed 's|^|/|; s|^/index\.html$|/|' || true)
+            # Folder pages are submitted as /folder/ (not /folder/index.html); templates are never submitted
+            PATHS=$(git diff --name-only "$RANGE" -- '*.html' | grep -v '/_template/' | sed 's|^|/|; s|/index\.html$|/|' || true)
           fi
 
           if [ -z "$PATHS" ]; then
