@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<!--
+  ENAASAN RESEARCH REPORT TEMPLATE
+  How to use: docs/research-reports.md
+  1. Copy this folder to /reports/<report-slug>/ (e.g. /reports/career-choice-gap/).
+  2. Replace every [PLACEHOLDER] (search for "ph" and "[").
+  3. Every statistic needs a row in "Methodology & Sources". No modelled or estimated numbers.
+  4. Remove the "noindex" robots tag and the template banner only when the report is reviewed.
+  5. Add the report to /reports/index.html and sitemap.xml.
+-->
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
+<title>[Report title] — Enaasan Research</title>
+<meta name="description" content="[One sentence: the headline finding, with its source named. Under 160 characters.]"/>
+<link rel="canonical" href="https://enaasan.online/reports/[report-slug]/"/>
+
+<!-- Open Graph (LinkedIn uses these). Image: 1200 × 627 PNG of the lead chart. -->
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="enaasan"/>
+<meta property="og:url" content="https://enaasan.online/reports/[report-slug]/"/>
+<meta property="og:title" content="[Report title] — Enaasan Research"/>
+<meta property="og:description" content="[Headline finding in one sentence, with its source.]"/>
+<meta property="og:image" content="https://enaasan.online/reports/[report-slug]/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="627"/>
+<meta property="og:image:alt" content="[Describe the lead chart in words]"/>
+<meta property="article:published_time" content="[YYYY-MM-DD]"/>
+<meta property="article:author" content="Siddique Ahamed"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- Structured data: Report + the public datasets it is based on. One Dataset entry per source. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "name": "[Report title]",
+  "headline": "[Headline finding]",
+  "description": "[Executive summary in one or two sentences]",
+  "url": "https://enaasan.online/reports/[report-slug]/",
+  "reportNumber": "[N]",
+  "datePublished": "[YYYY-MM-DD]",
+  "dateModified": "[YYYY-MM-DD]",
+  "inLanguage": "en",
+  "author": { "@type": "Person", "name": "Siddique Ahamed" },
+  "publisher": { "@type": "Organization", "name": "enaasan", "url": "https://enaasan.online/" },
+  "license": "https://enaasan.online/terms.html",
+  "isAccessibleForFree": true,
+  "encoding": { "@type": "MediaObject", "contentUrl": "https://enaasan.online/reports/[report-slug]/[report-slug].pdf", "encodingFormat": "application/pdf" },
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "[Dataset name, e.g. Periodic Labour Force Survey Annual Report YYYY-YY]",
+      "creator": { "@type": "Organization", "name": "[Publisher, e.g. Ministry of Statistics and Programme Implementation]" },
+      "url": "[Official download page URL]",
+      "temporalCoverage": "[YYYY/YYYY]",
+      "spatialCoverage": "India"
+    }
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-D4QMDFL8XF');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600&amp;family=Noto+Sans+Telugu:wght@400;600&amp;family=Noto+Sans+Devanagari:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="../reports.css" rel="stylesheet"/>
+<link href="../../css/theme-styles.css" rel="stylesheet"/>
+<style>
+  [lang="ta"] { font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif; }
+  [lang="te"] { font-family: 'Noto Sans Telugu', 'DM Sans', sans-serif; }
+  [lang="hi"] { font-family: 'Noto Sans Devanagari', 'DM Sans', sans-serif; }
+</style>
+</head>
+<body>
+<div class="template-banner">TEMPLATE — not a published report. Every highlighted item is a placeholder. No statistics have been filled in.</div>
+<script>
+  fetch('/components/cookie-consent.html').then(r => r.text()).then(h => {
+    const t = document.createElement('div'); t.innerHTML = h;
+    document.body.insertBefore(t.firstElementChild, document.body.firstChild);
+    t.querySelectorAll('script').forEach(o => { const s = document.createElement('script'); s.textContent = o.textContent; document.body.appendChild(s); });
+  }).catch(e => console.error('Failed to load cookie consent:', e));
+</script>
+
+<nav>
+  <a class="nav-logo" href="/">en<span>aasan</span></a>
+  <a class="nav-back" href="/reports/">← All reports</a>
+  <div aria-label="Select theme" class="theme-switcher" role="group">
+    <button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+    <button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+    <button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+  </div>
+</nav>
+
+<main class="page">
+  <!-- ═══ HEADER ═══ -->
+  <p class="eyebrow">Enaasan Research · Report #<em class="ph">[N]</em> · <em class="ph">[Quarter YYYY]</em></p>
+  <h1><em class="ph">[Report title]</em></h1>
+  <p class="lead"><em class="ph">[One-paragraph standfirst: the question this report answers and who it is for.]</em></p>
+
+  <div class="headline" role="note">
+    <div class="label">Headline finding</div>
+    <p><em class="ph">[One sentence. Any number in it must appear in Methodology &amp; Sources with dataset, table and year.]</em></p>
+  </div>
+
+  <div class="meta-row">
+    <a class="btn" href="[report-slug].pdf">Download PDF</a>
+    <a class="btn btn-ghost" href="#sources">Methodology &amp; sources</a>
+    <span>Published <em class="ph">[DD Month YYYY]</em></span>
+    <span><em class="ph">[N]</em> min read</span>
+  </div>
+
+  <!-- ═══ EXECUTIVE SUMMARY ═══ -->
+  <section aria-labelledby="summary">
+    <h2 id="summary">Executive summary</h2>
+    <p><em class="ph">[3–5 short sentences. What we looked at, what we found, what it means for a student choosing a course. Cite each number with a superscript link to its source row, e.g. &lt;a href="#src-1"&gt;[1]&lt;/a&gt;.]</em></p>
+  </section>
+
+  <!-- ═══ FINDINGS: copy one .finding block per finding (3–4). Each = one stat + one chart. ═══ -->
+  <section aria-labelledby="findings">
+    <h2 id="findings">Findings</h2>
+
+    <article class="finding" id="finding-1">
+      <p class="finding-num">Finding 1 <span class="tag tag-data">Data</span></p>
+      <h3><em class="ph">[Finding title — a plain-language claim]</em></h3>
+      <div class="finding-grid">
+        <div>
+          <p><em class="ph">[2–4 sentences explaining the finding and why it matters to a student or parent.]</em></p>
+          <figure class="chart">
+            <div class="chart-frame" role="img" aria-label="[Describe the chart and its key values in words]"><span><em class="ph">[CHART — type, e.g. bar chart. Data: source row [1], table name, year. Build from the source table only.]</em></span></div>
+            <figcaption>Source: <em class="ph">[Publisher, dataset, table, year]</em> — see <a href="#src-1">[1]</a>.</figcaption>
+          </figure>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em class="ph">[STAT]</em></div>
+          <div class="stat-label"><em class="ph">[What the number measures, with unit and population]</em></div>
+          <div class="stat-source">Source <a href="#src-1">[1]</a></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="finding" id="finding-2">
+      <p class="finding-num">Finding 2 <span class="tag tag-data">Data</span></p>
+      <h3><em class="ph">[Finding title]</em></h3>
+      <div class="finding-grid">
+        <div>
+          <p><em class="ph">[Explanation.]</em></p>
+          <figure class="chart">
+            <div class="chart-frame" role="img" aria-label="[Chart description]"><span><em class="ph">[CHART — type. Data: source row [2].]</em></span></div>
+            <figcaption>Source: <em class="ph">[Publisher, dataset, table, year]</em> — see <a href="#src-2">[2]</a>.</figcaption>
+          </figure>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em class="ph">[STAT]</em></div>
+          <div class="stat-label"><em class="ph">[What the number measures]</em></div>
+          <div class="stat-source">Source <a href="#src-2">[2]</a></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="finding" id="finding-3">
+      <p class="finding-num">Finding 3 <span class="tag tag-data">Data</span></p>
+      <h3><em class="ph">[Finding title]</em></h3>
+      <div class="finding-grid">
+        <div>
+          <p><em class="ph">[Explanation.]</em></p>
+          <figure class="chart">
+            <div class="chart-frame" role="img" aria-label="[Chart description]"><span><em class="ph">[CHART — type. Data: source row [3].]</em></span></div>
+            <figcaption>Source: <em class="ph">[Publisher, dataset, table, year]</em> — see <a href="#src-3">[3]</a>.</figcaption>
+          </figure>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em class="ph">[STAT]</em></div>
+          <div class="stat-label"><em class="ph">[What the number measures]</em></div>
+          <div class="stat-source">Source <a href="#src-3">[3]</a></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="finding" id="finding-4">
+      <p class="finding-num">Finding 4 (optional) <span class="tag tag-data">Data</span></p>
+      <h3><em class="ph">[Finding title — delete this block if the report has three findings]</em></h3>
+      <div class="finding-grid">
+        <div>
+          <p><em class="ph">[Explanation.]</em></p>
+          <figure class="chart">
+            <div class="chart-frame" role="img" aria-label="[Chart description]"><span><em class="ph">[CHART — type. Data: source row [4].]</em></span></div>
+            <figcaption>Source: <em class="ph">[Publisher, dataset, table, year]</em> — see <a href="#src-4">[4]</a>.</figcaption>
+          </figure>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em class="ph">[STAT]</em></div>
+          <div class="stat-label"><em class="ph">[What the number measures]</em></div>
+          <div class="stat-source">Source <a href="#src-4">[4]</a></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Practitioner commentary: always labelled opinion, never mixed with data. Delete if unused. -->
+    <aside class="opinion" aria-label="Practitioner view">
+      <p class="finding-num">Practitioner view <span class="tag tag-opinion">Opinion — not data</span></p>
+      <p><em class="ph">[Commentary from hiring experience. No numbers unless they come from a cited source above. Name who is speaking and in what capacity.]</em></p>
+    </aside>
+  </section>
+
+  <!-- ═══ ACTION ═══ -->
+  <section aria-labelledby="start">
+    <h2 id="start">Where students and parents start</h2>
+    <p><em class="ph">[One sentence linking the findings to a decision.]</em></p>
+    <ul class="actions">
+      <li><strong>Students:</strong> <em class="ph">[One concrete next step]</em> — <a href="/careers.html">Career Compass</a></li>
+      <li><strong>Parents:</strong> <em class="ph">[One concrete next step]</em> — <a href="/guide.html">Guidance Hub</a></li>
+      <li><strong>Teachers and counsellors:</strong> <em class="ph">[One concrete next step]</em> — <a href="/faq.html">Career FAQ</a></li>
+    </ul>
+  </section>
+
+  <!-- ═══ METHODOLOGY & SOURCES ═══ -->
+  <section aria-labelledby="sources" id="sources">
+    <h2>Methodology &amp; sources</h2>
+    <h3>Method</h3>
+    <p><em class="ph">[Which datasets, which years, which tables; how categories were matched (e.g. course groups to occupation groups); what was excluded and why. If we ran a survey: sample, how participants were reached, questions, dates, consent, and that no personal data was collected.]</em></p>
+    <h3>Rules this report follows</h3>
+    <ul class="rules">
+      <li>Every number traces to a source row below or to our published survey method.</li>
+      <li>No invented, estimated or modelled statistics. Where data does not exist, we say so.</li>
+      <li>Practitioner commentary is labelled as opinion.</li>
+    </ul>
+    <h3>Limitations</h3>
+    <p><em class="ph">[What the data cannot tell us: coverage gaps, survey years, definitions that differ between sources.]</em></p>
+
+    <h3>Sources</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Dataset</th><th>Publisher</th><th>Table / section</th><th>Year</th><th>Link</th><th>Used in</th></tr></thead>
+        <tbody>
+          <tr id="src-1"><td>1</td><td><em class="ph">[Dataset]</em></td><td><em class="ph">[Publisher]</em></td><td><em class="ph">[Table no. and title]</em></td><td><em class="ph">[YYYY-YY]</em></td><td><em class="ph">[Official URL]</em></td><td>Finding 1</td></tr>
+          <tr id="src-2"><td>2</td><td><em class="ph">[Dataset]</em></td><td><em class="ph">[Publisher]</em></td><td><em class="ph">[Table]</em></td><td><em class="ph">[Year]</em></td><td><em class="ph">[URL]</em></td><td>Finding 2</td></tr>
+          <tr id="src-3"><td>3</td><td><em class="ph">[Dataset]</em></td><td><em class="ph">[Publisher]</em></td><td><em class="ph">[Table]</em></td><td><em class="ph">[Year]</em></td><td><em class="ph">[URL]</em></td><td>Finding 3</td></tr>
+          <tr id="src-4"><td>4</td><td><em class="ph">[Dataset]</em></td><td><em class="ph">[Publisher]</em></td><td><em class="ph">[Table]</em></td><td><em class="ph">[Year]</em></td><td><em class="ph">[URL]</em></td><td>Finding 4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>How to cite</h3>
+    <p>Enaasan Research (<em class="ph">[YYYY]</em>). <em class="ph">[Report title]</em>. Report #<em class="ph">[N]</em>. https://enaasan.online/reports/<em class="ph">[report-slug]</em>/</p>
+    <h3>Corrections</h3>
+    <p><em class="ph">[None yet — or: DD Month YYYY: what changed and why.]</em></p>
+  </section>
+
+  <!-- ═══ SUMMARIES IN TAMIL, TELUGU, HINDI — written or checked by the language reviewer ═══ -->
+  <section aria-labelledby="langs">
+    <h2 id="langs">Summary in other languages</h2>
+    <div class="lang-summaries">
+      <div class="lang-summary" lang="ta">
+        <h3>தமிழில் சுருக்கம்</h3>
+        <p><em class="ph" lang="en">[Tamil summary, 3–4 sentences, same numbers and sources as the English. Reviewer: TBD.]</em></p>
+      </div>
+      <div class="lang-summary" lang="te">
+        <h3>తెలుగులో సారాంశం</h3>
+        <p><em class="ph" lang="en">[Telugu summary, 3–4 sentences. Reviewer: Vijaya.]</em></p>
+      </div>
+      <div class="lang-summary" lang="hi">
+        <h3>हिंदी में सारांश</h3>
+        <p><em class="ph" lang="en">[Hindi summary, 3–4 sentences. Reviewer: Shafi.]</em></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/reports/">Research Reports</a>
+    <a href="/careers.html">Career Compass</a>
+    <a href="/guide.html">Guidance Hub</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms &amp; Disclaimer</a>
+  </div>
+  <div class="footer-copy">© 2026 Enaasan. Free to read and share for personal and educational use.</div>
+</footer>
+<script src="../../theme.js"></script>
+</body>
+</html>

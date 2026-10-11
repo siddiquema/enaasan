@@ -177,6 +177,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Research Reports -->
+  <url>
+    <loc>https://enaasan.online/reports/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://enaasan.online/privacy.html</loc>
