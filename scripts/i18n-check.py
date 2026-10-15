@@ -388,14 +388,15 @@ def write_audit(a, out='translation-audit.md', appendix='translation-audit-hardc
     # structural
     w('## 5. Structural problems found')
     w('')
-    w('1. **Switching back to English shows old English.** `js/i18n.js` applies `locales/en.json` when a visitor '
-      f'switches back to English. {len(a["drift"])} page elements differ from it, e.g. homepage stats revert to '
-      '"60+ / 20+" and the About title reverts to the pre-SEO version.')
+    w('1. **Switching back to English can show different English.** `js/i18n.js` applies `locales/en.json` when a visitor '
+      f'switches back to English. {len(a["drift"])} page elements still differ from it. Stale values (homepage stats, '
+      'About title, card badges and arrows) were synced on 2026-10-16; what remains is mostly wiring: a key on a '
+      'fragment of a sentence while the JSON holds the whole sentence, or title/subtitle keys swapped on the page.')
     fj = [k for k in a['missing_en'] if any('first-job' in p for p in a['key_pages'][k])]
     w(f'2. **`skills/first-job/` cannot translate.** {len(fj)} of its keys are not in any language file, and its '
-      'script requests `locales/<lang>.json` relative to `/skills/first-job/`, which does not exist — '
-      'Tamil/Telugu/Hindi silently fall back to English.')
-    w(f'3. **Legacy `i18n/` folder** holds edits that are not live (§6).')
+      'translations are therefore partial until they are added. (The relative-path bug that stopped any '
+      'translation loading there was fixed on 2026-10-16: `js/i18n.js` now requests `/locales/<lang>.json`.)')
+    w(f'3. **Legacy `i18n/` folder** is loaded by no page. Its reviewed edits were ported to `locales/` on 2026-10-16 (§6).')
     w(f'4. **{len(a["unused"])} keys in `en.json` are not used by any page:** ' +
       ', '.join(f'`{k}`' for k in a['unused']))
     w('')
@@ -411,7 +412,10 @@ def write_audit(a, out='translation-audit.md', appendix='translation-audit-hardc
         w(f'| {LANG_NAMES[l]} | {len(a["legacy_diff"][l])} |')
     w('')
     w('Hindi: commit `1f7841e` (2026-07-02) "Apply Shafi\'s Hindi review decisions" changed 23 values in '
-      '`i18n/hi.json` only — **reviewed Hindi that is not live.**')
+      '`i18n/hi.json` only. Those values, and the other reviewed edits, were ported into `locales/` on 2026-10-16. '
+      'The differences still listed below are intentional: `home.hero.title` (the legacy value ends with '
+      '"what comes next?", which the homepage already prints in a separate span) and the arrow, emoji and '
+      'asterisk clean-ups made in `locales/` so the text matches the page.')
     w('')
     w('<details><summary>Hindi keys that differ (legacy vs live)</summary>')
     w('')

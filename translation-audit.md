@@ -1,6 +1,6 @@
 # Translation Audit — enaasan.online
 
-*Generated 2026-10-11 from commit `72f2c37` by `scripts/i18n-check.py audit`. Re-run the script to refresh; do not hand-edit the tables.*
+*Generated 2026-10-15 from commit `314502d` by `scripts/i18n-check.py audit`. Re-run the script to refresh; do not hand-edit the tables.*
 
 > **Audit only.** No translation file was changed. Human-reviewed translations are untouched. Reviewers: Telugu — Vijaya, Hindi — Shafi, Tamil — TBD.
 
@@ -26,35 +26,38 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 
 | Page | Keys | Tamil miss / stale / same / OK | Telugu miss / stale / same / OK | Hindi miss / stale / same / OK | Hardcoded |
 |---|---:|---|---|---|---:|
-| `90-day-plan.html` | 0 | — | — | — | 39 |
-| `about.html` | 86 | 0 / 3 / 0 / 83 | 0 / 3 / 0 / 83 | 0 / 3 / 0 / 83 | 16 |
-| `after10.html` | 14 | 0 / 0 / 0 / 14 | 0 / 0 / 0 / 14 | 0 / 0 / 0 / 14 | 220 |
-| `after12.html` | 119 | 0 / 0 / 2 / 117 | 0 / 0 / 1 / 118 | 0 / 0 / 7 / 112 | 206 |
-| `bps.html` | 131 | 0 / 24 / 8 / 99 | 0 / 24 / 0 / 107 | 0 / 24 / 13 / 94 | 228 |
-| `career-exploration/01-who-are-you.html` | 0 | — | — | — | 123 |
-| `careers.html` | 111 | 0 / 1 / 1 / 109 | 0 / 1 / 1 / 109 | 0 / 1 / 7 / 103 | 625 |
+| `90-day-plan.html` | 0 | — | — | — | 40 |
+| `about.html` | 86 | 0 / 2 / 0 / 84 | 0 / 2 / 0 / 84 | 0 / 2 / 0 / 84 | 17 |
+| `after10.html` | 14 | 0 / 0 / 0 / 14 | 0 / 0 / 0 / 14 | 0 / 0 / 0 / 14 | 221 |
+| `after12.html` | 119 | 0 / 0 / 2 / 117 | 0 / 0 / 1 / 118 | 0 / 0 / 7 / 112 | 207 |
+| `bps.html` | 131 | 0 / 24 / 8 / 99 | 0 / 24 / 0 / 107 | 0 / 24 / 13 / 94 | 229 |
+| `career-exploration/01-who-are-you.html` | 0 | — | — | — | 124 |
+| `careers.html` | 111 | 0 / 1 / 1 / 109 | 0 / 1 / 1 / 109 | 0 / 1 / 7 / 103 | 626 |
 | `components/ask-enaasan-search.html` | 0 | — | — | — | 12 |
-| `components/cookie-consent.html` | 0 | — | — | — | 5 |
+| `components/cookie-consent.html` | 0 | — | — | — | 6 |
 | `components/guidance-disclaimer.html` | 0 | — | — | — | 6 |
-| `faq.html` | 107 | 0 / 0 / 0 / 107 | 0 / 0 / 0 / 107 | 0 / 0 / 0 / 107 | 11 |
-| `gig-work/index.html` | 0 | — | — | — | 215 |
-| `guide.html` | 121 | 0 / 1 / 0 / 120 | 0 / 1 / 3 / 117 | 0 / 1 / 3 / 117 | 14 |
-| `index.html` | 64 | 3 / 11 / 0 / 50 | 3 / 11 / 0 / 50 | 3 / 11 / 2 / 48 | 21 |
-| `privacy.html` | 0 | — | — | — | 50 |
-| `skills/communication/definition/index.html` | 0 | — | — | — | 54 |
-| `skills/communication/examples/index.html` | 0 | — | — | — | 73 |
-| `skills/communication/framework/index.html` | 0 | — | — | — | 78 |
-| `skills/communication/index.html` | 0 | — | — | — | 47 |
-| `skills/communication/readiness/index.html` | 0 | — | — | — | 58 |
-| `skills/communication/salary-premium/index.html` | 0 | — | — | — | 76 |
-| `skills/first-job/build-skills/index.html` | 0 | — | — | — | 156 |
-| `skills/first-job/explore-careers/index.html` | 0 | — | — | — | 77 |
-| `skills/first-job/index.html` | 59 | 44 / 0 / 0 / 15 | 44 / 0 / 0 / 15 | 44 / 0 / 0 / 15 | 15 |
-| `state-exams.html` | 0 | — | — | — | 94 |
-| `streams.html` | 39 | 0 / 1 / 0 / 38 | 0 / 1 / 0 / 38 | 0 / 1 / 0 / 38 | 149 |
-| `terms.html` | 0 | — | — | — | 57 |
+| `faq.html` | 107 | 0 / 0 / 0 / 107 | 0 / 0 / 0 / 107 | 0 / 0 / 0 / 107 | 12 |
+| `gig-work/index.html` | 0 | — | — | — | 216 |
+| `guide.html` | 121 | 0 / 1 / 0 / 120 | 0 / 1 / 3 / 117 | 0 / 1 / 3 / 117 | 15 |
+| `index.html` | 64 | 3 / 5 / 0 / 56 | 3 / 5 / 0 / 56 | 3 / 5 / 2 / 54 | 22 |
+| `privacy.html` | 0 | — | — | — | 51 |
+| `reports/_template/index.html` | 0 | — | — | — | 80 |
+| `reports/index.html` | 0 | — | — | — | 37 |
+| `reports/who-india-graduates/index.html` | 0 | — | — | — | 129 |
+| `skills/communication/definition/index.html` | 0 | — | — | — | 55 |
+| `skills/communication/examples/index.html` | 0 | — | — | — | 74 |
+| `skills/communication/framework/index.html` | 0 | — | — | — | 79 |
+| `skills/communication/index.html` | 0 | — | — | — | 48 |
+| `skills/communication/readiness/index.html` | 0 | — | — | — | 59 |
+| `skills/communication/salary-premium/index.html` | 0 | — | — | — | 77 |
+| `skills/first-job/build-skills/index.html` | 0 | — | — | — | 157 |
+| `skills/first-job/explore-careers/index.html` | 0 | — | — | — | 78 |
+| `skills/first-job/index.html` | 59 | 44 / 0 / 0 / 15 | 44 / 0 / 0 / 15 | 44 / 0 / 0 / 15 | 16 |
+| `state-exams.html` | 0 | — | — | — | 95 |
+| `streams.html` | 39 | 0 / 1 / 0 / 38 | 0 / 1 / 0 / 38 | 0 / 1 / 0 / 38 | 150 |
+| `terms.html` | 0 | — | — | — | 58 |
 | `theme-preview.html` | 0 | — | — | — | 45 |
-| **Total** | **851** | **47 / 41 / 11 / 752** | **47 / 41 / 5 / 758** | **47 / 41 / 32 / 731** | **2770** |
+| **Total** | **851** | **47 / 34 / 11 / 759** | **47 / 34 / 5 / 765** | **47 / 34 / 32 / 738** | **3041** |
 
 *Keys shared by several pages are counted on each page that uses them.*
 
@@ -62,7 +65,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 
 ### 3.1 Tamil (`ta`) — reviewer: TBD
 
-- Missing: **47** · Stale: **41** · Same as English: **18** (of which 8 look like real untranslated text)
+- Missing: **47** · Stale: **34** · Same as English: **18** (of which 8 look like real untranslated text)
 
 **Missing keys (47)**
 
@@ -116,13 +119,12 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `home.starthere.cta` | index.html | **no** — add English first |
 | `home.starthere.title` | index.html | **no** — add English first |
 
-**Stale keys (41)**
+**Stale keys (34)**
 
 | Key | Signal | English now | Current translation |
 |---|---|---|---|
 | `about.hero.body` | page-text | Every year, millions of Indian students make one of the most conseque… | இந்தியாவில் தொழில் வழிகாட்டல் துண்டு துண்டாக உள்ளது — அல்லத… |
 | `about.hero.title` | page-text | Built for the student | Enaasan ஏன் உருவானது |
-| `about.page.title` | page-text, legacy-en | About Enaasan \| Helping Students Make Better Career and Learning Dec… | எங்களைப் பற்றி — enaasan |
 | `bps.analytics.subtitle` | page-text | KPO — Analytics | தரவு பகுப்பாய்வு & ஆராய்ச்சி |
 | `bps.analytics.title` | page-text | Data Analytics & Research | KPO — பகுப்பாய்வு |
 | `bps.fa.subtitle` | page-text | F&A BPS | நிதி & கணக்கியல் செயல்பாடுகள் |
@@ -138,7 +140,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.roles.expand_hint` | page-text | Roles in depth | முழு திறன் தொகுப்பு, கருவிகள் மற்றும் முதலாளிகள் என்ன தேடுக… |
 | `bps.roles.subtitle` | page-text | Click any role to expand the full skill set, tools, and what employer… | ஒவ்வொரு பங்கும் உண்மையில் என்ன உள்ளடக்கியது — என்ன தேவை |
 | `bps.roles.title` | page-text | What each role actually involves — and what it takes | ஆழமான பங்கு விவரங்கள் |
-| `bps.salary.disclaimer` | page-text | *Salary ranges are indicative estimates based on publicly reported da… | சம்பள வரம்புகள் Glassdoor, AmbitionBox, NASSCOM BPS அறிக்கை… |
+| `bps.salary.disclaimer` | legacy-en | Salary ranges are indicative estimates based on publicly reported dat… | *சம்பள வரம்புகள் Glassdoor, AmbitionBox, NASSCOM BPS அறிக்க… |
 | `bps.tech.subtitle` | page-text | Tech-enabled BPS | தொழில்நுட்பம் & AI-மேம்படுத்தப்பட்ட செயல்பாடுகள் |
 | `bps.tech.title` | page-text | Technology & AI-augmented Operations | தொழில்நுட்பம் இயக்கும் BPS |
 | `bps.terminology.bps` | page-text | BPO / BPS | BPO / BPS பரந்த வரம்பை உள்ளடக்குகிறது — குரல் அடிப்படையிலான… |
@@ -148,19 +150,13 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.voice.subtitle` | page-text | BPS — Voice | வாடிக்கையாளர் ஆதரவு & தொலைதொடர்பு செயல்பாடுகள் |
 | `bps.voice.title` | page-text | Customer Support & Tele-operations | BPS — குரல் |
 | `careers.org.intro` | page-text | Nobody explains the unwritten rules. | முதல் வேலையில் சேருவது குழப்பமானது. எழுதப்படாத விதிகளை யாரு… |
-| `guide.meta.description` | page-text | A guide for parents, career counsellors, and placement coordinators h… | பெற்றோர், தொழில் ஆலோசகர்கள் மற்றும் வேலை வாய்ப்பு ஒருங்கிணை… |
-| `home.card.after12.badge` | page-text, legacy-en | Grade 11–12 · Inter students | 🗺️ 11–12-ம் வகுப்பு · இன்டர் மாணவர்கள் |
-| `home.card.after12.cta` | page-text | Plan after 12th | 12-க்கு பிறகு திட்டமிடுங்கள் → |
-| `home.card.careers.badge` | page-text, legacy-en | College / Early career | 💼 கல்லூரி / ஆரம்ப தொழில் |
-| `home.card.careers.cta` | page-text | See job skill maps | வேலை திறன் வரைபடங்களைப் பாருங்கள் → |
-| `home.card.guide.badge` | page-text, legacy-en | Parents · Counsellors · Coordinators | 👨‍👩‍👧 பெற்றோர் · ஆலோசகர்கள் · ஒருங்கிணைப்பாளர்கள் |
-| `home.card.guide.cta` | page-text | Go to guidance hub | வழிகாட்டல் மையத்திற்கு செல்லுங்கள் → |
-| `home.card.streams.badge` | page-text, legacy-en | Grade 10 · Board exams done | 🎯 10-ம் வகுப்பு · பொதுத் தேர்வு முடிந்தது |
-| `home.card.streams.cta` | page-text | Explore streams | பிரிவுகளை ஆய்வு செய்யுங்கள் → |
+| `guide.meta.description` | legacy-en, git-date | Resources for parents, career counsellors, and placement coordinators… | பெற்றோர், தொழில் ஆலோசகர்கள் மற்றும் வேலை வாய்ப்பு ஒருங்கிணை… |
+| `home.card.after12.cta` | legacy-en | Plan after 12th → | 12-க்கு பிறகு திட்டமிடுங்கள் |
+| `home.card.careers.cta` | legacy-en | See job skill maps → | வேலை திறன் வரைபடங்களைப் பாருங்கள் |
+| `home.card.guide.cta` | legacy-en | Go to guidance hub → | வழிகாட்டல் மையத்திற்கு செல்லுங்கள் |
+| `home.card.streams.cta` | legacy-en | Explore streams → | பிரிவுகளை ஆய்வு செய்யுங்கள் |
 | `home.hero.title` | legacy-en | Whatever stage you are at — what comes next? | நீங்கள் எந்த நிலையில் இருந்தாலும் — |
-| `home.stats.careers.num` | page-text, legacy-en | 40+ | 60+ |
-| `home.stats.exams.num` | page-text, legacy-en | 40+ | 20+ |
-| `streams.step2.compare` | page-text | Show me all stream paths side by side | 🗺️ அனைத்து பிரிவு பாதைகளையும் பக்கவாட்டில் காட்டுங்கள் |
+| `streams.step2.compare` | legacy-en | 🗺️ Show me all stream paths side by side | அனைத்து பிரிவு பாதைகளையும் பக்கவாட்டில் காட்டுங்கள் |
 
 **Same as English (18)** — review needed; acronyms and numbers are often fine
 
@@ -187,7 +183,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 
 ### 3.2 Telugu (`te`) — reviewer: Vijaya
 
-- Missing: **47** · Stale: **41** · Same as English: **9** (of which 5 look like real untranslated text)
+- Missing: **47** · Stale: **34** · Same as English: **9** (of which 5 look like real untranslated text)
 
 **Missing keys (47)**
 
@@ -241,13 +237,12 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `home.starthere.cta` | index.html | **no** — add English first |
 | `home.starthere.title` | index.html | **no** — add English first |
 
-**Stale keys (41)**
+**Stale keys (34)**
 
 | Key | Signal | English now | Current translation |
 |---|---|---|---|
 | `about.hero.body` | page-text | Every year, millions of Indian students make one of the most conseque… | ప్రతి సంవత్సరం, లక్షలాది భారతీయ విద్యార్థులు వారి జీవితంలో … |
 | `about.hero.title` | page-text | Built for the student | సరైన మార్గం చూపించే గైడ్ లేని విద్యార్థుల కోసం నిర్మించబడిం… |
-| `about.page.title` | page-text, legacy-en | About Enaasan \| Helping Students Make Better Career and Learning Dec… | మా గురించి — enaasan |
 | `bps.analytics.subtitle` | page-text | KPO — Analytics | డేటా అనలిటిక్స్ & రీసెర్చ్ |
 | `bps.analytics.title` | page-text | Data Analytics & Research | KPO — అనలిటిక్స్ |
 | `bps.fa.subtitle` | page-text | F&A BPS | ఫైనాన్స్ & అకౌంటింగ్ ఆపరేషన్స్ |
@@ -263,7 +258,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.roles.expand_hint` | page-text | Roles in depth | పూర్తి నైపుణ్యం సెట్, సాధనాలు, యజమానులు ఏమి చూస్తారో విస్తర… |
 | `bps.roles.subtitle` | page-text | Click any role to expand the full skill set, tools, and what employer… | ప్రతి పాత్ర నిజంగా ఏమి ఇమిడి ఉంటుంది — మరియు దానికి ఏమి అవస… |
 | `bps.roles.title` | page-text | What each role actually involves — and what it takes | పాత్రలు లోతుగా |
-| `bps.salary.disclaimer` | page-text | *Salary ranges are indicative estimates based on publicly reported da… | జీతం పరిధులు Glassdoor, AmbitionBox, NASSCOM BPS నివేదికలు,… |
+| `bps.salary.disclaimer` | legacy-en | Salary ranges are indicative estimates based on publicly reported dat… | *జీతం పరిధులు Glassdoor, AmbitionBox, NASSCOM BPS నివేదికలు… |
 | `bps.tech.subtitle` | page-text | Tech-enabled BPS | టెక్నాలజీ & AI-ఆగ్మెంటెడ్ ఆపరేషన్స్ |
 | `bps.tech.title` | page-text | Technology & AI-augmented Operations | టెక్-ఎనేబుల్డ్ BPS |
 | `bps.terminology.bps` | page-text | BPO / BPS | BPO / BPS విస్తృత శ్రేణిని కవర్ చేస్తుంది — వాయిస్-ఆధారిత క… |
@@ -273,19 +268,13 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.voice.subtitle` | page-text | BPS — Voice | కస్టమర్ సపోర్ట్ & టెలి-ఆపరేషన్స్ |
 | `bps.voice.title` | page-text | Customer Support & Tele-operations | BPS — వాయిస్ |
 | `careers.org.intro` | page-text | Nobody explains the unwritten rules. | మీ మొదటి ఉద్యోగం గందరగోళంగా ఉంటుంది. ఎవరూ అలిఖిత నియమాలు వి… |
-| `guide.meta.description` | page-text | A guide for parents, career counsellors, and placement coordinators h… | తల్లిదండ్రులు, కెరీర్ కౌన్సెలర్లు, ప్లేస్‌మెంట్ కోఆర్డినేటర… |
-| `home.card.after12.badge` | page-text, legacy-en | Grade 11–12 · Inter students | 🗺️ గ్రేడ్ 11-12 · ఇంటర్ విద్యార్థులు |
-| `home.card.after12.cta` | page-text | Plan after 12th | 12వ తర్వాత ప్లాన్ చేయండి → |
-| `home.card.careers.badge` | page-text, legacy-en | College / Early career | 💼 కాలేజీ / ఆరంభ కెరీర్ |
-| `home.card.careers.cta` | page-text | See job skill maps | జాబ్ నైపుణ్యం మ్యాప్‌లు చూడండి → |
-| `home.card.guide.badge` | page-text, legacy-en | Parents · Counsellors · Coordinators | 👨‍👩‍👧 తల్లిదండ్రులు · కౌన్సెలర్లు · కోఆర్డినేటర్లు |
-| `home.card.guide.cta` | page-text | Go to guidance hub | గైడెన్స్ హబ్‌కు వెళ్ళండి → |
-| `home.card.streams.badge` | page-text, legacy-en | Grade 10 · Board exams done | 🎯 గ్రేడ్ 10 · బోర్డ్ పరీక్షలు పూర్తయ్యాయి |
-| `home.card.streams.cta` | page-text | Explore streams | గ్రూప్‌లను అన్వేషించండి → |
+| `guide.meta.description` | legacy-en, git-date | Resources for parents, career counsellors, and placement coordinators… | తల్లిదండ్రులు, కెరీర్ కౌన్సెలర్లు, ప్లేస్‌మెంట్ కోఆర్డినేటర… |
+| `home.card.after12.cta` | legacy-en | Plan after 12th → | 12వ తర్వాత ప్లాన్ చేయండి |
+| `home.card.careers.cta` | legacy-en | See job skill maps → | జాబ్ నైపుణ్యం మ్యాప్‌లు చూడండి |
+| `home.card.guide.cta` | legacy-en | Go to guidance hub → | గైడెన్స్ హబ్‌కు వెళ్ళండి |
+| `home.card.streams.cta` | legacy-en | Explore streams → | గ్రూప్‌లను అన్వేషించండి |
 | `home.hero.title` | legacy-en | Whatever stage you are at — what comes next? | మీరు ఏ దశలో ఉన్నా — |
-| `home.stats.careers.num` | page-text, legacy-en | 40+ | 60+ |
-| `home.stats.exams.num` | page-text, legacy-en | 40+ | 20+ |
-| `streams.step2.compare` | page-text | Show me all stream paths side by side | 🗺️ అన్ని గ్రూప్ మార్గాలు పక్కపక్కన చూపించు |
+| `streams.step2.compare` | legacy-en | 🗺️ Show me all stream paths side by side | అన్ని గ్రూప్ మార్గాలు పక్కపక్కన చూపించు |
 
 **Same as English (9)** — review needed; acronyms and numbers are often fine
 
@@ -303,7 +292,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 
 ### 3.3 Hindi (`hi`) — reviewer: Shafi
 
-- Missing: **47** · Stale: **41** · Same as English: **42** (of which 29 look like real untranslated text)
+- Missing: **47** · Stale: **34** · Same as English: **42** (of which 29 look like real untranslated text)
 
 **Missing keys (47)**
 
@@ -357,13 +346,12 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `home.starthere.cta` | index.html | **no** — add English first |
 | `home.starthere.title` | index.html | **no** — add English first |
 
-**Stale keys (41)**
+**Stale keys (34)**
 
 | Key | Signal | English now | Current translation |
 |---|---|---|---|
 | `about.hero.body` | page-text | Every year, millions of Indian students make one of the most conseque… | हर साल, लाखों भारतीय छात्र अपने जीवन के सबसे महत्वपूर्ण फैस… |
 | `about.hero.title` | page-text | Built for the student | उस छात्र के लिए बनाया जिसे कोई गाइड नहीं किया। |
-| `about.page.title` | page-text, legacy-en | About Enaasan \| Helping Students Make Better Career and Learning Dec… | हमारे बारे में — enaasan |
 | `bps.analytics.subtitle` | page-text | KPO — Analytics | Data Analytics & Research |
 | `bps.analytics.title` | page-text | Data Analytics & Research | KPO — Analytics |
 | `bps.fa.subtitle` | page-text | F&A BPS | Finance & Accounting Operations |
@@ -379,7 +367,7 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.roles.expand_hint` | page-text | Roles in depth | पूरा स्किल सेट, टूल्स और एम्पलॉयर क्या ढूंढते हैं देखने के … |
 | `bps.roles.subtitle` | page-text | Click any role to expand the full skill set, tools, and what employer… | हर रोल में असल में क्या होता है — और क्या चाहिए |
 | `bps.roles.title` | page-text | What each role actually involves — and what it takes | रोल्स गहराई से |
-| `bps.salary.disclaimer` | page-text | *Salary ranges are indicative estimates based on publicly reported da… | सैलरी रेंज Glassdoor, AmbitionBox, NASSCOM BPS रिपोर्ट और L… |
+| `bps.salary.disclaimer` | legacy-en | Salary ranges are indicative estimates based on publicly reported dat… | *सैलरी रेंज Glassdoor, AmbitionBox, NASSCOM BPS रिपोर्ट और … |
 | `bps.tech.subtitle` | page-text | Tech-enabled BPS | Technology और AI-augmented Operations |
 | `bps.tech.title` | page-text | Technology & AI-augmented Operations | Tech-enabled BPS |
 | `bps.terminology.bps` | page-text | BPO / BPS | BPO / BPS का दायरा बड़ा है — वॉइस-बेस्ड कस्टमर सपोर्ट से ले… |
@@ -389,19 +377,13 @@ Counts are keys used on that page. **Missing** = no value in the live language f
 | `bps.voice.subtitle` | page-text | BPS — Voice | कस्टमर सपोर्ट और टेली-ऑपरेशंस |
 | `bps.voice.title` | page-text | Customer Support & Tele-operations | BPS — वॉइस |
 | `careers.org.intro` | page-text | Nobody explains the unwritten rules. | पहली नौकरी में शुरुआत भटकाने वाली होती है। कोई अलिखित नियम … |
-| `guide.meta.description` | page-text | A guide for parents, career counsellors, and placement coordinators h… | माता-पिता, करियर काउंसलर और प्लेसमेंट कोऑर्डिनेटर के लिए सं… |
-| `home.card.after12.badge` | page-text, legacy-en | Grade 11–12 · Inter students | 🗺️ ग्रेड 11–12 · इंटर के छात्र |
-| `home.card.after12.cta` | page-text | Plan after 12th | 12वीं के बाद प्लान करें → |
-| `home.card.careers.badge` | page-text, legacy-en | College / Early career | 💼 कॉलेज / अर्ली करियर |
-| `home.card.careers.cta` | page-text | See job skill maps | जॉब स्किल मैप देखें → |
-| `home.card.guide.badge` | page-text, legacy-en | Parents · Counsellors · Coordinators | 👨‍👩‍👧 माता-पिता · काउंसलर · कोऑर्डिनेटर |
-| `home.card.guide.cta` | page-text | Go to guidance hub | गाइडेंस हब पर जाएं → |
-| `home.card.streams.badge` | page-text, legacy-en | Grade 10 · Board exams done | 🎯 ग्रेड 10 · बोर्ड परीक्षा हो गई |
-| `home.card.streams.cta` | page-text | Explore streams | स्ट्रीम एक्सप्लोर करें → |
+| `guide.meta.description` | legacy-en, git-date | Resources for parents, career counsellors, and placement coordinators… | माता-पिता, करियर काउंसलर और प्लेसमेंट कोऑर्डिनेटर के लिए सं… |
+| `home.card.after12.cta` | legacy-en | Plan after 12th → | 12वीं के बाद प्लान करें |
+| `home.card.careers.cta` | legacy-en | See job skill maps → | जॉब स्किल मैप देखें |
+| `home.card.guide.cta` | legacy-en | Go to guidance hub → | गाइडेंस हब पर जाएं |
+| `home.card.streams.cta` | legacy-en | Explore streams → | स्ट्रीम एक्सप्लोर करें |
 | `home.hero.title` | legacy-en | Whatever stage you are at — what comes next? | आप जहाँ भी हों — |
-| `home.stats.careers.num` | page-text, legacy-en | 40+ | 60+ |
-| `home.stats.exams.num` | page-text, legacy-en | 40+ | 20+ |
-| `streams.step2.compare` | page-text | Show me all stream paths side by side | 🗺️ सभी स्ट्रीम पाथ एक साथ दिखाएं |
+| `streams.step2.compare` | legacy-en | 🗺️ Show me all stream paths side by side | सभी स्ट्रीम पाथ एक साथ दिखाएं |
 
 **Same as English (42)** — review needed; acronyms and numbers are often fine
 
@@ -456,42 +438,45 @@ These strings stay in English whatever language the visitor picks. Counts are ap
 
 | Page | Text nodes | Attributes | Script strings | Total | Uses i18n? |
 |---|---:|---:|---:|---:|---|
-| `90-day-plan.html` | 39 | 0 | 0 | 39 | **no** |
-| `about.html` | 11 | 5 | 0 | 16 | yes |
-| `after10.html` | 215 | 5 | 0 | 220 | yes |
-| `after12.html` | 69 | 5 | 132 | 206 | yes |
-| `bps.html` | 118 | 5 | 105 | 228 | yes |
-| `career-exploration/01-who-are-you.html` | 123 | 0 | 0 | 123 | **no** |
-| `careers.html` | 15 | 5 | 605 | 625 | yes |
+| `90-day-plan.html` | 40 | 0 | 0 | 40 | **no** |
+| `about.html` | 12 | 5 | 0 | 17 | yes |
+| `after10.html` | 216 | 5 | 0 | 221 | yes |
+| `after12.html` | 70 | 5 | 132 | 207 | yes |
+| `bps.html` | 119 | 5 | 105 | 229 | yes |
+| `career-exploration/01-who-are-you.html` | 124 | 0 | 0 | 124 | **no** |
+| `careers.html` | 16 | 5 | 605 | 626 | yes |
 | `components/ask-enaasan-search.html` | 9 | 1 | 2 | 12 | **no** |
-| `components/cookie-consent.html` | 5 | 0 | 0 | 5 | **no** |
+| `components/cookie-consent.html` | 5 | 1 | 0 | 6 | **no** |
 | `components/guidance-disclaimer.html` | 6 | 0 | 0 | 6 | **no** |
-| `faq.html` | 5 | 6 | 0 | 11 | yes |
-| `gig-work/index.html` | 210 | 5 | 0 | 215 | **no** |
-| `guide.html` | 9 | 5 | 0 | 14 | yes |
-| `index.html` | 16 | 5 | 0 | 21 | yes |
-| `privacy.html` | 45 | 5 | 0 | 50 | **no** |
-| `skills/communication/definition/index.html` | 50 | 4 | 0 | 54 | **no** |
-| `skills/communication/examples/index.html` | 69 | 4 | 0 | 73 | **no** |
-| `skills/communication/framework/index.html` | 74 | 4 | 0 | 78 | **no** |
-| `skills/communication/index.html` | 43 | 4 | 0 | 47 | **no** |
-| `skills/communication/readiness/index.html` | 54 | 4 | 0 | 58 | **no** |
-| `skills/communication/salary-premium/index.html` | 72 | 4 | 0 | 76 | **no** |
-| `skills/first-job/build-skills/index.html` | 152 | 4 | 0 | 156 | **no** |
-| `skills/first-job/explore-careers/index.html` | 73 | 4 | 0 | 77 | **no** |
-| `skills/first-job/index.html` | 10 | 5 | 0 | 15 | yes |
-| `state-exams.html` | 17 | 0 | 77 | 94 | **no** |
-| `streams.html` | 7 | 5 | 137 | 149 | yes |
-| `terms.html` | 52 | 5 | 0 | 57 | **no** |
+| `faq.html` | 6 | 6 | 0 | 12 | yes |
+| `gig-work/index.html` | 211 | 5 | 0 | 216 | **no** |
+| `guide.html` | 10 | 5 | 0 | 15 | yes |
+| `index.html` | 17 | 5 | 0 | 22 | yes |
+| `privacy.html` | 46 | 5 | 0 | 51 | **no** |
+| `reports/_template/index.html` | 71 | 9 | 0 | 80 | **no** |
+| `reports/index.html` | 33 | 4 | 0 | 37 | **no** |
+| `reports/who-india-graduates/index.html` | 121 | 8 | 0 | 129 | **no** |
+| `skills/communication/definition/index.html` | 51 | 4 | 0 | 55 | **no** |
+| `skills/communication/examples/index.html` | 70 | 4 | 0 | 74 | **no** |
+| `skills/communication/framework/index.html` | 75 | 4 | 0 | 79 | **no** |
+| `skills/communication/index.html` | 44 | 4 | 0 | 48 | **no** |
+| `skills/communication/readiness/index.html` | 55 | 4 | 0 | 59 | **no** |
+| `skills/communication/salary-premium/index.html` | 73 | 4 | 0 | 77 | **no** |
+| `skills/first-job/build-skills/index.html` | 153 | 4 | 0 | 157 | **no** |
+| `skills/first-job/explore-careers/index.html` | 74 | 4 | 0 | 78 | **no** |
+| `skills/first-job/index.html` | 11 | 5 | 0 | 16 | yes |
+| `state-exams.html` | 18 | 0 | 77 | 95 | **no** |
+| `streams.html` | 8 | 5 | 137 | 150 | yes |
+| `terms.html` | 53 | 5 | 0 | 58 | **no** |
 | `theme-preview.html` | 38 | 4 | 3 | 45 | **no** |
 
 Script strings are mostly the data behind interactive cards (exam cards on `after12.html`, stream paths on `streams.html`, career profiles on `careers.html`) — known bugs B-14 / B-15.
 
 ## 5. Structural problems found
 
-1. **Switching back to English shows old English.** `js/i18n.js` applies `locales/en.json` when a visitor switches back to English. 40 page elements differ from it, e.g. homepage stats revert to "60+ / 20+" and the About title reverts to the pre-SEO version.
-2. **`skills/first-job/` cannot translate.** 44 of its keys are not in any language file, and its script requests `locales/<lang>.json` relative to `/skills/first-job/`, which does not exist — Tamil/Telugu/Hindi silently fall back to English.
-3. **Legacy `i18n/` folder** holds edits that are not live (§6).
+1. **Switching back to English can show different English.** `js/i18n.js` applies `locales/en.json` when a visitor switches back to English. 26 page elements still differ from it. Stale values (homepage stats, About title, card badges and arrows) were synced on 2026-10-16; what remains is mostly wiring: a key on a fragment of a sentence while the JSON holds the whole sentence, or title/subtitle keys swapped on the page.
+2. **`skills/first-job/` cannot translate.** 44 of its keys are not in any language file, and its translations are therefore partial until they are added. (The relative-path bug that stopped any translation loading there was fixed on 2026-10-16: `js/i18n.js` now requests `/locales/<lang>.json`.)
+3. **Legacy `i18n/` folder** is loaded by no page. Its reviewed edits were ported to `locales/` on 2026-10-16 (§6).
 4. **20 keys in `en.json` are not used by any page:** `about.honest.subtitle`, `about.origin.section.title`, `about.problem.section.title`, `about.promises.subtitle`, `about.transparency.section.title`, `bps.tips.subtitle`, `guide.parents.myths.subtitle`, `home.ai.badge`, `home.ai.body`, `home.ai.notify.button`, `home.ai.notify.confirm`, `home.ai.notify.label`, `home.ai.section.title`, `home.ai.share.text`, `home.ai.subtitle`, `home.ai.title`, `home.share.linkedin`, `home.share.twitter`, `home.share.whatsapp`, `nav.brand`
 
 ## 6. Legacy folder `i18n/` — differences from the live files
@@ -501,47 +486,23 @@ Not loaded by the site. Listed so reviewed work is not lost.
 | Language | Keys whose `i18n/` value differs from `locales/` |
 |---|---:|
 | English | 8 |
-| Tamil | 8 |
-| Telugu | 8 |
-| Hindi | 31 |
+| Tamil | 7 |
+| Telugu | 7 |
+| Hindi | 7 |
 
-Hindi: commit `1f7841e` (2026-07-02) "Apply Shafi's Hindi review decisions" changed 23 values in `i18n/hi.json` only — **reviewed Hindi that is not live.**
+Hindi: commit `1f7841e` (2026-07-02) "Apply Shafi's Hindi review decisions" changed 23 values in `i18n/hi.json` only. Those values, and the other reviewed edits, were ported into `locales/` on 2026-10-16. The differences still listed below are intentional: `home.hero.title` (the legacy value ends with "what comes next?", which the homepage already prints in a separate span) and the arrow, emoji and asterisk clean-ups made in `locales/` so the text matches the page.
 
 <details><summary>Hindi keys that differ (legacy vs live)</summary>
 
 | Key | `i18n/hi.json` (legacy) | `locales/hi.json` (live) |
 |---|---|---|
-| `about.page.title` | हमारे बारे में \| छात्रों को बेहतर करियर और शिक्षा निर्णय ल… | हमारे बारे में — enaasan |
-| `after12.timeline.step6.title` | परामर्श एवं सीट आवंटन | काउंसलिंग और सीट अलॉटमेंट |
-| `after12.tip2.title` | साल का अंतराल एक वैध विकल्प है | गैप ईयर एक वैध विकल्प है |
-| `bps.crossover.fa.body` | ट्रांसफर होने वाली स्किल: ERP सिस्टम, रिकन्सिलिएशन, फाइनेंश… | ट्रांसफर होने वाली स्किल: ERP सिस्टम, रिकन्सिलिएशन, फाइनेंश… |
-| `bps.growth.subtitle` | BPS में व्यवस्थित ग्रोथ पाथ हैं। यहाँ है अलग-अलग ट्रैक में … | BPS में व्यवस्थित ग्रोथ पाथ हैं। यहाँ है अलग-अलग ट्रैक में … |
-| `bps.terminology.honest` | सच्ची तस्वीर: BPS फॉलबैक नहीं है। यह स्पष्ट एंट्री पॉइंट, प… | सच्ची तस्वीर: BPS फॉलबैक नहीं है। यह स्पष्ट एंट्री पॉइंट, प… |
-| `bps.tip2.body` | अंतरराष्ट्रीय प्रोसेस रोल (US/UK/Australia शिफ्ट टाइमिंग) ड… | अंतरराष्ट्रीय प्रोसेस रोल (US/UK/Australia शिफ्ट टाइमिंग) ड… |
-| `bps.tip3.body` | BPS में बेहद ज्यादा कर्मचारी त्याग दर है। बहुत से लोग एक कं… | BPS में बेहद ज्यादा एट्रिशन है। बहुत से लोग एक कंपनी में ऊर… |
-| `bps.tip3.title` | कर्मचारी त्याग दर का जाल — लोग क्यों अटके रहते हैं | एट्रिशन का जाल — लोग क्यों अटके रहते हैं |
-| `careers.advice1.title` | दृश्यता गुणवत्ता जितनी ही मायने रखती है | विजिबिलिटी गुणवत्ता जितनी ही मायने रखती है |
-| `careers.ai.new_roles.tip` | अपनी टीम का AI champion बनने के लिए आगे आएं। AI टूल्स को प्… | अपनी टीम का AI champion बनने के लिए आगे आएं। AI टूल्स को प्… |
-| `careers.growth.subtitle` | कोई फील्ड चुनें — नौसिखिया से सीनियर लीडर तक का आम करियर लै… | कोई फील्ड चुनें — फ्रेशर से सीनियर लीडर तक का आम करियर लैडर… |
-| `careers.org.manager.tip` | मैनेजर के रूप में आपकी सफलता आपकी टीम के आउटपुट से मापी जात… | मैनेजर के रूप में आपकी सफलता आपकी टीम के आउटपुट से मापी जात… |
-| `careers.org.tl.tip` | यह वह ट्रांजिशन है जहाँ बहुत से लोग अटक जाते हैं — 'खुद करन… | यह वह ट्रांजिशन है जहाँ बहुत से लोग अटक जाते हैं — 'करने' स… |
-| `guide.counsellors.change2.title` | NDA में अब महिला प्रत्याशी के लिए भी आवेदन खुले हैं। | NDA अब महिला उम्मीदवारों के लिए खुला है |
-| `guide.parents.change6.body` | आज एक अच्छा नौसिखिया सॉफ्टवेयर इंजीनियर ₹6–15 LPA कमा सकता … | आज एक अच्छा सॉफ्टवेयर इंजीनियर फ्रेशर ₹6–15 LPA कमा सकता है… |
-| `guide.parents.myth3.myth` | साल का अंतराल समय की बर्बादी है। | गैप ईयर समय की बर्बादी है। |
-| `guide.parents.myth3.reality` | JEE और NEET के कई टॉप स्कोरर ड्रॉप ईयर छात्र हैं। तैयारी या… | JEE और NEET के कई टॉप स्कोरर ड्रॉप ईयर छात्र हैं। तैयारी या… |
-| `guide.parents.myths.myth_label` | ❌ गलतफहमी | ❌ मिथक |
-| `home.card.after12.badge` | ग्रेड 11–12 · इंटर के छात्र | 🗺️ ग्रेड 11–12 · इंटर के छात्र |
-| `home.card.careers.badge` | कॉलेज / अर्ली करियर | 💼 कॉलेज / अर्ली करियर |
-| `home.card.guide.badge` | माता-पिता · काउंसलर · कोऑर्डिनेटर | 👨‍👩‍👧 माता-पिता · काउंसलर · कोऑर्डिनेटर |
-| `home.card.streams.badge` | ग्रेड 10 · बोर्ड परीक्षा हो गई | 🎯 ग्रेड 10 · बोर्ड परीक्षा हो गई |
+| `bps.salary.disclaimer` | सैलरी रेंज Glassdoor, AmbitionBox, NASSCOM BPS रिपोर्ट और L… | *सैलरी रेंज Glassdoor, AmbitionBox, NASSCOM BPS रिपोर्ट और … |
+| `home.card.after12.cta` | 12वीं के बाद प्लान करें → | 12वीं के बाद प्लान करें |
+| `home.card.careers.cta` | जॉब स्किल मैप देखें → | जॉब स्किल मैप देखें |
+| `home.card.guide.cta` | गाइडेंस हब पर जाएं → | गाइडेंस हब पर जाएं |
+| `home.card.streams.cta` | स्ट्रीम एक्सप्लोर करें → | स्ट्रीम एक्सप्लोर करें |
 | `home.hero.title` | आप जहाँ भी हों — आगे क्या? | आप जहाँ भी हों — |
-| `home.how.step1.num` | कदम 01 | चरण 01 |
-| `home.how.step2.num` | कदम 02 | चरण 02 |
-| `home.how.step3.num` | कदम 03 | चरण 03 |
-| `home.how.step3.title` | वे प्रश्न पूछें जिन्हें आप Google पर नहीं खोज सकते। | वो सवाल पूछें जो Google पर नहीं मिलते |
-| `home.how.step4.num` | कदम 04 | चरण 04 |
-| `home.stats.careers.num` | 40+ | 60+ |
-| `home.stats.exams.num` | 40+ | 20+ |
+| `streams.step2.compare` | 🗺️ सभी स्ट्रीम पाथ एक साथ दिखाएं | सभी स्ट्रीम पाथ एक साथ दिखाएं |
 
 </details>
 

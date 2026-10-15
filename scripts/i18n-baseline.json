@@ -56,7 +56,6 @@
   "page_text_drift": [
     "about.hero.body",
     "about.hero.title",
-    "about.page.title",
     "bps.analytics.subtitle",
     "bps.analytics.title",
     "bps.fa.subtitle",
@@ -72,7 +71,6 @@
     "bps.roles.expand_hint",
     "bps.roles.subtitle",
     "bps.roles.title",
-    "bps.salary.disclaimer",
     "bps.tech.subtitle",
     "bps.tech.title",
     "bps.terminology.bps",
@@ -81,18 +79,6 @@
     "bps.tips.title",
     "bps.voice.subtitle",
     "bps.voice.title",
-    "careers.org.intro",
-    "guide.meta.description",
-    "home.card.after12.badge",
-    "home.card.after12.cta",
-    "home.card.careers.badge",
-    "home.card.careers.cta",
-    "home.card.guide.badge",
-    "home.card.guide.cta",
-    "home.card.streams.badge",
-    "home.card.streams.cta",
-    "home.stats.careers.num",
-    "home.stats.exams.num",
-    "streams.step2.compare"
+    "careers.org.intro"
   ]
 }
