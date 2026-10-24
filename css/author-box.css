@@ -1,0 +1,32 @@
+/* author-box.css - byline block shown at the foot of guides and reports.
+   Uses the site's theme variables (with dark-theme fallbacks) so it follows
+   the dark, light and slate themes. No :root rules, so link order does not matter. */
+.author-box {
+  max-width: min(712px, calc(100% - 36px));
+  margin: 0 auto 56px;
+  padding: 18px 22px;
+  background: var(--card, #192F44);
+  border: 1px solid var(--border, #1E3A52);
+  border-left: 3px solid var(--gold, #F0A500);
+  border-radius: var(--radius, 14px);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--mist, #A8C0D4);
+}
+.author-box-line { margin: 0 0 6px; color: var(--chalk, #F2EFE9); }
+.author-box-line strong { font-weight: 600; }
+.author-box-note { margin: 0; font-size: 0.82rem; }
+/* Links use the body text colour with a gold underline: gold text on the light
+   and slate card colours fails the 4.5:1 contrast minimum. */
+.author-box a {
+  color: var(--chalk, #F2EFE9);
+  text-decoration: underline;
+  text-decoration-color: var(--gold, #F0A500);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.author-box a:hover { text-decoration-color: var(--chalk, #F2EFE9); }
+@media (max-width: 640px) {
+  .author-box { margin-bottom: 40px; padding: 16px 18px; }
+}

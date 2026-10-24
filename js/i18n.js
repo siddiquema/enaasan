@@ -29,7 +29,7 @@
   function loadMessages(lang, callback) {
     if (cache[lang]) { callback(cache[lang]); return; }
 
-    var url = 'locales/' + lang + '.json';
+    var url = '/locales/' + lang + '.json';
     fetch(url)
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status + ' loading ' + url);
