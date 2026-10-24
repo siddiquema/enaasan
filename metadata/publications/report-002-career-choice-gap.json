@@ -1,0 +1,38 @@
+{
+  "id": "report-002-career-choice-gap",
+  "title": "The Career Choice Gap — Research Report No. 2",
+  "url": "/reports/career-choice-gap/",
+  "description": "More than one in five young Indian graduates who want work cannot find it (22.3%, PLFS 2025). Youth unemployment by education and gender; diploma holders show lower unemployment and more salaried work than graduates, though this does not prove a diploma is the better choice.",
+  "target_audience": "Students choosing between a degree and a diploma, parents, teachers and counsellors",
+  "duration": "8-10 minutes",
+  "keywords": [
+    "research report",
+    "PLFS",
+    "graduate unemployment",
+    "youth unemployment",
+    "diploma",
+    "jobs",
+    "salaried job",
+    "women graduates",
+    "employment data",
+    "unemployment rate"
+  ],
+  "questions_it_answers": [
+    "How many graduates in India are unemployed?",
+    "How do diploma and degree holders compare on unemployment?",
+    "Why are graduates unemployed in India?",
+    "What is the youth unemployment rate in India?",
+    "How many jobs have a written contract?"
+  ],
+  "related_publications": [
+    "report-001-who-india-graduates",
+    "gig-work"
+  ],
+  "tags": [
+    "research",
+    "data",
+    "employment"
+  ],
+  "status": "published",
+  "published_date": "2026-10-25"
+}

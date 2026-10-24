@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-10-11",
-  "total_publications": 24,
+  "last_updated": "2026-10-25",
+  "total_publications": 25,
   "publications": [
     {
       "id": "streams-explorer",
@@ -111,6 +111,11 @@
     {
       "id": "report-001-who-india-graduates",
       "file": "report-001-who-india-graduates.json",
+      "status": "published"
+    },
+    {
+      "id": "report-002-career-choice-gap",
+      "file": "report-002-career-choice-gap.json",
       "status": "published"
     },
     {
