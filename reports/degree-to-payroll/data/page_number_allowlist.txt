@@ -1,0 +1,1 @@
+# Numbers that may appear on the page without being statistics (years, table numbers, page counts, report numbers).

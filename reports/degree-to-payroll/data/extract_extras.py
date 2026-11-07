@@ -53,3 +53,46 @@ with open(OUT / "plfs2025_rse_state.csv", "w", newline="") as fh:
     w = csv.writer(fh)
     w.writerow(["age_group", "state"] + COLS + ["source"])
     w.writerows(out)
+
+# ---- PLFS Table (38): average monthly wage/salary earnings of regular wage/salaried employees, CWS, by State/UT (PDF page 314)
+t = subprocess.run(["pdftotext", "-raw", "-f", "314", "-l", "314", pdf, "-"], capture_output=True, text=True, check=True).stdout
+assert "Table (38): Average wage/salary earnings" in t and "CWS for each State" in t
+WCOLS = ["rural_male", "rural_female", "rural_person", "urban_male", "urban_female", "urban_person", "ru_male", "ru_female", "ru_person"]
+wage = []
+for line in t.splitlines():
+    m = re.match(r"^([A-Za-z&.\- ]+?) ((?:[\d,]+ ){8}[\d,]+)$", line.strip())
+    if m and not m.group(1).startswith("employee"):
+        wage.append([m.group(1).strip()] + [v.replace(",", "") for v in m.group(2).split()]
+                    + ["PLFS Annual Report 2025, Appendix A, Table (38), CWS, Rs per month, PDF page 314 (report page A-237)"])
+print(f"Table 38 wages: {len(wage)} rows")
+with open(OUT / "plfs2025_regular_wage_by_state.csv", "w", newline="") as fh:
+    w = csv.writer(fh)
+    w.writerow(["state"] + WCOLS + ["source"])
+    w.writerows(wage)
+
+# ---- Million-plus Cities report, Table 8: average monthly wage/salary earnings of regular employees, CWS, every city
+CITY_STATE = {  # state grouping as printed in the report's list of million-plus cities
+    "Greater Visakhapatnam MC": "Andhra Pradesh", "Vijayawada MC": "Andhra Pradesh", "Patna MC": "Bihar",
+    "Dhanbad MC": "Jharkhand", "Ranchi MC": "Jharkhand", "Bengaluru MC": "Karnataka",
+    "Chhatrapati Sambhajinagar MC": "Maharashtra", "Greater Mumbai MC": "Maharashtra", "Kalyan-Dombivli MC": "Maharashtra",
+    "Nagpur MC": "Maharashtra", "Nashik MC": "Maharashtra", "Navi Mumbai MC": "Maharashtra", "Pimpri Chinchwad MC": "Maharashtra",
+    "Pune MC": "Maharashtra", "Thane MC": "Maharashtra", "Vasai Virar MC": "Maharashtra",
+    "Chennai MC": "Tamil Nadu", "Coimbatore MC": "Tamil Nadu", "Madurai MC": "Tamil Nadu",
+    "Greater Hyderabad MC": "Telangana", "Howrah MC": "West Bengal", "Kolkata MC": "West Bengal",
+}
+cpdf = glob.glob(str(SRC / "raw/plfs/*Million_plus_city_F.pdf"))[0]
+ct = subprocess.run(["pdftotext", "-raw", cpdf, "-"], capture_output=True, text=True, check=True).stdout
+block = ct.split("Table 8: Average wage/salary earnings (Rs.) during the preceding calendar month from regular")[1]
+block = block.split("Labour Market Dynamics in Million-plus Cities")[0]
+assert "wage/salaried employment in CWS for each million-plus city" in block
+city = []
+for line in block.splitlines():
+    m = re.match(r"^(.+? MC|all million-plus cities|urban India) ([\d,]+\*?) ([\d,]+\*?) ([\d,]+\*?)$", line.strip())
+    if m:
+        city.append([m.group(1), CITY_STATE.get(m.group(1), "")] + [v.replace(",", "") for v in m.group(2, 3, 4)]
+                    + ["PLFS 2025 Labour Market Dynamics in Million-plus Cities, Table 8 (report page B-28), CWS, Rs per month"])
+print(f"city Table 8 wages: {len(city)} rows")
+with open(OUT / "plfs2025_city_regular_wage.csv", "w", newline="") as fh:
+    w = csv.writer(fh)
+    w.writerow(["city", "state_in_comparison_set", "male", "female", "person", "source"])
+    w.writerows(city)
