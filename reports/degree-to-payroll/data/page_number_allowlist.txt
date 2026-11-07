@@ -1,1 +1,47 @@
-# Numbers that may appear on the page without being statistics (years, table numbers, page counts, report numbers).
+# Numbers that may appear on the page without being statistics. Anything not here and not in validation_log.csv fails the page check.
+# Years and financial-year suffixes
+2011
+2017
+2022
+2023
+2024
+2025
+2026
+24
+25
+# Age bands (18-21, 22-25, 18-23, 15-29, 15+, 26 and over)
+15
+18
+21
+22
+23
+26
+29
+# PLFS / AISHE table numbers and EPFO page range (pp. 18-23)
+8
+19
+33
+36
+38
+# Report numbers, source reference numbers [1]-[5], finding numbers, ranks ("2nd")
+1
+2
+3
+4
+5
+# Release date (20 Sep 2025), formula constants (per 100, 95% range, 1.96)
+20
+100
+95
+1.96
+# Chart scales stated in captions (0-10, 0-12, 0-40%, 0-50%, Rs 0-30,000)
+0
+10
+12
+40
+50
+₹0
+30,000
+# Review gate (48-hour, OPS-001)
+48
+001

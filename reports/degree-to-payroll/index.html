@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<!-- DRAFT under the OPS-001 review gate. Keep noindex until the 48-hour cooling period and number check are done
+     (docs/research-reports.md, step 7). Every number below is in data/validation_log.csv; run data/recompute.py after any edit. -->
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
+<title>From Degree to Payroll — Enaasan Research Report No. 3</title>
+<meta name="description" content="Formal-payroll entry per 100 young people ranges from 11.1 in Maharashtra to 0.3 in Bihar (EPFO, AISHE 2023-24). State-by-state guide for students and parents."/>
+<link rel="canonical" href="https://enaasan.online/reports/degree-to-payroll/"/>
+
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="enaasan"/>
+<meta property="og:url" content="https://enaasan.online/reports/degree-to-payroll/"/>
+<meta property="og:title" content="From Degree to Payroll — Enaasan Research Report No. 3"/>
+<meta property="og:description" content="Where young Indians join formal payroll, state by state: 11.1 per 100 young people in Maharashtra, 2.1 in West Bengal, 0.3 in Bihar (EPFO and AISHE, 2023-24)."/>
+<meta property="og:image" content="https://enaasan.online/reports/degree-to-payroll/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="627"/>
+<meta property="og:image:alt" content="Bar chart of formal-payroll entry per 100 people aged 18 to 23 in 2023-24: Maharashtra 11.1, Karnataka 10.8, Telangana 10.3, Tamil Nadu 9.7, Kerala 2.8, Andhra Pradesh 2.3, West Bengal 2.1, Odisha 1.9, Jharkhand 1.0, Assam 0.7, Bihar 0.3."/>
+<meta property="article:published_time" content="2026-11-07"/>
+<meta property="article:author" content="Siddique Ahamed"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="From Degree to Payroll — Enaasan Research Report No. 3"/>
+<meta name="twitter:description" content="Formal-payroll entry per 100 young people: 11.1 in Maharashtra, 2.1 in West Bengal, 0.3 in Bihar (EPFO and AISHE, 2023-24)."/>
+<meta name="twitter:image" content="https://enaasan.online/reports/degree-to-payroll/og.png"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Report",
+  "name": "From Degree to Payroll",
+  "alternativeHeadline": "Where young Indians find formal jobs, state by state",
+  "headline": "Formal-payroll entry per 100 young people ranges from 11.1 in Maharashtra to 0.3 in Bihar.",
+  "description": "State-by-state comparison of graduate out-turn (AISHE), formal-payroll entry (EPFO), graduate unemployment and regular-job pay (PLFS 2025) for families choosing a course and a place to work.",
+  "url": "https://enaasan.online/reports/degree-to-payroll/",
+  "reportNumber": "3",
+  "datePublished": "2026-11-07",
+  "dateModified": "2026-11-07",
+  "inLanguage": "en",
+  "author": { "@type": "Person", "name": "Siddique Ahamed", "url": "https://enaasan.online/author/siddique-ahamed/" },
+  "publisher": { "@type": "Organization", "name": "enaasan", "url": "https://enaasan.online/" },
+  "isAccessibleForFree": true,
+  "license": "https://enaasan.online/terms.html",
+  "about": ["Graduate employment in India", "Formal employment by state", "EPFO payroll", "PLFS", "AISHE"],
+  "spatialCoverage": "India",
+  "encoding": { "@type": "MediaObject", "contentUrl": "https://enaasan.online/reports/degree-to-payroll/degree-to-payroll.pdf", "encodingFormat": "application/pdf" },
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "All India Survey on Higher Education (AISHE) 2023-24, Final Report",
+      "creator": { "@type": "Organization", "name": "Department of Higher Education, Ministry of Education, Government of India" },
+      "url": "https://www.dohe-education.gov.in/static/uploads/2026/07/8616f33dfee644ab6b87a2bd0658b18d.pdf",
+      "temporalCoverage": "2023/2024",
+      "spatialCoverage": "India"
+    },
+    {
+      "@type": "Dataset",
+      "name": "EPFO Provisional Payroll Data, release of 20 September 2025",
+      "creator": { "@type": "Organization", "name": "Employees' Provident Fund Organisation, Ministry of Labour and Employment, Government of India" },
+      "url": "https://www.epfo.gov.in/data-hub/",
+      "temporalCoverage": "2017-09/2025-07",
+      "spatialCoverage": "India"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Periodic Labour Force Survey (PLFS) Annual Report 2025, January–December 2025",
+      "creator": { "@type": "Organization", "name": "National Statistics Office, Ministry of Statistics and Programme Implementation, Government of India" },
+      "url": "https://www.mospi.gov.in/uploads/publications_reports/publications_reports1780040415321_0624fb13-fb47-40bc-b470-7c7e9635c3ef_PLFS_2025_F_REV_29052026.pdf",
+      "temporalCoverage": "2025-01/2025-12",
+      "spatialCoverage": "India"
+    },
+    {
+      "@type": "Dataset",
+      "name": "PLFS 2025: Labour Market Dynamics in Million-plus Cities",
+      "creator": { "@type": "Organization", "name": "National Statistics Office, Ministry of Statistics and Programme Implementation, Government of India" },
+      "url": "https://www.mospi.gov.in/uploads/publications_reports/publications_reports1782803524108_424fcfc9-f57d-4057-b4bd-abd52aae828d_Million_plus_city_F.pdf",
+      "temporalCoverage": "2025-01/2025-12",
+      "spatialCoverage": "India"
+    }
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-D4QMDFL8XF');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600&amp;family=Noto+Sans+Telugu:wght@400;600&amp;family=Noto+Sans+Devanagari:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="../reports.css" rel="stylesheet"/>
+<link href="../../css/theme-styles.css" rel="stylesheet"/>
+<style>
+  [lang="ta"] { font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif; }
+  [lang="te"] { font-family: 'Noto Sans Telugu', 'DM Sans', sans-serif; }
+  [lang="hi"] { font-family: 'Noto Sans Devanagari', 'DM Sans', sans-serif; }
+  .caveat { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--ink); font-size: 0.86rem; }
+  .caveat strong { color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+  .draft-flag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; border: 1px dashed var(--gold); color: var(--gold); margin-bottom: 8px; }
+  .num-table.wrap td { white-space: normal; }
+  .numbers-table { font-size: 0.78rem; }
+  .numbers-table td:nth-child(2) { white-space: nowrap; color: var(--chalk); font-variant-numeric: tabular-nums; }
+  .numbers-table td:last-child { font-family: 'DM Mono', monospace; font-size: 0.68rem; }
+  details.numbers summary { cursor: pointer; color: var(--gold); font-weight: 600; margin-top: 12px; }
+  @media print { details.numbers > *:not(summary) { display: block; } }
+</style>
+<meta name="author" content="Siddique Ahamed"/>
+<link href="/css/author-box.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="template-banner no-print">DRAFT — under review (OPS-001 48-hour gate). Not yet published or listed. Tamil, Telugu and Hindi summaries await reviewers.</div>
+<script>
+  fetch('/components/cookie-consent.html').then(r => r.text()).then(h => {
+    const t = document.createElement('div'); t.innerHTML = h;
+    document.body.insertBefore(t.firstElementChild, document.body.firstChild);
+    t.querySelectorAll('script').forEach(o => { const s = document.createElement('script'); s.textContent = o.textContent; document.body.appendChild(s); });
+  }).catch(e => console.error('Failed to load cookie consent:', e));
+</script>
+
+<nav>
+  <a class="nav-logo" href="/">en<span>aasan</span></a>
+  <a class="nav-back" href="/reports/">← All reports</a>
+  <div aria-label="Select theme" class="theme-switcher" role="group">
+    <button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+    <button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+    <button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+  </div>
+</nav>
+
+<main class="page">
+  <!-- ═══ HEADER ═══ -->
+  <p class="eyebrow">Enaasan Research · Report No. 3 · November 2026</p>
+  <h1>From Degree to Payroll</h1>
+  <p class="lead"><a href="/reports/who-india-graduates/" style="color:var(--gold)">Report No. 1</a> counted who India's colleges send out. <a href="/reports/career-choice-gap/" style="color:var(--gold)">Report No. 2</a> showed that a degree alone does not guarantee a job. This report asks the question a family weighs when choosing a course and a city: after a degree, how likely is a young person to get onto a formal payroll, in which state, and what does salaried work pay there? It compares West Bengal, Tamil Nadu, Karnataka, Maharashtra, Kerala, Andhra Pradesh, Telangana and West Bengal's eastern neighbours, using only official data.</p>
+
+  <div class="headline" role="note">
+    <div class="label">Headline finding</div>
+    <div class="headline-big">
+      <span class="big">11.1 · 0.3</span>
+      <p>For every 100 people aged 18–23, Maharashtra added 11.1 young people to formal payroll in 2023-24. West Bengal added 2.1. Bihar added 0.3.</p>
+      <small>EPFO net payroll, ages 18–25, FY2023-24 ÷ AISHE population aged 18–23, 2023-24. A ratio, not a placement rate <a href="#src-2">[2]</a> <a href="#src-1">[1]</a>.</small>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <a class="btn no-print" href="degree-to-payroll.pdf">Download PDF</a>
+    <a class="btn btn-ghost no-print" href="#sources">Methodology &amp; sources</a>
+    <span>Author: Siddique Ahamed</span>
+    <span>Data: AISHE 2023-24, EPFO payroll, PLFS 2025</span>
+    <span>Draft, November 2026</span>
+  </div>
+
+  <!-- ═══ EXECUTIVE SUMMARY ═══ -->
+  <section aria-labelledby="summary">
+    <h2 id="summary">Executive summary</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">11.1</div><div class="stat-label">young people joining formal payroll per 100 aged 18–23, Maharashtra</div><div class="stat-source">EPFO, AISHE 2023-24 <a href="#src-2">[2]</a></div></div>
+      <div class="stat"><div class="stat-num">2.1</div><div class="stat-label">the same measure for West Bengal (Bihar: 0.3)</div><div class="stat-source">EPFO, AISHE 2023-24 <a href="#src-2">[2]</a></div></div>
+      <div class="stat"><div class="stat-num">21.6%</div><div class="stat-label">graduate unemployment in Andhra Pradesh, highest in the set (Maharashtra: 6.8%)</div><div class="stat-source">PLFS 2025, Table 24 <a href="#src-3">[3]</a></div></div>
+      <div class="stat"><div class="stat-num">₹27,169</div><div class="stat-label">average monthly pay of regular employees, Maharashtra (West Bengal: ₹16,618)</div><div class="stat-source">PLFS 2025, Table 38 <a href="#src-3">[3]</a></div></div>
+    </div>
+    <p style="margin-top:16px">Where a young person studies and where they look for work both shape the odds of a formal, salaried start. Four states in this comparison — Maharashtra, Karnataka, Telangana and Tamil Nadu — each added between 9.7 and 11.1 young people to the EPFO payroll for every 100 people aged 18–23 in 2023-24. In West Bengal, Andhra Pradesh, Kerala and the eastern states the figure was 2.8 or lower. The household survey (PLFS 2025) points the same way for most states: more of their workers hold regular salaried jobs, and fewer of those jobs lack social security.</p>
+    <p>Three things complicate the simple picture. Kerala has few EPFO entrants but the highest share of regular salaried work in the set (40.0%), so a low EPFO figure is not the whole story. Graduate unemployment is high in several states that produce many graduates: 21.6% in Andhra Pradesh and 17.6% in Telangana. And in every state compared, women graduates face higher unemployment than men. Average pay for regular employees runs from ₹27,169 a month in Maharashtra to ₹16,618 in West Bengal.</p>
+    <p>None of this measures a placement rate, and none of it says why states differ. It tells a family where formal jobs have been showing up, so that a course choice can be made with open eyes.</p>
+  </section>
+
+  <!-- ═══ FINDINGS ═══ -->
+  <section aria-labelledby="findings">
+    <h2 id="findings">Findings</h2>
+
+    <article class="finding" id="finding-1">
+      <p class="finding-num">Finding 1 <span class="tag tag-data">Data</span></p>
+      <h3>Some states produce far more graduates for their size than others</h3>
+      <div class="finding-grid">
+        <div>
+          <p>Tamil Nadu's colleges reported 6,19,629 undergraduate pass-outs in 2023-24, or 9.1 for every 100 people aged 18–23 living in the state. Karnataka (6.8), Andhra Pradesh (6.5) and Telangana (6.5) follow. West Bengal (3.5), Bihar (3.5), Jharkhand (3.3) and Assam (2.6) send out far fewer graduates relative to their young population.</p>
+          <p>This is supply: how many people finish a degree each year. On its own it says nothing about jobs. It matters because a state with many graduates and few formal openings will see more competition for each opening, at home or elsewhere.</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">9.1</div>
+          <div class="stat-label">undergraduate pass-outs per 100 people aged 18–23 in Tamil Nadu, 2023-24, the highest in the set</div>
+          <div class="stat-source">AISHE 2023-24, Tables 33 and 38 <a href="#src-1">[1]</a></div>
+        </div>
+      </div>
+      <figure class="chart">
+        <div class="chart-box">
+          <div class="chart-title">Undergraduate pass-outs per 100 people aged 18–23, 2023-24</div>
+          <div class="bars" role="img" aria-label="Undergraduate pass-outs per 100 people aged 18–23, 2023-24: Tamil Nadu 9.1, Karnataka 6.8, Andhra Pradesh 6.5, Telangana 6.5, Sikkim 6.4, Kerala 5.7, Maharashtra 5.5, Odisha 3.9, West Bengal 3.5, Bihar 3.5, Jharkhand 3.3, Assam 2.6">
+            <div class="bar-row"><span class="lbl">Tamil Nadu</span><div class="track"><div class="bar " style="width:91.0%"><i>9.1</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Karnataka</span><div class="track"><div class="bar " style="width:68.0%"><i>6.8</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Andhra Pradesh</span><div class="track"><div class="bar " style="width:65.0%"><i>6.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Telangana</span><div class="track"><div class="bar " style="width:65.0%"><i>6.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Sikkim</span><div class="track"><div class="bar " style="width:64.0%"><i>6.4</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Kerala</span><div class="track"><div class="bar " style="width:57.0%"><i>5.7</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Maharashtra</span><div class="track"><div class="bar " style="width:55.0%"><i>5.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Odisha</span><div class="track"><div class="bar " style="width:39.0%"><i>3.9</i></div></div></div>
+            <div class="bar-row"><span class="lbl">West Bengal</span><div class="track"><div class="bar " style="width:35.0%"><i>3.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Bihar</span><div class="track"><div class="bar " style="width:35.0%"><i>3.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Jharkhand</span><div class="track"><div class="bar " style="width:33.0%"><i>3.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Assam</span><div class="track"><div class="bar " style="width:26.0%"><i>2.6</i></div></div></div>
+          </div>
+        </div>
+        <figcaption>Common scale of 0–10. Undergraduate pass-outs (AISHE 2023-24, Table 33) ÷ population aged 18–23 (AISHE 2023-24, Table 38, a projection based on Census 2011) <a href="#src-1">[1]</a>. Data file: <code>aishe_outturn_by_state.csv</code>, <code>aishe_population_18_23.csv</code>.</figcaption>
+      </figure>
+      <div class="caveat"><strong>Read with care</strong>AISHE out-turn counts students who passed out of a programme, not people looking for work. Some go on to postgraduate study; some do not seek work. AISHE reports pass-outs by the state of the institution, not the student's home state.</div>
+    </article>
+
+    <article class="finding" id="finding-2">
+      <p class="finding-num">Finding 2 <span class="tag tag-data">Data</span></p>
+      <h3>Formal-payroll entry is concentrated in four states</h3>
+      <div class="finding-grid">
+        <div>
+          <p>In 2023-24, EPFO's net payroll for people aged 18–25 grew by 14,17,724 in Maharashtra, 7,11,135 in Karnataka, 6,61,520 in Tamil Nadu and 3,94,357 in Telangana. Per 100 people aged 18–23, that is 11.1, 10.8, 9.7 and 10.3. Every other state in the comparison was at 2.8 or below: Kerala 2.8, Andhra Pradesh 2.3, West Bengal 2.1, Odisha 1.9, Jharkhand 1.0, Assam 0.7 and Bihar 0.3.</p>
+          <p>The gap is not an artefact of the age band. Counting only the 22–25 group, closer to graduate age, the four states range from 4.5 to 5.9 per 100 and the others from 0.2 to 1.8.</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">11.1</div>
+          <div class="stat-label">EPFO net payroll aged 18–25 per 100 people aged 18–23, Maharashtra, 2023-24 (Bihar: 0.3)</div>
+          <div class="stat-source">EPFO <a href="#src-2">[2]</a> ÷ AISHE Table 38 <a href="#src-1">[1]</a></div>
+        </div>
+      </div>
+      <figure class="chart">
+        <div class="chart-box">
+          <div class="chart-title">Formal-payroll entry per 100 people aged 18–23, 2023-24</div>
+          <div class="bars" role="img" aria-label="Formal-payroll entry per 100 people aged 18–23, 2023-24: Maharashtra 11.1, Karnataka 10.8, Telangana 10.3, Tamil Nadu 9.7, Kerala 2.8, Andhra Pradesh 2.3, West Bengal 2.1, Odisha 1.9, Jharkhand 1.0, Assam 0.7, Bihar 0.3">
+            <div class="bar-row"><span class="lbl">Maharashtra</span><div class="track"><div class="bar gold" style="width:92.5%"><i>11.1</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Karnataka</span><div class="track"><div class="bar gold" style="width:90.0%"><i>10.8</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Telangana</span><div class="track"><div class="bar gold" style="width:85.8%"><i>10.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Tamil Nadu</span><div class="track"><div class="bar gold" style="width:80.8%"><i>9.7</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Kerala</span><div class="track"><div class="bar " style="width:23.3%"><i>2.8</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Andhra Pradesh</span><div class="track"><div class="bar " style="width:19.2%"><i>2.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">West Bengal</span><div class="track"><div class="bar " style="width:17.5%"><i>2.1</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Odisha</span><div class="track"><div class="bar " style="width:15.8%"><i>1.9</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Jharkhand</span><div class="track"><div class="bar " style="width:8.3%"><i>1.0</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Assam</span><div class="track"><div class="bar " style="width:5.8%"><i>0.7</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Bihar</span><div class="track"><div class="bar " style="width:2.5%"><i>0.3</i></div></div></div>
+          </div>
+        </div>
+        <figcaption>Common scale of 0–12. Gold: the four states at 9.7 or above. EPFO state-wise net payroll by age band, FY2023-24, release of 20 Sep 2025 <a href="#src-2">[2]</a>, ÷ AISHE 2023-24 Table 38 population aged 18–23 <a href="#src-1">[1]</a>. Sikkim is not in EPFO's state tables. Data file: <code>epfo_statewise_net_payroll.csv</code>.</figcaption>
+      </figure>
+      <div class="table-wrap">
+        <table class="num-table">
+          <caption class="chart-title" style="text-align:left;padding:12px 14px 4px">Formal-payroll entry, 2023-24: the numbers behind the chart</caption>
+          <thead><tr><th>State</th><th>EPFO net payroll, ages 18–25</th><th>Population 18–23</th><th>Per 100</th><th>Per 100, ages 22–25 only</th></tr></thead>
+          <tbody>
+            <tr><td>Maharashtra</td><td>14,17,724</td><td>1,27,69,400</td><td><strong>11.1</strong></td><td>5.9</td></tr>
+            <tr><td>Karnataka</td><td>7,11,135</td><td>65,83,200</td><td><strong>10.8</strong></td><td>5.6</td></tr>
+            <tr><td>Telangana</td><td>3,94,357</td><td>38,36,600</td><td><strong>10.3</strong></td><td>5.4</td></tr>
+            <tr><td>Tamil Nadu</td><td>6,61,520</td><td>68,41,200</td><td><strong>9.7</strong></td><td>4.5</td></tr>
+            <tr><td>Kerala</td><td>87,880</td><td>31,02,600</td><td><strong>2.8</strong></td><td>1.8</td></tr>
+            <tr><td>Andhra Pradesh</td><td>1,14,330</td><td>50,77,400</td><td><strong>2.3</strong></td><td>1.1</td></tr>
+            <tr><td>West Bengal</td><td>2,08,923</td><td>99,92,600</td><td><strong>2.1</strong></td><td>1.2</td></tr>
+            <tr><td>Odisha</td><td>90,061</td><td>47,70,600</td><td><strong>1.9</strong></td><td>1.0</td></tr>
+            <tr><td>Jharkhand</td><td>47,791</td><td>47,45,200</td><td><strong>1.0</strong></td><td>0.6</td></tr>
+            <tr><td>Assam</td><td>26,772</td><td>40,13,800</td><td><strong>0.7</strong></td><td>0.3</td></tr>
+            <tr><td>Bihar</td><td>54,384</td><td>1,56,29,600</td><td><strong>0.3</strong></td><td>0.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="caveat"><strong>What this ratio is — and is not</strong>"Formal entry per 100 young people" is EPFO net payroll for ages 18–25 divided by the AISHE population aged 18–23. It is a ratio, not a placement rate: the two age bands differ, and the EPFO count is not limited to graduates. EPFO counts only payroll covered by provident fund — not government jobs outside EPF, not most small firms, not self-employment. Net payroll is new subscribers, minus exits, plus members who rejoined; it includes people switching employers or newly brought under coverage. EPFO does not say how it assigns a worker to a state; it may be by the employer's registration, which would credit head-office states. That attribution is unconfirmed.</div>
+    </article>
+
+    <article class="finding" id="finding-3">
+      <p class="finding-num">Finding 3 <span class="tag tag-data">Data</span></p>
+      <h3>The household survey mostly agrees — Kerala is the exception</h3>
+      <div class="finding-grid">
+        <div>
+          <p>EPFO records where payroll is registered. PLFS asks households what work their members do, wherever they live. In the four high-entry states, 27.1% to 37.3% of all workers hold a regular wage or salaried job. In West Bengal it is 22.3%, Andhra Pradesh 23.6%, and in Odisha, Assam, Jharkhand and Bihar between 12.0% and 17.9%.</p>
+          <p>Kerala breaks the pattern. It sits near West Bengal on EPFO entry (2.8) but has the highest regular-job share in the set, 40.0%. The data here cannot say why; a family in Kerala should not read the EPFO figure alone.</p>
+          <p>Quality differs too. Among regular non-farm employees, 60.5% in West Bengal and 61.3% in Bihar have no social security benefit, against 36.4% in Karnataka and 43.0% in Telangana.</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">40.0%</div>
+          <div class="stat-label">of Kerala's workers hold a regular wage or salaried job, the highest in the set, despite low EPFO entry (2.8)</div>
+          <div class="stat-source">PLFS 2025, Table 19 <a href="#src-3">[3]</a></div>
+        </div>
+      </div>
+      <figure class="chart">
+        <div class="chart-box">
+          <div class="chart-title">Regular wage or salaried workers as a share of all workers, 2025 (%)</div>
+          <div class="bars" role="img" aria-label="Regular wage or salaried workers as a share of all workers, 2025 (%): Kerala 40.0, Tamil Nadu 37.3, Maharashtra 32.8, Karnataka 29.2, Telangana 27.1, Andhra Pradesh 23.6, West Bengal 22.3, Assam 17.9, Odisha 15.0, Jharkhand 13.7, Bihar 12.0">
+            <div class="bar-row"><span class="lbl">Kerala</span><div class="track"><div class="bar hl" style="width:80.0%"><i>40.0</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Tamil Nadu</span><div class="track"><div class="bar " style="width:74.6%"><i>37.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Maharashtra</span><div class="track"><div class="bar " style="width:65.6%"><i>32.8</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Karnataka</span><div class="track"><div class="bar " style="width:58.4%"><i>29.2</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Telangana</span><div class="track"><div class="bar " style="width:54.2%"><i>27.1</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Andhra Pradesh</span><div class="track"><div class="bar " style="width:47.2%"><i>23.6</i></div></div></div>
+            <div class="bar-row"><span class="lbl">West Bengal</span><div class="track"><div class="bar " style="width:44.6%"><i>22.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Assam</span><div class="track"><div class="bar " style="width:35.8%"><i>17.9</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Odisha</span><div class="track"><div class="bar " style="width:30.0%"><i>15.0</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Jharkhand</span><div class="track"><div class="bar " style="width:27.4%"><i>13.7</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Bihar</span><div class="track"><div class="bar " style="width:24.0%"><i>12.0</i></div></div></div>
+          </div>
+        </div>
+        <figcaption>Common scale of 0–50%. White: Kerala. All workers, usual status (ps+ss), rural + urban, persons. PLFS Annual Report 2025, Appendix A, Table (19), column 4 <a href="#src-3">[3]</a>. Data file: <code>robustness_plfs.csv</code>.</figcaption>
+      </figure>
+      <div class="table-wrap">
+        <table class="num-table">
+          <caption class="chart-title" style="text-align:left;padding:12px 14px 4px">Two sources side by side, sorted by EPFO entry</caption>
+          <thead><tr><th>State</th><th>EPFO entry per 100 (2023-24)</th><th>Regular salaried, % of workers</th><th>Regular non-farm jobs with no social security, %</th></tr></thead>
+          <tbody>
+            <tr><td>Maharashtra</td><td>11.1</td><td>32.8</td><td>45.0</td></tr>
+            <tr><td>Karnataka</td><td>10.8</td><td>29.2</td><td>36.4</td></tr>
+            <tr><td>Telangana</td><td>10.3</td><td>27.1</td><td>43.0</td></tr>
+            <tr><td>Tamil Nadu</td><td>9.7</td><td>37.3</td><td>45.1</td></tr>
+            <tr><td>Kerala</td><td>2.8</td><td>40.0</td><td>59.4</td></tr>
+            <tr><td>Andhra Pradesh</td><td>2.3</td><td>23.6</td><td>53.7</td></tr>
+            <tr><td>West Bengal</td><td>2.1</td><td>22.3</td><td>60.5</td></tr>
+            <tr><td>Odisha</td><td>1.9</td><td>15.0</td><td>50.2</td></tr>
+            <tr><td>Jharkhand</td><td>1.0</td><td>13.7</td><td>56.4</td></tr>
+            <tr><td>Assam</td><td>0.7</td><td>17.9</td><td>51.4</td></tr>
+            <tr><td>Bihar</td><td>0.3</td><td>12.0</td><td>61.3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:0.85rem">Sources: EPFO <a href="#src-2">[2]</a> and AISHE <a href="#src-1">[1]</a> for the first column; PLFS 2025 Tables (19) and (36) <a href="#src-3">[3]</a> for the others. Sikkim is left out: it is not in EPFO's state tables.</p>
+    </article>
+
+    <article class="finding" id="finding-4">
+      <p class="finding-num">Finding 4 <span class="tag tag-data">Data</span></p>
+      <h3>Graduate unemployment varies widely, and is higher for women everywhere</h3>
+      <div class="finding-grid">
+        <div>
+          <p>Among graduates aged 15 and above who are working or looking for work, 21.6% are unemployed in Andhra Pradesh, 18.1% in Bihar, 17.6% in Telangana and 16.0% in Odisha. The rate is 11.4% in West Bengal and 11.2% in Tamil Nadu, matching India's 11.2%. Karnataka (7.9%) and Maharashtra (6.8%) are lowest among the large states.</p>
+          <p>In every state compared, women graduates face higher unemployment than men: 36.4% against 15.2% in Bihar, 30.3% against 18.5% in Andhra Pradesh, 21.5% against 7.7% in West Bengal. Fewer women graduates are in the labour force at all — 40.2% in West Bengal, 24.5% in Bihar, 53.7% in Kerala.</p>
+          <p>Telangana shows that high formal entry and high graduate unemployment can sit together: many graduates, many formal jobs, and still many graduates searching.</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">21.6%</div>
+          <div class="stat-label">unemployment among graduates aged 15+ in Andhra Pradesh, highest in the set (India: 11.2%)</div>
+          <div class="stat-source">PLFS 2025, Table 24 <a href="#src-3">[3]</a></div>
+        </div>
+      </div>
+      <figure class="chart">
+        <div class="chart-box">
+          <div class="chart-title">Unemployment rate of graduates aged 15 and above, by sex, 2025 (%)</div>
+          <div class="legend"><span style="--c:var(--mist)">Men</span><span style="--c:var(--gold)">Women</span></div>
+          <div class="bars" role="img" aria-label="Unemployment rate of graduates aged 15 and above, by sex, 2025 (%). Bihar: men 15.2, women 36.4; Andhra Pradesh: men 18.5, women 30.3; Odisha: men 11.6, women 27.2; Telangana: men 14.3, women 26.5; Assam: men 8.8, women 22.8; West Bengal: men 7.7, women 21.5; Jharkhand: men 12.0, women 20.1; Kerala: men 8.8, women 18.0; All India: men 9.0, women 17.4; Tamil Nadu: men 9.8, women 14.0; Sikkim: men 2.8, women 13.4; Karnataka: men 5.9, women 13.2; Maharashtra: men 6.2, women 8.8 per cent">
+            <div class="bar-row"><span class="lbl">Bihar</span><div class="track"><div class="bar thin" style="width:38.0%"><i>15.2</i></div><div class="bar thin gold" style="width:91.0%"><i>36.4</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Andhra Pradesh</span><div class="track"><div class="bar thin" style="width:46.2%"><i>18.5</i></div><div class="bar thin gold" style="width:75.8%"><i>30.3</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Odisha</span><div class="track"><div class="bar thin" style="width:29.0%"><i>11.6</i></div><div class="bar thin gold" style="width:68.0%"><i>27.2</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Telangana</span><div class="track"><div class="bar thin" style="width:35.8%"><i>14.3</i></div><div class="bar thin gold" style="width:66.2%"><i>26.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Assam</span><div class="track"><div class="bar thin" style="width:22.0%"><i>8.8</i></div><div class="bar thin gold" style="width:57.0%"><i>22.8</i></div></div></div>
+            <div class="bar-row"><span class="lbl">West Bengal</span><div class="track"><div class="bar thin" style="width:19.2%"><i>7.7</i></div><div class="bar thin gold" style="width:53.8%"><i>21.5</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Jharkhand</span><div class="track"><div class="bar thin" style="width:30.0%"><i>12.0</i></div><div class="bar thin gold" style="width:50.3%"><i>20.1</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Kerala</span><div class="track"><div class="bar thin" style="width:22.0%"><i>8.8</i></div><div class="bar thin gold" style="width:45.0%"><i>18.0</i></div></div></div>
+            <div class="bar-row"><span class="lbl">All India</span><div class="track"><div class="bar thin" style="width:22.5%"><i>9.0</i></div><div class="bar thin gold" style="width:43.5%"><i>17.4</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Tamil Nadu</span><div class="track"><div class="bar thin" style="width:24.5%"><i>9.8</i></div><div class="bar thin gold" style="width:35.0%"><i>14.0</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Sikkim</span><div class="track"><div class="bar thin" style="width:7.0%"><i>2.8</i></div><div class="bar thin gold" style="width:33.5%"><i>13.4</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Karnataka</span><div class="track"><div class="bar thin" style="width:14.8%"><i>5.9</i></div><div class="bar thin gold" style="width:33.0%"><i>13.2</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Maharashtra</span><div class="track"><div class="bar thin" style="width:15.5%"><i>6.2</i></div><div class="bar thin gold" style="width:22.0%"><i>8.8</i></div></div></div>
+          </div>
+        </div>
+        <figcaption>Common scale of 0–40%. Usual status (ps+ss), rural + urban, age 15 and above, highest level completed: graduate. Sorted by women's rate. PLFS Annual Report 2025, Appendix A, Table (24) <a href="#src-3">[3]</a>. Data file: <code>plfs2025_education_by_state.csv</code>. Sikkim rests on a very small sample.</figcaption>
+      </figure>
+      <div class="table-wrap">
+        <table class="num-table">
+          <caption class="chart-title" style="text-align:left;padding:12px 14px 4px">How precise are these state figures?</caption>
+          <thead><tr><th>State</th><th>Graduate unemployment, %</th><th>Women graduates in labour force, %</th><th>Unemployment, all education, %</th><th>Published RSE of that rate, %</th><th>95% range, all education</th></tr></thead>
+          <tbody>
+            <tr><td>West Bengal</td><td>11.4</td><td>40.2</td><td>2.8</td><td>4.92</td><td>2.5–3.1</td></tr>
+            <tr><td>Tamil Nadu</td><td>11.2</td><td>44.5</td><td>3.4</td><td>5.07</td><td>3.1–3.7</td></tr>
+            <tr><td>Karnataka</td><td>7.9</td><td>41.8</td><td>2.3</td><td>6.36</td><td>2.0–2.6</td></tr>
+            <tr><td>Maharashtra</td><td>6.8</td><td>38.8</td><td>2.4</td><td>6.46</td><td>2.1–2.7</td></tr>
+            <tr><td>Kerala</td><td>13.1</td><td>53.7</td><td>4.4</td><td>5.35</td><td>3.9–4.9</td></tr>
+            <tr><td>Andhra Pradesh</td><td>21.6</td><td>44.1</td><td>4.2</td><td>4.70</td><td>3.8–4.6</td></tr>
+            <tr><td>Telangana</td><td>17.6</td><td>43.3</td><td>5.0</td><td>5.38</td><td>4.5–5.5</td></tr>
+            <tr><td>Odisha</td><td>16.0</td><td>43.7</td><td>2.9</td><td>6.22</td><td>2.5–3.3</td></tr>
+            <tr><td>Jharkhand</td><td>13.8</td><td>35.6</td><td>2.7</td><td>9.48</td><td>2.2–3.2</td></tr>
+            <tr><td>Bihar</td><td>18.1</td><td>24.5</td><td>3.8</td><td>5.33</td><td>3.4–4.2</td></tr>
+            <tr><td>Assam</td><td>13.0</td><td>53.2</td><td>3.7</td><td>6.47</td><td>3.2–4.2</td></tr>
+            <tr><td>Sikkim</td><td>7.1</td><td>67.2</td><td>3.2</td><td>17.42</td><td>2.1–4.3</td></tr>
+            <tr><td>All India</td><td>11.2</td><td>39.2</td><td>3.1</td><td>1.37</td><td>3.0–3.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="caveat"><strong>Margin of error</strong>PLFS is a sample survey. MoSPI publishes a relative standard error (RSE) for each state's overall unemployment rate (Appendix B, Table 1RSE), but <em>not</em> for the rates by education level. The last column applies the published RSE to the overall rate: rate × (1 ± 1.96 × RSE). For graduates no RSE is published, so no range is shown. Graduates are a smaller group than all adults, so their rates are less precise than the overall rate. Treat gaps of a few points between states as uncertain. These tables cover age 15 and above, not the 15–29 group used in Report No. 2, so the two reports' graduate figures are not comparable.</div>
+    </article>
+
+    <article class="finding" id="finding-5">
+      <p class="finding-num">Finding 5 <span class="tag tag-data">Data</span></p>
+      <h3>Regular jobs pay most in Maharashtra, Telangana and Karnataka, and in their big cities</h3>
+      <div class="finding-grid">
+        <div>
+          <p>Across all regular wage and salaried employees — not only graduates — average monthly earnings in 2025 were ₹27,169 in Maharashtra, ₹27,052 in Telangana and ₹26,266 in Karnataka, against ₹22,699 for India. Tamil Nadu, the fourth high-entry state, averages ₹23,798, below Kerala's ₹25,443. West Bengal's average, ₹16,618, is the 2nd lowest of 35 States/UTs. For women the West Bengal average is ₹11,528.</p>
+          <p>City figures show the same spread more sharply: ₹36,267 in Greater Mumbai, ₹34,323 in Bengaluru and ₹31,153 in Hyderabad, against ₹19,093 in Kolkata. Kolkata's women regular employees average ₹13,784.</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">₹16,618</div>
+          <div class="stat-label">average monthly pay of regular employees in West Bengal, 2nd lowest of 35 States/UTs (India: ₹22,699)</div>
+          <div class="stat-source">PLFS 2025, Table 38 <a href="#src-3">[3]</a></div>
+        </div>
+      </div>
+      <figure class="chart">
+        <div class="chart-box">
+          <div class="chart-title">Average monthly earnings of regular wage or salaried employees, 2025 (₹)</div>
+          <div class="bars" role="img" aria-label="Average monthly earnings of regular wage or salaried employees, 2025 (₹): Maharashtra ₹27,169, Telangana ₹27,052, Karnataka ₹26,266, Kerala ₹25,443, Tamil Nadu ₹23,798, Sikkim ₹23,585, Jharkhand ₹22,839, All India ₹22,699, Andhra Pradesh ₹22,511, Bihar ₹20,135, Odisha ₹19,459, Assam ₹18,816, West Bengal ₹16,618">
+            <div class="bar-row"><span class="lbl">Maharashtra</span><div class="track"><div class="bar " style="width:90.6%"><i>₹27,169</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Telangana</span><div class="track"><div class="bar " style="width:90.2%"><i>₹27,052</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Karnataka</span><div class="track"><div class="bar " style="width:87.6%"><i>₹26,266</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Kerala</span><div class="track"><div class="bar " style="width:84.8%"><i>₹25,443</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Tamil Nadu</span><div class="track"><div class="bar " style="width:79.3%"><i>₹23,798</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Sikkim</span><div class="track"><div class="bar " style="width:78.6%"><i>₹23,585</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Jharkhand</span><div class="track"><div class="bar " style="width:76.1%"><i>₹22,839</i></div></div></div>
+            <div class="bar-row"><span class="lbl">All India</span><div class="track"><div class="bar gold" style="width:75.7%"><i>₹22,699</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Andhra Pradesh</span><div class="track"><div class="bar " style="width:75.0%"><i>₹22,511</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Bihar</span><div class="track"><div class="bar " style="width:67.1%"><i>₹20,135</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Odisha</span><div class="track"><div class="bar " style="width:64.9%"><i>₹19,459</i></div></div></div>
+            <div class="bar-row"><span class="lbl">Assam</span><div class="track"><div class="bar " style="width:62.7%"><i>₹18,816</i></div></div></div>
+            <div class="bar-row"><span class="lbl">West Bengal</span><div class="track"><div class="bar " style="width:55.4%"><i>₹16,618</i></div></div></div>
+          </div>
+        </div>
+        <figcaption>Common scale of ₹0–30,000. Gold: all-India average. Average wage/salary earnings in the preceding calendar month, regular wage/salaried employees, current weekly status (CWS), rural + urban, persons, all ages. PLFS Annual Report 2025, Appendix A, Table (38) <a href="#src-3">[3]</a>. Data file: <code>plfs2025_regular_wage_by_state.csv</code>.</figcaption>
+      </figure>
+      <div class="table-wrap">
+        <table class="num-table">
+          <caption class="chart-title" style="text-align:left;padding:12px 14px 4px">Average monthly earnings of regular employees by state, 2025 (₹)</caption>
+          <thead><tr><th>State</th><th>All</th><th>Men</th><th>Women</th></tr></thead>
+          <tbody>
+            <tr><td>Maharashtra</td><td>₹27,169</td><td>₹29,076</td><td>₹21,647</td></tr>
+            <tr><td>Telangana</td><td>₹27,052</td><td>₹29,301</td><td>₹21,179</td></tr>
+            <tr><td>Karnataka</td><td>₹26,266</td><td>₹28,656</td><td>₹21,371</td></tr>
+            <tr><td>Kerala</td><td>₹25,443</td><td>₹28,415</td><td>₹21,513</td></tr>
+            <tr><td>Tamil Nadu</td><td>₹23,798</td><td>₹26,216</td><td>₹19,087</td></tr>
+            <tr><td>Sikkim</td><td>₹23,585</td><td>₹26,319</td><td>₹19,149</td></tr>
+            <tr><td>Jharkhand</td><td>₹22,839</td><td>₹24,175</td><td>₹15,990</td></tr>
+            <tr><td>All India</td><td>₹22,699</td><td>₹24,217</td><td>₹18,353</td></tr>
+            <tr><td>Andhra Pradesh</td><td>₹22,511</td><td>₹24,797</td><td>₹17,025</td></tr>
+            <tr><td>Bihar</td><td>₹20,135</td><td>₹20,777</td><td>₹16,924</td></tr>
+            <tr><td>Odisha</td><td>₹19,459</td><td>₹21,477</td><td>₹14,388</td></tr>
+            <tr><td>Assam</td><td>₹18,816</td><td>₹21,002</td><td>₹14,046</td></tr>
+            <tr><td>West Bengal</td><td>₹16,618</td><td>₹18,604</td><td>₹11,528</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table class="num-table">
+          <caption class="chart-title" style="text-align:left;padding:12px 14px 4px">Million-plus cities in the comparison states, 2025 (₹ a month, regular employees)</caption>
+          <thead><tr><th>City (municipal corporation)</th><th>State</th><th>Average monthly earnings</th></tr></thead>
+          <tbody>
+            <tr><td>Bengaluru</td><td>Karnataka</td><td>₹34,323</td></tr>
+            <tr><td>Greater Hyderabad</td><td>Telangana</td><td>₹31,153</td></tr>
+            <tr><td>Navi Mumbai</td><td>Maharashtra</td><td>₹51,515</td></tr>
+            <tr><td>Greater Mumbai</td><td>Maharashtra</td><td>₹36,267</td></tr>
+            <tr><td>Pimpri Chinchwad</td><td>Maharashtra</td><td>₹32,987</td></tr>
+            <tr><td>Kalyan-Dombivli</td><td>Maharashtra</td><td>₹32,827</td></tr>
+            <tr><td>Pune</td><td>Maharashtra</td><td>₹30,670</td></tr>
+            <tr><td>Chhatrapati Sambhajinagar</td><td>Maharashtra</td><td>₹29,511</td></tr>
+            <tr><td>Thane</td><td>Maharashtra</td><td>₹27,173</td></tr>
+            <tr><td>Vasai Virar</td><td>Maharashtra</td><td>₹26,031</td></tr>
+            <tr><td>Nagpur</td><td>Maharashtra</td><td>₹25,145</td></tr>
+            <tr><td>Nashik</td><td>Maharashtra</td><td>₹24,721</td></tr>
+            <tr><td>Coimbatore</td><td>Tamil Nadu</td><td>₹29,537</td></tr>
+            <tr><td>Chennai</td><td>Tamil Nadu</td><td>₹28,955</td></tr>
+            <tr><td>Madurai</td><td>Tamil Nadu</td><td>₹20,580</td></tr>
+            <tr><td>Greater Visakhapatnam</td><td>Andhra Pradesh</td><td>₹28,802</td></tr>
+            <tr><td>Vijayawada</td><td>Andhra Pradesh</td><td>₹22,859</td></tr>
+            <tr><td>Howrah</td><td>West Bengal</td><td>₹23,078</td></tr>
+            <tr><td>Kolkata</td><td>West Bengal</td><td>₹19,093</td></tr>
+            <tr><td>Ranchi</td><td>Jharkhand</td><td>₹36,332</td></tr>
+            <tr><td>Dhanbad</td><td>Jharkhand</td><td>₹26,377</td></tr>
+            <tr><td>Patna</td><td>Bihar</td><td>₹28,443</td></tr>
+            <tr><td><em>All 46 million-plus cities</em></td><td>—</td><td>₹28,808</td></tr>
+            <tr><td><em>Urban India</em></td><td>—</td><td>₹26,258</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:0.85rem">City source: PLFS 2025, Labour Market Dynamics in Million-plus Cities, Table 8 <a href="#src-4">[4]</a>. Kerala, Odisha, Assam and Sikkim have no million-plus city in the report.</p>
+      <div class="caveat"><strong>Average, not median</strong>These are averages (means), the only pay measure the PLFS tables publish by state and city. A few high salaries pull an average up, so a typical worker may earn less than the figure shown. They cover all regular employees of all ages and education levels, not new graduates, and they do not account for differences in rent or living costs between states.</div>
+    </article>
+
+    <article class="finding" id="wb-closeup">
+      <p class="finding-num">Close-up <span class="tag tag-data">Data</span></p>
+      <h3>West Bengal: what the "458,000" figure is</h3>
+      <p style="margin-top:12px">A figure of about 458,000 formal jobs for West Bengal has been circulating. It comes from EPFO: West Bengal's net payroll for FY2024-25, all ages, was 4,57,697. It is a net payroll number, not a count of jobs created. It includes people moving between employers, people newly brought under EPF coverage and people rejoining, and it covers every age.</p>
+      <ul class="rules" style="margin-top:12px">
+        <li><strong>4,88,262</strong> (FY2022-23), <strong>4,76,439</strong> (FY2023-24) and <strong>4,57,697</strong> (FY2024-25): West Bengal net payroll, all ages.</li>
+        <li><strong>2,12,064</strong> of the FY2024-25 total were aged 18–25, and <strong>1,12,691</strong> were aged 22–25, the band closest to new graduates.</li>
+        <li><strong>2,44,180</strong> were aged 26 and over — people already in their careers.</li>
+      </ul>
+      <p style="margin-top:12px;font-size:0.85rem">EPFO state-wise net payroll by age band, release of 20 Sep 2025 <a href="#src-2">[2]</a>. Data file: <code>epfo_statewise_net_payroll.csv</code>.</p>
+    </article>
+
+    <aside class="opinion" aria-label="Practitioner view">
+      <p class="finding-num">Practitioner view <span class="tag tag-opinion">Opinion — not data</span></p>
+      <p><em class="ph">[Siddique Ahamed to write: commentary from hiring experience, in the first person. No numbers unless they come from a cited source above.]</em></p>
+    </aside>
+  </section>
+
+  <!-- ═══ ACTION ═══ -->
+  <section aria-labelledby="start">
+    <h2 id="start">Where students and parents can start</h2>
+    <ul class="actions">
+      <li><strong>Look at where formal jobs are, not only where colleges are.</strong> A state can produce many graduates and still add few formal jobs for young people. If the plan is a salaried career, ask early whether it may mean working in another state, and talk about it as a family. <a href="/careers.html">Career Compass</a></li>
+      <li><strong>Check what "a job" means in the offer.</strong> In several states more than half of regular non-farm employees have no social security benefit. Before accepting, ask whether the job includes EPF, a written contract and paid leave. <a href="/skills/first-job/">Getting your first job</a></li>
+      <li><strong>Compare pay with the cost of living.</strong> Average pay is higher in Maharashtra, Telangana and Karnataka and their large cities, but this data does not include rent or living costs. Weigh both before deciding to move.</li>
+      <li><strong>Plan for daughters' first jobs as seriously as sons'.</strong> Women graduates face higher unemployment than men in every state compared. Internships, early work experience and a clear job-search plan matter even more. <a href="/guide.html">Guidance Hub</a></li>
+      <li><strong>Counsellors:</strong> use state figures as context, not prediction. They are averages across many courses and colleges, and survey figures for small groups carry wide uncertainty.</li>
+    </ul>
+  </section>
+
+  <!-- ═══ METHODOLOGY & SOURCES ═══ -->
+  <section aria-labelledby="method" id="sources">
+    <h2 id="method">Methodology &amp; sources</h2>
+    <h3>Method</h3>
+    <p>This report uses public data already collected and checked in the open repository <a href="https://github.com/siddiquema/state-jobs-gap" style="color:var(--gold)">siddiquema/state-jobs-gap</a>, pinned at commit <code>d8703d6</code>. That repository's own validation re-derives its figures from the raw files by a second route; its log has 289 checks, all passing, and is copied into this report's <a href="data/" style="color:var(--gold)">data folder</a>. Every number printed here was then recomputed from the copied CSV files by <code>data/recompute.py</code>, which writes <code>data/validation_log.csv</code>: one row per number, with its source table, data row and recompute result. Graduate unemployment, women's participation and undergraduate pass-outs for each state were also re-read from the original PLFS PDF and AISHE Excel file.</p>
+    <ul class="rules">
+      <li><strong>Year.</strong> AISHE and EPFO figures are for 2023-24, the latest year in which both are available. PLFS figures are for calendar year 2025.</li>
+      <li><strong>Formal entry per 100 young people</strong> = EPFO net payroll, ages 18–21 plus 22–25, FY2023-24 ÷ AISHE population aged 18–23, 2023-24 × 100. The EPFO figure is from the newest release (20 Sep 2025), because EPFO revises past months.</li>
+      <li><strong>Graduates per 100 young people</strong> = AISHE undergraduate pass-outs, 2023-24 ÷ the same population × 100.</li>
+      <li><strong>Usual status (ps+ss)</strong> classifies a person by their main activity over the previous year. PLFS wage figures use the current weekly status (CWS).</li>
+      <li><strong>95% range</strong> of a state's overall unemployment rate = rate × (1 ± 1.96 × published RSE), from PLFS Appendix B, Table (1RSE). This is a calculation from published figures, not a new estimate.</li>
+      <li><strong>Comparison set:</strong> West Bengal, Tamil Nadu, Karnataka, Maharashtra, Kerala, Andhra Pradesh and Telangana, plus West Bengal's neighbours Odisha, Jharkhand, Bihar, Assam and Sikkim.</li>
+    </ul>
+    <h3 style="margin-top:20px">Rules this report follows</h3>
+    <ul class="rules">
+      <li>Every number traces to a row in the number-by-number table below, and to a row in <code>data/validation_log.csv</code>.</li>
+      <li>No invented, estimated or modelled statistics. Where data does not exist, we say so.</li>
+      <li>No claims about causes. The data shows where formal jobs and pay differ; it does not show why.</li>
+      <li>Practitioner commentary is labelled as opinion.</li>
+    </ul>
+    <h3 style="margin-top:20px">Limitations</h3>
+    <ul class="rules">
+      <li><strong>EPFO is formal payroll only.</strong> It misses most government jobs, small firms and self-employment. Its age band is 18–25, not "graduates". How EPFO assigns a worker to a state is not stated in its releases and is unconfirmed; it may follow the employer's registration.</li>
+      <li><strong>Net payroll is not jobs created.</strong> It is new subscribers, minus exits, plus rejoiners. This applies to the West Bengal figure of 4,57,697 above.</li>
+      <li><strong>AISHE out-turn counts pass-outs, not job-seekers,</strong> and counts them where the institution is. Its population figures are projections based on Census 2011.</li>
+      <li><strong>PLFS is a sample survey.</strong> State-by-education figures have no published margin of error. Small groups, such as women graduates in smaller states, and Sikkim as a whole, rest on few respondents.</li>
+      <li><strong>Pay is an average (mean), not a median,</strong> for all regular employees, not new graduates, and is not adjusted for living costs.</li>
+      <li><strong>No field of study.</strong> None of these sources links a course to a job, so this report says nothing about which course leads where.</li>
+      <li><strong>Different years.</strong> EPFO and AISHE are 2023-24; PLFS is 2025. The comparison is of patterns, not a year-matched calculation.</li>
+    </ul>
+
+    <h3 style="margin-top:20px">Sources</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Document</th><th>Publisher</th><th>Tables used</th><th>Year</th><th>Used in</th></tr></thead>
+        <tbody>
+          <tr id="src-1"><td>1</td><td><a href="https://www.dohe-education.gov.in/static/uploads/2026/07/8616f33dfee644ab6b87a2bd0658b18d.pdf" target="_blank" rel="noopener">All India Survey on Higher Education 2023-24, Final Report</a> (Excel tables from <a href="https://aishe.gov.in/document-category/aishe-final-reports/" target="_blank" rel="noopener">aishe.gov.in</a>)</td><td>Department of Higher Education, Ministry of Education</td><td>Table 33 (out-turn by state); Table 38 (population aged 18–23)</td><td>2023-24</td><td>Findings 1–3</td></tr>
+          <tr id="src-2"><td>2</td><td>Provisional Payroll Data, release of 20 Sep 2025 (file <code>ccb62712-September-2025.pdf</code>), from the <a href="https://www.epfo.gov.in/data-hub/" target="_blank" rel="noopener">EPFO data hub</a></td><td>Employees' Provident Fund Organisation</td><td>State-wise net payroll by age band (pp. 18–23)</td><td>FY2022-23 to FY2024-25</td><td>Findings 2–3, close-up</td></tr>
+          <tr id="src-3"><td>3</td><td><a href="https://www.mospi.gov.in/uploads/publications_reports/publications_reports1780040415321_0624fb13-fb47-40bc-b470-7c7e9635c3ef_PLFS_2025_F_REV_29052026.pdf" target="_blank" rel="noopener">Annual Report, Periodic Labour Force Survey 2025</a></td><td>National Statistics Office, MoSPI</td><td>Appendix A Tables (19), (22), (24), (36), (38); Appendix B Table (1RSE)</td><td>2025</td><td>Findings 3–5</td></tr>
+          <tr id="src-4"><td>4</td><td><a href="https://www.mospi.gov.in/uploads/publications_reports/publications_reports1782803524108_424fcfc9-f57d-4057-b4bd-abd52aae828d_Million_plus_city_F.pdf" target="_blank" rel="noopener">PLFS 2025: Labour Market Dynamics in Million-plus Cities</a></td><td>National Statistics Office, MoSPI</td><td>Table 8 (average wage/salary earnings by city)</td><td>2025</td><td>Finding 5</td></tr>
+          <tr id="src-5"><td>5</td><td><a href="https://github.com/siddiquema/state-jobs-gap/tree/d8703d6305ced309fba0edf41212c164b4003ad2" target="_blank" rel="noopener">state-jobs-gap</a>, commit <code>d8703d6</code></td><td>Siddique Ahamed (open repository)</td><td>Cleaned tables, provenance notes, validation log</td><td>2026</td><td>All findings (processing only)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="numbers" open>
+      <summary>Number-by-number sources (one row per number)</summary>
+      <p style="margin-top:8px;font-size:0.85rem">Each row is one number printed in this report, with its source document, table and year. The ID matches <a href="data/validation_log.csv" style="color:var(--gold)">data/validation_log.csv</a>, which also gives the data file, data row and recompute result.</p>
+      <div class="table-wrap">
+        <table class="numbers-table">
+          <thead><tr><th>#</th><th>Number</th><th>What it is</th><th>Source and table</th><th>Year</th><th>ID</th></tr></thead>
+          <tbody>
+<!-- BEGIN:sources_rows (generated by data/recompute.py; do not edit by hand) -->
+<tr><td>1</td><td>3.5</td><td>West Bengal: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.WB</td></tr>
+<tr><td>2</td><td>9.1</td><td>Tamil Nadu: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.TN</td></tr>
+<tr><td>3</td><td>6,19,629</td><td>Tamil Nadu: UG pass-outs, 2023-24</td><td><a href="#src-1">[1]</a> Table 33</td><td>2023-24</td><td>F1.TN.n</td></tr>
+<tr><td>4</td><td>6.8</td><td>Karnataka: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.KA</td></tr>
+<tr><td>5</td><td>5.5</td><td>Maharashtra: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.MH</td></tr>
+<tr><td>6</td><td>5.7</td><td>Kerala: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.KL</td></tr>
+<tr><td>7</td><td>6.5</td><td>Andhra Pradesh: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.AP</td></tr>
+<tr><td>8</td><td>6.5</td><td>Telangana: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.TG</td></tr>
+<tr><td>9</td><td>3.9</td><td>Odisha: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.OD</td></tr>
+<tr><td>10</td><td>3.3</td><td>Jharkhand: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.JH</td></tr>
+<tr><td>11</td><td>3.5</td><td>Bihar: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.BR</td></tr>
+<tr><td>12</td><td>2.6</td><td>Assam: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.AS</td></tr>
+<tr><td>13</td><td>6.4</td><td>Sikkim: UG pass-outs per 100 people aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 33 (UG pass-outs) / Table 38 (population 18-23)</td><td>2023-24</td><td>F1.SK</td></tr>
+<tr><td>14</td><td>2.1</td><td>West Bengal: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.WB</td></tr>
+<tr><td>15</td><td>2,08,923</td><td>West Bengal: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.WB.n</td></tr>
+<tr><td>16</td><td>1.2</td><td>West Bengal: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.WB.2225</td></tr>
+<tr><td>17</td><td>99,92,600</td><td>West Bengal: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.WB.pop</td></tr>
+<tr><td>18</td><td>9.7</td><td>Tamil Nadu: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.TN</td></tr>
+<tr><td>19</td><td>6,61,520</td><td>Tamil Nadu: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.TN.n</td></tr>
+<tr><td>20</td><td>4.5</td><td>Tamil Nadu: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.TN.2225</td></tr>
+<tr><td>21</td><td>68,41,200</td><td>Tamil Nadu: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.TN.pop</td></tr>
+<tr><td>22</td><td>10.8</td><td>Karnataka: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.KA</td></tr>
+<tr><td>23</td><td>7,11,135</td><td>Karnataka: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.KA.n</td></tr>
+<tr><td>24</td><td>5.6</td><td>Karnataka: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.KA.2225</td></tr>
+<tr><td>25</td><td>65,83,200</td><td>Karnataka: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.KA.pop</td></tr>
+<tr><td>26</td><td>11.1</td><td>Maharashtra: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.MH</td></tr>
+<tr><td>27</td><td>14,17,724</td><td>Maharashtra: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.MH.n</td></tr>
+<tr><td>28</td><td>5.9</td><td>Maharashtra: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.MH.2225</td></tr>
+<tr><td>29</td><td>1,27,69,400</td><td>Maharashtra: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.MH.pop</td></tr>
+<tr><td>30</td><td>2.8</td><td>Kerala: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.KL</td></tr>
+<tr><td>31</td><td>87,880</td><td>Kerala: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.KL.n</td></tr>
+<tr><td>32</td><td>1.8</td><td>Kerala: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.KL.2225</td></tr>
+<tr><td>33</td><td>31,02,600</td><td>Kerala: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.KL.pop</td></tr>
+<tr><td>34</td><td>2.3</td><td>Andhra Pradesh: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.AP</td></tr>
+<tr><td>35</td><td>1,14,330</td><td>Andhra Pradesh: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.AP.n</td></tr>
+<tr><td>36</td><td>1.1</td><td>Andhra Pradesh: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.AP.2225</td></tr>
+<tr><td>37</td><td>50,77,400</td><td>Andhra Pradesh: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.AP.pop</td></tr>
+<tr><td>38</td><td>10.3</td><td>Telangana: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.TG</td></tr>
+<tr><td>39</td><td>3,94,357</td><td>Telangana: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.TG.n</td></tr>
+<tr><td>40</td><td>5.4</td><td>Telangana: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.TG.2225</td></tr>
+<tr><td>41</td><td>38,36,600</td><td>Telangana: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.TG.pop</td></tr>
+<tr><td>42</td><td>1.9</td><td>Odisha: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.OD</td></tr>
+<tr><td>43</td><td>90,061</td><td>Odisha: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.OD.n</td></tr>
+<tr><td>44</td><td>1.0</td><td>Odisha: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.OD.2225</td></tr>
+<tr><td>45</td><td>47,70,600</td><td>Odisha: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.OD.pop</td></tr>
+<tr><td>46</td><td>1.0</td><td>Jharkhand: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.JH</td></tr>
+<tr><td>47</td><td>47,791</td><td>Jharkhand: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.JH.n</td></tr>
+<tr><td>48</td><td>0.6</td><td>Jharkhand: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.JH.2225</td></tr>
+<tr><td>49</td><td>47,45,200</td><td>Jharkhand: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.JH.pop</td></tr>
+<tr><td>50</td><td>0.3</td><td>Bihar: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.BR</td></tr>
+<tr><td>51</td><td>54,384</td><td>Bihar: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.BR.n</td></tr>
+<tr><td>52</td><td>0.2</td><td>Bihar: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.BR.2225</td></tr>
+<tr><td>53</td><td>1,56,29,600</td><td>Bihar: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.BR.pop</td></tr>
+<tr><td>54</td><td>0.7</td><td>Assam: EPFO net payroll aged 18-25 per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band (pp. 18-23) / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.AS</td></tr>
+<tr><td>55</td><td>26,772</td><td>Assam: EPFO net payroll aged 18-25, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>F2.AS.n</td></tr>
+<tr><td>56</td><td>0.3</td><td>Assam: EPFO net payroll aged 22-25 only per 100 people aged 18-23, 2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25 / AISHE Table 38</td><td>FY2023-24 and FY2024-25</td><td>F2.AS.2225</td></tr>
+<tr><td>57</td><td>40,13,800</td><td>Assam: population aged 18-23, 2023-24</td><td><a href="#src-1">[1]</a> Table 38 (population projection based on Census 2011)</td><td>2023-24</td><td>F2.AS.pop</td></tr>
+<tr><td>58</td><td>22.3</td><td>West Bengal: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.WB.reg</td></tr>
+<tr><td>59</td><td>60.5</td><td>West Bengal: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.WB.nossb</td></tr>
+<tr><td>60</td><td>37.3</td><td>Tamil Nadu: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.TN.reg</td></tr>
+<tr><td>61</td><td>45.1</td><td>Tamil Nadu: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.TN.nossb</td></tr>
+<tr><td>62</td><td>29.2</td><td>Karnataka: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.KA.reg</td></tr>
+<tr><td>63</td><td>36.4</td><td>Karnataka: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.KA.nossb</td></tr>
+<tr><td>64</td><td>32.8</td><td>Maharashtra: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.MH.reg</td></tr>
+<tr><td>65</td><td>45.0</td><td>Maharashtra: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.MH.nossb</td></tr>
+<tr><td>66</td><td>40.0</td><td>Kerala: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.KL.reg</td></tr>
+<tr><td>67</td><td>59.4</td><td>Kerala: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.KL.nossb</td></tr>
+<tr><td>68</td><td>23.6</td><td>Andhra Pradesh: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.AP.reg</td></tr>
+<tr><td>69</td><td>53.7</td><td>Andhra Pradesh: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.AP.nossb</td></tr>
+<tr><td>70</td><td>27.1</td><td>Telangana: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.TG.reg</td></tr>
+<tr><td>71</td><td>43.0</td><td>Telangana: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.TG.nossb</td></tr>
+<tr><td>72</td><td>15.0</td><td>Odisha: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.OD.reg</td></tr>
+<tr><td>73</td><td>50.2</td><td>Odisha: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.OD.nossb</td></tr>
+<tr><td>74</td><td>13.7</td><td>Jharkhand: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.JH.reg</td></tr>
+<tr><td>75</td><td>56.4</td><td>Jharkhand: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.JH.nossb</td></tr>
+<tr><td>76</td><td>12.0</td><td>Bihar: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.BR.reg</td></tr>
+<tr><td>77</td><td>61.3</td><td>Bihar: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.BR.nossb</td></tr>
+<tr><td>78</td><td>17.9</td><td>Assam: regular wage/salaried share of all workers, usual status, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (19), rural+urban, persons, column 4</td><td>2025</td><td>F3.AS.reg</td></tr>
+<tr><td>79</td><td>51.4</td><td>Assam: regular non-farm employees with no social security benefit, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (36), rural+urban, persons</td><td>2025</td><td>F3.AS.nossb</td></tr>
+<tr><td>80</td><td>11.4</td><td>West Bengal: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.WB.ur</td></tr>
+<tr><td>81</td><td>21.5</td><td>West Bengal: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.WB.ur.f</td></tr>
+<tr><td>82</td><td>7.7</td><td>West Bengal: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.WB.ur.m</td></tr>
+<tr><td>83</td><td>40.2</td><td>West Bengal: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.WB.lfpr.f</td></tr>
+<tr><td>84</td><td>2.8</td><td>West Bengal: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.WB.all</td></tr>
+<tr><td>85</td><td>4.92</td><td>West Bengal: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.WB.rse</td></tr>
+<tr><td>86</td><td>2.5–3.1</td><td>West Bengal: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.WB.ci</td></tr>
+<tr><td>87</td><td>11.2</td><td>Tamil Nadu: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TN.ur</td></tr>
+<tr><td>88</td><td>14.0</td><td>Tamil Nadu: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TN.ur.f</td></tr>
+<tr><td>89</td><td>9.8</td><td>Tamil Nadu: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TN.ur.m</td></tr>
+<tr><td>90</td><td>44.5</td><td>Tamil Nadu: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.TN.lfpr.f</td></tr>
+<tr><td>91</td><td>3.4</td><td>Tamil Nadu: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.TN.all</td></tr>
+<tr><td>92</td><td>5.07</td><td>Tamil Nadu: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.TN.rse</td></tr>
+<tr><td>93</td><td>3.1–3.7</td><td>Tamil Nadu: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.TN.ci</td></tr>
+<tr><td>94</td><td>7.9</td><td>Karnataka: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KA.ur</td></tr>
+<tr><td>95</td><td>13.2</td><td>Karnataka: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KA.ur.f</td></tr>
+<tr><td>96</td><td>5.9</td><td>Karnataka: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KA.ur.m</td></tr>
+<tr><td>97</td><td>41.8</td><td>Karnataka: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.KA.lfpr.f</td></tr>
+<tr><td>98</td><td>2.3</td><td>Karnataka: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.KA.all</td></tr>
+<tr><td>99</td><td>6.36</td><td>Karnataka: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.KA.rse</td></tr>
+<tr><td>100</td><td>2.0–2.6</td><td>Karnataka: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.KA.ci</td></tr>
+<tr><td>101</td><td>6.8</td><td>Maharashtra: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.MH.ur</td></tr>
+<tr><td>102</td><td>8.8</td><td>Maharashtra: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.MH.ur.f</td></tr>
+<tr><td>103</td><td>6.2</td><td>Maharashtra: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.MH.ur.m</td></tr>
+<tr><td>104</td><td>38.8</td><td>Maharashtra: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.MH.lfpr.f</td></tr>
+<tr><td>105</td><td>2.4</td><td>Maharashtra: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.MH.all</td></tr>
+<tr><td>106</td><td>6.46</td><td>Maharashtra: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.MH.rse</td></tr>
+<tr><td>107</td><td>2.1–2.7</td><td>Maharashtra: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.MH.ci</td></tr>
+<tr><td>108</td><td>13.1</td><td>Kerala: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KL.ur</td></tr>
+<tr><td>109</td><td>18.0</td><td>Kerala: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KL.ur.f</td></tr>
+<tr><td>110</td><td>8.8</td><td>Kerala: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.KL.ur.m</td></tr>
+<tr><td>111</td><td>53.7</td><td>Kerala: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.KL.lfpr.f</td></tr>
+<tr><td>112</td><td>4.4</td><td>Kerala: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.KL.all</td></tr>
+<tr><td>113</td><td>5.35</td><td>Kerala: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.KL.rse</td></tr>
+<tr><td>114</td><td>3.9–4.9</td><td>Kerala: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.KL.ci</td></tr>
+<tr><td>115</td><td>21.6</td><td>Andhra Pradesh: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AP.ur</td></tr>
+<tr><td>116</td><td>30.3</td><td>Andhra Pradesh: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AP.ur.f</td></tr>
+<tr><td>117</td><td>18.5</td><td>Andhra Pradesh: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AP.ur.m</td></tr>
+<tr><td>118</td><td>44.1</td><td>Andhra Pradesh: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.AP.lfpr.f</td></tr>
+<tr><td>119</td><td>4.2</td><td>Andhra Pradesh: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.AP.all</td></tr>
+<tr><td>120</td><td>4.70</td><td>Andhra Pradesh: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.AP.rse</td></tr>
+<tr><td>121</td><td>3.8–4.6</td><td>Andhra Pradesh: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.AP.ci</td></tr>
+<tr><td>122</td><td>17.6</td><td>Telangana: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TG.ur</td></tr>
+<tr><td>123</td><td>26.5</td><td>Telangana: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TG.ur.f</td></tr>
+<tr><td>124</td><td>14.3</td><td>Telangana: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.TG.ur.m</td></tr>
+<tr><td>125</td><td>43.3</td><td>Telangana: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.TG.lfpr.f</td></tr>
+<tr><td>126</td><td>5.0</td><td>Telangana: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.TG.all</td></tr>
+<tr><td>127</td><td>5.38</td><td>Telangana: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.TG.rse</td></tr>
+<tr><td>128</td><td>4.5–5.5</td><td>Telangana: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.TG.ci</td></tr>
+<tr><td>129</td><td>16.0</td><td>Odisha: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.OD.ur</td></tr>
+<tr><td>130</td><td>27.2</td><td>Odisha: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.OD.ur.f</td></tr>
+<tr><td>131</td><td>11.6</td><td>Odisha: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.OD.ur.m</td></tr>
+<tr><td>132</td><td>43.7</td><td>Odisha: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.OD.lfpr.f</td></tr>
+<tr><td>133</td><td>2.9</td><td>Odisha: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.OD.all</td></tr>
+<tr><td>134</td><td>6.22</td><td>Odisha: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.OD.rse</td></tr>
+<tr><td>135</td><td>2.5–3.3</td><td>Odisha: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.OD.ci</td></tr>
+<tr><td>136</td><td>13.8</td><td>Jharkhand: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.JH.ur</td></tr>
+<tr><td>137</td><td>20.1</td><td>Jharkhand: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.JH.ur.f</td></tr>
+<tr><td>138</td><td>12.0</td><td>Jharkhand: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.JH.ur.m</td></tr>
+<tr><td>139</td><td>35.6</td><td>Jharkhand: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.JH.lfpr.f</td></tr>
+<tr><td>140</td><td>2.7</td><td>Jharkhand: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.JH.all</td></tr>
+<tr><td>141</td><td>9.48</td><td>Jharkhand: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.JH.rse</td></tr>
+<tr><td>142</td><td>2.2–3.2</td><td>Jharkhand: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.JH.ci</td></tr>
+<tr><td>143</td><td>18.1</td><td>Bihar: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.BR.ur</td></tr>
+<tr><td>144</td><td>36.4</td><td>Bihar: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.BR.ur.f</td></tr>
+<tr><td>145</td><td>15.2</td><td>Bihar: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.BR.ur.m</td></tr>
+<tr><td>146</td><td>24.5</td><td>Bihar: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.BR.lfpr.f</td></tr>
+<tr><td>147</td><td>3.8</td><td>Bihar: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.BR.all</td></tr>
+<tr><td>148</td><td>5.33</td><td>Bihar: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.BR.rse</td></tr>
+<tr><td>149</td><td>3.4–4.2</td><td>Bihar: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.BR.ci</td></tr>
+<tr><td>150</td><td>13.0</td><td>Assam: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AS.ur</td></tr>
+<tr><td>151</td><td>22.8</td><td>Assam: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AS.ur.f</td></tr>
+<tr><td>152</td><td>8.8</td><td>Assam: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.AS.ur.m</td></tr>
+<tr><td>153</td><td>53.2</td><td>Assam: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.AS.lfpr.f</td></tr>
+<tr><td>154</td><td>3.7</td><td>Assam: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.AS.all</td></tr>
+<tr><td>155</td><td>6.47</td><td>Assam: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.AS.rse</td></tr>
+<tr><td>156</td><td>3.2–4.2</td><td>Assam: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.AS.ci</td></tr>
+<tr><td>157</td><td>7.1</td><td>Sikkim: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.SK.ur</td></tr>
+<tr><td>158</td><td>13.4</td><td>Sikkim: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.SK.ur.f</td></tr>
+<tr><td>159</td><td>2.8</td><td>Sikkim: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.SK.ur.m</td></tr>
+<tr><td>160</td><td>67.2</td><td>Sikkim: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.SK.lfpr.f</td></tr>
+<tr><td>161</td><td>3.2</td><td>Sikkim: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.SK.all</td></tr>
+<tr><td>162</td><td>17.42</td><td>Sikkim: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.SK.rse</td></tr>
+<tr><td>163</td><td>2.1–4.3</td><td>Sikkim: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.SK.ci</td></tr>
+<tr><td>164</td><td>11.2</td><td>all India: unemployment rate, graduates, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.IN.ur</td></tr>
+<tr><td>165</td><td>17.4</td><td>all India: unemployment rate, graduates, age 15+, female, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.IN.ur.f</td></tr>
+<tr><td>166</td><td>9.0</td><td>all India: unemployment rate, graduates, age 15+, male, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban</td><td>2025</td><td>F4.IN.ur.m</td></tr>
+<tr><td>167</td><td>39.2</td><td>all India: labour force participation rate, women graduates, age 15+, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (22), rural+urban, female</td><td>2025</td><td>F4.IN.lfpr.f</td></tr>
+<tr><td>168</td><td>3.1</td><td>all India: unemployment rate, all education levels, age 15+, persons, 2025 (%)</td><td><a href="#src-3">[3]</a> Appendix A, Table (24), rural+urban, persons</td><td>2025</td><td>F4.IN.all</td></tr>
+<tr><td>169</td><td>1.37</td><td>all India: published RSE of the all-education unemployment rate, age 15+, persons (%)</td><td><a href="#src-3">[3]</a> Appendix B, Table (1RSE), rural+urban, age 15+ (report page B-8)</td><td>2025</td><td>F4.IN.rse</td></tr>
+<tr><td>170</td><td>3.0–3.2</td><td>all India: 95% range of the all-education unemployment rate = rate x (1 +/- 1.96 x RSE)</td><td><a href="#src-3">[3]</a> derived from Table (24) and Table (1RSE)</td><td>2025</td><td>F4.IN.ci</td></tr>
+<tr><td>171</td><td>True</td><td>Women graduates&#x27; unemployment rate is above men&#x27;s in every state in the set and in India</td><td><a href="#src-3">[3]</a> Appendix A, Table (24)</td><td>2025</td><td>F4.women_higher_everywhere</td></tr>
+<tr><td>172</td><td>₹16,618</td><td>West Bengal: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.WB</td></tr>
+<tr><td>173</td><td>₹11,528</td><td>West Bengal: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.WB.f</td></tr>
+<tr><td>174</td><td>₹18,604</td><td>West Bengal: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.WB.m</td></tr>
+<tr><td>175</td><td>₹23,798</td><td>Tamil Nadu: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TN</td></tr>
+<tr><td>176</td><td>₹19,087</td><td>Tamil Nadu: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TN.f</td></tr>
+<tr><td>177</td><td>₹26,216</td><td>Tamil Nadu: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TN.m</td></tr>
+<tr><td>178</td><td>₹26,266</td><td>Karnataka: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KA</td></tr>
+<tr><td>179</td><td>₹21,371</td><td>Karnataka: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KA.f</td></tr>
+<tr><td>180</td><td>₹28,656</td><td>Karnataka: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KA.m</td></tr>
+<tr><td>181</td><td>₹27,169</td><td>Maharashtra: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.MH</td></tr>
+<tr><td>182</td><td>₹21,647</td><td>Maharashtra: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.MH.f</td></tr>
+<tr><td>183</td><td>₹29,076</td><td>Maharashtra: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.MH.m</td></tr>
+<tr><td>184</td><td>₹25,443</td><td>Kerala: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KL</td></tr>
+<tr><td>185</td><td>₹21,513</td><td>Kerala: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KL.f</td></tr>
+<tr><td>186</td><td>₹28,415</td><td>Kerala: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.KL.m</td></tr>
+<tr><td>187</td><td>₹22,511</td><td>Andhra Pradesh: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AP</td></tr>
+<tr><td>188</td><td>₹17,025</td><td>Andhra Pradesh: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AP.f</td></tr>
+<tr><td>189</td><td>₹24,797</td><td>Andhra Pradesh: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AP.m</td></tr>
+<tr><td>190</td><td>₹27,052</td><td>Telangana: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TG</td></tr>
+<tr><td>191</td><td>₹21,179</td><td>Telangana: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TG.f</td></tr>
+<tr><td>192</td><td>₹29,301</td><td>Telangana: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.TG.m</td></tr>
+<tr><td>193</td><td>₹19,459</td><td>Odisha: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.OD</td></tr>
+<tr><td>194</td><td>₹14,388</td><td>Odisha: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.OD.f</td></tr>
+<tr><td>195</td><td>₹21,477</td><td>Odisha: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.OD.m</td></tr>
+<tr><td>196</td><td>₹22,839</td><td>Jharkhand: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.JH</td></tr>
+<tr><td>197</td><td>₹15,990</td><td>Jharkhand: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.JH.f</td></tr>
+<tr><td>198</td><td>₹24,175</td><td>Jharkhand: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.JH.m</td></tr>
+<tr><td>199</td><td>₹20,135</td><td>Bihar: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.BR</td></tr>
+<tr><td>200</td><td>₹16,924</td><td>Bihar: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.BR.f</td></tr>
+<tr><td>201</td><td>₹20,777</td><td>Bihar: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.BR.m</td></tr>
+<tr><td>202</td><td>₹18,816</td><td>Assam: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AS</td></tr>
+<tr><td>203</td><td>₹14,046</td><td>Assam: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AS.f</td></tr>
+<tr><td>204</td><td>₹21,002</td><td>Assam: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.AS.m</td></tr>
+<tr><td>205</td><td>₹23,585</td><td>Sikkim: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.SK</td></tr>
+<tr><td>206</td><td>₹19,149</td><td>Sikkim: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.SK.f</td></tr>
+<tr><td>207</td><td>₹26,319</td><td>Sikkim: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.SK.m</td></tr>
+<tr><td>208</td><td>₹22,699</td><td>all India: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, persons, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.IN</td></tr>
+<tr><td>209</td><td>₹18,353</td><td>all India: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, women, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.IN.f</td></tr>
+<tr><td>210</td><td>₹24,217</td><td>all India: average monthly earnings of regular wage/salaried employees, CWS, rural+urban, men, 2025 (Rs)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38), CWS (report page A-237)</td><td>2025</td><td>F5.IN.m</td></tr>
+<tr><td>211</td><td>₹28,802</td><td>Greater Visakhapatnam MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Greater Visakhapatnam MC</td></tr>
+<tr><td>212</td><td>₹22,859</td><td>Vijayawada MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Vijayawada MC</td></tr>
+<tr><td>213</td><td>₹28,443</td><td>Patna MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Patna MC</td></tr>
+<tr><td>214</td><td>₹26,377</td><td>Dhanbad MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Dhanbad MC</td></tr>
+<tr><td>215</td><td>₹36,332</td><td>Ranchi MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Ranchi MC</td></tr>
+<tr><td>216</td><td>₹34,323</td><td>Bengaluru MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Bengaluru MC</td></tr>
+<tr><td>217</td><td>₹29,511</td><td>Chhatrapati Sambhajinagar MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Chhatrapati Sambhajinagar MC</td></tr>
+<tr><td>218</td><td>₹36,267</td><td>Greater Mumbai MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Greater Mumbai MC</td></tr>
+<tr><td>219</td><td>₹32,827</td><td>Kalyan-Dombivli MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Kalyan-Dombivli MC</td></tr>
+<tr><td>220</td><td>₹25,145</td><td>Nagpur MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Nagpur MC</td></tr>
+<tr><td>221</td><td>₹24,721</td><td>Nashik MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Nashik MC</td></tr>
+<tr><td>222</td><td>₹51,515</td><td>Navi Mumbai MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Navi Mumbai MC</td></tr>
+<tr><td>223</td><td>₹32,987</td><td>Pimpri Chinchwad MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Pimpri Chinchwad MC</td></tr>
+<tr><td>224</td><td>₹30,670</td><td>Pune MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Pune MC</td></tr>
+<tr><td>225</td><td>₹27,173</td><td>Thane MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Thane MC</td></tr>
+<tr><td>226</td><td>₹26,031</td><td>Vasai Virar MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Vasai Virar MC</td></tr>
+<tr><td>227</td><td>₹28,955</td><td>Chennai MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Chennai MC</td></tr>
+<tr><td>228</td><td>₹29,537</td><td>Coimbatore MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Coimbatore MC</td></tr>
+<tr><td>229</td><td>₹20,580</td><td>Madurai MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Madurai MC</td></tr>
+<tr><td>230</td><td>₹31,153</td><td>Greater Hyderabad MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Greater Hyderabad MC</td></tr>
+<tr><td>231</td><td>₹23,078</td><td>Howrah MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Howrah MC</td></tr>
+<tr><td>232</td><td>₹19,093</td><td>Kolkata MC: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.Kolkata MC</td></tr>
+<tr><td>233</td><td>₹28,808</td><td>all million-plus cities: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.all million-plus cities</td></tr>
+<tr><td>234</td><td>₹26,258</td><td>urban India: average monthly earnings of regular wage/salaried employees, CWS, persons, 2025 (Rs)</td><td><a href="#src-4">[4]</a> Table 8 (report page B-28)</td><td>2025</td><td>F5.city.urban India</td></tr>
+<tr><td>235</td><td>₹13,784</td><td>Kolkata MC: average monthly earnings of regular employees, women (Rs)</td><td><a href="#src-4">[4]</a> Table 8</td><td>2025</td><td>F5.city.Kolkata.f</td></tr>
+<tr><td>236</td><td>4,88,262</td><td>West Bengal EPFO net payroll, all ages, FY2022-23</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band, all six bands</td><td>FY2023-24 and FY2024-25</td><td>WB.all.2022-23</td></tr>
+<tr><td>237</td><td>4,76,439</td><td>West Bengal EPFO net payroll, all ages, FY2023-24</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band, all six bands</td><td>FY2023-24 and FY2024-25</td><td>WB.all.2023-24</td></tr>
+<tr><td>238</td><td>4,57,697</td><td>West Bengal EPFO net payroll, all ages, FY2024-25</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band, all six bands</td><td>FY2023-24 and FY2024-25</td><td>WB.all.2024-25</td></tr>
+<tr><td>239</td><td>2,12,064</td><td>West Bengal EPFO net payroll, ages 18-25, FY2024-25</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band</td><td>FY2023-24 and FY2024-25</td><td>WB.1825.2024-25</td></tr>
+<tr><td>240</td><td>1,12,691</td><td>West Bengal EPFO net payroll, ages 22-25, FY2024-25</td><td><a href="#src-2">[2]</a> State-wise net payroll, age band 22-25</td><td>FY2023-24 and FY2024-25</td><td>WB.2225.2024-25</td></tr>
+<tr><td>241</td><td>2,44,180</td><td>West Bengal EPFO net payroll, ages 26 and over, FY2024-25</td><td><a href="#src-2">[2]</a> State-wise net payroll, bands 26-28, 29-35, 35+</td><td>FY2023-24 and FY2024-25</td><td>WB.26plus.2024-25</td></tr>
+<tr><td>242</td><td>458,000</td><td>West Bengal EPFO net payroll, all ages, FY2024-25, rounded to the nearest thousand (the circulating &#x27;458,000&#x27;)</td><td><a href="#src-2">[2]</a> State-wise net payroll by age band, all six bands</td><td>FY2023-24 and FY2024-25</td><td>WB.458k</td></tr>
+<tr><td>243</td><td>46</td><td>Number of million-plus cities with a regular wage estimate in Table 8</td><td><a href="#src-4">[4]</a> Table 8</td><td>2025</td><td>F5.cities.count</td></tr>
+<tr><td>244</td><td>35</td><td>Number of States/UTs ranked in PLFS Table 38 (excluding all India)</td><td><a href="#src-3">[3]</a> Appendix A, Table (38)</td><td>2025</td><td>F5.states.count</td></tr>
+<tr><td>245</td><td>289</td><td>Checks in state-jobs-gap&#x27;s validation log at d8703d6, all PASS</td><td><a href="#src-3">[3]</a> state-jobs-gap report/validation_log.csv (processing record, not a statistic)</td><td>2025</td><td>META.sjg_checks</td></tr>
+<!-- END:sources_rows -->
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <h3 style="margin-top:20px">How to cite this report</h3>
+    <p class="cite">Ahamed, S. (2026). From Degree to Payroll: Where young Indians find formal jobs, state by state. enaasan.online Research Report No. 3. https://enaasan.online/reports/degree-to-payroll/</p>
+    <h3 style="margin-top:20px">Corrections</h3>
+    <p>None yet. If you spot an error, <a href="/about.html#contact" style="color:var(--gold)">tell us</a> and we will correct it here, publicly, with the date.</p>
+  </section>
+
+  <!-- ═══ SUMMARIES IN TAMIL, TELUGU, HINDI — drafts, to be checked by the language reviewers ═══ -->
+  <section aria-labelledby="langs">
+    <h2 id="langs">Summary in other languages</h2>
+    <p style="font-size:0.88rem">These summaries are drafts written with AI assistance. They have not yet been checked by our language reviewers and should not be quoted until they are.</p>
+    <div class="lang-summaries">
+      <div class="lang-summary" lang="ta">
+        <span class="draft-flag" lang="en">Draft — awaiting Tamil reviewer (TBD)</span>
+        <h3>தமிழில் சுருக்கம்</h3>
+        <p>2023-24 இல், 18–23 வயதுடைய ஒவ்வொரு 100 பேருக்கும், மகாராஷ்டிரா 11.1 இளைஞர்களை முறைசார் ஊதியப் பட்டியலில் (EPFO) சேர்த்தது; தமிழ்நாடு 9.7, மேற்கு வங்கம் 2.1, பீகார் 0.3. இது வேலை வாய்ப்பு விகிதம் அல்ல, ஒரு ஒப்பீட்டு விகிதம் மட்டுமே. பட்டதாரிகளின் வேலையின்மை ஆந்திரப் பிரதேசத்தில் 21.6%, தமிழ்நாட்டில் 11.2%; ஒப்பிட்ட எல்லா மாநிலங்களிலும் பெண் பட்டதாரிகளின் வேலையின்மை ஆண்களை விட அதிகம். வழக்கமான ஊழியர்களின் சராசரி மாத ஊதியம் மகாராஷ்டிராவில் ₹27,169, தமிழ்நாட்டில் ₹23,798.</p>
+      </div>
+      <div class="lang-summary" lang="te">
+        <span class="draft-flag" lang="en">Draft — awaiting review by Vijaya</span>
+        <h3>తెలుగులో సారాంశం</h3>
+        <p>2023-24లో, 18–23 ఏళ్ల వయసున్న ప్రతి 100 మందికి, మహారాష్ట్ర 11.1 మంది యువతను అధికారిక పేరోల్‌లో (EPFO) చేర్చింది; తెలంగాణ 10.3, ఆంధ్రప్రదేశ్ 2.3, పశ్చిమ బెంగాల్ 2.1. ఇది ఉద్యోగ నియామక రేటు కాదు, ఒక నిష్పత్తి మాత్రమే. పట్టభద్రుల నిరుద్యోగం ఆంధ్రప్రదేశ్‌లో 21.6%, తెలంగాణలో 17.6%; పోల్చిన అన్ని రాష్ట్రాల్లో మహిళా పట్టభద్రుల నిరుద్యోగం పురుషుల కంటే ఎక్కువ. సాధారణ ఉద్యోగుల సగటు నెల జీతం తెలంగాణలో ₹27,052, ఆంధ్రప్రదేశ్‌లో ₹22,511.</p>
+      </div>
+      <div class="lang-summary" lang="hi">
+        <span class="draft-flag" lang="en">Draft — awaiting review by Shafi</span>
+        <h3>हिंदी में सारांश</h3>
+        <p>2023-24 में, 18–23 वर्ष के हर 100 लोगों पर महाराष्ट्र ने 11.1 युवाओं को औपचारिक पेरोल (EPFO) में जोड़ा; पश्चिम बंगाल ने 2.1 और बिहार ने 0.3. यह नौकरी मिलने की दर नहीं, केवल एक अनुपात है. स्नातकों में बेरोज़गारी आंध्र प्रदेश में 21.6% और बिहार में 18.1% है; तुलना किए गए हर राज्य में महिला स्नातकों की बेरोज़गारी पुरुषों से अधिक है. नियमित कर्मचारियों की औसत मासिक कमाई महाराष्ट्र में ₹27,169 और बिहार में ₹20,135 है.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="note" style="margin-top:48px">enaasan.online is a free career guidance platform for students and parents. Every statistic in this report comes from the official publications listed in the sources section. If you find an error or outdated figure, please <a href="/about.html#contact" style="color:var(--gold)">tell us</a>.</p>
+</main>
+
+<aside class="author-box" aria-label="About the author">
+<p class="author-box-line"><strong>Conceptualised, reviewed and published by <a href="/author/siddique-ahamed/" rel="author">Siddique Ahamed</a>.</strong> Drafted with AI assistance.</p>
+<p class="author-box-note"><a href="/author/siddique-ahamed/">About the author</a> &middot; Found something wrong or outdated? <a href="/about.html#contact">Let us know</a>.</p>
+</aside>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/reports/">Research Reports</a>
+    <a href="/careers.html">Career Compass</a>
+    <a href="/guide.html">Guidance Hub</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms &amp; Disclaimer</a>
+  </div>
+  <div class="footer-copy">© 2026 Enaasan. Free to read and share for personal and educational use.</div>
+</footer>
+<script src="../../theme.js"></script>
+</body>
+</html>
