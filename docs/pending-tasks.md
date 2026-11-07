@@ -73,7 +73,6 @@ Shipped since the previous snapshot (2026-07-12): FAQ page, robots.txt + IndexNo
 
 ## Non-issue pending items
 
-- **`docs/career-choice-gap-draft.md`** — untracked Markdown draft of Report No. 2, older than the published page (no author's note). Superseded; delete unless you want to keep it
 - **v1.1 PDF rebrand** — compact site PDF at `assets/enaasan-90-day-career-clarity-plan.pdf` still has the dark cover; decide whether to regenerate with the light cover
 
 ## Milestone progress
