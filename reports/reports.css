@@ -124,6 +124,7 @@ footer { background: var(--ink); border-top: 1px solid var(--border); padding: 4
 .num-table td, .num-table th { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .num-table td:first-child, .num-table th:first-child { text-align: left; }
 .num-table { min-width: 0; }
+.num-table th { white-space: normal; vertical-align: bottom; min-width: 5.5rem; }
 .up { color: #3DB36E; } .down { color: #E8604C; }
 .cite { font-family: 'DM Mono', monospace; font-size: 0.8rem; padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--ink); color: var(--chalk); overflow-wrap: anywhere; }
 @media (max-width: 480px) { .bar-row { grid-template-columns: 1fr; gap: 3px; } }
