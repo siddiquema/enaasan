@@ -4,9 +4,6 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
-<!-- DRAFT under the OPS-001 review gate. Keep noindex until the 48-hour cooling period and number check are done
-     (docs/research-reports.md, step 7). Every number below is in data/validation_log.csv; run data/recompute.py after any edit. -->
-<meta name="robots" content="noindex, nofollow"/>
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg"/>
 <title>From Degree to Payroll — Enaasan Research Report No. 3</title>
 <meta name="description" content="Formal-payroll entry per 100 young people ranges from 11.1 in Maharashtra to 0.3 in Bihar (EPFO, AISHE 2023-24). State-by-state guide for students and parents."/>
@@ -21,7 +18,7 @@
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="627"/>
 <meta property="og:image:alt" content="Bar chart of formal-payroll entry per 100 people aged 18 to 23 in 2023-24: Maharashtra 11.1, Karnataka 10.8, Telangana 10.3, Tamil Nadu 9.7, Kerala 2.8, Andhra Pradesh 2.3, West Bengal 2.1, Odisha 1.9, Jharkhand 1.0, Assam 0.7, Bihar 0.3."/>
-<meta property="article:published_time" content="2026-11-07"/>
+<meta property="article:published_time" content="2026-11-15"/>
 <meta property="article:author" content="Siddique Ahamed"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="From Degree to Payroll — Enaasan Research Report No. 3"/>
@@ -38,8 +35,8 @@
   "description": "State-by-state comparison of graduate out-turn (AISHE), formal-payroll entry (EPFO), graduate unemployment and regular-job pay (PLFS 2025) for families choosing a course and a place to work.",
   "url": "https://enaasan.online/reports/degree-to-payroll/",
   "reportNumber": "3",
-  "datePublished": "2026-11-07",
-  "dateModified": "2026-11-07",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15",
   "inLanguage": "en",
   "author": { "@type": "Person", "name": "Siddique Ahamed", "url": "https://enaasan.online/author/siddique-ahamed/" },
   "publisher": { "@type": "Organization", "name": "enaasan", "url": "https://enaasan.online/" },
@@ -98,7 +95,6 @@
   [lang="hi"] { font-family: 'Noto Sans Devanagari', 'DM Sans', sans-serif; }
   .caveat { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--ink); font-size: 0.86rem; }
   .caveat strong { color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
-  .draft-flag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; border: 1px dashed var(--gold); color: var(--gold); margin-bottom: 8px; }
   .num-table.wrap td { white-space: normal; }
   .numbers-table { font-size: 0.78rem; }
   .numbers-table td:nth-child(2) { white-space: nowrap; color: var(--chalk); font-variant-numeric: tabular-nums; }
@@ -119,7 +115,6 @@
 <link href="/css/author-box.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="template-banner no-print">DRAFT — under review (OPS-001 48-hour gate). Not yet published or listed. Tamil, Telugu and Hindi summaries await reviewers.</div>
 <script>
   fetch('/components/cookie-consent.html').then(r => r.text()).then(h => {
     const t = document.createElement('div'); t.innerHTML = h;
@@ -158,7 +153,7 @@
     <a class="btn btn-ghost no-print" href="#sources">Methodology &amp; sources</a>
     <span>Author: Siddique Ahamed</span>
     <span>Data: AISHE 2023-24, EPFO payroll, PLFS 2025</span>
-    <span>Draft, November 2026</span>
+    <span>Published 15 November 2026</span>
   </div>
 
   <!-- ═══ EXECUTIVE SUMMARY ═══ -->
@@ -492,10 +487,6 @@
       <p style="margin-top:12px;font-size:0.85rem">EPFO state-wise net payroll by age band, release of 20 Sep 2025 <a href="#src-2">[2]</a>. Data file: <code>epfo_statewise_net_payroll.csv</code>.</p>
     </article>
 
-    <aside class="opinion" aria-label="Practitioner view">
-      <p class="finding-num">Practitioner view <span class="tag tag-opinion">Opinion — not data</span></p>
-      <p><em class="ph">[Siddique Ahamed to write: commentary from hiring experience, in the first person. No numbers unless they come from a cited source above.]</em></p>
-    </aside>
   </section>
 
   <!-- ═══ ACTION ═══ -->
@@ -819,28 +810,6 @@
     <p>None yet. If you spot an error, <a href="/about.html#contact" style="color:var(--gold)">tell us</a> and we will correct it here, publicly, with the date.</p>
   </section>
 
-  <!-- ═══ SUMMARIES IN TAMIL, TELUGU, HINDI — drafts, to be checked by the language reviewers ═══ -->
-  <section aria-labelledby="langs">
-    <h2 id="langs">Summary in other languages</h2>
-    <p style="font-size:0.88rem">These summaries are drafts written with AI assistance. They have not yet been checked by our language reviewers and should not be quoted until they are.</p>
-    <div class="lang-summaries">
-      <div class="lang-summary" lang="ta">
-        <span class="draft-flag" lang="en">Draft — awaiting Tamil reviewer (TBD)</span>
-        <h3>தமிழில் சுருக்கம்</h3>
-        <p>2023-24 இல், 18–23 வயதுடைய ஒவ்வொரு 100 பேருக்கும், மகாராஷ்டிரா 11.1 இளைஞர்களை முறைசார் ஊதியப் பட்டியலில் (EPFO) சேர்த்தது; தமிழ்நாடு 9.7, மேற்கு வங்கம் 2.1, பீகார் 0.3. இது வேலை வாய்ப்பு விகிதம் அல்ல, ஒரு ஒப்பீட்டு விகிதம் மட்டுமே. பட்டதாரிகளின் வேலையின்மை ஆந்திரப் பிரதேசத்தில் 21.6%, தமிழ்நாட்டில் 11.2%; ஒப்பிட்ட எல்லா மாநிலங்களிலும் பெண் பட்டதாரிகளின் வேலையின்மை ஆண்களை விட அதிகம். வழக்கமான ஊழியர்களின் சராசரி மாத ஊதியம் மகாராஷ்டிராவில் ₹27,169, தமிழ்நாட்டில் ₹23,798.</p>
-      </div>
-      <div class="lang-summary" lang="te">
-        <span class="draft-flag" lang="en">Draft — awaiting review by Vijaya</span>
-        <h3>తెలుగులో సారాంశం</h3>
-        <p>2023-24లో, 18–23 ఏళ్ల వయసున్న ప్రతి 100 మందికి, మహారాష్ట్ర 11.1 మంది యువతను అధికారిక పేరోల్‌లో (EPFO) చేర్చింది; తెలంగాణ 10.3, ఆంధ్రప్రదేశ్ 2.3, పశ్చిమ బెంగాల్ 2.1. ఇది ఉద్యోగ నియామక రేటు కాదు, ఒక నిష్పత్తి మాత్రమే. పట్టభద్రుల నిరుద్యోగం ఆంధ్రప్రదేశ్‌లో 21.6%, తెలంగాణలో 17.6%; పోల్చిన అన్ని రాష్ట్రాల్లో మహిళా పట్టభద్రుల నిరుద్యోగం పురుషుల కంటే ఎక్కువ. సాధారణ ఉద్యోగుల సగటు నెల జీతం తెలంగాణలో ₹27,052, ఆంధ్రప్రదేశ్‌లో ₹22,511.</p>
-      </div>
-      <div class="lang-summary" lang="hi">
-        <span class="draft-flag" lang="en">Draft — awaiting review by Shafi</span>
-        <h3>हिंदी में सारांश</h3>
-        <p>2023-24 में, 18–23 वर्ष के हर 100 लोगों पर महाराष्ट्र ने 11.1 युवाओं को औपचारिक पेरोल (EPFO) में जोड़ा; पश्चिम बंगाल ने 2.1 और बिहार ने 0.3. यह नौकरी मिलने की दर नहीं, केवल एक अनुपात है. स्नातकों में बेरोज़गारी आंध्र प्रदेश में 21.6% और बिहार में 18.1% है; तुलना किए गए हर राज्य में महिला स्नातकों की बेरोज़गारी पुरुषों से अधिक है. नियमित कर्मचारियों की औसत मासिक कमाई महाराष्ट्र में ₹27,169 और बिहार में ₹20,135 है.</p>
-      </div>
-    </div>
-  </section>
 
   <p class="note" style="margin-top:48px">enaasan.online is a free career guidance platform for students and parents. Every statistic in this report comes from the official publications listed in the sources section. If you find an error or outdated figure, please <a href="/about.html#contact" style="color:var(--gold)">tell us</a>.</p>
 </main>

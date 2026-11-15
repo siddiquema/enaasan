@@ -45,3 +45,4 @@
 # Review gate (48-hour, OPS-001)
 48
 001
+# Publication date (Published 15 November 2026)

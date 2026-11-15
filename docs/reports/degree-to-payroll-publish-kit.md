@@ -1,4 +1,6 @@
-# Report No. 3 — publish kit (held back until the review gate clears)
+# Report No. 3 — publish kit
+
+**Status 15 Nov 2026:** page, card, sitemap and PDF prepared for publication on **15 Nov 2026** (branch `report/degree-to-payroll`). Publishing = merging this branch to `main`; IndexNow runs on merge. Then post section 4.
 
 Report: `reports/degree-to-payroll/` (branch `report/degree-to-payroll`). Draft finished 7 Nov 2026.
 Per `docs/research-reports.md` step 7 and OPS-001 §5, the earliest review is **9 Nov 2026** (48-hour cooling period).
@@ -6,13 +8,13 @@ Nothing in this file is live. Apply it only after the review below passes.
 
 ## 1. Before publishing — open items
 
-- [ ] **Practitioner view** box: Siddique to write (the only `class="ph"` left on the page). Keep the "Opinion — not data" label; no uncited numbers.
-- [ ] **Language reviewers:** Tamil (reviewer TBD), Telugu (Vijaya), Hindi (Shafi) to check or rewrite the draft summaries. They currently carry a "Draft — awaiting review" flag and a note saying not to quote them. After review, remove the flags and the note.
-- [ ] **Review gate:** check every number against its source table, using `reports/degree-to-payroll/data/validation_log.csv` (one row per number) and the PDFs it cites. Rerun `python -P reports/degree-to-payroll/data/recompute.py` after any text edit.
-- [ ] Set `datePublished` / `dateModified` / `article:published_time` to the real publication date, and change "Draft, November 2026" in the meta row to "Published …".
-- [ ] Remove `<meta name="robots" content="noindex, nofollow"/>` and the DRAFT banner (`<div class="template-banner …">`).
-- [ ] Regenerate the PDF after the edits above (it currently carries the draft banner and the practitioner placeholder).
-- [ ] Add the card and sitemap entry below; IndexNow runs on merge to `main`.
+- [x] **Practitioner view** box: removed for launch (as Reports 1 and 2). Can be added later as a dated update; keep the "Opinion — not data" label and no uncited numbers. Previous placeholder markup is in commit `eadb02c`.
+- [x] **Language summaries:** removed for launch (English only, as Reports 1 and 2). The drafts are in commit `eadb02c` (section `#langs`); restore after Tamil (TBD), Telugu (Vijaya) and Hindi (Shafi) review, and log it under Corrections/updates.
+- [x] **Review gate** (13 Nov 2026: 260 figures, 260 PASS; 77 re-read from the raw files at state-jobs-gap `d8703d6`, all PASS): check every number against its source table, using `reports/degree-to-payroll/data/validation_log.csv` (one row per number) and the PDFs it cites. Rerun `python -P reports/degree-to-payroll/data/recompute.py` after any text edit.
+- [x] Set `datePublished` / `dateModified` / `article:published_time` to the real publication date, and change "Draft, November 2026" in the meta row to "Published …".
+- [x] Remove `<meta name="robots" content="noindex, nofollow"/>` and the DRAFT banner (`<div class="template-banner …">`).
+- [x] Regenerate the PDF (13 Nov 2026, headless Chrome, 24 pp). Print from a copy with `<details class="numbers" open>`, or the per-number table drops out (15 pp).
+- [x] Add the card and sitemap entry below; IndexNow runs on merge to `main`.
 
 ## 2. Card for `reports/index.html` (insert above Report No. 2)
 
@@ -31,7 +33,7 @@ Nothing in this file is live. Apply it only after the review below passes.
   <!-- Research Report No. 3: From Degree to Payroll -->
   <url>
     <loc>https://enaasan.online/reports/degree-to-payroll/</loc>
-    <lastmod>YYYY-MM-DD</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
