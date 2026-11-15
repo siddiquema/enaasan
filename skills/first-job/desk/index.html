@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<!-- PROTOTYPE: keep noindex until the owner signs off the copy and it is linked from the site -->
+<meta name="robots" content="noindex"/>
+<title>First Job Desk — free tools for your first job | enaasan</title>
+<meta name="description" content="Free tools for Indian graduates: a mock interview that shows you the interviewer's notes, an offer letter decoder, and a guide to your first 180 days at work. No sign-up."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="enaasan"/>
+<meta property="og:url" content="https://enaasan.online/skills/first-job/desk/"/>
+<meta property="og:title" content="First Job Desk — free tools for your first job"/>
+<meta property="og:description" content="Sit on the other side of the interview table, decode your offer letter, and handle your first 180 days at work. Free, no sign-up."/>
+<meta property="og:image" content="https://enaasan.online/assets/og-image.jpg"/>
+<meta property="og:locale" content="en_IN"/>
+<link rel="canonical" href="https://enaasan.online/skills/first-job/desk/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="desk.css" rel="stylesheet"/>
+<!-- theme-styles.css must load after page styles (see #53 cascade fix) -->
+<link href="/css/theme-styles.css" rel="stylesheet"/>
+<meta name="author" content="Siddique Ahamed"/>
+<link href="/css/author-box.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+  fetch('/components/cookie-consent.html')
+    .then(r => r.text())
+    .then(html => {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      const bannerElement = temp.firstElementChild;
+      document.body.insertBefore(bannerElement, document.body.firstChild);
+      temp.querySelectorAll('script').forEach(oldScript => {
+        const s = document.createElement('script');
+        s.textContent = oldScript.textContent;
+        document.body.appendChild(s);
+      });
+    })
+    .catch(e => console.error('Failed to load cookie consent:', e));
+</script>
+
+<nav>
+  <div class="nav-row1">
+    <a class="nav-logo" href="/index.html">en<span>aasan</span></a>
+    <a class="nav-back" href="/skills/first-job/">← First job guide</a>
+  </div>
+  <div aria-label="Select theme" class="theme-switcher" role="group">
+    <button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+    <button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+    <button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+  </div>
+</nav>
+
+<main class="page">
+  <header class="desk-hero">
+    <p class="eyebrow">First Job Desk · Free · No sign-up</p>
+    <h1>Your first job, from interview to month six.</h1>
+    <p class="lead">Three tools for final-year students and new graduates. Everything runs on your phone. Nothing you type here is sent anywhere.</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="First Job Desk tools">
+    <button role="tab" id="tab-interview" aria-controls="panel-interview" aria-selected="true" class="tab">
+      <span class="tab-num">01</span><span class="tab-name">Mock interview</span>
+    </button>
+    <button role="tab" id="tab-offer" aria-controls="panel-offer" aria-selected="false" class="tab" tabindex="-1">
+      <span class="tab-num">02</span><span class="tab-name">Offer letter</span>
+    </button>
+    <button role="tab" id="tab-days" aria-controls="panel-days" aria-selected="false" class="tab" tabindex="-1">
+      <span class="tab-num">03</span><span class="tab-name">First 180 days</span>
+    </button>
+  </div>
+
+  <!-- 01 Mock interview -->
+  <section role="tabpanel" id="panel-interview" aria-labelledby="tab-interview" class="panel">
+    <h2>The Other Side of the Table</h2>
+    <p class="panel-lead">Answer six interview questions. After each one, read what the interviewer wrote in their notes about your answer. Candidates never get to see this.</p>
+    <div id="interviewApp" class="app"></div>
+  </section>
+
+  <!-- 02 Offer letter decoder -->
+  <section role="tabpanel" id="panel-offer" aria-labelledby="tab-offer" class="panel" hidden>
+    <h2>Offer Letter Decoder</h2>
+    <p class="panel-lead">CTC is not the money that reaches your bank account. Copy the numbers from the salary table in your offer letter to see what does, and what the clauses mean.</p>
+    <div id="offerApp" class="app"></div>
+  </section>
+
+  <!-- 03 First 180 days -->
+  <section role="tabpanel" id="panel-days" aria-labelledby="tab-days" class="panel" hidden>
+    <h2>First 180 Days</h2>
+    <p class="panel-lead">Things that happen in a first job that nobody explains. Find your situation and see what it usually means, what to do, and what to say.</p>
+    <div id="daysApp" class="app"></div>
+  </section>
+
+  <!-- Continue in your own AI -->
+  <section class="own-ai" aria-labelledby="ownAiTitle">
+    <p class="eyebrow">Go further</p>
+    <h2 id="ownAiTitle">Practise live with your own AI</h2>
+    <p>The tools above are fixed scripts. For a live conversation, in your own language, use the free AI app you already have. We write the instructions for it; you press one button.</p>
+    <div class="own-ai-controls">
+      <label>What do you want to do?
+        <select id="aiTask">
+          <option value="interview">Live mock interview</option>
+          <option value="offer">Explain my offer letter</option>
+          <option value="work">Talk through a problem at work</option>
+        </select>
+      </label>
+      <label>Language
+        <select id="aiLang">
+          <option value="English">English</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Telugu">Telugu</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Tamil mixed with English">Tamil + English</option>
+          <option value="Telugu mixed with English">Telugu + English</option>
+          <option value="Hindi mixed with English">Hindi + English</option>
+        </select>
+      </label>
+      <label id="aiRoleWrap">Job you are applying for
+        <input id="aiRole" type="text" maxlength="60" placeholder="e.g. customer support associate"/>
+      </label>
+    </div>
+    <details class="prompt-peek">
+      <summary>See the instructions we send</summary>
+      <pre id="aiPrompt"></pre>
+    </details>
+    <div class="btn-row">
+      <a id="aiChatGPT" class="btn btn-primary" target="_blank" rel="noopener">Open in ChatGPT</a>
+      <a id="aiClaude" class="btn" target="_blank" rel="noopener">Open in Claude</a>
+      <button id="aiGemini" class="btn" type="button">Copy and open Gemini</button>
+      <button id="aiCopy" class="btn btn-quiet" type="button">Copy instructions</button>
+    </div>
+    <p class="fineprint" id="aiNote">These buttons open another company's app. What you type there is covered by that app's privacy policy, not ours. Remove your name, address, phone number and ID numbers before you paste an offer letter.</p>
+  </section>
+
+  <p class="more-links">
+    <a href="for-colleges/">For placement officers and colleges</a>
+    <a href="how-it-was-built/">How this was built</a>
+  </p>
+
+  <aside class="disclaimer">
+    <strong>About this guidance.</strong> This is general educational information, not legal, tax or financial advice, and not a promise of a job or a salary. Offer letters and company policies differ. Check anything that matters with your HR team or the official source before you sign or resign.
+  </aside>
+</main>
+
+<aside class="author-box" aria-label="About the author">
+  <p class="author-box-line"><strong>Conceptualised, reviewed and published by <a href="/author/siddique-ahamed/" rel="author">Siddique Ahamed</a>.</strong> Drafted with AI assistance.</p>
+  <p class="author-box-note"><a href="/author/siddique-ahamed/">About the author</a> &middot; Found something wrong or outdated? <a href="/about.html#contact">Let us know</a>.</p>
+</aside>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="/index.html">Home</a>
+    <a href="/skills/first-job/">First Job Guide</a>
+    <a href="/skills/communication/">Communication Skills</a>
+    <a href="/90-day-plan.html">90-Day Plan</a>
+    <a href="/bps.html">BPS / KPO Careers</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/reports/">Research Reports</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms &amp; Disclaimer</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script src="/theme.js"></script>
+<script src="desk.js"></script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+{
+  "_note": "Editorial content for First 180 Days. General workplace guidance, no statistics, no company names, no legal claims. Reviewed by: PENDING OWNER REVIEW.",
+  "plan": [
+    {
+      "when": "Week 1",
+      "do": "Learn names, tools and who does what. Write everything down."
+    },
+    {
+      "when": "Weeks 2–4",
+      "do": "Finish one small task completely and tell your manager it is done."
+    },
+    {
+      "when": "Month 2",
+      "do": "Ask your manager for feedback. Do not wait to be given it."
+    },
+    {
+      "when": "Month 3",
+      "do": "Take one recurring task as yours, so people know to come to you."
+    },
+    {
+      "when": "Months 4–5",
+      "do": "Keep a short weekly note of what you finished. You will need it."
+    },
+    {
+      "when": "Month 6",
+      "do": "Ask for your probation conversation and bring that note."
+    }
+  ],
+  "phases": [
+    "Week 1",
+    "Month 1",
+    "Months 2–3",
+    "Months 4–6"
+  ],
+  "situations": [
+    {
+      "phase": "Week 1",
+      "title": "Nobody has given me any work yet",
+      "keywords": "idle bench no work waiting bored free onboarding",
+      "means": "This is normal in the first days. Your manager has their own deadlines, your system access may not be ready, and nobody has planned your week hour by hour. It rarely means they have forgotten you or regret hiring you.",
+      "do": [
+        "Finish every onboarding and training item you have been given.",
+        "Read whatever the team has written down: process documents, old tickets, shared folders.",
+        "After two or three days, ask for something small rather than waiting."
+      ],
+      "say": "I have finished the onboarding modules. Is there a small task I can pick up, or someone I can sit with and watch this week?",
+      "avoid": "Sitting on your phone at your desk, or telling friends on social media that you are being paid to do nothing."
+    },
+    {
+      "phase": "Week 1",
+      "title": "I don't understand the short forms and terms everyone uses",
+      "keywords": "jargon acronyms abbreviations terms confused meeting language don't understand",
+      "means": "Every team builds its own vocabulary and forgets that new people do not know it. Not knowing these words says nothing about your ability. Everyone at that table once had to ask.",
+      "do": [
+        "Write down each unfamiliar term during the meeting, without interrupting.",
+        "Afterwards, ask one friendly teammate to go through your list.",
+        "Keep your own glossary. You will stop needing it within a few weeks."
+      ],
+      "say": "I noted a few terms from the meeting that I did not know. Could you take five minutes to tell me what they mean here?",
+      "avoid": "Nodding along for weeks. The longer you wait, the harder it becomes to ask."
+    },
+    {
+      "phase": "Week 1",
+      "title": "I don't know whom to ask for what",
+      "keywords": "who to ask reporting manager team lead HR buddy hierarchy org structure",
+      "means": "Most workplaces have several kinds of people around you: the person who assigns and reviews your work (often called your reporting manager or team lead), HR for pay, leave and policy, IT or admin for laptop and access, and sometimes a buddy or mentor for day-to-day questions. The names differ by company.",
+      "do": [
+        "Ask your manager directly who handles what.",
+        "Find out who your manager reports to, so you understand the chain.",
+        "Save the right contact for payroll, leave and IT on day one."
+      ],
+      "say": "So that I don't bother the wrong person: whom should I go to for work questions, for leave and pay, and for laptop or access problems?",
+      "avoid": "Taking every question to the most senior person in the room, or going over your manager's head for routine things."
+    },
+    {
+      "phase": "Week 1",
+      "title": "I am scared to speak in meetings",
+      "keywords": "meeting speak afraid shy quiet nervous introvert talk silent",
+      "means": "Nobody expects a new joiner to lead the discussion. But complete silence for weeks can be read as lack of interest. The aim in the first month is small: be heard once in each meeting.",
+      "do": [
+        "Prepare one question or one update before each meeting.",
+        "Speak early. It gets harder the longer you wait.",
+        "If you miss your chance, send your point to your manager afterwards."
+      ],
+      "say": "One question from my side: for the report due Friday, should I use last month's format or the new one?",
+      "avoid": "Waiting for the perfect thing to say, or speaking only to repeat what someone else said."
+    },
+    {
+      "phase": "Week 1",
+      "title": "My English is not as good as my colleagues'",
+      "keywords": "english fluency accent language communication speaking grammar vernacular regional medium",
+      "means": "At work, clear matters more than fluent. Short, correct sentences are respected. Most colleagues are listening for what you mean, not marking your grammar, and many of them learned English the same way you did.",
+      "do": [
+        "Use short sentences and simple words. That is good business English anyway.",
+        "Write important things down before you say them.",
+        "Read your team's emails closely and borrow their phrases."
+      ],
+      "say": "Let me say that again more clearly. The file is ready. I need your approval before I send it.",
+      "avoid": "Staying silent to hide it, or using big words to sound fluent. Both make you harder to understand."
+    },
+    {
+      "phase": "Week 1",
+      "title": "Nobody introduced me to the team",
+      "keywords": "introduce introduction team alone ignored lonely new joiner welcome",
+      "means": "It is usually forgetfulness, not unfriendliness. Teams in the middle of a deadline often do not notice a new person. You are allowed to introduce yourself, and people generally respond well when you do.",
+      "do": [
+        "Introduce yourself to the people sitting near you, one at a time.",
+        "Ask each person what they work on. People like being asked.",
+        "Join the team for lunch or tea when there is a chance."
+      ],
+      "say": "Hi, I am Priya. I joined on Monday in the accounts team. What do you work on?",
+      "avoid": "Deciding in the first week that the team is unfriendly, or eating alone at your desk every day."
+    },
+    {
+      "phase": "Week 1",
+      "title": "I work from home and feel invisible",
+      "keywords": "remote work from home wfh hybrid invisible online isolated video call",
+      "means": "In an office people see you working. At home they see only what you send. If you are silent online, people may assume you are stuck or idle, even when you are working well.",
+      "do": [
+        "Send a short message at the start and end of each day: what you plan, what you finished.",
+        "Keep your camera on in small meetings if the team does.",
+        "Ask for a short call with each teammate in your first weeks."
+      ],
+      "say": "Good morning. Today I am finishing the vendor list and starting the comparison sheet. I will share both by five.",
+      "avoid": "Waiting to be asked for updates, or disappearing for hours without telling anyone."
+    },
+    {
+      "phase": "Week 1",
+      "title": "Should I say sir and madam, or use first names?",
+      "keywords": "sir madam first name address formal culture hierarchy respect call",
+      "means": "It depends entirely on the workplace. Many IT and multinational offices use first names for everyone, including senior people. Many traditional companies, factories and government-linked offices use sir and madam. Neither is more correct. Using the wrong one is a small thing and easily fixed.",
+      "do": [
+        "Listen to how your teammates address your manager and copy them.",
+        "If you are unsure, ask your manager directly.",
+        "With customers and outsiders, stay formal until told otherwise."
+      ],
+      "say": "How do people usually address each other here? First names, or sir and madam?",
+      "avoid": "Insisting on 'sir' after someone has asked you to use their name. It can come across as distance, not respect."
+    },
+    {
+      "phase": "Week 1",
+      "title": "I don't know what to wear",
+      "keywords": "dress code clothes formal casual attire wear office uniform",
+      "means": "Dress norms vary a lot between offices, and the written policy is often stricter or looser than what people actually wear. For the first week, slightly more formal than you think necessary is the safe choice.",
+      "do": [
+        "Check your joining documents for a dress code.",
+        "In week one, dress one step more formal than the team.",
+        "After a week, match what people at your level wear."
+      ],
+      "say": "Is there a dress code I should follow, including on Fridays or when clients visit?",
+      "avoid": "Spending money on a new wardrobe before you have seen what people wear."
+    },
+    {
+      "phase": "Month 1",
+      "title": "My manager said \"take ownership\"",
+      "keywords": "ownership own it responsible accountability initiative proactive",
+      "means": "It usually means: do not wait to be chased. See the task through to the end, notice problems yourself, and tell people where things stand before they ask. It does not mean doing everything alone or never asking for help.",
+      "do": [
+        "For each task, know what 'finished' looks like and by when.",
+        "Send a short update before anyone asks for one.",
+        "When you hit a problem, bring it along with what you have tried."
+      ],
+      "say": "For this task, I will send you a status every Friday. If something blocks me for more than a day, I will tell you the same day. Does that work?",
+      "avoid": "Hearing it as criticism and going silent. Also avoid taking decisions that are not yours to take and calling that ownership."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I made a mistake and nobody has noticed yet",
+      "keywords": "mistake error wrong mail sent bug hide cover scared blunder",
+      "means": "Mistakes by new joiners are expected. What people remember is how they found out: from you, early, or from a customer or another team, later. A mistake that is hidden usually grows.",
+      "do": [
+        "Check quickly what the actual effect is.",
+        "Tell your manager today: what happened, the effect, and what you suggest.",
+        "After it is fixed, note what check would have caught it."
+      ],
+      "say": "I need to tell you about a mistake I made. I sent the wrong version of the file to the client team this morning. I have the correct one ready. Should I resend it with a note, or would you prefer to handle it?",
+      "avoid": "Quietly fixing it and hoping, blaming the tool or a colleague, or a long apology with no proposed fix."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I was given a task with no clear instructions",
+      "keywords": "unclear vague instructions task don't know how where to start requirements",
+      "means": "Often your manager has a picture in their head and did not realise how little of it they said aloud. Sometimes they do not have the answer either and expect you to find out. Clarifying at the start is normal and saves both of you time.",
+      "do": [
+        "Spend a short time trying to understand it on your own first.",
+        "Go back with specific questions, not 'I don't understand'.",
+        "Repeat the task back in your own words and confirm the deadline."
+      ],
+      "say": "Before I start, let me check I have understood. You need a one-page summary of last month's complaints, grouped by type, by Thursday. Is that right, and is there an old one I can use as a model?",
+      "avoid": "Guessing silently for three days and delivering the wrong thing, or going back every half hour with one more question."
+    },
+    {
+      "phase": "Month 1",
+      "title": "Someone said \"let's take this offline\"",
+      "keywords": "take offline meeting phrase circle back park later sync loop in",
+      "means": "It means: not in this meeting, we will discuss it separately later. It is usually about time or about the topic not concerning everyone present. It is not a rejection of your point. Related phrases work the same way: 'circle back' means return to it later, 'loop in' means include someone, 'sync' means a short catch-up.",
+      "do": [
+        "Stop the point there without pushing.",
+        "Note it down so it does not get lost.",
+        "If nobody follows up within a day or two, you do it."
+      ],
+      "say": "In yesterday's meeting we said we would take the report format offline. Do you have ten minutes today or tomorrow for it?",
+      "avoid": "Continuing to argue the point in the meeting, or assuming 'offline' means the matter is closed."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I don't know how to write a work email",
+      "keywords": "email write mail format subject professional message reply cc",
+      "means": "A work email has one job: the reader should know in ten seconds what you want from them. Most poor emails are too long, or hide the request in the last line.",
+      "do": [
+        "Write a subject line that says what the email is about.",
+        "Put the request or the main point in the first two lines.",
+        "Keep it short, and read it once before sending."
+      ],
+      "say": "Subject: Approval needed: vendor list for October. Hi Ramesh, please approve the attached vendor list by Thursday so I can send it to purchase. Three vendors are new; they are marked in yellow. Thanks, Priya",
+      "avoid": "Long openings, 'Respected Sir' in an office that uses first names, text-message spellings, and Reply All when only one person needs it."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I need leave, and I have only just joined",
+      "keywords": "leave holiday day off sick emergency function wedding permission probation",
+      "means": "Needing leave early is normal: illness, a family function, an exam. What matters is how you ask. Your leave rules during probation are in your offer letter or the HR policy, and they are often different from the rules after confirmation.",
+      "do": [
+        "Check your leave balance and the probation rules first.",
+        "Ask as early as you can, in the way your team normally does it.",
+        "Say how your work will be covered while you are away."
+      ],
+      "say": "I need to take leave on the 14th and 15th for a family function. I will finish the weekly report before I go, and Arun has agreed to handle anything urgent. Is that all right?",
+      "avoid": "Informing instead of asking, telling the team on the same morning for planned leave, or inventing an illness. It tends to come out."
+    },
+    {
+      "phase": "Month 1",
+      "title": "My first salary is less than I expected",
+      "keywords": "salary payslip less in-hand deduction ctc credited pf tax first month pay",
+      "means": "This is the most common shock in a first job. CTC includes amounts that do not reach your bank account, and your first month may also be paid for only the days you worked. It is usually arithmetic, not an error. The Offer Letter tab on this page shows where the money goes.",
+      "do": [
+        "Compare your payslip line by line with the salary table in your offer letter.",
+        "Check whether the first month was paid for part of the month.",
+        "If a line does not match, ask HR or payroll about that line."
+      ],
+      "say": "I am trying to understand my first payslip. The basic pay matches my offer letter, but I cannot see where this deduction comes from. Could you explain it?",
+      "avoid": "Announcing to the team that the company cheated you before you have compared the two documents."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I finished my task early",
+      "keywords": "finished early done free time extra next task idle quick",
+      "means": "Good. But check it once more before you announce it. A new joiner who is fast and wrong creates more work than one who is slow and right. Once you are sure, finishing early is a chance to be noticed.",
+      "do": [
+        "Review your work against what was asked.",
+        "Tell your manager it is done, and where to find it.",
+        "Ask for the next thing, or suggest something useful you noticed."
+      ],
+      "say": "The vendor list is done and saved in the shared folder. I checked it against last month's. I have time this afternoon. Is there something else I can pick up?",
+      "avoid": "Sitting quietly until the deadline, or telling everyone how easy it was."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I was added to a meeting and don't know why",
+      "keywords": "meeting invite calendar why added role agenda attend",
+      "means": "Often you have been added so that you can listen and learn, or because someone thinks the topic will become yours later. Sometimes it is a mistake. It is fine to ask what is expected of you.",
+      "do": [
+        "Read the invite and anything attached to it.",
+        "Ask the organiser or your manager what your part is.",
+        "In the meeting, take notes. If you were added to learn, the notes are the point."
+      ],
+      "say": "I see I have been added to Thursday's review. Is there anything I should prepare, or should I attend to listen and learn?",
+      "avoid": "Skipping it without asking, or attending while doing other work on your laptop."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I don't know when it is all right to leave for the day",
+      "keywords": "timing leave office hours late stay log out evening go home",
+      "means": "Offices have official hours and unofficial habits, and the two often differ. In your first weeks, people do notice. But staying late with nothing to do helps nobody. Finishing your work and saying you are leaving is what counts.",
+      "do": [
+        "Learn the official hours and watch what your team actually does.",
+        "Before leaving, check whether anyone is waiting for something from you.",
+        "On busy days, ask whether you are needed before you go."
+      ],
+      "say": "I have finished today's entries. Is there anything else you need from me before I leave?",
+      "avoid": "Slipping out without a word, or staying late every day just to be seen."
+    },
+    {
+      "phase": "Month 1",
+      "title": "A colleague asked me to share my password",
+      "keywords": "password login share access security policy rules confidential data",
+      "means": "It is usually meant as a shortcut, not as anything bad. But whatever happens under your login is recorded against your name. Almost every company forbids sharing passwords, and 'he asked me to' will not help you later.",
+      "do": [
+        "Say no politely, and say it is about the policy, not about them.",
+        "Offer to do the task yourself or to help them get their own access.",
+        "If the pressure continues, mention it to your manager."
+      ],
+      "say": "I am not supposed to share my login. But tell me what you need and I will pull it out for you now, or I can help you raise an access request.",
+      "avoid": "Sharing it 'just this once', or making it sound like you suspect them."
+    },
+    {
+      "phase": "Month 1",
+      "title": "I failed a training assessment",
+      "keywords": "training test assessment failed exam score certification batch retest",
+      "means": "Many companies test new joiners during training, and some link the result to which project you get, or to confirmation. One failed test is rarely the end, and most programmes allow another attempt. Find out the actual rule and do not rely on batch rumours.",
+      "do": [
+        "Ask the trainer what the retest rule is and what happens if you do not clear it.",
+        "Ask which topics you were weakest in.",
+        "Study with a batchmate who cleared it."
+      ],
+      "say": "I did not clear the assessment. Could you tell me which areas I was weakest in, and when the retest is? I want to prepare properly.",
+      "avoid": "Panicking because of what batchmates say, or hiding the result from your manager."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I am going to miss a deadline",
+      "keywords": "deadline late delay miss overdue extension time not finished",
+      "means": "A late warning is the real problem, more than the delay itself. If your manager knows two days before, they can move things, get you help or tell whoever is waiting. If they find out on the day, they can do nothing.",
+      "do": [
+        "Tell your manager as soon as you can see it will slip, not on the due date.",
+        "Say what is done, what is left, and the new date you can actually meet.",
+        "Offer a choice: a smaller version on time, or the full thing later."
+      ],
+      "say": "The report is due Thursday and I will not make it. The data is done; the analysis needs one more day. I can send you the data tables on Thursday and the full report by Friday evening, or everything together on Friday. Which do you prefer?",
+      "avoid": "Staying silent and hoping, working all night without telling anyone, or promising a new date you are not sure of."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "A senior colleague keeps passing their work to me",
+      "keywords": "senior dumping work extra tasks colleague overload say no unfair",
+      "means": "Some of this is normal: juniors do get the routine work, and it is one way you learn. It becomes a problem when it pushes out the work your own manager gave you, or when you never get credit for it. The person who decides your priorities is your manager, not the colleague.",
+      "do": [
+        "Help when you have room. It builds goodwill and skill.",
+        "When it clashes with your own work, say so and name the clash.",
+        "If it keeps happening, ask your manager to set the priority. Do not complain about the person."
+      ],
+      "say": "I can help with this, but I have the monthly report due tomorrow. I can pick it up after that. If it is urgent, shall we check with our manager which one should come first?",
+      "avoid": "Saying yes to everything and then missing your own deadlines, or complaining to other teammates about that colleague."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I was criticised in front of others",
+      "keywords": "criticised shouted scolded feedback public meeting embarrassed harsh manager angry",
+      "means": "It feels terrible, and it is poor practice by whoever did it. But two things are mixed together here: how it was said, and what was said. The second part may still be something you can use. If it was a single incident, treat it that way. If it is a pattern, or it becomes insulting or personal, that is a different matter and worth raising with HR.",
+      "do": [
+        "In the moment, stay calm and do not argue the details in front of everyone.",
+        "Afterwards, pull out the actual point and act on it.",
+        "Ask for a short private conversation once you are calm."
+      ],
+      "say": "I have understood the feedback on the report and I have fixed the two errors. Next time, could we go through things like this one-to-one? I will take it in better that way.",
+      "avoid": "Arguing back in the meeting, sulking for a week, or resigning that same evening."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I get no feedback at all",
+      "keywords": "no feedback one on one 1:1 manager busy ignored silence how am I doing",
+      "means": "Silence usually means your manager is busy and nothing is on fire. It is not praise and it is not a warning. Many managers give feedback only when asked, so if you want to know how you are doing, you need to ask.",
+      "do": [
+        "Ask for fifteen minutes, with a reason.",
+        "Ask specific questions, not 'How am I doing?'",
+        "Write down what you hear and act on one thing before you next meet."
+      ],
+      "say": "I have been here two months now. Could I take fifteen minutes this week? I would like to know one thing I should keep doing and one thing I should change.",
+      "avoid": "Assuming silence means everything is fine and being surprised at the probation review."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "My manager checks every small thing I do",
+      "keywords": "micromanage checking control trust manager every step review constant",
+      "means": "With a new joiner, close checking is normal, because your manager is responsible for your mistakes. It usually reduces as they see reliable work. If it does not reduce after a few months, it may be their style, and you can still make it easier by giving updates before they ask.",
+      "do": [
+        "Send updates before you are asked. This is what reduces checking fastest.",
+        "Ask what they most want to review, and what you can simply go ahead with.",
+        "Deliver a few things with no errors. Trust follows evidence."
+      ],
+      "say": "To save your time, I can send you a short status every evening. Are there kinds of tasks you would like to review before they go out, and others I can send directly?",
+      "avoid": "Taking it as an insult, or hiding work until it is finished so that it cannot be checked."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "Two seniors gave me opposite instructions",
+      "keywords": "conflicting instructions two bosses seniors different priority confused whom to follow",
+      "means": "It happens often, and neither of them is trying to trap you. Each sees their own priority. It is not your job to pick a winner. Your job is to make the conflict visible to whoever decides your priorities, which is usually your reporting manager.",
+      "do": [
+        "Do not quietly choose one.",
+        "Tell both, or your manager, that the two instructions conflict.",
+        "Ask for a decision, and confirm it in a short message."
+      ],
+      "say": "Suresh has asked me to finish the client report today, and you have asked for the audit file today. I cannot do both properly. Which should come first, or would you two like to decide between you?",
+      "avoid": "Doing half of each, or telling one senior that the other one is wrong."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "Someone else took credit for my work",
+      "keywords": "credit stolen work recognition senior presented mine unfair visibility",
+      "means": "Sometimes it is deliberate. More often a senior presents the team's work as a whole and your part is not named. In either case, the fix is to make your work visible yourself, as a habit, and not to start a fight.",
+      "do": [
+        "Send your finished work by email or in the team channel, so there is a record.",
+        "Mention your part in your regular updates to your manager.",
+        "If it keeps happening with the same person, raise it calmly in a one-to-one."
+      ],
+      "say": "I have attached the analysis I prepared for Tuesday's presentation, in case it is useful for the next one. Happy to walk anyone through it.",
+      "avoid": "Calling it out angrily in a meeting, or complaining to teammates and not to your manager."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I am asked to stay late every day",
+      "keywords": "overtime late night long hours stay back workload weekend extra time",
+      "means": "Occasional long days around a deadline are part of most jobs. Every day for weeks is a different matter: either the workload is wrong, something is being planned badly, or you are slower than expected because you are new. You need to find out which, and your manager may not know the hours you are putting in.",
+      "do": [
+        "Keep a simple record of your hours and what took the time.",
+        "Tell your manager what is taking long and ask how to do it faster.",
+        "If it is workload, ask what can be moved or dropped."
+      ],
+      "say": "For the last three weeks I have been finishing after nine most days. The reconciliation takes me about four hours a day. Is there a faster way to do it, or can part of it be shared?",
+      "avoid": "Suffering in silence until you fall ill or resign, or refusing all extra time including real deadlines."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I think my senior's way of doing it is wrong",
+      "keywords": "disagree senior wrong way better idea suggestion opinion process improve",
+      "means": "You may be right. You may also be missing a reason that is not visible to a new person: a past failure, a client rule, an audit requirement. Ask first, suggest second. New joiners with good ideas are valued. New joiners who announce that everything is wrong are not.",
+      "do": [
+        "Ask why it is done the current way.",
+        "If your idea still holds, offer it as a suggestion and show a small example.",
+        "If the answer is no, do it their way, properly."
+      ],
+      "say": "I was wondering why we do this step by hand. I tried a formula on last week's data and got the same totals. Could I show you? There may be a reason it would not work that I do not know about.",
+      "avoid": "Doing it your own way without telling anyone, or saying 'in college we did it better'."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "Colleagues complain about the manager to me",
+      "keywords": "gossip complain politics colleagues manager bad talk groups rumours",
+      "means": "People test a new joiner to see whose side they are on. Listening is fine. Adding your own comments is risky, because what you say travels, and it travels with your name attached. You do not yet know the history or who is close to whom.",
+      "do": [
+        "Listen without adding your own complaints.",
+        "Form your own view of people from your own experience.",
+        "Move the conversation to something else when you can."
+      ],
+      "say": "I have not been here long enough to say. So far my work with him has been fine. Anyway, are you coming for lunch?",
+      "avoid": "Agreeing in order to fit in, repeating what you heard, or carrying it to the manager."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "My project ended and I have no work",
+      "keywords": "bench no project released unallocated idle waiting allocation it services",
+      "means": "In project-based companies, time between projects, often called the bench, is common, especially for trainees. It is not a judgment on you. But long idle periods can become a risk, so treat this time as a chance to become easier to place.",
+      "do": [
+        "Tell your manager or the allocation team that you are available, and for what.",
+        "Use the time for training in skills that open projects are asking for.",
+        "Ask people on running projects whether they need help."
+      ],
+      "say": "My project ended last week and I am available. I have finished the SQL course in the meantime. Are there open roles I could be considered for, or a skill I should build for the upcoming ones?",
+      "avoid": "Treating it as paid holiday, or waiting silently for someone to remember you."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "A customer was rude to me",
+      "keywords": "customer client rude abusive shouting angry call complaint insult",
+      "means": "Most angry customers are angry at the situation or the company, and you happen to be the person who answered. It is not about you. There is a limit, though. Abuse, threats and personal insults are not part of the job, and most companies have a process for those calls.",
+      "do": [
+        "Let them finish, repeat the problem back, and say what you will do next.",
+        "Find out your company's rule for abusive calls and follow it.",
+        "After a bad one, take a few minutes before the next call."
+      ],
+      "say": "I can hear how frustrating this has been, and I want to fix it. Here is what I am going to do right now.",
+      "avoid": "Arguing back, taking it home with you every day, or tolerating abuse that your company's own policy says you can end."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I feel I am not learning anything",
+      "keywords": "not learning boring repetitive routine growth stuck same work skills",
+      "means": "Early work is often repetitive, because nobody gives important work to someone untested. Doing the routine work reliably is how you get the interesting work. If months pass with no change, ask for more. Do not wait to be offered it.",
+      "do": [
+        "Do the routine work without errors. This is the entry ticket.",
+        "Ask to watch or help with one thing above your level.",
+        "Learn the reason behind what you do: where your output goes and who uses it."
+      ],
+      "say": "I am comfortable with the daily reports now. I would like to learn how the monthly analysis is done. Could I sit with Meena when she prepares the next one?",
+      "avoid": "Deciding after six weeks that the job has nothing to teach you, or doing the routine work carelessly because it bores you."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "I get work messages at night and on weekends",
+      "keywords": "after hours messages whatsapp weekend night calls boundaries reply always available",
+      "means": "A message sent at night is not always a request to act at night. Many managers send things when they remember them. Some teams do expect quick replies. Ask what is expected, because guessing leads either to resentment or to missing something real.",
+      "do": [
+        "Ask your manager what needs a reply after hours and what can wait.",
+        "For real emergencies, respond, and note how often they happen.",
+        "Reply first thing in the morning to everything else."
+      ],
+      "say": "When I get messages late in the evening, should I respond the same night, or is the next morning fine unless it is marked urgent?",
+      "avoid": "Replying instantly to everything for months and then burning out, or ignoring messages without ever having asked."
+    },
+    {
+      "phase": "Months 2–3",
+      "title": "Someone at work is making me uncomfortable",
+      "keywords": "harassment uncomfortable inappropriate comments touch unsafe posh complaint committee",
+      "means": "Trust your sense that something is wrong. Unwelcome comments, messages, touching or pressure are not something you have to put up with because you are new or junior. Most Indian workplaces are required by law to have an Internal Committee for complaints of sexual harassment, and your HR team can tell you how to reach it. Other kinds of bullying can be raised with HR.",
+      "do": [
+        "Write down what happened, with dates, words used and any witnesses. Save messages.",
+        "Tell someone you trust, at work or outside.",
+        "Report it to HR or the Internal Committee. You can ask how the process works before deciding."
+      ],
+      "say": "I need to speak to someone in confidence about the behaviour of a colleague. Can you tell me how the complaints process works here?",
+      "avoid": "Blaming yourself, deleting the messages, or staying silent because you fear for your job. If you are in immediate danger, leave the situation and contact the police."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "My probation review is coming",
+      "keywords": "probation confirmation review appraisal six months confirmed extended permanent",
+      "means": "Probation is a trial period, often around three to six months, written into your offer letter. At the end the company confirms you, extends the probation or, more rarely, ends the employment. The terms that apply to you, including the notice period during probation, are in your own letter. Read them again now.",
+      "do": [
+        "Re-read the probation clause in your offer letter.",
+        "List what you have finished, with dates and any numbers you can point to.",
+        "Ask your manager a few weeks before whether anything stands in the way of confirmation."
+      ],
+      "say": "My probation ends next month. Is there anything you would like to see from me before then? I would rather know now, while I can still work on it.",
+      "avoid": "Waiting for the date to pass and assuming you are confirmed. Ask for the confirmation in writing."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I was told my performance needs to improve",
+      "keywords": "performance improvement plan PIP warning underperforming rating low not meeting expectations",
+      "means": "This is serious, but it does not have to end your job. It means the gap between what is expected and what you deliver has become formal. Some companies put it into a written plan with targets and dates. What you need now is the specifics: what exactly, measured how, and by when.",
+      "do": [
+        "Ask for the specific gaps and how each will be measured.",
+        "Get the expectations and review dates in writing, even as a follow-up email you send yourself.",
+        "Meet your manager every week during this period and show progress against each point."
+      ],
+      "say": "I want to fix this. Can you tell me the two or three things that matter most, and how you will judge whether I have improved? I will send you a note of what we agree on, and I would like to review it with you every week.",
+      "avoid": "Becoming defensive, going quiet, or treating it as already decided. If you believe the process is unfair, speak to HR calmly and keep records."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I think this job is not right for me. Should I resign?",
+      "keywords": "resign quit leave wrong job unhappy hate notice period bond switch",
+      "means": "Almost everyone feels this at some point in their first six months. Sometimes it is a real mismatch. Often it is a bad month, a difficult manager or the shock of working life itself, and those would follow you to the next job. Before you resign, separate 'this job' from 'any job'.",
+      "do": [
+        "Write down what exactly is wrong: the work, the manager, the hours, the pay or the place.",
+        "Check whether a change of team or project would solve it, and ask.",
+        "Read your notice period and any bond or service agreement clause before deciding anything."
+      ],
+      "say": "I am finding the current project a poor fit for me, and I would rather tell you than struggle quietly. Is there any possibility of trying a different kind of work in the team?",
+      "avoid": "Resigning in anger, leaving without another offer unless you can afford to, or not turning up without notice. That last one can follow you through background checks."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "A friend earns more than me at another company",
+      "keywords": "salary friend higher pay compare hike underpaid package raise",
+      "means": "Pay differs widely between companies, cities and roles, even for the same degree. A comparison of CTC figures can also mislead, because the parts that reach your bank account can be very different. Your first salary matters less than what you learn in the first two years, because that is what your second salary will be based on.",
+      "do": [
+        "Compare monthly in-hand pay and working conditions, not the CTC headline.",
+        "Ask your manager when and how salary is reviewed here.",
+        "Put your effort into skills and results you can show at that review."
+      ],
+      "say": "I would like to understand how salary reviews work here. When does the first one happen, and what would you want to see from me to make a strong case?",
+      "avoid": "Demanding a raise in your first months because of someone else's package, or discussing your salary loudly with teammates."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I want to move to a different project or role",
+      "keywords": "change project switch role team transfer internal move different work",
+      "means": "It is a reasonable thing to want, and most managers have heard it before. Your chances are better once you have done your current work well for some months, and when you ask about the path and do not present a demand.",
+      "do": [
+        "Be clear with yourself about what you want to move towards, not only away from.",
+        "Ask your manager how internal moves work and what the usual timing is.",
+        "Keep doing your current work well while you wait."
+      ],
+      "say": "I am enjoying the work, and over time I would like to move towards data analysis. What would I need to show, and when would be a reasonable time to ask for that kind of move?",
+      "avoid": "Going to another team's manager first, or letting your current work slip so that they release you."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I have an offer from another company",
+      "keywords": "another offer new job switch leave counter offer better pay competitor",
+      "means": "Good for you, but slow down. Compare what reaches your bank account each month, the work you would do and the people you would learn from, not only the CTC. Leaving a first job within six months is not fatal, but you will be asked about it in every interview for some years.",
+      "do": [
+        "Get the new offer in writing before you do anything.",
+        "Compare in-hand pay, role, location, notice period and any bond on both sides.",
+        "Read your own notice period and bond clause before resigning."
+      ],
+      "say": "Thank you for the offer. Before I accept, could you confirm the monthly in-hand salary and the joining date in writing?",
+      "avoid": "Resigning on a verbal offer, or using the offer to threaten your manager unless you are truly ready to leave."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "My probation was extended",
+      "keywords": "probation extended not confirmed extension review delay warning",
+      "means": "An extension means the company has not yet decided. It is a warning, and it is also a second chance: they chose not to end the job. What matters now is knowing exactly what they need to see, and by what date.",
+      "do": [
+        "Ask for the reasons and the new end date in writing.",
+        "Agree on two or three specific things you will be judged on.",
+        "Ask for a short check-in every two weeks until the new date."
+      ],
+      "say": "I understand my probation has been extended to March. Could you tell me the specific things you need to see from me by then? I would like to review my progress with you every two weeks.",
+      "avoid": "Treating it as a formality, or deciding it is hopeless and switching off."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "My first rating was only average",
+      "keywords": "appraisal rating average review meets expectations disappointed increment score",
+      "means": "In most rating systems the middle rating means you did what was expected, and it is where most people land, particularly new joiners with only a few months to show. It feels like 60 per cent in an exam, but it is not the same thing. If you want a higher one next time, ask what it would take.",
+      "do": [
+        "Ask your manager what separates the middle rating from the one above it.",
+        "Ask for one or two specific goals for the next cycle.",
+        "Keep a running note of your results, so the next review is based on evidence."
+      ],
+      "say": "Thank you for the feedback. What would I need to do differently this year to be rated one level higher? I would like to agree on that now and not at the end.",
+      "avoid": "Comparing ratings with batchmates, or arguing about the rating without asking what it was based on."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I want to study further while working",
+      "keywords": "higher studies mba part-time course exam preparation study leave certification distance",
+      "means": "Many people do this, and many employers are fine with it as long as your work does not suffer. Some companies have policies on outside courses, study leave or sponsorship. Check before you enrol, especially if exams will need leave.",
+      "do": [
+        "Check the company policy on outside study and exam leave.",
+        "Choose a course whose timing really fits around your work.",
+        "Tell your manager before the exam dates are close, not after."
+      ],
+      "say": "I am planning to start a part-time course in the evenings from July. It will not affect my working hours, but I will need two days of leave for exams in December. Is there any policy I should know about?",
+      "avoid": "Studying during office hours, or disappearing for exams without notice."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I have decided to resign. How do I do it properly?",
+      "keywords": "resign resignation how to notice period relieving letter exit handover last day",
+      "means": "How you leave is remembered and checked. Future employers commonly ask for a relieving or experience letter and may verify your employment. A clean exit keeps those documents and your references safe.",
+      "do": [
+        "Tell your manager in person or on a call first, then send the written resignation.",
+        "Serve your notice period as your letter requires, or agree a buy-out in writing.",
+        "Hand over your work properly and return company property.",
+        "Collect your relieving letter, experience letter and final payslips."
+      ],
+      "say": "I wanted to tell you first, before I send the email. I have decided to move on, and my last working day as per my notice period would be the 30th. I will make sure everything is handed over properly.",
+      "avoid": "Resigning by message with no conversation, criticising people on your way out, or leaving without serving notice."
+    },
+    {
+      "phase": "Months 4–6",
+      "title": "I am exhausted and my health is suffering",
+      "keywords": "burnout stress tired health anxiety sleep mental pressure overwhelmed sick",
+      "means": "The first months of working life are tiring for almost everyone: new routine, new people, constant learning. If you are not sleeping, are often ill, or dread every morning for weeks, treat that as a signal to act and not as weakness. No first job is worth your health.",
+      "do": [
+        "See a doctor if there are physical symptoms or it has gone on for weeks.",
+        "Tell your manager about the workload in specific terms.",
+        "Ask HR whether the company has a counselling or employee assistance service.",
+        "Protect the basics: sleep, food and one day of real rest each week."
+      ],
+      "say": "I want to be honest with you. The current workload is affecting my health, and I do not want it to affect my work. Can we look at what is on my plate and what could move?",
+      "avoid": "Hiding it until you collapse or resign overnight. If you ever feel unable to cope or unsafe, speak to a doctor or someone you trust straight away."
+    }
+  ]
+}

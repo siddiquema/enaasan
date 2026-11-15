@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<!-- DRAFT for owner review. Every factual statement on this page must be true on the day
+     it is published: in particular the sentence that says all content was reviewed by the
+     owner, and the counts of interviews and situations. Usage numbers are deliberately
+     absent; add them only from real analytics. Keep noindex until signed off. -->
+<meta name="robots" content="noindex"/>
+<title>How First Job Desk was built: one person, one AI model, no running cost | enaasan</title>
+<meta name="description" content="How a free career toolkit for Indian graduates was built by one person working with Claude Fable 5.2, and designed so that it costs nothing to run."/>
+<link rel="canonical" href="https://enaasan.online/skills/first-job/desk/how-it-was-built/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="../desk.css" rel="stylesheet"/>
+<link href="/css/theme-styles.css" rel="stylesheet"/>
+<meta name="author" content="Siddique Ahamed"/>
+<link href="/css/author-box.css" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+  <div class="nav-row1">
+    <a class="nav-logo" href="/index.html">en<span>aasan</span></a>
+    <a class="nav-back" href="../">← First Job Desk</a>
+  </div>
+  <div aria-label="Select theme" class="theme-switcher" role="group">
+    <button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+    <button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+    <button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+  </div>
+</nav>
+
+<main class="page prose">
+  <header class="desk-hero">
+    <p class="eyebrow">Case study</p>
+    <h1>How First Job Desk was built.</h1>
+    <p class="lead">One person, working with one AI model, built a free career toolkit that costs nothing to run however many students use it. This page explains how, and where the limits are.</p>
+  </header>
+
+  <section>
+    <h2>The problem</h2>
+    <p>A student preparing for a first job needs three things that are hard to get: honest feedback on interview answers, someone to explain an offer letter, and advice in the first months at work when asking a colleague feels risky. Paid coaching exists for the first. For the other two, most students have nobody.</p>
+    <p>The obvious answer in 2026 is an AI chatbot on the site. We priced it. By our rough estimate, running a capable model for a thousand students a day would have cost a few hundred US dollars every day. A free site for students cannot carry that.</p>
+  </section>
+
+  <section>
+    <h2>The decision: use the AI once, not every time</h2>
+    <p>So we changed where the AI does its work. The model was used at build time, to write the content and the code, and not at run time, when a student opens the page.</p>
+    <ul class="plain-list">
+      <li><strong>The mock interviews are written in advance.</strong> For every question there are three answers a real candidate might give, and the note an interviewer would write about each. A student's phone only has to show them.</li>
+      <li><strong>The Offer Letter Decoder is arithmetic.</strong> It adds and subtracts the numbers the student types. No AI is involved, so nothing leaves the phone.</li>
+      <li><strong>First 180 Days is a library.</strong> Each situation is written once and searched on the device.</li>
+      <li><strong>For a live conversation, the student uses their own AI.</strong> The page writes detailed instructions and hands them to the free AI app the student already has. The student gets a live mock interview in their own language, and the site pays nothing.</li>
+    </ul>
+    <p>The result is a set of static files. There is no server, no database, no login and no bill that grows with use.</p>
+  </section>
+
+  <section>
+    <h2>What the AI did</h2>
+    <p>The model was Claude Fable 5.2, made by Anthropic, used through Claude Code. Working from a brief written by the site's founder, it:</p>
+    <ul class="plain-list">
+      <li>reviewed the existing site and proposed the three tools;</li>
+      <li>wrote the interview questions, candidate answers and interviewer's notes for five roles;</li>
+      <li>wrote the workplace situations, each with what it means, what to do and what to say;</li>
+      <li>wrote the page, the calculator and the search, then tested them in a browser at phone width and fixed what it found;</li>
+      <li>wrote the instructions that are handed to the student's own AI app.</li>
+    </ul>
+    <p>The first working version was built in a single working session.</p>
+  </section>
+
+  <section>
+    <h2>What the human did</h2>
+    <p>The AI did not decide what this should be. Siddique Ahamed, who has spent years hiring and training graduates, set the goal, rejected the first plan when the cost was too high, and chose the zero-cost design. Every interview answer, interviewer's note and piece of workplace advice was drafted by the model and then reviewed and edited by him before publication. Where the draft did not match what he has seen in real hiring, his judgment replaced it.</p>
+    <p>We say this plainly because advice about someone's first job should have a person accountable for it.</p>
+  </section>
+
+  <section>
+    <h2>Limits you should know about</h2>
+    <ul class="plain-list">
+      <li><strong>The mock interview cannot hear you.</strong> It compares your choice with written examples. If you type your own answer, you judge it yourself against a checklist. A real interviewer, or a live AI conversation, will catch things this cannot.</li>
+      <li><strong>The decoder is not a tax calculator.</strong> It does not work out income tax, and it relies on the figures you enter.</li>
+      <li><strong>The advice is general.</strong> Companies, managers and offer letters differ. For anything legal or financial, check with HR or a qualified adviser.</li>
+      <li><strong>When you use your own AI app,</strong> what you type there is handled under that app's privacy policy, not ours.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>If you want to build something similar</h2>
+    <p>The pattern is simple and reusable. Ask what part of the work truly needs a live model, and whether it could be done once in advance. Let the visitor's own device and their own AI app do the rest. The result costs nothing to run, collects no personal data and keeps working on a slow connection.</p>
+    <p><a class="btn btn-primary" href="../">Try First Job Desk</a></p>
+  </section>
+</main>
+
+<aside class="author-box" aria-label="About the author">
+  <p class="author-box-line"><strong>Conceptualised, reviewed and published by <a href="/author/siddique-ahamed/" rel="author">Siddique Ahamed</a>.</strong> Drafted with AI assistance.</p>
+  <p class="author-box-note"><a href="/author/siddique-ahamed/">About the author</a> &middot; Found something wrong or outdated? <a href="/about.html#contact">Let us know</a>.</p>
+</aside>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="/index.html">Home</a>
+    <a href="../">First Job Desk</a>
+    <a href="../for-colleges/">For colleges</a>
+    <a href="/skills/first-job/">First Job Guide</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms &amp; Disclaimer</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+<script src="/theme.js"></script>
+</body>
+</html>

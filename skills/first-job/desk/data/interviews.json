@@ -1,0 +1,845 @@
+{
+  "_note": "Editorial content for The Other Side of the Table. Each option has a level (0 weak, 1 acceptable, 2 strong) and the interviewer's private note. No statistics, no company names. Reviewed by: PENDING OWNER REVIEW.",
+  "roles": [
+    {
+      "id": "fresher-hr",
+      "title": "Graduate fresher: HR round",
+      "blurb": "The general round most campus and off-campus hiring starts with. Works for any degree.",
+      "interviewer": "HR interviewer, hiring a batch of fresh graduates",
+      "questions": [
+        {
+          "q": "Tell me about yourself.",
+          "listens": [
+            "You gave a short answer with a clear order (now, before, next)",
+            "You mentioned one thing you actually did, not only your degree",
+            "You connected yourself to this job in the last line"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "My name is Karthik. I was born and brought up in Salem. My father is a bank employee and my mother is a homemaker. I have one younger sister. I did my schooling at a matriculation school and then my B.Com. My hobbies are cricket and listening to music.",
+              "note": "This is the form I already have in front of me, read aloud. I learned about his family, not about him. I still don't know what he can do or why he is here."
+            },
+            {
+              "level": 1,
+              "text": "I completed my B.Com this year with 72 per cent. I am a hard-working and sincere person, I am a quick learner and I can work well in a team. I am looking for a good opportunity to start my career.",
+              "note": "Clear and polite, but every candidate today has said 'hard-working' and 'quick learner'. No proof behind any of it. I will have to dig for an example myself."
+            },
+            {
+              "level": 2,
+              "text": "I finished my B.Com this year. In my final year I handled the accounts for our college fest, about forty stalls, and it was the first time I had to chase people for bills and close a sheet on a deadline. I found I liked that part. That is why I applied for this accounts trainee role.",
+              "note": "Under a minute, and I got one real thing she did, what she learned from it and why she is in this room. I already have my next question from her answer. Good start."
+            }
+          ],
+          "stronger": "Use three steps: what you just finished, one specific thing you did and what it taught you, and why that brings you to this job. Keep it under a minute. Leave out family details unless you are asked."
+        },
+        {
+          "q": "Why do you want to work with us?",
+          "listens": [
+            "You said something specific about this company or this role",
+            "You linked it to something you want to learn or do",
+            "You did not make salary or 'any job' your main reason"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "Honestly sir, I need a job. I have applied to many companies and I will work hard wherever I get a chance.",
+              "note": "Honest, and I respect that. But if any job will do, she will leave for any other job. Nothing here tells me she looked at what we do."
+            },
+            {
+              "level": 1,
+              "text": "Your company is a reputed organisation with a good work culture and good growth opportunities. It will be a great platform for my career.",
+              "note": "This sentence fits every company in the country. He has not looked us up. Not a bad answer, just an empty one."
+            },
+            {
+              "level": 2,
+              "text": "I read the job description twice. Most of the work is reconciling vendor payments, and that is close to what I did for our college fest accounts. I also saw that trainees here rotate across two teams in the first year. I want that range before I decide what to specialise in.",
+              "note": "He read the job description and can say what the work actually is. He has a reason that is about learning, not just getting in. This is someone who prepared."
+            }
+          ],
+          "stronger": "Before the interview, read the job description and the company's own website. Pick one thing about the work and one thing about how they train people, and connect each to something you have done or want to learn."
+        },
+        {
+          "q": "Tell me about a time something went wrong in a team you were part of.",
+          "listens": [
+            "You described one real situation, not a general statement",
+            "You said what you personally did, using 'I'",
+            "You said what you would do differently now"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "In my project team everything went smoothly. We all cooperated well and we did not have any problems.",
+              "note": "Every team has problems. Either she did not notice them or she does not want to tell me. Both worry me."
+            },
+            {
+              "level": 1,
+              "text": "In our final-year project one member did not do his part at all. The rest of us had to work extra and somehow we completed it. It was very frustrating.",
+              "note": "A real situation, good. But the whole answer is about what the other person did wrong. I did not hear what he himself did about it, or whether he ever spoke to that teammate."
+            },
+            {
+              "level": 2,
+              "text": "In our final-year project, one teammate went quiet two weeks before the deadline. I called him instead of complaining in the group. He was stuck on his part and embarrassed to say so. We split his section into two smaller pieces and I took one. We submitted on time. What I would do differently is check in every week, so I find out earlier.",
+              "note": "Situation, what she did, result, what she learned, in that order and without blaming anyone. She went to the person directly. That is exactly how I want problems handled in a team here."
+            }
+          ],
+          "stronger": "Pick one real incident. Give the situation in one line, then what you did, then how it ended, then what you would do differently. Talk about your own actions, not the other person's faults."
+        },
+        {
+          "q": "What is one weakness of yours?",
+          "listens": [
+            "You named a real weakness, not a strength in disguise",
+            "You gave an example of it causing a problem",
+            "You said what you are doing about it"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I am a perfectionist. I work too hard and I cannot rest until the work is perfect.",
+              "note": "I hear this answer several times a day. It tells me he prepared a line to avoid the question. I still know nothing about how he sees himself."
+            },
+            {
+              "level": 1,
+              "text": "I get nervous when I have to speak in front of many people.",
+              "note": "A real weakness, and honest. But she stopped there. Is she doing anything about it? I would have liked one more sentence."
+            },
+            {
+              "level": 2,
+              "text": "I say yes too quickly. Last semester I agreed to help with two events in the same week and did a poor job on one of them. Now, before I agree to something, I write down what I already have that week. I still slip sometimes, but less.",
+              "note": "Real weakness, real example, a specific habit to fix it, and he admits it is not fully fixed. That is self-awareness. I can work with someone like this."
+            }
+          ],
+          "stronger": "Choose a real weakness that is not fatal for the job. Give one short example of it hurting you, then the specific thing you now do about it. Do not claim it is solved."
+        },
+        {
+          "q": "You have no work experience. Why should we hire you?",
+          "listens": [
+            "You did not apologise for being a fresher",
+            "You pointed to something you have actually done",
+            "You said how you will learn in the first months"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I know I don't have experience, sir. But please give me one chance. I will prove myself.",
+              "note": "He is asking me for a favour. I am not doing favours, I am filling a role. I wanted a reason, and 'one chance' is not one."
+            },
+            {
+              "level": 1,
+              "text": "I may not have experience, but I am a fast learner and very dedicated. I will give my hundred per cent to the company.",
+              "note": "Positive, but these are promises. Everyone promises. Show me a time you learned something fast."
+            },
+            {
+              "level": 2,
+              "text": "You are hiring freshers, so I assume you are looking for people who learn quickly and are easy to train. Last year I taught myself spreadsheets from free videos to manage the fest accounts, and within a month I was the one others asked. I expect to need help in the first weeks here, and I will ask early when I am stuck.",
+              "note": "She did not get defensive. She understood why we hire freshers, gave proof that she learns on her own, and was realistic about needing help. Asking early is exactly what I want from a trainee."
+            }
+          ],
+          "stronger": "They already know you are a fresher; that is who they are hiring. Give one example of learning something on your own, and say how you plan to learn in the first weeks, including asking for help."
+        },
+        {
+          "q": "Do you have any questions for us?",
+          "listens": [
+            "You asked at least one question",
+            "Your question was about the work or the learning, not only leave and salary",
+            "Your question could not be answered from the company website"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "No sir, nothing. Thank you.",
+              "note": "No curiosity at all about where she might spend the next few years. It makes me wonder how much she wants this particular job."
+            },
+            {
+              "level": 1,
+              "text": "When will I know the result? And what will be the salary and the timings?",
+              "note": "Fair questions and he has a right to ask them. But they are the only ones he asked, so the last impression is that the pay and timings matter and the work does not."
+            },
+            {
+              "level": 2,
+              "text": "Yes, two. What does a normal day look like for a trainee in the first month? And what do the trainees who do well here do differently from the others?",
+              "note": "Both questions are about doing the job well. The second one is a question I enjoy answering. She is already thinking like someone who works here."
+            }
+          ],
+          "stronger": "Prepare two questions about the work itself: what the first month looks like, how training happens, what good performance looks like. Ask about salary and timings too if nobody has told you, but not as your only questions."
+        }
+      ]
+    },
+    {
+      "id": "support-associate",
+      "title": "Customer support associate",
+      "blurb": "Voice or chat support in a BPS or service company. Tests how you listen and explain.",
+      "interviewer": "Team leader in a customer support operation",
+      "questions": [
+        {
+          "q": "Why do you want to work in customer support?",
+          "listens": [
+            "You gave a reason connected to the actual work (talking, solving, explaining)",
+            "You showed you know what the job involves",
+            "You did not describe it only as a temporary stop"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I did not get placed in my core field, so for now I am looking at support jobs. I will continue to try for other things.",
+              "note": "He has told me he will leave as soon as something else comes. I spend weeks training each person. Why would I spend them on him?"
+            },
+            {
+              "level": 1,
+              "text": "I have good communication skills and I like talking to people, so I think this job suits me.",
+              "note": "Reasonable. But liking to talk is not the job. The job is listening to someone who is upset and fixing their problem. Does she know that?"
+            },
+            {
+              "level": 2,
+              "text": "At home I am the one who calls the bank or the mobile company when something goes wrong, and I have noticed how different a good agent and a bad agent make you feel. I am patient with people who are confused, and I like finding where a problem actually is. I know some customers will be angry. I would rather learn to handle that early in my career.",
+              "note": "She knows what the job really is, from the customer's side. She mentioned patience and angry customers without my asking. That is a realistic picture, and realistic people stay."
+            }
+          ],
+          "stronger": "Show that you know the job is mostly listening and solving, often with upset people. Give a small real example from your own life as a customer or as the person who helps others sort things out."
+        },
+        {
+          "q": "A customer is shouting at you about a mistake that is not your fault. What do you do?",
+          "listens": [
+            "You let the customer finish before explaining anything",
+            "You did not argue about whose fault it was",
+            "You said what you would do next to fix the problem"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will politely tell the customer that it is not my mistake and that shouting will not help. If they continue, I will transfer the call to my senior.",
+              "note": "The customer does not care whose mistake it was. Telling an angry person to stop shouting makes them louder. And he passed it to a senior at the first difficulty."
+            },
+            {
+              "level": 1,
+              "text": "I will stay calm, say sorry for the inconvenience and try to solve the problem as per the company process.",
+              "note": "Correct in outline. It sounds like a line from a training manual, though. I can't tell what she would actually say on the call."
+            },
+            {
+              "level": 2,
+              "text": "First I let them finish, because they will not hear anything until they have said it. Then I repeat the problem back so they know I understood: 'Your refund was promised in five days and it has been twelve.' I say sorry that it happened, without arguing about who caused it. Then I tell them exactly what I am going to do now and by when. If I can't fix it myself, I say who can and stay on the call while I transfer.",
+              "note": "This is someone who has thought about what an angry person needs: to be heard, to be understood, then a clear next step. He escalates only after trying, and does not abandon the customer. I would put him on calls."
+            }
+          ],
+          "stronger": "Follow this order: let them finish, repeat the problem in their words, apologise for the experience without debating blame, state the next step and when it will happen. Escalate only if you cannot fix it, and stay with the customer while you do."
+        },
+        {
+          "q": "This role has rotational shifts, including nights. Are you comfortable with that?",
+          "listens": [
+            "You answered the question directly, yes or no",
+            "You showed you have thought about the practical side (travel, family, sleep)",
+            "You were honest about any real limit"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "Yes sir, no problem at all. I can work any shift, any time.",
+              "note": "Too quick. She has not thought about it. People who say 'any shift' this easily are often the ones who ask for a change in the second month."
+            },
+            {
+              "level": 1,
+              "text": "I prefer the day shift, but if the company needs it I will try to adjust.",
+              "note": "At least he is honest that it is not his preference. 'Try to adjust' is vague, though. I can't plan a roster around 'try'."
+            },
+            {
+              "level": 2,
+              "text": "Yes. I have spoken to my family about it and they are fine with it. My one question is about travel: is there company transport for the night shift, or do I arrange my own? I stay about twelve kilometres away.",
+              "note": "A clear yes, the family already knows, and she is thinking about the practical problem that actually makes people quit night shifts. This yes I can believe."
+            }
+          ],
+          "stronger": "Decide before the interview, after speaking to your family. Say yes or no clearly. If yes, ask the practical question (transport, shift rotation, how much notice before a change). If there is a real limit, say it now and not after you join."
+        },
+        {
+          "q": "Explain how a UPI payment works to someone who has never used a smartphone.",
+          "listens": [
+            "You used everyday words and no technical terms",
+            "You used a comparison the listener already knows",
+            "You went step by step and kept it short"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "UPI is the Unified Payments Interface. It is a real-time payment system that links your bank account to a virtual payment address, so you can transfer funds instantly through a mobile application.",
+              "note": "Accurate, and useless to the person I described. He explained it to me, not to someone who has never used a smartphone. He did not think about who is listening."
+            },
+            {
+              "level": 1,
+              "text": "It is a way to send money from your phone. You open the app, choose the person, type the amount and your PIN, and the money goes from your bank to theirs.",
+              "note": "Simple and in the right order. But 'open the app' and 'PIN' already assume the person knows phones. Closer, not quite there."
+            },
+            {
+              "level": 2,
+              "text": "You know how you sign a cheque and the bank moves money from your account to the shopkeeper's? This is the same thing, but the phone does the cheque's job. You point the phone at the shop's printed square, type how much, and then type a secret number that only you know. That number is like your signature. The money moves at once, and both of you get a message saying so.",
+              "note": "She started from something the listener already knows, a cheque, and kept every word plain. 'The secret number is like your signature' is the kind of line that makes a confused customer relax. This is the skill the job needs."
+            }
+          ],
+          "stronger": "Think about who is listening before you speak. Start from something they already know, use no technical words, and go one step at a time. Getting the listener to understand matters more than being technically complete."
+        },
+        {
+          "q": "A customer asks something and you do not know the answer. What do you do?",
+          "listens": [
+            "You admitted you did not know and did not guess",
+            "You told the customer what you would do to find out",
+            "You gave a time by which they would hear back"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will give the most likely answer based on my knowledge so that the customer is not kept waiting.",
+              "note": "A confident wrong answer is the most expensive thing an agent can give. The customer acts on it, it fails, and they call back angrier. This is a serious concern."
+            },
+            {
+              "level": 1,
+              "text": "I will tell the customer I don't know and ask them to call back later or check the website.",
+              "note": "Honest, which is better than guessing. But she has handed the problem back to the customer. They called us so that they would not have to work it out themselves."
+            },
+            {
+              "level": 2,
+              "text": "I say, 'I want to give you the correct answer, so let me check this.' If I can check within a minute or two, I ask them to hold and tell them why. If it needs longer, I tell them when I will call or message back, and I note it so that it actually happens.",
+              "note": "He does not guess, he keeps the problem with himself, and he gives a time. 'I note it so that it actually happens' tells me he knows the difference between promising a callback and making one."
+            }
+          ],
+          "stronger": "Never guess. Say that you want to give the correct answer, say how you will find out, and give a time. Then keep that time."
+        },
+        {
+          "q": "Where do you see yourself in two years?",
+          "listens": [
+            "Your answer was realistic for two years",
+            "It involved getting better at this kind of work",
+            "It did not say you plan to leave"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "In two years I want to be a manager in your company, leading a big team.",
+              "note": "In two years, from zero experience? Ambition is fine, but this tells me she has not asked anyone how long that takes. It may turn into disappointment by month six."
+            },
+            {
+              "level": 1,
+              "text": "I want to grow with the company and take on more responsibilities.",
+              "note": "Safe and polite, and it means nothing in particular. I will have forgotten it by the next interview."
+            },
+            {
+              "level": 2,
+              "text": "In the first year I want to be one of the agents the team leader does not need to worry about, with good quality scores and few repeat calls. By the second year I would like to be helping new joiners, and then see whether I am better suited to training or to handling escalations. I would like to understand what the usual path is here.",
+              "note": "Realistic, and he clearly understands what 'good' means in this job. He wants to help new joiners, which is how people become team leaders, and he ends by asking about our path. I can see him here in two years."
+            }
+          ],
+          "stronger": "Describe year one as becoming reliably good at the job, in the terms the job uses. Describe year two as the next natural step, such as helping new joiners. Then ask what the usual path is."
+        }
+      ]
+    },
+    {
+      "id": "it-trainee",
+      "title": "Software / IT trainee",
+      "blurb": "For engineering, BCA, MCA and B.Sc graduates. About how you work and learn, not a coding test.",
+      "interviewer": "Project manager hiring trainee engineers",
+      "questions": [
+        {
+          "q": "Tell me about your final-year project. What did you personally build?",
+          "listens": [
+            "You said clearly which part was yours",
+            "You explained it in plain words, not only technology names",
+            "You were honest about what you did not do"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "Our project was an online food ordering system using React, Node.js, MongoDB and machine learning for recommendations. It had login, cart, payment and an admin panel.",
+              "note": "A list of technologies and features. I asked what he personally built and he did not answer. When that happens, the part is usually small, or the project was bought."
+            },
+            {
+              "level": 1,
+              "text": "We were four members. I mainly worked on the front end and also helped in testing and documentation.",
+              "note": "Honest about the split, which I like. But 'worked on the front end' could be one page or thirty. I need one concrete thing she made."
+            },
+            {
+              "level": 2,
+              "text": "It was a food ordering app for our college canteen. I built the order screen and the part that sends the order to the kitchen display. The hardest bit was two people ordering the last item at the same time; my first version sold it twice. I fixed it by checking stock again at the moment of payment. I did not do the login or the admin panel; my teammates did those.",
+              "note": "I know exactly what she built, a real problem she hit, and how she fixed it. She also told me what she did not do. I can trust the rest of her CV now."
+            }
+          ],
+          "stronger": "Say what the project does in one plain sentence, then the part you built, then one problem you hit and how you solved it. Say openly what your teammates did. Interviewers check, and honesty here makes everything else you say believable."
+        },
+        {
+          "q": "Why did you choose that database for your project?",
+          "listens": [
+            "You gave the real reason, even if it was a simple one",
+            "You did not bluff about things you do not know",
+            "You showed you know there were other options"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "MongoDB is the best database because it is highly scalable, flexible and fast, and it is used by top companies for big data applications.",
+              "note": "This is a brochure. A canteen app does not need 'big data'. If I ask one follow-up question he will be stuck, and we both know it."
+            },
+            {
+              "level": 1,
+              "text": "Our guide suggested it, so we used it.",
+              "note": "True, probably, and I prefer true. But she did the whole project without once asking why. That is the part that concerns me."
+            },
+            {
+              "level": 2,
+              "text": "Honestly, the tutorial we followed used it, so that is why we started with it. Later I saw that our data was really tables, orders and items and students, and a relational database like MySQL would have suited it better. If I did it again I would choose that.",
+              "note": "He admitted the real reason and then showed he has thought about it since. I do not need a trainee who knows everything. I need one who notices things like this."
+            }
+          ],
+          "stronger": "If the real reason was 'the tutorial used it', say so, and then add what you now understand about the choice. Never defend a decision with words you cannot explain. One follow-up question exposes it."
+        },
+        {
+          "q": "You are given a bug in code written by someone else. How do you start?",
+          "listens": [
+            "You first tried to reproduce and understand the problem",
+            "You did not start by rewriting the code",
+            "You mentioned asking or reading before changing things"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will go through the code, find the mistake and rewrite that part in a better way so the bug does not come again.",
+              "note": "Rewriting code he does not understand yet. In a real project that is how one bug becomes five. He has not asked what the bug even is."
+            },
+            {
+              "level": 1,
+              "text": "I will read the code carefully, add some print statements and try to find where it is going wrong.",
+              "note": "Reasonable instincts. She skipped the first step, though: making the bug happen in front of her. And nothing about asking the person who wrote it."
+            },
+            {
+              "level": 2,
+              "text": "First I would try to make the bug happen myself, with the exact steps from whoever reported it. If I cannot reproduce it, I ask them for more detail. Then I find where the wrong value first appears, using logs or a debugger. I change as little as possible, check that the original steps now work, and check I have not broken anything near it. If the code has an owner who is still around, I ask them before I spend a day guessing.",
+              "note": "Reproduce, locate, small change, verify. And she would ask the author instead of guessing for a day. That saves a team real time. This is how I want a trainee to work."
+            }
+          ],
+          "stronger": "Follow this order: reproduce the bug, find where it first goes wrong, make the smallest change that fixes it, then test again. Ask the person who knows the code early. Do not rewrite what you do not yet understand."
+        },
+        {
+          "q": "You have been stuck on a task for two hours. What do you do?",
+          "listens": [
+            "You tried on your own first, for a limited time",
+            "You asked for help with specifics about what you tried",
+            "You did not stay stuck silently for a whole day"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will not disturb anyone. I will keep trying on my own until I solve it, even if I have to stay late.",
+              "note": "He means well. But a trainee stuck silently for two days costs the team more than a five-minute question. This worries me more than a wrong answer would."
+            },
+            {
+              "level": 1,
+              "text": "I will ask my senior or team lead for help.",
+              "note": "Good, she will ask. But how? 'It is not working, please help' wastes a senior's time. I wanted to hear what she would bring with her."
+            },
+            {
+              "level": 2,
+              "text": "Two hours is about my limit. By then I would have searched the error, read the documentation and tried a couple of things. Then I write a short message to a senior: what I am trying to do, what I expected, what happened instead, and what I have already tried. Often writing that message shows me the answer. If not, they can help quickly because they do not have to start from zero.",
+              "note": "A time limit, real effort first, and a well-formed question. Seniors are happy to help people who ask like this. He will learn fast here."
+            }
+          ],
+          "stronger": "Set yourself a time limit. Before asking, write down what you want to do, what happened, and what you have tried. Bring that to a senior. Asking well is a skill, and it is better than both silence and 'it is not working'."
+        },
+        {
+          "q": "We may place you in testing or support first, not development. How do you feel about that?",
+          "listens": [
+            "You gave an honest reaction, not only 'no problem'",
+            "You saw something to learn in that work",
+            "You asked how movement between roles works"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I am only interested in development, sir. I have learned coding for four years and I want to work as a developer.",
+              "note": "I understand the feeling. But project needs decide where trainees start, and she has just told me she will be unhappy from day one if it is not development."
+            },
+            {
+              "level": 1,
+              "text": "No problem sir, I am ready to work in any role the company gives me.",
+              "note": "Agreeable, but I do not believe it is the whole truth. People who say this and secretly mind tend to leave in six months."
+            },
+            {
+              "level": 2,
+              "text": "My preference is development, and I would like to get there. But I can see that testing or support would teach me how the product really behaves and what breaks, which most new developers do not know. I would be fine starting there. Could you tell me how people usually move between these roles here, and after how long?",
+              "note": "He told me his real preference without making it a condition. He sees the value in the other work, and he asked a sensible question about the path. Honest and flexible is the combination I am looking for."
+            }
+          ],
+          "stronger": "State your preference honestly, say what you would learn from the other role, and ask how and when people usually move. Do not refuse outright, and do not pretend you have no preference."
+        },
+        {
+          "q": "What have you learned on your own in the last six months?",
+          "listens": [
+            "You named something specific",
+            "You said what you made or did with it",
+            "It was your own choice, not a college requirement"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I am very passionate about learning new technologies. I am interested in AI, cloud computing and data science.",
+              "note": "Interested in everything, has learned nothing in particular. I asked what, and I got a list of fashionable words."
+            },
+            {
+              "level": 1,
+              "text": "I completed an online course in Python and got a certificate.",
+              "note": "A real thing, good. But a certificate tells me she watched videos. Did she build anything with it?"
+            },
+            {
+              "level": 2,
+              "text": "I learned basic Python from free videos, mainly because I was tired of renaming files by hand. I wrote a small script that sorts my downloads folder by file type and date. It is about forty lines and it broke twice before it worked. Now I am trying to make it run automatically every evening.",
+              "note": "Small, real, and his own idea. He had a problem and learned enough to solve it. He mentions that it broke, which tells me it is true. That curiosity is hard to train and I am glad to see it."
+            }
+          ],
+          "stronger": "Name one specific thing, say why you wanted to learn it, and describe something you made with it, however small. A forty-line script you wrote says more than a certificate."
+        }
+      ]
+    },
+    {
+      "id": "accounts-trainee",
+      "title": "Accounts / finance trainee",
+      "blurb": "For B.Com, BBA and M.Com graduates. Tests care with numbers and honesty under pressure.",
+      "interviewer": "Finance manager in a mid-sized company",
+      "questions": [
+        {
+          "q": "Why do you want to work in accounts?",
+          "listens": [
+            "You gave a reason beyond 'I studied commerce'",
+            "You showed you know what the daily work is like",
+            "You mentioned something you have actually done with numbers"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I did B.Com, so accounts is my field. It is a stable job with good scope.",
+              "note": "She is here because of her degree, not because of the work. 'Stable' is a reason to want any job. Nothing about accounts itself."
+            },
+            {
+              "level": 1,
+              "text": "I have always been good at accountancy and I scored well in it. I like working with numbers.",
+              "note": "A fair start. But college accountancy is clean problems with one right answer. Real accounts work is messy bills and chasing people. Does he know?"
+            },
+            {
+              "level": 2,
+              "text": "I like it when things tally. My father runs a small shop and for the last two years I have done his monthly purchase register and helped with his GST paperwork. The real work is mostly finding out why something does not match, and I found I have the patience for that. I want to learn how it is done properly in a company.",
+              "note": "She has done real, untidy books and still wants the job. 'Finding out why something does not match' is an exact description of my team's day. This is someone who will not be shocked in week two."
+            }
+          ],
+          "stronger": "Show that you know the work is mostly checking, matching and following up, and that you like that. Any real experience counts: a family shop's books, a college fest's accounts, your own monthly budget."
+        },
+        {
+          "q": "The bank statement and your books differ by ₹5,000. What do you do?",
+          "listens": [
+            "You looked for the cause before changing anything",
+            "You had a method for checking, step by step",
+            "You did not pass an adjusting entry just to make it match"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "If it is a small amount, I will pass an adjustment entry so that the books tally and the work is not delayed.",
+              "note": "This answer ends the interview for me. An unexplained entry to force a match is exactly how real problems get buried. The amount does not matter."
+            },
+            {
+              "level": 1,
+              "text": "I will check all the entries again carefully and find the mistake.",
+              "note": "Right intention, no method. 'Check everything again' on a month of entries could take days. I wanted to hear where he would look first."
+            },
+            {
+              "level": 2,
+              "text": "I would not adjust anything until I know the reason. First I look for a single entry of exactly ₹5,000 on either side, then for half of it, in case something was entered on the wrong side. Then the usual causes: a cheque issued but not yet cleared, bank charges not entered in our books, an entry made twice. I would tick off matching items between the two until the unmatched ones are left. If I still cannot find it, I show my working to my senior.",
+              "note": "A method, in a sensible order, and she refuses to adjust without a reason. She even knows the half-the-difference trick. And she would bring her working when she asks for help. I would be glad to hand her a reconciliation."
+            }
+          ],
+          "stronger": "Never force a match. Say that first, then give your order of checking: the exact amount, half the amount, timing differences, bank charges, duplicates. End with showing your working to a senior if it is still open."
+        },
+        {
+          "q": "A senior asks you to pass an entry that you think is wrong. What do you do?",
+          "listens": [
+            "You asked for the reason before deciding",
+            "You stayed respectful and did not accuse",
+            "You did not simply do it, and did not simply refuse"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I am a fresher, so I will do what my senior says. They have more experience and it is their responsibility.",
+              "note": "In accounts, 'I was told to' does not protect anyone, and I need people who will speak when something looks wrong. He would pass anything."
+            },
+            {
+              "level": 1,
+              "text": "I will refuse and inform the manager, because wrong entries should not be passed.",
+              "note": "Her instinct about integrity is right. But she went straight to refusing and reporting, without asking a single question. She might be the one who has misunderstood."
+            },
+            {
+              "level": 2,
+              "text": "First I would assume I might be missing something, so I would ask: 'I want to make sure I understand this. Can you tell me the reason for booking it this way?' Often there is a reason I did not know. If the explanation makes sense, I pass it and note the supporting document. If it still looks wrong to me, I would say so politely and ask that we check with the manager together, rather than pass it or go behind their back.",
+              "note": "He starts by doubting himself, asks properly, and keeps a document trail. If it is still wrong he raises it openly, with the senior, not around them. That is integrity and good sense together, which is rare in someone new."
+            }
+          ],
+          "stronger": "Ask for the reason first; you may be missing something. If it makes sense, pass it and keep the supporting document. If it still looks wrong, say so politely and suggest checking with the manager together."
+        },
+        {
+          "q": "Month-end closing means late evenings for a few days every month. Is that all right?",
+          "listens": [
+            "You answered clearly",
+            "You showed you understand why month-end is busy",
+            "You raised any real limit honestly"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I would prefer to leave on time, sir. I believe in work-life balance.",
+              "note": "Balance matters, and most of the month she will have it. But month-end is the one fixed thing in this job, and she has told me she would rather not."
+            },
+            {
+              "level": 1,
+              "text": "Yes sir, I can stay as late as needed, any day.",
+              "note": "Positive. Slightly too easy. I would trust it more if he had asked one practical question."
+            },
+            {
+              "level": 2,
+              "text": "Yes. I understand the books have to be closed by a fixed date and everything arrives at the last minute. A few late days a month is fine for me. Two things I would like to know: roughly how late it usually goes, and whether those dates are known in advance, so I can plan my travel home.",
+              "note": "She understands why month-end is the way it is, says yes, and asks the practical questions an adult asks. I can believe this yes."
+            }
+          ],
+          "stronger": "If you can do it, say yes clearly and show you understand why month-end is busy. Then ask how late and how predictable it is. If you have a real limit, such as the last bus home, say it now."
+        },
+        {
+          "q": "How comfortable are you with spreadsheets?",
+          "listens": [
+            "You described something you actually built or did",
+            "You were accurate about your level, without inflating it",
+            "You said what you want to learn next"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I am an expert in MS Excel. I know all the formulas and functions.",
+              "note": "Nobody knows all of them, including me after twenty years. If I put a sheet in front of him now, I suspect this would go badly. Overclaiming is a worry in an accounts hire."
+            },
+            {
+              "level": 1,
+              "text": "I know the basics, like SUM and formatting. I can learn the rest on the job.",
+              "note": "Honest, and basics can be built on. A little thin, though. I would have liked one example of something she made."
+            },
+            {
+              "level": 2,
+              "text": "I am comfortable but not advanced. For our fest accounts I kept one sheet for collections and one for expenses, used SUMIF to total by category, and a lookup to pull stall names from a list. I have not used pivot tables properly yet. That is the next thing I want to learn, because I ended up doing by hand what I think a pivot table does.",
+              "note": "An exact picture of his level, with proof. He knows what he does not know and why he needs it. I can plan his training from this answer."
+            }
+          ],
+          "stronger": "Describe one real sheet you built and name the two or three functions you used. Then say what you have not learned yet. An accurate answer is worth more than a big one, especially in accounts."
+        },
+        {
+          "q": "You find an error in a report you sent your manager yesterday. What now?",
+          "listens": [
+            "You told the manager yourself, quickly",
+            "You came with the corrected version",
+            "You said how you would prevent it next time"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "If nobody has noticed, I will correct it in my file and make sure the next report is right.",
+              "note": "My manager may already have used that number in front of the directors. A hidden error in a finance report is the one thing I cannot have on my team."
+            },
+            {
+              "level": 1,
+              "text": "I will tell my manager immediately and apologise for the mistake.",
+              "note": "Right and prompt. But she would be bringing me a problem with nothing attached. What is the correct figure? How far off was it?"
+            },
+            {
+              "level": 2,
+              "text": "I would check how big the effect is and prepare the corrected report first, which should take minutes, not hours. Then I go to my manager the same morning: 'Yesterday's report had an error in the receivables total. It was overstated by this much because I picked up one invoice twice. Here is the corrected version.' Then I would add a check to my own routine, such as matching my total to the ledger balance before sending anything.",
+              "note": "Fast, specific, with the fix in hand and a new check so it does not repeat. Errors will happen. People who handle them like this are the ones I end up trusting most."
+            }
+          ],
+          "stronger": "Tell your manager the same day, with three things: what was wrong and by how much, the corrected version, and the check you will add so it does not happen again."
+        }
+      ]
+    },
+    {
+      "id": "sales-trainee",
+      "title": "Sales / business development trainee",
+      "blurb": "For any graduate. Tests how you handle rejection, targets and honesty with customers.",
+      "interviewer": "Area sales manager hiring field and inside-sales trainees",
+      "questions": [
+        {
+          "q": "Why sales?",
+          "listens": [
+            "You gave a reason based on something you have done or enjoy",
+            "You showed you know sales has targets and rejection",
+            "You did not say only 'for the incentives'"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "Sales has very good incentives and fast growth. I want to earn well.",
+              "note": "Wanting to earn is fine in a salesperson, I like it even. But it is all she said. The incentives come after months of hearing no, and she has not mentioned that part."
+            },
+            {
+              "level": 1,
+              "text": "I am an outgoing person, I like meeting new people and I have good convincing skills.",
+              "note": "The standard answer. Being outgoing helps a little. I have also seen quiet people outsell talkers because they listen. What has he actually sold or persuaded anyone of?"
+            },
+            {
+              "level": 2,
+              "text": "In college I sold sponsorship for our fest. I went to about thirty shops and most said no, some quite rudely. Four said yes. What I noticed was that the yeses came when I stopped talking about our fest and asked what kind of customers they wanted. I liked that it was measurable: I knew exactly how I had done at the end of each day. I know real sales is harder and the targets are real, and I want to learn it properly.",
+              "note": "Thirty calls, four wins, and he took the right lesson from it: ask about the customer. He likes being measured. He has already been rejected and came back. This is what the job is."
+            }
+          ],
+          "stronger": "Use any real experience of persuading or selling: fest sponsorship, tuition students, a family business. Say what you learned from the rejections. Show that you know the job is measured by targets and that this suits you."
+        },
+        {
+          "q": "A shop owner says \"not interested\" before you finish your first sentence. What do you do?",
+          "listens": [
+            "You respected the no and did not argue",
+            "You tried to learn something before leaving",
+            "You left the door open for another visit"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will not give up. I will keep explaining the benefits of the product until he understands and agrees.",
+              "note": "That shop owner will remember her, and not kindly. Pushing through a clear no closes that door for the next person I send too."
+            },
+            {
+              "level": 1,
+              "text": "I will say thank you, leave my card and move on to the next shop.",
+              "note": "Polite and professional. But he learned nothing from the visit. Why was it a no? Wrong time? Bad experience with us before? He will never know."
+            },
+            {
+              "level": 2,
+              "text": "I would not push. I would say, 'No problem, I can see you are busy. Just one question so I do not waste your time again: is it that you already have a supplier, or is this just a bad time?' Whatever he says tells me something. If it is a bad time, I ask when is better. If he has a supplier, I ask what he likes about them. Then I thank him, leave, and note it down so my next visit starts from there.",
+              "note": "She accepts the no and still walks out with information. One question, easy to answer, and she writes it down. Most 'not interested' answers mean 'not now', and she knows how to find out which."
+            }
+          ],
+          "stronger": "Accept the no without arguing. Ask one short, easy question to learn why. Thank them, note what you learned, and come back at a better time."
+        },
+        {
+          "q": "It is the 25th and you are at half your monthly target. What do you tell me?",
+          "listens": [
+            "You gave the real number without softening it",
+            "You said why, without only blaming the market",
+            "You came with a plan for the remaining days"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "The market is very slow this month, sir, and the competitors are giving more discount. It is very difficult to close.",
+              "note": "Maybe true. But these are the same reasons I hear from everyone who misses, and none of it is about what he did. I have nothing to act on."
+            },
+            {
+              "level": 1,
+              "text": "I am at fifty per cent, sir, but I am working very hard and I will try my best to cover it in the remaining days.",
+              "note": "She gave me the number straight, which I respect. 'Try my best' is not a plan, though. Which customers? How many calls?"
+            },
+            {
+              "level": 2,
+              "text": "I am at half, and I do not think I will reach a hundred. Realistically I can get to seventy-five. I have six customers who have seen the quotation and not decided; I am visiting all six this week and I think three will close. Where I went wrong was spending the first two weeks on two large customers who were never going to decide this month. Next month I will keep the small ones moving alongside. Is there anything you would do differently with those six?",
+              "note": "The true number, a realistic forecast and not a hopeful one, a named list, his own mistake identified, and he asks for my advice. I can plan my own month around what he has told me. I would rather have this than a salesperson who promises a hundred and delivers sixty."
+            }
+          ],
+          "stronger": "Give the real number and a realistic forecast. Name the specific customers you will close and what you got wrong this month. A manager can work with bad news that is accurate. They cannot work with hope."
+        },
+        {
+          "q": "How do you handle hearing \"no\" many times a day?",
+          "listens": [
+            "You were honest that it affects you",
+            "You described something specific you do about it",
+            "You separated the rejection from yourself"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "It does not affect me at all. I am a very positive person.",
+              "note": "Everyone is affected. Either she has never really been rejected or she is telling me what she thinks I want to hear. I learn more from people who admit it stings."
+            },
+            {
+              "level": 1,
+              "text": "I will stay motivated and remember that every no brings me closer to a yes.",
+              "note": "A line from a poster. Not wrong, but what does he actually do at four in the afternoon after the ninth no?"
+            },
+            {
+              "level": 2,
+              "text": "It does get to me, especially when it is rude. Two things helped during fest sponsorship. I counted visits instead of yeses, so my aim for the day was thirty shops, and that was in my control. And after a bad one I would take five minutes, have tea, and write one line about why it was a no. Usually the reason was their budget or their timing, not me. That made the next shop easier to walk into.",
+              "note": "She admits it hurts and has two practical habits: measure effort and not just outcome, and find the reason so it stops feeling personal. People with a system last in sales. People with only 'positivity' burn out by month three."
+            }
+          ],
+          "stronger": "Admit that rejection affects you, then describe what you actually do: count the effort you control, take a short break, note the real reason for the no. A habit is more convincing than a slogan."
+        },
+        {
+          "q": "A customer will buy today, but only with a discount you are not allowed to give. What do you do?",
+          "listens": [
+            "You did not promise what you cannot give",
+            "You looked for another way to add value",
+            "You involved your manager properly, not as a first escape"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will agree to the discount to close the sale and then convince my manager to approve it, because the order is important.",
+              "note": "He has committed the company to something he has no authority to give. If I say no, we lose the customer's trust. If I say yes, he will do this every week."
+            },
+            {
+              "level": 1,
+              "text": "I will tell the customer that I cannot give the discount as per company policy.",
+              "note": "Correct and honest. But she stops there and lets the order walk away. No attempt to find out what the customer really needs."
+            },
+            {
+              "level": 2,
+              "text": "I would tell him honestly that this discount is beyond what I can approve. Then I would ask what is behind it: is it the total budget, or a competitor's quote? Sometimes the real need is different, like longer payment time, free delivery or a smaller first order, and those I may be able to offer. If it truly comes down to price and the order is worth it, I would say, 'Let me speak to my manager and call you back by four o'clock', and I would call back by four, whatever the answer.",
+              "note": "Honest about her limit, curious about the real reason, creative within what she is allowed, and she escalates with a time and keeps it. That customer will trust her even if the answer is no."
+            }
+          ],
+          "stronger": "Never promise what you cannot approve. Say so honestly, ask what is behind the request, and look for something you are allowed to offer. If you take it to your manager, give the customer a time and call back at that time."
+        },
+        {
+          "q": "A customer asks if the product can do something it cannot. Saying yes would close the sale. What do you say?",
+          "listens": [
+            "You told the truth clearly",
+            "You offered what the product can do instead",
+            "You showed you understand why honesty matters for future sales"
+          ],
+          "options": [
+            {
+              "level": 0,
+              "text": "I will say yes and close the sale. After that the service team can manage the customer.",
+              "note": "This is the fastest way to lose a customer, a referral and the service team's goodwill, all with one order. I will not put him in front of my customers."
+            },
+            {
+              "level": 1,
+              "text": "I will say that I am not sure and I will check with the technical team and get back.",
+              "note": "Fine if she is truly not sure. But I said the product cannot do it and she knows that. This is a polite way of avoiding a no."
+            },
+            {
+              "level": 2,
+              "text": "I would say no, it does not do that. Then I would ask why they need it. Sometimes what they actually need can be done another way with what we have, and I would show that. If it cannot, I would tell them honestly that we are not the right fit for that need. I lose today's order, but in a small market people talk, and I would rather be the salesperson they trust the next time they need something.",
+              "note": "A clear no, then curiosity about the real need, then honesty even if it costs the sale. He understands that his name is what he sells for the next ten years. This is the answer I was hoping for."
+            }
+          ],
+          "stronger": "Say no clearly. Ask why they need that feature, because there may be another way to meet the need. If there is not, say so. A lost sale can be recovered. A customer who was lied to will not come back."
+        }
+      ]
+    }
+  ],
+  "bands": [
+    {
+      "min": 10,
+      "name": "Shortlist",
+      "line": "Going forward to the next round.",
+      "detail": "Your answers were specific, honest and about the work. Keep the same habits when you prepare for a real interview: one real example for each question."
+    },
+    {
+      "min": 6,
+      "name": "Second look",
+      "line": "Maybe. I would need another conversation to decide.",
+      "detail": "Some answers gave me something real, others were general. Go back to the questions where you scored lowest and replace each general statement with one thing you actually did."
+    },
+    {
+      "min": 0,
+      "name": "Not yet",
+      "line": "Not this time.",
+      "detail": "Most answers could have come from any candidate. That is common and fixable. For each question, write down one real incident from college, home or a part-time job, and try again."
+    }
+  ]
+}
