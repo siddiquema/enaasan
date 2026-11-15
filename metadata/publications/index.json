@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-10-25",
-  "total_publications": 25,
+  "last_updated": "2026-11-15",
+  "total_publications": 26,
   "publications": [
     {
       "id": "streams-explorer",
@@ -127,11 +127,28 @@
       "id": "guide-006-interviews",
       "file": "guide-006-interviews.json",
       "status": "coming-soon"
+    },
+    {
+      "id": "tool-001-first-job-desk",
+      "file": "tool-001-first-job-desk.json",
+      "status": "published"
     }
   ],
   "search_tips": {
-    "search_by": ["title", "keywords", "questions_it_answers", "description", "tags"],
-    "returns": ["title", "url", "description", "duration", "status"],
+    "search_by": [
+      "title",
+      "keywords",
+      "questions_it_answers",
+      "description",
+      "tags"
+    ],
+    "returns": [
+      "title",
+      "url",
+      "description",
+      "duration",
+      "status"
+    ],
     "philosophy": "Students search for answers, not pages"
   }
 }

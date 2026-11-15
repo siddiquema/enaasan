@@ -1,0 +1,57 @@
+{
+  "id": "tool-001-first-job-desk",
+  "title": "First Job Desk: mock interview, offer letter decoder, first 180 days",
+  "url": "/skills/first-job/desk/",
+  "description": "Free tools for your first job. Practise a mock interview and read the interviewer's notes on your answers, see your monthly in-hand pay from your offer letter, and find out how to handle common situations in your first six months at work.",
+  "target_audience": "Final-year students and new graduates preparing for or starting their first job",
+  "duration": "10-15 minutes per tool",
+  "keywords": [
+    "interview",
+    "mock interview",
+    "interview questions",
+    "interview preparation",
+    "offer letter",
+    "CTC",
+    "in-hand salary",
+    "salary",
+    "bond",
+    "notice period",
+    "probation",
+    "first job",
+    "first 90 days",
+    "first 180 days",
+    "manager",
+    "workplace",
+    "resign",
+    "deadline",
+    "feedback",
+    "fresher"
+  ],
+  "questions_it_answers": [
+    "How do I prepare for a job interview?",
+    "How do I get my first job?",
+    "What do interviewers look for?",
+    "How do I answer tell me about yourself?",
+    "What is my in-hand salary?",
+    "What is the difference between CTC and in-hand salary?",
+    "What does a bond in an offer letter mean?",
+    "What should I do in my first week at work?",
+    "How do I talk to my manager?",
+    "What should I do if I miss a deadline?",
+    "Should I resign from my first job?",
+    "How do I handle my probation review?"
+  ],
+  "related_publications": [
+    "guide-001-first-job",
+    "hub-001-communication"
+  ],
+  "tags": [
+    "first-job",
+    "interview",
+    "offer-letter",
+    "workplace",
+    "tool"
+  ],
+  "status": "published",
+  "published_date": "2026-11-15"
+}
