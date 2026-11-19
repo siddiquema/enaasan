@@ -278,6 +278,9 @@ Siddique Ahamed is a volunteer, not an employee of Enaasan. Use these wordings e
 
 - "Enaasan is an independent, volunteer-run project."
 - "Created and edited by Siddique Ahamed, a volunteer."
-- Do not use "founder", "CEO", "team", "staff" or "employee" unless the owner confirms that is accurate.
+- "We" and "our team" are fine. The team is Siddique Ahamed working with AI tools (Claude), and the owner has
+  confirmed that is a team. Say so plainly when it matters, for example "a volunteer and AI tools", so readers
+  do not picture a large staff.
+- Do not use "founder", "CEO", "staff" or "employee" unless the owner confirms that is accurate.
 - Do not name any employer, and keep employer information out of every post and reply.
 - Write posts as "we" for the project, or clearly as the author when it is a personal view.
