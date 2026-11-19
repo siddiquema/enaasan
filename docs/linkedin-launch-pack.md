@@ -1,6 +1,6 @@
 # Enaasan LinkedIn Page: launch pack
 
-Draft of 2026-11-19, for owner review. **Nothing here has been posted.** The owner pastes each item through the
+Draft of 2026-11-19 (updated the same day for volunteer wording and finished images), for owner review. **Nothing here has been posted.** The owner pastes each item through the
 Page's "Create" button, so it posts as Enaasan, not as a personal profile.
 
 Page: https://www.linkedin.com/company/142922979/ (admin: Siddique Ahamed). At the time of writing: 0 followers.
@@ -39,7 +39,10 @@ What you will find here:
 
 We write for students, parents, counsellors and placement officers who want to make a decision they understand.
 
-Founded and edited by Siddique Ahamed. Drafted with AI assistance and reviewed by a person before publication.
+Enaasan is an independent, volunteer-run project. It is not affiliated with any employer or company.
+
+Created and edited by Siddique Ahamed, a volunteer. Drafted with AI assistance and reviewed by a person before
+publication.
 
 https://enaasan.online
 ```
@@ -50,21 +53,30 @@ https://enaasan.online
 |---|---|
 | Website | https://enaasan.online |
 | Industry | Education / Career Services (choose what LinkedIn offers) |
-| Company size | 1 employee |
+| Company size | Myself only (the "1 employee" option would not be accurate for a volunteer) |
 | Location | Hyderabad, India |
 | Custom button | "Visit website" to https://enaasan.online |
 | Specialties | career guidance, research, interview practice, first job, higher education data |
-| Logo | The favicon design from `favicon.svg`, exported square (needs export, not done) |
-| Banner | 1128 x 191 image: "Free career guidance. Research you can check." in the site's navy and gold (needs design, not done) |
+| Logo | `assets/linkedin/enaasan-logo-400.png` (400 x 400, gold "e" on navy, from the site's favicon design) |
+| Banner | `assets/linkedin/enaasan-banner-1128x191.png`. LinkedIn overlaps the logo on the bottom left of the banner, so check the preview after uploading |
 
 ## 3. The first eight posts
 
-Suggested rhythm: two a week, Tuesday and Friday mornings India time. Dates are suggestions only.
+Plan: the Page is set up and the first posts go out over **Saturday 21 and Sunday 22 November**, by the owner.
+
+| When | What |
+|---|---|
+| Sat 21 Nov | Upload logo and banner, paste tagline and About text, set the website and button, post 1 and post 2 |
+| Sun 22 Nov | Posts 3 and 4. Then, if the Page's post composer offers a scheduling option (a clock icon beside Post), schedule posts 5, 6 and 7 for the following days. If it does not, post one every few days |
+| Later | Post 8 only when the survey page exists |
+
+After that, two posts a week is plenty for a new Page. The dates in the headings below are the original suggestions;
+the table above replaces them for the first weekend.
 Posts 2 to 5 each say what the report does not show, so readers do not over-read it.
 
-### Post 1: Introducing the Page (Tue 24 Nov)
+### Post 1: Introducing the Page (Sat 21 Nov)
 
-Image: the Enaasan logo or banner.
+Image: `assets/linkedin/enaasan-banner-1128x191.png`, or leave the post text-only.
 
 ```text
 Whatever stage you are at, what comes next?
@@ -82,7 +94,7 @@ Start here: https://enaasan.online
 #CareerGuidance #IndianStudents #HigherEducation
 ```
 
-### Post 2: Report No. 1, Who India Graduates (Fri 27 Nov)
+### Post 2: Report No. 1, Who India Graduates (Sat 21 Nov)
 
 Image: `reports/who-india-graduates/og-v2.png`
 
@@ -102,9 +114,9 @@ https://enaasan.online/reports/who-india-graduates/
 #HigherEducation #Graduates #India
 ```
 
-### Post 3: First Job Desk (Tue 1 Dec)
+### Post 3: First Job Desk (Sun 22 Nov)
 
-Image: a screenshot of the mock interview verdict screen (to be taken on a phone).
+Image: `assets/linkedin/post-3-mock-interview-note.png` (a phone-width view of one answer and the interviewer's private note).
 
 ```text
 In a real interview, you never get to see what the interviewer wrote about you.
@@ -123,7 +135,7 @@ https://enaasan.online/skills/first-job/desk/
 #FirstJob #InterviewPrep #Freshers
 ```
 
-### Post 4: Report No. 2, The Career Choice Gap (Fri 4 Dec)
+### Post 4: Report No. 2, The Career Choice Gap (Sun 22 Nov)
 
 Image: `reports/career-choice-gap/og.png`
 
@@ -143,7 +155,7 @@ https://enaasan.online/reports/career-choice-gap/
 #Unemployment #Graduates #Education
 ```
 
-### Post 5: Report No. 3, From Degree to Payroll (Tue 8 Dec)
+### Post 5: Report No. 3, From Degree to Payroll (schedule for Tue 24 Nov)
 
 Image: `reports/degree-to-payroll/og.png`
 
@@ -161,9 +173,9 @@ Full method, limits and sources: https://enaasan.online/reports/degree-to-payrol
 #Jobs #Graduates #StatesOfIndia
 ```
 
-### Post 6: Offer Letter Decoder (Fri 11 Dec)
+### Post 6: Offer Letter Decoder (schedule for Fri 27 Nov)
 
-Image: a screenshot of the decoder result on a phone. Use obviously made-up round numbers on screen and say so.
+Image: `assets/linkedin/post-6-offer-decoder.png`. The figures on it are made-up round numbers typed in to show how the tool works, not data. Add the line "The figures in the picture are made up, for illustration." to the post.
 
 ```text
 CTC is not the money that reaches your bank account.
@@ -172,14 +184,15 @@ The Offer Letter Decoder takes the figures from your salary table and shows the 
 eight clauses in plain words, each with a question to ask HR: bond, notice period, probation, variable pay,
 joining bonus, location and shifts, background verification and offer validity.
 
-Free, no sign-up, and the numbers you type stay on your phone.
+Free, no sign-up, and the numbers you type stay on your phone. (The figures in the picture are made up, for
+illustration.)
 
 https://enaasan.online/skills/first-job/desk/#offer
 
 #OfferLetter #FirstJob #Salary
 ```
 
-### Post 7: For placement officers (Tue 15 Dec)
+### Post 7: For placement officers (schedule for Tue 1 Dec)
 
 Image: none, or a screenshot of the colleges page.
 
@@ -252,11 +265,19 @@ the post.
 
 ## 6. Still to do before posting
 
-- Export the logo and design the banner.
-- Take the phone screenshots for posts 3 and 6.
+- Upload the logo and banner and check how the banner looks beside the logo.
 - Check the author line says Enaasan before each post.
-- Decide the posting days.
 
 Checked on 2026-11-19: every figure and claim in posts 2, 4 and 5 was found in its report's page text, and the
 Desk counts in posts 3, 6 and 7 match the content files. The check is repeated before posting, since a report may
 be corrected.
+
+## 7. Volunteer status: wording to use
+
+Siddique Ahamed is a volunteer, not an employee of Enaasan. Use these wordings everywhere (Page, posts, replies):
+
+- "Enaasan is an independent, volunteer-run project."
+- "Created and edited by Siddique Ahamed, a volunteer."
+- Do not use "founder", "CEO", "team", "staff" or "employee" unless the owner confirms that is accurate.
+- Do not name any employer, and keep employer information out of every post and reply.
+- Write posts as "we" for the project, or clearly as the author when it is a personal view.
