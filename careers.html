@@ -341,6 +341,10 @@
       font-size: 0.83rem; color: var(--mist); line-height: 1.55;
     }
     .honest-strip::before { content: '💡  '; }
+    .cat-intro {
+      grid-column: 1 / -1; margin: 0 0 4px;
+      font-size: 0.82rem; color: var(--mist); line-height: 1.55;
+    }
     .new-badge {
       display: inline-block; margin-left: 6px; vertical-align: middle;
       font-family: 'DM Mono', monospace; font-size: 0.55rem; letter-spacing: 0.06em;
@@ -902,7 +906,8 @@ const CATEGORIES = [
   { id: 'law',      label: 'Law & Policy',          icon: '⚖️', color: '#64B5F6', rgb: '100,181,246' },
   { id: 'teaching', label: 'Education & Teaching',  icon: '📚', color: '#FFB347', rgb: '255,179,71'  },
   { id: 'ai',       label: 'AI & Machine Learning', icon: '🤖', color: '#A78BFA', rgb: '167,139,250', hot: true },
-  { id: 'emerging', label: 'New & Emerging Roles',  icon: '🌱', color: '#7CD992', rgb: '124,217,146' },
+  { id: 'emerging', label: 'New & Emerging Roles',  icon: '🌱', color: '#7CD992', rgb: '124,217,146',
+    intro: 'Roles employers named for freshers in July–December 2026, from TeamLease EdTech\'s Career Outlook Report HY2 2026 (survey of 1,097 employers) and Naukri JobSpeak October 2026. Each role links to its sources. Last reviewed: November 2026.' },
   { id: 'bps',      label: 'BPS / KPO Careers',     icon: '🏢', color: '#4DD0C4', rgb: '77,208,196'  },
 ];
 
@@ -1233,54 +1238,142 @@ const ROLES = {
       note: 'AI training roles are among the most accessible AI jobs today — they do not require coding. However, the ceiling is lower than engineering or product roles. Treat it as an entry point to the AI industry and build deeper skills alongside.'
     },
   ],
-  /* New & Emerging Roles: added Nov 2026. Every "why" line cites a public source.
-     No pay range is shown: these roles are too new for reliable public pay data in India. */
+  /* New & Emerging Roles: rebuilt Nov 2026 from two hiring reports.
+     TL = TeamLease EdTech, Career Outlook Report HY2 (Jul–Dec 2026), survey of 1,097 employers, May–Jul 2026.
+     NJ = Naukri JobSpeak, October 2026 (hiring activity index: job postings + recruiter searches, year on year).
+     Page numbers are the report's printed page numbers. No pay range is shown for these roles. */
   emerging: [
     {
-      title: 'Solar PV Installation Technician',
+      title: 'AI Application Developer',
       isNew: true,
-      desc: 'Installs, wires and maintains rooftop and ground-mounted solar panels for homes, offices and farms. Field work, outdoors, often on rooftops.',
-      must: ['Basic electrical wiring and safety', 'Reading simple electrical drawings', 'Mounting and fixing panels safely at height', 'Connecting inverters and batteries', 'Testing a system and finding faults'],
-      good: ['Explaining the system to the customer in their language', 'Site survey: shade, roof strength, panel direction', 'Two-wheeler and willingness to travel to sites', 'Record-keeping and photos for subsidy paperwork'],
-      tools: ['Multimeter and clamp meter', 'Crimping and cable tools', 'Safety harness and insulated gloves', 'Inverter monitoring apps'],
-      how: ['ITI (Electrician, Wireman, Fitter) or a Diploma in Electrical / Electronics / Mechanical', 'Suryamitra: free 600-hour residential course run by NISE for MNRE (10th + ITI/Diploma)', 'Work with a local solar installer as a helper to learn on real sites', 'Check the NISE notices page for open intakes and empanelled training centres'],
-      why: 'Government programmes are pushing solar on rooftops, and installation needs trained hands. The Ministry of New and Renewable Energy runs the Suryamitra programme specifically to train solar technicians, and the World Economic Forum lists renewable energy engineers among the fastest-growing jobs to 2030.',
+      desc: 'Builds apps and features that use AI models, such as chat assistants, document readers and smart search, by connecting large language models to a company\'s data and software.',
+      must: ['Programming in Python or JavaScript', 'Building AI pipelines (data in, model, result out)', 'Working with LLM frameworks', 'Connecting AI to apps through APIs', 'Testing whether AI answers are correct'],
+      good: ['Basic machine learning concepts', 'Databases and SQL', 'Cloud basics', 'Writing clear prompts and instructions', 'Explaining AI limits to non-technical teams'],
+      tools: ['Python', 'LLM APIs and frameworks (e.g. LangChain)', 'Git / GitHub', 'VS Code', 'Postman'],
+      how: ['B.Tech / BCA / B.Sc. Computer Science, or strong self-taught coding', 'TeamLease names an "Advanced Certificate Programme in AI, ML and DL" for this role', 'Build two or three small AI apps and put them on GitHub', 'Learn the basics of software development first; AI sits on top of it'],
+      why: 'TeamLease lists AI Application Developer among the top job roles for freshers in July–December 2026, with AI pipeline development, LLM frameworks and AI integration as its key skills. Naukri\'s October 2026 data shows AI/ML hiring activity up 32% from a year earlier.',
       sources: [
-        { label: 'NISE, Suryamitra Skill Development Programme (eligibility, 600-hour course)', url: 'https://suryamitra.nise.res.in/' },
-        { label: 'NISE, Suryamitra notices and training centres', url: 'https://sm.nise.res.in/notices' },
-        { label: 'World Economic Forum, Future of Jobs Report 2025: fastest-growing jobs', url: 'https://www.weforum.org/stories/2025/01/future-of-jobs-report-2025-the-fastest-growing-and-declining-jobs/' }
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 5, 24, 30', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'Naukri JobSpeak, October 2026, p. 4 (AI/ML +32%)', url: 'https://www.infoedge.in/pdfs/News_Events_pdfs/Naukri-Jobspeak-October-2026.pdf' }
       ],
-      note: 'A good route for ITI and diploma holders who want skilled field work. Safety comes first: working at height with live electricity is dangerous without proper training and gear. Intake dates for Suryamitra change, so always check the official NISE site, not a third-party "agent".'
+      note: 'This is different from AI/ML Engineer (in the AI & Machine Learning tab): you use existing AI models rather than build new ones. The tools change fast, so strong coding basics matter more than any one framework. Note that overall IT fresher hiring intent fell slightly in the same TeamLease survey (76%, from 81%), so expect competition for these roles.'
     },
     {
-      title: 'EV Service Technician',
+      title: 'Jr. Semiconductor Design Engineer',
       isNew: true,
-      desc: 'Services and repairs electric two-wheelers, three-wheelers and cars: batteries, motors, controllers and charging. Works in dealer workshops, fleet depots or independent garages.',
-      must: ['High-voltage safety procedures', 'Basic electrical and electronics', 'Battery pack checks and handling', 'Using diagnostic tools to find faults', 'Mechanical basics: brakes, suspension, tyres'],
-      good: ['Reading service manuals in English', 'Charger installation and troubleshooting', 'Customer communication at the service desk', 'Keeping job cards and service records'],
-      tools: ['Insulated tools and PPE', 'Multimeter and insulation tester', 'OEM diagnostic software / scanners', 'Battery management system (BMS) tools'],
-      how: ['ITI (Mechanic Motor Vehicle, Electrician) or Diploma in Automobile / Electrical', 'NSQF Level 4 "Electric Vehicle Service Technician" course (ASDC, code ASC/Q1429) at an approved training centre', 'Apprenticeship at an EV dealer or fleet operator workshop', 'Start with two-wheelers, the most common EVs on Indian roads, then move up'],
-      why: 'India now has a formal national qualification for this job, the Electric Vehicle Service Technician (NSQF Level 4), set by the Automotive Skills Development Council. The World Economic Forum lists autonomous and electric vehicle specialists among the fastest-growing jobs to 2030.',
+      desc: 'Helps design and test computer chips: drawing digital circuits, checking the design works before it is manufactured, and preparing the physical layout of the chip.',
+      must: ['Digital electronics and logic design', 'Hardware verification (testing a chip design)', 'Physical chip design basics', 'A hardware language such as Verilog or VHDL', 'Patience with detailed, careful work'],
+      good: ['Scripting in Python or Tcl', 'Linux command line', 'Basic analog electronics', 'Reading technical documentation in English'],
+      tools: ['EDA tools (chip design software from Cadence, Synopsys, Siemens)', 'Verilog / SystemVerilog simulators', 'Linux', 'Git'],
+      how: ['B.Tech / B.E. in ECE, EEE or related; M.Tech in VLSI helps', 'TeamLease names a "Certificate in Semiconductor Tech & VLSI Chip Design"; VLSI chip design is also on its list of in-demand courses', 'Practise with free Verilog simulators and small design projects', 'Look for internships at chip design companies and design centres'],
+      why: 'TeamLease lists Jr. Semiconductor Design Engineer among the top fresher job roles for July–December 2026, and Semiconductor & VLSI Design among the top domain skills employers want. Naukri\'s October 2026 data shows Semiconductors/Electronics hiring activity up 11% from a year earlier.',
       sources: [
-        { label: 'National Qualifications Register, Electric Vehicle Service Technician (ASC/Q1429)', url: 'https://www.nqr.gov.in/qualification/file/QF%20-%20Electric%20Vehicle%20Service%20Technician' },
-        { label: 'World Economic Forum, Future of Jobs Report 2025: fastest-growing jobs', url: 'https://www.weforum.org/stories/2025/01/future-of-jobs-report-2025-the-fastest-growing-and-declining-jobs/' }
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 5, 22, 31, 33', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'Naukri JobSpeak, October 2026, Annexure (Semiconductors/Electronics +11%)', url: 'https://www.infoedge.in/pdfs/News_Events_pdfs/Naukri-Jobspeak-October-2026.pdf' }
       ],
-      note: 'If you already know petrol-vehicle repair, you are halfway there; the new part is electrical safety and diagnostics. Never open a battery pack without training. High-voltage mistakes cause serious injuries.'
+      note: 'This is a degree-level engineering role with a steep learning curve. A short certificate alone will not get you in without solid electronics fundamentals. Most openings are in a few cities; TeamLease found the highest demand in Bangalore, Hyderabad and Gurugram.'
     },
     {
-      title: 'Drone Pilot (Remote Pilot)',
+      title: 'Data Centre Operations Associate',
       isNew: true,
-      desc: 'Flies drones for crop spraying, land surveys, mapping, inspections of towers and pipelines, and filming. Usually field work, often in rural areas.',
-      must: ['Remote Pilot Certificate from a DGCA-authorised training school', 'Drone rules: where and how high you may fly', 'Pre-flight checks and safe flying', 'Basic maintenance and battery care', 'Reading maps and weather'],
-      good: ['Agriculture knowledge (for spraying work)', 'Mapping and survey software', 'Photo and video editing', 'Basic repair and soldering'],
-      tools: ['DGCA Digital Sky platform', 'Flight-planning apps', 'Mapping software (e.g. QGIS)', 'Spare batteries, propellers, chargers'],
-      how: ['Eligibility under the Drone Rules, 2021: age 18–65 with a Class 10 pass certificate', 'Train at a DGCA-authorised Remote Pilot Training Organisation (RPTO); the list is on Digital Sky', 'Pick a field: agriculture, survey, inspection or media, and build practice hours in it', 'Join a drone service company or an agri-services provider for your first work'],
-      why: 'The Drone Rules, 2021 opened a legal path for anyone 18–65 with a Class 10 pass to become a certified remote pilot, and DGCA now authorises training schools across the country. This created a skilled job that did not formally exist a few years ago.',
+      desc: 'Keeps a data centre running around the clock: monitoring servers and networks, replacing faulty hardware, and following strict safety and security procedures. Shift work.',
+      must: ['Server management basics', 'Network infrastructure (cables, switches, IP addresses)', 'IT service management (logging and fixing issues)', 'Following written procedures exactly', 'Willingness to work night and weekend shifts'],
+      good: ['Linux and Windows server basics', 'Power and cooling systems awareness', 'Basic scripting', 'Clear handover notes and reports'],
+      tools: ['Monitoring dashboards', 'Ticketing systems (e.g. ServiceNow)', 'Network testers and cable tools', 'Remote management consoles'],
+      how: ['Diploma, B.Sc., BCA or B.Tech; electronics, IT or electrical backgrounds fit well', 'TeamLease names "Certified Data Centre Associate (CDCA)" for this role', 'Entry-level networking courses (e.g. CCNA) help', 'Start in IT support or a network operations centre and move across'],
+      why: 'TeamLease lists Data Centre Operations Associate among the top fresher job roles for July–December 2026, with server management, network infrastructure and IT service management as its key skills. It places the role in Engineering & Infrastructure, where 66% of employers surveyed intend to hire freshers.',
       sources: [
-        { label: 'Ministry of Civil Aviation, PIB release on drone pilot licensing', url: 'https://pib.gov.in/PressReleasePage.aspx?PRID=1795133' },
-        { label: 'DGCA Digital Sky (rules, authorised training schools)', url: 'https://digitalsky.dgca.gov.in/' }
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 5, 22, 32', url: 'https://www.teamleaseedtech.com/' }
       ],
-      note: 'Training costs money and the certificate alone does not guarantee work. Check that the school is on the DGCA list before you pay, and talk to working pilots about how steady the work is in your area.'
+      note: 'A practical entry point into IT infrastructure that does not need heavy coding. Expect shifts. The skills you build (servers, networks, cloud hardware) open doors to cloud and network engineering later.'
+    },
+    {
+      title: 'Programmatic Advertising Associate',
+      isNew: true,
+      desc: 'Runs online ad campaigns that are bought automatically by software: choosing who sees the ads, setting budgets, and adjusting campaigns based on results.',
+      must: ['Campaign optimisation', 'Audience targeting', 'Media planning basics', 'Comfort with numbers and spreadsheets', 'Attention to detail with budgets'],
+      good: ['Google Analytics or similar', 'Basic understanding of how websites track visits', 'Clear reporting to clients', 'Interest in how people use apps and media'],
+      tools: ['Demand-side platforms (DSPs) such as Google Display & Video 360', 'Google Ads / Meta Ads Manager', 'Excel / Google Sheets', 'Analytics dashboards'],
+      how: ['Any graduate; BBA, B.Com., BMM and B.Sc. Statistics fit well', 'TeamLease names a "Digital Ad Operations Certification" for this role', 'Free platform courses (e.g. Google Skillshop) are a good start', 'Internships at digital agencies or ad-tech companies'],
+      why: 'TeamLease lists Programmatic Advertising Associate among the top fresher job roles for July–December 2026, with campaign optimisation, audience targeting and media planning as its key skills, and Performance Marketing Analytics among the top domain skills employers want.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 5, 25, 30, 33', url: 'https://www.teamleaseedtech.com/' }
+      ],
+      note: 'A good route for commerce and arts graduates who are comfortable with numbers. TeamLease found the strongest demand in Delhi, Pune and Nagpur. Note that fresher hiring intent in Marketing & Advertising overall dipped in the same survey (59%, from 62%).'
+    },
+    {
+      title: 'Biomedical Equipment Technician',
+      isNew: true,
+      desc: 'Installs, checks and repairs hospital equipment such as monitors, ventilators, X-ray and lab machines, and keeps a maintenance schedule so equipment is safe to use.',
+      must: ['Equipment maintenance', 'Maintenance planning and records', 'Electronics troubleshooting', 'Electrical safety in a hospital setting', 'Following manufacturer service manuals'],
+      good: ['Basic understanding of how each machine is used clinically', 'Calibration and testing', 'Inventory of spare parts', 'Calm communication with doctors and nurses'],
+      tools: ['Multimeter and test equipment', 'Calibration tools', 'Equipment service software', 'Maintenance logs / hospital asset systems'],
+      how: ['Diploma or B.Tech / B.E. in Biomedical, Electronics or Medical Electronics; ITI Electronics is a starting point', 'TeamLease names a "Biomedical Equipment Maintenance Certification" for this role', 'Apprenticeship in a hospital biomedical department or with an equipment service company', 'Learn one equipment family well (e.g. patient monitors) before broadening'],
+      why: 'TeamLease lists Biomedical Equipment Technician among the top fresher job roles for July–December 2026, with the highest demand in Chennai, Delhi and Nagpur. Naukri\'s October 2026 data shows healthcare hiring activity up 11% from a year earlier.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 23, 31', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'Naukri JobSpeak, October 2026, p. 4 (Healthcare +11%)', url: 'https://www.infoedge.in/pdfs/News_Events_pdfs/Naukri-Jobspeak-October-2026.pdf' }
+      ],
+      note: 'A strong option for diploma holders who like hands-on electronics and want to work in healthcare without becoming a doctor or nurse. Mistakes affect patient safety, so careful, by-the-book work is the core of the job.'
+    },
+    {
+      title: 'Quick Commerce Operations Executive',
+      isNew: true,
+      desc: 'Runs the small warehouses ("dark stores") behind 10-minute delivery apps: tracking stock, making sure orders are packed fast and correctly, and handing them to delivery partners.',
+      must: ['Inventory operations', 'Order management', 'Logistics operations', 'Working fast under time pressure', 'Managing a small team of pickers and packers'],
+      good: ['Excel / Google Sheets', 'Basic data reading (dashboards, targets)', 'Local language and Hindi/English communication', 'Problem-solving when stock or riders run short'],
+      tools: ['Warehouse / inventory apps', 'Handheld barcode scanners', 'Excel / Google Sheets', 'Company operations dashboards'],
+      how: ['Any graduate; 12th pass with experience can also enter at supervisor-trainee level', 'TeamLease names a "Certificate in Operation Management" for this role', 'Start as a store associate or shift lead and learn the system', 'Track your numbers (accuracy, speed); they become your CV'],
+      why: 'TeamLease lists Quick Commerce Operations Executive among the top fresher job roles for July–December 2026, under Retail, where 93% of employers surveyed intend to hire freshers, the joint-highest of any industry.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 6, 27, 31', url: 'https://www.teamleaseedtech.com/' }
+      ],
+      note: 'Fast to get into and a real management role early, but the hours are long and the pace is intense. Ask about shift timings and weekly offs before you join. This is a salaried operations job, different from gig delivery work.'
+    },
+    {
+      title: 'GIS Analyst',
+      isNew: true,
+      desc: 'Works with maps and location data: analysing satellite images, collecting data in the field, and making maps for power networks, city planning, farming or disaster response.',
+      must: ['Geospatial analysis', 'Remote sensing (reading satellite and drone images)', 'Field data collection', 'Accuracy with coordinates and measurements', 'Clear map-making'],
+      good: ['Basic Python or SQL', 'GPS survey equipment', 'Geography, civil engineering or environmental science knowledge', 'Writing short reports'],
+      tools: ['QGIS (free)', 'ArcGIS', 'Google Earth Engine', 'GPS / mobile data-collection apps'],
+      how: ['B.Sc. / M.Sc. Geography, Geology, Environmental Science, or B.Tech Civil', 'TeamLease names an "Emerging GIS Professional Certification" for this role', 'Learn QGIS for free and make a portfolio of real maps of your area', 'Government survey, power and planning projects often hire GIS staff through contractors'],
+      why: 'TeamLease lists GIS Analyst among the top fresher job roles for July–December 2026, with geospatial analysis, remote sensing and field data collection as its key skills. It places the role in Power & Energy, where 74% of employers surveyed intend to hire freshers.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 26, 32', url: 'https://www.teamleaseedtech.com/' }
+      ],
+      note: 'One of the few new tech roles open to science and geography graduates, not just engineers. The work mixes desk analysis with field trips, so be ready to travel.'
+    },
+    {
+      title: 'PV System Design Associate',
+      isNew: true,
+      desc: 'Designs solar power systems for rooftops and solar farms: checking the site, choosing panels and inverters, and preparing layouts and wiring diagrams for installation teams.',
+      must: ['Solar engineering basics', 'Electrical fundamentals (voltage, current, wiring)', 'Site assessment: shade, roof, sun direction', 'Reading and making technical drawings', 'Careful calculations'],
+      good: ['AutoCAD', 'Battery and storage basics', 'Government solar scheme paperwork', 'Explaining designs to customers'],
+      tools: ['PV design software (e.g. PVsyst, Helioscope)', 'AutoCAD', 'Excel', 'Site survey apps'],
+      how: ['Diploma or B.Tech in Electrical, Electronics or Mechanical', 'TeamLease names a "Certification in Solar Engineering and PV Design" for this role', 'MNRE\'s Suryamitra programme (NISE) trains solar technicians: a route in for ITI/diploma holders', 'Work with a solar installer to understand how designs are built on site'],
+      why: 'TeamLease lists PV System Design Associate among the roles in demand in Power & Energy for July–December 2026, with the highest demand in Bangalore, Gurugram and Indore. 74% of Power & Energy employers surveyed intend to hire freshers, up from 72% in the previous half-year.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, p. 26', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'NISE, Suryamitra Skill Development Programme', url: 'https://suryamitra.nise.res.in/' }
+      ],
+      note: 'Design roles sit above installation work and need stronger technical grounding. If you are an ITI holder, starting as an installation technician and learning design on the job is a realistic path.'
+    },
+    {
+      title: 'EV Charging Infrastructure Engineer',
+      isNew: true,
+      desc: 'Plans, installs and maintains charging stations for electric vehicles at homes, offices, malls and highways, and fixes chargers when they fail.',
+      must: ['Electrical installation and safety', 'Understanding of charger types and standards', 'Fault-finding on chargers', 'Site planning (power supply, space, cabling)', 'Following safety codes'],
+      good: ['Basic networking (chargers connect to apps)', 'Customer communication', 'Solar-plus-charging setups', 'Documentation and site reports'],
+      tools: ['Multimeter and insulation tester', 'Charger management software', 'Electrical installation tools', 'Safety equipment (PPE)'],
+      how: ['Diploma or B.Tech in Electrical / Electronics; ITI Electrician for technician-level work', 'TeamLease names an "EV Technology & Public Charging Station Certificate" for this role', 'NSQF Level 4 courses such as "Electric Vehicle Service Technician" (ASDC) build related skills', 'Charger makers and charging network operators hire for installation and maintenance'],
+      why: 'TeamLease lists EV Charging Infrastructure Engineer among the roles in demand in Power & Energy for July–December 2026, with the highest demand in Pune, Ahmedabad and Chennai. Naukri\'s October 2026 data shows auto-sector hiring activity up 36% from a year earlier.',
+      sources: [
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, p. 26', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'Naukri JobSpeak, October 2026, p. 4 (Auto +36%)', url: 'https://www.infoedge.in/pdfs/News_Events_pdfs/Naukri-Jobspeak-October-2026.pdf' },
+        { label: 'National Qualifications Register, Electric Vehicle Service Technician (ASC/Q1429)', url: 'https://www.nqr.gov.in/qualification/file/QF%20-%20Electric%20Vehicle%20Service%20Technician' }
+      ],
+      note: 'Naukri\'s auto-sector figure covers all auto hiring, not just EVs. The charging role is new and still small, so check how many openings exist in your city. Never work on live high-voltage equipment without training.'
     },
     {
       title: 'Sustainability / ESG Analyst',
@@ -1290,10 +1383,10 @@ const ROLES = {
       good: ['Commerce, CA/CS, environmental science or engineering background', 'Knowledge of SEBI\'s BRSR format', 'Basics of carbon accounting (Scope 1, 2, 3)', 'Global frameworks such as GRI'],
       tools: ['Excel / Google Sheets', 'Power BI or Tableau', 'ESG data platforms used by employers', 'Company annual reports and BRSR filings'],
       how: ['Read a few real BRSR reports from listed companies (free on stock exchange websites)', 'Short courses on ESG reporting from professional bodies such as ICAI or ICSI', 'Internships in sustainability teams at audit firms or listed companies', 'Commerce and science graduates can both enter; pick depth in either finance or environment'],
-      why: 'SEBI requires the top 1,000 listed companies by market value to file a Business Responsibility and Sustainability Report (BRSR), and is phasing in independent checks (assurance) of these reports. Someone has to collect, check and write that data.',
+      why: 'TeamLease lists Sustainability & ESG among the top domain skills employers want from freshers in July–December 2026. The work exists because SEBI requires the top 1,000 listed companies by market value to file a Business Responsibility and Sustainability Report (BRSR).',
       sources: [
-        { label: 'SEBI circular, 10 May 2021: BRSR mandatory for top 1,000 listed companies', url: 'https://nsearchives.nseindia.com/web/sites/default/files/inline-files/SEBI_Circular_10052021.pdf' },
-        { label: 'SEBI, BRSR assurance and value-chain disclosure (2025)', url: 'https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1752724472552.pdf' }
+        { label: 'TeamLease EdTech, Career Outlook Report HY2 2026, pp. 5, 33', url: 'https://www.teamleaseedtech.com/' },
+        { label: 'SEBI circular, 10 May 2021: BRSR mandatory for top 1,000 listed companies', url: 'https://nsearchives.nseindia.com/web/sites/default/files/inline-files/SEBI_Circular_10052021.pdf' }
       ],
       note: 'Job titles vary: ESG analyst, sustainability analyst, BRSR associate. Many of these roles sit inside finance, compliance or audit teams, so a commerce degree plus ESG knowledge is a practical combination.'
     },
@@ -1437,6 +1530,12 @@ function buildRoles() {
   const cat    = CATEGORIES.find(c => c.id === activeCategory);
   const roles  = ROLES[activeCategory] || [];
   grid.innerHTML = '';
+  if (cat.intro) {
+    const intro = document.createElement('p');
+    intro.className = 'cat-intro';
+    intro.textContent = cat.intro;
+    grid.appendChild(intro);
+  }
   roles.forEach((role, idx) => {
     const card = document.createElement('div');
     card.className = 'role-card';
