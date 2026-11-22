@@ -46,13 +46,6 @@
   }
 }
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D4QMDFL8XF"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-D4QMDFL8XF');
-  </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -234,6 +227,21 @@
 <link href="css/theme-styles.css" rel="stylesheet"/>
 </head>
 <body>
+<script>
+  fetch('/components/cookie-consent.html')
+    .then(function (r) { return r.text(); })
+    .then(function (html) {
+      var temp = document.createElement('div');
+      temp.innerHTML = html;
+      document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
+      temp.querySelectorAll('script').forEach(function (old) {
+        var sc = document.createElement('script');
+        sc.textContent = old.textContent;
+        document.body.appendChild(sc);
+      });
+    })
+    .catch(function (e) { console.error('Failed to load cookie consent:', e); });
+</script>
 <nav>
 <div class="nav-row1"><a class="nav-logo" href="index.html">en<span>aasan</span></a><a class="nav-back" href="index.html">← Back to home</a></div>
 <div aria-label="Select theme" class="theme-switcher" role="group">
@@ -332,16 +340,21 @@
 <script>
 (function () {
   'use strict';
+  /* Sends events only if the visitor accepted analytics (the consent banner creates window.dataLayer). */
+  function track(name, params) {
+    if (!window.dataLayer) return;
+    (function () { window.dataLayer.push(arguments); })('event', name, params || {});
+  }
   var dl = document.getElementById('downloadBtn');
   if (dl) dl.addEventListener('click', function () {
-    if (typeof gtag === 'function') gtag('event', 'resource_download', {
+    track('resource_download', {
       resource_name: '90-day-career-clarity-plan',
       page: '/90-day-plan.html'
     });
   });
   var wa = document.getElementById('waShare');
   if (wa) wa.addEventListener('click', function () {
-    if (typeof gtag === 'function') gtag('event', 'share_click', {
+    track('share_click', {
       channel: 'whatsapp',
       page: '/90-day-plan.html'
     });
