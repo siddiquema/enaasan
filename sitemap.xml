@@ -233,6 +233,14 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Surveys -->
+  <url>
+    <loc>https://enaasan.online/survey/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- First Job Desk -->
   <url>
     <loc>https://enaasan.online/skills/first-job/desk/</loc>

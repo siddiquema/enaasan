@@ -170,25 +170,17 @@ The 100 and 30 thresholds were proposed by the drafting assistant and confirmed 
 4. ~~Who reviews the Tamil version?~~ Deferred to the later regional-language round (2026-11-16).
 5. One combined report, or one report per survey?
 
-## 13. Build status (2026-11-16)
+## 13. Build status (2026-11-27)
 
-Forms are being built in the owner's Microsoft Forms account. **Nothing is shared and no responses exist.**
+All three forms are fixed and checked in the owner's Microsoft Forms account. The `/survey/` page links to them.
 
-Method that worked: Quick import (Form, not Quiz) of the Word files in `docs/survey-forms/` named `*-v3.docx`
-(lettered answer options, no state question). The older files (no suffix, `-v2`) imported badly and should be ignored.
-Several forms called "Enaasan Survey 1: Students" exist from earlier attempts; only the newest is the real one.
-
-| Survey | State |
-|---|---|
-| 1 Students | Imported (18 questions). Done: Q1-17 required, Q11 multiple answers, Q13 "at most 2", full consent text in description. **To do:** add state dropdown, end survey on "No", anonymous settings, phone preview |
-| 2 New professionals | Imported (19 questions), not yet checked or fixed |
-| 3 Job seekers | Imported (21 questions), not yet checked or fixed |
-
-Each form still needs: state dropdown (added by hand; the 36 options broke the import), "tick all" / "pick up to two"
-questions set to multiple answers, all questions required except the last written one, consent text in the description,
-"No" on the consent and screening questions ending the survey, responses anonymous with no name recorded, a check in a
-private window that no owner name or email is shown, then cleanup of the four old Survey 1 forms (with owner approval).
-
-Browser note: the browser pane blocks Forms from opening a form in a new tab when Claude clicks. The owner opens each
-form in Edge, copies the edit address, and pastes it into a new tab in the pane. The pane closes between turns, so this
-may need repeating.
+- Same consent text in all three. Only the consent and screening questions are required, so "you can skip any
+  question" is true. "No" on either ends the form.
+- Multiple-answer and "pick up to two" settings applied. Survey 2 scale label corrected to "5 (very well)".
+  Survey 3 missing option "Only applying for jobs" restored.
+- "Anyone can respond"; the response page says names and emails are not collected.
+- **B3 (state) is not asked.** It broke the import and the analysis plan does not use it. Do not report by state.
+- The surveys link out to Microsoft Forms; the embedded version stalled on a splash screen in testing.
+- No separate pilot has been run.
+- Three older duplicate "Survey 1" forms remain unused. Delete only with the owner's approval.
+- `/survey/` published 2026-11-27. Suggested open period six weeks (to 2027-01-08). Remove any trial answers before counting.

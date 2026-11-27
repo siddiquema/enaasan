@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<title>Share your experience: three short career surveys | enaasan</title>
+<meta name="description" content="Three short anonymous surveys for students, new working professionals and job seekers in India. For adults. About three minutes each."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="enaasan"/>
+<meta property="og:url" content="https://enaasan.online/survey/"/>
+<meta property="og:title" content="Share your experience: three short career surveys"/>
+<meta property="og:description" content="For students, new working professionals and job seekers. Anonymous, for adults, about three minutes."/>
+<meta property="og:image" content="https://enaasan.online/assets/og-image.jpg"/>
+<meta property="og:locale" content="en_IN"/>
+<link rel="canonical" href="https://enaasan.online/survey/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/skills/first-job/desk/desk.css" rel="stylesheet"/>
+<style>
+  .survey-card p{color:var(--mist)}
+</style>
+<!-- theme-styles.css must load after page styles (see #53 cascade fix) -->
+<link href="/css/theme-styles.css" rel="stylesheet"/>
+<meta name="author" content="Siddique Ahamed"/>
+<link href="/css/author-box.css" rel="stylesheet"/>
+</head>
+<body>
+<script>
+  fetch('/components/cookie-consent.html')
+    .then(r => r.text())
+    .then(html => {
+      const temp = document.createElement('div');
+      temp.innerHTML = html;
+      document.body.insertBefore(temp.firstElementChild, document.body.firstChild);
+      temp.querySelectorAll('script').forEach(oldScript => {
+        const s = document.createElement('script');
+        s.textContent = oldScript.textContent;
+        document.body.appendChild(s);
+      });
+    })
+    .catch(e => console.error('Failed to load cookie consent:', e));
+</script>
+
+<nav>
+  <div class="nav-row1">
+    <a class="nav-logo" href="/index.html">en<span>aasan</span></a>
+    <a class="nav-back" href="/index.html">← Home</a>
+  </div>
+  <div aria-label="Select theme" class="theme-switcher" role="group">
+    <button aria-pressed="true" aria-label="Dark theme" class="theme-pill" data-theme="dark" title="Dark" type="button"></button>
+    <button aria-pressed="false" aria-label="Light theme" class="theme-pill" data-theme="light" title="Light" type="button"></button>
+    <button aria-pressed="false" aria-label="Slate theme" class="theme-pill" data-theme="slate" title="Slate" type="button"></button>
+  </div>
+</nav>
+
+<main class="page">
+  <header class="desk-hero">
+    <p class="eyebrow">Surveys · Anonymous · About three minutes</p>
+    <h1>Share your experience.</h1>
+    <p class="lead">Choose the one that fits you today. We will publish a summary of the answers, never individual responses. You must be 18 or older. The surveys are in English.</p>
+  </header>
+
+  <div class="app">
+    <section class="card survey-card" id="students">
+      <h2>I am a student</h2>
+      <p>You are studying in college, in any year.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAFMAM-U5FtUNEdTTTlDTVZRMjFWOTFLU1lQSkIxQzQ4UC4u">Start the student survey →</a>
+      </div>
+    </section>
+
+    <section class="card survey-card" id="working">
+      <h2>I started working recently</h2>
+      <p>You are working, and began your first full-time job within the last two years.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAFMAM-U5FtUOFRXSElLOTRETDVFN01LN1c1SlRKUEJLVy4u">Start the new-job survey →</a>
+      </div>
+    </section>
+
+    <section class="card survey-card" id="job-seekers">
+      <h2>I am looking for a job</h2>
+      <p>You have finished your course and are searching.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAFMAM-U5FtUME1QMlc5WlY5MzFWRVYxWkwwTllHSVNYSC4u">Start the job-search survey →</a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="disclaimer" style="margin-top:24px">
+    <strong>Your privacy.</strong> Each button takes you to the survey on Microsoft Forms. We do not ask for your name, phone number, email, college or employer, so please do not type them. See our <a href="/privacy.html">privacy policy</a>.
+  </aside>
+</main>
+
+<aside class="author-box" aria-label="About the author">
+  <p class="author-box-line"><strong>Conceptualised, reviewed and published by <a href="/author/siddique-ahamed/" rel="author">Siddique Ahamed</a>.</strong> Drafted with AI assistance.</p>
+  <p class="author-box-note"><a href="/author/siddique-ahamed/">About the author</a> &middot; Found something wrong or outdated? <a href="/about.html#contact">Let us know</a>.</p>
+</aside>
+
+<footer>
+  <div class="footer-logo">en<span>aasan</span></div>
+  <div class="footer-links">
+    <a href="/index.html">Home</a>
+    <a href="/skills/first-job/desk/">First Job Desk</a>
+    <a href="/reports/">Research Reports</a>
+    <a href="/about.html">About</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms &amp; Disclaimer</a>
+  </div>
+  <p class="footer-copy">© 2026 enaasan.online · Built with care in Hyderabad 🇮🇳</p>
+</footer>
+
+<script src="/theme.js"></script>
+</body>
+</html>
